@@ -6215,6 +6215,551 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Gepard": {
+    "internalID": 1104,
+    "name": "Gepard",
+    "path": "Preservation",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 543.312,
+      "DEFBase": 654.885,
+      "HPBase": 1397.088,
+      "SPDBase": 92,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "110401",
+        "name": "Due Diligence",
+        "rank": 1,
+        "desc": "When using Skill, increases the base chance to Freeze the attacked target enemy by 35%.",
+        "icon": "icon/skill/1104_rank1.png",
+        "paramsEido": [
+          0.35
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "110402",
+        "name": "Lingering Cold",
+        "rank": 2,
+        "desc": "After an enemy Frozen by Skill is unfrozen, their SPD is reduced by 20% for 1 turn(s).",
+        "icon": "icon/skill/1104_rank2.png",
+        "paramsEido": [
+          0.2,
+          1
+        ]
+      },
+      {
+        "id": "110403",
+        "name": "Never Surrender",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1104_ultimate.png"
+      },
+      {
+        "id": "110404",
+        "name": "Faith Moves Mountains",
+        "rank": 4,
+        "desc": "When Gepard is in battle, all allies' Effect RES increases by 20%.",
+        "icon": "icon/skill/1104_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "110405",
+        "name": "Cold Iron Fist",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1104_skill.png"
+      },
+      {
+        "id": "110406",
+        "name": "Unyielding Resolve",
+        "rank": 6,
+        "desc": "When his Talent is triggered, Gepard immediately takes action and restores extra HP equal to 50% of his Max HP.",
+        "icon": "icon/skill/1104_rank6.png",
+        "paramsEido": [
+          0.5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Fist of Conviction": {
+          "variant1": {
+            "skillID": 110401,
+            "trigger": "Skill01",
+            "name": "Fist of Conviction",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Gepard's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Gepard_00_Skill01_Camera",
+              "Avatar_Gepard_00_Skill01_Phase01",
+              "Avatar_Gepard_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Daunting Smite": {
+          "variant1": {
+            "skillID": 110402,
+            "trigger": "Skill02",
+            "name": "Daunting Smite",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of Gepard's ATK to one designated enemy, with a #2[i]% base chance to Freeze the enemy for #3[i] turn(s).\\nWhile Frozen, the enemy cannot take action and will take Ice Additional DMG equal to #4[i]% of Gepard's ATK at the beginning of each turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.625,
+                0.65,
+                1,
+                0.4875
+              ],
+              "8": [
+                1.75,
+                0.65,
+                1,
+                0.525
+              ],
+              "9": [
+                1.875,
+                0.65,
+                1,
+                0.5625
+              ],
+              "10": [
+                2,
+                0.65,
+                1,
+                0.6
+              ],
+              "11": [
+                2.1,
+                0.65,
+                1,
+                0.63
+              ],
+              "12": [
+                2.2,
+                0.65,
+                1,
+                0.66
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Gepard_00_Skill02_Camera",
+              "Avatar_Gepard_00_Skill02_Phase01",
+              "Avatar_Gepard_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Enduring Bulwark": {
+          "variant1": {
+            "skillID": 110403,
+            "trigger": "Skill03",
+            "name": "Enduring Bulwark",
+            "type": "Defense",
+            "slot": "Ultimate",
+            "desc": "Applies a Shield to all allies, absorbing DMG equal to #1[i]% of Gepard's DEF plus #3[i] for #2[i] turn(s).",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.405,
+                3,
+                498.75
+              ],
+              "8": [
+                0.42,
+                3,
+                532.5
+              ],
+              "9": [
+                0.435,
+                3,
+                566.25
+              ],
+              "10": [
+                0.45,
+                3,
+                600
+              ],
+              "11": [
+                0.465,
+                3,
+                633.75
+              ],
+              "12": [
+                0.48,
+                3,
+                667.5
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Gepard_00_Skill03_Camera",
+              "Avatar_Gepard_00_Skill03_EnterReady",
+              "Avatar_Gepard_00_Skill03_Phase01",
+              "Avatar_Gepard_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Unyielding Will": {
+          "variant1": {
+            "skillID": 110404,
+            "trigger": "SkillP01",
+            "name": "Unyielding Will",
+            "type": "Restore",
+            "slot": "Talent",
+            "desc": "When struck with a killing blow, instead of becoming knocked down, Gepard's HP immediately restores to #1[i]% of his Max HP. This effect can only trigger once per battle.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.40625
+              ],
+              "8": [
+                0.4375
+              ],
+              "9": [
+                0.46875
+              ],
+              "10": [
+                0.5
+              ],
+              "11": [
+                0.525
+              ],
+              "12": [
+                0.55
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Gepard_00_PassiveSkill01",
+              "Gepard_00_PassiveSkill_1_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Comradery": {
+          "variant1": {
+            "skillID": 110407,
+            "trigger": "SkillMaze",
+            "name": "Comradery",
+            "type": "Defense",
+            "slot": "Technique",
+            "desc": "After Gepard uses his Technique, when the next battle begins, a Shield will be applied to all allies, absorbing DMG equal to #1[i]% of Gepard's DEF plus #3[i] for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.24,
+                2,
+                150
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Defence",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Gepard_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1104_basic_atk.png",
+        "skillRef": {
+          "skillName": "Fist of Conviction",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1104_skill.png",
+        "skillRef": {
+          "skillName": "Daunting Smite",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1104_ultimate.png",
+        "skillRef": {
+          "skillName": "Enduring Bulwark",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1104_talent.png",
+        "skillRef": {
+          "skillName": "Unyielding Will",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1104_technique.png",
+        "skillRef": {
+          "skillName": "Comradery",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Integrity",
+        "icon": "icon/skill/1104_skilltree1.png",
+        "desc": "Gepard has a higher chance to be attacked by enemies.",
+        "params": [
+          3
+        ]
+      },
+      "Point07": {
+        "name": "Commander",
+        "icon": "icon/skill/1104_skilltree2.png",
+        "desc": "When \"Unyielding Will\" is triggered, Gepard's Energy will be restored to 100%."
+      },
+      "Point08": {
+        "name": "Grit",
+        "icon": "icon/skill/1104_skilltree3.png",
+        "desc": "Gepard's ATK increases by #1[i]% of his current DEF. This effect will refresh at the start of each turn.",
+        "params": [
+          0.35
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1104.png",
+    "preview": "image/character_preview/1104.png",
+    "portrait": "image/character_portrait/1104.png",
+    "bannerOffsets": [
+      -95,
+      111,
+      0.69,
+      -95,
+      111,
+      0.69,
+      -95,
+      111,
+      0.69
+    ],
+    "isBuffed": false
+  },
   "Natasha": {
     "internalID": 1105,
     "name": "Natasha",
