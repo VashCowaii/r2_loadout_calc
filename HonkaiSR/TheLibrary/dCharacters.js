@@ -12585,6 +12585,564 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Jing Yuan": {
+    "internalID": 1204,
+    "name": "Jing Yuan",
+    "path": "Erudition",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 698.544,
+      "DEFBase": 485.1,
+      "HPBase": 1164.2399999999998,
+      "SPDBase": 99,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "120401",
+        "name": "Slash, Seas Split",
+        "rank": 1,
+        "desc": "When Lightning-Lord attacks, the DMG multiplier on enemies adjacent to the target enemy increases by an extra amount equal to 25% of the DMG multiplier against the primary target enemy.",
+        "icon": "icon/skill/1204_rank1.png",
+        "paramsEido": [
+          0.25
+        ]
+      },
+      {
+        "id": "120402",
+        "name": "Swing, Skies Squashed",
+        "rank": 2,
+        "desc": "After Lightning-Lord takes action, DMG dealt by Jing Yuan's Basic ATK, Skill, and Ultimate increases by 20%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1204_rank2.png",
+        "paramsEido": [
+          0.2,
+          2
+        ]
+      },
+      {
+        "id": "120403",
+        "name": "Strike, Suns Subdued",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1204_ultimate.png"
+      },
+      {
+        "id": "120404",
+        "name": "Spin, Stars Sieged",
+        "rank": 4,
+        "desc": "For each hit performed by the Lightning-Lord when it takes action, Jing Yuan regenerates 2 Energy.",
+        "icon": "icon/skill/1204_rank4.png",
+        "paramsEido": [
+          2
+        ]
+      },
+      {
+        "id": "120405",
+        "name": "Stride, Spoils Seized",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1204_skill.png"
+      },
+      {
+        "id": "120406",
+        "name": "Sweep, Souls Slain",
+        "rank": 6,
+        "desc": "Each hit performed by the Lightning-Lord when it takes action will make the target enemy Vulnerable.\nWhile Vulnerable, enemies receive 12% more DMG until the end of the Lightning-Lord's current turn, stacking up to 3 time(s).",
+        "icon": "icon/skill/1204_rank6.png",
+        "paramsEido": [
+          0.12,
+          3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Glistening Light": {
+          "variant1": {
+            "skillID": 120401,
+            "trigger": "Skill01",
+            "name": "Glistening Light",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Jing Yuan deals Lightning DMG equal to #1[i]% of his ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_JingYuan_00_Skill01_Camera",
+              "Avatar_JingYuan_00_Skill01_Phase01",
+              "Avatar_JingYuan_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Rifting Zenith": {
+          "variant1": {
+            "skillID": 120402,
+            "trigger": "Skill02",
+            "name": "Rifting Zenith",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Jing Yuan's ATK to all enemies and increases Lightning-Lord's Hits Per Action by #2[i] for the next turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.8125,
+                2
+              ],
+              "8": [
+                0.875,
+                2
+              ],
+              "9": [
+                0.9375,
+                2
+              ],
+              "10": [
+                1,
+                2
+              ],
+              "11": [
+                1.05,
+                2
+              ],
+              "12": [
+                1.1,
+                2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_JingYuan_00_Skill02_Camera",
+              "Avatar_JingYuan_00_Skill02_Phase01",
+              "Avatar_JingYuan_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Lightbringer": {
+          "variant1": {
+            "skillID": 120403,
+            "trigger": "Skill03",
+            "name": "Lightbringer",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Jing Yuan's ATK to all enemies and increases Lightning-Lord's Hits Per Action by #2[i] for the next turn.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.7,
+                3
+              ],
+              "8": [
+                1.8,
+                3
+              ],
+              "9": [
+                1.9,
+                3
+              ],
+              "10": [
+                2,
+                3
+              ],
+              "11": [
+                2.08,
+                3
+              ],
+              "12": [
+                2.16,
+                3
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_JingYuan_00_Skill03_Camera",
+              "Avatar_JingYuan_00_Skill03_EnterReady",
+              "Avatar_JingYuan_00_Skill03_Phase01",
+              "Avatar_JingYuan_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Prana Extirpated": {
+          "variant1": {
+            "skillID": 120404,
+            "trigger": "SkillP01",
+            "name": "Prana Extirpated",
+            "type": "Bounce",
+            "slot": "Talent",
+            "desc": "Summons \"Lightning-Lord\" at the start of the battle. \"Lightning-Lord\" has #1[i] base SPD and #4[i] base Hits Per Action. When the Lightning-Lord takes action, its hits are considered as Follow-Up ATKs, with each hit dealing Lightning DMG equal to #2[i]% of Jing Yuan's ATK to a random single enemy, and enemies adjacent to it also receive Lightning DMG equal to #5[i]% of the DMG dealt to the primary target enemy.\\nThe Lightning-Lord's Hits Per Action can reach a max of #6[i]. Every time \"Lightning-Lord's\" Hits Per Action increases by 1, its SPD increases by #3[i]. After the \"Lightning-Lord's\" action ends, its SPD and Hits Per Action return to their base values.\\nWhen Jing Yuan is knocked down, the \"Lightning-Lord\" will disappear.\\nWhen Jing Yuan is affected by Crowd Control debuff, the \"Lightning-Lord\" is unable to take action.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                60,
+                0.53625,
+                10,
+                3,
+                0.25,
+                10
+              ],
+              "8": [
+                60,
+                0.5775,
+                10,
+                3,
+                0.25,
+                10
+              ],
+              "9": [
+                60,
+                0.61875,
+                10,
+                3,
+                0.25,
+                10
+              ],
+              "10": [
+                60,
+                0.66,
+                10,
+                3,
+                0.25,
+                10
+              ],
+              "11": [
+                60,
+                0.693,
+                10,
+                3,
+                0.25,
+                10
+              ],
+              "12": [
+                60,
+                0.726,
+                10,
+                3,
+                0.25,
+                10
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_JingYuan_00_PassiveSkill01",
+              "Avatar_JingYuan_00_Passive_Insert",
+              "Avatar_JingYuan_00_Passive_Insert_Camera",
+              "Avatar_JingYuan_00_Passive_Insert_Ability"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Spiritus Invocation": {
+          "variant1": {
+            "skillID": 120407,
+            "trigger": "SkillMaze",
+            "name": "Spiritus Invocation",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After the Technique is used, the Lightning-Lord's Hits Per Action in the first turn increases by #1[i] at the start of the next battle.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_JingYuan_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1204_basic_atk.png",
+        "skillRef": {
+          "skillName": "Glistening Light",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1204_skill.png",
+        "skillRef": {
+          "skillName": "Rifting Zenith",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1204_ultimate.png",
+        "skillRef": {
+          "skillName": "Lightbringer",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1204_talent.png",
+        "skillRef": {
+          "skillName": "Prana Extirpated",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1204_technique.png",
+        "skillRef": {
+          "skillName": "Spiritus Invocation",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Battalia Crush",
+        "icon": "icon/skill/1204_skilltree1.png",
+        "desc": "If the Lightning-Lord's Hits Per Action is greater or equal to #1[i] in the next turn, its CRIT DMG increases by #2[i]% for the next turn.",
+        "params": [
+          6,
+          0.25
+        ]
+      },
+      "Point07": {
+        "name": "Savant Providence",
+        "icon": "icon/skill/1204_skilltree2.png",
+        "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
+        "params": [
+          15
+        ]
+      },
+      "Point08": {
+        "name": "War Marshal",
+        "icon": "icon/skill/1204_skilltree3.png",
+        "desc": "After the Skill is used, the CRIT Rate increases by #1[i]% for #2[i] turn(s).",
+        "params": [
+          0.1,
+          2
+        ]
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1204.png",
+    "preview": "image/character_preview/1204.png",
+    "portrait": "image/character_portrait/1204.png",
+    "bannerOffsets": [
+      21,
+      71,
+      0.68,
+      21,
+      71,
+      0.68,
+      21,
+      71,
+      0.68
+    ],
+    "isBuffed": false
+  },
   "Sushang": {
     "internalID": 1206,
     "name": "Sushang",

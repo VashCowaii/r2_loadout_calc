@@ -1939,6 +1939,7 @@ const megaParsingFuckery = {
         const knownKeySet = new Set ([
             "name",
             "skipDeathSettle",
+            "fakeCharacterAttack",
             // "matchToPathFrom",
             // "context",
             // "value",
@@ -1953,6 +1954,10 @@ const megaParsingFuckery = {
             ${parseRef.skipDeathSettle != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Skip Death Settlement:</div>&nbsp;
                 ${parseRef.skipDeathSettle}
+            </div>` : ""}
+            ${parseRef.fakeCharacterAttack != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Fake Character Attack:</div>&nbsp;
+                ${parseRef.fakeCharacterAttack}
             </div>` : ""}
         </div>`;
     },
@@ -4152,6 +4157,7 @@ const megaParsingFuckery = {
             "on",
             "show",
             "time",
+            "enhanced",
             
             // "healPercent",
             // "formula",
@@ -4171,6 +4177,10 @@ const megaParsingFuckery = {
             ${parseRef.show != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Show:</div>&nbsp;
                 ${parseRef.show}
+            </div>` : ""}
+            ${parseRef.enhanced != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Enhanced Time:</div>&nbsp;
+                ${parseRef.enhanced.displayLines ?? parseRef.enhanced}
             </div>` : ""}
         </div>
         `;
@@ -4608,6 +4618,7 @@ const megaParsingFuckery = {
             "variables",
             "assignOwner",
             "whenCreated",
+            "statSource",
             
             // "healPercent",
             // "formula",
@@ -4689,8 +4700,14 @@ const megaParsingFuckery = {
             <div class="modifierDetailsBox">
                 ${parseRef.assignOwner != undefined ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Assign Owner:</div>&nbsp;
-                    
+                        ${Array.isArray(parseRef.assignOwner) ? megaParsingFuckery.makeConditionTargetBox(parseRef.assignOwner,initialCounter) : parseRef.assignOwner}
                 </div>` : ""}
+                ${parseRef.statSource != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Stat Source:</div>&nbsp;
+                        ${Array.isArray(parseRef.statSource) ? megaParsingFuckery.makeConditionTargetBox(parseRef.statSource,initialCounter) : parseRef.statSource}
+                </div>` : ""}
+
+                
                 ${addString}
             </div>
 
