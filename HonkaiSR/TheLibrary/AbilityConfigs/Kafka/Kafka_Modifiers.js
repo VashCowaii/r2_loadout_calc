@@ -188,7 +188,7 @@ const configAbility = {
                   {
                     "name": "Is Part Of",
                     "of": "Use Prior Target(s) Defined",
-                    "target": "Caster's Entire Team(Living) [Exclude Owner]",
+                    "target": "Caster's Entire Team [Exclude Owner]",
                     "mustBeAlive2": true
                   },
                   {

@@ -94,6 +94,159 @@ const configAbility = {
       "modifier": "Yukong_Ability01_Preshow"
     }
   ],
+  "functions": [
+    {
+      "name": "CharacterFunctions",
+      "functionName": "Yukong_Ability01_Shoot",
+      "parse": [
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Single Target (Primary)",
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CharacterFunctions",
+      "functionName": "Yukong_Ability01_ShootV2",
+      "parse": [
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Single Target (Primary)",
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
+                  "displayLines": "(1 + 0.8)",
+                  "constants": [],
+                  "variables": [
+                    1,
+                    0.8
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
+                  "displayLines": "(ST Toughness Value * (1 + 1))",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    "ST Toughness Value",
+                    1
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Single Target (Primary)",
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
+                  "displayLines": "(1 + 0.8)",
+                  "constants": [],
+                  "variables": [
+                    1,
+                    0.8
+                  ]
+                },
+                "HitSplit": 0.2,
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
+                  "displayLines": "(ST Toughness Value * (1 + 1))",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    "ST Toughness Value",
+                    1
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Shot Fired",
+          "execute": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Single Target (Primary)",
+              "AttackScaling": {
+                "DamageType": "Imaginary",
+                "Damage": {
+                  "operator": "Variables[0] (1) || Variables[1] (0.8) || ADD || RETURN",
+                  "displayLines": "(1 + 0.8)",
+                  "constants": [],
+                  "variables": [
+                    1,
+                    0.8
+                  ]
+                },
+                "HitSplit": 0.6,
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || Constants[0] (1) || Variables[1] (1) || ADD || MUL || RETURN",
+                  "displayLines": "(ST Toughness Value * (1 + 1))",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    "ST Toughness Value",
+                    1
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Basic ATK",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "references": [
     {
       "name": "Modifier Construction",

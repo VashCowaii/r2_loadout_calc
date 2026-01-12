@@ -118,6 +118,7 @@ const megaParsingFuckery = {
         let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
         let eventBodyStringOnAdd = megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
         let eventBodyStringOnAbort = megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
+        let eventBodyStringFunctions = megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter);
         
 
         let referenceBodyString = configAbility.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
@@ -319,6 +320,12 @@ const megaParsingFuckery = {
                     <div class="rotationConditionOperatorHeaderCondition">MODIFER LOG</div>
                 </summary>
                 ${referenceBodyString}
+            </details>` : ""}
+            ${eventBodyStringFunctions ? `<details class="rotationsPermaConditionsExpand" open="">
+                <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                    <div class="rotationConditionOperatorHeaderCondition">ABILITY FUNCTIONS</div>
+                </summary>
+                ${eventBodyStringFunctions}
             </details>` : ""}
             ${referenceGlobalString ? `<details class="rotationsPermaConditionsExpand" open="">
                 <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">

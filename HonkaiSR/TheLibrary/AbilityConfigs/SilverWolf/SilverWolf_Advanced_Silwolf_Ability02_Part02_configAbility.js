@@ -105,5 +105,379 @@ const configAbility = {
       ]
     }
   ],
+  "functions": [
+    {
+      "name": "CharacterFunctions",
+      "functionName": "Advanced_Silwolf_Ability02_Success",
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 1
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 2
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 4
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 8
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 16
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 32
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 64
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (1.96) || RETURN",
+              "displayLines": "1.96",
+              "constants": [],
+              "variables": [
+                1.96
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "attackType": "Skill",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Single Target (Primary)",
+                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+              },
+              "passed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Implant Weakness: Physical"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Weakness Repeated",
+                  "living": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 2
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Single Target (Primary)",
+                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+              },
+              "passed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Implant Weakness: Fire"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Weakness Repeated",
+                  "living": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 4
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Single Target (Primary)",
+                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+              },
+              "passed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Implant Weakness: Ice"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Weakness Repeated",
+                  "living": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 8
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Single Target (Primary)",
+                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+              },
+              "passed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Implant Weakness: Lightning"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Weakness Repeated",
+                  "living": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 16
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Single Target (Primary)",
+                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+              },
+              "passed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Implant Weakness: Wind"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Weakness Repeated",
+                  "living": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 32
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Single Target (Primary)",
+                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+              },
+              "passed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Implant Weakness: Quantum"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Weakness Repeated",
+                  "living": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "Avatar_Advanced_Silwolf_00_BPSkill_WeakType_01",
+            "compareType": "=",
+            "value2": 64
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Single Target (Primary)",
+                "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
+              },
+              "passed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Implant Weakness: Imaginary"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": "Single Target (Primary)",
+                  "popUpText": "Weakness Repeated",
+                  "living": true
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ]
+    },
+    {
+      "name": "CharacterFunctions",
+      "functionName": "Advanced_Silwolf_Ability02_Failed",
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (1.96) || RETURN",
+              "displayLines": "1.96",
+              "constants": [],
+              "variables": [
+                1.96
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ]
+    }
+  ],
   "references": []
 }

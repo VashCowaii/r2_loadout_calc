@@ -15504,6 +15504,571 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Misha": {
+    "internalID": 1312,
+    "name": "Misha",
+    "path": "Destruction",
+    "element": "Ice",
+    "rarity": 4,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 599.76,
+      "DEFBase": 396.9,
+      "HPBase": 1270.08,
+      "SPDBase": 96,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "131201",
+        "name": "Whimsicality of Fancy",
+        "rank": 1,
+        "desc": "When using the Ultimate, for every enemy on the field, additionally increases the Hits Per Action for the current Ultimate by 1 hit(s), up to a maximum increase of 5 hit(s).",
+        "icon": "icon/skill/1312_rank1.png",
+        "paramsEido": [
+          1,
+          5
+        ]
+      },
+      {
+        "id": "131202",
+        "name": "Yearning of Youth",
+        "rank": 2,
+        "desc": "Before each hit of the Ultimate lands, there is a 24% base chance of reducing the target's DEF by 16% for 3 turn(s).",
+        "icon": "icon/skill/1312_rank2.png",
+        "paramsEido": [
+          0.16,
+          3,
+          0.24
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "131203",
+        "name": "Vestige of Happiness",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1312_ultimate.png"
+      },
+      {
+        "id": "131204",
+        "name": "Visage of Kinship",
+        "rank": 4,
+        "desc": "Increases the DMG multiplier for each hit of the Ultimate by 6%.",
+        "icon": "icon/skill/1312_rank4.png",
+        "paramsEido": [
+          0.06
+        ]
+      },
+      {
+        "id": "131205",
+        "name": "Genesis of First Love",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1312_skill.png"
+      },
+      {
+        "id": "131206",
+        "name": "Estrangement of Dream",
+        "rank": 6,
+        "desc": "When using the Ultimate, increases own DMG by 30%, lasting until the end of the turn. In addition, the next time the Skill is used, recovers 1 Skill Point(s) for the team.",
+        "icon": "icon/skill/1312_rank6.png",
+        "paramsEido": [
+          1,
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "E—Excuse Me, Please!": {
+          "variant1": {
+            "skillID": 131201,
+            "trigger": "Skill01",
+            "name": "E—Excuse Me, Please!",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Misha's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Misha_00_Skill01_Camera",
+              "Avatar_Misha_00_Skill01_Phase01",
+              "Avatar_Misha_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "R—Room Service!": {
+          "variant1": {
+            "skillID": 131202,
+            "trigger": "Skill02",
+            "name": "R—Room Service!",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Increases the Hits Per Action for Misha's next Ultimate by #3[i] hit(s). Deals Ice DMG equal to #1[i]% of Misha's ATK to one designated enemy target, and Ice DMG equal to #2[i]% of Misha's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.625,
+                0.65,
+                1
+              ],
+              "8": [
+                1.75,
+                0.7,
+                1
+              ],
+              "9": [
+                1.875,
+                0.75,
+                1
+              ],
+              "10": [
+                2,
+                0.8,
+                1
+              ],
+              "11": [
+                2.1,
+                0.84,
+                1
+              ],
+              "12": [
+                2.2,
+                0.88,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Misha_00_Skill02_Camera",
+              "Avatar_Misha_00_Skill02_Phase01",
+              "Avatar_Misha_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "G—Gonna Be Late!": {
+          "variant1": {
+            "skillID": 131203,
+            "trigger": "Skill03",
+            "name": "G—Gonna Be Late!",
+            "type": "Bounce",
+            "slot": "Ultimate",
+            "desc": "Has #1[i] Hits Per Action by default. First, uses 1 hit to deal Ice DMG equal to #2[i]% of Misha's ATK to one designated enemy target. Then, the rest of the hits each deals Ice DMG equal to #2[i]% of Misha's ATK to one random enemy. Just before each hit lands, there is a #3[f1]% base chance to Freeze the target, lasting for 1 turn.\\nWhile Frozen, enemy targets cannot take any actions, and at the start of their turn, they receive Ice Additional DMG equal to #4[i]% of Misha's ATK.\\nThis Ultimate can possess up to #5[i] Hits Per Action. After the Ultimate is used, its Hits Per Action will be reset to the default level.",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                3,
+                0.51,
+                0.17,
+                0.255,
+                10
+              ],
+              "8": [
+                3,
+                0.54,
+                0.18,
+                0.27,
+                10
+              ],
+              "9": [
+                3,
+                0.57,
+                0.19,
+                0.285,
+                10
+              ],
+              "10": [
+                3,
+                0.6,
+                0.2,
+                0.3,
+                10
+              ],
+              "11": [
+                3,
+                0.624,
+                0.208,
+                0.312,
+                10
+              ],
+              "12": [
+                3,
+                0.648,
+                0.216,
+                0.324,
+                10
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Misha_00_Skill03_Camera",
+              "Avatar_Misha_00_Skill03_EnterReady",
+              "Avatar_Misha_00_Skill03_Phase01",
+              "Avatar_Misha_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Horological Escapement": {
+          "variant1": {
+            "skillID": 131204,
+            "trigger": "SkillP01",
+            "name": "Horological Escapement",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "For every 1 Skill Point allies consume, Misha's next Ultimate delivers #2[i] more Hit(s) Per Action, and Misha regenerates #1[f1] Energy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.625,
+                1
+              ],
+              "8": [
+                1.75,
+                1
+              ],
+              "9": [
+                1.875,
+                1
+              ],
+              "10": [
+                2,
+                1
+              ],
+              "11": [
+                2.1,
+                1
+              ],
+              "12": [
+                2.2,
+                1
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Misha_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Wait, You Are So Beautiful!": {
+          "variant1": {
+            "skillID": 131207,
+            "trigger": "SkillMaze",
+            "name": "Wait, You Are So Beautiful!",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using the Technique, creates a Special Dimension that lasts for #1[i] seconds. Enemies caught in the Special Dimension are inflicted with Dream Prison and stop all their actions. Upon entering battle against enemies afflicted with Dream Prison, increases the Hits Per Action for Misha's next Ultimate by #2[i] hit(s). Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                15,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Misha_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1312_basic_atk.png",
+        "skillRef": {
+          "skillName": "E—Excuse Me, Please!",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1312_skill.png",
+        "skillRef": {
+          "skillName": "R—Room Service!",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1312_ultimate.png",
+        "skillRef": {
+          "skillName": "G—Gonna Be Late!",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1312_talent.png",
+        "skillRef": {
+          "skillName": "Horological Escapement",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1312_technique.png",
+        "skillRef": {
+          "skillName": "Wait, You Are So Beautiful!",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Release",
+        "icon": "icon/skill/1312_skilltree1.png",
+        "desc": "Before the Ultimate's first hit, increases the base chance of Freezing the target by #1[i]%.",
+        "params": [
+          0.8
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              0.8
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Interlock",
+        "icon": "icon/skill/1312_skilltree2.png",
+        "desc": "When using the Ultimate, increases the Effect Hit Rate by #1[i]%, lasting until the end of the current Ultimate's action.",
+        "params": [
+          0.6
+        ]
+      },
+      "Point08": {
+        "name": "Transmission",
+        "icon": "icon/skill/1312_skilltree3.png",
+        "desc": "When dealing DMG to Frozen enemies, increases CRIT DMG by #1[i]%.",
+        "params": [
+          0.3
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1312.png",
+    "preview": "image/character_preview/1312.png",
+    "portrait": "image/character_portrait/1312.png",
+    "bannerOffsets": [
+      -34,
+      98,
+      0.57,
+      -34,
+      98,
+      0.57,
+      -34,
+      98,
+      0.57
+    ],
+    "isBuffed": false
+  },
   "Tribbie": {
     "internalID": 1403,
     "name": "Tribbie",
