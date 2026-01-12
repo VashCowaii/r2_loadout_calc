@@ -591,7 +591,7 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Teammates + Memosprites (Excluding Owner)",
+          "to": "All Teammates + Unselectable (Excluding Owner)",
           "modifier": "RuanMei_PassiveArea_PenetrateUP",
           "aliveOnly": "True",
           "haloStatus": true,

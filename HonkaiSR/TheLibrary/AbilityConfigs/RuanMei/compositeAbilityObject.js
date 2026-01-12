@@ -1485,7 +1485,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates + Memosprites (Excluding Owner)",
+                  "to": "All Teammates + Unselectable (Excluding Owner)",
                   "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
                   "valuePerStack": {
                     "Ability02_P1_DamageAddedRatio_Friend": {
@@ -2243,7 +2243,7 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Teammates + Memosprites (Excluding Owner)",
+              "to": "All Teammates + Unselectable (Excluding Owner)",
               "modifier": "RuanMei_PassiveArea_PenetrateUP",
               "aliveOnly": "True",
               "haloStatus": true,

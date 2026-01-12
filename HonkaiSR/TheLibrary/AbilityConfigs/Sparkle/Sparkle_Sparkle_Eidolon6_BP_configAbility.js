@@ -1,0 +1,102 @@
+const configAbility = {
+  "fileName": "Sparkle_Sparkle_Eidolon6_BP",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Current Action Holder Is",
+        "target": "Single Target (Primary)"
+      },
+      "passed": [
+        "Deleted bullshit"
+      ],
+      "failed": [
+        "Deleted bullshit"
+      ]
+    },
+    {
+      "name": "Define Custom Variable with Stat",
+      "target": "Caster",
+      "variableName": "MDF_Sparkle_CritDmgValue",
+      "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+    },
+    {
+      "name": "Define Custom Variable",
+      "variableName": "MDF_CriticalDamageBase_change",
+      "value": {
+        "operator": "Variables[0] (MDF_Sparkle_CritDmgValue) || RETURN",
+        "displayLines": "MDF_Sparkle_CritDmgValue",
+        "constants": [],
+        "variables": [
+          "MDF_Sparkle_CritDmgValue"
+        ]
+      }
+    },
+    {
+      "name": "Define Custom Variable",
+      "variableName": "MDF_CriticalDamageBase_change",
+      "value": {
+        "operator": "Variables[0] (MDF_CriticalDamageBase_change) || Variables[1] (0.24) || MUL || RETURN",
+        "displayLines": "(MDF_CriticalDamageBase_change * 0.24)",
+        "constants": [],
+        "variables": [
+          "MDF_CriticalDamageBase_change",
+          0.24
+        ]
+      }
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Single Target (Primary)",
+      "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+      "duration": {
+        "operator": "Variables[0] (1) || RETURN",
+        "displayLines": "1",
+        "constants": [],
+        "variables": [
+          1
+        ]
+      },
+      "valuePerStack": {
+        "MDF_PropertyValueConvert": {
+          "operator": "Variables[0] (MDF_CriticalDamageBase_change) || RETURN",
+          "displayLines": "MDF_CriticalDamageBase_change",
+          "constants": [],
+          "variables": [
+            "MDF_CriticalDamageBase_change"
+          ]
+        },
+        "MDF_PropertyValueBase": {
+          "operator": "Variables[0] (0.45) || RETURN",
+          "displayLines": "0.45",
+          "constants": [],
+          "variables": [
+            0.45
+          ]
+        }
+      }
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Is Part Of",
+        "of": "Single Target (Primary)",
+        "target": "Caster",
+        "mustBeAlive2": true,
+        "invertCondition": true
+      },
+      "passed": [
+        {
+          "name": "Action Advance/Delay",
+          "target": "Single Target (Primary)",
+          "advanceType": "Advance",
+          "value": "-0.5"
+        }
+      ]
+    }
+  ],
+  "references": []
+}

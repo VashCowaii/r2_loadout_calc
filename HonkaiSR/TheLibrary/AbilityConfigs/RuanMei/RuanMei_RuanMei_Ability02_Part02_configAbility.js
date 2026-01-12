@@ -233,7 +233,7 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates + Memosprites (Excluding Owner)",
+              "to": "All Teammates + Unselectable (Excluding Owner)",
               "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
               "valuePerStack": {
                 "Ability02_P1_DamageAddedRatio_Friend": {

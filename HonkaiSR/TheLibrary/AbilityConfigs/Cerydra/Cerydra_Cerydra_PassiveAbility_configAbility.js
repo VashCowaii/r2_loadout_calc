@@ -1,0 +1,1021 @@
+const configAbility = {
+  "fileName": "Cerydra_Cerydra_PassiveAbility",
+  "abilityType": "Talent",
+  "energy": null,
+  "toughnessList": [
+    0,
+    0,
+    0
+  ],
+  "parse": [
+    {
+      "name": "Update Displayed Energy Bar",
+      "value": {
+        "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
+        "displayLines": "DV_CurrentPoint",
+        "constants": [],
+        "variables": [
+          "DV_CurrentPoint"
+        ]
+      },
+      "maximum": {
+        "operator": "Variables[0] (6) || RETURN",
+        "displayLines": "6",
+        "constants": [],
+        "variables": [
+          6
+        ]
+      },
+      "assignState": "True",
+      "priorState": "Disable",
+      "bar#": 2
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "Cerydra_PassiveAbility"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Trace Activated",
+        "conditionList": "Veni"
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Cerydra_PointB1"
+        }
+      ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Trace Activated",
+        "conditionList": "Vidi"
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Cerydra_PointB2_Self",
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "Cerydra_BP_PreShow"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "Cerydra_BP_PreShow_End",
+      "modifierFlags": [
+        "RemoveWhenCasterDead"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "Update Target Selected(UI) [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": "Owner of this Modifier",
+                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                  },
+                  {
+                    "name": "Compare: Target",
+                    "target": "Caster",
+                    "target2": "Use Prior Target(s) Defined"
+                  },
+                  {
+                    "name": "Compare: Target",
+                    "target": "Owner of this Modifier",
+                    "target2": "Current Visual Main-Target",
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "DV_CurrentPoint",
+                    "compareType": "<",
+                    "value2": {
+                      "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
+                      "displayLines": "(6 - 1)",
+                      "constants": [],
+                      "variables": [
+                        6,
+                        1
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Skill Type",
+                    "skillType": "Skill",
+                    "activeSkill": true
+                  }
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Target",
+                "target": "Owner of this Modifier",
+                "target2": "Current Visual Main-Target"
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Active Ability Chosen [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": "Owner of this Modifier",
+                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                  },
+                  {
+                    "name": "Compare: Target",
+                    "target": "Use Prior Target(s) Defined",
+                    "target2": "Owner of this Modifier"
+                  },
+                  {
+                    "name": "Compare: Target",
+                    "target": "Use Prior Target(s) Defined",
+                    "target2": "Caster",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "DV_Rank02_Effcet",
+                        "compareType": ">=",
+                        "value2": 1
+                      },
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "Vidi",
+                        "target": "Caster"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate",
+                        "activeSkill": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DV_CurrentPoint",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
+                          "displayLines": "(6 - 1)",
+                          "constants": [],
+                          "variables": [
+                            6,
+                            1
+                          ]
+                        }
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "DV_CurrentPoint",
+                            "compareType": "<",
+                            "value2": {
+                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
+                              "displayLines": "(6 - 1)",
+                              "constants": [],
+                              "variables": [
+                                6,
+                                1
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DV_CurrentPoint",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
+                          "displayLines": "(6 - 1)",
+                          "constants": [],
+                          "variables": [
+                            6,
+                            1
+                          ]
+                        }
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "DV_CurrentPoint",
+                            "compareType": "<",
+                            "value2": {
+                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
+                              "displayLines": "(6 - 1)",
+                              "constants": [],
+                              "variables": [
+                                6,
+                                1
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": "Owner of this Modifier",
+                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                  },
+                  {
+                    "name": "Compare: Target",
+                    "target": "Use Prior Target(s) Defined",
+                    "target2": "Owner of this Modifier"
+                  },
+                  {
+                    "name": "Compare: Target",
+                    "target": "Use Prior Target(s) Defined",
+                    "target2": "Caster"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Basic ATK",
+                    "activeSkill": true
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DV_CurrentPoint",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
+                          "displayLines": "(6 - 1)",
+                          "constants": [],
+                          "variables": [
+                            6,
+                            1
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate",
+                    "activeSkill": true
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "DV_Rank02_Effcet",
+                            "compareType": ">=",
+                            "value2": 1
+                          },
+                          {
+                            "name": "Trace Activated",
+                            "conditionList": "Vidi",
+                            "target": "Caster"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "DV_CurrentPoint",
+                            "compareType": ">=",
+                            "value2": {
+                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || Variables[2] (2) || SUB || RETURN",
+                              "displayLines": "((6 - 1) - 2)",
+                              "constants": [],
+                              "variables": [
+                                6,
+                                1,
+                                2
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "DV_CurrentPoint",
+                            "compareType": ">=",
+                            "value2": {
+                              "operator": "Variables[0] (6) || Variables[1] (2) || SUB || RETURN",
+                              "displayLines": "(6 - 2)",
+                              "constants": [],
+                              "variables": [
+                                6,
+                                2
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "Cerydra_BP_PreShow",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Allied Team",
+              "modifier": "Cerydra_BP_PreShow_End"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Entity Created [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team",
+                "target": "Use Prior Target(s) Defined",
+                "team": "TeamLight"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Use Prior Target(s) Defined",
+                  "modifier": "Cerydra_BP_PreShow_End"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Ability Use [Owner]: Start"
+        },
+        {
+          "eventTrigger": "Update Target Selected(UI) [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Skill Type",
+                    "skillType": "Skill",
+                    "activeSkill": true
+                  },
+                  {
+                    "name": "Is Part Of Team",
+                    "target": "Current Visual Main-Target",
+                    "team": "TeamLight"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": "Current Visual Main-Target",
+                    "modifier": "Cerydra_Ability02_Target"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": "Current Visual Main-Target",
+                    "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target",
+                        "target": "Current Visual Main-Target",
+                        "target2": "Caster",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "DV_CurrentPoint",
+                            "compareType": ">=",
+                            "value2": {
+                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || RETURN",
+                              "displayLines": "(6 - 1)",
+                              "constants": [],
+                              "variables": [
+                                6,
+                                1
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "DV_CurrentPoint",
+                            "compareType": ">=",
+                            "value2": {
+                              "operator": "Variables[0] (6) || Variables[1] (1) || SUB || Variables[2] (1) || SUB || RETURN",
+                              "displayLines": "((6 - 1) - 1)",
+                              "constants": [],
+                              "variables": [
+                                6,
+                                1,
+                                1
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": "Current Visual Main-Target",
+                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "#CL_Cerydra_InBP",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
+                          "value": 2
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
+                          "value": 2
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
+                          "value": 2
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "#CL_Cerydra_BPReady_Queen",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "#CL_Cerydra_InBP",
+                            "compareType": "=",
+                            "value2": 1
+                          },
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "#CL_Cerydra_BPReady_Queen",
+                            "compareType": "=",
+                            "value2": 1
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
+                          "value": 1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
+                          "value": 1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "#CL_Cerydra_BPReady_Queen",
+                          "value": 0
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "#CL_Cerydra_InBP",
+                                "compareType": "=",
+                                "value2": 0
+                              },
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "#CL_Cerydra_BPReady_Queen",
+                                "compareType": "=",
+                                "value2": 0
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
+                              "value": 1
+                            },
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
+                              "value": 0
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "value1": "#CL_Cerydra_InBP",
+                                    "compareType": "=",
+                                    "value2": 1
+                                  },
+                                  {
+                                    "name": "Compare: Variable",
+                                    "value1": "#CL_Cerydra_BPReady_Queen",
+                                    "compareType": "=",
+                                    "value2": 0
+                                  }
+                                ]
+                              },
+                              "passed": [
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
+                                  "value": 1
+                                },
+                                {
+                                  "name": "Define Custom Variable",
+                                  "variableName": "#CL_Cerydra_Eff_chess_Ready_loop_needtochange",
+                                  "value": 0
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "#CL_Cerydra_InBP",
+                  "value": 1
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "#CL_Cerydra_InBP",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Part Of Team",
+                    "target": "Current Visual Main-Target",
+                    "team": "TeamLight",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "#CL_Cerydra_BPReady_Queen",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "#CL_Cerydra_Eff_chess_Ready_loop",
+              "value": {
+                "operator": "Variables[0] (#CL_Cerydra_Eff_chess_Ready_loop_Isgolden) || Constants[0] (10) || MUL || Variables[1] (#CL_Cerydra_Eff_chess_Ready_loop_needtochange) || ADD || RETURN",
+                "displayLines": "((#CL_Cerydra_Eff_chess_Ready_loop_Isgolden * 10) + #CL_Cerydra_Eff_chess_Ready_loop_needtochange)",
+                "constants": [
+                  10
+                ],
+                "variables": [
+                  "#CL_Cerydra_Eff_chess_Ready_loop_Isgolden",
+                  "#CL_Cerydra_Eff_chess_Ready_loop_needtochange"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "Cerydra_BonusTargetHandler",
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "Declare Custom Variable",
+              "target": "Owner of this Modifier",
+              "scope": "TargetEntity",
+              "variableName": "#CL_HaveBuff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "Cerydra_PassiveAbility",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "Turn End [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Current Turn Is",
+                "target": "Caster"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "#CL_Cerydra_InBP",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "#CL_Cerydra_BPReady_Queen",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Entity Death [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Use Prior Target(s) Defined",
+                "modifier": "Cerydra_Ability02_Target"
+              },
+              "passed": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
+                    "displayLines": "DV_CurrentPoint",
+                    "constants": [],
+                    "variables": [
+                      "DV_CurrentPoint"
+                    ]
+                  },
+                  "maximum": {
+                    "operator": "Variables[0] (6) || RETURN",
+                    "displayLines": "6",
+                    "constants": [],
+                    "variables": [
+                      6
+                    ]
+                  },
+                  "assignState": "True",
+                  "priorState": "Disable",
+                  "bar#": 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "variableValueChange": [
+        {
+          "name": "Variable Value Changes",
+          "variableName": "DV_CurrentPoint",
+          "from": "ContextOwner",
+          "valueRanges": [
+            {
+              "name": "Changes",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "DV_CurrentPoint",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Compare: Target Count SUM",
+                        "target": "Allied Team(ALL)",
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": "Use Prior Target(s) Defined",
+                          "modifier": "Cerydra_Ability02_Target"
+                        }
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DV_CurrentPoint",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (6) || RETURN",
+                          "displayLines": "6",
+                          "constants": [],
+                          "variables": [
+                            6
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
+                            "displayLines": "DV_CurrentPoint",
+                            "constants": [],
+                            "variables": [
+                              "DV_CurrentPoint"
+                            ]
+                          },
+                          "maximum": {
+                            "operator": "Variables[0] (6) || RETURN",
+                            "displayLines": "6",
+                            "constants": [],
+                            "variables": [
+                              6
+                            ]
+                          },
+                          "assignState": "True",
+                          "priorState": "Active",
+                          "bar#": 2
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "DV_DelayReachPromotionRank01_Flag",
+                                "compareType": "=",
+                                "value2": 1,
+                                "invertCondition": true
+                              },
+                              {
+                                "name": "Has Modifier",
+                                "target": "Cerydra's Promotion Target",
+                                "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                                "invertCondition": true
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Inject Ability Use",
+                              "condition": {
+                                "name": "Insert Ability Condition",
+                                "type": "AbilityOwnerInsertUnusedCount",
+                                "typeValue": 1
+                              },
+                              "conditionActive": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "value1": "DV_CurrentPoint",
+                                    "compareType": ">=",
+                                    "value2": {
+                                      "operator": "Variables[0] (6) || RETURN",
+                                      "displayLines": "6",
+                                      "constants": [],
+                                      "variables": [
+                                        6
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "name": "Has Modifier",
+                                    "target": "Cerydra's Promotion Target",
+                                    "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
+                                    "invertCondition": true
+                                  }
+                                ]
+                              },
+                              "abilityName": "Cerydra_Ability02_InsertEidolon1",
+                              "abilityTarget": "Cerydra's Promotion Target",
+                              "priorityTag": "AvatarBuffOthers",
+                              "canHitNonTargets": true,
+                              "showInActionOrder": true,
+                              "customFlags": [
+                                "HideEffectMarkAutoHideInSkill"
+                              ],
+                              "allowAbilityTriggers": true
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Update Displayed Energy Bar",
+                          "value": {
+                            "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
+                            "displayLines": "DV_CurrentPoint",
+                            "constants": [],
+                            "variables": [
+                              "DV_CurrentPoint"
+                            ]
+                          },
+                          "maximum": {
+                            "operator": "Variables[0] (6) || RETURN",
+                            "displayLines": "6",
+                            "constants": [],
+                            "variables": [
+                              6
+                            ]
+                          },
+                          "assignState": "True",
+                          "priorState": "Normal",
+                          "bar#": 2
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (DV_CurrentPoint) || RETURN",
+                        "displayLines": "DV_CurrentPoint",
+                        "constants": [],
+                        "variables": [
+                          "DV_CurrentPoint"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] (6) || RETURN",
+                        "displayLines": "6",
+                        "constants": [],
+                        "variables": [
+                          6
+                        ]
+                      },
+                      "assignState": "True",
+                      "priorState": "Disable",
+                      "bar#": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [],
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": "All Team Members(In Context)",
+          "modifier": "Cerydra_BonusTargetHandler",
+          "haloStatus": true
+        }
+      ]
+    }
+  ]
+}

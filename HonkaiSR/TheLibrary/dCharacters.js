@@ -5022,6 +5022,3501 @@ let characters = {
       0.55
     ]
   },
+  "Sparkle": {
+    "internalID": 1306,
+    "name": "Sparkle",
+    "path": "Harmony",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 485.1,
+      "HPBase": 1397.088,
+      "SPDBase": 101,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130601",
+        "name": "Suspension of Disbelief",
+        "rank": 1,
+        "desc": "The Cipher effect granted by the Ultimate lasts for 1 extra turn. All allies with Cipher have their ATK increased by 40%.",
+        "icon": "icon/skill/1306_rank1.png",
+        "paramsEido": [
+          0.4
+        ]
+      },
+      {
+        "id": "130602",
+        "name": "Purely Fictitious",
+        "rank": 2,
+        "desc": "Every stack of the Talent's effect allows allies to additionally ignore 8% of the target's DEF when dealing DMG.",
+        "icon": "icon/skill/1306_rank2.png",
+        "paramsEido": [
+          0.08
+        ]
+      },
+      {
+        "id": "130603",
+        "name": "Pipedream",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1306_skill.png"
+      },
+      {
+        "id": "130604",
+        "name": "Life Is a Gamble",
+        "rank": 4,
+        "desc": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases the Max Skill Points by 1.",
+        "icon": "icon/skill/1306_rank4.png"
+      },
+      {
+        "id": "130605",
+        "name": "Parallax Truth",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1306_ultimate.png"
+      },
+      {
+        "id": "130606",
+        "name": "Narrative Polysemy",
+        "rank": 6,
+        "desc": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to 30% of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all teammates with Cipher. When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to teammates with Cipher.",
+        "icon": "icon/skill/1306_rank6.png",
+        "paramsEido": [
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Monodrama": {
+          "variant1": {
+            "skillID": 130601,
+            "trigger": "Skill01",
+            "name": "Monodrama",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Sparkle's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_Skill01_Camera",
+              "Avatar_Sparkle_00_Skill01_Phase01",
+              "Avatar_Sparkle_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Dreamdiver": {
+          "variant1": {
+            "skillID": 130602,
+            "trigger": "Skill02",
+            "name": "Dreamdiver",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Increases the CRIT DMG of a single target ally by #1[f1]% of Sparkle's CRIT DMG plus #2[f1]%, lasting for #3[i] turn(s). And at the same time, Advances Forward this ally's action by #4[i]%.\\nWhen Sparkle uses this ability on herself, the Action Advance effect will not trigger.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.195,
+                0.3825,
+                1,
+                0.5
+              ],
+              "8": [
+                0.21,
+                0.405,
+                1,
+                0.5
+              ],
+              "9": [
+                0.225,
+                0.4275,
+                1,
+                0.5
+              ],
+              "10": [
+                0.24,
+                0.45,
+                1,
+                0.5
+              ],
+              "11": [
+                0.252,
+                0.468,
+                1,
+                0.5
+              ],
+              "12": [
+                0.264,
+                0.486,
+                1,
+                0.5
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_Skill02_Phase01",
+              "Avatar_Sparkle_00_Skill02_Self_Camera",
+              "Avatar_Sparkle_00_Skill02_Self_Phase02",
+              "Avatar_Sparkle_00_Skill02_Others_Camera",
+              "Avatar_Sparkle_00_Skill02_Others_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "The Hero with a Thousand Faces": {
+          "variant1": {
+            "skillID": 130603,
+            "trigger": "Skill03",
+            "name": "The Hero with a Thousand Faces",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Recovers #2[i] Skill Points for the team and grants all allies Cipher. For allies with Cipher, each stack of the DMG Boost effect provided by Sparkle's Talent additionally increases by #3[f1]%, lasting for #4[i] turns.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2,
+                4,
+                0.085,
+                2
+              ],
+              "8": [
+                2,
+                4,
+                0.09,
+                2
+              ],
+              "9": [
+                2,
+                4,
+                0.095,
+                2
+              ],
+              "10": [
+                2,
+                4,
+                0.1,
+                2
+              ],
+              "11": [
+                2,
+                4,
+                0.104,
+                2
+              ],
+              "12": [
+                2,
+                4,
+                0.108,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_Skill03_Camera",
+              "Avatar_Sparkle_00_Skill03_EnterReady",
+              "Avatar_Sparkle_00_Skill03_Phase01",
+              "Avatar_Sparkle_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Red Herring": {
+          "variant1": {
+            "skillID": 130604,
+            "trigger": "SkillP01",
+            "name": "Red Herring",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "While Sparkle is on the battlefield, additionally increases the max number of Skill Points by #3[i]. Whenever an ally consumes 1 Skill Point, all allies' DMG dealt increases by #2[f1]%. This effect lasts for #1[i] turn(s) and can stack up to #4[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2,
+                0.048750002,
+                2,
+                3
+              ],
+              "8": [
+                2,
+                0.052500002,
+                2,
+                3
+              ],
+              "9": [
+                2,
+                0.05625,
+                2,
+                3
+              ],
+              "10": [
+                2,
+                0.06,
+                2,
+                3
+              ],
+              "11": [
+                2,
+                0.063,
+                2,
+                3
+              ],
+              "12": [
+                2,
+                0.066,
+                2,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_PassiveSkill_1",
+              "Avatar_Sparkle_00_Rank06_BP"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Unreliable Narrator": {
+          "variant1": {
+            "skillID": 130607,
+            "trigger": "SkillMaze",
+            "name": "Unreliable Narrator",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "Using the Technique grants all allies Misdirect for #2[i] seconds. Characters with Misdirect will not be detected by enemies, and entering battle in the Misdirect state recovers #1[i] Skill Point(s) for the team.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Sparkle_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1306_basic_atk.png",
+        "skillRef": {
+          "skillName": "Monodrama",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1306_skill.png",
+        "skillRef": {
+          "skillName": "Dreamdiver",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1306_ultimate.png",
+        "skillRef": {
+          "skillName": "The Hero with a Thousand Faces",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1306_talent.png",
+        "skillRef": {
+          "skillName": "Red Herring",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1306_technique.png",
+        "skillRef": {
+          "skillName": "Unreliable Narrator",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Almanac",
+        "icon": "icon/skill/1306_skilltree1.png",
+        "desc": "When using Basic ATK, additionally regenerates #1[i] Energy.",
+        "params": [
+          10
+        ]
+      },
+      "Point07": {
+        "name": "Artificial Flower",
+        "icon": "icon/skill/1306_skilltree2.png",
+        "desc": "The CRIT DMG Boost effect provided by the Skill will be extended until the start of the target's next turn."
+      },
+      "Point08": {
+        "name": "Nocturne",
+        "icon": "icon/skill/1306_skilltree3.png",
+        "desc": "Increases all allies' ATK by #4[i]%. When there are 1/2/3 Quantum-Type allies in the team, additionally increases Quantum-Type allies' ATK by #1[i]%/#2[i]%/#3[i]%.",
+        "params": [
+          0.05,
+          0.15,
+          0.3,
+          0.15
+        ]
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1306.png",
+    "preview": "image/character_preview/1306.png",
+    "portrait": "image/character_portrait/1306.png",
+    "bannerOffsets": [
+      12,
+      51,
+      0.54,
+      12,
+      51,
+      0.54,
+      12,
+      51,
+      0.54
+    ]
+  },
+  "Black Swan": {
+    "internalID": 1307,
+    "name": "Black Swan",
+    "path": "Nihility",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 659.7360000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1086.624,
+      "SPDBase": 102,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130701",
+        "name": "Seven Pillars of Wisdom",
+        "rank": 1,
+        "desc": "While Black Swan is active in battle, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by 25%.",
+        "icon": "icon/skill/1307_rank1.png",
+        "paramsEido": [
+          0.25
+        ]
+      },
+      {
+        "id": "130702",
+        "name": "Weep Not For Me, My Lamb",
+        "rank": 2,
+        "desc": "When an enemy target afflicted with \"Arcana\" is defeated, there is a 100% base chance of inflicting 6 stack(s) of \"Arcana\" on adjacent targets.",
+        "icon": "icon/skill/1307_rank2.png",
+        "paramsEido": [
+          1,
+          6
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      {
+        "id": "130703",
+        "name": "As Above, So Below",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1307_skill.png"
+      },
+      {
+        "id": "130704",
+        "name": "In Tears We Gift",
+        "rank": 4,
+        "desc": "While in the Epiphany state, enemy targets have their Effect RES reduced by 10% and Black Swan regenerates 8 Energy at the start of these targets' turns or when they are defeated. This Energy Regeneration effect can only trigger up to 1 time while Epiphany lasts. The trigger count is reset when Epiphany is applied again.",
+        "icon": "icon/skill/1307_rank4.png",
+        "paramsEido": [
+          0.1,
+          8
+        ]
+      },
+      {
+        "id": "130705",
+        "name": "Linnutee Flyway",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1307_ultimate.png"
+      },
+      {
+        "id": "130706",
+        "name": "Pantheon Merciful, Masses Pitiful",
+        "rank": 6,
+        "desc": "When an enemy target is attacked by Black Swan's teammates, Black Swan has a 65% base chance of inflicting 1 stack of \"Arcana\" on the target.\nEvery time Black Swan inflicts \"Arcana\" on an enemy target, there is a 50% fixed chance to additionally increase the number of \"Arcana\" stacked this time by 1.",
+        "icon": "icon/skill/1307_rank6.png",
+        "paramsEido": [
+          0.5,
+          0.65,
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          },
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Percipience, Silent Dawn": {
+          "variant1": {
+            "skillID": 130701,
+            "trigger": "Skill01",
+            "name": "Percipience, Silent Dawn",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy target, with a #2[i]% base chance of inflicting 1 stack of \"Arcana\" on the target. Additionally, when attacking a target that suffers Wind Shear, Bleed, Burn, or Shock, there is respectively a #3[i]% base chance of inflicting 1 extra stack of \"Arcana\" on the target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                0.6,
+                0.65,
+                0.65
+              ],
+              "7": [
+                0.66,
+                0.68,
+                0.68
+              ],
+              "8": [
+                0.72,
+                0.71,
+                0.71
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill01_Camera",
+              "Avatar_BlackSwan_00_Skill01_Phase01",
+              "Avatar_BlackSwan_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Skill": {
+        "Decadence, False Twilight": {
+          "variant1": {
+            "skillID": 130702,
+            "trigger": "Skill02",
+            "name": "Decadence, False Twilight",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy target and any adjacent targets. At the same time, there is a #2[i]% base chance of inflicting 1 stack of \"Arcana\" on the target enemy and the adjacent targets. Additionally, there is a #3[i]% base chance of reducing the DEF of the target enemy and the adjacent targets by #4[f1]%, lasting for #5[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.73125,
+                1,
+                1,
+                0.1855,
+                3
+              ],
+              "8": [
+                0.7875,
+                1,
+                1,
+                0.193,
+                3
+              ],
+              "9": [
+                0.84375,
+                1,
+                1,
+                0.2005,
+                3
+              ],
+              "10": [
+                0.9,
+                1,
+                1,
+                0.208,
+                3
+              ],
+              "11": [
+                0.945,
+                1,
+                1,
+                0.214,
+                3
+              ],
+              "12": [
+                0.99,
+                1,
+                1,
+                0.22,
+                3
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill02_Camera",
+              "Avatar_BlackSwan_00_Skill02_Phase01",
+              "Avatar_BlackSwan_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Bliss of Otherworld's Embrace": {
+          "variant1": {
+            "skillID": 130703,
+            "trigger": "Skill03",
+            "name": "Bliss of Otherworld's Embrace",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Inflicts Epiphany on all enemies for #2[i] turn(s).\\nWhile afflicted with Epiphany, enemies take #3[i]% increased DMG in their turn. Additionally, if enemies are also inflicted with Arcana, they are considered to be simultaneously afflicted with Wind Shear, Bleed, Burn, and Shock. After Arcana causes DMG at the start of each turn, its stacks are not reset. This non-reset effect of Arcana stacks can be triggered up to #4[i] time(s) for the duration of Epiphany. And the trigger count resets when Epiphany is applied again.\\nDeals Wind DMG equal to #1[i]% of Black Swan's ATK to all enemies.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.02,
+                2,
+                0.2125,
+                1
+              ],
+              "8": [
+                1.08,
+                2,
+                0.225,
+                1
+              ],
+              "9": [
+                1.14,
+                2,
+                0.2375,
+                1
+              ],
+              "10": [
+                1.2,
+                2,
+                0.25,
+                1
+              ],
+              "11": [
+                1.248,
+                2,
+                0.26,
+                1
+              ],
+              "12": [
+                1.296,
+                2,
+                0.27,
+                1
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_Skill03_Camera",
+              "Avatar_BlackSwan_00_Skill03_Phase01",
+              "Avatar_BlackSwan_00_Skill03_Phase02",
+              "Avatar_BlackSwan_00_Skill03_Cutin"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Loom of Fate's Caprice": {
+          "variant1": {
+            "skillID": 130704,
+            "trigger": "SkillP01",
+            "name": "Loom of Fate's Caprice",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "Every time an enemy target receives DoT at the start of each turn, there is a #2[i]% base chance for it to be inflicted with 1 stack of Arcana.\\nWhile afflicted with Arcana, enemy targets receive Wind DoT equal to #1[i]% of Black Swan's ATK at the start of each turn. Each stack of Arcana increases this DMG multiplier by #3[f1]%. Then Arcana resets to 1 stack. Arcana can stack up to #8[i] times.\\nOnly when Arcana causes DMG at the start of an enemy target's turn, Black Swan triggers additional effects based on the number of Arcana stacks inflicted on the target:\\nWhen there are #4[i] or more Arcana stacks, deals Wind DoT equal to #5[i]% of Black Swan's ATK to adjacent targets, with a #2[i]% base chance of inflicting 1 stack of Arcana on adjacent targets.\\nWhen there are #6[i] or more Arcana stacks, enables the current DoT dealt this time to ignore #7[i]% of the target's and adjacent targets' DEF.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.896,
+                0.59375,
+                0.0948,
+                3,
+                1.422,
+                7,
+                0.2,
+                50
+              ],
+              "8": [
+                2.04,
+                0.6125,
+                0.102,
+                3,
+                1.53,
+                7,
+                0.2,
+                50
+              ],
+              "9": [
+                2.22,
+                0.63125,
+                0.111,
+                3,
+                1.665,
+                7,
+                0.2,
+                50
+              ],
+              "10": [
+                2.4,
+                0.65,
+                0.12,
+                3,
+                1.8,
+                7,
+                0.2,
+                50
+              ],
+              "11": [
+                2.52,
+                0.665,
+                0.126,
+                3,
+                1.89,
+                7,
+                0.2,
+                50
+              ],
+              "12": [
+                2.64,
+                0.68,
+                0.132,
+                3,
+                1.98,
+                7,
+                0.2,
+                50
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "From Façade to Vérité": {
+          "variant1": {
+            "skillID": 130707,
+            "trigger": "SkillMaze",
+            "name": "From Façade to Vérité",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After this Technique is used, there is a #1[i]% base chance for each enemy to be inflicted with 1 stack of Arcana at the start of the next battle. For each successful application of Arcana on a target, inflicts another stack of Arcana on the same target. This process repeats until Arcana fails to be inflicted on this target. For each successive application of Arcana on a target, its base chance of success is equal to #2[i]% of the base chance of the previous successful infliction of Arcana on that target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.5,
+                0.5
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_BlackSwan_00_SkillMazeInLevel",
+              "Avatar_BlackSwan_00_SkillMazeInLevel_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Arcana": {
+                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1307_basic_atk.png",
+        "skillRef": {
+          "skillName": "Percipience, Silent Dawn",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1307_skill.png",
+        "skillRef": {
+          "skillName": "Decadence, False Twilight",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1307_ultimate.png",
+        "skillRef": {
+          "skillName": "Bliss of Otherworld's Embrace",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1307_talent.png",
+        "skillRef": {
+          "skillName": "Loom of Fate's Caprice",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1307_technique.png",
+        "skillRef": {
+          "skillName": "From Façade to Vérité",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Viscera's Disquiet",
+        "icon": "icon/skill/1307_skilltree1.png",
+        "desc": "After using Skill to attack one designated enemy that has Wind Shear, Bleed, Burn, or Shock, each of these debuffs respectively has a #1[i]% base chance of inflicting 1 extra stack of Arcana.",
+        "params": [
+          0.65
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Goblet's Dredges",
+        "icon": "icon/skill/1307_skilltree2.png",
+        "desc": "When an enemy target enters battle, there is a #1[i]% base chance for it to be inflicted with 1 stack of Arcana.\nEvery time an enemy target receives 1 instance of DoT during a single attack by an ally, there is a #1[i]% base chance for the target to be inflicted with 1 stack of Arcana. The maximum number of stacks that can be inflicted during 1 single attack is #2[i].",
+        "params": [
+          0.65,
+          3
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          },
+          "Arcana": {
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Candleflame's Portent",
+        "icon": "icon/skill/1307_skilltree3.png",
+        "desc": "Increases this unit's DMG by an amount equal to #1[i]% of Effect Hit Rate, up to a maximum DMG increase of #2[i]%.",
+        "params": [
+          0.6,
+          0.72
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1307.png",
+    "preview": "image/character_preview/1307.png",
+    "portrait": "image/character_portrait/1307.png",
+    "bannerOffsets": [
+      -4,
+      -55,
+      0.69,
+      -4,
+      -55,
+      0.69,
+      -4,
+      -55,
+      0.69
+    ]
+  },
+  "Tribbie": {
+    "internalID": 1403,
+    "name": "Tribbie",
+    "path": "Harmony",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 727.6500000000001,
+      "HPBase": 1047.816,
+      "SPDBase": 96,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "140301",
+        "name": "Rite of Sugar Scoop",
+        "rank": 1,
+        "desc": "While the Zone lasts and after ally targets attack enemies, additionally deals True DMG equal to 24% of the total DMG of this attack to targets that have been dealt Additional DMG by the Zone.",
+        "icon": "icon/skill/1403_rank1.png",
+        "paramsEido": [
+          0.24
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          },
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+          }
+        }
+      },
+      {
+        "id": "140302",
+        "name": "Guide of Dream Tour",
+        "rank": 2,
+        "desc": "The Additional DMG dealt by the Zone increases to 120% of the original DMG. When the Zone deals Additional DMG, further deals 1 instance(s) of Additional DMG.",
+        "icon": "icon/skill/1403_rank2.png",
+        "paramsEido": [
+          1.2,
+          1
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "140303",
+        "name": "Trove of Morning Glow",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1403_ultimate.png"
+      },
+      {
+        "id": "140304",
+        "name": "Peace of Empathy Bond",
+        "rank": 4,
+        "desc": "While \"Numinosity\" lasts, the DMG dealt by all allies ignores 18% of the target's DEF.",
+        "icon": "icon/skill/1403_rank4.png",
+        "paramsEido": [
+          0.18
+        ]
+      },
+      {
+        "id": "140305",
+        "name": "Clock of Wonder Origin",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1403_skill.png"
+      },
+      {
+        "id": "140306",
+        "name": "Morrow of Star Shine",
+        "rank": 6,
+        "desc": "After Tribbie uses Ultimate, launches her Talent's Follow-Up ATK against all enemies. The DMG dealt by Talent's Follow-Up ATK increases by 729%.",
+        "icon": "icon/skill/1403_rank6.png",
+        "paramsEido": [
+          7.29
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Hundred Rockets": {
+          "variant1": {
+            "skillID": 140301,
+            "trigger": "Skill01",
+            "name": "Hundred Rockets",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Tribbie's Max HP to one designated enemy. Deals Quantum DMG equal to #2[i]% of Tribbie's Max HP to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                0.3,
+                0.15
+              ],
+              "7": [
+                0.33,
+                0.165
+              ],
+              "8": [
+                0.36,
+                0.18
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Tribbie_00_Skill01_Camera",
+              "Avatar_Tribbie_00_Skill01_Phase01",
+              "Avatar_Tribbie_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Where'd the Gifts Go": {
+          "variant1": {
+            "skillID": 140302,
+            "trigger": "Skill02",
+            "name": "Where'd the Gifts Go",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Gains \"Numinosity,\" lasting for #2[i] turn(s). This duration decreases by 1 at the start of this unit's every turn. While Tribbie has \"Numinosity,\" increases all ally targets' All-Type RES PEN by #1[f1]%.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.195,
+                3
+              ],
+              "8": [
+                0.21,
+                3
+              ],
+              "9": [
+                0.225,
+                3
+              ],
+              "10": [
+                0.24,
+                3
+              ],
+              "11": [
+                0.252,
+                3
+              ],
+              "12": [
+                0.264,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Tribbie_00_Skill02_Camera",
+              "Avatar_Tribbie_00_Skill02_Phase01",
+              "Avatar_Tribbie_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "RES PEN": {
+                "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Guess Who Lives Here": {
+          "variant1": {
+            "skillID": 140303,
+            "trigger": "Skill03",
+            "name": "Guess Who Lives Here",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Activates a Zone and deals Quantum DMG equal to #1[i]% of Tribbie's Max HP to all enemies.\\nWhile the Zone lasts, increases enemy targets' DMG taken by #2[f1]%. After an ally target attacks, for every 1 target hit, deals 1 instance of Quantum Additional DMG equal to #3[f1]% of Tribbie's Max HP to the target that has the highest HP among the hit targets.\\nThe Zone lasts for #4[i] turn(s). This duration decreases by 1 at the start of this unit's every turn.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.24375,
+                0.24375,
+                0.0975,
+                2
+              ],
+              "8": [
+                0.2625,
+                0.2625,
+                0.105,
+                2
+              ],
+              "9": [
+                0.28125,
+                0.28125,
+                0.1125,
+                2
+              ],
+              "10": [
+                0.3,
+                0.3,
+                0.12,
+                2
+              ],
+              "11": [
+                0.315,
+                0.315,
+                0.126,
+                2
+              ],
+              "12": [
+                0.33,
+                0.33,
+                0.132,
+                2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Tribbie_00_Skill03_Camera",
+              "Avatar_Tribbie_00_Skill03_EnterReady",
+              "Avatar_Tribbie_00_Skill03_Phase01",
+              "Avatar_Tribbie_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Busy as Tribbie": {
+          "variant1": {
+            "skillID": 140304,
+            "trigger": "SkillP01",
+            "name": "Busy as Tribbie",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "After other ally characters use Ultimate, Tribbie launches Follow-Up ATK, dealing Quantum DMG equal to #1[f1]% of Tribbie's Max HP to all enemies. This effect triggers up to 1 time per character. When Tribbie uses Ultimate, resets the trigger count for other ally characters. If the target was defeated before the Follow-Up ATK is launched, then launches the Follow-Up ATK against new enemy targets entering the battlefield.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.14625
+              ],
+              "8": [
+                0.1575
+              ],
+              "9": [
+                0.16875
+              ],
+              "10": [
+                0.18
+              ],
+              "11": [
+                0.189
+              ],
+              "12": [
+                0.198
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Tribbie_00_PassiveSkill01",
+              "Avatar_Tribbie_00_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "If You're Happy and You Know It": {
+          "variant1": {
+            "skillID": 140307,
+            "trigger": "SkillMaze",
+            "name": "If You're Happy and You Know It",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique and upon entering battle, obtains \"Numinosity,\" lasting for #1[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Tribbie_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1403_basic_atk.png",
+        "skillRef": {
+          "skillName": "Hundred Rockets",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1403_skill.png",
+        "skillRef": {
+          "skillName": "Where'd the Gifts Go",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1403_ultimate.png",
+        "skillRef": {
+          "skillName": "Guess Who Lives Here",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1403_talent.png",
+        "skillRef": {
+          "skillName": "Busy as Tribbie",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1403_technique.png",
+        "skillRef": {
+          "skillName": "If You're Happy and You Know It",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Lamb Outside the Wall...",
+        "icon": "icon/skill/1403_skilltree1.png",
+        "desc": "After using Talent's Follow-Up ATK, increases the DMG dealt by Tribbie by #1[i]%. This effect can stack up to #2[i] time(s), lasting for #3[i] turn(s).",
+        "params": [
+          0.72,
+          3,
+          3
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Glass Ball with Wings!",
+        "icon": "icon/skill/1403_skilltree2.png",
+        "desc": "While the Zone lasts, Tribbie's Max HP increases by an amount equal to #1[i]% of the sum of all ally characters' Max HP.",
+        "params": [
+          0.09
+        ]
+      },
+      "Point08": {
+        "name": "Pebble at Crossroads?",
+        "icon": "icon/skill/1403_skilltree3.png",
+        "desc": "At the start of battle, Tribbie regenerates #1[i] Energy. After other ally targets attack, Tribbie regenerates #2[f1] Energy for each target hit.",
+        "params": [
+          30,
+          1.5
+        ]
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1403.png",
+    "preview": "image/character_preview/1403.png",
+    "portrait": "image/character_portrait/1403.png",
+    "bannerOffsets": [
+      113,
+      26,
+      0.64,
+      113,
+      26,
+      0.64,
+      113,
+      26,
+      0.64
+    ]
+  },
+  "Anaxa": {
+    "internalID": 1405,
+    "name": "Anaxa",
+    "path": "Erudition",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 756.756,
+      "DEFBase": 557.865,
+      "HPBase": 970.2,
+      "SPDBase": 97,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "140501",
+        "name": "Magician, Isolated by Stars",
+        "rank": 1,
+        "desc": "After using Skill for the first time, recovers 1 Skill Point(s). When using Skill to hit enemy targets, decreases the targets' DEF by 16%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1405_rank1.png",
+        "paramsEido": [
+          0.16,
+          2,
+          1
+        ]
+      },
+      {
+        "id": "140502",
+        "name": "Soul, True to History",
+        "rank": 2,
+        "desc": "When enemy targets enter the battlefield, triggers 1 instance of the Talent's Weakness Implant effect, and reduces their All-Type RES by 20%.",
+        "icon": "icon/skill/1405_rank2.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "140503",
+        "name": "Pupil, Etched into Cosmos",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1405_ultimate.png"
+      },
+      {
+        "id": "140504",
+        "name": "Blaze, Plunged to Canyon",
+        "rank": 4,
+        "desc": "When using Skill, increases ATK by 30%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
+        "icon": "icon/skill/1405_rank4.png",
+        "paramsEido": [
+          0.3,
+          2,
+          2
+        ]
+      },
+      {
+        "id": "140505",
+        "name": "Embryo, Set Beyond Vortex",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1405_skill.png"
+      },
+      {
+        "id": "140506",
+        "name": "Everything Is in Everything",
+        "rank": 6,
+        "desc": "The DMG dealt by Anaxa is 130% of the original DMG. The 2 effects in the Trace \"Imperative Hiatus\" will be triggered directly and will no longer depend on the number of \"Erudition\" characters in the team.",
+        "icon": "icon/skill/1405_rank6.png",
+        "paramsEido": [
+          1.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Pain, Brews Truth": {
+          "variant1": {
+            "skillID": 140501,
+            "trigger": "Skill01",
+            "name": "Pain, Brews Truth",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Anaxa's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_Skill01_Camera",
+              "Avatar_Anaxa_00_Skill01_Phase01",
+              "Avatar_Anaxa_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Fractal, Exiles Fallacy": {
+          "variant1": {
+            "skillID": 140502,
+            "trigger": "Skill02",
+            "name": "Fractal, Exiles Fallacy",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #1[i]% of Anaxa's ATK to one designated enemy and additionally deals #2[i] instance(s) of DMG. Each instance of DMG deals Wind DMG equal to #1[i]% of Anaxa's ATK to one random enemy, prioritizing Bouncing to enemy targets that have not been hit by this instance of Skill.\\nWhen used, for each attackable enemy on the field, this Skill has its DMG dealt increased by #3[i]%.",
+            "energyCost": null,
+            "energyRegen": 6,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.56875,
+                4,
+                0.2
+              ],
+              "8": [
+                0.6125,
+                4,
+                0.2
+              ],
+              "9": [
+                0.65625,
+                4,
+                0.2
+              ],
+              "10": [
+                0.7,
+                4,
+                0.2
+              ],
+              "11": [
+                0.735,
+                4,
+                0.2
+              ],
+              "12": [
+                0.77,
+                4,
+                0.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_Skill02_Camera",
+              "Avatar_Anaxa_00_Skill02_Phase01",
+              "Avatar_Anaxa_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Sprouting Life Sculpts Earth": {
+          "variant1": {
+            "skillID": 140503,
+            "trigger": "Skill03",
+            "name": "Sprouting Life Sculpts Earth",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Inflicts the \"Sublimation\" state on all enemies, then deals Wind DMG equal to #1[i]% of Anaxa's ATK to all enemies.\\nIn the \"Sublimation\" state, the targets will be simultaneously inflicted with Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses, lasting until the start of the targets' turn. If the targets do not have Control RES, they are unable to take action in the \"Sublimation\" state.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.3
+              ],
+              "8": [
+                1.4
+              ],
+              "9": [
+                1.5
+              ],
+              "10": [
+                1.6
+              ],
+              "11": [
+                1.68
+              ],
+              "12": [
+                1.76
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_Skill03_Camera",
+              "Avatar_Anaxa_00_Skill03_EnterReady",
+              "Avatar_Anaxa_00_Skill03_Phase01",
+              "Avatar_Anaxa_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Tetrad Wisdom Reigns Thrice": {
+          "variant1": {
+            "skillID": 140504,
+            "trigger": "SkillP01",
+            "name": "Tetrad Wisdom Reigns Thrice",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "Each time Anaxa lands 1 hit on enemy targets, inflicts 1 Weakness of a random Type to the targets, lasting for #2[i] turn(s), with priority to the Weakness Type that the target doesn't already possess.\\nWhile Anaxa is on the field, inflicts the \"Qualitative Disclosure\" state on enemy targets that have at least #3[i] different Types of Weaknesses. Anaxa deals #1[i]% increased DMG to targets afflicted with the \"Qualitative Disclosure\" state. In addition, after using Basic ATK or Skill on them, unleashes 1 additional instance of Skill on the targets. This additional Skill does not consume any Skill Points and cannot trigger this effect again. If the target has been defeated before the additional Skill is used, it will be cast on one random enemy instead.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.255,
+                3,
+                5
+              ],
+              "8": [
+                0.27,
+                3,
+                5
+              ],
+              "9": [
+                0.285,
+                3,
+                5
+              ],
+              "10": [
+                0.3,
+                3,
+                5
+              ],
+              "11": [
+                0.312,
+                3,
+                5
+              ],
+              "12": [
+                0.324,
+                3,
+                5
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Prism of the Pupil": {
+          "variant1": {
+            "skillID": 140507,
+            "trigger": "SkillMaze",
+            "name": "Prism of the Pupil",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, inflicts the Terrified state on enemies in a set area. Terrified enemies will flee in a direction away from Anaxa for #1[i] second(s). When allies enter battle via actively attacking a Terrified enemy, it will always be considered as entering battle via attacking a Weakness. After entering battle, Anaxa applies 1 Weakness of the attacker's Type to every enemy target, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Anaxa_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1405_basic_atk.png",
+        "skillRef": {
+          "skillName": "Pain, Brews Truth",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1405_skill.png",
+        "skillRef": {
+          "skillName": "Fractal, Exiles Fallacy",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1405_ultimate.png",
+        "skillRef": {
+          "skillName": "Sprouting Life Sculpts Earth",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1405_talent.png",
+        "skillRef": {
+          "skillName": "Tetrad Wisdom Reigns Thrice",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1405_technique.png",
+        "skillRef": {
+          "skillName": "Prism of the Pupil",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Roaming Signifier",
+        "icon": "icon/skill/1405_skilltree1.png",
+        "desc": "When using Basic ATK, additionally regenerates #1[i] Energy.\nAt the start of the turn, if there are no enemy targets in the \"Qualitative Disclosure\" state, immediately regenerates #2[i] Energy.",
+        "params": [
+          10,
+          30
+        ]
+      },
+      "Point07": {
+        "name": "Imperative Hiatus",
+        "icon": "icon/skill/1405_skilltree2.png",
+        "desc": "Based on the number of \"Erudition\" characters in the team, one of the following effects will be triggered in the current battle:\n1 character: Increases Anaxa's CRIT DMG by #1[i]%.\nAt least 2 characters: Increases DMG dealt by all allies by #2[i]%.",
+        "params": [
+          1.4,
+          0.5
+        ]
+      },
+      "Point08": {
+        "name": "Qualitative Shift",
+        "icon": "icon/skill/1405_skilltree3.png",
+        "desc": "For every 1 different Weakness Type an enemy target has, the DMG that Anaxa deals to that target ignores #1[i]% of their DEF. Up to a max of 7 Weakness Types can be taken into account for this effect.",
+        "params": [
+          0.04
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1405.png",
+    "preview": "image/character_preview/1405.png",
+    "portrait": "image/character_portrait/1405.png",
+    "bannerOffsets": [
+      0,
+      12,
+      0.63,
+      0,
+      12,
+      0.63,
+      0,
+      12,
+      0.63
+    ]
+  },
+  "Hysilens": {
+    "internalID": 1410,
+    "name": "Hysilens",
+    "path": "Nihility",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 601.5239999999999,
+      "DEFBase": 485.1,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 102,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "141001",
+        "name": "You Ask Why Hearts Cry",
+        "rank": 1,
+        "desc": "While Hysilens is on the field, the DoT dealt by ally targets is equal to 116% of their original value. When Hysilens inflicts Wind Shear/Bleed/Burn/Shock on enemies via her Talent, there is a 100% base chance to additionally inflict the target with 1 instance of Wind Shear/Bleed/Burn/Shock state that is equivalent to those from the original Talent effect and can coexist with such pre-existing states.",
+        "icon": "icon/skill/1410_rank1.png",
+        "paramsEido": [
+          1.16,
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "141002",
+        "name": "Tell Me Why Waves Roar High",
+        "rank": 2,
+        "desc": "While the Zone is active, the DMG Boost effect from Trace \"The Fiddle of Pearls\" applies to all allies.",
+        "icon": "icon/skill/1410_rank2.png"
+      },
+      {
+        "id": "141003",
+        "name": "Why Do Lights Bid Goodbye",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1410_ultimate.png"
+      },
+      {
+        "id": "141004",
+        "name": "Lo, How Time Flows By",
+        "rank": 4,
+        "desc": "While the Zone is active, reduces All-Type RES of all enemies by 20%.",
+        "icon": "icon/skill/1410_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "141005",
+        "name": "In Ablution, I Hum and Sigh",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1410_skill.png"
+      },
+      {
+        "id": "141006",
+        "name": "When to Return From Where You Lie",
+        "rank": 6,
+        "desc": "While the Zone is active, at the start of each turn or after one attack by an ally target, increases the maximum trigger count for Hysilens's Physical DoT effect to 12, and increases the multiplier of the DMG dealt by 20%.",
+        "icon": "icon/skill/1410_rank6.png",
+        "paramsEido": [
+          12,
+          0.2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Aeolian Mode: Echoes in Still Waters": {
+          "variant1": {
+            "skillID": 141001,
+            "trigger": "Skill01",
+            "name": "Aeolian Mode: Echoes in Still Waters",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Hysilens's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1,
+                1,
+                3
+              ],
+              "7": [
+                1.1,
+                1,
+                3
+              ],
+              "8": [
+                1.2,
+                1,
+                3
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_Skill01_Camera",
+              "Avatar_Harscyline_00_Skill01_Phase01",
+              "Avatar_Harscyline_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Overtone Hum: Chorus After Dark Tides": {
+          "variant1": {
+            "skillID": 141002,
+            "trigger": "Skill02",
+            "name": "Overtone Hum: Chorus After Dark Tides",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Has a #2[i]% base chance to increase the DMG taken by all enemies by #3[i]%, lasting for #4[i] turn(s). At the same time, deals Physical DMG equal to #1[i]% of Hysilens's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.1375,
+                1,
+                0.1625,
+                3
+              ],
+              "8": [
+                1.225,
+                1,
+                0.175,
+                3
+              ],
+              "9": [
+                1.3125,
+                1,
+                0.1875,
+                3
+              ],
+              "10": [
+                1.4,
+                1,
+                0.2,
+                3
+              ],
+              "11": [
+                1.47,
+                1,
+                0.21,
+                3
+              ],
+              "12": [
+                1.54,
+                1,
+                0.22,
+                3
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_Skill02_Camera",
+              "Avatar_Harscyline_00_Skill02_Phase01",
+              "Avatar_Harscyline_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Maelstrom Rhapsody": {
+          "variant1": {
+            "skillID": 141003,
+            "trigger": "Skill03",
+            "name": "Maelstrom Rhapsody",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Hysilens deploys a Zone that reduces enemy targets' ATK by #6[f1]% and DEF by #3[f1]%, and deals Physical DMG equal to #1[i]% of Hysilens's ATK to all enemies.\\nFor every 1 instance of DoT taken by an enemy target within the Zone, Hysilens deals Physical DoT equal to #4[f1]% of her ATK to them. This damage triggers at the start of each turn or after one attack by an ally target, up to #5[i] time(s). And it cannot repeatedly trigger this effect.\\nThe Zone lasts for #2[i] turn(s) and this duration decreases by 1 at the start of this unit's every turn. When Hysilens gets knocked down, the Zone will also be dispelled.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.7,
+                3,
+                0.2125,
+                0.632,
+                8,
+                0.15
+              ],
+              "8": [
+                1.8,
+                3,
+                0.225,
+                0.68,
+                8,
+                0.15
+              ],
+              "9": [
+                1.9,
+                3,
+                0.2375,
+                0.74,
+                8,
+                0.15
+              ],
+              "10": [
+                2,
+                3,
+                0.25,
+                0.8,
+                8,
+                0.15
+              ],
+              "11": [
+                2.08,
+                3,
+                0.26,
+                0.84,
+                8,
+                0.15
+              ],
+              "12": [
+                2.16,
+                3,
+                0.27,
+                0.88,
+                8,
+                0.15
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_Skill03_Camera",
+              "Avatar_Harscyline_00_Skill03_Phase01",
+              "Avatar_Harscyline_00_Skill03_Phase02",
+              "Avatar_Harscyline_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Sirenic Serenade": {
+          "variant1": {
+            "skillID": 141004,
+            "trigger": "SkillP01",
+            "name": "Sirenic Serenade",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "When an ally target attacks, there is a #1[i]% base chance for Hysilens to inflict the hit enemy target with one of the following states: Wind Shear, Bleed, Burn, or Shock. Priority is given to inflicting a different state.\\nWhile in the Wind Shear/Burn/Shock state, at the start of each turn, the enemy target takes Wind/Fire/Lightning DoT equal to #2[f1]% of Hysilens's ATK for #5[i] turn(s).\\nWhile in the Bleed state, at the start of each turn, the enemy target takes Physical DoT equal to #3[f1]% of their Max HP, up to #4[f1]% of Hysilens's ATK, lasting for #5[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1,
+                0.1975,
+                0.2,
+                0.1975,
+                2
+              ],
+              "8": [
+                1,
+                0.2125,
+                0.2,
+                0.2125,
+                2
+              ],
+              "9": [
+                1,
+                0.23125,
+                0.2,
+                0.23125,
+                2
+              ],
+              "10": [
+                1,
+                0.25,
+                0.2,
+                0.25,
+                2
+              ],
+              "11": [
+                1,
+                0.2625,
+                0.2,
+                0.2625,
+                2
+              ],
+              "12": [
+                1,
+                0.275,
+                0.2,
+                0.275,
+                2
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "At Ocean's Abode": {
+          "variant1": {
+            "skillID": 141007,
+            "trigger": "SkillMaze",
+            "name": "At Ocean's Abode",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that lasts for #1[i] seconds and automatically moves forward. Enemies within the Special Dimension enter the \"Soulstruck\" state. \"Soulstruck\" enemies will not attack ally targets and will follow the dimension while it persists.\\nAfter entering combat with \"Soulstruck\" enemies, there is a #2[i]% base chance to inflict each enemy target with #3[i] of the following states: Wind Shear/Bleed/Burn/Shock, all of which are equivalent to those provided by Hysilens's Talent effect. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                1,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Harscyline_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1410_basic_atk.png",
+        "skillRef": {
+          "skillName": "Aeolian Mode: Echoes in Still Waters",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1410_skill.png",
+        "skillRef": {
+          "skillName": "Overtone Hum: Chorus After Dark Tides",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1410_ultimate.png",
+        "skillRef": {
+          "skillName": "Maelstrom Rhapsody",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1410_talent.png",
+        "skillRef": {
+          "skillName": "Sirenic Serenade",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1410_technique.png",
+        "skillRef": {
+          "skillName": "At Ocean's Abode",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "The Gladius of Conquest",
+        "icon": "icon/skill/1410_skilltree1.png",
+        "desc": "At the start of combat, Hysilens deploys a Zone, equivalent to that provided by her Ultimate, lasting for #1[i] turn(s). Whenever Hysilens deploys a Zone, she recovers #2[i] Skill Point(s).",
+        "params": [
+          3,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "The Bubble of Banquets",
+        "icon": "icon/skill/1410_skilltree2.png",
+        "desc": "When Hysilens uses Ultimate, if the enemy target is currently afflicted with DoT(s), all DoTs currently applied on the target will immediately produce DMG equal to #1[i]% of their original DMG.",
+        "params": [
+          1.5
+        ]
+      },
+      "Point08": {
+        "name": "The Fiddle of Pearls",
+        "icon": "icon/skill/1410_skilltree3.png",
+        "desc": "For every #2[i]% of Hysilens's Effect Hit Rate that exceeds #1[i]%, increases her DMG dealt by #3[i]%, up to a max increase of #4[i]%.",
+        "params": [
+          0.6,
+          0.1,
+          0.15,
+          0.9
+        ]
+      },
+      "Point09": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1410.png",
+    "preview": "image/character_preview/1410.png",
+    "portrait": "image/character_portrait/1410.png",
+    "bannerOffsets": [
+      175,
+      12,
+      0.63,
+      175,
+      12,
+      0.63,
+      175,
+      12,
+      0.63
+    ]
+  },
+  "Cerydra": {
+    "internalID": 1412,
+    "name": "Cerydra",
+    "path": "Harmony",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 620.9280000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 99,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "141201",
+        "name": "Seize the Crowns of All",
+        "rank": 1,
+        "desc": "The character with \"Military Merit\" ignores 16% of the targets' DEF when dealing DMG. If \"Military Merit\" has been upgraded to \"Peerage,\" then the character additionally ignores 20% of the targets' DEF when dealing Skill DMG. When Cerydra uses her Skill, regenerates 2 Energy for the designated ally target.",
+        "icon": "icon/skill/1412_rank1.png",
+        "paramsEido": [
+          0.16,
+          0.2,
+          2
+        ]
+      },
+      {
+        "id": "141202",
+        "name": "Forge the Dreams of Many",
+        "rank": 2,
+        "desc": "The character with \"Military Merit\" deals 40% increased DMG. While a teammate on the field has \"Military Merit,\" Cerydra's DMG dealt increases by 160%.",
+        "icon": "icon/skill/1412_rank2.png",
+        "paramsEido": [
+          0.4,
+          1.6
+        ]
+      },
+      {
+        "id": "141203",
+        "name": "Torch the Laws of Old",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1412_skill.png"
+      },
+      {
+        "id": "141204",
+        "name": "Remake the Realms of Men",
+        "rank": 4,
+        "desc": "Increases Ultimate's DMG multiplier by 240%.",
+        "icon": "icon/skill/1412_rank4.png",
+        "paramsEido": [
+          2.4
+        ]
+      },
+      {
+        "id": "141205",
+        "name": "Help and Hurt Repaid in Full",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1412_ultimate.png"
+      },
+      {
+        "id": "141206",
+        "name": "A Journey Set Starward",
+        "rank": 6,
+        "desc": "The character with \"Military Merit\" increases their All-Type RES PEN by 20%, and the multiplier for the Additional DMG triggered via \"Military Merit\" increases by 300%. While a teammate on the field has \"Military Merit,\" Cerydra's All-Type RES PEN increases by 20%.",
+        "icon": "icon/skill/1412_rank6.png",
+        "paramsEido": [
+          0.2,
+          3
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "King's Castling": {
+          "variant1": {
+            "skillID": 141201,
+            "trigger": "Skill01",
+            "name": "King's Castling",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Cerydra's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Cerydra_00_Skill01_Camera",
+              "Avatar_Cerydra_00_Skill01_Phase01",
+              "Avatar_Cerydra_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Pawn's Promotion": {
+          "variant1": {
+            "skillID": 141202,
+            "trigger": "Skill02",
+            "name": "Pawn's Promotion",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Grants \"Military Merit\" to one designated ally character and gives Cerydra #2[i] points of Charge. Charge is capped at #3[i] points. When Charge reaches #4[i] points, automatically upgrades the character's \"Military Merit\" to \"Peerage\" and dispels their Crowd Control debuffs. The character with \"Peerage\" is considered to have \"Military Merit\" simultaneously. The character with \"Peerage\" increases the CRIT DMG for their dealt Skill DMG by #1[i]%, increases their All-Type RES PEN by #5[f1]%, and triggers Coup de Main when using their Skill on enemy targets. After Coup de Main ends, consumes #4[i] points of Charge to revert \"Peerage\" to \"Military Merit.\"",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.585,
+                1,
+                8,
+                6,
+                0.0925
+              ],
+              "8": [
+                0.63,
+                1,
+                8,
+                6,
+                0.095
+              ],
+              "9": [
+                0.675,
+                1,
+                8,
+                6,
+                0.0975
+              ],
+              "10": [
+                0.72,
+                1,
+                8,
+                6,
+                0.1
+              ],
+              "11": [
+                0.756,
+                1,
+                8,
+                6,
+                0.102
+              ],
+              "12": [
+                0.792,
+                1,
+                8,
+                6,
+                0.104
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cerydra_00_Skill02_Phase01",
+              "Avatar_Cerydra_00_Skill02_Camera_TimeLine",
+              "Avatar_Cerydra_00_Skill02_1_Camera_TimeLine",
+              "Avatar_Cerydra_00_Skill02_2_Camera_TimeLine",
+              "Avatar_Cerydra_00_Skill02_Others_Phase02",
+              "Avatar_Cerydra_00_Skill02_InsertRank01",
+              "Avatar_Cerydra_00_Skill02_Insert_Camera",
+              "Avatar_Cerydra_00_Skill02_3_Camera_TimeLine"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              },
+              "Coup de Main": {
+                "desc": "Copy and immediately use the ability about to be used, then use the original ability.\\nCoup de Main won't trigger Coup de Main again."
+              },
+              "RES PEN": {
+                "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Scholar's Mate": {
+          "variant1": {
+            "skillID": 141203,
+            "trigger": "Skill03",
+            "name": "Scholar's Mate",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Gains #2[i] Charge. Deals Wind DMG equal to #1[i]% of Cerydra's ATK to all enemies. If no character on the field has \"Military Merit,\" prioritizes granting \"Military Merit\" to the first character in the current team.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.04,
+                2
+              ],
+              "8": [
+                2.16,
+                2
+              ],
+              "9": [
+                2.28,
+                2
+              ],
+              "10": [
+                2.4,
+                2
+              ],
+              "11": [
+                2.496,
+                2
+              ],
+              "12": [
+                2.592,
+                2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cerydra_00_Skill03_Camera",
+              "Avatar_Cerydra_00_Skill03_EnterReady",
+              "Avatar_Cerydra_00_Skill03_Phase01",
+              "Avatar_Cerydra_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Ave Imperator": {
+          "variant1": {
+            "skillID": 141204,
+            "trigger": "SkillP01",
+            "name": "Ave Imperator",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "The character with \"Military Merit\" increases ATK by an amount equal to #2[f1]% of Cerydra's ATK. When the character uses Basic ATK or Skill, Cerydra gains #1[i] Charge. During Coup de Main, Cerydra cannot gain Charge. After the character with \"Military Merit\" uses an attack, Cerydra additionally deals 1 instance of Wind Additional DMG equal to #3[i]% of her ATK. This effect can trigger up to #4[i] time(s). The trigger count resets every time Cerydra uses her Ultimate. \"Military Merit\" only takes effect on the most recent target. When the target changes, Cerydra's Charge is reset to 0.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1,
+                0.2175,
+                0.4875,
+                20
+              ],
+              "8": [
+                1,
+                0.225,
+                0.525,
+                20
+              ],
+              "9": [
+                1,
+                0.2325,
+                0.5625,
+                20
+              ],
+              "10": [
+                1,
+                0.24,
+                0.6,
+                20
+              ],
+              "11": [
+                1,
+                0.246,
+                0.63,
+                20
+              ],
+              "12": [
+                1,
+                0.252,
+                0.66,
+                20
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cerydra_00_PassiveSkill"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Coup de Main": {
+                "desc": "Copy and immediately use the ability about to be used, then use the original ability.\\nCoup de Main won't trigger Coup de Main again."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "First-Move Advantage": {
+          "variant1": {
+            "skillID": 141207,
+            "trigger": "SkillMaze",
+            "name": "First-Move Advantage",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, gains \"Military Merit.\" When switching the active character, \"Military Merit\" transfers to the current active character. At the start of the next battle, automatically uses Skill 1 time on the character with \"Military Merit\" without consuming any Skill Points.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Cerydra_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1412_basic_atk.png",
+        "skillRef": {
+          "skillName": "King's Castling",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1412_skill.png",
+        "skillRef": {
+          "skillName": "Pawn's Promotion",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1412_ultimate.png",
+        "skillRef": {
+          "skillName": "Scholar's Mate",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1412_talent.png",
+        "skillRef": {
+          "skillName": "Ave Imperator",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1412_technique.png",
+        "skillRef": {
+          "skillName": "First-Move Advantage",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Veni",
+        "icon": "icon/skill/1412_skilltree1.png",
+        "desc": "For every #2[i] of Cerydra's ATK that exceeds #1[i], increases her CRIT DMG by #3[i]%, up to a max increase of #4[i]%.",
+        "params": [
+          2000,
+          100,
+          0.18,
+          3.6
+        ]
+      },
+      "Point07": {
+        "name": "Vidi",
+        "icon": "icon/skill/1412_skilltree2.png",
+        "desc": "Increases Cerydra's CRIT Rate by #1[i]%. While Cerydra's Charge is below its maximum, the character with \"Military Merit\" using their Ultimate grants Cerydra #2[i] Charge. This effect can trigger once per battle.",
+        "params": [
+          1,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Vici",
+        "icon": "icon/skill/1412_skilltree3.png",
+        "desc": "When using Skill, increases SPD by #2[i] for this unit and the teammate with \"Military Merit,\" lasting for #3[i] turn(s). When the character with \"Military Merit\" uses Basic ATK or Skill, regenerates #1[i] Energy for Cerydra.",
+        "params": [
+          5,
+          20,
+          3
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1412.png",
+    "preview": "image/character_preview/1412.png",
+    "portrait": "image/character_portrait/1412.png",
+    "bannerOffsets": [
+      57,
+      -50,
+      0.63,
+      57,
+      -50,
+      0.63,
+      57,
+      -50,
+      0.63
+    ]
+  },
   "Trailblazer - Destruction": {
     "internalID": 8001,
     "name": "Trailblazer - Destruction",
