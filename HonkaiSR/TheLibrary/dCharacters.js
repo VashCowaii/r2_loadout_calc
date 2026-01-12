@@ -589,6 +589,555 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Dan Heng": {
+    "internalID": 1002,
+    "name": "Dan Heng",
+    "path": "The Hunt",
+    "element": "Wind",
+    "rarity": 4,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 546.84,
+      "DEFBase": 396.9,
+      "HPBase": 882,
+      "SPDBase": 110,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "100201",
+        "name": "The Higher You Fly, the Harder You Fall",
+        "rank": 1,
+        "desc": "When the target enemy's current HP percentage is greater than or equal to 50%, CRIT Rate increases by 12%.",
+        "icon": "icon/skill/1002_rank1.png",
+        "paramsEido": [
+          0.5,
+          0.12
+        ]
+      },
+      {
+        "id": "100202",
+        "name": "Quell the Venom Octet, Quench the Vice O'Flame",
+        "rank": 2,
+        "desc": "Reduces Talent cooldown by 1 turn.",
+        "icon": "icon/skill/1002_rank2.png"
+      },
+      {
+        "id": "100203",
+        "name": "Seen and Unseen",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1002_skill.png"
+      },
+      {
+        "id": "100204",
+        "name": "Roaring Dragon and Soaring Sun",
+        "rank": 4,
+        "desc": "When Dan Heng uses his Ultimate to defeat an enemy, he will immediately take action again.",
+        "icon": "icon/skill/1002_rank4.png"
+      },
+      {
+        "id": "100205",
+        "name": "A Drop of Rain Feeds a Torrent",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1002_ultimate.png"
+      },
+      {
+        "id": "100206",
+        "name": "The Troubled Soul Lies in Wait",
+        "rank": 6,
+        "desc": "The Slow state triggered by Skill reduces the enemy's SPD by an extra 8%.",
+        "icon": "icon/skill/1002_rank6.png",
+        "paramsEido": [
+          0.08
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Cloudlancer Art: North Wind": {
+          "variant1": {
+            "skillID": 100201,
+            "trigger": "Skill01",
+            "name": "Cloudlancer Art: North Wind",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Dan Heng's ATK to one enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHeng_00_Skill01_Camera",
+              "Avatar_DanHeng_00_Skill01_Phase01",
+              "Avatar_DanHeng_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Cloudlancer Art: Torrent": {
+          "variant1": {
+            "skillID": 100202,
+            "trigger": "Skill02",
+            "name": "Cloudlancer Art: Torrent",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #1[i]% of Dan Heng's ATK to one designated enemy.\\nWhen DMG dealt by Skill triggers CRIT Hit, there is a #4[i]% base chance to reduce the target's SPD by #2[i]%, lasting for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.1125,
+                0.12,
+                2,
+                1
+              ],
+              "8": [
+                2.275,
+                0.12,
+                2,
+                1
+              ],
+              "9": [
+                2.4375,
+                0.12,
+                2,
+                1
+              ],
+              "10": [
+                2.6,
+                0.12,
+                2,
+                1
+              ],
+              "11": [
+                2.73,
+                0.12,
+                2,
+                1
+              ],
+              "12": [
+                2.86,
+                0.12,
+                2,
+                1
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHeng_00_Skill02_Camera",
+              "Avatar_DanHeng_00_Skill02_Phase01",
+              "Avatar_DanHeng_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Ethereal Dream": {
+          "variant1": {
+            "skillID": 100203,
+            "trigger": "Skill03",
+            "name": "Ethereal Dream",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG equal to #1[i]% of Dan Heng's ATK to one designated enemy target. If the attacked enemy is Slowed, the multiplier for the DMG dealt by Ultimate increases by #2[i]%.",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                3.4,
+                1.02
+              ],
+              "8": [
+                3.6,
+                1.08
+              ],
+              "9": [
+                3.8,
+                1.14
+              ],
+              "10": [
+                4,
+                1.2
+              ],
+              "11": [
+                4.16,
+                1.248
+              ],
+              "12": [
+                4.32,
+                1.296
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHeng_00_Skill03_Camera",
+              "Avatar_DanHeng_00_Skill03_EnterReady",
+              "Avatar_DanHeng_00_Skill03_Phase01",
+              "Avatar_DanHeng_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Superiority of Reach": {
+          "variant1": {
+            "skillID": 100204,
+            "trigger": "SkillP01",
+            "name": "Superiority of Reach",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When Dan Heng becomes the target of an ally's ability, his next attack's Wind RES PEN increases by #1[i]%. This effect can be triggered again after #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.2925,
+                2
+              ],
+              "8": [
+                0.315,
+                2
+              ],
+              "9": [
+                0.3375,
+                2
+              ],
+              "10": [
+                0.36,
+                2
+              ],
+              "11": [
+                0.378,
+                2
+              ],
+              "12": [
+                0.396,
+                2
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHeng_00_PassiveSkill01",
+              "Avatar_DanHeng_00_PassiveSkill01_Enhance_Phase01",
+              "Avatar_DanHeng_00_PassiveSkill01_Enhance_Phase02",
+              "Avatar_DanHeng_00_PassiveSkill01_Enhance_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "RES PEN": {
+                "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Splitting Spearhead": {
+          "variant1": {
+            "skillID": 100207,
+            "trigger": "SkillMaze",
+            "name": "Splitting Spearhead",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After Dan Heng uses his Technique, his ATK increases by #1[i]% at the start of the next battle for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_DanHeng_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1002_basic_atk.png",
+        "skillRef": {
+          "skillName": "Cloudlancer Art: North Wind",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1002_skill.png",
+        "skillRef": {
+          "skillName": "Cloudlancer Art: Torrent",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1002_ultimate.png",
+        "skillRef": {
+          "skillName": "Ethereal Dream",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1002_talent.png",
+        "skillRef": {
+          "skillName": "Superiority of Reach",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1002_technique.png",
+        "skillRef": {
+          "skillName": "Splitting Spearhead",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Hidden Dragon",
+        "icon": "icon/skill/1002_skilltree1.png",
+        "desc": "When current HP percentage is #1[i]% or lower, reduces the chance of being attacked by enemies.",
+        "params": [
+          0.5,
+          0.5
+        ]
+      },
+      "Point07": {
+        "name": "Faster Than Light",
+        "icon": "icon/skill/1002_skilltree2.png",
+        "desc": "After launching an attack, there is a #1[i]% fixed chance to increase this unit's SPD by #2[i]% for #3[i] turn(s).",
+        "params": [
+          0.5,
+          0.2,
+          2
+        ],
+        "extraEffects": {
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor.",
+            "params": [
+              0.5,
+              0.2,
+              2
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "High Gale",
+        "icon": "icon/skill/1002_skilltree3.png",
+        "desc": "Basic ATK deals #1[i]% more DMG to Slowed enemies.",
+        "params": [
+          0.4
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.032
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.048
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Wind",
+        "icon": "icon/property/IconWindAddedRatio.png",
+        "stats": {
+          "DamageWind": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1002.png",
+    "preview": "image/character_preview/1002.png",
+    "portrait": "image/character_portrait/1002.png",
+    "bannerOffsets": [
+      -65,
+      76.1,
+      0.71,
+      -65,
+      76.1,
+      0.71,
+      -65,
+      76.1,
+      0.71
+    ],
+    "isBuffed": false
+  },
   "Kafka": {
     "internalID": 1005,
     "name": "Kafka",
