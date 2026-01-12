@@ -1138,6 +1138,553 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Himeko": {
+    "internalID": 1003,
+    "name": "Himeko",
+    "path": "Erudition",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 756.756,
+      "DEFBase": 436.59000000000003,
+      "HPBase": 1047.816,
+      "SPDBase": 96,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "100301",
+        "name": "Childhood",
+        "rank": 1,
+        "desc": "After \"Victory Rush\" is triggered, Himeko's SPD increases by 20% for 2 turn(s).",
+        "icon": "icon/skill/1003_rank1.png",
+        "paramsEido": [
+          0.2,
+          2
+        ]
+      },
+      {
+        "id": "100302",
+        "name": "Convergence",
+        "rank": 2,
+        "desc": "Deals 15% more DMG to enemies whose HP percentage is 50% or less.",
+        "icon": "icon/skill/1003_rank2.png",
+        "paramsEido": [
+          0.5,
+          0.15
+        ]
+      },
+      {
+        "id": "100303",
+        "name": "Poised",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1003_skill.png"
+      },
+      {
+        "id": "100304",
+        "name": "Dedication",
+        "rank": 4,
+        "desc": "When Himeko's Skill inflicts Weakness Break on an enemy, she gains 1 extra point(s) of Charge.",
+        "icon": "icon/skill/1003_rank4.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "100305",
+        "name": "Aspiration",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1003_ultimate.png"
+      },
+      {
+        "id": "100306",
+        "name": "Trailblaze!",
+        "rank": 6,
+        "desc": "Ultimate deals 2 extra instances of Fire DMG equal to 40% of the original DMG to one random enemy.",
+        "icon": "icon/skill/1003_rank6.png",
+        "paramsEido": [
+          0.4
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Sawblade Tuning": {
+          "variant1": {
+            "skillID": 100301,
+            "trigger": "Skill01",
+            "name": "Sawblade Tuning",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Himeko's ATK to one enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Himeko_00_Skill01_Camera",
+              "Avatar_Himeko_Skill01_Phase01",
+              "Avatar_Himeko_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Molten Detonation": {
+          "variant1": {
+            "skillID": 100302,
+            "trigger": "Skill02",
+            "name": "Molten Detonation",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Himeko's ATK to one designated enemy and Fire DMG equal to #2[i]% of Himeko's ATK to enemies adjacent to it.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.625,
+                0.65
+              ],
+              "8": [
+                1.75,
+                0.7
+              ],
+              "9": [
+                1.875,
+                0.75
+              ],
+              "10": [
+                2,
+                0.8
+              ],
+              "11": [
+                2.1,
+                0.84
+              ],
+              "12": [
+                2.2,
+                0.88
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Himeko_00_Skill02_Camera",
+              "Avatar_Himeko_Skill02_Phase01",
+              "Avatar_Himeko_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Heavenly Flare": {
+          "variant1": {
+            "skillID": 100303,
+            "trigger": "Skill03",
+            "name": "Heavenly Flare",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Fire DMG equal to #1[i]% of Himeko's ATK to all enemies. Himeko regenerates #2[i] extra Energy for each enemy defeated.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.955,
+                5
+              ],
+              "8": [
+                2.07,
+                5
+              ],
+              "9": [
+                2.185,
+                5
+              ],
+              "10": [
+                2.3,
+                5
+              ],
+              "11": [
+                2.392,
+                5
+              ],
+              "12": [
+                2.484,
+                5
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Himeko_00_Skill03_Camera",
+              "Avatar_Himeko_Skill03_EnterReady",
+              "Avatar_Himeko_Skill03_Phase01",
+              "Avatar_Himeko_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Victory Rush": {
+          "variant1": {
+            "skillID": 100304,
+            "trigger": "SkillP01",
+            "name": "Victory Rush",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "When an enemy target is inflicted with Weakness Break, Himeko gains 1 point of Charge (max #2[i] points).\\nIf Himeko is fully Charged when an ally target performs an attack, Himeko immediately performs 1 Follow-Up ATK and deals Fire DMG equal to #1[i]% of her ATK to all enemies, consuming all Charge points.\\nAt the start of the battle, Himeko gains 1 point of Charge.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.1375,
+                3
+              ],
+              "8": [
+                1.225,
+                3
+              ],
+              "9": [
+                1.3125,
+                3
+              ],
+              "10": [
+                1.4,
+                3
+              ],
+              "11": [
+                1.47,
+                3
+              ],
+              "12": [
+                1.54,
+                3
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Himeko_Passive1Atk_Ability_Camera",
+              "Avatar_Himeko_PassiveSkill01",
+              "Avatar_Himeko_Passive1Atk_Ability",
+              "Avatar_Himeko_Passive1Atk02_Ability"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Incomplete Combustion": {
+          "variant1": {
+            "skillID": 100307,
+            "trigger": "SkillMaze",
+            "name": "Incomplete Combustion",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that lasts for #4[i] second(s). After entering battle with enemies in the Special Dimension, there is a #1[i]% base chance to increase Fire DMG taken by enemies by #2[i]% for #3[i] turn(s). Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.1,
+                2,
+                15
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Himeko_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1003_basic_atk.png",
+        "skillRef": {
+          "skillName": "Sawblade Tuning",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1003_skill.png",
+        "skillRef": {
+          "skillName": "Molten Detonation",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1003_ultimate.png",
+        "skillRef": {
+          "skillName": "Heavenly Flare",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1003_talent.png",
+        "skillRef": {
+          "skillName": "Victory Rush",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1003_technique.png",
+        "skillRef": {
+          "skillName": "Incomplete Combustion",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Starfire",
+        "icon": "icon/skill/1003_skilltree1.png",
+        "desc": "After using an attack, there is a #1[i]% base chance to inflict Burn on enemies, lasting for #2[i] turn(s).\nWhen afflicted with Burn, enemies take Fire DoT equal to #3[i]% of Himeko's ATK at the start of each turn.",
+        "params": [
+          0.5,
+          2,
+          0.3
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              0.5,
+              2,
+              0.3
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Magma",
+        "icon": "icon/skill/1003_skilltree2.png",
+        "desc": "Skill deals #1[i]% more DMG to enemies currently afflicted with Burn.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point08": {
+        "name": "Benchmark",
+        "icon": "icon/skill/1003_skilltree3.png",
+        "desc": "When current HP percentage is #1[i]% or higher, CRIT Rate increases by #2[i]%.",
+        "params": [
+          0.8,
+          0.15
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1003.png",
+    "preview": "image/character_preview/1003.png",
+    "portrait": "image/character_portrait/1003.png",
+    "bannerOffsets": [
+      11.9,
+      178,
+      0.66,
+      11.9,
+      178,
+      0.66,
+      11.9,
+      178,
+      0.66
+    ],
+    "isBuffed": false
+  },
   "Welt": {
     "internalID": 1004,
     "name": "Welt",

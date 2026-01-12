@@ -36,6 +36,7 @@
 
     "AllDamageTypeTakenRatio": "Vulnerability",
     "AllDamageTypeTakenRatioOLDDEFINITION": "EnemyDMGTaken",
+    "FireTakenRatio": "FireVulnerability",
 
     "DamageValue": "DMG%Total",
 
