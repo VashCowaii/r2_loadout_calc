@@ -3480,6 +3480,24 @@ const megaParsingFuckery = {
             </div>` : ""}
         </div>`;
     },
+    "Set Enhanced-State"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "type",
+            // "modifier",
+            // "invertCondition",
+            // "casterFilter",
+            // "justAddedOrActive",
+            // "includePreDeath",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Enhanced-State");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.type}
+        </div>`;
+    },
     "Has Modifier"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6912,6 +6930,7 @@ const megaParsingFuckery = {
 
             "conditions",
             "addedDisplayWeakness",
+            "multiplier",
 
             "entityType",
             "entityID",
@@ -6991,6 +7010,12 @@ const megaParsingFuckery = {
                     <div class="rotationConditionOperatorHeaderInline">Display Added Weakness:</div>&nbsp;
                     ${parseRef.addedDisplayWeakness}
                 </div>` : ""}
+                ${parseRef.multiplier ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Multiplier:</div>&nbsp;
+                    ${parseRef.multiplier.displayLines ?? parseRef.multiplier}
+                </div>` : ""}
+
+                
 
                 
             </div>

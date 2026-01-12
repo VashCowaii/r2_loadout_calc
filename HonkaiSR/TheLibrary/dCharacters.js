@@ -8505,6 +8505,548 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Yukong": {
+    "internalID": 1207,
+    "name": "Yukong",
+    "path": "Harmony",
+    "element": "Imaginary",
+    "rarity": 4,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 599.76,
+      "DEFBase": 374.85,
+      "HPBase": 917.28,
+      "SPDBase": 107,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "120701",
+        "name": "Aerial Marshal",
+        "rank": 1,
+        "desc": "At the start of battle, increases the SPD of all allies by 10% for 2 turn(s).",
+        "icon": "icon/skill/1207_rank1.png",
+        "paramsEido": [
+          0.1,
+          2
+        ]
+      },
+      {
+        "id": "120702",
+        "name": "Skyward Command",
+        "rank": 2,
+        "desc": "When any ally's current energy is equal to its energy limit, Yukong regenerates an additional 5 energy. This effect can only be triggered once for each ally. The trigger count is reset after Yukong uses her Ultimate.",
+        "icon": "icon/skill/1207_rank2.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "120703",
+        "name": "Torrential Fusillade",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1207_skill.png"
+      },
+      {
+        "id": "120704",
+        "name": "Zephyrean Echoes",
+        "rank": 4,
+        "desc": "When \"Roaring Bowstrings\" is active, Yukong deals 30% more DMG to enemies.",
+        "icon": "icon/skill/1207_rank4.png",
+        "paramsEido": [
+          0.3
+        ]
+      },
+      {
+        "id": "120705",
+        "name": "August Deadshot",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1207_ultimate.png"
+      },
+      {
+        "id": "120706",
+        "name": "Bowstring Thunderclap",
+        "rank": 6,
+        "desc": "When Yukong uses her Ultimate, she immediately gains 1 stack(s) of \"Roaring Bowstrings.\"",
+        "icon": "icon/skill/1207_rank6.png",
+        "paramsEido": [
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Arrowslinger": {
+          "variant1": {
+            "skillID": 120701,
+            "trigger": "Skill01",
+            "name": "Arrowslinger",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals #1[i]% of Yukong's ATK as Imaginary DMG to a target enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Yukong_00_Skill01_Camera",
+              "Avatar_Yukong_00_Skill01_Camera_V2",
+              "Avatar_Yukong_00_Skill01_Phase01",
+              "Avatar_Yukong_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Emboldening Salvo": {
+          "variant1": {
+            "skillID": 120702,
+            "trigger": "Skill02",
+            "name": "Emboldening Salvo",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Obtains #1[i] stack(s) of \"Roaring Bowstrings\" (to a maximum of 2 stacks). When \"Roaring Bowstrings\" is active, the ATK of all allies increases by #2[i]%, and every time an ally's turn (including Yukong's) ends, Yukong loses 1 stack of \"Roaring Bowstrings.\"\\nWhen it's the turn where Yukong gains \"Roaring Bowstrings\" by using Skill, \"Roaring Bowstrings\" will not be removed.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2,
+                0.65
+              ],
+              "8": [
+                2,
+                0.7
+              ],
+              "9": [
+                2,
+                0.75
+              ],
+              "10": [
+                2,
+                0.8
+              ],
+              "11": [
+                2,
+                0.84
+              ],
+              "12": [
+                2,
+                0.88
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yukong_00_Skill02_Camera",
+              "Avatar_Yukong_00_Skill02_Phase01",
+              "Avatar_Yukong_00_Skill02_Phase02",
+              "Avatar_Yukong_00_Skill02_AddFlower",
+              "Avatar_Yukong_00_Skill02_CountDown"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Diving Kestrel": {
+          "variant1": {
+            "skillID": 120703,
+            "trigger": "Skill03",
+            "name": "Diving Kestrel",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "If \"Roaring Bowstrings\" is active on Yukong when her Ultimate is used, additionally increases all allies' CRIT Rate by #2[f1]% and CRIT DMG by #3[i]%. At the same time, deals Imaginary DMG equal to #1[i]% of Yukong's ATK to one designated enemy.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                3.23,
+                0.25375,
+                0.5525
+              ],
+              "8": [
+                3.42,
+                0.2625,
+                0.585
+              ],
+              "9": [
+                3.61,
+                0.27125,
+                0.6175
+              ],
+              "10": [
+                3.8,
+                0.28,
+                0.65
+              ],
+              "11": [
+                3.952,
+                0.287,
+                0.676
+              ],
+              "12": [
+                4.104,
+                0.294,
+                0.702
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yukong_00_Skill03_Camera",
+              "Avatar_Yukong_00_Skill03_EnterReady",
+              "Avatar_Yukong_00_Skill03_Phase01",
+              "Avatar_Yukong_00_Skill03_Phase02",
+              "Avatar_Yukong_00_Skill03_AddFlower"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Seven Layers, One Arrow": {
+          "variant1": {
+            "skillID": 120704,
+            "trigger": "SkillP01",
+            "name": "Seven Layers, One Arrow",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Basic ATK additionally deals Imaginary DMG equal to #1[i]% of Yukong's ATK, and increases the Toughness Reduction of this attack by #2[i]%. This effect can be triggered again after #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.65,
+                1,
+                1
+              ],
+              "8": [
+                0.7,
+                1,
+                1
+              ],
+              "9": [
+                0.75,
+                1,
+                1
+              ],
+              "10": [
+                0.8,
+                1,
+                1
+              ],
+              "11": [
+                0.84,
+                1,
+                1
+              ],
+              "12": [
+                0.88,
+                1,
+                1
+              ]
+            },
+            "element": "Imaginary",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yukong_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Windchaser": {
+          "variant1": {
+            "skillID": 120707,
+            "trigger": "SkillMaze",
+            "name": "Windchaser",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using her Technique, Yukong enters Sprint mode for #1[i] seconds. In Sprint mode, her movement speed increases by #2[i]%, and Yukong gains #3[i] stack(s) of \"Roaring Bowstrings\" when she enters battle by attacking enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                0.35,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Yukong_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1207_basic_atk.png",
+        "skillRef": {
+          "skillName": "Arrowslinger",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1207_skill.png",
+        "skillRef": {
+          "skillName": "Emboldening Salvo",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1207_ultimate.png",
+        "skillRef": {
+          "skillName": "Diving Kestrel",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1207_talent.png",
+        "skillRef": {
+          "skillName": "Seven Layers, One Arrow",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1207_technique.png",
+        "skillRef": {
+          "skillName": "Windchaser",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Archerion",
+        "icon": "icon/skill/1207_skilltree1.png",
+        "desc": "Yukong can resist 1 debuff application for 1 time. This effect can be triggered again after #1[i] turn(s).",
+        "params": [
+          2
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              2
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Bowmaster",
+        "icon": "icon/skill/1207_skilltree2.png",
+        "desc": "When Yukong is on the field, Imaginary DMG dealt by all allies increases by #1[i]%.",
+        "params": [
+          0.12
+        ]
+      },
+      "Point08": {
+        "name": "Majestas",
+        "icon": "icon/skill/1207_skilltree3.png",
+        "desc": "When \"Roaring Bowstrings\" is active, Yukong regenerates #1[i] additional Energy every time an ally takes action.",
+        "params": [
+          2
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point12": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point16": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1207.png",
+    "preview": "image/character_preview/1207.png",
+    "portrait": "image/character_portrait/1207.png",
+    "bannerOffsets": [
+      87.7,
+      34.8,
+      0.59,
+      87.7,
+      34.8,
+      0.59,
+      87.7,
+      34.8,
+      0.59
+    ],
+    "isBuffed": false
+  },
   "Huohuo": {
     "internalID": 1217,
     "name": "Huohuo",
