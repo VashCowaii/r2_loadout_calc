@@ -1830,6 +1830,530 @@ let characters = {
     ],
     "isBuffed": true
   },
+  "Asta": {
+    "internalID": 1009,
+    "name": "Asta",
+    "path": "Harmony",
+    "element": "Fire",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 511.56,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1023.12,
+      "SPDBase": 106,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "100901",
+        "name": "Star Sings Sans Verses or Vocals",
+        "rank": 1,
+        "desc": "When using Skill, deals DMG for 1 extra time to a random enemy.",
+        "icon": "icon/skill/1009_rank1.png"
+      },
+      {
+        "id": "100902",
+        "name": "Moon Speaks in Wax and Wane",
+        "rank": 2,
+        "desc": "After using her Ultimate, Asta's Charging stacks will not be reduced in the next turn.",
+        "icon": "icon/skill/1009_rank2.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "100903",
+        "name": "Meteor Showers for Wish and Want",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1009_skill.png"
+      },
+      {
+        "id": "100904",
+        "name": "Aurora Basks in Beauty and Bliss",
+        "rank": 4,
+        "desc": "Asta's Energy Regeneration Rate increases by 15% when she has 2 or more Charging stacks.",
+        "icon": "icon/skill/1009_rank4.png",
+        "paramsEido": [
+          2,
+          0.15
+        ]
+      },
+      {
+        "id": "100905",
+        "name": "Nebula Secludes in Runes and Riddles",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1009_ultimate.png"
+      },
+      {
+        "id": "100906",
+        "name": "Cosmos Dreams in Calm and Comfort",
+        "rank": 6,
+        "desc": "Charging stack(s) lost in each turn is reduced by 1.",
+        "icon": "icon/skill/1009_rank6.png",
+        "paramsEido": [
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Spectrum Beam": {
+          "variant1": {
+            "skillID": 100901,
+            "trigger": "Skill01",
+            "name": "Spectrum Beam",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Asta's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Asta_00_Skill01_Camera",
+              "Avatar_Asta_00_Skill01_Phase01",
+              "Avatar_Asta_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Meteor Storm": {
+          "variant1": {
+            "skillID": 100902,
+            "trigger": "Skill02",
+            "name": "Meteor Storm",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Asta's ATK to one designated enemy and further deals DMG for 4 extra times, with each time dealing Fire DMG equal to #1[i]% of Asta's ATK to a random enemy.",
+            "energyCost": null,
+            "energyRegen": 6,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.40625
+              ],
+              "8": [
+                0.4375
+              ],
+              "9": [
+                0.46875
+              ],
+              "10": [
+                0.5
+              ],
+              "11": [
+                0.525
+              ],
+              "12": [
+                0.55
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Asta_00_Skill02_Camera",
+              "Avatar_Asta_00_Skill02_Phase01",
+              "Avatar_Asta_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Astral Blessing": {
+          "variant1": {
+            "skillID": 100903,
+            "trigger": "Skill03",
+            "name": "Astral Blessing",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Increases SPD of all allies by #1[i] for #2[i] turn(s).",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                44.75,
+                2
+              ],
+              "8": [
+                46.5,
+                2
+              ],
+              "9": [
+                48.25,
+                2
+              ],
+              "10": [
+                50,
+                2
+              ],
+              "11": [
+                51.4,
+                2
+              ],
+              "12": [
+                52.8,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Asta_00_Skill03_Camera",
+              "Avatar_Asta_00_Skill03_EnterReady",
+              "Avatar_Asta_00_Skill03_Phase01",
+              "Avatar_Asta_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Astrometry": {
+          "variant1": {
+            "skillID": 100904,
+            "trigger": "SkillP01",
+            "name": "Astrometry",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "Gains 1 stack of Charging for every different enemy hit by Asta plus an extra stack if the enemy hit has Fire Weakness.\\nFor every stack of Charging Asta has, all allies' ATK increases by #1[f1]%, up to #2[i] time(s).\\nStarting from her second turn, Asta's Charging stack count is reduced by #3[i] at the beginning of every turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.11375,
+                5,
+                3
+              ],
+              "8": [
+                0.1225,
+                5,
+                3
+              ],
+              "9": [
+                0.13125,
+                5,
+                3
+              ],
+              "10": [
+                0.14,
+                5,
+                3
+              ],
+              "11": [
+                0.147,
+                5,
+                3
+              ],
+              "12": [
+                0.154,
+                5,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Asta_00_PassiveSkill_1"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Miracle Flash": {
+          "variant1": {
+            "skillID": 100907,
+            "trigger": "SkillMaze",
+            "name": "Miracle Flash",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, deals Fire DMG equal to #1[i]% of Asta's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Asta_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1009_basic_atk.png",
+        "skillRef": {
+          "skillName": "Spectrum Beam",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1009_skill.png",
+        "skillRef": {
+          "skillName": "Meteor Storm",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1009_ultimate.png",
+        "skillRef": {
+          "skillName": "Astral Blessing",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1009_talent.png",
+        "skillRef": {
+          "skillName": "Astrometry",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1009_technique.png",
+        "skillRef": {
+          "skillName": "Miracle Flash",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Sparks",
+        "icon": "icon/skill/1009_skilltree1.png",
+        "desc": "Asta's Basic ATK has a #1[i]% base chance to Burn the enemy target for #2[i] turn(s).\nBurned enemies take Fire DoT equal to #3[i]% of DMG dealt by Asta's Basic ATK at the start of each turn.",
+        "params": [
+          0.8,
+          3,
+          0.5
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              0.8,
+              3,
+              0.5
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Ignite",
+        "icon": "icon/skill/1009_skilltree2.png",
+        "desc": "When Asta is on the field, all allies' Fire DMG increases by #1[i]%.",
+        "params": [
+          0.18
+        ]
+      },
+      "Point08": {
+        "name": "Constellation",
+        "icon": "icon/skill/1009_skilltree3.png",
+        "desc": "Asta's DEF increases by #1[i]% for every current Charging stack she possesses.",
+        "params": [
+          0.06
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1009.png",
+    "preview": "image/character_preview/1009.png",
+    "portrait": "image/character_portrait/1009.png",
+    "bannerOffsets": [
+      28,
+      22,
+      0.53,
+      28,
+      22,
+      0.53,
+      28,
+      22,
+      0.53
+    ],
+    "isBuffed": false
+  },
   "Herta": {
     "internalID": 1013,
     "name": "Herta",
