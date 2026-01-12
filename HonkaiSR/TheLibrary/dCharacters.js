@@ -4592,6 +4592,588 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Pela": {
+    "internalID": 1106,
+    "name": "Pela",
+    "path": "Nihility",
+    "element": "Ice",
+    "rarity": 4,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 546.84,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 987.8399999999999,
+      "SPDBase": 105,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "110601",
+        "name": "Victory Report",
+        "rank": 1,
+        "desc": "When an enemy is defeated, Pela regenerates 5 Energy.",
+        "icon": "icon/skill/1106_rank1.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "110602",
+        "name": "Adamant Charge",
+        "rank": 2,
+        "desc": "Using Skill to dispel buff(s) increases SPD by 10% for 2 turn(s).",
+        "icon": "icon/skill/1106_rank2.png",
+        "paramsEido": [
+          0.1,
+          2,
+          1
+        ],
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          }
+        }
+      },
+      {
+        "id": "110603",
+        "name": "Suppressive Force",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1106_skill.png"
+      },
+      {
+        "id": "110604",
+        "name": "Full Analysis",
+        "rank": 4,
+        "desc": "When using Skill, there is a 100% base chance to reduce the target enemy's Ice RES by 12% for 2 turn(s).",
+        "icon": "icon/skill/1106_rank4.png",
+        "paramsEido": [
+          1,
+          0.12,
+          2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "110605",
+        "name": "Absolute Jeopardy",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1106_ultimate.png"
+      },
+      {
+        "id": "110606",
+        "name": "Feeble Pursuit",
+        "rank": 6,
+        "desc": "After Pela attacks, if the enemy target is debuffed, deals Ice Additional DMG equal to 40% of Pela's ATK to the enemy.",
+        "icon": "icon/skill/1106_rank6.png",
+        "paramsEido": [
+          0.4
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          },
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Frost Shot": {
+          "variant1": {
+            "skillID": 110601,
+            "trigger": "Skill01",
+            "name": "Frost Shot",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Pela's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Pela_00_Skill01_Camera",
+              "Avatar_Pela_00_Skill01_Phase01",
+              "Avatar_Pela_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Frostbite": {
+          "variant1": {
+            "skillID": 110602,
+            "trigger": "Skill02",
+            "name": "Frostbite",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Removes #2[i] buff(s) and deals Ice DMG equal to #1[i]% of Pela's ATK to one designated target enemy.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.70625,
+                1
+              ],
+              "8": [
+                1.8375,
+                1
+              ],
+              "9": [
+                1.96875,
+                1
+              ],
+              "10": [
+                2.1,
+                1
+              ],
+              "11": [
+                2.205,
+                1
+              ],
+              "12": [
+                2.31,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Pela_00_Skill02_Camera",
+              "Avatar_Pela_00_Skill02_Phase01",
+              "Avatar_Pela_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Zone Suppression": {
+          "variant1": {
+            "skillID": 110603,
+            "trigger": "Skill03",
+            "name": "Zone Suppression",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Ice DMG equal to #4[i]% of Pela's ATK to all enemies, with a #1[i]% base chance to inflict Exposed on all enemies.\\nWhen Exposed, enemies' DEF is reduced by #2[i]% for #3[i] turn(s).",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1,
+                0.3625,
+                2,
+                0.85
+              ],
+              "8": [
+                1,
+                0.375,
+                2,
+                0.9
+              ],
+              "9": [
+                1,
+                0.3875,
+                2,
+                0.95
+              ],
+              "10": [
+                1,
+                0.4,
+                2,
+                1
+              ],
+              "11": [
+                1,
+                0.41,
+                2,
+                1.04
+              ],
+              "12": [
+                1,
+                0.42,
+                2,
+                1.08
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Pela_00_Skill03_Camera",
+              "Avatar_Pela_00_Skill03_Phase01",
+              "Avatar_Pela_00_Skill03_Phase02",
+              "Avatar_Pela_00_Skill03_Cutin"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Data Collecting": {
+          "variant1": {
+            "skillID": 110604,
+            "trigger": "SkillP01",
+            "name": "Data Collecting",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "If the enemy is debuffed after Pela's attack, Pela will restore #1[f1] additional Energy. This effect can only be triggered 1 time per attack.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                8.125
+              ],
+              "8": [
+                8.75
+              ],
+              "9": [
+                9.375
+              ],
+              "10": [
+                10
+              ],
+              "11": [
+                10.5
+              ],
+              "12": [
+                11
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Pela_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Preemptive Strike": {
+          "variant1": {
+            "skillID": 110607,
+            "trigger": "SkillMaze",
+            "name": "Preemptive Strike",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. Upon entering battle, Pela deals Ice DMG equal to #4[i]% of her ATK to a random enemy, with a #1[i]% base chance of lowering the DEF of all enemies by #2[i]% for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.2,
+                2,
+                0.8
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Pela_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1106_basic_atk.png",
+        "skillRef": {
+          "skillName": "Frost Shot",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1106_skill.png",
+        "skillRef": {
+          "skillName": "Frostbite",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1106_ultimate.png",
+        "skillRef": {
+          "skillName": "Zone Suppression",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1106_talent.png",
+        "skillRef": {
+          "skillName": "Data Collecting",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1106_technique.png",
+        "skillRef": {
+          "skillName": "Preemptive Strike",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Bash",
+        "icon": "icon/skill/1106_skilltree1.png",
+        "desc": "Deals #1[i]% more DMG to debuffed enemy targets.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              0.2
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "The Secret Strategy",
+        "icon": "icon/skill/1106_skilltree2.png",
+        "desc": "When Pela is on the battlefield, all allies' Effect Hit Rate increases by #1[i]%.",
+        "params": [
+          0.1
+        ]
+      },
+      "Point08": {
+        "name": "Wipe Out",
+        "icon": "icon/skill/1106_skilltree3.png",
+        "desc": "When using Skill to dispel buff(s), increases the DMG dealt by the next attack by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
+            "params": [
+              0.2
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1106.png",
+    "preview": "image/character_preview/1106.png",
+    "portrait": "image/character_portrait/1106.png",
+    "bannerOffsets": [
+      116,
+      68,
+      0.64,
+      116,
+      68,
+      0.64,
+      116,
+      68,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Tingyun": {
     "internalID": 1202,
     "name": "Tingyun",
