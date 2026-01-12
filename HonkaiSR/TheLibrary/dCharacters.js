@@ -6766,6 +6766,595 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Clara": {
+    "internalID": 1107,
+    "name": "Clara",
+    "path": "Destruction",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 737.3520000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 90,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "110701",
+        "name": "A Tall Figure",
+        "rank": 1,
+        "desc": "Using Skill will not remove Marks of Counter on the enemy.",
+        "icon": "icon/skill/1107_rank1.png"
+      },
+      {
+        "id": "110702",
+        "name": "A Tight Embrace",
+        "rank": 2,
+        "desc": "After using the Ultimate, ATK increases by 30% for 2 turn(s).",
+        "icon": "icon/skill/1107_rank2.png",
+        "paramsEido": [
+          0.3,
+          2
+        ]
+      },
+      {
+        "id": "110703",
+        "name": "Cold Steel Armor",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1107_skill.png"
+      },
+      {
+        "id": "110704",
+        "name": "Family's Warmth",
+        "rank": 4,
+        "desc": "After Clara is hit, the DMG taken by Clara is reduced by 30%. This effect lasts until the start of her next turn.",
+        "icon": "icon/skill/1107_rank4.png",
+        "paramsEido": [
+          0.3
+        ]
+      },
+      {
+        "id": "110705",
+        "name": "A Small Promise",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1107_ultimate.png"
+      },
+      {
+        "id": "110706",
+        "name": "Long Company",
+        "rank": 6,
+        "desc": "After other allies are attacked, Svarog also has a 50% fixed chance to trigger a Counter on the attacker and mark them with a \"Mark of Counter.\" When using Ultimate, the number of Enhanced Counters increases by 1.",
+        "icon": "icon/skill/1107_rank6.png",
+        "paramsEido": [
+          0.5,
+          1
+        ],
+        "extraEffects": {
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor."
+          },
+          "Counter": {
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "I Want to Help": {
+          "variant1": {
+            "skillID": 110701,
+            "trigger": "Skill01",
+            "name": "I Want to Help",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Clara's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Klara_00_Skill01_Camera",
+              "Avatar_Klara_00_Skill01_Phase01",
+              "Avatar_Klara_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Svarog Watches Over You": {
+          "variant1": {
+            "skillID": 110702,
+            "trigger": "Skill02",
+            "name": "Svarog Watches Over You",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #1[i]% of Clara's ATK to all enemies, and additionally deals Physical DMG equal to #2[i]% of Clara's ATK to enemies marked by Svarog with a Mark of Counter.\\nAll Marks of Counter will be removed after this Skill is used.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.975,
+                0.975
+              ],
+              "8": [
+                1.05,
+                1.05
+              ],
+              "9": [
+                1.125,
+                1.125
+              ],
+              "10": [
+                1.2,
+                1.2
+              ],
+              "11": [
+                1.26,
+                1.26
+              ],
+              "12": [
+                1.32,
+                1.32
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Klara_00_Skill02_Camera",
+              "Avatar_Klara_00_Skill02_Phase01",
+              "Avatar_Klara_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Promise, Not Command": {
+          "variant1": {
+            "skillID": 110703,
+            "trigger": "Skill03",
+            "name": "Promise, Not Command",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "After Clara uses Ultimate, DMG dealt to her is reduced by an extra #4[i]%, and she has greatly increased chances of being attacked by enemies for #3[i] turn(s).\\nIn addition, Svarog's Counter is enhanced. When an ally is attacked, Svarog immediately launches a Counter, and its DMG multiplier against the enemy increases by #2[i]%. Enemies adjacent to it take 50% of the DMG dealt to the primary target enemy. Enhanced Counter(s) can take effect #5[i] time(s).",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                5,
+                1.36,
+                2,
+                0.2125,
+                2
+              ],
+              "8": [
+                5,
+                1.44,
+                2,
+                0.225,
+                2
+              ],
+              "9": [
+                5,
+                1.52,
+                2,
+                0.2375,
+                2
+              ],
+              "10": [
+                5,
+                1.6,
+                2,
+                0.25,
+                2
+              ],
+              "11": [
+                5,
+                1.664,
+                2,
+                0.26,
+                2
+              ],
+              "12": [
+                5,
+                1.728,
+                2,
+                0.27,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Klara_00_Skill03_Camera",
+              "Avatar_Klara_00_Skill03_EnterReady",
+              "Avatar_Klara_00_Skill03_Phase01",
+              "Avatar_Klara_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Because We're Family": {
+          "variant1": {
+            "skillID": 110704,
+            "trigger": "SkillP01",
+            "name": "Because We're Family",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "Under the protection of Svarog, DMG taken by Clara when hit by enemy attacks is reduced by #3[i]%. Svarog will mark enemies who attack Clara with his Mark of Counter and retaliate with a Counter, dealing Physical DMG equal to #2[i]% of Clara's ATK.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1,
+                1.3,
+                0.1
+              ],
+              "8": [
+                1,
+                1.4,
+                0.1
+              ],
+              "9": [
+                1,
+                1.5,
+                0.1
+              ],
+              "10": [
+                1,
+                1.6,
+                0.1
+              ],
+              "11": [
+                1,
+                1.68,
+                0.1
+              ],
+              "12": [
+                1,
+                1.76,
+                0.1
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Klara_00_PassiveSkill_Camera",
+              "Avatar_Klara_00_PassiveSkill01",
+              "Avatar_Klara_00_PassiveSkill01_InsertAbility"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "A Small Price for Victory": {
+          "variant1": {
+            "skillID": 110707,
+            "trigger": "SkillMaze",
+            "name": "A Small Price for Victory",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. Upon entering battle, the chance Clara will be attacked by enemies increases for #1[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                5
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Klara_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1107_basic_atk.png",
+        "skillRef": {
+          "skillName": "I Want to Help",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1107_skill.png",
+        "skillRef": {
+          "skillName": "Svarog Watches Over You",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1107_ultimate.png",
+        "skillRef": {
+          "skillName": "Promise, Not Command",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1107_talent.png",
+        "skillRef": {
+          "skillName": "Because We're Family",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1107_technique.png",
+        "skillRef": {
+          "skillName": "A Small Price for Victory",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Kinship",
+        "icon": "icon/skill/1107_skilltree1.png",
+        "desc": "When attacked, this unit has a #1[i]% fixed chance to dispel 1 debuff placed on them.",
+        "params": [
+          0.35
+        ],
+        "extraEffects": {
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor.",
+            "params": [
+              0.35
+            ]
+          },
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              0.35
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Under Protection",
+        "icon": "icon/skill/1107_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": [
+              0.35
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Revenge",
+        "icon": "icon/skill/1107_skilltree3.png",
+        "desc": "Increases DMG dealt by Svarog's Counter by #1[i]%.",
+        "params": [
+          0.3
+        ],
+        "extraEffects": {
+          "Counter": {
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK.",
+            "params": [
+              0.3
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1107.png",
+    "preview": "image/character_preview/1107.png",
+    "portrait": "image/character_portrait/1107.png",
+    "bannerOffsets": [
+      28,
+      -50,
+      0.65,
+      28,
+      -50,
+      0.65,
+      28,
+      -50,
+      0.65
+    ],
+    "isBuffed": false
+  },
   "Hook": {
     "internalID": 1109,
     "name": "Hook",

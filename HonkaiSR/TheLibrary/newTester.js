@@ -7701,6 +7701,9 @@ const megaParsingFuckery = {
             "execute",
             "target",
             "projectileCount",
+            "projectileCountTotal",
+            "caster",
+            "projectileDMG",
 
             // "counter",
             // "execute",
@@ -7728,6 +7731,13 @@ const megaParsingFuckery = {
         // rotationsSectionRowHolder
         // rotationConditionOperatorBox
 
+        let returnString = "";
+
+        if (parseRef.projectileDMG) {
+            const functionExists = megaParsingFuckery["ATK Scaling DMG"];
+            if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(parseRef.projectileDMG,initialCounter) + `</div>`;}
+        }
+
 
         // <details class="rotationsPermaConditionsExpand" open="">
         //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
@@ -7739,23 +7749,34 @@ const megaParsingFuckery = {
                 <div class="rotationConditionOperatorHeaderCondition">Shot Fired</div>
             </summary>
 
+            <div class="rotationConditionOperatorBoxMainAttack">
             <div class="modifierDetailsBox">
                 ${parseRef.projectileCount != undefined ? `<div class="actionDetailBody2">
-                    <div class="rotationConditionOperatorHeaderInline">Projectile Count:</div>&nbsp;
-                    ${parseRef.projectileCount}
+                    <div class="rotationConditionOperatorHeaderInline">Projectile Count Max:</div>&nbsp;
+                    ${parseRef.projectileCount.displayLines ?? parseRef.projectileCount}
+                </div>` : ""}
+                ${parseRef.projectileCountTotal != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Projectile Count Total:</div>&nbsp;
+                    ${parseRef.projectileCountTotal.displayLines ?? parseRef.projectileCountTotal}
                 </div>` : ""}
                 ${parseRef.target != undefined ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Lower Limit:</div>&nbsp;
                     ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
                 </div>` : ""}
+                ${parseRef.caster != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Caster:</div>&nbsp;
+                    ${Array.isArray(parseRef.caster) ? megaParsingFuckery.makeConditionTargetBox(parseRef.caster,initialCounter) : parseRef.caster}
+                </div>` : ""}
 
             </div>
+            ${returnString}
 
             <div class="rotationConditionOperatorBoxMain">
             ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${parseString}
                 </div>` : ""}
+            </div>
             </div>
         </details>
         `;
