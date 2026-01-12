@@ -11441,6 +11441,533 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Hanya": {
+    "internalID": 1215,
+    "name": "Hanya",
+    "path": "Harmony",
+    "element": "Physical",
+    "rarity": 4,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 564.48,
+      "DEFBase": 352.79999999999995,
+      "HPBase": 917.28,
+      "SPDBase": 110,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "121501",
+        "name": "One Heart",
+        "rank": 1,
+        "desc": "When an ally target with Hanya's Ultimate effect defeats an enemy, Hanya's action advances by 15%. This effect can only be triggered 1 time(s) per turn.",
+        "icon": "icon/skill/1215_rank1.png",
+        "paramsEido": [
+          0.15,
+          1
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "121502",
+        "name": "Two Views",
+        "rank": 2,
+        "desc": "After using the Skill, this character's SPD increases by 20% for 1 turn(s).",
+        "icon": "icon/skill/1215_rank2.png",
+        "paramsEido": [
+          0.2,
+          1
+        ]
+      },
+      {
+        "id": "121503",
+        "name": "Three Temptations",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1215_skill.png"
+      },
+      {
+        "id": "121504",
+        "name": "Four Truths",
+        "rank": 4,
+        "desc": "The Ultimate's duration is additionally extended for 1 turn(s).",
+        "icon": "icon/skill/1215_rank4.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "121505",
+        "name": "Five Skandhas",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1215_ultimate.png"
+      },
+      {
+        "id": "121506",
+        "name": "Six Reverences",
+        "rank": 6,
+        "desc": "Increase the DMG Boost effect of the Talent by an additional 10%.",
+        "icon": "icon/skill/1215_rank6.png",
+        "paramsEido": [
+          0.1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Oracle Brush": {
+          "variant1": {
+            "skillID": 121501,
+            "trigger": "Skill01",
+            "name": "Oracle Brush",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Hanya's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Hanya_00_Skill01_Phase01",
+              "Avatar_Hanya_00_Skill01_Camera",
+              "Avatar_Hanya_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Samsara, Locked": {
+          "variant1": {
+            "skillID": 121502,
+            "trigger": "Skill02",
+            "name": "Samsara, Locked",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #1[i]% of Hanya's ATK to one designated enemy target, then applies \"Burden\" to them.\\nFor every 2 Basic ATKs, Skills, or Ultimates allies use on an enemy with \"Burden,\" allies will immediately recover 1 Skill Point. \"Burden\" is only active on the latest target it is applied to, and will be dispelled automatically after the Skill Point recovery effect has been triggered #2[i] times.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.95,
+                2
+              ],
+              "8": [
+                2.1,
+                2
+              ],
+              "9": [
+                2.25,
+                2
+              ],
+              "10": [
+                2.4,
+                2
+              ],
+              "11": [
+                2.52,
+                2
+              ],
+              "12": [
+                2.64,
+                2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hanya_00_Skill02_Phase01",
+              "Avatar_Hanya_00_Skill02_Camera",
+              "Avatar_Hanya_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Ten-Lords' Decree, All Shall Obey": {
+          "variant1": {
+            "skillID": 121503,
+            "trigger": "Skill03",
+            "name": "Ten-Lords' Decree, All Shall Obey",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Increases the SPD of a target ally by #3[f1]% of Hanya's SPD and increases the same target ally's ATK by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.51,
+                2,
+                0.18125
+              ],
+              "8": [
+                0.54,
+                2,
+                0.1875
+              ],
+              "9": [
+                0.57,
+                2,
+                0.19375
+              ],
+              "10": [
+                0.6,
+                2,
+                0.2
+              ],
+              "11": [
+                0.624,
+                2,
+                0.205
+              ],
+              "12": [
+                0.648,
+                2,
+                0.21
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hanya_00_Skill03_EnterReady",
+              "Avatar_Hanya_00_Skill03_Phase01",
+              "Avatar_Hanya_00_Skill03_Phase02",
+              "Avatar_Hanya_00_Skill03_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Sanction": {
+          "variant1": {
+            "skillID": 121504,
+            "trigger": "SkillP01",
+            "name": "Sanction",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "When an ally uses a Basic ATK, Skill, or Ultimate on an enemy inflicted with Burden, the DMG dealt increases by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.24375,
+                2
+              ],
+              "8": [
+                0.2625,
+                2
+              ],
+              "9": [
+                0.28125,
+                2
+              ],
+              "10": [
+                0.3,
+                2
+              ],
+              "11": [
+                0.315,
+                2
+              ],
+              "12": [
+                0.33,
+                2
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hanya_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Netherworld Judgment": {
+          "variant1": {
+            "skillID": 121507,
+            "trigger": "SkillMaze",
+            "name": "Netherworld Judgment",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, applies Burden equivalent to that applied by the Skill to a random enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Hanya_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1215_basic_atk.png",
+        "skillRef": {
+          "skillName": "Oracle Brush",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1215_skill.png",
+        "skillRef": {
+          "skillName": "Samsara, Locked",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1215_ultimate.png",
+        "skillRef": {
+          "skillName": "Ten-Lords' Decree, All Shall Obey",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1215_talent.png",
+        "skillRef": {
+          "skillName": "Sanction",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1215_technique.png",
+        "skillRef": {
+          "skillName": "Netherworld Judgment",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Scrivener",
+        "icon": "icon/skill/1215_skilltree1.png",
+        "desc": "Allies triggering Burden's Skill Point recovery effect have their ATK increased by #1[i]% for #2[i] turn(s).",
+        "params": [
+          0.1,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Netherworld",
+        "icon": "icon/skill/1215_skilltree2.png",
+        "desc": "If the trigger count for the Burden's Skill Point recovery effect is #1[i] or lower when an enemy with Burden is defeated, then additionally recovers #2[i] Skill Point(s).",
+        "params": [
+          1,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Reanimated",
+        "icon": "icon/skill/1215_skilltree3.png",
+        "desc": "When Burden's Skill Point recovery effect is triggered, this character regenerates #1[i] Energy.",
+        "params": [
+          2
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1215.png",
+    "preview": "image/character_preview/1215.png",
+    "portrait": "image/character_portrait/1215.png",
+    "bannerOffsets": [
+      29.3,
+      11.9,
+      0.66,
+      29.3,
+      11.9,
+      0.66,
+      29.3,
+      11.9,
+      0.66
+    ],
+    "isBuffed": false
+  },
   "Huohuo": {
     "internalID": 1217,
     "name": "Huohuo",
