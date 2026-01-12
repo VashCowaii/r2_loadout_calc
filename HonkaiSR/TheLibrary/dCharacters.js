@@ -1138,6 +1138,590 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Welt": {
+    "internalID": 1004,
+    "name": "Welt",
+    "path": "Nihility",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 620.9280000000001,
+      "DEFBase": 509.355,
+      "HPBase": 1125.4319999999998,
+      "SPDBase": 102,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "100401",
+        "name": "Legacy of Honor",
+        "rank": 1,
+        "desc": "After using Ultimate, Welt gets enhanced. Then, the next 2 time(s) he uses Basic ATK or Skill, deals 1 extra instance of Additional DMG to the enemy target. The Additional DMG dealt when using Basic ATK is equal to 50% of Basic ATK DMG multiplier. The Additional DMG dealt when using Skill is equal to 80% of Skill DMG multiplier.",
+        "icon": "icon/skill/1004_rank1.png",
+        "paramsEido": [
+          0.5,
+          0.8,
+          2
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "100402",
+        "name": "Conflux of Stars",
+        "rank": 2,
+        "desc": "When his Talent is triggered, Welt regenerates 3 Energy.",
+        "icon": "icon/skill/1004_rank2.png",
+        "paramsEido": [
+          3
+        ]
+      },
+      {
+        "id": "100403",
+        "name": "Prayer of Peace",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1004_skill.png"
+      },
+      {
+        "id": "100404",
+        "name": "Appellation of Justice",
+        "rank": 4,
+        "desc": "When using Skill, increases the base chance of reducing the attacked enemy target's SPD by 35%.",
+        "icon": "icon/skill/1004_rank4.png",
+        "paramsEido": [
+          0.35
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "100405",
+        "name": "Power of Kindness",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1004_ultimate.png"
+      },
+      {
+        "id": "100406",
+        "name": "Prospect of Glory",
+        "rank": 6,
+        "desc": "When using Skill, deals DMG for 1 extra time to a random enemy.",
+        "icon": "icon/skill/1004_rank6.png"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Gravity Suppression": {
+          "variant1": {
+            "skillID": 100401,
+            "trigger": "Skill01",
+            "name": "Gravity Suppression",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Welt_00_Skill01_Camera",
+              "Avatar_Welt_00_Skill01_Phase01",
+              "Avatar_Welt_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Edge of the Void": {
+          "variant1": {
+            "skillID": 100402,
+            "trigger": "Skill02",
+            "name": "Edge of the Void",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy and further deals DMG 2 extra times, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to a random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.585,
+                0.7125,
+                0.1,
+                2
+              ],
+              "8": [
+                0.63,
+                0.725,
+                0.1,
+                2
+              ],
+              "9": [
+                0.675,
+                0.7375,
+                0.1,
+                2
+              ],
+              "10": [
+                0.72,
+                0.75,
+                0.1,
+                2
+              ],
+              "11": [
+                0.756,
+                0.76,
+                0.1,
+                2
+              ],
+              "12": [
+                0.792,
+                0.77,
+                0.1,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Welt_00_Skill02_Camera",
+              "Avatar_Welt_00_Skill02_Phase01",
+              "Avatar_Welt_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Synthetic Black Hole": {
+          "variant1": {
+            "skillID": 100403,
+            "trigger": "Skill03",
+            "name": "Synthetic Black Hole",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to all enemies, with a #3[i]% base chance for enemies hit by this ability to be Imprisoned for 1 turn.\\nImprisoned enemies have their actions delayed by #2[f1]% and SPD reduced by #4[i]%.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.275,
+                0.37,
+                1,
+                0.1
+              ],
+              "8": [
+                1.35,
+                0.38,
+                1,
+                0.1
+              ],
+              "9": [
+                1.425,
+                0.39,
+                1,
+                0.1
+              ],
+              "10": [
+                1.5,
+                0.4,
+                1,
+                0.1
+              ],
+              "11": [
+                1.56,
+                0.408,
+                1,
+                0.1
+              ],
+              "12": [
+                1.62,
+                0.416,
+                1,
+                0.1
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Welt_00_Skill03_Camera",
+              "Avatar_Welt_00_Skill03_EnterReady",
+              "Avatar_Welt_00_Skill03_Phase01",
+              "Avatar_Welt_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Time Distortion": {
+          "variant1": {
+            "skillID": 100404,
+            "trigger": "SkillP01",
+            "name": "Time Distortion",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When hitting an enemy that is already Slowed, Welt deals Imaginary Additional DMG equal to #1[i]% of his ATK to the enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.4875
+              ],
+              "8": [
+                0.525
+              ],
+              "9": [
+                0.5625
+              ],
+              "10": [
+                0.6
+              ],
+              "11": [
+                0.63
+              ],
+              "12": [
+                0.66
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Welt_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Gravitational Imprisonment": {
+          "variant1": {
+            "skillID": 100407,
+            "trigger": "SkillMaze",
+            "name": "Gravitational Imprisonment",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Welt's Technique, create a Special Dimension that lasts for #4[i] second(s). Enemies in this Special Dimension have their movement speed reduced by #5[i]%. After entering battle with enemies in the Special Dimension, there is a #1[i]% base chance to Imprison the enemies for 1 turn.\\nImprisoned enemies have their actions delayed by #2[i]% and SPD reduced by #3[i]%. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.2,
+                0.1,
+                15,
+                0.5
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Welt_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1004_basic_atk.png",
+        "skillRef": {
+          "skillName": "Gravity Suppression",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1004_skill.png",
+        "skillRef": {
+          "skillName": "Edge of the Void",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1004_ultimate.png",
+        "skillRef": {
+          "skillName": "Synthetic Black Hole",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1004_talent.png",
+        "skillRef": {
+          "skillName": "Time Distortion",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1004_technique.png",
+        "skillRef": {
+          "skillName": "Gravitational Imprisonment",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Retribution",
+        "icon": "icon/skill/1004_skilltree1.png",
+        "desc": "When using Ultimate, there is a #1[i]% base chance to increase the DMG taken by the targets by #2[i]% for #3[i] turn(s).",
+        "params": [
+          1,
+          0.12,
+          2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              1,
+              0.12,
+              2
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Judgment",
+        "icon": "icon/skill/1004_skilltree2.png",
+        "desc": "Using Ultimate additionally regenerates #1[i] Energy.",
+        "params": [
+          10
+        ]
+      },
+      "Point08": {
+        "name": "Punishment",
+        "icon": "icon/skill/1004_skilltree3.png",
+        "desc": "Deals #1[i]% more DMG to enemies inflicted with Weakness Break.",
+        "params": [
+          0.2
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1004.png",
+    "preview": "image/character_preview/1004.png",
+    "portrait": "image/character_portrait/1004.png",
+    "bannerOffsets": [
+      12,
+      -32,
+      0.61,
+      12,
+      -32,
+      0.61,
+      12,
+      -32,
+      0.61
+    ],
+    "isBuffed": false
+  },
   "Kafka": {
     "internalID": 1005,
     "name": "Kafka",
