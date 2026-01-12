@@ -5126,6 +5126,563 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Sushang": {
+    "internalID": 1206,
+    "name": "Sushang",
+    "path": "The Hunt",
+    "element": "Physical",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 564.48,
+      "DEFBase": 418.95000000000005,
+      "HPBase": 917.28,
+      "SPDBase": 107,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "120601",
+        "name": "Cut With Ease",
+        "rank": 1,
+        "desc": "After using Skill against a Weakness Broken enemy, regenerates 1 Skill Point.",
+        "icon": "icon/skill/1206_rank1.png",
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          }
+        }
+      },
+      {
+        "id": "120602",
+        "name": "Refine in Toil",
+        "rank": 2,
+        "desc": "After Sword Stance is triggered, the DMG taken by Sushang is reduced by 20% for 1 turn.",
+        "icon": "icon/skill/1206_rank2.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "120603",
+        "name": "Rise From Fame",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1206_ultimate.png"
+      },
+      {
+        "id": "120604",
+        "name": "Cleave With Heart",
+        "rank": 4,
+        "desc": "Sushang's Break Effect increases by 40%.",
+        "icon": "icon/skill/1206_rank4.png",
+        "paramsEido": [
+          0.4
+        ]
+      },
+      {
+        "id": "120605",
+        "name": "Prevail via Taixu",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1206_skill.png"
+      },
+      {
+        "id": "120606",
+        "name": "Dwell Like Water",
+        "rank": 6,
+        "desc": "Talent's SPD Boost is stackable and can stack up to 2 times. Additionally, after entering battle, Sushang immediately gains 1 stack of her Talent's SPD Boost.",
+        "icon": "icon/skill/1206_rank6.png"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Cloudfencer Art: Starshine": {
+          "variant1": {
+            "skillID": 120601,
+            "trigger": "Skill01",
+            "name": "Cloudfencer Art: Starshine",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Sushang's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sushang_00_Skill01_Phase01",
+              "Avatar_Sushang_00_Skill01_Phase02",
+              "Avatar_Sushang_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Cloudfencer Art: Mountainfall": {
+          "variant1": {
+            "skillID": 120602,
+            "trigger": "Skill02",
+            "name": "Cloudfencer Art: Mountainfall",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #1[i]% of Sushang's ATK to one designated enemy. In addition, there is a #3[i]% chance to trigger \"Sword Stance\" on the final hit, dealing Physical Additional DMG equal to #2[i]% of Sushang's ATK to the enemy.\\nIf the enemy is inflicted with Weakness Break, \"Sword Stance\" is guaranteed to trigger.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.70625,
+                0.8125,
+                0.33
+              ],
+              "8": [
+                1.8375,
+                0.875,
+                0.33
+              ],
+              "9": [
+                1.96875,
+                0.9375,
+                0.33
+              ],
+              "10": [
+                2.1,
+                1,
+                0.33
+              ],
+              "11": [
+                2.205,
+                1.05,
+                0.33
+              ],
+              "12": [
+                2.31,
+                1.1,
+                0.33
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sushang_00_Skill02_Phase01",
+              "Avatar_Sushang_00_Skill02_Phase02",
+              "Avatar_Sushang_00_Skill02_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              },
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Shape of Taixu: Dawn Herald": {
+          "variant1": {
+            "skillID": 120603,
+            "trigger": "Skill03",
+            "name": "Shape of Taixu: Dawn Herald",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Physical DMG equal to #1[i]% of Sushang's ATK to one designated enemy target, and she immediately takes action. In addition, Sushang's ATK increases by #4[i]% and using her Skill has 2 extra chances to trigger \"Sword Stance\" for #2[i] turn(s).\\n\"Sword Stance\" triggered from the extra chances deals #3[i]% of the original DMG.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.72,
+                2,
+                0.5,
+                0.255
+              ],
+              "8": [
+                2.88,
+                2,
+                0.5,
+                0.27
+              ],
+              "9": [
+                3.04,
+                2,
+                0.5,
+                0.285
+              ],
+              "10": [
+                3.2,
+                2,
+                0.5,
+                0.3
+              ],
+              "11": [
+                3.328,
+                2,
+                0.5,
+                0.312
+              ],
+              "12": [
+                3.456,
+                2,
+                0.5,
+                0.324
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sushang_00_Skill03_EnterReady",
+              "Avatar_Sushang_00_Skill03_Phase01",
+              "Avatar_Sushang_00_Skill03_Phase02",
+              "Avatar_Sushang_00_Skill03_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Dancing Blade": {
+          "variant1": {
+            "skillID": 120604,
+            "trigger": "SkillP01",
+            "name": "Dancing Blade",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When an enemy has their Weakness Broken on the field, Sushang's SPD increases by #1[f2]% for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.18125,
+                2
+              ],
+              "8": [
+                0.1875,
+                2
+              ],
+              "9": [
+                0.19375,
+                2
+              ],
+              "10": [
+                0.2,
+                2
+              ],
+              "11": [
+                0.205,
+                2
+              ],
+              "12": [
+                0.21,
+                2
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sushang_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Cloudfencer Art: Warcry": {
+          "variant1": {
+            "skillID": 120607,
+            "trigger": "SkillMaze",
+            "name": "Cloudfencer Art: Warcry",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. Upon entering battle, Sushang deals Physical DMG equal to #1[i]% of her ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Sushang_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1206_basic_atk.png",
+        "skillRef": {
+          "skillName": "Cloudfencer Art: Starshine",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1206_skill.png",
+        "skillRef": {
+          "skillName": "Cloudfencer Art: Mountainfall",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1206_ultimate.png",
+        "skillRef": {
+          "skillName": "Shape of Taixu: Dawn Herald",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1206_talent.png",
+        "skillRef": {
+          "skillName": "Dancing Blade",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1206_technique.png",
+        "skillRef": {
+          "skillName": "Cloudfencer Art: Warcry",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Guileless",
+        "icon": "icon/skill/1206_skilltree1.png",
+        "desc": "When current HP percentage is #1[i]% or lower, reduces the chance of being attacked by enemies.",
+        "params": [
+          0.5,
+          0.5
+        ]
+      },
+      "Point07": {
+        "name": "Riposte",
+        "icon": "icon/skill/1206_skilltree2.png",
+        "desc": "For every Sword Stance triggered, the DMG dealt by Sword Stance increases by #1[i]%. Stacks up to #2[i] time(s).",
+        "params": [
+          0.025,
+          10
+        ]
+      },
+      "Point08": {
+        "name": "Vanquisher",
+        "icon": "icon/skill/1206_skilltree3.png",
+        "desc": "After using Basic ATK or Skill, if there are enemies on the field that are Weakness Broken, Sushang's action advances by #1[i]%.",
+        "params": [
+          0.15
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+            "params": [
+              0.15
+            ]
+          },
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.15
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1206.png",
+    "preview": "image/character_preview/1206.png",
+    "portrait": "image/character_portrait/1206.png",
+    "bannerOffsets": [
+      0,
+      40,
+      0.67,
+      0,
+      40,
+      0.67,
+      0,
+      40,
+      0.67
+    ],
+    "isBuffed": false
+  },
   "Huohuo": {
     "internalID": 1217,
     "name": "Huohuo",
