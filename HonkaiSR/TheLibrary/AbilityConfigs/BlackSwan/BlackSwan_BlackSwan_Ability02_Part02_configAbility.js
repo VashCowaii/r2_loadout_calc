@@ -1,0 +1,422 @@
+const configAbility = {
+  "fileName": "BlackSwan_BlackSwan_Ability02_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "ATK Scaling DMG",
+      "target": "Single Target (Primary)",
+      "canPhase": true,
+      "AttackScaling": {
+        "DamageType": "Wind",
+        "Damage": {
+          "operator": "Variables[0] (0.9) || RETURN",
+          "displayLines": "0.9",
+          "constants": [],
+          "variables": [
+            0.9
+          ]
+        },
+        "Toughness": {
+          "operator": "Variables[0] (ST Toughness Value) || RETURN",
+          "displayLines": "ST Toughness Value",
+          "constants": [],
+          "variables": [
+            "ST Toughness Value"
+          ]
+        },
+        "Tags": null,
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": "Blast (Adjacent)",
+      "canPhase": true,
+      "AttackScaling": {
+        "DamageType": "Wind",
+        "Damage": {
+          "operator": "Variables[0] (0.9) || RETURN",
+          "displayLines": "0.9",
+          "constants": [],
+          "variables": [
+            0.9
+          ]
+        },
+        "Toughness": {
+          "operator": "Variables[0] (Blast Toughness Value) || RETURN",
+          "displayLines": "Blast Toughness Value",
+          "constants": [],
+          "variables": [
+            "Blast Toughness Value"
+          ]
+        },
+        "Tags": null
+      }
+    },
+    "Trigger: Attack End",
+    {
+      "name": "Use Custom Character Function",
+      "functionName": "AddDot",
+      "variables": {
+        "Arg01": {
+          "operator": "Variables[0] (1) || RETURN",
+          "displayLines": "1",
+          "constants": [],
+          "variables": [
+            1
+          ]
+        }
+      }
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Trace Activated",
+        "conditionList": "Viscera's Disquiet"
+      },
+      "passed": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": "Single Target (Primary)",
+            "flagName": "STAT_DOT_Poison"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "AddDot",
+              "variables": {
+                "Arg01": {
+                  "operator": "Variables[0] (0.65) || RETURN",
+                  "displayLines": "0.65",
+                  "constants": [],
+                  "variables": [
+                    0.65
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": "Single Target (Primary)",
+            "flagName": "STAT_DOT_Bleed"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "AddDot",
+              "variables": {
+                "Arg01": {
+                  "operator": "Variables[0] (0.65) || RETURN",
+                  "displayLines": "0.65",
+                  "constants": [],
+                  "variables": [
+                    0.65
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": "Single Target (Primary)",
+            "flagName": "STAT_DOT_Burn"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "AddDot",
+              "variables": {
+                "Arg01": {
+                  "operator": "Variables[0] (0.65) || RETURN",
+                  "displayLines": "0.65",
+                  "constants": [],
+                  "variables": [
+                    0.65
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Flag",
+            "target": "Single Target (Primary)",
+            "flagName": "STAT_DOT_Electric"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "AddDot",
+              "variables": {
+                "Arg01": {
+                  "operator": "Variables[0] (0.65) || RETURN",
+                  "displayLines": "0.65",
+                  "constants": [],
+                  "variables": [
+                    0.65
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": "Blast (Adjacent)",
+      "searchRandom": true,
+      "maxTargets": 2,
+      "ifTargetFound": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Random Chance",
+            "chance": {
+              "operator": "Variables[0] (Rank06_Chance) || RETURN",
+              "displayLines": "Rank06_Chance",
+              "constants": [],
+              "variables": [
+                "Rank06_Chance"
+              ]
+            }
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Rank06_Weighted_Stack_Layer",
+              "value": {
+                "operator": "Constants[0] (1) || Variables[0] (Rank06_Extra_Layer) || ADD || RETURN",
+                "displayLines": "(1 + Rank06_Extra_Layer)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "Rank06_Extra_Layer"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "Rank06_Weighted_Stack_Layer",
+              "value": {
+                "operator": "Constants[0] (1) || RETURN",
+                "displayLines": "1",
+                "constants": [
+                  1
+                ],
+                "variables": []
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Use Prior Target(s) Defined",
+          "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
+          "baseChance": {
+            "operator": "Variables[0] (1) || RETURN",
+            "displayLines": "1",
+            "constants": [],
+            "variables": [
+              1
+            ]
+          },
+          "stackLimit": {
+            "operator": "Variables[0] (Max_DOT_Layer) || RETURN",
+            "displayLines": "Max_DOT_Layer",
+            "constants": [],
+            "variables": [
+              "Max_DOT_Layer"
+            ]
+          },
+          "valuePerStack": {
+            "Basic_DamagePercentage": {
+              "operator": "Variables[0] (2.4) || RETURN",
+              "displayLines": "2.4",
+              "constants": [],
+              "variables": [
+                2.4
+              ]
+            },
+            "ExtraLayer_DamagePercentage": {
+              "operator": "Variables[0] (0.12) || RETURN",
+              "displayLines": "0.12",
+              "constants": [],
+              "variables": [
+                0.12
+              ]
+            },
+            "SecondLayer": {
+              "operator": "Variables[0] (3) || RETURN",
+              "displayLines": "3",
+              "constants": [],
+              "variables": [
+                3
+              ]
+            },
+            "Spread_DamagePercentage": {
+              "operator": "Variables[0] (1.8) || RETURN",
+              "displayLines": "1.8",
+              "constants": [],
+              "variables": [
+                1.8
+              ]
+            },
+            "ThirdLayer": {
+              "operator": "Variables[0] (7) || RETURN",
+              "displayLines": "7",
+              "constants": [],
+              "variables": [
+                7
+              ]
+            },
+            "DefenceIgnore": {
+              "operator": "Variables[0] (0.2) || RETURN",
+              "displayLines": "0.2",
+              "constants": [],
+              "variables": [
+                0.2
+              ]
+            },
+            "Cast_By_Level": 0
+          },
+          "addStacksPerTrigger": {
+            "operator": "Variables[0] (Rank06_Weighted_Stack_Layer) || RETURN",
+            "displayLines": "Rank06_Weighted_Stack_Layer",
+            "constants": [],
+            "variables": [
+              "Rank06_Weighted_Stack_Layer"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Single Target (Primary)",
+      "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+      "duration": {
+        "operator": "Variables[0] (3) || RETURN",
+        "displayLines": "3",
+        "constants": [],
+        "variables": [
+          3
+        ]
+      },
+      "baseChance": {
+        "operator": "Variables[0] (1) || RETURN",
+        "displayLines": "1",
+        "constants": [],
+        "variables": [
+          1
+        ]
+      },
+      "valuePerStack": {
+        "MDF_PropertyValue": {
+          "operator": "Variables[0] (0.208) || RETURN",
+          "displayLines": "0.208",
+          "constants": [],
+          "variables": [
+            0.208
+          ]
+        }
+      }
+    },
+    {
+      "name": "Find New Target",
+      "from": "Blast (Adjacent)",
+      "searchRandom": true,
+      "maxTargets": 2,
+      "ifTargetFound": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Use Prior Target(s) Defined",
+          "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+          "duration": {
+            "operator": "Variables[0] (3) || RETURN",
+            "displayLines": "3",
+            "constants": [],
+            "variables": [
+              3
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] (1) || RETURN",
+            "displayLines": "1",
+            "constants": [],
+            "variables": [
+              1
+            ]
+          },
+          "valuePerStack": {
+            "MDF_PropertyValue": {
+              "operator": "Variables[0] (0.208) || RETURN",
+              "displayLines": "0.208",
+              "constants": [],
+              "variables": [
+                0.208
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "Trigger: Ability End"
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
+      "stackType": "ReplaceByCaster",
+      "modifierFlags": [
+        "STAT_DefenceDown"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": "Owner of this Modifier",
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+              "value": {
+                "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                "displayLines": "(0 - MDF_PropertyValue)",
+                "constants": [
+                  0
+                ],
+                "variables": [
+                  "MDF_PropertyValue"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [],
+      "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "type": "Debuff",
+      "effectName": "DEF Reduction",
+      "statusName": "Decadence, False Twilight"
+    }
+  ]
+}

@@ -36,6 +36,30 @@ let allowedCharacterList = [
     "trimName": "RuanMei"
   },
   {
+    "fullName": "Sparkle",
+    "trimName": "Sparkle"
+  },
+  {
+    "fullName": "Black Swan",
+    "trimName": "BlackSwan"
+  },
+  {
+    "fullName": "Tribbie",
+    "trimName": "Tribbie"
+  },
+  {
+    "fullName": "Anaxa",
+    "trimName": "Anaxa"
+  },
+  {
+    "fullName": "Hysilens",
+    "trimName": "Hysilens"
+  },
+  {
+    "fullName": "Cerydra",
+    "trimName": "Cerydra"
+  },
+  {
     "fullName": "Trailblazer - Destruction",
     "trimName": "TrailblazerDestruction"
   },

@@ -1403,7 +1403,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Owner]",
+              "eventTrigger": "Attack DMG End [Owner]",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -1436,7 +1436,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -1628,7 +1628,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Owner]",
+              "eventTrigger": "Attack DMG End [Owner]",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -1660,7 +1660,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -1808,7 +1808,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Owner]",
+              "eventTrigger": "Attack DMG End [Owner]",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -1840,7 +1840,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -1987,7 +1987,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Owner]",
+              "eventTrigger": "Attack DMG End [Owner]",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -2019,7 +2019,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",

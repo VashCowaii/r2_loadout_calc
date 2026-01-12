@@ -87,14 +87,14 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "RuanMei_BreakDamage",
                   "value": {
-                    "operator": "Variables[0] (BreakBaseDamage) || Variables[1] (BreakDamageRatio ) || MUL || Constants[0] (1) || Variables[2] (BreakDamageAddedRatio) || ADD || MUL || RETURN",
-                    "displayLines": "((BreakBaseDamage * BreakDamageRatio ) * (1 + BreakDamageAddedRatio))",
+                    "operator": "Variables[0] (BreakBaseDamage) || Variables[1] (BreakDamageRatio) || MUL || Constants[0] (1) || Variables[2] (BreakDamageAddedRatio) || ADD || MUL || RETURN",
+                    "displayLines": "((BreakBaseDamage * BreakDamageRatio) * (1 + BreakDamageAddedRatio))",
                     "constants": [
                       1
                     ],
                     "variables": [
                       "BreakBaseDamage",
-                      "BreakDamageRatio ",
+                      "BreakDamageRatio",
                       "BreakDamageAddedRatio"
                     ]
                   }
@@ -106,11 +106,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "DamageBreak": {
-                      "operator": "Variables[0] (BreakDamageRatio ) || Variables[1] (RuanMei_BreakDamage) || MUL || RETURN",
-                      "displayLines": "(BreakDamageRatio  * RuanMei_BreakDamage)",
+                      "operator": "Variables[0] (BreakDamageRatio) || Variables[1] (RuanMei_BreakDamage) || MUL || RETURN",
+                      "displayLines": "(BreakDamageRatio * RuanMei_BreakDamage)",
                       "constants": [],
                       "variables": [
-                        "BreakDamageRatio ",
+                        "BreakDamageRatio",
                         "RuanMei_BreakDamage"
                       ]
                     },

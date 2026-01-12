@@ -98,7 +98,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "IF",

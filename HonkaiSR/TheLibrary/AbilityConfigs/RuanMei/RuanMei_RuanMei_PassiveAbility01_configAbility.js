@@ -263,7 +263,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Action Phase Start[?]",
+          "eventTrigger": "Action Phase Start [Owner][?]",
           "execute": [
             {
               "name": "IF",

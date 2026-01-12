@@ -407,11 +407,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "Huohuo_Passive_DispelCount",
                   "value": {
-                    "operator": "Variables[0] (Huohuo_Passive_DispelCount ) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
-                    "displayLines": "(Huohuo_Passive_DispelCount  - _DispelNumSuccess)",
+                    "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
+                    "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
                     "constants": [],
                     "variables": [
-                      "Huohuo_Passive_DispelCount ",
+                      "Huohuo_Passive_DispelCount",
                       "_DispelNumSuccess"
                     ]
                   }
@@ -516,11 +516,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "Huohuo_Passive_DispelCount",
                       "value": {
-                        "operator": "Variables[0] (Huohuo_Passive_DispelCount ) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
-                        "displayLines": "(Huohuo_Passive_DispelCount  - _DispelNumSuccess)",
+                        "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
+                        "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
                         "constants": [],
                         "variables": [
-                          "Huohuo_Passive_DispelCount ",
+                          "Huohuo_Passive_DispelCount",
                           "_DispelNumSuccess"
                         ]
                       }
@@ -621,11 +621,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "Huohuo_Passive_DispelCount",
                       "value": {
-                        "operator": "Variables[0] (Huohuo_Passive_DispelCount ) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
-                        "displayLines": "(Huohuo_Passive_DispelCount  - _DispelNumSuccess)",
+                        "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
+                        "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
                         "constants": [],
                         "variables": [
-                          "Huohuo_Passive_DispelCount ",
+                          "Huohuo_Passive_DispelCount",
                           "_DispelNumSuccess"
                         ]
                       }
@@ -730,11 +730,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "Huohuo_Passive_DispelCount",
                           "value": {
-                            "operator": "Variables[0] (Huohuo_Passive_DispelCount ) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
-                            "displayLines": "(Huohuo_Passive_DispelCount  - _DispelNumSuccess)",
+                            "operator": "Variables[0] (Huohuo_Passive_DispelCount) || Variables[1] (_DispelNumSuccess) || SUB || RETURN",
+                            "displayLines": "(Huohuo_Passive_DispelCount - _DispelNumSuccess)",
                             "constants": [],
                             "variables": [
-                              "Huohuo_Passive_DispelCount ",
+                              "Huohuo_Passive_DispelCount",
                               "_DispelNumSuccess"
                             ]
                           }
@@ -807,7 +807,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Action Phase Start[?]",
+          "eventTrigger": "Action Phase Start [Owner][?]",
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -858,11 +858,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "MDF_DispelCount",
               "value": {
-                "operator": "Variables[0] (Huohuo_Passive_DispelCount ) || RETURN",
-                "displayLines": "Huohuo_Passive_DispelCount ",
+                "operator": "Variables[0] (Huohuo_Passive_DispelCount) || RETURN",
+                "displayLines": "Huohuo_Passive_DispelCount",
                 "constants": [],
                 "variables": [
-                  "Huohuo_Passive_DispelCount "
+                  "Huohuo_Passive_DispelCount"
                 ]
               }
             },
@@ -906,7 +906,7 @@ const configAbility = {
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
-          "variableName": "Huohuo_Passive_DispelCount ",
+          "variableName": "Huohuo_Passive_DispelCount",
           "from": "ContextOwner",
           "valueRanges": [
             {
@@ -918,11 +918,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_DispelCount",
                   "value": {
-                    "operator": "Variables[0] (Huohuo_Passive_DispelCount ) || RETURN",
-                    "displayLines": "Huohuo_Passive_DispelCount ",
+                    "operator": "Variables[0] (Huohuo_Passive_DispelCount) || RETURN",
+                    "displayLines": "Huohuo_Passive_DispelCount",
                     "constants": [],
                     "variables": [
-                      "Huohuo_Passive_DispelCount "
+                      "Huohuo_Passive_DispelCount"
                     ]
                   }
                 }

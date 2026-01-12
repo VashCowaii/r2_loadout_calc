@@ -1,0 +1,591 @@
+const configAbility = {
+  "fileName": "Sparkle_Sparkle_PassiveAbility_1",
+  "abilityType": "Talent",
+  "energy": null,
+  "toughnessList": [
+    0,
+    0,
+    0
+  ],
+  "parse": [
+    {
+      "name": "Define Custom Variable with Skill Point Max",
+      "variableName": "TeamBpMax"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "Sparkle_PassiveAbility_Listen"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "Sparkle_AbilityPreshow"
+    },
+    {
+      "name": "Define Custom Variable",
+      "variableName": "MDF_PassiveMaxLayer",
+      "value": {
+        "operator": "Variables[0] (3) || RETURN",
+        "displayLines": "3",
+        "constants": [],
+        "variables": [
+          3
+        ]
+      }
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "Sparkle_PassiveAbility_Listen",
+      "modifierFlags": [
+        "ListenBattleEventSkill"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "When Constructing Modifier",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 4
+              },
+              "passed": [
+                {
+                  "name": "Change Skill Point Max",
+                  "function": "Add",
+                  "value": {
+                    "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(2 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      2
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Change Skill Point Max",
+                  "function": "Add",
+                  "value": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Change Skill Point Max",
+              "function": "Add",
+              "value": {
+                "operator": "Variables[0] (2) || INVERT || RETURN",
+                "displayLines": "-2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Entity Created [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Trace Activated",
+                    "conditionList": "Nocturne"
+                  },
+                  {
+                    "name": "Is Part Of Team",
+                    "target": "Use Prior Target(s) Defined",
+                    "team": "TeamLight"
+                  },
+                  {
+                    "name": "Is Entity Type",
+                    "target": "Use Prior Target(s) Defined",
+                    "type": "Memosprite"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Find New Target",
+                  "from": "Allied Team(No Memosprite)",
+                  "searchRandom": true,
+                  "maxTargets": 4,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Element",
+                        "target": "Use Prior Target(s) Defined",
+                        "DamageType": {
+                          "name": "Damage Type Source",
+                          "sourceType": "Quantum"
+                        }
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": "Use Prior Target(s) Defined",
+                        "modifier": "Sparkle_PointB3_Mark",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextCaster",
+                      "variableName": "MDF_QuantumCount",
+                      "value": {
+                        "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(MDF_QuantumCount + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "MDF_QuantumCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "Sparkle_PointB3_Mark"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_QuantumCount",
+                    "compareType": ">=",
+                    "value2": 3
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Allied Team",
+                      "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.15) || RETURN",
+                          "displayLines": "0.15",
+                          "constants": [],
+                          "variables": [
+                            0.15
+                          ]
+                        },
+                        "MDF_PropertyValue2": {
+                          "operator": "Variables[0] (0.3) || RETURN",
+                          "displayLines": "0.3",
+                          "constants": [],
+                          "variables": [
+                            0.3
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_QuantumCount",
+                        "compareType": "=",
+                        "value2": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": "Allied Team",
+                          "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.15) || RETURN",
+                              "displayLines": "0.15",
+                              "constants": [],
+                              "variables": [
+                                0.15
+                              ]
+                            },
+                            "MDF_PropertyValue2": {
+                              "operator": "Variables[0] (0.15) || RETURN",
+                              "displayLines": "0.15",
+                              "constants": [],
+                              "variables": [
+                                0.15
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_QuantumCount",
+                            "compareType": "=",
+                            "value2": 1
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": "Allied Team",
+                              "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] (0.15) || RETURN",
+                                  "displayLines": "0.15",
+                                  "constants": [],
+                                  "variables": [
+                                    0.15
+                                  ]
+                                },
+                                "MDF_PropertyValue2": {
+                                  "operator": "Variables[0] (0.05) || RETURN",
+                                  "displayLines": "0.05",
+                                  "constants": [],
+                                  "variables": [
+                                    0.05
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Skill Point Changes",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Varying Data",
+              "target": null,
+              "variableName": "MDF_BPCount",
+              "value": "ParamValue"
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_BPCount",
+              "value": {
+                "operator": "Variables[0] (MDF_BPCount) || INVERT || RETURN",
+                "displayLines": "-MDF_BPCount",
+                "constants": [],
+                "variables": [
+                  "MDF_BPCount"
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "ParameterValue",
+                    "compareType": "<",
+                    "value2": 0
+                  },
+                  {
+                    "name": "Is Part Of Team",
+                    "target": "Use Prior Target(s) Defined",
+                    "team": "TeamLight"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Allied Team",
+                  "modifier": "Sparkle_PassiveAbility_AllDamageAddedRatio02[<span class=\"descriptionNumberColor\">Red Herring</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] (MDF_PassiveMaxLayer) || RETURN",
+                    "displayLines": "MDF_PassiveMaxLayer",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PassiveMaxLayer"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue2": {
+                      "operator": "Variables[0] (0.06) || RETURN",
+                      "displayLines": "0.06",
+                      "constants": [],
+                      "variables": [
+                        0.06
+                      ]
+                    },
+                    "MDF_PropertyValue3": {
+                      "operator": "Variables[0] (0.1) || RETURN",
+                      "displayLines": "0.1",
+                      "constants": [],
+                      "variables": [
+                        0.1
+                      ]
+                    },
+                    "MDF_DefenceAddedRatio2": {
+                      "operator": "Variables[0] (0.08) || RETURN",
+                      "displayLines": "0.08",
+                      "constants": [],
+                      "variables": [
+                        0.08
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (MDF_BPCount) || RETURN",
+                    "displayLines": "MDF_BPCount",
+                    "constants": [],
+                    "variables": [
+                      "MDF_BPCount"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack Start [Anyone]"
+        },
+        {
+          "eventTrigger": "Enter Battle",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Trace Activated",
+                "conditionList": "Nocturne"
+              },
+              "passed": [
+                {
+                  "name": "Find New Target",
+                  "from": "Allied Team(No Memosprite)",
+                  "searchRandom": true,
+                  "maxTargets": 4,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Element",
+                        "target": "Use Prior Target(s) Defined",
+                        "DamageType": {
+                          "name": "Damage Type Source",
+                          "sourceType": "Quantum"
+                        }
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": "Use Prior Target(s) Defined",
+                        "modifier": "Sparkle_PointB3_Mark",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextCaster",
+                      "variableName": "MDF_QuantumCount",
+                      "value": {
+                        "operator": "Variables[0] (MDF_QuantumCount) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(MDF_QuantumCount + 1)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "MDF_QuantumCount"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "Sparkle_PointB3_Mark"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_QuantumCount",
+                    "compareType": ">=",
+                    "value2": 3
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Allied Team",
+                      "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.15) || RETURN",
+                          "displayLines": "0.15",
+                          "constants": [],
+                          "variables": [
+                            0.15
+                          ]
+                        },
+                        "MDF_PropertyValue2": {
+                          "operator": "Variables[0] (0.3) || RETURN",
+                          "displayLines": "0.3",
+                          "constants": [],
+                          "variables": [
+                            0.3
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_QuantumCount",
+                        "compareType": "=",
+                        "value2": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": "Allied Team",
+                          "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (0.15) || RETURN",
+                              "displayLines": "0.15",
+                              "constants": [],
+                              "variables": [
+                                0.15
+                              ]
+                            },
+                            "MDF_PropertyValue2": {
+                              "operator": "Variables[0] (0.15) || RETURN",
+                              "displayLines": "0.15",
+                              "constants": [],
+                              "variables": [
+                                0.15
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "MDF_QuantumCount",
+                            "compareType": "=",
+                            "value2": 1
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": "Allied Team",
+                              "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] (0.15) || RETURN",
+                                  "displayLines": "0.15",
+                                  "constants": [],
+                                  "variables": [
+                                    0.15
+                                  ]
+                                },
+                                "MDF_PropertyValue2": {
+                                  "operator": "Variables[0] (0.05) || RETURN",
+                                  "displayLines": "0.05",
+                                  "constants": [],
+                                  "variables": [
+                                    0.05
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "priorityLevel": -80
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "TeamBpMax"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "Sparkle_AbilityPreshow",
+      "stackData": [],
+      "latentQueue": [
+        "TeamBpMax"
+      ],
+      "previewValue": {
+        "name": "Modifier: UI Preview",
+        "show": "Hide",
+        "target": "Current Visual Target(All)",
+        "skillType": [
+          "Skill"
+        ],
+        "conditions": {
+          "name": "Is Part Of",
+          "of": "Owner of this Modifier",
+          "target": "Use Prior Target(s) Defined",
+          "mustBeAlive2": true,
+          "invertCondition": true
+        },
+        "delayAdvancePreview": {
+          "name": "Delay/Advance Preview",
+          "previewValue": -0.5
+        }
+      }
+    }
+  ]
+}

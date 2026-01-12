@@ -69,7 +69,7 @@ const compositeAbilityObject = {
           "for": "LC_23032_Main",
           "execute": [
             {
-              "eventTrigger": "Attack End [Owner]",
+              "eventTrigger": "Attack DMG End [Owner]",
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",

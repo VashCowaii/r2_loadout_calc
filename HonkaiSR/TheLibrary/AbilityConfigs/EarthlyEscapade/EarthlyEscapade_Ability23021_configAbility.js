@@ -22,7 +22,7 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Teammates + Memosprites (Excluding Owner) [Exclude battle mechanics]",
+          "to": "All Teammates + Unselectable (Excluding Owner) [Exclude battle events]",
           "modifier": "LC_23021_Sub[<span class=\"descriptionNumberColor\">CRIT Rate and CRIT DMG Boost</span>]",
           "aliveOnly": "True",
           "haloStatus": true,

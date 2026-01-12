@@ -106,14 +106,14 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "RuanMei_BreakDamage",
                       "value": {
-                        "operator": "Variables[0] (BreakBaseDamage) || Variables[1] (BreakDamageRatio ) || MUL || Constants[0] (1) || Variables[2] (BreakDamageAddedRatio) || ADD || MUL || RETURN",
-                        "displayLines": "((BreakBaseDamage * BreakDamageRatio ) * (1 + BreakDamageAddedRatio))",
+                        "operator": "Variables[0] (BreakBaseDamage) || Variables[1] (BreakDamageRatio) || MUL || Constants[0] (1) || Variables[2] (BreakDamageAddedRatio) || ADD || MUL || RETURN",
+                        "displayLines": "((BreakBaseDamage * BreakDamageRatio) * (1 + BreakDamageAddedRatio))",
                         "constants": [
                           1
                         ],
                         "variables": [
                           "BreakBaseDamage",
-                          "BreakDamageRatio ",
+                          "BreakDamageRatio",
                           "BreakDamageAddedRatio"
                         ]
                       }
@@ -125,11 +125,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "DamageBreak": {
-                          "operator": "Variables[0] (BreakDamageRatio ) || Variables[1] (RuanMei_BreakDamage) || MUL || RETURN",
-                          "displayLines": "(BreakDamageRatio  * RuanMei_BreakDamage)",
+                          "operator": "Variables[0] (BreakDamageRatio) || Variables[1] (RuanMei_BreakDamage) || MUL || RETURN",
+                          "displayLines": "(BreakDamageRatio * RuanMei_BreakDamage)",
                           "constants": [],
                           "variables": [
-                            "BreakDamageRatio ",
+                            "BreakDamageRatio",
                             "RuanMei_BreakDamage"
                           ]
                         },
@@ -723,7 +723,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Action Phase Start[?]",
+              "eventTrigger": "Action Phase Start [Owner][?]",
               "execute": [
                 {
                   "name": "IF",
@@ -1485,7 +1485,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates + Memosprites (Excluding Owner)",
+                  "to": "All Teammates + Unselectable (Excluding Owner)",
                   "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
                   "valuePerStack": {
                     "Ability02_P1_DamageAddedRatio_Friend": {
@@ -2188,7 +2188,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "IF",
@@ -2243,7 +2243,7 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Teammates + Memosprites (Excluding Owner)",
+              "to": "All Teammates + Unselectable (Excluding Owner)",
               "modifier": "RuanMei_PassiveArea_PenetrateUP",
               "aliveOnly": "True",
               "haloStatus": true,
