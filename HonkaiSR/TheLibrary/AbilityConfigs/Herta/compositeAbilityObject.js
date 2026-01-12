@@ -1354,7 +1354,7 @@ const compositeAbilityObject = {
           "for": "Herta_Passive_ATK",
           "execute": [
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "IF",

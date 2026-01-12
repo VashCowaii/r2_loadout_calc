@@ -20,7 +20,7 @@ const configAbility = {
       "for": "Serval_Passive01Modifier",
       "execute": [
         {
-          "eventTrigger": "Attack End [Owner]",
+          "eventTrigger": "Attack DMG End [Owner]",
           "execute": [
             {
               "name": "Find New Target",

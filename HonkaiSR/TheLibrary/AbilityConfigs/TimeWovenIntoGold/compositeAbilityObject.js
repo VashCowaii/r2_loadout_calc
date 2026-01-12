@@ -371,7 +371,7 @@ const compositeAbilityObject = {
           "for": "LC_23036_Listen",
           "execute": [
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "IF",

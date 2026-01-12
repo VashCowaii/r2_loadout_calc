@@ -375,7 +375,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Owner]",
+          "eventTrigger": "Attack DMG End [Owner]",
           "execute": [
             {
               "name": "IF",

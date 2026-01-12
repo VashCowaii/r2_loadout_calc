@@ -467,7 +467,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Owner]",
+          "eventTrigger": "Attack DMG End [Owner]",
           "execute": [
             {
               "name": "Find New Target",
@@ -500,7 +500,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Anyone]",
+          "eventTrigger": "Attack DMG End [Anyone]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -692,7 +692,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Owner]",
+          "eventTrigger": "Attack DMG End [Owner]",
           "execute": [
             {
               "name": "Find New Target",
@@ -724,7 +724,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Anyone]",
+          "eventTrigger": "Attack DMG End [Anyone]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -872,7 +872,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Owner]",
+          "eventTrigger": "Attack DMG End [Owner]",
           "execute": [
             {
               "name": "Find New Target",
@@ -904,7 +904,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Anyone]",
+          "eventTrigger": "Attack DMG End [Anyone]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -1051,7 +1051,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Owner]",
+          "eventTrigger": "Attack DMG End [Owner]",
           "execute": [
             {
               "name": "Find New Target",
@@ -1083,7 +1083,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Attack End [Anyone]",
+          "eventTrigger": "Attack DMG End [Anyone]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

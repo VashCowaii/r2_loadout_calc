@@ -23,11 +23,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "MDF_DmgAddValue",
               "value": {
-                "operator": "Variables[0] (MDF_DmgAddNum ) || Variables[1] (0.04) || MUL || RETURN",
-                "displayLines": "(MDF_DmgAddNum  * 0.04)",
+                "operator": "Variables[0] (MDF_DmgAddNum) || Variables[1] (0.04) || MUL || RETURN",
+                "displayLines": "(MDF_DmgAddNum * 0.04)",
                 "constants": [],
                 "variables": [
-                  "MDF_DmgAddNum ",
+                  "MDF_DmgAddNum",
                   0.04
                 ]
               }
@@ -82,11 +82,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_PreDmgAddNum",
                   "value": {
-                    "operator": "Variables[0] (MDF_DmgAddNum ) || RETURN",
-                    "displayLines": "MDF_DmgAddNum ",
+                    "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
+                    "displayLines": "MDF_DmgAddNum",
                     "constants": [],
                     "variables": [
-                      "MDF_DmgAddNum "
+                      "MDF_DmgAddNum"
                     ]
                   }
                 },
@@ -115,13 +115,13 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_DmgAddNum",
                       "value": {
-                        "operator": "Variables[0] (MDF_DmgAddNum ) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_DmgAddNum  + 1)",
+                        "operator": "Variables[0] (MDF_DmgAddNum) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(MDF_DmgAddNum + 1)",
                         "constants": [
                           1
                         ],
                         "variables": [
-                          "MDF_DmgAddNum "
+                          "MDF_DmgAddNum"
                         ]
                       }
                     }
@@ -165,11 +165,11 @@ const configAbility = {
                           "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DmgAddNum": {
-                              "operator": "Variables[0] (MDF_DmgAddNum ) || RETURN",
-                              "displayLines": "MDF_DmgAddNum ",
+                              "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
+                              "displayLines": "MDF_DmgAddNum",
                               "constants": [],
                               "variables": [
-                                "MDF_DmgAddNum "
+                                "MDF_DmgAddNum"
                               ]
                             },
                             "MDF_PreDmgAddNum": {
@@ -215,11 +215,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_PreDmgAddNum",
                   "value": {
-                    "operator": "Variables[0] (MDF_DmgAddNum ) || RETURN",
-                    "displayLines": "MDF_DmgAddNum ",
+                    "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
+                    "displayLines": "MDF_DmgAddNum",
                     "constants": [],
                     "variables": [
-                      "MDF_DmgAddNum "
+                      "MDF_DmgAddNum"
                     ]
                   }
                 },
@@ -248,13 +248,13 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_DmgAddNum",
                       "value": {
-                        "operator": "Variables[0] (MDF_DmgAddNum ) || Constants[0] (1) || ADD || RETURN",
-                        "displayLines": "(MDF_DmgAddNum  + 1)",
+                        "operator": "Variables[0] (MDF_DmgAddNum) || Constants[0] (1) || ADD || RETURN",
+                        "displayLines": "(MDF_DmgAddNum + 1)",
                         "constants": [
                           1
                         ],
                         "variables": [
-                          "MDF_DmgAddNum "
+                          "MDF_DmgAddNum"
                         ]
                       }
                     }
@@ -298,11 +298,11 @@ const configAbility = {
                           "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DmgAddNum": {
-                              "operator": "Variables[0] (MDF_DmgAddNum ) || RETURN",
-                              "displayLines": "MDF_DmgAddNum ",
+                              "operator": "Variables[0] (MDF_DmgAddNum) || RETURN",
+                              "displayLines": "MDF_DmgAddNum",
                               "constants": [],
                               "variables": [
-                                "MDF_DmgAddNum "
+                                "MDF_DmgAddNum"
                               ]
                             },
                             "MDF_PreDmgAddNum": {

@@ -80,7 +80,7 @@ const compositeAbilityObject = {
           "for": "LC_23048_Main",
           "execute": [
             {
-              "eventTrigger": "Attack End [Owner]",
+              "eventTrigger": "Attack DMG End [Owner]",
               "execute": [
                 {
                   "name": "IF",

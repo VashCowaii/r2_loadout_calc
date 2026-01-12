@@ -47,7 +47,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Anyone]",
+              "eventTrigger": "Attack DMG End [Anyone]",
               "execute": [
                 {
                   "name": "IF",
@@ -1697,7 +1697,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Attack End [Owner]",
+              "eventTrigger": "Attack DMG End [Owner]",
               "execute": [
                 {
                   "name": "IF",

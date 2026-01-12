@@ -98,18 +98,24 @@
     "HPConvert": "HPConverted",
     "NegativeHP": "HPNegative",
 
+    "DirtyHPRatio": "HPBlock%",
+
+    "Level": "CharacterLevel",
+
     "BaseDefence": "DEFBase",
     "DefenceBase": "DEFBase",
     "DefenceAddedRatio": "DEF%",
     "DefenceDelta": "DEFFlat",
     "Defence": "DEFSUM",
     "DefenceConvert": "DEFConverted",
+    "DefenceOverride": "DEFOverride",
 
     "AllDamageTypePenetrate": "ResistanceAllPEN",
     "WindPenetrate": "ResistanceWindPEN",
     "FirePenetrate": "ResistanceFirePEN",
     "QuantumPenetrate": "ResistanceQuantumPEN",
     "IcePenetrate": "ResistanceIcePEN",
+    "ThunderPenetrate": "ResistanceLightningPEN",
 
     "AllDamageTypeResistance": "ResistanceAll",
     "PhysicalResistance": "ResistancePhysical",
