@@ -13120,6 +13120,591 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Moze": {
+    "internalID": 1223,
+    "name": "Moze",
+    "path": "The Hunt",
+    "element": "Lightning",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 599.76,
+      "DEFBase": 352.79999999999995,
+      "HPBase": 811.44,
+      "SPDBase": 111,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "122301",
+        "name": "Oathkeeper",
+        "rank": 1,
+        "desc": "After entering battle, Moze regenerates 20 Energy. Each time the Additional DMG from his Talent is triggered, Moze regenerates 2 Energy.",
+        "icon": "icon/skill/1223_rank1.png",
+        "paramsEido": [
+          2,
+          20
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "122302",
+        "name": "Wrathbearer",
+        "rank": 2,
+        "desc": "When all allies deal DMG to the enemy target marked as \"Prey,\" increases CRIT DMG by 40%.",
+        "icon": "icon/skill/1223_rank2.png",
+        "paramsEido": [
+          0.4
+        ]
+      },
+      {
+        "id": "122303",
+        "name": "Deathchaser",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1223_ultimate.png"
+      },
+      {
+        "id": "122304",
+        "name": "Heathprowler",
+        "rank": 4,
+        "desc": "When using Ultimate, increases the DMG dealt by Moze by 30.0%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1223_rank4.png",
+        "paramsEido": [
+          0.3,
+          2
+        ]
+      },
+      {
+        "id": "122305",
+        "name": "Truthbender",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1223_skill.png"
+      },
+      {
+        "id": "122306",
+        "name": "Faithbinder",
+        "rank": 6,
+        "desc": "Increases the DMG multiplier of the Talent's Follow-Up ATK by 25%.",
+        "icon": "icon/skill/1223_rank6.png",
+        "paramsEido": [
+          0.25
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Hurlthorn": {
+          "variant1": {
+            "skillID": 122301,
+            "trigger": "Skill01",
+            "name": "Hurlthorn",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Moze's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Moze_00_Skill01_Camera",
+              "Avatar_Moze_00_Skill01_Phase01",
+              "Avatar_Moze_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Fleetwinged Raid": {
+          "variant1": {
+            "skillID": 122302,
+            "trigger": "Skill02",
+            "name": "Fleetwinged Raid",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Marks a designated single enemy target as \"Prey\" and deals to it Lightning DMG equal to #1[i]% of Moze's ATK, and gains #2[i] points of Charge.\\nWhen there are no other characters on the field that are capable of combat, Moze cannot use his Skill and dispels the enemy's \"Prey\" state.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.21875,
+                9
+              ],
+              "8": [
+                1.3125,
+                9
+              ],
+              "9": [
+                1.40625,
+                9
+              ],
+              "10": [
+                1.5,
+                9
+              ],
+              "11": [
+                1.575,
+                9
+              ],
+              "12": [
+                1.65,
+                9
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Moze_00_Skill02_Camera",
+              "Avatar_Moze_00_Skill02_Phase01",
+              "Avatar_Moze_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Dash In, Gash Out": {
+          "variant1": {
+            "skillID": 122303,
+            "trigger": "Skill03",
+            "name": "Dash In, Gash Out",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Moze's ATK to one designated enemy target, and launches the Talent's Follow-Up ATK against this target. If the target is defeated before this Follow-Up ATK is used, then launches the Follow-Up ATK against a random single enemy instead.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.295
+              ],
+              "8": [
+                2.43
+              ],
+              "9": [
+                2.565
+              ],
+              "10": [
+                2.7
+              ],
+              "11": [
+                2.808
+              ],
+              "12": [
+                2.916
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Moze_00_Skill03_Camera",
+              "Avatar_Moze_00_Skill03_EnterReady",
+              "Avatar_Moze_00_Skill03_Phase01",
+              "Avatar_Moze_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Cascading Featherblade": {
+          "variant1": {
+            "skillID": 122304,
+            "trigger": "SkillP01",
+            "name": "Cascading Featherblade",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "When \"Prey\" exists on the field, Moze will enter the Departed state.\\nAfter ally targets attack \"Prey,\" Moze will additionally deal 1 instance of Lightning Additional DMG equal to #1[i]% of his ATK and consumes 1 point of Charge. For every #2[i] point(s) of Charge consumed, Moze launches 1 Follow-Up ATK to \"Prey,\" dealing Lightning DMG equal to #3[i]% of his ATK. When Charge reaches 0, dispels the target's \"Prey\" state and resets the tally of Charge points required to launch Follow-Up ATK. Talent's Follow-Up ATK does not consume Charge.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.24375,
+                3,
+                1.3
+              ],
+              "8": [
+                0.2625,
+                3,
+                1.4
+              ],
+              "9": [
+                0.28125,
+                3,
+                1.5
+              ],
+              "10": [
+                0.3,
+                3,
+                1.6
+              ],
+              "11": [
+                0.315,
+                3,
+                1.68
+              ],
+              "12": [
+                0.33,
+                3,
+                1.76
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Moze_00_PassiveSkill01",
+              "Avatar_Moze_00_Insert_Phase01",
+              "Avatar_Moze_00_Insert_Camera",
+              "Avatar_Moze_00_Insert_Phase01_Rank06Extra",
+              "Avatar_Moze_00_Insert_End_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Departed": {
+                "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              },
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Bated Wings": {
+          "variant1": {
+            "skillID": 122307,
+            "trigger": "SkillMaze",
+            "name": "Bated Wings",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, enters the Stealth state for #1[i] second(s). While in Stealth, Moze is undetectable by enemies. If Moze attacks enemies to enter combat while in Stealth, increases DMG by #2[i]%, lasting for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                0.3,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Moze_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1223_basic_atk.png",
+        "skillRef": {
+          "skillName": "Hurlthorn",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1223_skill.png",
+        "skillRef": {
+          "skillName": "Fleetwinged Raid",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1223_ultimate.png",
+        "skillRef": {
+          "skillName": "Dash In, Gash Out",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1223_talent.png",
+        "skillRef": {
+          "skillName": "Cascading Featherblade",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1223_technique.png",
+        "skillRef": {
+          "skillName": "Bated Wings",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Nightfeather",
+        "icon": "icon/skill/1223_skilltree1.png",
+        "desc": "After using Talent's Follow-Up ATK, recovers #1[i] Skill Point(s). This effect can trigger again after #2[i] turn(s).",
+        "params": [
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              1,
+              1
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Daggerhold",
+        "icon": "icon/skill/1223_skilltree2.png",
+        "desc": "When Moze dispels his Departed state, his action advances by #1[i]%. At the start of each wave, Moze's action advances by #2[i]%.",
+        "params": [
+          0.2,
+          0.3
+        ],
+        "extraEffects": {
+          "Departed": {
+            "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
+            "params": [
+              0.2,
+              0.3
+            ]
+          },
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.2,
+              0.3
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Vengewise",
+        "icon": "icon/skill/1223_skilltree3.png",
+        "desc": "When dealing DMG by using Ultimate, it is considered as having launched a Follow-Up ATK. The Follow-Up ATK DMG taken by the \"Prey\" increases by #1[i]%.",
+        "params": [
+          0.25
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.25
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1223.png",
+    "preview": "image/character_preview/1223.png",
+    "portrait": "image/character_portrait/1223.png",
+    "bannerOffsets": [
+      24.8,
+      75.5,
+      0.64,
+      24.8,
+      75.5,
+      0.64,
+      24.8,
+      75.5,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Gallagher": {
     "internalID": 1301,
     "name": "Gallagher",

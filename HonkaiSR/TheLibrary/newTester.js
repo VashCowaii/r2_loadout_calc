@@ -2330,6 +2330,10 @@ const megaParsingFuckery = {
             "target",
             "variables",
             "paramSequence",
+
+            "baseDelay",
+            "delayInterval",
+            "parallelCount",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Use Custom Character Function");
 
@@ -2374,10 +2378,25 @@ const megaParsingFuckery = {
             }
         }
 
+
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.functionName} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.baseDelay != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">baseDelay:</div>&nbsp;
+                ${parseRef.baseDelay.displayLines ?? parseRef.baseDelay}
+            </div>` : ""}
+            ${parseRef.delayInterval != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">delayInterval:</div>&nbsp;
+                ${parseRef.delayInterval.displayLines ?? parseRef.delayInterval}
+            </div>` : ""}
+            ${parseRef.parallelCount != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">parallelCount:</div>&nbsp;
+                ${parseRef.parallelCount.displayLines ?? parseRef.parallelCount}
+            </div>` : ""}
         </div>
         <div class="modifierDetailsBox">
             ${addString}
@@ -2398,7 +2417,7 @@ const megaParsingFuckery = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Multiple Functions");
 
 
-        let functionListString = ""
+        // let functionListString = ""
         let addString = "";
         if (parseRef.variables) {
             for (let variableEntry in parseRef.variables) {
@@ -2410,22 +2429,34 @@ const megaParsingFuckery = {
                 </div>`
             }
         }
-        if (parseRef.functionList) {
-            for (let variableEntry of parseRef.functionList) {
+        // if (parseRef.functionList) {
+        //     for (let variableEntry of parseRef.functionList) {
 
-                functionListString += `<div class="actionDetailBody2">
-                    <div class="rotationConditionOperatorHeaderInline">${variableEntry}</div>&nbsp;
-                </div>`
-            }
-        }
+        //         functionListString += `<div class="actionDetailBody2">
+        //             <div class="rotationConditionOperatorHeaderInline">${variableEntry}</div>&nbsp;
+        //         </div>`
+        //     }
+        // }
+
+        let parseString = "";
+        // let refString = "";
+        const hasParse = parseRef.functionList?.length;
+        // const hasRef = parseRef.failed?.length;
+        if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.functionList,initialCounter);}
+        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
         </div>
-        ${functionListString}
         <div class="modifierDetailsBox">
             ${addString}
+        </div>
+        <div class="rotationConditionOperatorBoxMain">
+            ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Function List</div>
+            <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                ${parseString}
+            </div>` : ""}
         </div>`;
     },
     "Change Character Transformation"(parseRef,initialCounter) {
@@ -2434,7 +2465,7 @@ const megaParsingFuckery = {
             "target",
             "phase"
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Use Custom Character Function");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Change Character Transformation");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
@@ -2916,13 +2947,14 @@ const megaParsingFuckery = {
             "ID",
             "target",
             "characterName",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Character ID");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.target} = ${parseRef.ID}(${parseRef.characterName})
+            ${parseRef.target} ${parseRef.invertCondition ? "NOT" : ""}= ${parseRef.ID}(${parseRef.characterName})
         </div>`;
     },
     "Trace Activated"(parseRef,initialCounter) {
@@ -3110,13 +3142,14 @@ const megaParsingFuckery = {
             "name",
             "state",
             "target",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Living/Death State");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.state} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+            ${parseRef.state} ${parseRef.invertCondition ? "NOT " : ""}${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
         </div>`;
     },
     "Damage was Blocked"(parseRef,initialCounter) {
@@ -3156,6 +3189,32 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.team}
+        </div>`;
+    },
+    "Attack-Type Extension"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "typeToExtend",
+            "extendTypeTo",
+            "isRemove",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Attack-Type Extension");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}${parseRef.isRemove ? "[RESET]" : ""}:</div>&nbsp;
+            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.typeToExtend != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Base Type:</div>&nbsp;
+                ${parseRef.typeToExtend}
+            </div>` : ""}
+            ${parseRef.extendTypeTo != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Consider as:</div>&nbsp;
+                ${parseRef.extendTypeTo}
+            </div>` : ""}
         </div>`;
     },
     "Disable Abilities"(parseRef,initialCounter) {
