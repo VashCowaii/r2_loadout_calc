@@ -7414,6 +7414,580 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Qingque": {
+    "internalID": 1201,
+    "name": "Qingque",
+    "path": "Erudition",
+    "element": "Quantum",
+    "rarity": 4,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 652.6800000000001,
+      "DEFBase": 441,
+      "HPBase": 1023.12,
+      "SPDBase": 98,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "120101",
+        "name": "Rise Through the Tiles",
+        "rank": 1,
+        "desc": "Ultimate deals 10% more DMG.",
+        "icon": "icon/skill/1201_rank1.png",
+        "paramsEido": [
+          0.1
+        ]
+      },
+      {
+        "id": "120102",
+        "name": "Sleep on the Tiles",
+        "rank": 2,
+        "desc": "Every time Draw Tile is triggered, Qingque immediately regenerates 1 Energy.",
+        "icon": "icon/skill/1201_rank2.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "120103",
+        "name": "Read Between the Tiles",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1201_ultimate.png"
+      },
+      {
+        "id": "120104",
+        "name": "Right on the Tiles",
+        "rank": 4,
+        "desc": "After using Skill, there is a 24% fixed chance to gain \"Self-Sufficer,\" lasting until the end of the current turn. \nWhile \"Self-Sufficer\" is active, using Basic ATK or Enhanced Basic ATK immediately launches 1 Follow-Up ATK on the same target, dealing Quantum DMG equal to 100% of Basic ATK DMG or Enhanced Basic ATK DMG.",
+        "icon": "icon/skill/1201_rank4.png",
+        "paramsEido": [
+          0.24
+        ],
+        "extraEffects": {
+          "Fixed Chance": {
+            "desc": "Fixed chance will not be affected by any factor."
+          },
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "120105",
+        "name": "Gambit for the Tiles",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1201_skill.png"
+      },
+      {
+        "id": "120106",
+        "name": "Prevail Beyond the Tiles",
+        "rank": 6,
+        "desc": "Recovers 1 Skill Point after using Enhanced Basic ATK.",
+        "icon": "icon/skill/1201_rank6.png"
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Flower Pick": {
+          "variant1": {
+            "skillID": 120101,
+            "trigger": "Skill01",
+            "name": "Flower Pick",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Tosses 1 jade tile from the suit with the fewest tiles in hand to deal Quantum DMG equal to #1[i]% of Qingque's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Qingque_00_Skill01_Camera",
+              "Avatar_QingQue_00_Skill01_Phase01",
+              "Avatar_QingQue_00_Skill01_Phase02",
+              "Avatar_Qingque_00_Rank04_ATK"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Cherry on Top!": {
+          "variant1": {
+            "skillID": 120108,
+            "trigger": "Skill11",
+            "name": "Cherry on Top!",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Qingque's ATK to one designated enemy, and deals Quantum DMG equal to #2[i]% of Qingque's ATK to enemies adjacent to it.\\n\"Cherry on Top!\" cannot recover Skill Points.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                2.4,
+                1
+              ],
+              "7": [
+                2.64,
+                1.1
+              ],
+              "8": [
+                2.88,
+                1.2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Qingque_00_Skill011_Camera",
+              "Avatar_QingQue_00_Skill11_Phase01",
+              "Avatar_Qingque_00_Rank04_ATK_Special",
+              "Avatar_QingQue_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "A Scoop of Moon": {
+          "variant1": {
+            "skillID": 120102,
+            "trigger": "Skill02",
+            "name": "A Scoop of Moon",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Immediately draws #1[i] jade tile(s) and increases DMG by #2[i]% until the end of the current turn. This effect can stack up to #3[i] time(s). The turn will not end after this Skill is used.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2,
+                0.2275,
+                4
+              ],
+              "8": [
+                2,
+                0.245,
+                4
+              ],
+              "9": [
+                2,
+                0.2625,
+                4
+              ],
+              "10": [
+                2,
+                0.28,
+                4
+              ],
+              "11": [
+                2,
+                0.294,
+                4
+              ],
+              "12": [
+                2,
+                0.308,
+                4
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Qingque_00_Skill02_Camera",
+              "Avatar_QingQue_00_Skill02_Phase01",
+              "Avatar_QingQue_00_Skill02_Phase02",
+              "Avatar_Qingque_00_BpInsertAction",
+              "Avatar_Qingque_00_BpInsertAction_Camera",
+              "Avatar_Qingque_00_BpInsertAction_Tiao",
+              "Avatar_Qingque_00_BpInsertAction_Tong",
+              "Avatar_Qingque_00_BpInsertAction_Wan"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "A Quartet? Woo-hoo!": {
+          "variant1": {
+            "skillID": 120103,
+            "trigger": "Skill03",
+            "name": "A Quartet? Woo-hoo!",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Qingque's ATK to all enemies, and obtains 4 jade tiles of the same suit.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.7
+              ],
+              "8": [
+                1.8
+              ],
+              "9": [
+                1.9
+              ],
+              "10": [
+                2
+              ],
+              "11": [
+                2.08
+              ],
+              "12": [
+                2.16
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Qingque_00_Skill03_Camera",
+              "Avatar_QingQue_00_Skill03_Phase01",
+              "Avatar_QingQue_00_Skill03_Phase02",
+              "Avatar_Pela_00_Skill03_Cutin",
+              "Avatar_Qingque_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Celestial Jade": {
+          "variant1": {
+            "skillID": 120104,
+            "trigger": "SkillP01",
+            "name": "Celestial Jade",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When an ally's turn starts, Qingque randomly draws 1 tile from 3 different suits and can hold up to 4 tiles at one time.\\nIf Qingque starts her turn with 4 tiles of the same suit, she consumes all tiles to enter the \"Hidden Hand\" state.\\nWhile in this state, Qingque cannot use her Skill again. At the same time, Qingque's ATK increases by #1[i]%, and her Basic ATK \"Flower Pick\" is enhanced, becoming \"Cherry on Top!\" The \"Hidden Hand\" state ends after using \"Cherry on Top!\".",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.585
+              ],
+              "8": [
+                0.63
+              ],
+              "9": [
+                0.675
+              ],
+              "10": [
+                0.72
+              ],
+              "11": [
+                0.756
+              ],
+              "12": [
+                0.792
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_QingQue_00_PassiveSkill01",
+              "Avatar_Qingque_00_Bonus",
+              "Avatar_Qingque_00_Rank04_ATK_Camera",
+              "Avatar_Qingque_00_Bonus_Camera",
+              "Avatar_Qingque_00_Rank04_ATK_Special_Camera",
+              "Avatar_Qingque_00_UltraGangFix_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Game Solitaire": {
+          "variant1": {
+            "skillID": 120107,
+            "trigger": "SkillMaze",
+            "name": "Game Solitaire",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, Qingque draws #1[i] jade tile(s) when the battle starts.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Qingque_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1201_basic_atk.png",
+        "skillRef": {
+          "skillName": "Flower Pick",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1201_skill.png",
+        "skillRef": {
+          "skillName": "A Scoop of Moon",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1201_ultimate.png",
+        "skillRef": {
+          "skillName": "A Quartet? Woo-hoo!",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1201_talent.png",
+        "skillRef": {
+          "skillName": "Celestial Jade",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1201_technique.png",
+        "skillRef": {
+          "skillName": "Game Solitaire",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Tile Battle",
+        "icon": "icon/skill/1201_skilltree1.png",
+        "desc": "Restores 1 Skill Point when using the Skill. This effect can only be triggered 1 time per battle."
+      },
+      "Point07": {
+        "name": "Bide Time",
+        "icon": "icon/skill/1201_skilltree2.png",
+        "desc": "Using the Skill increases DMG Boost effect of attacks by an extra #1[i]%.",
+        "params": [
+          0.1
+        ]
+      },
+      "Point08": {
+        "name": "Winning Hand",
+        "icon": "icon/skill/1201_skilltree3.png",
+        "desc": "Qingque's SPD increases by #1[i]% for 1 turn after using the Enhanced Basic ATK.",
+        "params": [
+          0.1
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1201.png",
+    "preview": "image/character_preview/1201.png",
+    "portrait": "image/character_portrait/1201.png",
+    "bannerOffsets": [
+      48,
+      15,
+      0.58,
+      48,
+      15,
+      0.58,
+      48,
+      15,
+      0.58
+    ],
+    "isBuffed": false
+  },
   "Tingyun": {
     "internalID": 1202,
     "name": "Tingyun",

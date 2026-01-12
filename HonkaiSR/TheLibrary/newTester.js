@@ -4198,6 +4198,35 @@ const megaParsingFuckery = {
         </div>
         `;
     },
+    "Target has Extra-Turn Queued"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "living",
+            "invertCondition",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Target has Extra-Turn Queued");
+
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Target has Extra-Turn Queued:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""} 
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.target != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
+                ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.living ? "(Living)" : ""}
+            </div>` : ""}
+        </div>
+        `;
+    },
     "Target Exists"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -5382,6 +5411,7 @@ const megaParsingFuckery = {
             "to",
             "modifier",
             "onlyRemoveOwnersInstance",
+            "removeAllInstances",
             // "value1",
             // "compareType",
             // "value2"
@@ -5397,7 +5427,11 @@ const megaParsingFuckery = {
         <div class="modifierDetailsBox">
             ${parseRef.onlyRemoveOwnersInstance != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Only remove Owner's Application:</div>&nbsp;
-                ${parseRef.onlyRemoveOwnersInstance ?? parseRef.onlyRemoveOwnersInstance}
+                ${parseRef.onlyRemoveOwnersInstance}
+            </div>` : ""}
+            ${parseRef.removeAllInstances != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Remove All Instances:</div>&nbsp;
+                ${parseRef.removeAllInstances}
             </div>` : ""}
         </div>`
     },
@@ -6237,6 +6271,7 @@ const megaParsingFuckery = {
             "abortFlags",
             "ignoreCost",
             "conditions",
+            "skillTypeDelayed",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Inject Extra-Turn");
 
@@ -6289,6 +6324,10 @@ const megaParsingFuckery = {
                 ${parseRef.skillType ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Use Ability:</div>&nbsp;
                     ${parseRef.skillType + (parseRef.skillType === "ControlSkill02" ? "(Auto-Skill)" : "")}
+                </div>` : ""}
+                ${parseRef.skillTypeDelayed ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Use Ability When Delayed:</div>&nbsp;
+                    ${parseRef.skillTypeDelayed + (parseRef.skillTypeDelayed === "ControlSkill02" ? "(Auto-Skill)" : "")}
                 </div>` : ""}
                 ${parseRef.abilityName ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Use Ability(By Name):</div>&nbsp;
