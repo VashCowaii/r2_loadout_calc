@@ -23818,6 +23818,604 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Dr. Ratio": {
+    "internalID": 1305,
+    "name": "Dr. Ratio",
+    "path": "The Hunt",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 776.1600000000001,
+      "DEFBase": 460.845,
+      "HPBase": 1047.816,
+      "SPDBase": 103,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "130501",
+        "name": "Pride Comes Before a Fall",
+        "rank": 1,
+        "desc": "The maximum stackable count for the Trace \"Summation\" increases by 4. When a battle begins, immediately obtains 4 stacks of Summation. Needs to unlock Summation first.",
+        "icon": "icon/skill/1305_rank1.png",
+        "paramsEido": [
+          4,
+          4
+        ]
+      },
+      {
+        "id": "130502",
+        "name": "The Divine Is in the Details",
+        "rank": 2,
+        "desc": "When his Talent's Follow-Up ATK hits a target, for every debuff the target has, deals Imaginary Additional DMG equal to 20% of Dr. Ratio's ATK. This effect can be triggered for a maximum of 4 time(s) during each Follow-Up ATK.",
+        "icon": "icon/skill/1305_rank2.png",
+        "paramsEido": [
+          0.2,
+          4
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          },
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          },
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "130503",
+        "name": "Know Thyself",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1305_ultimate.png"
+      },
+      {
+        "id": "130504",
+        "name": "Ignorance Is Blight",
+        "rank": 4,
+        "desc": "When triggering the Talent, additionally regenerates 15 Energy for Dr. Ratio.",
+        "icon": "icon/skill/1305_rank4.png",
+        "paramsEido": [
+          15
+        ]
+      },
+      {
+        "id": "130505",
+        "name": "Sic Itur Ad Astra",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1305_skill.png"
+      },
+      {
+        "id": "130506",
+        "name": "Vincit Omnia Veritas",
+        "rank": 6,
+        "desc": "Additionally increases the trigger count for \"Wiseman's Folly\" by 1. The DMG dealt by the Talent's Follow-Up ATK increases by 50%.",
+        "icon": "icon/skill/1305_rank6.png",
+        "paramsEido": [
+          1,
+          0.5
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Mind is Might": {
+          "variant1": {
+            "skillID": 130501,
+            "trigger": "Skill01",
+            "name": "Mind is Might",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Dr. Ratio's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Dr_Ratio_00_Skill01_Camera",
+              "Avatar_Dr_Ratio_00_Skill01_Phase01",
+              "Avatar_Dr_Ratio_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Intellectual Midwifery": {
+          "variant1": {
+            "skillID": 130502,
+            "trigger": "Skill02",
+            "name": "Intellectual Midwifery",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Dr. Ratio's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.21875
+              ],
+              "8": [
+                1.3125
+              ],
+              "9": [
+                1.40625
+              ],
+              "10": [
+                1.5
+              ],
+              "11": [
+                1.575
+              ],
+              "12": [
+                1.65
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Dr_Ratio_00_Skill02_Camera",
+              "Avatar_Dr_Ratio_00_Skill02_Phase01",
+              "Avatar_Dr_Ratio_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Syllogistic Paradox": {
+          "variant1": {
+            "skillID": 130503,
+            "trigger": "Skill03",
+            "name": "Syllogistic Paradox",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Dr. Ratio's ATK to one designated enemy target and applies \"Wiseman's Folly.\" When Dr. Ratio's teammates attack a target afflicted with \"Wiseman's Folly,\" Dr. Ratio launches 1 instance of his Talent's Follow-Up ATK against this target.\\n\"Wiseman's Folly\" can be triggered for up to #2[i] times and only affects the most recent target of Dr. Ratio's Ultimate. This trigger count resets after Dr. Ratio's Ultimate is used.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.04,
+                2
+              ],
+              "8": [
+                2.16,
+                2
+              ],
+              "9": [
+                2.28,
+                2
+              ],
+              "10": [
+                2.4,
+                2
+              ],
+              "11": [
+                2.496,
+                2
+              ],
+              "12": [
+                2.592,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Dr_Ratio_00_Skill03_Camera",
+              "Avatar_Dr_Ratio_00_Skill03_EnterReady",
+              "Avatar_Dr_Ratio_00_Skill03_Phase01",
+              "Avatar_Dr_Ratio_00_Skill03_Phase02",
+              "Avatar_Dr_Ratio_00_Bonus",
+              "Avatar_Dr_Ratio_00_Bonus_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Cogito, Ergo Sum": {
+          "variant1": {
+            "skillID": 130504,
+            "trigger": "SkillP01",
+            "name": "Cogito, Ergo Sum",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "When using his Skill, Dr. Ratio has a #2[i]% fixed chance of launching a Follow-Up ATK against his target for 1 time, dealing Imaginary DMG equal to #1[i]% of Dr. Ratio's ATK. For each debuff the target enemy has, the fixed chance of launching Follow-Up ATK increases by #3[i]%. If the target enemy is defeated before the Follow-Up ATK triggers, the Follow-Up ATK will be directed at a single random enemy instead.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.19375,
+                0.4,
+                0.2
+              ],
+              "8": [
+                2.3625,
+                0.4,
+                0.2
+              ],
+              "9": [
+                2.53125,
+                0.4,
+                0.2
+              ],
+              "10": [
+                2.7,
+                0.4,
+                0.2
+              ],
+              "11": [
+                2.835,
+                0.4,
+                0.2
+              ],
+              "12": [
+                2.97,
+                0.4,
+                0.2
+              ]
+            },
+            "element": "Imaginary",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Dr_Ratio_00_PassiveSkill01",
+              "Avatar_Dr_Ratio_00_PassiveSkill01_Insert_Phase01",
+              "Avatar_Dr_Ratio_00_PassiveSkill01_Insert_Phase02",
+              "Avatar_Dr_Ratio_00_PassiveSkill01_Insert_Camera",
+              "Avatar_Dr_Ratio_00_PassiveSkill01_Insert_Camera01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
+              },
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Mold of Idolatry": {
+          "variant1": {
+            "skillID": 130507,
+            "trigger": "SkillMaze",
+            "name": "Mold of Idolatry",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that Taunts nearby enemies, lasting for #1[i] second(s). After entering battle with enemies in this Special Dimension, there is a #2[i]% base chance to reduce each single enemy target's SPD by #3[i]% for #4[i] turn(s). Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                1,
+                0.15,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Dr_Ratio_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1305_basic_atk.png",
+        "skillRef": {
+          "skillName": "Mind is Might",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1305_skill.png",
+        "skillRef": {
+          "skillName": "Intellectual Midwifery",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1305_ultimate.png",
+        "skillRef": {
+          "skillName": "Syllogistic Paradox",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1305_talent.png",
+        "skillRef": {
+          "skillName": "Cogito, Ergo Sum",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1305_technique.png",
+        "skillRef": {
+          "skillName": "Mold of Idolatry",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Summation",
+        "icon": "icon/skill/1305_skilltree1.png",
+        "desc": "When Dr. Ratio uses his Skill, for every debuff on the target, his CRIT Rate increases by #1[f1]% and CRIT DMG by #2[i]%. This effect can stack up to #3[i] time(s).",
+        "params": [
+          0.025,
+          0.05,
+          6
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              0.025,
+              0.05,
+              6
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Inference",
+        "icon": "icon/skill/1305_skilltree2.png",
+        "desc": "When Skill is used to attack an enemy target, there is a #1[i]% base chance to reduce the attacked enemy target's Effect RES by #2[i]% for #3[i] turn(s).",
+        "params": [
+          1,
+          0.1,
+          2
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              1,
+              0.1,
+              2
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Deduction",
+        "icon": "icon/skill/1305_skilltree3.png",
+        "desc": "When dealing DMG to a target that has #1[i] or more debuff(s), for each debuff the target has, the DMG dealt by Dr. Ratio to this target increases by #2[i]%, up to a maximum increase of #3[i]%.",
+        "params": [
+          3,
+          0.1,
+          0.5
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              3,
+              0.1,
+              0.5
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1305.png",
+    "preview": "image/character_preview/1305.png",
+    "portrait": "image/character_portrait/1305.png",
+    "bannerOffsets": [
+      24,
+      -210,
+      0.84,
+      24,
+      -210,
+      0.84,
+      24,
+      -210,
+      0.84
+    ],
+    "isBuffed": false
+  },
   "Sparkle": {
     "internalID": 1306,
     "name": "Sparkle",

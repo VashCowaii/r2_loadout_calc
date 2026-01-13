@@ -164,6 +164,10 @@ let allowedCharacterList = [
     "trimName": "RuanMei"
   },
   {
+    "fullName": "Dr. Ratio",
+    "trimName": "DrRatio"
+  },
+  {
     "fullName": "Sparkle",
     "trimName": "Sparkle"
   },
