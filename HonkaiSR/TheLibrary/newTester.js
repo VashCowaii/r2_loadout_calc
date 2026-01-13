@@ -2210,7 +2210,7 @@ const megaParsingFuckery = {
             </div>` : ""}
         </div>`;
     },
-    "Damage Hit-Split"(parseRef,initialCounter) {
+    "Share DMG Taken"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             "state",
@@ -2225,10 +2225,10 @@ const megaParsingFuckery = {
             // "multiplier",
             // "modifierName",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Damage Hit-Split");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Share DMG Taken");
         // initialCounter++;
         return `<div class="actionDetailBody2Preview"> 
-            <div class="rotationConditionOperatorHeaderInline">Damage Hit-Split:</div>&nbsp;
+            <div class="rotationConditionOperatorHeaderInline">Share DMG Taken:</div>&nbsp;
             ${parseRef.target ? `${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
         </div>
         <div class="modifierDetailsBox">

@@ -14907,6 +14907,559 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Fu Xuan": {
+    "internalID": 1208,
+    "name": "Fu Xuan",
+    "path": "Preservation",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 135,
+    "baseStats": {
+      "ATKBase": 465.696,
+      "DEFBase": 606.375,
+      "HPBase": 1474.7040000000002,
+      "SPDBase": 100,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "120801",
+        "name": "Dominus Pacis",
+        "rank": 1,
+        "desc": "The Knowledge effect increases CRIT DMG by 30%.",
+        "icon": "icon/skill/1208_rank1.png",
+        "paramsEido": [
+          0.3
+        ]
+      },
+      {
+        "id": "120802",
+        "name": "Optimus Felix",
+        "rank": 2,
+        "desc": "If any ally target is struck by a killing blow while \"Matrix of Prescience\" is active, then all ally targets who were struck by a killing blow during this action will not be knocked down, and 70% of their Max HP is immediately restored. This effect can trigger 1 time per battle.",
+        "icon": "icon/skill/1208_rank2.png",
+        "paramsEido": [
+          0.7
+        ],
+        "extraEffects": {
+          "Downed State": {
+            "desc": "An ally will be incapacitated once their HP is reduced to 0."
+          }
+        }
+      },
+      {
+        "id": "120803",
+        "name": "Apex Nexus",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1208_skill.png"
+      },
+      {
+        "id": "120804",
+        "name": "Fortuna Stellaris",
+        "rank": 4,
+        "desc": "When other allies under Matrix of Prescience are attacked, Fu Xuan regenerates 5 Energy.",
+        "icon": "icon/skill/1208_rank4.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "120805",
+        "name": "Arbiter Primus",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1208_ultimate.png"
+      },
+      {
+        "id": "120806",
+        "name": "Omnia Vita",
+        "rank": 6,
+        "desc": "Once Matrix of Prescience is activated, it will keep a tally of the total HP lost by all team members in the current battle. The DMG dealt by Fu Xuan's Ultimate will increase by 200% of this tally of HP loss.\nThis tally is also capped at 120% of Fu Xuan's Max HP and the tally value will reset and re-accumulate after Fu Xuan's Ultimate is used.",
+        "icon": "icon/skill/1208_rank6.png",
+        "paramsEido": [
+          2,
+          1.2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Novaburst": {
+          "variant1": {
+            "skillID": 120801,
+            "trigger": "Skill01",
+            "name": "Novaburst",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Fu Xuan's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_FuXuan_00_Skill01_Phase01",
+              "Avatar_FuXuan_00_Skill01_Phase02",
+              "Avatar_FuXuan_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Known by Stars, Shown by Hearts": {
+          "variant1": {
+            "skillID": 120802,
+            "trigger": "Skill02",
+            "name": "Known by Stars, Shown by Hearts",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Activates Matrix of Prescience, via which Fu Xuan's teammates will Distribute #1[i]% of the DMG they receive (before this DMG is mitigated by any Shields) to Fu Xuan for #3[i] turn(s).\\nWhile affected by Matrix of Prescience, all ally targets gain the Knowledge effect, which increases their respective Max HP by #4[f1]% of Fu Xuan's Max HP, and increases CRIT Rate by #5[f1]%.\\nWhen Fu Xuan is knocked down, the Matrix of Prescience will be dispelled.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.65,
+                0,
+                3,
+                0.048750002,
+                0.0975
+              ],
+              "8": [
+                0.65,
+                0,
+                3,
+                0.052500002,
+                0.105
+              ],
+              "9": [
+                0.65,
+                0,
+                3,
+                0.05625,
+                0.1125
+              ],
+              "10": [
+                0.65,
+                0,
+                3,
+                0.06,
+                0.12
+              ],
+              "11": [
+                0.65,
+                0,
+                3,
+                0.063,
+                0.126
+              ],
+              "12": [
+                0.65,
+                0,
+                3,
+                0.066,
+                0.132
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_FuXuan_00_Skill02_Phase01",
+              "Avatar_FuXuan_00_Skill02_Phase02",
+              "Avatar_FuXuan_00_Skill02_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Distribute": {
+                "desc": "Before DMG is calculated, distribute a part of the attacking unit's DMG to another target (or multiple other targets), with the target hit by the attack taking the rest of the DMG. DMG distributed to other targets cannot be distributed again."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Woes of Many Morphed to One": {
+          "variant1": {
+            "skillID": 120803,
+            "trigger": "Skill03",
+            "name": "Woes of Many Morphed to One",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Fu Xuan's Max HP to all enemies and obtains 1 trigger count for the HP Restore effect granted by Fu Xuan's Talent.",
+            "energyCost": 135,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.85
+              ],
+              "8": [
+                0.9
+              ],
+              "9": [
+                0.95
+              ],
+              "10": [
+                1
+              ],
+              "11": [
+                1.04
+              ],
+              "12": [
+                1.08
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_FuXuan_00_Skill03_Phase01",
+              "Avatar_FuXuan_00_Skill03_Phase02",
+              "Avatar_FuXuan_00_Skill03_Camera",
+              "Avatar_FuXuan_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Bleak Breeds Bliss": {
+          "variant1": {
+            "skillID": 120804,
+            "trigger": "SkillP01",
+            "name": "Bleak Breeds Bliss",
+            "type": "Restore",
+            "slot": "Talent",
+            "desc": "While Fu Xuan is still active in battle, Misfortune Avoidance is applied to the entire team. With Misfortune Avoidance, allies take #1[f1]% less DMG.\\nWhen Fu Xuan's current HP percentage falls to #2[i]% of her Max HP or less, HP Restore will be triggered for Fu Xuan, restoring her HP by #3[i]% of the amount of HP she is currently missing. This effect cannot be triggered if she receives a killing blow. This effect has 1 trigger count by default and can hold up to a maximum of 2 trigger counts.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.15,
+                0.5,
+                0.8625
+              ],
+              "8": [
+                0.16,
+                0.5,
+                0.875
+              ],
+              "9": [
+                0.17,
+                0.5,
+                0.8875
+              ],
+              "10": [
+                0.18,
+                0.5,
+                0.9
+              ],
+              "11": [
+                0.188,
+                0.5,
+                0.91
+              ],
+              "12": [
+                0.196,
+                0.5,
+                0.92
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_FuXuan_00_PassiveSkill01",
+              "Avatar_FuXuan_00_Passive_Ability",
+              "Avatar_FuXuan_00_PassiveSkill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Of Fortune Comes Fate": {
+          "variant1": {
+            "skillID": 120807,
+            "trigger": "SkillMaze",
+            "name": "Of Fortune Comes Fate",
+            "type": "Defense",
+            "slot": "Technique",
+            "desc": "After the Technique is used, all team members receive a Barrier, lasting for #1[i] seconds. This Barrier can block all enemy attacks, and the team will not enter battle when attacked. Entering battle while the Barrier is active will have Fu Xuan automatically activate Matrix of Prescience at the start of the battle, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Defence",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_FuXuan_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1208_basic_atk.png",
+        "skillRef": {
+          "skillName": "Novaburst",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1208_skill.png",
+        "skillRef": {
+          "skillName": "Known by Stars, Shown by Hearts",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1208_ultimate.png",
+        "skillRef": {
+          "skillName": "Woes of Many Morphed to One",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1208_talent.png",
+        "skillRef": {
+          "skillName": "Bleak Breeds Bliss",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1208_technique.png",
+        "skillRef": {
+          "skillName": "Of Fortune Comes Fate",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Taiyi, the Macrocosmic",
+        "icon": "icon/skill/1208_skilltree1.png",
+        "desc": "When Matrix of Prescience is active, Fu Xuan will regenerate #1[i] extra Energy when she uses her Skill.",
+        "params": [
+          20
+        ]
+      },
+      "Point07": {
+        "name": "Dunjia, the Metamystic",
+        "icon": "icon/skill/1208_skilltree2.png",
+        "desc": "When Fu Xuan's Ultimate is used, heals all other allies by an amount equal to #1[i]% of Fu Xuan's Max HP plus #2[i].",
+        "params": [
+          0.05,
+          133
+        ]
+      },
+      "Point08": {
+        "name": "Liuren, the Sexagenary",
+        "icon": "icon/skill/1208_skilltree3.png",
+        "desc": "If a target enemy applies Crowd Control debuffs to allies while the \"Matrix of Prescience\" is active, all allies will resist all Crowd Control debuffs applied by the enemy target during the current action. This effect can only be triggered once. When \"Matrix of Prescience\" is activated again, the number of times this effect can be triggered will reset.",
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": []
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1208.png",
+    "preview": "image/character_preview/1208.png",
+    "portrait": "image/character_portrait/1208.png",
+    "bannerOffsets": [
+      74,
+      -15.8,
+      0.67,
+      74,
+      -15.8,
+      0.67,
+      74,
+      -15.8,
+      0.67
+    ],
+    "isBuffed": false
+  },
   "Yanqing": {
     "internalID": 1209,
     "name": "Yanqing",
