@@ -6869,21 +6869,24 @@ const megaParsingFuckery = {
             "counter",
             "modifier",
             "execute",
+            "failed",
+            "includeTargetsInLimbo",
+            "flagFilter",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modifier Construction");
 
         let parseString = "";
-        // let refString = "";
+        let refString = "";
         // let abilityString = "";
         // let functionString = "";
         // let subModString = "";
         const hasParse = parseRef.execute?.length;
-        // const hasRef = parseRef.variableValueChange?.length;
+        const hasRef = parseRef.failed?.length;
         // const hasAbilityChange = parseRef.abilityValueChange?.length;
         // const hasFunctions = parseRef.modifierFunctions?.length;
         // const hasSubMods = parseRef.subModList?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.variableValueChange,initialCounter);}
+        if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
         // if (hasAbilityChange) {abilityString += megaParsingFuckery.fillEventBodyBox(parseRef.abilityValueChange,initialCounter);}
         // if (hasFunctions) {functionString += megaParsingFuckery.fillEventBodyBox(parseRef.modifierFunctions,initialCounter);}
         // if (hasSubMods) {subModString += megaParsingFuckery.fillEventBodyBox(parseRef.subModList,initialCounter);}
@@ -6923,7 +6926,7 @@ const megaParsingFuckery = {
         <details class="rotationsPermaConditionsExpand" open="">
             <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
                 <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
-                ${parseRef.modifier} 
+                ${parseRef.modifier ?? "undefined(or listening to any applied)"} 
             </summary>
 
             ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target ?? ""}
@@ -6933,6 +6936,16 @@ const megaParsingFuckery = {
                     <div class="rotationConditionOperatorHeaderInline">Counter:</div>&nbsp;
                     ${parseRef.counter.displayLines ?? parseRef.counter}
                 </div>` : ""}
+                ${parseRef.includeTargetsInLimbo ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Include Targets in Limbo:</div>&nbsp;
+                    ${parseRef.includeTargetsInLimbo}
+                </div>` : ""}
+                ${parseRef.flagFilter ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Flag Filter:</div>&nbsp;
+                    ${parseRef.flagFilter}
+                </div>` : ""}
+
+                
                 ${parseRef.target ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
                     ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target ?? ""}
@@ -6947,6 +6960,10 @@ const megaParsingFuckery = {
                 ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
                     <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                         ${parseString}
+                    </div>` : ""}
+                ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">Failed</div>
+                    <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                        ${refString}
                     </div>` : ""}
 
             </div>

@@ -237,6 +237,47 @@ let lightcones = {
       1.15
     ]
   },
+  "Data Bank": {
+    "lightconeID": 20006,
+    "name": "Data Bank",
+    "path": "Erudition",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Learned",
+    "desc": "Increases DMG dealt by the wearer's Ultimate by #1[i]%.",
+    "params": [
+      [
+        0.28
+      ],
+      [
+        0.35
+      ],
+      [
+        0.42
+      ],
+      [
+        0.49
+      ],
+      [
+        0.56
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20006.png",
+    "preview": "image/light_cone_preview/20006.png",
+    "portrait": "image/light_cone_portrait/20006.png",
+    "imageOffset": [
+      0,
+      -186,
+      1.15
+    ]
+  },
   "Darting Arrow": {
     "lightconeID": 20007,
     "name": "Darting Arrow",
@@ -449,6 +490,47 @@ let lightcones = {
     "imageOffset": [
       0,
       0,
+      1.15
+    ]
+  },
+  "Passkey": {
+    "lightconeID": 20013,
+    "name": "Passkey",
+    "path": "Erudition",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Epiphany",
+    "desc": "After the wearer uses their Skill, additionally regenerates #1[i] Energy. This effect cannot be repeatedly triggered in a single turn.",
+    "params": [
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ],
+      [
+        12
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20013.png",
+    "preview": "image/light_cone_preview/20013.png",
+    "portrait": "image/light_cone_portrait/20013.png",
+    "imageOffset": [
+      0,
+      150,
       1.15
     ]
   },
@@ -669,6 +751,52 @@ let lightcones = {
     "imageOffset": [
       0,
       20,
+      1.15
+    ]
+  },
+  "Sagacity": {
+    "lightconeID": 20020,
+    "name": "Sagacity",
+    "path": "Erudition",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Genius",
+    "desc": "When the wearer uses their Ultimate, increases ATK by #1[i]% for #2[i] turn(s).",
+    "params": [
+      [
+        0.24,
+        2
+      ],
+      [
+        0.3,
+        2
+      ],
+      [
+        0.36,
+        2
+      ],
+      [
+        0.42,
+        2
+      ],
+      [
+        0.48,
+        2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20020.png",
+    "preview": "image/light_cone_preview/20020.png",
+    "portrait": "image/light_cone_portrait/20020.png",
+    "imageOffset": [
+      0,
+      30,
       1.15
     ]
   },
@@ -969,6 +1097,57 @@ let lightcones = {
       1.15
     ]
   },
+  "The Birth of the Self": {
+    "lightconeID": 21006,
+    "name": "The Birth of the Self",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "The Maiden in the Painting",
+    "desc": "Increases DMG dealt by the wearer's Follow-Up ATKs by #1[i]%. If the current HP percentage of the enemy target is below or equal to #2[i]%, increases DMG dealt by Follow-Up ATKs by an extra #3[i]%.",
+    "params": [
+      [
+        0.24,
+        0.5,
+        0.24
+      ],
+      [
+        0.3,
+        0.5,
+        0.3
+      ],
+      [
+        0.36,
+        0.5,
+        0.36
+      ],
+      [
+        0.42,
+        0.5,
+        0.42
+      ],
+      [
+        0.48,
+        0.5,
+        0.48
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21006.png",
+    "preview": "image/light_cone_preview/21006.png",
+    "portrait": "image/light_cone_portrait/21006.png",
+    "imageOffset": [
+      0,
+      -130,
+      1.15
+    ]
+  },
   "Landau's Choice": {
     "lightconeID": 21009,
     "name": "Landau's Choice",
@@ -1163,6 +1342,52 @@ let lightcones = {
     "imageOffset": [
       0,
       -132,
+      1.15
+    ]
+  },
+  "Make the World Clamor": {
+    "lightconeID": 21013,
+    "name": "Make the World Clamor",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "The Power of Sound",
+    "desc": "The wearer regenerates #2[i] Energy immediately upon entering battle, and increases DMG dealt by the wearer's Ultimate by #1[i]%.",
+    "params": [
+      [
+        0.32,
+        20
+      ],
+      [
+        0.4,
+        23
+      ],
+      [
+        0.48,
+        26
+      ],
+      [
+        0.56,
+        29
+      ],
+      [
+        0.64,
+        32
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21013.png",
+    "preview": "image/light_cone_preview/21013.png",
+    "portrait": "image/light_cone_portrait/21013.png",
+    "imageOffset": [
+      0,
+      -92,
       1.15
     ]
   },
@@ -1465,6 +1690,75 @@ let lightcones = {
       1.15
     ]
   },
+  "Geniuses' Repose": {
+    "lightconeID": 21020,
+    "name": "Geniuses' Repose",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.2
+      },
+      "3": {
+        "ATK%": 0.24
+      },
+      "4": {
+        "ATK%": 0.28
+      },
+      "5": {
+        "ATK%": 0.32
+      }
+    },
+    "skillName": "Each Now Has a Role to Play",
+    "desc": "Increases the wearer's ATK by #1[i]%. When the wearer defeats an enemy, the wearer's CRIT DMG increases by #2[i]% for #3[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        0.24,
+        3
+      ],
+      [
+        0.2,
+        0.3,
+        3
+      ],
+      [
+        0.24,
+        0.36,
+        3
+      ],
+      [
+        0.28,
+        0.42,
+        3
+      ],
+      [
+        0.32,
+        0.48,
+        3
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21020.png",
+    "preview": "image/light_cone_preview/21020.png",
+    "portrait": "image/light_cone_portrait/21020.png",
+    "imageOffset": [
+      79,
+      -94,
+      1.5
+    ]
+  },
   "Quid Pro Quo": {
     "lightconeID": 21021,
     "name": "Quid Pro Quo",
@@ -1669,6 +1963,75 @@ let lightcones = {
     "imageOffset": [
       0,
       -142,
+      1.15
+    ]
+  },
+  "The Seriousness of Breakfast": {
+    "lightconeID": 21027,
+    "name": "The Seriousness of Breakfast",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "DamageAll": 0.12
+      },
+      "2": {
+        "DamageAll": 0.15
+      },
+      "3": {
+        "DamageAll": 0.18
+      },
+      "4": {
+        "DamageAll": 0.21
+      },
+      "5": {
+        "DamageAll": 0.24
+      }
+    },
+    "skillName": "Get Ready",
+    "desc": "Increases the wearer's DMG by #1[i]%. For every enemy defeated by the wearer, the wearer's ATK increases by #2[i]%, stacking up to #3[i] time(s).",
+    "params": [
+      [
+        0.12,
+        0.04,
+        3
+      ],
+      [
+        0.15,
+        0.05,
+        3
+      ],
+      [
+        0.18,
+        0.06,
+        3
+      ],
+      [
+        0.21,
+        0.07,
+        3
+      ],
+      [
+        0.24,
+        0.08,
+        3
+      ]
+    ],
+    "statRef": [
+      "AllDamageTypeAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21027.png",
+    "preview": "image/light_cone_preview/21027.png",
+    "portrait": "image/light_cone_portrait/21027.png",
+    "imageOffset": [
+      0,
+      -78,
       1.15
     ]
   },
@@ -1976,6 +2339,98 @@ let lightcones = {
     "imageOffset": [
       0,
       -124,
+      1.15
+    ]
+  },
+  "Today Is Another Peaceful Day": {
+    "lightconeID": 21034,
+    "name": "Today Is Another Peaceful Day",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 330.75,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "A Storm Is Coming",
+    "desc": "After entering battle, increases the wearer's DMG based on their Max Energy. Each point of Energy increases DMG by #1[f2]%. A max of #2[i] Energy will be taken into account for this.",
+    "params": [
+      [
+        0.0019999999,
+        160
+      ],
+      [
+        0.0025000002,
+        160
+      ],
+      [
+        0.0029999998,
+        160
+      ],
+      [
+        0.0035,
+        160
+      ],
+      [
+        0.0039999997,
+        160
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21034.png",
+    "preview": "image/light_cone_preview/21034.png",
+    "portrait": "image/light_cone_portrait/21034.png",
+    "imageOffset": [
+      0,
+      -77,
+      1.15
+    ]
+  },
+  "Night on the Milky Way": {
+    "lightconeID": 23000,
+    "name": "Night on the Milky Way",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 396.9,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {},
+    "skillName": "Meteor Swarm",
+    "desc": "For every enemy on the field, increases the wearer's ATK by #2[f1]%, up to 5 stacks. When an enemy is inflicted with Weakness Break, the DMG dealt by the wearer increases by #1[i]% for 1 turn.",
+    "params": [
+      [
+        0.3,
+        0.09
+      ],
+      [
+        0.35,
+        0.105
+      ],
+      [
+        0.4,
+        0.12
+      ],
+      [
+        0.45,
+        0.135
+      ],
+      [
+        0.5,
+        0.15
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23000.png",
+    "preview": "image/light_cone_preview/23000.png",
+    "portrait": "image/light_cone_portrait/23000.png",
+    "imageOffset": [
+      0,
+      -158,
       1.15
     ]
   },
@@ -2422,6 +2877,75 @@ let lightcones = {
     "imageOffset": [
       0,
       -175,
+      1.15
+    ]
+  },
+  "Before Dawn": {
+    "lightconeID": 23010,
+    "name": "Before Dawn",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.36
+      },
+      "2": {
+        "CritDamageBase": 0.42
+      },
+      "3": {
+        "CritDamageBase": 0.48
+      },
+      "4": {
+        "CritDamageBase": 0.54
+      },
+      "5": {
+        "CritDamageBase": 0.6
+      }
+    },
+    "skillName": "Long Night",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. Increases DMG dealt by the wearer's Skill and Ultimate by #2[i]%. After the wearer uses Skill or Ultimate, gains \"Somnus Corpus.\" Upon triggering a Follow-Up ATK, consumes \"Somnus Corpus,\" and increases DMG dealt by Follow-Up ATK by #3[i]%.",
+    "params": [
+      [
+        0.36,
+        0.18,
+        0.48
+      ],
+      [
+        0.42,
+        0.21,
+        0.56
+      ],
+      [
+        0.48,
+        0.24,
+        0.64
+      ],
+      [
+        0.54,
+        0.27,
+        0.72
+      ],
+      [
+        0.6,
+        0.3,
+        0.8
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23010.png",
+    "preview": "image/light_cone_preview/23010.png",
+    "portrait": "image/light_cone_portrait/23010.png",
+    "imageOffset": [
+      0,
+      -126,
       1.15
     ]
   },
@@ -3225,6 +3749,75 @@ let lightcones = {
       1.1
     ]
   },
+  "An Instant Before A Gaze": {
+    "lightconeID": 23018,
+    "name": "An Instant Before A Gaze",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.36
+      },
+      "2": {
+        "CritDamageBase": 0.42
+      },
+      "3": {
+        "CritDamageBase": 0.48
+      },
+      "4": {
+        "CritDamageBase": 0.54
+      },
+      "5": {
+        "CritDamageBase": 0.6
+      }
+    },
+    "skillName": "A Knight's Pilgrimage",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. When the wearer uses Ultimate, increases DMG dealt by the wearer's Ultimate based on their Max Energy. Each point of Energy increases DMG dealt by Ultimate by #2[f2]%. A max of #3[i] points of Energy will be taken into account for this.",
+    "params": [
+      [
+        0.36,
+        0.0036000002,
+        180
+      ],
+      [
+        0.42,
+        0.0042,
+        180
+      ],
+      [
+        0.48,
+        0.0048,
+        180
+      ],
+      [
+        0.54,
+        0.0054,
+        180
+      ],
+      [
+        0.6,
+        0.0059999996,
+        180
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23018.png",
+    "preview": "image/light_cone_preview/23018.png",
+    "portrait": "image/light_cone_portrait/23018.png",
+    "imageOffset": [
+      -1,
+      -111,
+      1.03
+    ]
+  },
   "Past Self in Mirror": {
     "lightconeID": 23019,
     "name": "Past Self in Mirror",
@@ -3870,6 +4463,75 @@ let lightcones = {
       1.6
     ]
   },
+  "The Day The Cosmos Fell": {
+    "lightconeID": 21040,
+    "name": "The Day The Cosmos Fell",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.18
+      },
+      "3": {
+        "ATK%": 0.2
+      },
+      "4": {
+        "ATK%": 0.22
+      },
+      "5": {
+        "ATK%": 0.24
+      }
+    },
+    "skillName": "Stratagem",
+    "desc": "Increases the wearer's ATK by #1[i]%. When the wearer uses an attack and at least 2 attacked enemies have the corresponding Weakness, the wearer's CRIT DMG increases by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        0.2,
+        2
+      ],
+      [
+        0.18,
+        0.25,
+        2
+      ],
+      [
+        0.2,
+        0.3,
+        2
+      ],
+      [
+        0.22,
+        0.35,
+        2
+      ],
+      [
+        0.24,
+        0.4,
+        2
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21040.png",
+    "preview": "image/light_cone_preview/21040.png",
+    "portrait": "image/light_cone_portrait/21040.png",
+    "imageOffset": [
+      0,
+      -85,
+      1.06
+    ]
+  },
   "Shared Feeling": {
     "lightconeID": 21007,
     "name": "Shared Feeling",
@@ -3932,6 +4594,85 @@ let lightcones = {
       0,
       -62,
       1.15
+    ]
+  },
+  "Eternal Calculus": {
+    "lightconeID": 24004,
+    "name": "Eternal Calculus",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.08
+      },
+      "2": {
+        "ATK%": 0.09
+      },
+      "3": {
+        "ATK%": 0.1
+      },
+      "4": {
+        "ATK%": 0.11
+      },
+      "5": {
+        "ATK%": 0.12
+      }
+    },
+    "skillName": "Boundless Thought",
+    "desc": "Increases the wearer's ATK by #1[i]%. After using an attack, for each enemy target hit, additionally increases ATK by #2[i]%. This effect can stack up to 5 times and last until the next attack. If there are #3[i] or more enemy targets hit, this unit's SPD increases by #4[i]%, lasting for #5[i] turn(s).",
+    "params": [
+      [
+        0.08,
+        0.04,
+        3,
+        0.08,
+        1
+      ],
+      [
+        0.09,
+        0.05,
+        3,
+        0.1,
+        1
+      ],
+      [
+        0.1,
+        0.06,
+        3,
+        0.12,
+        1
+      ],
+      [
+        0.11,
+        0.07,
+        3,
+        0.14,
+        1
+      ],
+      [
+        0.12,
+        0.08,
+        3,
+        0.16,
+        1
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/24004.png",
+    "preview": "image/light_cone_preview/24004.png",
+    "portrait": "image/light_cone_portrait/24004.png",
+    "imageOffset": [
+      0,
+      -2.5,
+      1.01
     ]
   },
   "Hey, Over Here": {
@@ -4282,6 +5023,164 @@ let lightcones = {
       15,
       -145,
       1.25
+    ]
+  },
+  "Yet Hope Is Priceless": {
+    "lightconeID": 23028,
+    "name": "Yet Hope Is Priceless",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.16
+      },
+      "2": {
+        "CritRateBase": 0.19
+      },
+      "3": {
+        "CritRateBase": 0.22
+      },
+      "4": {
+        "CritRateBase": 0.25
+      },
+      "5": {
+        "CritRateBase": 0.28
+      }
+    },
+    "skillName": "Promise",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. While the wearer is in battle, for every #3[i]% CRIT DMG that exceeds #2[i]%, the DMG dealt by Follow-Up ATK increases by #4[i]%. This effect can stack up to #5[i] time(s). When the battle starts or after the wearer uses their Basic ATK, enables the DMG dealt by Ultimate or Follow-Up ATK to ignore #6[i]% of the target's DEF, lasting for #7[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        1.2,
+        0.2,
+        0.12,
+        4,
+        0.2,
+        2
+      ],
+      [
+        0.19,
+        1.2,
+        0.2,
+        0.14,
+        4,
+        0.24,
+        2
+      ],
+      [
+        0.22,
+        1.2,
+        0.2,
+        0.16,
+        4,
+        0.28,
+        2
+      ],
+      [
+        0.25,
+        1.2,
+        0.2,
+        0.18,
+        4,
+        0.32,
+        2
+      ],
+      [
+        0.28,
+        1.2,
+        0.2,
+        0.2,
+        4,
+        0.36,
+        2
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23028.png",
+    "preview": "image/light_cone_preview/23028.png",
+    "portrait": "image/light_cone_portrait/23028.png",
+    "imageOffset": [
+      4,
+      -147,
+      1.17
+    ]
+  },
+  "After the Charmony Fall": {
+    "lightconeID": 21045,
+    "name": "After the Charmony Fall",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.28
+      },
+      "2": {
+        "DamageBreak": 0.35
+      },
+      "3": {
+        "DamageBreak": 0.42
+      },
+      "4": {
+        "DamageBreak": 0.49
+      },
+      "5": {
+        "DamageBreak": 0.56
+      }
+    },
+    "skillName": "Quiescence",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. After the wearer uses Ultimate, increases SPD by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.28,
+        0.08,
+        2
+      ],
+      [
+        0.35,
+        0.1,
+        2
+      ],
+      [
+        0.42,
+        0.12,
+        2
+      ],
+      [
+        0.49,
+        0.14,
+        2
+      ],
+      [
+        0.56,
+        0.16,
+        2
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21045.png",
+    "preview": "image/light_cone_preview/21045.png",
+    "portrait": "image/light_cone_portrait/21045.png",
+    "imageOffset": [
+      -66,
+      -164,
+      1.44
     ]
   },
   "Poised to Bloom": {
@@ -4838,6 +5737,75 @@ let lightcones = {
       1.23
     ]
   },
+  "Ninjutsu Inscription: Dazzling Evilbreaker": {
+    "lightconeID": 23033,
+    "name": "Ninjutsu Inscription: Dazzling Evilbreaker",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.7
+      },
+      "3": {
+        "DamageBreak": 0.8
+      },
+      "4": {
+        "DamageBreak": 0.9
+      },
+      "5": {
+        "DamageBreak": 1
+      }
+    },
+    "skillName": "Exorcism",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When entering battle, immediately regenerates #2[f1] Energy. After the wearer uses Ultimate, obtains \"Raiton.\" After using 2 Basic ATKs, advances the wearer's action by #3[i]% and removes \"Raiton.\" After the wearer uses Ultimate, resets \"Raiton.\"",
+    "params": [
+      [
+        0.6,
+        30,
+        0.5
+      ],
+      [
+        0.7,
+        32.5,
+        0.55
+      ],
+      [
+        0.8,
+        35,
+        0.6
+      ],
+      [
+        0.9,
+        37.5,
+        0.65
+      ],
+      [
+        1,
+        40,
+        0.7
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23033.png",
+    "preview": "image/light_cone_preview/23033.png",
+    "portrait": "image/light_cone_portrait/23033.png",
+    "imageOffset": [
+      7,
+      -158,
+      1.4
+    ]
+  },
   "Ninja Record: Sound Hunt": {
     "lightconeID": 22003,
     "name": "Ninja Record: Sound Hunt",
@@ -5035,6 +6003,85 @@ let lightcones = {
       -11,
       -4,
       1.2
+    ]
+  },
+  "Into the Unreachable Veil": {
+    "lightconeID": 23037,
+    "name": "Into the Unreachable Veil",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.12
+      },
+      "2": {
+        "CritRateBase": 0.14
+      },
+      "3": {
+        "CritRateBase": 0.16
+      },
+      "4": {
+        "CritRateBase": 0.18
+      },
+      "5": {
+        "CritRateBase": 0.2
+      }
+    },
+    "skillName": "Mind Game",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. When the wearer uses their Ultimate, increases the wearer's Skill DMG and Ultimate DMG dealt by #4[i]%, lasting for #5[i] turn(s). After the wearer uses their Ultimate, if this Ultimate consumed #3[i] or more Energy, recovers 1 Skill Point.",
+    "params": [
+      [
+        0.12,
+        2,
+        140,
+        0.6,
+        3
+      ],
+      [
+        0.14,
+        2,
+        140,
+        0.7,
+        3
+      ],
+      [
+        0.16,
+        2,
+        140,
+        0.8,
+        3
+      ],
+      [
+        0.18,
+        2,
+        140,
+        0.9,
+        3
+      ],
+      [
+        0.2,
+        2,
+        140,
+        1,
+        3
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23037.png",
+    "preview": "image/light_cone_preview/23037.png",
+    "portrait": "image/light_cone_portrait/23037.png",
+    "imageOffset": [
+      52,
+      -145,
+      1.5
     ]
   },
   "Shadowburn": {
@@ -5663,6 +6710,67 @@ let lightcones = {
       1.45
     ]
   },
+  "Life Should Be Cast to Flames": {
+    "lightconeID": 23041,
+    "name": "Life Should Be Cast to Flames",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Smelt",
+    "desc": "When the wearer's turn starts, regenerates #5[i] Energy. If the enemy target has a Weakness implanted by the wearer, increases the wearer's DMG dealt to it by #3[i]%.\\nWhen an enemy target gets attacked by the wearer, the wearer decreases the target's DEF by #2[i]%, lasting for #4[i] turn(s). The same types of effects cannot stack.",
+    "params": [
+      [
+        0,
+        0.12,
+        0.6,
+        2,
+        10
+      ],
+      [
+        0,
+        0.15,
+        0.7,
+        2,
+        10
+      ],
+      [
+        0,
+        0.18,
+        0.8,
+        2,
+        10
+      ],
+      [
+        0,
+        0.21,
+        0.9,
+        2,
+        10
+      ],
+      [
+        0,
+        0.24,
+        1,
+        2,
+        10
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23041.png",
+    "preview": "image/light_cone_preview/23041.png",
+    "portrait": "image/light_cone_portrait/23041.png",
+    "imageOffset": [
+      -3,
+      -79,
+      1.07
+    ]
+  },
   "Make Farewells More Beautiful": {
     "lightconeID": 23040,
     "name": "Make Farewells More Beautiful",
@@ -5735,6 +6843,70 @@ let lightcones = {
       3,
       -68,
       1.03
+    ]
+  },
+  "The Great Cosmic Enterprise": {
+    "lightconeID": 22004,
+    "name": "The Great Cosmic Enterprise",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.08
+      },
+      "2": {
+        "ATK%": 0.1
+      },
+      "3": {
+        "ATK%": 0.12
+      },
+      "4": {
+        "ATK%": 0.14
+      },
+      "5": {
+        "ATK%": 0.16
+      }
+    },
+    "skillName": "Mutual Benefit",
+    "desc": "Increases the wearer's ATK by #1[i]%. For every 1 different Weakness Type an enemy target has, increases the DMG dealt to it by the wearer by #2[i]%. Up to a max of 7 Weakness Types can be taken into account for this effect.",
+    "params": [
+      [
+        0.08,
+        0.04
+      ],
+      [
+        0.1,
+        0.05
+      ],
+      [
+        0.12,
+        0.06
+      ],
+      [
+        0.14,
+        0.07
+      ],
+      [
+        0.16,
+        0.08
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22004.png",
+    "preview": "image/light_cone_preview/22004.png",
+    "portrait": "image/light_cone_portrait/22004.png",
+    "imageOffset": [
+      -3,
+      126,
+      1.05
     ]
   },
   "Journey, Forever Peaceful": {
@@ -6088,6 +7260,70 @@ let lightcones = {
       16,
       -98,
       1.12
+    ]
+  },
+  "A Dream Scented in Wheat": {
+    "lightconeID": 21060,
+    "name": "A Dream Scented in Wheat",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.12
+      },
+      "2": {
+        "CritRateBase": 0.14
+      },
+      "3": {
+        "CritRateBase": 0.16
+      },
+      "4": {
+        "CritRateBase": 0.18
+      },
+      "5": {
+        "CritRateBase": 0.2
+      }
+    },
+    "skillName": "Longing",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. The Ultimate DMG and Follow-Up ATK DMG dealt by the wearer increase by #2[i]%.",
+    "params": [
+      [
+        0.12,
+        0.24
+      ],
+      [
+        0.14,
+        0.28
+      ],
+      [
+        0.16,
+        0.32
+      ],
+      [
+        0.18,
+        0.36
+      ],
+      [
+        0.2,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21060.png",
+    "preview": "image/light_cone_preview/21060.png",
+    "portrait": "image/light_cone_portrait/21060.png",
+    "imageOffset": [
+      0,
+      -62,
+      1.02
     ]
   },
   "Thus Burns the Dawn": {
