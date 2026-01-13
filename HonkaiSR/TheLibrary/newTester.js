@@ -3194,13 +3194,14 @@ const megaParsingFuckery = {
         const knownKeySet = new Set ([
             "name",
             "target",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Current Turn Is");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            ${parseRef.invertCondition ? "NOT " : ""}${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
     "Event was Triggered by Modifier's Self"(parseRef,initialCounter) {
@@ -3556,7 +3557,6 @@ const megaParsingFuckery = {
 
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Inject Ability Use:</div>&nbsp;
-            ${parseRef.abilityName} ${parseRef.abilityTarget ?? ""}
         </div>
         <div class="modifierDetailsBox">
             ${parseRef.abilitySource != undefined ? `<div class="actionDetailBody2">
@@ -3565,7 +3565,7 @@ const megaParsingFuckery = {
             </div>` : ""}
             ${parseRef.abilityTarget != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Ability Target:</div>&nbsp;
-                ${parseRef.abilityTarget}
+                ${Array.isArray(parseRef.abilityTarget) ? megaParsingFuckery.makeConditionTargetBox(parseRef.abilityTarget,initialCounter) : parseRef.abilityTarget}
             </div>` : ""}
             
 

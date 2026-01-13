@@ -10901,6 +10901,578 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Topaz & Numby": {
+    "internalID": 1112,
+    "name": "Topaz & Numby",
+    "path": "The Hunt",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 620.9280000000001,
+      "DEFBase": 412.33500000000004,
+      "HPBase": 931.392,
+      "SPDBase": 110,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "111201",
+        "name": "Future Market",
+        "rank": 1,
+        "desc": "When enemies afflicted with \"Proof of Debt\" receive Follow-Up ATKs, they will enter the \"Debtor\" state. This can take effect only once within a single attack.\nThe \"Debtor\" state increases the CRIT DMG of Follow-Up ATKs inflicted on the enemy target by 25%, stacking up to 2 time(s). When \"Proof of Debt\" is removed, the \"Debtor\" state is also removed.",
+        "icon": "icon/skill/1112_rank1.png",
+        "paramsEido": [
+          0.25,
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "111202",
+        "name": "Bona Fide Acquisition",
+        "rank": 2,
+        "desc": "After Numby takes action and launches an attack, Topaz regenerates 5 Energy.",
+        "icon": "icon/skill/1112_rank2.png",
+        "paramsEido": [
+          5
+        ]
+      },
+      {
+        "id": "111203",
+        "name": "Seize the Big and Free the Small",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1112_skill.png"
+      },
+      {
+        "id": "111204",
+        "name": "Agile Operation",
+        "rank": 4,
+        "desc": "After Numby's turn begins, Topaz's action advances by 20%.",
+        "icon": "icon/skill/1112_rank4.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "111205",
+        "name": "Inflationary Demand",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1112_ultimate.png"
+      },
+      {
+        "id": "111206",
+        "name": "Incentive Mechanism",
+        "rank": 6,
+        "desc": "Numby's attack count during the \"Windfall Bonanza!\" state increases by 1, and its Fire RES PEN increases by 10% when it attacks.",
+        "icon": "icon/skill/1112_rank6.png",
+        "paramsEido": [
+          1,
+          0.1
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Deficit...": {
+          "variant1": {
+            "skillID": 111201,
+            "trigger": "Skill01",
+            "name": "Deficit...",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Topaz's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Topaz_00_Skill01_Camera",
+              "Avatar_Topaz_00_Skill01_Phase01",
+              "Avatar_Topaz_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Difficulty Paying?": {
+          "variant1": {
+            "skillID": 111202,
+            "trigger": "Skill02",
+            "name": "Difficulty Paying?",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Inflicts one designated enemy target with a \"Proof of Debt\" state, increasing the Follow-Up ATK DMG it receives by #2[i]%. \"Proof of Debt\" only takes effect on the most recent target it is applied to. If there are no enemies inflicted with \"Proof of Debt\" on the field when an ally's turn starts or when an ally takes action, Topaz will inflict a random enemy with \"Proof of Debt.\"\\nNumby deals Fire DMG equal to #1[i]% of Topaz's ATK to this target. Using this Skill to deal DMG is considered as launching a Follow-Up ATK.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.21875,
+                0.40625
+              ],
+              "8": [
+                1.3125,
+                0.4375
+              ],
+              "9": [
+                1.40625,
+                0.46875
+              ],
+              "10": [
+                1.5,
+                0.5
+              ],
+              "11": [
+                1.575,
+                0.525
+              ],
+              "12": [
+                1.65,
+                0.55
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Topaz_00_Skill02_Camera",
+              "Avatar_Topaz_00_Skill02_Phase01",
+              "Avatar_Topaz_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Turn a Profit!": {
+          "variant1": {
+            "skillID": 111203,
+            "trigger": "Skill03",
+            "name": "Turn a Profit!",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Numby enters the Windfall Bonanza! state and its DMG multiplier increases by #1[i]% and CRIT DMG increases by #2[i]%. Also, when enemies with Proof of Debt are hit by an ally's Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by #3[i]%. Numby exits the Windfall Bonanza! state after using #4[i] attacks.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.21875,
+                0.203125,
+                0.5,
+                2
+              ],
+              "8": [
+                1.3125,
+                0.21875,
+                0.5,
+                2
+              ],
+              "9": [
+                1.40625,
+                0.234375,
+                0.5,
+                2
+              ],
+              "10": [
+                1.5,
+                0.25,
+                0.5,
+                2
+              ],
+              "11": [
+                1.575,
+                0.2625,
+                0.5,
+                2
+              ],
+              "12": [
+                1.65,
+                0.275,
+                0.5,
+                2
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Topaz_00_Skill03_Camera",
+              "Avatar_Topaz_00_Skill03_EnterReady",
+              "Avatar_Topaz_00_Skill03_Phase01",
+              "Avatar_Topaz_00_Skill03_Phase02",
+              "Avatar_Klara_00_Skill03_EnterReady",
+              "Avatar_Klara_00_Skill03_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Trotter Market!?": {
+          "variant1": {
+            "skillID": 111204,
+            "trigger": "SkillP01",
+            "name": "Trotter Market!?",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "Summons Numby at the start of battle. Numby has #1[i] SPD by default. When taking action, Numby launches Follow-Up ATKs on one enemy target afflicted with \"Proof of Debt,\" dealing Fire DMG equal to #2[i]% of Topaz's ATK.\\nWhen enemies afflicted with \"Proof of Debt\" receive an ally's Follow-Up ATKs, Numby's action is Advanced Forward by #3[i]%. The action Advance Forward effect cannot be triggered during Numby's own turn.\\nWhen Topaz is downed, Numby disappears.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                80,
+                1.21875,
+                0.5
+              ],
+              "8": [
+                80,
+                1.3125,
+                0.5
+              ],
+              "9": [
+                80,
+                1.40625,
+                0.5
+              ],
+              "10": [
+                80,
+                1.5,
+                0.5
+              ],
+              "11": [
+                80,
+                1.575,
+                0.5
+              ],
+              "12": [
+                80,
+                1.65,
+                0.5
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Topaz_00_PassiveSkill01",
+              "Avatar_Topaz_Rank04_ReduceDelay",
+              "Avatar_Topaz_00_BE_NormalAttackDamage",
+              "Avatar_Topaz_00_BE_UltraAttackDamage"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Explicit Subsidy": {
+          "variant1": {
+            "skillID": 111207,
+            "trigger": "SkillMaze",
+            "name": "Explicit Subsidy",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "Summons Numby when Topaz enters the overworld. Numby will automatically search for Basic Treasures and Trotters within a set radius.\\nUsing her Technique will regenerate #1[i] Energy for Topaz after Numby's first attack in the next battle.\\nIf Topaz is still in the team after using her Technique and defeating overworld enemies, a small bonus amount of credits will be added to the earned credits. A maximum of #2[i] bonus credits can be received per calendar day.\\nAfter using her Technique and defeating enemies in Simulated Universe or Divergent Universe, additionally receive a small amount of Cosmic Fragments with a small chance to obtain 1 random Curio.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                60,
+                10000
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Topaz_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1112_basic_atk.png",
+        "skillRef": {
+          "skillName": "Deficit...",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1112_skill.png",
+        "skillRef": {
+          "skillName": "Difficulty Paying?",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1112_ultimate.png",
+        "skillRef": {
+          "skillName": "Turn a Profit!",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1112_talent.png",
+        "skillRef": {
+          "skillName": "Trotter Market!?",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1112_technique.png",
+        "skillRef": {
+          "skillName": "Explicit Subsidy",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Overdraft",
+        "icon": "icon/skill/1112_skilltree1.png",
+        "desc": "When Topaz uses Basic ATK to deal DMG, it is considered as a Follow-Up ATK.",
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": []
+          }
+        }
+      },
+      "Point07": {
+        "name": "Financial Turmoil",
+        "icon": "icon/skill/1112_skilltree2.png",
+        "desc": "Increases Topaz & Numby's DMG dealt to enemy targets with Fire Weakness by #1[i]%.",
+        "params": [
+          0.15
+        ]
+      },
+      "Point08": {
+        "name": "Stonks Market",
+        "icon": "icon/skill/1112_skilltree3.png",
+        "desc": "After Numby uses an attack while in the Windfall Bonanza! state, Topaz additionally regenerates #1[i] Energy.",
+        "params": [
+          10
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1112.png",
+    "preview": "image/character_preview/1112.png",
+    "portrait": "image/character_portrait/1112.png",
+    "bannerOffsets": [
+      -1,
+      -63,
+      0.55,
+      -1,
+      -63,
+      0.55,
+      -1,
+      -63,
+      0.55
+    ],
+    "isBuffed": false
+  },
   "Qingque": {
     "internalID": 1201,
     "name": "Qingque",
