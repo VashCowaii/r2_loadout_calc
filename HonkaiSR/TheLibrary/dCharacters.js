@@ -19462,6 +19462,606 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Argenti": {
+    "internalID": 1302,
+    "name": "Argenti",
+    "path": "Erudition",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 180,
+    "baseStats": {
+      "ATKBase": 737.3520000000001,
+      "DEFBase": 363.82500000000005,
+      "HPBase": 1047.816,
+      "SPDBase": 103,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "130201",
+        "name": "A Lacuna in Kingdom of Aesthetics",
+        "rank": 1,
+        "desc": "Each stack of Apotheosis additionally increases CRIT DMG by 4%.",
+        "icon": "icon/skill/1302_rank1.png",
+        "paramsEido": [
+          0.04
+        ]
+      },
+      {
+        "id": "130202",
+        "name": "Agate's Humility",
+        "rank": 2,
+        "desc": "If the number of enemies on the field equals to 3 or more when the Ultimate is used, ATK increases by 40% for 1 turn(s).",
+        "icon": "icon/skill/1302_rank2.png",
+        "paramsEido": [
+          3,
+          0.4,
+          1
+        ]
+      },
+      {
+        "id": "130203",
+        "name": "Thorny Road's Glory",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1302_skill.png"
+      },
+      {
+        "id": "130204",
+        "name": "Trumpet's Dedication",
+        "rank": 4,
+        "desc": "At the start of battle, gains 2 stack(s) of Apotheosis and increases the maximum stack limit of the Talent's effect by 2.",
+        "icon": "icon/skill/1302_rank4.png",
+        "paramsEido": [
+          2,
+          2
+        ]
+      },
+      {
+        "id": "130205",
+        "name": "Snow, From Somewhere in Cosmos",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1302_ultimate.png"
+      },
+      {
+        "id": "130206",
+        "name": "\"Your\" Resplendence",
+        "rank": 6,
+        "desc": "When using Ultimate, ignores 30% of enemy targets' DEF.",
+        "icon": "icon/skill/1302_rank6.png",
+        "paramsEido": [
+          0.3
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Fleeting Fragrance": {
+          "variant1": {
+            "skillID": 130201,
+            "trigger": "Skill01",
+            "name": "Fleeting Fragrance",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Argenti's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Argenti_00_Skill01_Camera",
+              "Avatar_Argenti_00_Skill01_Phase01",
+              "Avatar_Argenti_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Justice, Hereby Blooms": {
+          "variant1": {
+            "skillID": 130202,
+            "trigger": "Skill02",
+            "name": "Justice, Hereby Blooms",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Physical DMG equal to #1[i]% of Argenti's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.975
+              ],
+              "8": [
+                1.05
+              ],
+              "9": [
+                1.125
+              ],
+              "10": [
+                1.2
+              ],
+              "11": [
+                1.26
+              ],
+              "12": [
+                1.32
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Argenti_00_Skill02_Camera",
+              "Avatar_Argenti_00_Skill02_Phase01",
+              "Avatar_Argenti_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "For In This Garden, Supreme Beauty Bestows": {
+          "variant1": {
+            "skillID": 130203,
+            "trigger": "Skill03",
+            "name": "For In This Garden, Supreme Beauty Bestows",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Consumes #2[i] Energy and deals Physical DMG equal to #1[i]% of Argenti's ATK to all enemies.",
+            "energyCost": 90,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.36,
+                90
+              ],
+              "8": [
+                1.44,
+                90
+              ],
+              "9": [
+                1.52,
+                90
+              ],
+              "10": [
+                1.6,
+                90
+              ],
+              "11": [
+                1.664,
+                90
+              ],
+              "12": [
+                1.728,
+                90
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Argenti_00_Skill03_Camera",
+              "Avatar_Argenti_00_Skill03_Camera_End01",
+              "Avatar_Argenti_00_Skill03_EnterReady",
+              "Avatar_Argenti_00_Skill03_Phase01",
+              "Avatar_Argenti_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Merit Bestowed in \"My\" Garden": {
+          "variant1": {
+            "skillID": 130214,
+            "trigger": "Skill31",
+            "name": "Merit Bestowed in \"My\" Garden",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Consumes #4[i] Energy and deals Physical DMG equal to #1[i]% of Argenti's ATK to all enemies. And further deals DMG for #2[i] extra time(s), with each time dealing Physical DMG equal to #3[i]% of Argenti's ATK to a random enemy.",
+            "energyCost": 180,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 25,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.38,
+                6,
+                0.8075,
+                180
+              ],
+              "8": [
+                2.52,
+                6,
+                0.855,
+                180
+              ],
+              "9": [
+                2.66,
+                6,
+                0.9025,
+                180
+              ],
+              "10": [
+                2.8,
+                6,
+                0.95,
+                180
+              ],
+              "11": [
+                2.912,
+                6,
+                0.988,
+                180
+              ],
+              "12": [
+                3.024,
+                6,
+                1.026,
+                180
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Argenti_00_Skill31_Camera",
+              "Avatar_Argenti_00_Skill31_Camera_End02",
+              "Avatar_Argenti_00_Skill31_EnterReady",
+              "Avatar_Argenti_00_Skill31_Phase01",
+              "Avatar_Argenti_00_Skill31_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Sublime Object": {
+          "variant1": {
+            "skillID": 130204,
+            "trigger": "SkillP01",
+            "name": "Sublime Object",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "For every enemy hit when Argenti uses his Basic Attack, Skill, or Ultimate, regenerates Argenti's Energy by #1[i], and grants him a stack of Apotheosis, increasing his CRIT Rate by #2[f1]%. This effect can stack up to #3[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                3,
+                0.019375,
+                10
+              ],
+              "8": [
+                3,
+                0.02125,
+                10
+              ],
+              "9": [
+                3,
+                0.023125,
+                10
+              ],
+              "10": [
+                3,
+                0.025,
+                10
+              ],
+              "11": [
+                3,
+                0.0265,
+                10
+              ],
+              "12": [
+                3,
+                0.027999999,
+                10
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Argenti_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Manifesto of Purest Virtue": {
+          "variant1": {
+            "skillID": 130207,
+            "trigger": "SkillMaze",
+            "name": "Manifesto of Purest Virtue",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using the Technique, enemies in a set area are inflicted with Daze for #1[i] second(s). Dazed enemies will not actively attack the team.\\nWhen attacking a Dazed enemy to enter combat, deals Physical DMG to all enemies equal to #2[i]% of Argenti's ATK and regenerates his Energy by #3[i].",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0.8,
+                15
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Argenti_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1302_basic_atk.png",
+        "skillRef": {
+          "skillName": "Fleeting Fragrance",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1302_skill.png",
+        "skillRef": {
+          "skillName": "Justice, Hereby Blooms",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1302_ultimate.png",
+        "skillRef": {
+          "skillName": "For In This Garden, Supreme Beauty Bestows",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1302_talent.png",
+        "skillRef": {
+          "skillName": "Sublime Object",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1302_technique.png",
+        "skillRef": {
+          "skillName": "Manifesto of Purest Virtue",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Piety",
+        "icon": "icon/skill/1302_skilltree1.png",
+        "desc": "At the start of a turn, immediately gains #1[i] stack(s) of Apotheosis.",
+        "params": [
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Generosity",
+        "icon": "icon/skill/1302_skilltree2.png",
+        "desc": "When enemy targets enter battle, immediately regenerates #1[i] Energy for self.",
+        "params": [
+          2
+        ]
+      },
+      "Point08": {
+        "name": "Courage",
+        "icon": "icon/skill/1302_skilltree3.png",
+        "desc": "Deals #2[i]% more DMG to enemies whose HP percentage is #1[i]% or less.",
+        "params": [
+          0.5,
+          0.15
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.032
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.048
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Physical",
+        "icon": "icon/property/IconPhysicalAddedRatio.png",
+        "stats": {
+          "DamagePhysical": 0.064
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1302.png",
+    "preview": "image/character_preview/1302.png",
+    "portrait": "image/character_portrait/1302.png",
+    "bannerOffsets": [
+      205.4,
+      -1.5,
+      0.74,
+      205.4,
+      -1.5,
+      0.74,
+      205.4,
+      -1.5,
+      0.74
+    ],
+    "isBuffed": false
+  },
   "Ruan Mei": {
     "internalID": 1303,
     "name": "Ruan Mei",
