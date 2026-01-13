@@ -1,0 +1,98 @@
+const configAbility = {
+  "fileName": "TopazNumby_Topaz_Ability01_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Trace Activated",
+        "conditionList": "Overdraft"
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
+        }
+      ]
+    },
+    {
+      "name": "Shot Fired",
+      "execute": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Fire",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        }
+      ]
+    },
+    "Trigger: Attack End",
+    "Trigger: Ability End"
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "M_Topaz_Normal_AddRegardAsAttackType",
+      "execute": [
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "Attack-Type Extension",
+              "target": "Owner of this Modifier",
+              "typeToExtend": "Basic ATK",
+              "isRemove": true
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Attack-Type Extension",
+              "target": "Owner of this Modifier",
+              "typeToExtend": "Basic ATK",
+              "extendTypeTo": "Follow-up"
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Attack DMG End [Anyone]",
+          "execute": [
+            {
+              "name": "Remove Events/Bonuses",
+              "to": "Owner of this Modifier",
+              "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": [],
+      "duration": 1
+    }
+  ]
+}

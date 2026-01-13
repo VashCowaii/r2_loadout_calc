@@ -1,0 +1,3045 @@
+const compositeAbilityObject = {
+  "fullCharacterName": "Dr. Ratio",
+  "trimCharacterName": "DrRatio",
+  "abilityList": [
+    "DrRatio_Dr_Ratio_TechniqueInLevel",
+    "DrRatio_Dr_Ratio_Bonus",
+    "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part02",
+    "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part01",
+    "DrRatio_Dr_Ratio_PassiveAbility01",
+    "DrRatio_Dr_Ratio_Ability03_Part02",
+    "DrRatio_Dr_Ratio_Ability03_Part01",
+    "DrRatio_Dr_Ratio_Ability03_EnterReady",
+    "DrRatio_Dr_Ratio_Ability02_Part02",
+    "DrRatio_Dr_Ratio_Ability02_Part01",
+    "DrRatio_Dr_Ratio_Ability01_Part02",
+    "DrRatio_Dr_Ratio_Ability01_Part01",
+    "DrRatio_Modifiers",
+    "DrRatio_Functions"
+  ],
+  "abilityObject": {
+    "DrRatio_Dr_Ratio_TechniqueInLevel": {
+      "fileName": "DrRatio_Dr_Ratio_TechniqueInLevel",
+      "abilityType": "Technique",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "StageAbility_Maze_Dr_Ratio_Modifier"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Maze_SpeedDown[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "STAT_SpeedDown"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "SPD Reduction",
+          "statusName": "SPD Reduction"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "StageAbility_Maze_Dr_Ratio_Modifier",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Technique Modifies Current Wave"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "All Hostile Entities (AOE)",
+                      "modifier": "Dr_Ratio_Maze_SpeedDown[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "baseChance": {
+                        "operator": "Variables[0] (1) || RETURN",
+                        "displayLines": "1",
+                        "constants": [],
+                        "variables": [
+                          1
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.15) || RETURN",
+                          "displayLines": "0.15",
+                          "constants": [],
+                          "variables": [
+                            0.15
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -80
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        }
+      ]
+    },
+    "DrRatio_Dr_Ratio_Bonus": {
+      "fileName": "DrRatio_Dr_Ratio_Bonus",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Deleted bullshit"
+      ],
+      "references": []
+    },
+    "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part02": {
+      "fileName": "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_Dr_Ratio_00_EnergyBar_Flag",
+            "compareType": ">=",
+            "value2": 1
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Dr_Ratio_00_EnergyBar",
+              "value": {
+                "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(_Dr_Ratio_00_EnergyBar - 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "_Dr_Ratio_00_EnergyBar"
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_Dr_Ratio_00_EnergyBar",
+                "compareType": "<=",
+                "value2": 0
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Dr_Ratio_00_EnergyBar",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_Dr_Ratio_00_EnergyBar",
+                "compareType": ">=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
+                    "displayLines": "_Dr_Ratio_00_EnergyBar",
+                    "constants": [],
+                    "variables": [
+                      "_Dr_Ratio_00_EnergyBar"
+                    ]
+                  },
+                  "priorState": "Active"
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": "All Enemies(All)",
+                  "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": {
+                    "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
+                    "displayLines": "_Dr_Ratio_00_EnergyBar",
+                    "constants": [],
+                    "variables": [
+                      "_Dr_Ratio_00_EnergyBar"
+                    ]
+                  },
+                  "priorState": "Normal"
+                }
+              ]
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Caster",
+              "modifier": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Dr_RatioAttack",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "All Enemies(All)",
+          "modifier": "Dr_Ratio_Insert_Flag"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Dr_Ratio_Insert_Flag_Caster"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable with Status Counter",
+              "target": "Single Target (Primary)",
+              "variableName": "_DebuffCount"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 4
+          },
+          "passed": [
+            {
+              "name": "Update Energy",
+              "on": "Caster",
+              "value": {
+                "operator": "Variables[0] (15) || RETURN",
+                "displayLines": "15",
+                "constants": [],
+                "variables": [
+                  15
+                ]
+              },
+              "isFixed": "* ERR"
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (2.7) || RETURN",
+              "displayLines": "2.7",
+              "constants": [],
+              "variables": [
+                2.7
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "attackType": "Follow-up",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 2
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_DebuffCount",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Variables[0] (4) || RETURN",
+                  "displayLines": "4",
+                  "constants": [],
+                  "variables": [
+                    4
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_DebuffCount",
+                  "value": {
+                    "operator": "Variables[0] (4) || RETURN",
+                    "displayLines": "4",
+                    "constants": [],
+                    "variables": [
+                      4
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Looped Event",
+              "maxLoops": {
+                "operator": "Variables[0] (_DebuffCount) || RETURN",
+                "displayLines": "_DebuffCount",
+                "constants": [],
+                "variables": [
+                  "_DebuffCount"
+                ]
+              },
+              "Event": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": "Single Target (Primary)",
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Imaginary",
+                    "Damage": {
+                      "operator": "Variables[0] (0.2) || RETURN",
+                      "displayLines": "0.2",
+                      "constants": [],
+                      "variables": [
+                        0.2
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": null,
+                    "attackType": "Additional DMG"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_DebuffCount",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Dr_Ratio_InsertAbility"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "OnInsertAbort_Flg",
+          "value": 1
+        }
+      ],
+      "references": []
+    },
+    "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part01": {
+      "fileName": "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part01",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Find New Target",
+          "from": "All Hostile Entities (AOE)",
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Has Modifier",
+            "target": "Use Prior Target(s) Defined",
+            "modifier": "Dr_Ratio_Insert_Flag"
+          },
+          "ifTargetFound": [
+            {
+              "name": "UI Display Event",
+              "popUpText": "Cogito, Ergo Sum"
+            },
+            "Deleted bullshit",
+            {
+              "name": "Trigger Ability",
+              "from": "Caster",
+              "inherentTarget": "Use Prior Target(s) Defined",
+              "ability": "Dr_Ratio_PassiveAbility01_Insert_Part02",
+              "isTrigger": true
+            }
+          ],
+          "noTargetFound": [
+            {
+              "name": "UI Display Event",
+              "popUpText": "Cogito, Ergo Sum"
+            },
+            "Deleted bullshit",
+            {
+              "name": "Trigger Ability",
+              "from": "Caster",
+              "inherentTarget": "Single Target (Primary)",
+              "ability": "Dr_Ratio_PassiveAbility01_Insert_Part02",
+              "isTrigger": true
+            }
+          ]
+        }
+      ],
+      "onAbort": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "value1": "_Dr_RatioAttack",
+                "compareType": "=",
+                "value2": 1
+              },
+              {
+                "name": "Has Modifier",
+                "target": "Caster",
+                "modifier": "Dr_Ratio_Insert_Flag_Caster"
+              },
+              {
+                "name": "Has Flag",
+                "target": "Caster",
+                "flagName": "STAT_CTRL",
+                "invertCondition": true
+              },
+              {
+                "name": "Has Flag",
+                "target": "Caster",
+                "flagName": "DisableAction",
+                "invertCondition": true
+              },
+              {
+                "name": "Enemies Still Alive",
+                "target": "Caster",
+                "includeNonTargets": true
+              },
+              {
+                "name": "Living State",
+                "state": "Mask_AliveOnly",
+                "target": "Caster"
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "OnInsertAbort_Flg",
+                "compareType": "=",
+                "value2": 1
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "OnInsertAbort_Flg",
+              "value": 0
+            },
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "Dr_Ratio_InsertAbility"
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "DrRatio_Dr_Ratio_PassiveAbility01": {
+      "fileName": "DrRatio_Dr_Ratio_PassiveAbility01",
+      "abilityType": "Talent",
+      "energy": 5,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
+              "value": {
+                "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
+                "displayLines": "(2 + 1)",
+                "constants": [],
+                "variables": [
+                  2,
+                  1
+                ]
+              }
+            },
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": 0,
+              "maximum": {
+                "operator": "Variables[0] (_Dr_Ratio_Rank06_Skill03_InsertMaxCount) || RETURN",
+                "displayLines": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
+                "constants": [],
+                "variables": [
+                  "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
+                ]
+              },
+              "assignState": "True",
+              "priorState": "Normal",
+              "bar#": 3,
+              "cooldown": 0
+            }
+          ],
+          "failed": [
+            {
+              "name": "Update Displayed Energy Bar",
+              "value": 0,
+              "maximum": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              },
+              "assignState": "True",
+              "priorState": "Normal",
+              "bar#": 3,
+              "cooldown": 0
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Dr_Ratio_PassiveInsertListen"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Deduction"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Caster",
+              "modifier": "Dr_Ratio_PointB3_Modifier",
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.1) || RETURN",
+                  "displayLines": "0.1",
+                  "constants": [],
+                  "variables": [
+                    0.1
+                  ]
+                },
+                "MDF_PropertyValueMax": {
+                  "operator": "Variables[0] (0.5) || RETURN",
+                  "displayLines": "0.5",
+                  "constants": [],
+                  "variables": [
+                    0.5
+                  ]
+                },
+                "MDF_PointB3DebuffCount": {
+                  "operator": "Variables[0] (3) || RETURN",
+                  "displayLines": "3",
+                  "constants": [],
+                  "variables": [
+                    3
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              },
+              {
+                "name": "Trace Activated",
+                "conditionList": "Summation"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Caster",
+              "modifier": "Dr_Ratio_Eidolon1"
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Eidolon1",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Caster",
+                  "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+                  "stackLimit": {
+                    "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
+                    "displayLines": "(6 + 4)",
+                    "constants": [],
+                    "variables": [
+                      6,
+                      4
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue01": {
+                      "operator": "Variables[0] (0.025) || RETURN",
+                      "displayLines": "0.025",
+                      "constants": [],
+                      "variables": [
+                        0.025
+                      ]
+                    },
+                    "MDF_PropertyValue02": {
+                      "operator": "Variables[0] (0.05) || RETURN",
+                      "displayLines": "0.05",
+                      "constants": [],
+                      "variables": [
+                        0.05
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] (4) || RETURN",
+                    "displayLines": "4",
+                    "constants": [],
+                    "variables": [
+                      4
+                    ]
+                  }
+                },
+                "Modifier Deletes Itself"
+              ],
+              "priorityLevel": -80
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Passive_SpecialMark",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Status Counter",
+                  "target": "Owner of this Modifier",
+                  "variableName": "MDF_SpecialMark_DebuffNumber"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": "Owner of this Modifier",
+                    "value1": "MDF_SpecialMark_DebuffNumber",
+                    "compareType": ">=",
+                    "value2": 3,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_SpecialMark_DebuffChance",
+                      "value": 100
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_SpecialMark_DebuffChance",
+                      "value": {
+                        "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
+                        "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
+                        "constants": [
+                          100
+                        ],
+                        "variables": [
+                          "MDF_DebuffChance",
+                          "MDF_SpecialMark_DebuffNumber",
+                          "MDF_DebuffAddChance"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": "Owner of this Modifier",
+                        "value1": "MDF_SpecialMark_DebuffChance",
+                        "compareType": ">=",
+                        "value2": 100,
+                        "contextScope": "ContextModifier"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_SpecialMark_DebuffChance",
+                          "value": 100
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Type Was",
+                    "statusType": "Debuff"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Status Counter",
+                      "target": "Owner of this Modifier",
+                      "variableName": "MDF_SpecialMark_DebuffNumber"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": "Owner of this Modifier",
+                        "value1": "MDF_SpecialMark_DebuffNumber",
+                        "compareType": ">=",
+                        "value2": 3,
+                        "contextScope": "ContextModifier"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_SpecialMark_DebuffChance",
+                          "value": 100
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_SpecialMark_DebuffChance",
+                          "value": {
+                            "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
+                            "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
+                            "constants": [
+                              100
+                            ],
+                            "variables": [
+                              "MDF_DebuffChance",
+                              "MDF_SpecialMark_DebuffNumber",
+                              "MDF_DebuffAddChance"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": "Owner of this Modifier",
+                            "value1": "MDF_SpecialMark_DebuffChance",
+                            "compareType": ">=",
+                            "value2": 100,
+                            "contextScope": "ContextModifier"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_SpecialMark_DebuffChance",
+                              "value": 100
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking Modifier Instance [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Type Was",
+                    "statusType": "Debuff"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Status Counter",
+                      "target": "Owner of this Modifier",
+                      "variableName": "MDF_SpecialMark_DebuffNumber"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": "Owner of this Modifier",
+                        "value1": "MDF_SpecialMark_DebuffNumber",
+                        "compareType": ">=",
+                        "value2": 3,
+                        "contextScope": "ContextModifier"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_SpecialMark_DebuffChance",
+                          "value": 100
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_SpecialMark_DebuffChance",
+                          "value": {
+                            "operator": "Variables[0] (MDF_DebuffChance) || Variables[1] (MDF_SpecialMark_DebuffNumber) || Variables[2] (MDF_DebuffAddChance) || MUL || ADD || Constants[0] (100) || MUL || RETURN",
+                            "displayLines": "((MDF_DebuffChance + (MDF_SpecialMark_DebuffNumber * MDF_DebuffAddChance)) * 100)",
+                            "constants": [
+                              100
+                            ],
+                            "variables": [
+                              "MDF_DebuffChance",
+                              "MDF_SpecialMark_DebuffNumber",
+                              "MDF_DebuffAddChance"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": "Owner of this Modifier",
+                            "value1": "MDF_SpecialMark_DebuffChance",
+                            "compareType": ">=",
+                            "value2": 100,
+                            "contextScope": "ContextModifier"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "MDF_SpecialMark_DebuffChance",
+                              "value": 100
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": "Owner of this Modifier",
+                    "value1": "MDF_SpecialMark_DebuffChance",
+                    "compareType": ">=",
+                    "value2": 100,
+                    "contextScope": "ContextModifier"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Target is Unselectable",
+                            "target": "Owner of this Modifier",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Compare: Target",
+                            "target": "Current Action Owner",
+                            "target2": "Caster"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Target Count SUM",
+                            "target": "Current Visual Target(All)",
+                            "conditions": {
+                              "name": "Compare: Target",
+                              "target": "Owner of this Modifier",
+                              "target2": "Use Prior Target(s) Defined"
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill"
+                              ],
+                              "trigger": "States_Active"
+                            },
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill"
+                              ],
+                              "trigger": "Select_Selected"
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill"
+                              ],
+                              "trigger": "States_Active"
+                            },
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill"
+                              ],
+                              "trigger": "Select_UnSelected"
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Toggle Skill Mark"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Target is Unselectable",
+                            "target": "Owner of this Modifier",
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Compare: Target",
+                            "target": "Current Action Owner",
+                            "target2": "Caster"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Target Count SUM",
+                            "target": "Current Visual Target(All)",
+                            "conditions": {
+                              "name": "Compare: Target",
+                              "target": "Owner of this Modifier",
+                              "target2": "Use Prior Target(s) Defined"
+                            }
+                          },
+                          "passed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill"
+                              ],
+                              "trigger": "States_Normal"
+                            },
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill"
+                              ],
+                              "trigger": "Select_Selected"
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill"
+                              ],
+                              "trigger": "States_Normal"
+                            },
+                            {
+                              "name": "Toggle Skill Mark",
+                              "toggle": true,
+                              "skillTypesAllow": [
+                                "Skill"
+                              ],
+                              "trigger": "Select_UnSelected"
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Toggle Skill Mark"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_PassiveInsertListen",
+          "modifierFlags": [
+            "CustomEvent_InfiniteRefresh"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": "Use Prior Target(s) Defined",
+                    "team": "TeamDark"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "Dr_Ratio_Passive_SpecialMark",
+                      "valuePerStack": {
+                        "MDF_DebuffChance": {
+                          "operator": "Variables[0] (0.4) || RETURN",
+                          "displayLines": "0.4",
+                          "constants": [],
+                          "variables": [
+                            0.4
+                          ]
+                        },
+                        "MDF_DebuffAddChance": {
+                          "operator": "Variables[0] (0.2) || RETURN",
+                          "displayLines": "0.2",
+                          "constants": [],
+                          "variables": [
+                            0.2
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": "Use Prior Target(s) Defined",
+                        "team": "TeamLight"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_Dr_RatioAttack",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": "Caster",
+                        "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Flag",
+                            "target": "Caster",
+                            "flagName": "STAT_CTRL"
+                          },
+                          "failed": [
+                            {
+                              "name": "Use Custom Character Function",
+                              "functionName": "Dr_Ratio_InsertAbility"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "All Hostile Entities (AOE)",
+                  "modifier": "Dr_Ratio_Passive_SpecialMark",
+                  "valuePerStack": {
+                    "MDF_DebuffChance": {
+                      "operator": "Variables[0] (0.4) || RETURN",
+                      "displayLines": "0.4",
+                      "constants": [],
+                      "variables": [
+                        0.4
+                      ]
+                    },
+                    "MDF_DebuffAddChance": {
+                      "operator": "Variables[0] (0.2) || RETURN",
+                      "displayLines": "0.2",
+                      "constants": [],
+                      "variables": [
+                        0.2
+                      ]
+                    }
+                  }
+                }
+              ],
+              "priorityLevel": -80
+            },
+            {
+              "eventTrigger": "Custom Event",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_Dr_RatioAttack",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": "Caster",
+                            "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": "Caster",
+                            "flagName": "STAT_CTRL",
+                            "invertCondition": true
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "Dr_Ratio_InsertAbility"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "New Enemy Wave",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_Dr_RatioAttack",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": "Caster",
+                            "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": "Caster",
+                            "flagName": "STAT_CTRL",
+                            "invertCondition": true
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "Dr_Ratio_InsertAbility"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": []
+        }
+      ]
+    },
+    "DrRatio_Dr_Ratio_Ability03_Part02": {
+      "fileName": "DrRatio_Dr_Ratio_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Dr_RatioAttack",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Dr_Ratio_Insert_Flag_Caster"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "All Enemies(All)",
+          "modifier": "Dr_Ratio_Insert_Flag"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "All Enemies(All)",
+          "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Eidolon Activated",
+            "eidolon": 6
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Single Target (Primary)",
+              "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
+              "valuePerStack": {
+                "MDF_Ability03_InsertMaxCount": {
+                  "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
+                  "displayLines": "(2 + 1)",
+                  "constants": [],
+                  "variables": [
+                    2,
+                    1
+                  ]
+                }
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Single Target (Primary)",
+              "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
+              "valuePerStack": {
+                "MDF_Ability03_InsertMaxCount": {
+                  "operator": "Variables[0] (2) || RETURN",
+                  "displayLines": "2",
+                  "constants": [],
+                  "variables": [
+                    2
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (2.4) || RETURN",
+              "displayLines": "2.4",
+              "constants": [],
+              "variables": [
+                2.4
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": []
+    },
+    "DrRatio_Dr_Ratio_Ability03_Part01": {
+      "fileName": "DrRatio_Dr_Ratio_Ability03_Part01",
+      "abilityType": "Ultimate",
+      "energy": 5,
+      "toughnessList": [
+        30,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Dr_Ratio_Ability03_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": []
+    },
+    "DrRatio_Dr_Ratio_Ability03_EnterReady": {
+      "fileName": "DrRatio_Dr_Ratio_Ability03_EnterReady",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "references": []
+    },
+    "DrRatio_Dr_Ratio_Ability02_Part02": {
+      "fileName": "DrRatio_Dr_Ratio_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Dr_RatioAttack",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Dr_Ratio_Insert_Flag_Caster"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "All Enemies(All)",
+          "modifier": "Dr_Ratio_Insert_Flag"
+        },
+        {
+          "name": "Define Custom Variable with Status Counter",
+          "target": "Single Target (Primary)",
+          "variableName": "_DebuffCount"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_DebuffCount",
+            "compareType": ">",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Dr_Ratio_InsertChance",
+              "value": {
+                "operator": "Variables[0] (0.4) || RETURN",
+                "displayLines": "0.4",
+                "constants": [],
+                "variables": [
+                  0.4
+                ]
+              }
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Dr_Ratio_InsertChance",
+              "value": {
+                "operator": "Variables[0] (_Dr_Ratio_InsertChance) || Variables[1] (_DebuffCount) || Variables[2] (0.2) || MUL || ADD || RETURN",
+                "displayLines": "(_Dr_Ratio_InsertChance + (_DebuffCount * 0.2))",
+                "constants": [],
+                "variables": [
+                  "_Dr_Ratio_InsertChance",
+                  "_DebuffCount",
+                  0.2
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_Dr_Ratio_InsertChance",
+              "value": {
+                "operator": "Variables[0] (0.4) || RETURN",
+                "displayLines": "0.4",
+                "constants": [],
+                "variables": [
+                  0.4
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Find New Target",
+          "from": "Single Target (Primary)",
+          "searchRandom": true,
+          "maxTargets": 1,
+          "ifTargetFound": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Random Chance",
+                "chance": {
+                  "operator": "Variables[0] (_Dr_Ratio_InsertChance) || RETURN",
+                  "displayLines": "_Dr_Ratio_InsertChance",
+                  "constants": [],
+                  "variables": [
+                    "_Dr_Ratio_InsertChance"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Single Target (Primary)",
+                  "modifier": "Dr_Ratio_Insert_Flag"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "_DebuffCount",
+            "compareType": ">",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Trace Activated",
+                "conditionList": "Summation"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_DebuffCount",
+                    "compareType": ">=",
+                    "value2": 5
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_EffDebuffCount",
+                      "value": 5
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_EffDebuffCount",
+                      "value": {
+                        "operator": "Variables[0] (_DebuffCount) || RETURN",
+                        "displayLines": "_DebuffCount",
+                        "constants": [],
+                        "variables": [
+                          "_DebuffCount"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_SkillTree_SkillFlag",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Summation"
+          },
+          "passed": [
+            {
+              "name": "Looped Event",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_DebuffCount",
+                "compareType": ">=",
+                "value2": 1
+              },
+              "Event": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_DebuffCount",
+                  "value": {
+                    "operator": "Variables[0] (_DebuffCount) || Constants[0] (1) || SUB || RETURN",
+                    "displayLines": "(_DebuffCount - 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "_DebuffCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_DebuffCount",
+                    "compareType": "<",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_DebuffCount",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Eidolon Activated",
+                        "eidolon": 1
+                      },
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "Summation"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Caster",
+                      "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
+                        "displayLines": "(6 + 4)",
+                        "constants": [],
+                        "variables": [
+                          6,
+                          4
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue01": {
+                          "operator": "Variables[0] (0.025) || RETURN",
+                          "displayLines": "0.025",
+                          "constants": [],
+                          "variables": [
+                            0.025
+                          ]
+                        },
+                        "MDF_PropertyValue02": {
+                          "operator": "Variables[0] (0.05) || RETURN",
+                          "displayLines": "0.05",
+                          "constants": [],
+                          "variables": [
+                            0.05
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Caster",
+                      "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+                      "stackLimit": {
+                        "operator": "Variables[0] (6) || RETURN",
+                        "displayLines": "6",
+                        "constants": [],
+                        "variables": [
+                          6
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue01": {
+                          "operator": "Variables[0] (0.025) || RETURN",
+                          "displayLines": "0.025",
+                          "constants": [],
+                          "variables": [
+                            0.025
+                          ]
+                        },
+                        "MDF_PropertyValue02": {
+                          "operator": "Variables[0] (0.05) || RETURN",
+                          "displayLines": "0.05",
+                          "constants": [],
+                          "variables": [
+                            0.05
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Looped Event",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_EffDebuffCount",
+                "compareType": ">=",
+                "value2": 1
+              },
+              "Event": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_EffDebuffCount",
+                  "value": {
+                    "operator": "Variables[0] (_EffDebuffCount) || Constants[0] (1) || SUB || RETURN",
+                    "displayLines": "(_EffDebuffCount - 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "_EffDebuffCount"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": "Caster",
+            "modifier": "Dr_Ratio_Insert_Flag_Caster"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Trace Activated",
+            "conditionList": "Inference"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Single Target (Primary)",
+              "modifier": "Dr_Ratio_Slow[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
+              "duration": {
+                "operator": "Variables[0] (2) || RETURN",
+                "displayLines": "2",
+                "constants": [],
+                "variables": [
+                  2
+                ]
+              },
+              "baseChance": {
+                "operator": "Variables[0] (1) || RETURN",
+                "displayLines": "1",
+                "constants": [],
+                "variables": [
+                  1
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue": {
+                  "operator": "Variables[0] (0.1) || RETURN",
+                  "displayLines": "0.1",
+                  "constants": [],
+                  "variables": [
+                    0.1
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": "Caster",
+            "modifier": "Dr_Ratio_Insert_Flag_Caster"
+          },
+          "passed": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "Dr_Ratio_InsertAbility"
+            }
+          ]
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_SkillTree_SkillFlag",
+          "value": 1
+        },
+        "Trigger: Ability End"
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Slow[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_PropertyValue)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_PropertyValue"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_Dr_RatioAttack",
+            "_Dr_Ratio_00_EnergyBar_Flag",
+            "_SkillTree_SkillFlag"
+          ],
+          "description": "Effect RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Debuff",
+          "effectName": "Effect RES Reduction",
+          "statusName": "Effect RES Reduction"
+        }
+      ]
+    },
+    "DrRatio_Dr_Ratio_Ability02_Part01": {
+      "fileName": "DrRatio_Dr_Ratio_Ability02_Part01",
+      "abilityType": "Skill",
+      "energy": 30,
+      "toughnessList": [
+        20,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Dr_Ratio_Ability02_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": []
+    },
+    "DrRatio_Dr_Ratio_Ability01_Part02": {
+      "fileName": "DrRatio_Dr_Ratio_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Dr_RatioAttack",
+          "value": 0
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
+          "value": 0
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "Caster",
+          "modifier": "Dr_Ratio_Insert_Flag_Caster"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": "All Enemies(All)",
+          "modifier": "Dr_Ratio_Insert_Flag"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": "Single Target (Primary)",
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Imaginary",
+            "Damage": {
+              "operator": "Variables[0] (1) || RETURN",
+              "displayLines": "1",
+              "constants": [],
+              "variables": [
+                1
+              ]
+            },
+            "Toughness": {
+              "operator": "Variables[0] (ST Toughness Value) || RETURN",
+              "displayLines": "ST Toughness Value",
+              "constants": [],
+              "variables": [
+                "ST Toughness Value"
+              ]
+            },
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "references": []
+    },
+    "DrRatio_Dr_Ratio_Ability01_Part01": {
+      "fileName": "DrRatio_Dr_Ratio_Ability01_Part01",
+      "abilityType": "Basic ATK",
+      "energy": 20,
+      "toughnessList": [
+        10,
+        0,
+        0
+      ],
+      "parse": [
+        "Deleted bullshit",
+        {
+          "name": "Trigger Ability",
+          "from": "Caster",
+          "ability": "Dr_Ratio_Ability01_Part02",
+          "isTrigger": true
+        }
+      ],
+      "references": []
+    },
+    "DrRatio_Modifiers": {
+      "fileName": "DrRatio_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_InsertAbility",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": "Caster",
+                  "modifier": "Dr_Ratio_InsertAbility"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": "Caster",
+                  "modifier": "Dr_Ratio_InsertAbility"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Eidolon6_CD"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Follow-up"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
+                        "displayLines": "MDF_PropertyValue",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_PropertyValue"
+          ],
+          "latentQueue": [
+            "_Dr_Ratio_00_EnergyBar_Flag"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_PointB3_Modifier",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Status Counter",
+                  "target": "Use Prior Target(s) Defined",
+                  "variableName": "MDF_DebuffNumber"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_DebuffNumber",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_PointB3DebuffCount) || RETURN",
+                      "displayLines": "MDF_PointB3DebuffCount",
+                      "constants": [],
+                      "variables": [
+                        "MDF_PointB3DebuffCount"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": "Owner of this Modifier",
+                      "scope": "ContextModifier",
+                      "variableName": "MDF_PropertyValueChange",
+                      "value": {
+                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
+                        "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
+                        "constants": [],
+                        "variables": [
+                          "MDF_PropertyValue",
+                          "MDF_DebuffNumber"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_PropertyValueChange",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
+                          "displayLines": "MDF_PropertyValueMax",
+                          "constants": [],
+                          "variables": [
+                            "MDF_PropertyValueMax"
+                          ]
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": "Owner of this Modifier",
+                          "scope": "ContextModifier",
+                          "variableName": "MDF_PropertyValueChange",
+                          "value": {
+                            "operator": "Variables[0] (MDF_PropertyValueMax) || RETURN",
+                            "displayLines": "MDF_PropertyValueMax",
+                            "constants": [],
+                            "variables": [
+                              "MDF_PropertyValueMax"
+                            ]
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": "Owner of this Modifier",
+                          "scope": "ContextModifier",
+                          "variableName": "MDF_PropertyValueChange",
+                          "value": {
+                            "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_DebuffNumber) || MUL || RETURN",
+                            "displayLines": "(MDF_PropertyValue * MDF_DebuffNumber)",
+                            "constants": [],
+                            "variables": [
+                              "MDF_PropertyValue",
+                              "MDF_DebuffNumber"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": "Owner of this Modifier",
+                      "scope": "ContextModifier",
+                      "variableName": "MDF_PropertyValueChange",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "name": "Adjust Target Stats",
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValueChange) || RETURN",
+                    "displayLines": "MDF_PropertyValueChange",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValueChange"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": "Owner of this Modifier",
+                  "scope": "ContextModifier",
+                  "variableName": "MDF_PropertyValueChange",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": "Owner of this Modifier",
+                  "scope": "ContextModifier",
+                  "variableName": "MDF_DebuffNumber",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": "Owner of this Modifier",
+                  "scope": "ContextModifier",
+                  "variableName": "MDF_PropertyValueChange",
+                  "value": 0
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": "Owner of this Modifier",
+                  "scope": "ContextModifier",
+                  "variableName": "MDF_DebuffNumber",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_PropertyValue",
+            "MDF_PropertyValueMax",
+            "MDF_PointB3DebuffCount"
+          ],
+          "latentQueue": []
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Insert_Flag_Caster",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": "Caster",
+                  "modifier": "Dr_Ratio_InsertAbility"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Dr_RatioAttack",
+                  "value": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Insert_Flag_ByTeamMate",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Dr_Ratio_00_EnergyBar_Flag",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Skill03_Insert_Flag",
+                    "compareType": ">=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Skill03_Insert_Flag",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Insert_Flag",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_Insert_Flag",
+                    "compareType": ">=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Caster",
+                      "modifier": "Dr_Ratio_Insert_Flag_Caster",
+                      "valuePerStack": {
+                        "MDF_Ability03_Insert_Flag": 1,
+                        "MDF_Insert_Flag_ByTeamMate": 1
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_Insert_Flag",
+                      "value": 0
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Caster",
+                      "modifier": "Dr_Ratio_Insert_Flag_Caster",
+                      "valuePerStack": {
+                        "MDF_Ability03_Insert_Flag": 0,
+                        "MDF_Insert_Flag_ByTeamMate": 0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [],
+          "latentQueue": [
+            "_Dr_RatioAttack",
+            "_Dr_Ratio_00_EnergyBar_Flag"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Ability03_InsertAbility",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": "Caster",
+                    "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "Dr_Ratio_InsertAbility"
+                    }
+                  ]
+                },
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_SkillTree_SkillFlag",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_SkillTree_SkillFlag",
+                      "value": 0
+                    },
+                    {
+                      "name": "UI Display Event (On Entity)",
+                      "target": "Owner of this Modifier",
+                      "popUpText": "CRIT Rate and CRIT DMG Boost"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": "Owner of this Modifier",
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "modifierName": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue01) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyValue01 * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue01",
+                      "MDF_Layer"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": "Owner of this Modifier",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue02) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(MDF_PropertyValue02 * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue02",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_PropertyValue01",
+            "MDF_PropertyValue02"
+          ],
+          "latentQueue": [
+            "_Dr_RatioAttack",
+            "_Dr_Ratio_00_EnergyBar_Flag",
+            "_SkillTree_SkillFlag"
+          ],
+          "description": "Every stack increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_PropertyValue01</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue02</span>.",
+          "type": "Buff",
+          "statusName": "Summation",
+          "stackLimit": 20
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
+          "stackType": "ReplaceByCaster",
+          "modifierFlags": [
+            "RemoveWhenCasterDead",
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": "All Enemies(All)",
+                  "searchRandom": true,
+                  "includeDyingTargets": true,
+                  "maxTargets": 10,
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": "Use Prior Target(s) Defined",
+                    "target2": "Owner of this Modifier",
+                    "invertCondition": true
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Dr_Ratio_00_EnergyBar",
+                  "value": 0
+                },
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "value": 0,
+                  "priorState": "Normal"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "_Skill03_InsertMaxCount",
+                  "value": 0
+                },
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Update Displayed Energy Bar",
+                  "priorState": "Active",
+                  "bar#": 3
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_TheFoolSpecialMark_DebuffNumber",
+                  "value": 100
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
+                    "compareType": ">",
+                    "value2": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Dr_Ratio_00_EnergyBar",
+                      "value": {
+                        "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
+                        "displayLines": "(2 + 1)",
+                        "constants": [],
+                        "variables": [
+                          2,
+                          1
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
+                        "displayLines": "_Dr_Ratio_00_EnergyBar",
+                        "constants": [],
+                        "variables": [
+                          "_Dr_Ratio_00_EnergyBar"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] (_Dr_Ratio_Rank06_Skill03_InsertMaxCount) || RETURN",
+                        "displayLines": "_Dr_Ratio_Rank06_Skill03_InsertMaxCount",
+                        "constants": [],
+                        "variables": [
+                          "_Dr_Ratio_Rank06_Skill03_InsertMaxCount"
+                        ]
+                      },
+                      "assignState": "True",
+                      "priorState": "Active",
+                      "bar#": 3,
+                      "cooldown": 0
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_Dr_Ratio_00_EnergyBar",
+                      "value": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Update Displayed Energy Bar",
+                      "value": {
+                        "operator": "Variables[0] (_Dr_Ratio_00_EnergyBar) || RETURN",
+                        "displayLines": "_Dr_Ratio_00_EnergyBar",
+                        "constants": [],
+                        "variables": [
+                          "_Dr_Ratio_00_EnergyBar"
+                        ]
+                      },
+                      "maximum": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "assignState": "True",
+                      "priorState": "Active",
+                      "bar#": 3,
+                      "cooldown": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Attacked Start [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": "Use Prior Target(s) Defined",
+                        "team": "TeamLight"
+                      },
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Current Action Holder Is",
+                          "target": "Caster"
+                        }
+                      },
+                      {
+                        "name": "Is Entity a Battle Event/Summon",
+                        "target": "Use Prior Target(s) Defined",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "_Dr_Ratio_00_EnergyBar",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": "Caster",
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Modifier",
+                        "target": "Caster",
+                        "modifier": "Dr_Ratio_Insert_Flag_Caster",
+                        "invertCondition": true
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Eidolon Activated",
+                            "eidolon": 6
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": "Owner of this Modifier",
+                              "modifier": "Dr_Ratio_Insert_Flag",
+                              "valuePerStack": {
+                                "MDF_Insert_Flag": 1,
+                                "MDF_Eidolon6_Flag": 1
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": "Owner of this Modifier",
+                              "modifier": "Dr_Ratio_Insert_Flag",
+                              "valuePerStack": {
+                                "MDF_Insert_Flag": 1,
+                                "MDF_Eidolon6_Flag": 0
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": "Caster",
+                        "modifier": "Dr_Ratio_Insert_Flag_Caster"
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": "Use Prior Target(s) Defined",
+                        "team": "TeamLight"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Has Flag",
+                        "target": "Caster",
+                        "flagName": "STAT_CTRL"
+                      },
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": "Caster",
+                          "modifier": "Dr_Ratio_Ability03_InsertAbility"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ultimate [Anyone]: Start[?]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": "Use Prior Target(s) Defined",
+                    "target2": "Caster"
+                  },
+                  "passed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking Modifier Instance [Owner]",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_TheFoolSpecialMark_DebuffNumber",
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Injected Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "Toggle Skill Mark"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Update Target Selected(UI) [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": "Current Action Owner",
+                        "target2": "Caster",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Has Flag",
+                        "target": "Caster",
+                        "flagName": "STAT_CTRL",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Target is Unselectable",
+                        "target": "Owner of this Modifier",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of",
+                        "of": "Current Visual Target(All)",
+                        "target": "Owner of this Modifier",
+                        "mustBeAlive2": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Toggle Skill Mark",
+                          "toggle": true,
+                          "trigger": "States_Active"
+                        },
+                        {
+                          "name": "Toggle Skill Mark",
+                          "toggle": true,
+                          "trigger": "Select_Selected"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Toggle Skill Mark",
+                          "toggle": true,
+                          "trigger": "States_Active"
+                        },
+                        {
+                          "name": "Toggle Skill Mark",
+                          "toggle": true,
+                          "trigger": "Select_UnSelected"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Toggle Skill Mark"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "stackData": [
+            "MDF_Skill03_InsertMaxCount"
+          ],
+          "latentQueue": [
+            "_Dr_RatioAttack",
+            "_Dr_Ratio_00_EnergyBar_Flag"
+          ],
+          "description": "After a target with \"Wiseman's Folly\" is attacked by Dr. Ratio's teammate(s), Dr. Ratio immediately launches a Follow-Up ATK once against this target. This effect can be triggered for a maximum of <span class=\"descriptionNumberColor\">MDF_Skill03_InsertMaxCount</span> times.",
+          "type": "Other",
+          "effectName": "Wiseman's Folly",
+          "statusName": "Wiseman's Folly"
+        }
+      ],
+      "references": []
+    },
+    "DrRatio_Functions": {
+      "fileName": "DrRatio_Functions",
+      "abilityType": "Char. Functions",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "length": 1,
+      "parse": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "Dr_Ratio_InsertAbility",
+          "parse": [
+            {
+              "name": "Find New Target",
+              "from": "All Hostile Entities (AOE)",
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Use Prior Target(s) Defined",
+                "modifier": "Dr_Ratio_Insert_Flag"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Inject Ability Use",
+                  "condition": {
+                    "name": "Insert Ability Condition",
+                    "type": "AbilityOwnerInsertUnusedCount",
+                    "typeValue": 1
+                  },
+                  "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
+                  "abilitySource": "Caster",
+                  "abilityTarget": "Use Prior Target(s) Defined",
+                  "priorityTag": "AvatarInsertAttackSelf",
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_CTRL",
+                    "DisableAction"
+                  ],
+                  "allowAbilityTriggers": false
+                }
+              ],
+              "noTargetFound": [
+                {
+                  "name": "Find New Target",
+                  "from": "All Hostile Entities (AOE)",
+                  "searchRandom": true,
+                  "maxTargets": 1,
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Target Exists",
+                        "target": "Use Prior Target(s) Defined[SUMMONER OF]",
+                        "living": true
+                      },
+                      {
+                        "name": "Living State",
+                        "state": "Anyone",
+                        "target": "Use Prior Target(s) Defined[SUMMONER OF]",
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Inject Ability Use",
+                      "condition": {
+                        "name": "Insert Ability Condition",
+                        "type": "AbilityOwnerInsertUnusedCount",
+                        "typeValue": 1
+                      },
+                      "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
+                      "abilitySource": "Caster",
+                      "abilityTarget": "Use Prior Target(s) Defined",
+                      "priorityTag": "AvatarInsertAttackSelf",
+                      "showInActionOrder": true,
+                      "abortFlags": [
+                        "STAT_CTRL",
+                        "DisableAction"
+                      ],
+                      "allowAbilityTriggers": false
+                    }
+                  ],
+                  "noTargetFound": [
+                    {
+                      "name": "Find New Target",
+                      "from": "All Hostile Entities (AOE)",
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "ifTargetFound": [
+                        {
+                          "name": "Inject Ability Use",
+                          "condition": {
+                            "name": "Insert Ability Condition",
+                            "type": "AbilityOwnerInsertUnusedCount",
+                            "typeValue": 1
+                          },
+                          "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
+                          "abilitySource": "Caster",
+                          "abilityTarget": "Use Prior Target(s) Defined",
+                          "priorityTag": "AvatarInsertAttackSelf",
+                          "showInActionOrder": true,
+                          "abortFlags": [
+                            "STAT_CTRL",
+                            "DisableAction"
+                          ],
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    }
+  }
+}

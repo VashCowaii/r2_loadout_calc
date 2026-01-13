@@ -76,6 +76,10 @@ let allowedCharacterList = [
     "trimName": "Luka"
   },
   {
+    "fullName": "Topaz & Numby",
+    "trimName": "TopazNumby"
+  },
+  {
     "fullName": "Qingque",
     "trimName": "Qingque"
   },
@@ -92,12 +96,20 @@ let allowedCharacterList = [
     "trimName": "JingYuan"
   },
   {
+    "fullName": "Blade",
+    "trimName": "Blade"
+  },
+  {
     "fullName": "Sushang",
     "trimName": "Sushang"
   },
   {
     "fullName": "Yukong",
     "trimName": "Yukong"
+  },
+  {
+    "fullName": "Fu Xuan",
+    "trimName": "FuXuan"
   },
   {
     "fullName": "Yanqing",
@@ -110,6 +122,14 @@ let allowedCharacterList = [
   {
     "fullName": "Bailu",
     "trimName": "Bailu"
+  },
+  {
+    "fullName": "Jingliu",
+    "trimName": "Jingliu"
+  },
+  {
+    "fullName": "Dan Heng • Imbibitor Lunae",
+    "trimName": "DanHengIL"
   },
   {
     "fullName": "Xueyi",
@@ -136,8 +156,16 @@ let allowedCharacterList = [
     "trimName": "Gallagher"
   },
   {
+    "fullName": "Argenti",
+    "trimName": "Argenti"
+  },
+  {
     "fullName": "Ruan Mei",
     "trimName": "RuanMei"
+  },
+  {
+    "fullName": "Dr. Ratio",
+    "trimName": "DrRatio"
   },
   {
     "fullName": "Sparkle",
