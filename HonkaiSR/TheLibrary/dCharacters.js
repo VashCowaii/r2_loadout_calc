@@ -13143,6 +13143,671 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Blade": {
+    "internalID": 1205,
+    "name": "Blade",
+    "path": "Destruction",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 543.312,
+      "DEFBase": 485.1,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 97,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "1120501",
+        "name": "Blade Cuts the Deepest in Hell",
+        "rank": 1,
+        "desc": "Enhanced Basic ATK and Ultimate deal additionally increased DMG to one designated enemy, with the increased amount equal to 150% of the tally of HP loss from Ultimate.",
+        "icon": "icon/skill/1120_rank1.png",
+        "paramsEido": [
+          1.5,
+          0.9
+        ]
+      },
+      {
+        "id": "1120502",
+        "name": "Ten Thousand Sorrows From One Broken Dream",
+        "rank": 2,
+        "desc": "When Blade is in the \"Hellscape\" state, his CRIT Rate increases by 15%.",
+        "icon": "icon/skill/1120_rank2.png",
+        "paramsEido": [
+          0.15
+        ]
+      },
+      {
+        "id": "1120503",
+        "name": "Hardened Blade Bleeds Coldest Shade",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1120_ultimate.png"
+      },
+      {
+        "id": "1120504",
+        "name": "Rejected by Death, Infected With Life",
+        "rank": 4,
+        "desc": "When Blade's current HP percentage drops from above 50% to 50% of his Max HP or lower, increases his Max HP by 20%. Stacks up to 2 time(s).",
+        "icon": "icon/skill/1120_rank4.png",
+        "paramsEido": [
+          0.2,
+          2
+        ]
+      },
+      {
+        "id": "1120505",
+        "name": "Death By Ten Lords' Gaze",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1120_skill.png"
+      },
+      {
+        "id": "1120506",
+        "name": "Reborn Into an Empty Husk",
+        "rank": 6,
+        "desc": "The maximum number of Charge stacks is reduced to 4. The Follow-Up ATK triggered by Talent deals additionally increased DMG, with the increased amount equal to 50% of Blade's Max HP.",
+        "icon": "icon/skill/1120_rank6.png",
+        "paramsEido": [
+          0.5
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Shard Sword": {
+          "variant1": {
+            "skillID": 1120501,
+            "trigger": "Skill01",
+            "name": "Shard Sword",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Blade's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill01_Camera",
+              "Avatar_AdvancedRen_00_Skill01_Phase01",
+              "Avatar_AdvancedRen_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Forest of Swords": {
+          "variant1": {
+            "skillID": 1120508,
+            "trigger": "Skill11",
+            "name": "Forest of Swords",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Consumes HP equal to #1[i]% of Blade's Max HP and deals Wind DMG equal to #2[i]% of his Max HP to one designated enemy. In addition, deals Wind DMG equal to #3[i]% of Blade's Max HP to adjacent targets.\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when using \"Forest of Swords.\"\\n\"Forest of Swords\" cannot regenerate Skill Points.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                0.1,
+                1.3,
+                0.52,
+                1.3,
+                0.4
+              ],
+              "7": [
+                0.1,
+                1.43,
+                0.572,
+                1.43,
+                0.44
+              ],
+              "8": [
+                0.1,
+                1.56,
+                0.624,
+                1.56,
+                0.48
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_AdvancedRen_00_Skill11_Phase01",
+              "Avatar_AdvancedRen_00_Skill11_Phase02",
+              "Avatar_Ren_00_Skill11_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Hellscape": {
+          "variant1": {
+            "skillID": 1120502,
+            "trigger": "Skill02",
+            "name": "Hellscape",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Consumes HP equal to #1[i]% of Blade's Max HP to enter the \"Hellscape\" state.\\nWhile \"Hellscape\" is active, his Skill cannot be used, his DMG dealt increases by #4[i]%, his chance of getting attacked by enemy targets greatly increases, and his Basic ATK \"Shard Sword\" is enhanced to \"Forest of Swords\" for #2[i] turn(s).\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when he uses his Skill.\\nThis Skill does not regenerate Energy. Using this Skill does not end the current turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.3,
+                3,
+                1,
+                0.295,
+                10
+              ],
+              "8": [
+                0.3,
+                3,
+                1,
+                0.33,
+                10
+              ],
+              "9": [
+                0.3,
+                3,
+                1,
+                0.365,
+                10
+              ],
+              "10": [
+                0.3,
+                3,
+                1,
+                0.4,
+                10
+              ],
+              "11": [
+                0.3,
+                3,
+                1,
+                0.428,
+                10
+              ],
+              "12": [
+                0.3,
+                3,
+                1,
+                0.456,
+                10
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill02_Camera",
+              "Avatar_AdvancedRen_00_Skill02_Phase01",
+              "Avatar_AdvancedRen_00_Skill02_Phase02",
+              "Avatar_AdvancedRen_00_Bonus",
+              "Avatar_Ren_00_Bonus_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Death Sentence": {
+          "variant1": {
+            "skillID": 1120503,
+            "trigger": "Skill03",
+            "name": "Death Sentence",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Sets Blade's current HP to 50% of his Max HP and deals Wind DMG to one enemy equal to #1[i]% of his Max HP plus #5[i]% of the tally of Blade's HP loss in the current battle. At the same time, deals Wind DMG to adjacent targets equal to #3[f1]% of his Max HP plus #6[i]% of the tally of his HP loss in the current battle.\\nThe tally of Blade's HP loss in the current battle is capped at #7[i]% of his Max HP. This value will be reset and re-accumulated after his Ultimate has been used.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.275,
+                0.85,
+                0.51,
+                0.425,
+                1.02,
+                0.51,
+                0.9
+              ],
+              "8": [
+                1.35,
+                0.9,
+                0.54,
+                0.45,
+                1.08,
+                0.54,
+                0.9
+              ],
+              "9": [
+                1.425,
+                0.95,
+                0.57,
+                0.475,
+                1.14,
+                0.57,
+                0.9
+              ],
+              "10": [
+                1.5,
+                1,
+                0.6,
+                0.5,
+                1.2,
+                0.6,
+                0.9
+              ],
+              "11": [
+                1.56,
+                1.04,
+                0.624,
+                0.52,
+                1.248,
+                0.624,
+                0.9
+              ],
+              "12": [
+                1.62,
+                1.08,
+                0.648,
+                0.54,
+                1.296,
+                0.648,
+                0.9
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill03_Camera",
+              "Avatar_AdvancedRen_00_Skill03_EnterReady",
+              "Avatar_AdvancedRen_00_Skill03_Phase01",
+              "Avatar_AdvancedRen_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Shuhu's Gift": {
+          "variant1": {
+            "skillID": 1120504,
+            "trigger": "SkillP01",
+            "name": "Shuhu's Gift",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "When Blade sustains DMG or consumes his HP, he gains 1 stack of Charge, stacking up to 5 times. A max of 1 Charge stack can be gained every time he is attacked.\\nWhen Charge stack reaches maximum, immediately launches 1 instance of Follow-Up ATK on all enemies, dealing Wind DMG equal to #2[i]% of Blade's Max HP. At the same time, restores Blade's HP by #3[i]% of his Max HP. After the Follow-Up ATK, all Charges are consumed.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                3,
+                1.05625,
+                0.25,
+                1.05625
+              ],
+              "8": [
+                3,
+                1.1375,
+                0.25,
+                1.1375
+              ],
+              "9": [
+                3,
+                1.21875,
+                0.25,
+                1.21875
+              ],
+              "10": [
+                3,
+                1.3,
+                0.25,
+                1.3
+              ],
+              "11": [
+                3,
+                1.365,
+                0.25,
+                1.365
+              ],
+              "12": [
+                3,
+                1.43,
+                0.25,
+                1.43
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_Passive_Camera",
+              "Avatar_AdvancedRen_00_PassiveSkill01",
+              "Avatar_AdvancedRen_00_Passive1Atk_Ability",
+              "Avatar_AdvancedRen_00_Passive1Atk02_Ability"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Karma Wind": {
+          "variant1": {
+            "skillID": 1120507,
+            "trigger": "SkillMaze",
+            "name": "Karma Wind",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering combat, consumes #2[i]% of Blade's Max HP while dealing Wind DMG equal to #1[i]% of his Max HP to all enemies.\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when this Technique is used.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_AdvancedRen_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1205_basic_atk.png",
+        "skillRef": {
+          "skillName": "Shard Sword",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1205_skill.png",
+        "skillRef": {
+          "skillName": "Hellscape",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1205_ultimate.png",
+        "skillRef": {
+          "skillName": "Death Sentence",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1205_talent.png",
+        "skillRef": {
+          "skillName": "Shuhu's Gift",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1205_technique.png",
+        "skillRef": {
+          "skillName": "Karma Wind",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Vita Infinita",
+        "icon": "icon/skill/1205_skilltree1.png",
+        "desc": "When Blade uses Ultimate, the amount cleared from the tally of HP loss is changed to #1[i]%.",
+        "params": [
+          0.5
+        ]
+      },
+      "Point07": {
+        "name": "Neverending Deaths",
+        "icon": "icon/skill/1205_skilltree2.png",
+        "desc": "HP restored from healing increases by #2[i]%. After receiving healing, converts #1[i]% of the healed amount to Ultimate's tally of HP loss.",
+        "params": [
+          0.25,
+          0.2
+        ]
+      },
+      "Point08": {
+        "name": "Cyclone of Destruction",
+        "icon": "icon/skill/1205_skilltree3.png",
+        "desc": "Increases Follow-Up ATK DMG from Talent by #1[i]% and additionally regenerates #2[i] Energy.",
+        "params": [
+          0.2,
+          15
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.2,
+              15
+            ]
+          }
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1205.png",
+    "preview": "image/character_preview/1205.png",
+    "portrait": "image/character_portrait/1205.png",
+    "bannerOffsets": [
+      0,
+      -91,
+      0.52,
+      0,
+      -91,
+      0.52,
+      0,
+      -91,
+      0.52
+    ],
+    "isBuffed": true
+  },
   "Sushang": {
     "internalID": 1206,
     "name": "Sushang",

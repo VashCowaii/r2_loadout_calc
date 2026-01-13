@@ -4117,6 +4117,7 @@ const megaParsingFuckery = {
             "name",
             "target",
             "setValue",
+            "clearNegativeHP",
             
             // "EnergyGainPercent",
             // "healPercent",
@@ -4135,6 +4136,10 @@ const megaParsingFuckery = {
             ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>
         <div class="modifierDetailsBox">
+            ${parseRef.clearNegativeHP != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Clears Negative HP:</div>&nbsp;
+                ${parseRef.clearNegativeHP}
+            </div>` : ""}
             ${parseRef.setValue != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Heal Flat:</div>&nbsp;
                 ${parseRef.setValue.displayLines ?? parseRef.setValue}
