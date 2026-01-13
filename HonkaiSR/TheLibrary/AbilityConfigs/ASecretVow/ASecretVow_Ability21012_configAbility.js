@@ -1,0 +1,93 @@
+const configAbility = {
+  "fileName": "ASecretVow_Ability21012",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "LC_21012_Main"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "LC_21012_Main",
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "Define Custom Variable with HP%",
+              "target": "Owner of this Modifier",
+              "variableName": "_CasterRatio"
+            },
+            {
+              "name": "Define Custom Variable with HP%",
+              "target": "Target Receiving DMG",
+              "variableName": "_TargetRatio"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "_TargetRatio",
+                "compareType": ">=",
+                "value2": {
+                  "operator": "Variables[0] (_CasterRatio) || RETURN",
+                  "displayLines": "_CasterRatio",
+                  "constants": [],
+                  "variables": [
+                    "_CasterRatio"
+                  ]
+                }
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (0.2) || RETURN",
+                    "displayLines": "0.2",
+                    "constants": [],
+                    "variables": [
+                      0.2
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ],
+  "isLightcone": true,
+  "desc": "Increases DMG dealt by the wearer by #1[i]%. The wearer also deals an extra #2[i]% of DMG to enemies whose current HP percentage is equal to or higher than the wearer's current HP percentage.",
+  "params": [
+    [
+      0.2,
+      0.2
+    ],
+    [
+      0.25,
+      0.25
+    ],
+    [
+      0.3,
+      0.3
+    ],
+    [
+      0.35,
+      0.35
+    ],
+    [
+      0.4,
+      0.4
+    ]
+  ]
+}

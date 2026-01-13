@@ -1741,7 +1741,7 @@ const megaParsingFuckery = {
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Define with DMG Data:</div>&nbsp;
-            ${parseRef.variableName} = ${parseRef.value.displayLines ?? parseRef.value} from ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            ${parseRef.variableName} = ${parseRef.value?.displayLines ?? parseRef.value} from ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>
         <div class="modifierDetailsBox">
             ${parseRef.context != undefined ? `<div class="actionDetailBody2">
@@ -3155,12 +3155,24 @@ const megaParsingFuckery = {
             ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         </div>`;
     },
+    "Event was Triggered by Modifier's Self"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "target",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Event was Triggered by Modifier's Self");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>
+        </div>`;
+    },
     "Current Turn's Action Phase is Over"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             // "target",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Current Turn Is");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Current Turn's Action Phase is Over");
 
         // initialCounter++;
         return `<div class="actionDetailBody">

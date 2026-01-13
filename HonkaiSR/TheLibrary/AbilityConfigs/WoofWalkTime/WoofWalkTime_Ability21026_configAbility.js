@@ -1,0 +1,101 @@
+const configAbility = {
+  "fileName": "WoofWalkTime_Ability21026",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "LC_21026_Main"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "LC_21026_Sub",
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Has Flag",
+                    "target": "Use Prior Target(s) Defined",
+                    "flagName": "STAT_DOT_Bleed"
+                  },
+                  {
+                    "name": "Has Flag",
+                    "target": "Use Prior Target(s) Defined",
+                    "flagName": "STAT_DOT_Burn"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (0.16) || RETURN",
+                    "displayLines": "0.16",
+                    "constants": [],
+                    "variables": [
+                      0.16
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "LC_21026_Main",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Caster",
+              "modifier": "LC_21026_Sub"
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ],
+  "isLightcone": true,
+  "desc": "Increases the wearer's ATK by #1[i]%, and increases their DMG to enemies afflicted with Burn or Bleed by #2[i]%. This also applies to DoT.",
+  "params": [
+    [
+      0.1,
+      0.16
+    ],
+    [
+      0.125,
+      0.2
+    ],
+    [
+      0.15,
+      0.24
+    ],
+    [
+      0.175,
+      0.28
+    ],
+    [
+      0.2,
+      0.32
+    ]
+  ]
+}
