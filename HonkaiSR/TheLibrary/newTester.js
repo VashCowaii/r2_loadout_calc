@@ -5354,6 +5354,7 @@ const megaParsingFuckery = {
             "compareType",
             "value2",
             "target",
+            "skillOwner",
             "valueType",
             "contextScope",
             "invertCondition",
@@ -5365,9 +5366,17 @@ const megaParsingFuckery = {
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.value1?.displayLines ?? parseRef.value1 ?? ""}${parseRef.valueType ? `(Type: ${parseRef.valueType})` : ""}${parseRef.changeIndex != undefined ? `(Index[${parseRef.changeIndex}])` : ""} ${parseRef.invertCondition ? "NOT_" : ""}${parseRef.compareType} ${parseRef.value2?.displayLines ?? parseRef.value2} ${parseRef.target ? `on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+            ${parseRef.value1?.displayLines ?? parseRef.value1 ?? ""}${parseRef.valueType ? `(Type: ${parseRef.valueType})` : ""}${parseRef.changeIndex != undefined ? `(Index[${parseRef.changeIndex}])` : ""} ${parseRef.invertCondition ? "NOT_" : ""}${parseRef.compareType} ${parseRef.value2?.displayLines ?? parseRef.value2}
         </div>
         <div class="modifierDetailsBox">
+            ${parseRef.target != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
+                ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            </div>` : ""}
+            ${parseRef.skillOwner != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Skill Owner Target:</div>&nbsp;
+                ${Array.isArray(parseRef.skillOwner) ? megaParsingFuckery.makeConditionTargetBox(parseRef.skillOwner,initialCounter) : parseRef.skillOwner}
+            </div>` : ""}
             ${parseRef.contextScope != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
                 ${parseRef.contextScope}
@@ -6930,8 +6939,9 @@ const megaParsingFuckery = {
             "failed",
             "includeTargetsInLimbo",
             "flagFilter",
+            "priority",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modifier Construction");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Reconstruct Modifier");
 
         let parseString = "";
         let refString = "";
@@ -7002,6 +7012,12 @@ const megaParsingFuckery = {
                     <div class="rotationConditionOperatorHeaderInline">Flag Filter:</div>&nbsp;
                     ${parseRef.flagFilter}
                 </div>` : ""}
+                ${parseRef.priority ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Priority Tag:</div>&nbsp;
+                    ${parseRef.priority}
+                </div>` : ""}
+
+                
 
                 
                 ${parseRef.target ? `<div class="actionDetailBody2">
@@ -7063,6 +7079,7 @@ const megaParsingFuckery = {
             "type",
             "effectName",
             "statusName",
+            "priority",
 
             "modifierFunctions",
             "subModList",
@@ -7134,6 +7151,10 @@ const megaParsingFuckery = {
                 ${parseRef.targetRestrictionFor ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Restrict Targets For:</div>&nbsp;
                     ${parseRef.targetRestrictionFor}
+                </div>` : ""}
+                ${parseRef.priority != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Priority Tag:</div>&nbsp;
+                    ${parseRef.priority}
                 </div>` : ""}
                 ${parseRef.duration != undefined ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Duration:</div>&nbsp;

@@ -17204,6 +17204,663 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Jingliu": {
+    "internalID": 1212,
+    "name": "Jingliu",
+    "path": "Destruction",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1435.8960000000002,
+      "SPDBase": 96,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "1121201",
+        "name": "Moon Crashes Tianguan Gate",
+        "rank": 1,
+        "desc": "When using Ultimate or Enhanced Skill, Jingliu's CRIT DMG increases by 36% for 1 turn(s). Moreover, additionally deals 1 instance of Ice DMG equal to 80% of Jingliu's Max HP to the primary target.",
+        "icon": "icon/skill/1121_rank1.png",
+        "paramsEido": [
+          0.36,
+          0.8,
+          1
+        ]
+      },
+      {
+        "id": "1121202",
+        "name": "Crescent Shadows Qixing Dipper",
+        "rank": 2,
+        "desc": "After using Ultimate, increases the DMG of the next Enhanced Skill by 80%.",
+        "icon": "icon/skill/1121_rank2.png",
+        "paramsEido": [
+          0.8
+        ]
+      },
+      {
+        "id": "1121203",
+        "name": "Halfmoon Gapes Mercurial Haze",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1121_ultimate.png"
+      },
+      {
+        "id": "1121204",
+        "name": "Lunarlance Shines Skyward Dome",
+        "rank": 4,
+        "desc": "During the \"Spectral Transmigration\" state, each \"Moonlight\" stack additionally increases CRIT DMG by 20%.",
+        "icon": "icon/skill/1121_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "1121205",
+        "name": "Night Shades Astral Radiance",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1121_skill.png"
+      },
+      {
+        "id": "1121206",
+        "name": "Eclipse Hollows Corporeal Husk",
+        "rank": 6,
+        "desc": "When Jingliu enters the \"Spectral Transmigration\" state, the \"Syzygy\" stack limit increases by 1, and Jingliu additionally gains 2 stack(s) of \"Syzygy.\" During the \"Spectral Transmigration\" state, her Ice RES PEN increases by 30%.",
+        "icon": "icon/skill/1121_rank6.png",
+        "paramsEido": [
+          2,
+          0.3
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lucent Moonglow": {
+          "variant1": {
+            "skillID": 1121201,
+            "trigger": "Skill01",
+            "name": "Lucent Moonglow",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Jingliu_Skill01_Camera",
+              "Avatar_Advanced_Jingliu_Skill01_Phase01",
+              "Avatar_Advanced_Jingliu_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Transcendent Flash": {
+          "variant1": {
+            "skillID": 1121202,
+            "trigger": "Skill02",
+            "name": "Transcendent Flash",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's Max HP to one designated enemy and gains #2[i] stack(s) of \"Syzygy.\"",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.21875,
+                1
+              ],
+              "8": [
+                1.3125,
+                1
+              ],
+              "9": [
+                1.40625,
+                1
+              ],
+              "10": [
+                1.5,
+                1
+              ],
+              "11": [
+                1.575,
+                1
+              ],
+              "12": [
+                1.65,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jingliu_Skill02_Camera",
+              "Avatar_Advanced_Jingliu_Skill02_Phase01",
+              "Avatar_Advanced_Jingliu_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Moon On Glacial River": {
+          "variant1": {
+            "skillID": 1121209,
+            "trigger": "Skill21",
+            "name": "Moon On Glacial River",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's Max HP to one designated enemy, and deals Ice DMG equal to #3[i]% of Jingliu's Max HP to adjacent targets. Consumes #2[i] stack(s) of \"Syzygy.\" Using this ability does not consume Skill Points.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.21875,
+                1,
+                0.609375
+              ],
+              "8": [
+                1.3125,
+                1,
+                0.65625
+              ],
+              "9": [
+                1.40625,
+                1,
+                0.703125
+              ],
+              "10": [
+                1.5,
+                1,
+                0.75
+              ],
+              "11": [
+                1.575,
+                1,
+                0.7875
+              ],
+              "12": [
+                1.65,
+                1,
+                0.825
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Jingliu_00_PassiveAtkReady_Ability",
+              "Avatar_Jingliu_PassiveAtk_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Florephemeral Dreamflux": {
+          "variant1": {
+            "skillID": 1121203,
+            "trigger": "Skill03",
+            "name": "Florephemeral Dreamflux",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's Max HP to one designated enemy, and deals Ice DMG equal to #3[i]% of Jingliu's Max HP to adjacent targets. Gains #2[i] stack(s) of \"Syzygy\" after the attack ends.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.4625,
+                1,
+                0.73125,
+                1
+              ],
+              "8": [
+                1.575,
+                1,
+                0.7875,
+                1
+              ],
+              "9": [
+                1.6875,
+                1,
+                0.84375,
+                1
+              ],
+              "10": [
+                1.8,
+                1,
+                0.9,
+                1
+              ],
+              "11": [
+                1.89,
+                1,
+                0.945,
+                1
+              ],
+              "12": [
+                1.98,
+                1,
+                0.99,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jingliu_00_Skill03_Camera",
+              "Avatar_Advanced_Jingliu_Skill03_Phase01",
+              "Avatar_Advanced_Jingliu_Skill03_Phase02",
+              "Avatar_Advanced_Jingliu_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Crescent Transmigration": {
+          "variant1": {
+            "skillID": 1121204,
+            "trigger": "SkillP01",
+            "name": "Crescent Transmigration",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When Jingliu has #5[i] stacks of \"Syzygy,\" she enters the \"Spectral Transmigration\" state with 1 extra stack of \"Syzygy\" gained, her action advanced by #6[i]%, and her CRIT Rate increased by #7[i]%. Then, Jingliu's Skill \"Transcendent Flash\" is enhanced to \"Moon On Glacial River,\" and only this enhanced Skill is available for use in battle. When Jingliu uses an attack in the Spectral Transmigration state, she consumes HP from her teammates equal to #2[i]% of their respective Max HP (this cannot reduce teammates' HP to lower than 1). During the \"Spectral Transmigration\" state, when ally targets receive DMG or consume HP, Jingliu gains 1 stack of \"Moonlight.\" Each \"Moonlight\" stack increases Jingliu's CRIT DMG by #3[i]%, stacking up to #4[i] time(s). Jingliu cannot enter the \"Spectral Transmigration\" state again until the current \"Spectral Transmigration\" state ends. \"Syzygy\" can stack up to 4 times. When \"Syzygy\" stacks become 0, Jingliu will exit the \"Spectral Transmigration\" state and remove all \"Moonlight.\" After ally targets receive DMG or consume HP for a total of #8[i] times, Jingliu gains 1 stack of \"Syzygy.\" Each attack received by each target is only counted once.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.3,
+                0.05,
+                0.3575,
+                5,
+                2,
+                1,
+                0.4625,
+                20
+              ],
+              "8": [
+                0.3,
+                0.05,
+                0.385,
+                5,
+                2,
+                1,
+                0.475,
+                20
+              ],
+              "9": [
+                0.3,
+                0.05,
+                0.4125,
+                5,
+                2,
+                1,
+                0.4875,
+                20
+              ],
+              "10": [
+                0.3,
+                0.05,
+                0.44,
+                5,
+                2,
+                1,
+                0.5,
+                20
+              ],
+              "11": [
+                0.3,
+                0.05,
+                0.462,
+                5,
+                2,
+                1,
+                0.51,
+                20
+              ],
+              "12": [
+                0.3,
+                0.05,
+                0.484,
+                5,
+                2,
+                1,
+                0.52,
+                20
+              ]
+            },
+            "element": "Ice",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Advanced_Jingliu_PassiveSkill01",
+              "Avatar_Jingliu_Passive_Camera",
+              "Avatar_Advanced_Jingliu_00_PassiveAtkReady_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Shine of Truth": {
+          "variant1": {
+            "skillID": 1121207,
+            "trigger": "SkillMaze",
+            "name": "Shine of Truth",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension around this unit that lasts for #3[i] seconds. All enemies in this Special Dimension will become Frozen. After entering combat with enemies in the Special Dimension, Jingliu immediately regenerates #6[i] Energy and obtains #1[i] stack(s) of \"Syzygy,\" with a #2[i]% base chance of Freezing enemy targets for #4[i] turn(s). While Frozen, enemy targets cannot take action, and take Ice Additional DMG equal to #5[i]% of Jingliu's Max HP at the start of every turn. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1,
+                20,
+                1,
+                0.8,
+                15
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Advanced_Jingliu_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1212_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lucent Moonglow",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1212_skill.png",
+        "skillRef": {
+          "skillName": "Transcendent Flash",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1212_ultimate.png",
+        "skillRef": {
+          "skillName": "Florephemeral Dreamflux",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1212_talent.png",
+        "skillRef": {
+          "skillName": "Crescent Transmigration",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1212_technique.png",
+        "skillRef": {
+          "skillName": "Shine of Truth",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point06": {
+        "name": "Deathrealm",
+        "icon": "icon/skill/1212_skilltree1.png",
+        "desc": "While in the \"Spectral Transmigration\" state, increases Effect RES by #1[i]%, and increases the Ultimate DMG dealt by #2[i]%.",
+        "params": [
+          0.35,
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Sword Champion",
+        "icon": "icon/skill/1212_skilltree2.png",
+        "desc": "After using \"Transcendent Flash,\" additionally regenerates #1[i] Energy. And after using \"Moon On Glacial River,\" additionally regenerates #2[i] Energy.",
+        "params": [
+          15,
+          8
+        ]
+      },
+      "Point08": {
+        "name": "Frost Wraith",
+        "icon": "icon/skill/1212_skilltree3.png",
+        "desc": "Upon obtaining \"Syzygy,\" if its stack limit has been reached, Jingliu's next attack ignores #1[i]% of the target's DEF.",
+        "params": [
+          0.25
+        ]
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1212.png",
+    "preview": "image/character_preview/1212.png",
+    "portrait": "image/character_portrait/1212.png",
+    "bannerOffsets": [
+      13,
+      -50,
+      0.57,
+      13,
+      -50,
+      0.57,
+      13,
+      -50,
+      0.57
+    ],
+    "isBuffed": true
+  },
   "Dan Heng • Imbibitor Lunae": {
     "internalID": 1213,
     "name": "Dan Heng • Imbibitor Lunae",
