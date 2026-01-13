@@ -86,6 +86,47 @@ let lightcones = {
       1.15
     ]
   },
+  "Collapsing Sky": {
+    "lightconeID": 20002,
+    "name": "Collapsing Sky",
+    "path": "Destruction",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 198.45,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Havoc",
+    "desc": "The wearer's Basic ATK and Skill deal #1[i]% more DMG.",
+    "params": [
+      [
+        0.2
+      ],
+      [
+        0.25
+      ],
+      [
+        0.3
+      ],
+      [
+        0.35
+      ],
+      [
+        0.4
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20002.png",
+    "preview": "image/light_cone_preview/20002.png",
+    "portrait": "image/light_cone_portrait/20002.png",
+    "imageOffset": [
+      0,
+      -78,
+      1.15
+    ]
+  },
   "Amber": {
     "lightconeID": 20003,
     "name": "Amber",
@@ -155,6 +196,52 @@ let lightcones = {
       1.15
     ]
   },
+  "Void": {
+    "lightconeID": 20004,
+    "name": "Void",
+    "path": "Nihility",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 264.6,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Fallen",
+    "desc": "At the start of the battle, the wearer's Effect Hit Rate increases by #1[i]% for #2[i] turn(s).",
+    "params": [
+      [
+        0.2,
+        3
+      ],
+      [
+        0.25,
+        3
+      ],
+      [
+        0.3,
+        3
+      ],
+      [
+        0.35,
+        3
+      ],
+      [
+        0.4,
+        3
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20004.png",
+    "preview": "image/light_cone_preview/20004.png",
+    "portrait": "image/light_cone_portrait/20004.png",
+    "imageOffset": [
+      0,
+      -163,
+      1.15
+    ]
+  },
   "Chorus": {
     "lightconeID": 20005,
     "name": "Chorus",
@@ -193,6 +280,47 @@ let lightcones = {
     "imageOffset": [
       0,
       -130,
+      1.15
+    ]
+  },
+  "Data Bank": {
+    "lightconeID": 20006,
+    "name": "Data Bank",
+    "path": "Erudition",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Learned",
+    "desc": "Increases DMG dealt by the wearer's Ultimate by #1[i]%.",
+    "params": [
+      [
+        0.28
+      ],
+      [
+        0.35
+      ],
+      [
+        0.42
+      ],
+      [
+        0.49
+      ],
+      [
+        0.56
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20006.png",
+    "preview": "image/light_cone_preview/20006.png",
+    "portrait": "image/light_cone_portrait/20006.png",
+    "imageOffset": [
+      0,
+      -186,
       1.15
     ]
   },
@@ -283,6 +411,52 @@ let lightcones = {
       1.15
     ]
   },
+  "Shattered Home": {
+    "lightconeID": 20009,
+    "name": "Shattered Home",
+    "path": "Destruction",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 198.45,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Eradication",
+    "desc": "The wearer deals #2[i]% more DMG to enemy targets whose HP percentage is greater than #1[i]%.",
+    "params": [
+      [
+        0.5,
+        0.2
+      ],
+      [
+        0.5,
+        0.25
+      ],
+      [
+        0.5,
+        0.3
+      ],
+      [
+        0.5,
+        0.35
+      ],
+      [
+        0.5,
+        0.4
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20009.png",
+    "preview": "image/light_cone_preview/20009.png",
+    "portrait": "image/light_cone_portrait/20009.png",
+    "imageOffset": [
+      0,
+      -90,
+      1.15
+    ]
+  },
   "Defense": {
     "lightconeID": 20010,
     "name": "Defense",
@@ -324,6 +498,47 @@ let lightcones = {
       1.15
     ]
   },
+  "Loop": {
+    "lightconeID": 20011,
+    "name": "Loop",
+    "path": "Nihility",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 264.6,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Pursuit",
+    "desc": "Increases DMG dealt from its wearer to Slowed enemies by #1[i]%.",
+    "params": [
+      [
+        0.24
+      ],
+      [
+        0.3
+      ],
+      [
+        0.36
+      ],
+      [
+        0.42
+      ],
+      [
+        0.48
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20011.png",
+    "preview": "image/light_cone_preview/20011.png",
+    "portrait": "image/light_cone_portrait/20011.png",
+    "imageOffset": [
+      0,
+      105,
+      1.15
+    ]
+  },
   "Meshing Cogs": {
     "lightconeID": 20012,
     "name": "Meshing Cogs",
@@ -362,6 +577,47 @@ let lightcones = {
     "imageOffset": [
       0,
       0,
+      1.15
+    ]
+  },
+  "Passkey": {
+    "lightconeID": 20013,
+    "name": "Passkey",
+    "path": "Erudition",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Epiphany",
+    "desc": "After the wearer uses their Skill, additionally regenerates #1[i] Energy. This effect cannot be repeatedly triggered in a single turn.",
+    "params": [
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ],
+      [
+        12
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20013.png",
+    "preview": "image/light_cone_preview/20013.png",
+    "portrait": "image/light_cone_portrait/20013.png",
+    "imageOffset": [
+      0,
+      150,
       1.15
     ]
   },
@@ -452,6 +708,52 @@ let lightcones = {
       1.15
     ]
   },
+  "Mutual Demise": {
+    "lightconeID": 20016,
+    "name": "Mutual Demise",
+    "path": "Destruction",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 198.45,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Legion",
+    "desc": "If the wearer's current HP percentage is lower than #1[i]%, CRIT Rate increases by #2[i]%.",
+    "params": [
+      [
+        0.8,
+        0.12
+      ],
+      [
+        0.8,
+        0.15
+      ],
+      [
+        0.8,
+        0.18
+      ],
+      [
+        0.8,
+        0.21
+      ],
+      [
+        0.8,
+        0.24
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20016.png",
+    "preview": "image/light_cone_preview/20016.png",
+    "portrait": "image/light_cone_portrait/20016.png",
+    "imageOffset": [
+      0,
+      114,
+      1.15
+    ]
+  },
   "Pioneering": {
     "lightconeID": 20017,
     "name": "Pioneering",
@@ -490,6 +792,47 @@ let lightcones = {
     "imageOffset": [
       0,
       85,
+      1.15
+    ]
+  },
+  "Hidden Shadow": {
+    "lightconeID": 20018,
+    "name": "Hidden Shadow",
+    "path": "Nihility",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 317.52,
+      "DEFBase": 264.6,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "Mechanism",
+    "desc": "After using Skill, the wearer's next Basic ATK deals Additional DMG equal to #1[i]% of ATK to the target enemy.",
+    "params": [
+      [
+        0.6
+      ],
+      [
+        0.75
+      ],
+      [
+        0.9
+      ],
+      [
+        1.05
+      ],
+      [
+        1.2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20018.png",
+    "preview": "image/light_cone_preview/20018.png",
+    "portrait": "image/light_cone_portrait/20018.png",
+    "imageOffset": [
+      0,
+      -90,
       1.15
     ]
   },
@@ -536,6 +879,52 @@ let lightcones = {
     "imageOffset": [
       0,
       20,
+      1.15
+    ]
+  },
+  "Sagacity": {
+    "lightconeID": 20020,
+    "name": "Sagacity",
+    "path": "Erudition",
+    "rarity": "3",
+    "baseStats": {
+      "ATKBase": 370.44000000000005,
+      "DEFBase": 264.6,
+      "HPBase": 740.8800000000001
+    },
+    "fixedStats": {},
+    "skillName": "Genius",
+    "desc": "When the wearer uses their Ultimate, increases ATK by #1[i]% for #2[i] turn(s).",
+    "params": [
+      [
+        0.24,
+        2
+      ],
+      [
+        0.3,
+        2
+      ],
+      [
+        0.36,
+        2
+      ],
+      [
+        0.42,
+        2
+      ],
+      [
+        0.48,
+        2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/20020.png",
+    "preview": "image/light_cone_preview/20020.png",
+    "portrait": "image/light_cone_portrait/20020.png",
+    "imageOffset": [
+      0,
+      30,
       1.15
     ]
   },
@@ -600,6 +989,52 @@ let lightcones = {
     "imageOffset": [
       0,
       -128,
+      1.15
+    ]
+  },
+  "Good Night and Sleep Well": {
+    "lightconeID": 21001,
+    "name": "Good Night and Sleep Well",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Toiler",
+    "desc": "For every debuff the target enemy has, the DMG dealt by the wearer increases by #1[i]%, stacking up to #2[i] time(s). This effect also applies to DoT.",
+    "params": [
+      [
+        0.12,
+        3
+      ],
+      [
+        0.15,
+        3
+      ],
+      [
+        0.18,
+        3
+      ],
+      [
+        0.21,
+        3
+      ],
+      [
+        0.24,
+        3
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21001.png",
+    "preview": "image/light_cone_preview/21001.png",
+    "portrait": "image/light_cone_portrait/21001.png",
+    "imageOffset": [
+      0,
+      10,
       1.15
     ]
   },
@@ -795,6 +1230,162 @@ let lightcones = {
       1.15
     ]
   },
+  "The Moles Welcome You": {
+    "lightconeID": 21005,
+    "name": "The Moles Welcome You",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 264.6,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {},
+    "skillName": "Fantastic Adventure",
+    "desc": "When the wearer uses Basic ATK, Skill, or Ultimate to attack enemies, the wearer gains one stack of Mischievous. Each stack increases the wearer's ATK by #1[i]%.",
+    "params": [
+      [
+        0.12
+      ],
+      [
+        0.15
+      ],
+      [
+        0.18
+      ],
+      [
+        0.21
+      ],
+      [
+        0.24
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21005.png",
+    "preview": "image/light_cone_preview/21005.png",
+    "portrait": "image/light_cone_portrait/21005.png",
+    "imageOffset": [
+      0,
+      -30,
+      1.15
+    ]
+  },
+  "The Birth of the Self": {
+    "lightconeID": 21006,
+    "name": "The Birth of the Self",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "The Maiden in the Painting",
+    "desc": "Increases DMG dealt by the wearer's Follow-Up ATKs by #1[i]%. If the current HP percentage of the enemy target is below or equal to #2[i]%, increases DMG dealt by Follow-Up ATKs by an extra #3[i]%.",
+    "params": [
+      [
+        0.24,
+        0.5,
+        0.24
+      ],
+      [
+        0.3,
+        0.5,
+        0.3
+      ],
+      [
+        0.36,
+        0.5,
+        0.36
+      ],
+      [
+        0.42,
+        0.5,
+        0.42
+      ],
+      [
+        0.48,
+        0.5,
+        0.48
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21006.png",
+    "preview": "image/light_cone_preview/21006.png",
+    "portrait": "image/light_cone_portrait/21006.png",
+    "imageOffset": [
+      0,
+      -130,
+      1.15
+    ]
+  },
+  "Eyes of the Prey": {
+    "lightconeID": 21008,
+    "name": "Eyes of the Prey",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "EffectHitRate": 0.2
+      },
+      "2": {
+        "EffectHitRate": 0.25
+      },
+      "3": {
+        "EffectHitRate": 0.3
+      },
+      "4": {
+        "EffectHitRate": 0.35
+      },
+      "5": {
+        "EffectHitRate": 0.4
+      }
+    },
+    "skillName": "Self-Confidence",
+    "desc": "Increases the wearer's Effect Hit Rate by #1[i]% and increases DoT by #2[i]%.",
+    "params": [
+      [
+        0.2,
+        0.24
+      ],
+      [
+        0.25,
+        0.3
+      ],
+      [
+        0.3,
+        0.36
+      ],
+      [
+        0.35,
+        0.42
+      ],
+      [
+        0.4,
+        0.48
+      ]
+    ],
+    "statRef": [
+      "StatusProbabilityBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21008.png",
+    "preview": "image/light_cone_preview/21008.png",
+    "portrait": "image/light_cone_portrait/21008.png",
+    "imageOffset": [
+      0,
+      -132,
+      1.15
+    ]
+  },
   "Landau's Choice": {
     "lightconeID": 21009,
     "name": "Landau's Choice",
@@ -928,6 +1519,116 @@ let lightcones = {
       1.15
     ]
   },
+  "A Secret Vow": {
+    "lightconeID": 21012,
+    "name": "A Secret Vow",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 264.6,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DamageAll": 0.2
+      },
+      "2": {
+        "DamageAll": 0.25
+      },
+      "3": {
+        "DamageAll": 0.3
+      },
+      "4": {
+        "DamageAll": 0.35
+      },
+      "5": {
+        "DamageAll": 0.4
+      }
+    },
+    "skillName": "Spare No Effort",
+    "desc": "Increases DMG dealt by the wearer by #1[i]%. The wearer also deals an extra #2[i]% of DMG to enemies whose current HP percentage is equal to or higher than the wearer's current HP percentage.",
+    "params": [
+      [
+        0.2,
+        0.2
+      ],
+      [
+        0.25,
+        0.25
+      ],
+      [
+        0.3,
+        0.3
+      ],
+      [
+        0.35,
+        0.35
+      ],
+      [
+        0.4,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "AllDamageTypeAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21012.png",
+    "preview": "image/light_cone_preview/21012.png",
+    "portrait": "image/light_cone_portrait/21012.png",
+    "imageOffset": [
+      0,
+      -132,
+      1.15
+    ]
+  },
+  "Make the World Clamor": {
+    "lightconeID": 21013,
+    "name": "Make the World Clamor",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "The Power of Sound",
+    "desc": "The wearer regenerates #2[i] Energy immediately upon entering battle, and increases DMG dealt by the wearer's Ultimate by #1[i]%.",
+    "params": [
+      [
+        0.32,
+        20
+      ],
+      [
+        0.4,
+        23
+      ],
+      [
+        0.48,
+        26
+      ],
+      [
+        0.56,
+        29
+      ],
+      [
+        0.64,
+        32
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21013.png",
+    "preview": "image/light_cone_preview/21013.png",
+    "portrait": "image/light_cone_portrait/21013.png",
+    "imageOffset": [
+      0,
+      -92,
+      1.15
+    ]
+  },
   "Perfect Timing": {
     "lightconeID": 21014,
     "name": "Perfect Timing",
@@ -995,6 +1696,57 @@ let lightcones = {
       -69,
       -188,
       1.5
+    ]
+  },
+  "Resolution Shines As Pearls of Sweat": {
+    "lightconeID": 21015,
+    "name": "Resolution Shines As Pearls of Sweat",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Glance Back",
+    "desc": "When the wearer hits an enemy and if the hit enemy is not already \"Ensnared,\" then there is a #1[i]% base chance to \"Ensnare\" the hit enemy. \"Ensnared\" enemies' DEF decreases by #2[i]% for #3[i] turn(s).",
+    "params": [
+      [
+        0.6,
+        0.12,
+        1
+      ],
+      [
+        0.7,
+        0.13,
+        1
+      ],
+      [
+        0.8,
+        0.14,
+        1
+      ],
+      [
+        0.9,
+        0.15,
+        1
+      ],
+      [
+        1,
+        0.16,
+        1
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21015.png",
+    "preview": "image/light_cone_preview/21015.png",
+    "portrait": "image/light_cone_portrait/21015.png",
+    "imageOffset": [
+      -22,
+      -163,
+      1.15
     ]
   },
   "Trend of the Universal Market": {
@@ -1158,6 +1910,144 @@ let lightcones = {
       1
     ]
   },
+  "Under the Blue Sky": {
+    "lightconeID": 21019,
+    "name": "Under the Blue Sky",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.2
+      },
+      "3": {
+        "ATK%": 0.24
+      },
+      "4": {
+        "ATK%": 0.28
+      },
+      "5": {
+        "ATK%": 0.32
+      }
+    },
+    "skillName": "Rye Under the Sun",
+    "desc": "Increases the wearer's ATK by #1[i]%. When the wearer defeats an enemy, the wearer's CRIT Rate increases by #2[i]% for #3[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        0.12,
+        3
+      ],
+      [
+        0.2,
+        0.15,
+        3
+      ],
+      [
+        0.24,
+        0.18,
+        3
+      ],
+      [
+        0.28,
+        0.21,
+        3
+      ],
+      [
+        0.32,
+        0.24,
+        3
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21019.png",
+    "preview": "image/light_cone_preview/21019.png",
+    "portrait": "image/light_cone_portrait/21019.png",
+    "imageOffset": [
+      0,
+      -10,
+      1.15
+    ]
+  },
+  "Geniuses' Repose": {
+    "lightconeID": 21020,
+    "name": "Geniuses' Repose",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.2
+      },
+      "3": {
+        "ATK%": 0.24
+      },
+      "4": {
+        "ATK%": 0.28
+      },
+      "5": {
+        "ATK%": 0.32
+      }
+    },
+    "skillName": "Each Now Has a Role to Play",
+    "desc": "Increases the wearer's ATK by #1[i]%. When the wearer defeats an enemy, the wearer's CRIT DMG increases by #2[i]% for #3[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        0.24,
+        3
+      ],
+      [
+        0.2,
+        0.3,
+        3
+      ],
+      [
+        0.24,
+        0.36,
+        3
+      ],
+      [
+        0.28,
+        0.42,
+        3
+      ],
+      [
+        0.32,
+        0.48,
+        3
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21020.png",
+    "preview": "image/light_cone_preview/21020.png",
+    "portrait": "image/light_cone_portrait/21020.png",
+    "imageOffset": [
+      79,
+      -94,
+      1.5
+    ]
+  },
   "Quid Pro Quo": {
     "lightconeID": 21021,
     "name": "Quid Pro Quo",
@@ -1202,6 +2092,70 @@ let lightcones = {
       0,
       -78,
       1.01
+    ]
+  },
+  "Fermata": {
+    "lightconeID": 21022,
+    "name": "Fermata",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.16
+      },
+      "2": {
+        "DamageBreak": 0.2
+      },
+      "3": {
+        "DamageBreak": 0.24
+      },
+      "4": {
+        "DamageBreak": 0.28
+      },
+      "5": {
+        "DamageBreak": 0.32
+      }
+    },
+    "skillName": "Semibreve Rest",
+    "desc": "Increases the wearer's Break Effect by #1[i]%, and increases their DMG to enemies afflicted with Shock or Wind Shear by #2[i]%. This also applies to DoT.",
+    "params": [
+      [
+        0.16,
+        0.16
+      ],
+      [
+        0.2,
+        0.2
+      ],
+      [
+        0.24,
+        0.24
+      ],
+      [
+        0.28,
+        0.28
+      ],
+      [
+        0.32,
+        0.32
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21022.png",
+    "preview": "image/light_cone_preview/21022.png",
+    "portrait": "image/light_cone_portrait/21022.png",
+    "imageOffset": [
+      0,
+      3,
+      1.15
     ]
   },
   "We Are Wildfire": {
@@ -1301,6 +2255,139 @@ let lightcones = {
       1.5
     ]
   },
+  "Woof! Walk Time!": {
+    "lightconeID": 21026,
+    "name": "Woof! Walk Time!",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.1
+      },
+      "2": {
+        "ATK%": 0.125
+      },
+      "3": {
+        "ATK%": 0.15
+      },
+      "4": {
+        "ATK%": 0.175
+      },
+      "5": {
+        "ATK%": 0.2
+      }
+    },
+    "skillName": "Run!",
+    "desc": "Increases the wearer's ATK by #1[i]%, and increases their DMG to enemies afflicted with Burn or Bleed by #2[i]%. This also applies to DoT.",
+    "params": [
+      [
+        0.1,
+        0.16
+      ],
+      [
+        0.125,
+        0.2
+      ],
+      [
+        0.15,
+        0.24
+      ],
+      [
+        0.175,
+        0.28
+      ],
+      [
+        0.2,
+        0.32
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21026.png",
+    "preview": "image/light_cone_preview/21026.png",
+    "portrait": "image/light_cone_portrait/21026.png",
+    "imageOffset": [
+      0,
+      -142,
+      1.15
+    ]
+  },
+  "The Seriousness of Breakfast": {
+    "lightconeID": 21027,
+    "name": "The Seriousness of Breakfast",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "DamageAll": 0.12
+      },
+      "2": {
+        "DamageAll": 0.15
+      },
+      "3": {
+        "DamageAll": 0.18
+      },
+      "4": {
+        "DamageAll": 0.21
+      },
+      "5": {
+        "DamageAll": 0.24
+      }
+    },
+    "skillName": "Get Ready",
+    "desc": "Increases the wearer's DMG by #1[i]%. For every enemy defeated by the wearer, the wearer's ATK increases by #2[i]%, stacking up to #3[i] time(s).",
+    "params": [
+      [
+        0.12,
+        0.04,
+        3
+      ],
+      [
+        0.15,
+        0.05,
+        3
+      ],
+      [
+        0.18,
+        0.06,
+        3
+      ],
+      [
+        0.21,
+        0.07,
+        3
+      ],
+      [
+        0.24,
+        0.08,
+        3
+      ]
+    ],
+    "statRef": [
+      "AllDamageTypeAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21027.png",
+    "preview": "image/light_cone_preview/21027.png",
+    "portrait": "image/light_cone_portrait/21027.png",
+    "imageOffset": [
+      0,
+      -78,
+      1.15
+    ]
+  },
   "Warmth Shortens Cold Nights": {
     "lightconeID": 21028,
     "name": "Warmth Shortens Cold Nights",
@@ -1362,6 +2449,47 @@ let lightcones = {
     "imageOffset": [
       0,
       -64,
+      1.15
+    ]
+  },
+  "We Will Meet Again": {
+    "lightconeID": 21029,
+    "name": "We Will Meet Again",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 330.75,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "A Discourse in Arms",
+    "desc": "After the wearer uses Basic ATK or Skill, deals Additional DMG equal to #1[i]% of the wearer's ATK to a random enemy that has been attacked.",
+    "params": [
+      [
+        0.48
+      ],
+      [
+        0.6
+      ],
+      [
+        0.72
+      ],
+      [
+        0.84
+      ],
+      [
+        0.96
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21029.png",
+    "preview": "image/light_cone_preview/21029.png",
+    "portrait": "image/light_cone_portrait/21029.png",
+    "imageOffset": [
+      0,
+      -100,
       1.15
     ]
   },
@@ -1544,6 +2672,226 @@ let lightcones = {
       1.15
     ]
   },
+  "Nowhere to Run": {
+    "lightconeID": 21033,
+    "name": "Nowhere to Run",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 264.6,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.24
+      },
+      "2": {
+        "ATK%": 0.3
+      },
+      "3": {
+        "ATK%": 0.36
+      },
+      "4": {
+        "ATK%": 0.42
+      },
+      "5": {
+        "ATK%": 0.48
+      }
+    },
+    "skillName": "Desperate Times",
+    "desc": "Increases the wearer's ATK by #1[i]%. Whenever the wearer defeats an enemy, they restore HP equal to #2[i]% of their ATK.",
+    "params": [
+      [
+        0.24,
+        0.12
+      ],
+      [
+        0.3,
+        0.15
+      ],
+      [
+        0.36,
+        0.18
+      ],
+      [
+        0.42,
+        0.21
+      ],
+      [
+        0.48,
+        0.24
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21033.png",
+    "preview": "image/light_cone_preview/21033.png",
+    "portrait": "image/light_cone_portrait/21033.png",
+    "imageOffset": [
+      0,
+      -124,
+      1.15
+    ]
+  },
+  "Today Is Another Peaceful Day": {
+    "lightconeID": 21034,
+    "name": "Today Is Another Peaceful Day",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 330.75,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "A Storm Is Coming",
+    "desc": "After entering battle, increases the wearer's DMG based on their Max Energy. Each point of Energy increases DMG by #1[f2]%. A max of #2[i] Energy will be taken into account for this.",
+    "params": [
+      [
+        0.0019999999,
+        160
+      ],
+      [
+        0.0025000002,
+        160
+      ],
+      [
+        0.0029999998,
+        160
+      ],
+      [
+        0.0035,
+        160
+      ],
+      [
+        0.0039999997,
+        160
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21034.png",
+    "preview": "image/light_cone_preview/21034.png",
+    "portrait": "image/light_cone_portrait/21034.png",
+    "imageOffset": [
+      0,
+      -77,
+      1.15
+    ]
+  },
+  "Before the Tutorial Mission Starts": {
+    "lightconeID": 22000,
+    "name": "Before the Tutorial Mission Starts",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "EffectHitRate": 0.2
+      },
+      "2": {
+        "EffectHitRate": 0.25
+      },
+      "3": {
+        "EffectHitRate": 0.3
+      },
+      "4": {
+        "EffectHitRate": 0.35
+      },
+      "5": {
+        "EffectHitRate": 0.4
+      }
+    },
+    "skillName": "Quick on the Draw",
+    "desc": "Increases the wearer's Effect Hit Rate by #1[i]%. When the wearer attacks DEF-reduced enemies, regenerates #2[i] Energy.",
+    "params": [
+      [
+        0.2,
+        4
+      ],
+      [
+        0.25,
+        5
+      ],
+      [
+        0.3,
+        6
+      ],
+      [
+        0.35,
+        7
+      ],
+      [
+        0.4,
+        8
+      ]
+    ],
+    "statRef": [
+      "StatusProbabilityBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22000.png",
+    "preview": "image/light_cone_preview/22000.png",
+    "portrait": "image/light_cone_portrait/22000.png",
+    "imageOffset": [
+      -18,
+      -20,
+      1.15
+    ]
+  },
+  "Night on the Milky Way": {
+    "lightconeID": 23000,
+    "name": "Night on the Milky Way",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 396.9,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {},
+    "skillName": "Meteor Swarm",
+    "desc": "For every enemy on the field, increases the wearer's ATK by #2[f1]%, up to 5 stacks. When an enemy is inflicted with Weakness Break, the DMG dealt by the wearer increases by #1[i]% for 1 turn.",
+    "params": [
+      [
+        0.3,
+        0.09
+      ],
+      [
+        0.35,
+        0.105
+      ],
+      [
+        0.4,
+        0.12
+      ],
+      [
+        0.45,
+        0.135
+      ],
+      [
+        0.5,
+        0.15
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23000.png",
+    "preview": "image/light_cone_preview/23000.png",
+    "portrait": "image/light_cone_portrait/23000.png",
+    "imageOffset": [
+      0,
+      -158,
+      1.15
+    ]
+  },
   "In the Night": {
     "lightconeID": 23001,
     "name": "In the Night",
@@ -1623,6 +2971,75 @@ let lightcones = {
       1.15
     ]
   },
+  "Something Irreplaceable": {
+    "lightconeID": 23002,
+    "name": "Something Irreplaceable",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 396.9,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.24
+      },
+      "2": {
+        "ATK%": 0.28
+      },
+      "3": {
+        "ATK%": 0.32
+      },
+      "4": {
+        "ATK%": 0.36
+      },
+      "5": {
+        "ATK%": 0.4
+      }
+    },
+    "skillName": "Kinship",
+    "desc": "Increases the wearer's ATK by #1[i]%. When the wearer defeats an enemy or is hit, immediately restores HP equal to #2[i]% of the wearer's ATK. At the same time, the wearer's DMG is increased by #3[i]% until the end of their next turn. This effect cannot stack and can only trigger 1 time per turn.",
+    "params": [
+      [
+        0.24,
+        0.08,
+        0.24
+      ],
+      [
+        0.28,
+        0.09,
+        0.28
+      ],
+      [
+        0.32,
+        0.1,
+        0.32
+      ],
+      [
+        0.36,
+        0.11,
+        0.36
+      ],
+      [
+        0.4,
+        0.12,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23002.png",
+    "preview": "image/light_cone_preview/23002.png",
+    "portrait": "image/light_cone_portrait/23002.png",
+    "imageOffset": [
+      0,
+      -126,
+      1.15
+    ]
+  },
   "But the Battle Isn't Over": {
     "lightconeID": 23003,
     "name": "But the Battle Isn't Over",
@@ -1689,6 +3106,57 @@ let lightcones = {
     "imageOffset": [
       0,
       -50,
+      1.15
+    ]
+  },
+  "In the Name of the World": {
+    "lightconeID": 23004,
+    "name": "In the Name of the World",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {},
+    "skillName": "Inheritor",
+    "desc": "Increases the wearer's DMG to debuffed enemies by #1[i]%. When the wearer uses their Skill, the Effect Hit Rate for this attack increases by #2[i]%, and ATK increases by #3[i]%.",
+    "params": [
+      [
+        0.24,
+        0.18,
+        0.24
+      ],
+      [
+        0.28,
+        0.21,
+        0.28
+      ],
+      [
+        0.32,
+        0.24,
+        0.32
+      ],
+      [
+        0.36,
+        0.27,
+        0.36
+      ],
+      [
+        0.4,
+        0.3,
+        0.4
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23004.png",
+    "preview": "image/light_cone_preview/23004.png",
+    "portrait": "image/light_cone_portrait/23004.png",
+    "imageOffset": [
+      0,
+      -168,
       1.15
     ]
   },
@@ -1772,6 +3240,164 @@ let lightcones = {
       1.15
     ]
   },
+  "Patience Is All You Need": {
+    "lightconeID": 23006,
+    "name": "Patience Is All You Need",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DamageAll": 0.24
+      },
+      "2": {
+        "DamageAll": 0.28
+      },
+      "3": {
+        "DamageAll": 0.32
+      },
+      "4": {
+        "DamageAll": 0.36
+      },
+      "5": {
+        "DamageAll": 0.4
+      }
+    },
+    "skillName": "Spider Web",
+    "desc": "Increases DMG dealt by the wearer by #2[i]%. After every attack launched by wearer, their SPD increases by #3[f1]%, stacking up to #4[i] times.\\nIf the wearer hits an enemy target that is not afflicted by Erode, there is a 100% base chance to inflict Erode to the target. Enemies afflicted with Erode are also considered to be Shocked and will receive Lightning DoT at the start of each turn equal to #1[i]% of the wearer's ATK, lasting for #5[i] turn(s).",
+    "params": [
+      [
+        0.6,
+        0.24,
+        0.048,
+        3,
+        1
+      ],
+      [
+        0.7,
+        0.28,
+        0.055999998,
+        3,
+        1
+      ],
+      [
+        0.8,
+        0.32,
+        0.064,
+        3,
+        1
+      ],
+      [
+        0.9,
+        0.36,
+        0.072,
+        3,
+        1
+      ],
+      [
+        1,
+        0.4,
+        0.08,
+        3,
+        1
+      ]
+    ],
+    "statRef": [
+      "AllDamageTypeAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23006.png",
+    "preview": "image/light_cone_preview/23006.png",
+    "portrait": "image/light_cone_portrait/23006.png",
+    "imageOffset": [
+      0,
+      -76,
+      1.15
+    ]
+  },
+  "Incessant Rain": {
+    "lightconeID": 23007,
+    "name": "Incessant Rain",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "EffectHitRate": 0.24
+      },
+      "2": {
+        "EffectHitRate": 0.28
+      },
+      "3": {
+        "EffectHitRate": 0.32
+      },
+      "4": {
+        "EffectHitRate": 0.36
+      },
+      "5": {
+        "EffectHitRate": 0.4
+      }
+    },
+    "skillName": "Mirage of Reality",
+    "desc": "Increases the wearer's Effect Hit Rate by #1[i]%. When the wearer deals DMG to an enemy that currently has #4[i] or more debuffs, increases the wearer's CRIT Rate by #5[i]%. After the wearer uses their Basic ATK, Skill, or Ultimate, there is a #2[i]% base chance to implant Aether Code on a random hit target that does not yet have it. Targets with Aether Code receive #3[i]% increased DMG for 1 turn.",
+    "params": [
+      [
+        0.24,
+        1,
+        0.12,
+        3,
+        0.12
+      ],
+      [
+        0.28,
+        1,
+        0.14,
+        3,
+        0.14
+      ],
+      [
+        0.32,
+        1,
+        0.16,
+        3,
+        0.16
+      ],
+      [
+        0.36,
+        1,
+        0.18,
+        3,
+        0.18
+      ],
+      [
+        0.4,
+        1,
+        0.2,
+        3,
+        0.2
+      ]
+    ],
+    "statRef": [
+      "StatusProbabilityBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23007.png",
+    "preview": "image/light_cone_preview/23007.png",
+    "portrait": "image/light_cone_portrait/23007.png",
+    "imageOffset": [
+      0,
+      -68,
+      1.15
+    ]
+  },
   "Echoes of the Coffin": {
     "lightconeID": 23008,
     "name": "Echoes of the Coffin",
@@ -1843,6 +3469,150 @@ let lightcones = {
     "imageOffset": [
       0,
       -120,
+      1.15
+    ]
+  },
+  "The Unreachable Side": {
+    "lightconeID": 23009,
+    "name": "The Unreachable Side",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 330.75,
+      "HPBase": 1270.08
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.18,
+        "HP%": 0.18
+      },
+      "2": {
+        "CritRateBase": 0.21,
+        "HP%": 0.21
+      },
+      "3": {
+        "CritRateBase": 0.24,
+        "HP%": 0.24
+      },
+      "4": {
+        "CritRateBase": 0.27,
+        "HP%": 0.27
+      },
+      "5": {
+        "CritRateBase": 0.3,
+        "HP%": 0.3
+      }
+    },
+    "skillName": "Unfulfilled Yearning",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]% and increases their Max HP by #2[i]%. When the wearer is attacked or consumes their own HP, their DMG increases by #3[i]%. This effect is removed after the wearer uses an attack.",
+    "params": [
+      [
+        0.18,
+        0.18,
+        0.24
+      ],
+      [
+        0.21,
+        0.21,
+        0.28
+      ],
+      [
+        0.24,
+        0.24,
+        0.32
+      ],
+      [
+        0.27,
+        0.27,
+        0.36
+      ],
+      [
+        0.3,
+        0.3,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase",
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23009.png",
+    "preview": "image/light_cone_preview/23009.png",
+    "portrait": "image/light_cone_portrait/23009.png",
+    "imageOffset": [
+      0,
+      -175,
+      1.15
+    ]
+  },
+  "Before Dawn": {
+    "lightconeID": 23010,
+    "name": "Before Dawn",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.36
+      },
+      "2": {
+        "CritDamageBase": 0.42
+      },
+      "3": {
+        "CritDamageBase": 0.48
+      },
+      "4": {
+        "CritDamageBase": 0.54
+      },
+      "5": {
+        "CritDamageBase": 0.6
+      }
+    },
+    "skillName": "Long Night",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. Increases DMG dealt by the wearer's Skill and Ultimate by #2[i]%. After the wearer uses Skill or Ultimate, gains \"Somnus Corpus.\" Upon triggering a Follow-Up ATK, consumes \"Somnus Corpus,\" and increases DMG dealt by Follow-Up ATK by #3[i]%.",
+    "params": [
+      [
+        0.36,
+        0.18,
+        0.48
+      ],
+      [
+        0.42,
+        0.21,
+        0.56
+      ],
+      [
+        0.48,
+        0.24,
+        0.64
+      ],
+      [
+        0.54,
+        0.27,
+        0.72
+      ],
+      [
+        0.6,
+        0.3,
+        0.8
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23010.png",
+    "preview": "image/light_cone_preview/23010.png",
+    "portrait": "image/light_cone_portrait/23010.png",
+    "imageOffset": [
+      0,
+      -126,
       1.15
     ]
   },
@@ -2080,6 +3850,159 @@ let lightcones = {
       1.15
     ]
   },
+  "I Shall Be My Own Sword": {
+    "lightconeID": 23014,
+    "name": "I Shall Be My Own Sword",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 396.9,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.2
+      },
+      "2": {
+        "CritDamageBase": 0.23
+      },
+      "3": {
+        "CritDamageBase": 0.26
+      },
+      "4": {
+        "CritDamageBase": 0.29
+      },
+      "5": {
+        "CritDamageBase": 0.32
+      }
+    },
+    "skillName": "With This Evening Jade",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. When a teammate gets attacked or loses HP, the wearer gains 1 stack of Eclipse, up to a max of #2[i] stack(s). Each stack of Eclipse increases the DMG of the wearer's next attack by #3[f1]%. When #2[i] stack(s) are reached, additionally enables that attack to ignore #4[i]% of the enemy's DEF. This effect will be removed after the wearer uses an attack.",
+    "params": [
+      [
+        0.2,
+        3,
+        0.14,
+        0.12
+      ],
+      [
+        0.23,
+        3,
+        0.165,
+        0.14
+      ],
+      [
+        0.26,
+        3,
+        0.19,
+        0.16
+      ],
+      [
+        0.29,
+        3,
+        0.215,
+        0.18
+      ],
+      [
+        0.32,
+        3,
+        0.24,
+        0.2
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23014.png",
+    "preview": "image/light_cone_preview/23014.png",
+    "portrait": "image/light_cone_portrait/23014.png",
+    "imageOffset": [
+      -37,
+      -260,
+      1.8
+    ]
+  },
+  "Brighter Than the Sun": {
+    "lightconeID": 23015,
+    "name": "Brighter Than the Sun",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.18
+      },
+      "2": {
+        "CritRateBase": 0.21
+      },
+      "3": {
+        "CritRateBase": 0.24
+      },
+      "4": {
+        "CritRateBase": 0.27
+      },
+      "5": {
+        "CritRateBase": 0.3
+      }
+    },
+    "skillName": "Defiant Till Death",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. When the wearer uses their Basic ATK, they will gain 1 stack of Dragon's Call, lasting for #2[i] turns. Each stack of Dragon's Call increases the wearer's ATK by #4[i]% and Energy Regeneration Rate by #5[f1]%. Dragon's Call can be stacked up to #3[i] times.",
+    "params": [
+      [
+        0.18,
+        2,
+        2,
+        0.18,
+        0.06
+      ],
+      [
+        0.21,
+        2,
+        2,
+        0.21,
+        0.07
+      ],
+      [
+        0.24,
+        2,
+        2,
+        0.24,
+        0.08
+      ],
+      [
+        0.27,
+        2,
+        2,
+        0.27,
+        0.09
+      ],
+      [
+        0.3,
+        2,
+        2,
+        0.3,
+        0.1
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23015.png",
+    "preview": "image/light_cone_preview/23015.png",
+    "portrait": "image/light_cone_portrait/23015.png",
+    "imageOffset": [
+      0,
+      -75,
+      1
+    ]
+  },
   "Worrisome, Blissful": {
     "lightconeID": 23016,
     "name": "Worrisome, Blissful",
@@ -2152,6 +4075,62 @@ let lightcones = {
       14,
       -210,
       1.6
+    ]
+  },
+  "On the Fall of an Aeon": {
+    "lightconeID": 24000,
+    "name": "On the Fall of an Aeon",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {},
+    "skillName": "Moth to Flames",
+    "desc": "When the wearer attacks, increases their ATK by #1[i]% in this battle. This effect can stack up to #2[i] time(s). After the wearer breaks an enemy's Weakness, increases DMG dealt by #3[i]%, lasting for #4[i] turn(s).",
+    "params": [
+      [
+        0.08,
+        4,
+        0.12,
+        2
+      ],
+      [
+        0.1,
+        4,
+        0.15,
+        2
+      ],
+      [
+        0.12,
+        4,
+        0.18,
+        2
+      ],
+      [
+        0.14,
+        4,
+        0.21,
+        2
+      ],
+      [
+        0.16,
+        4,
+        0.24,
+        2
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/24000.png",
+    "preview": "image/light_cone_preview/24000.png",
+    "portrait": "image/light_cone_portrait/24000.png",
+    "imageOffset": [
+      0,
+      -122,
+      1.15
     ]
   },
   "Cruising in the Stellar Sea": {
@@ -2435,6 +4414,75 @@ let lightcones = {
       -12,
       -88,
       1.1
+    ]
+  },
+  "An Instant Before A Gaze": {
+    "lightconeID": 23018,
+    "name": "An Instant Before A Gaze",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.36
+      },
+      "2": {
+        "CritDamageBase": 0.42
+      },
+      "3": {
+        "CritDamageBase": 0.48
+      },
+      "4": {
+        "CritDamageBase": 0.54
+      },
+      "5": {
+        "CritDamageBase": 0.6
+      }
+    },
+    "skillName": "A Knight's Pilgrimage",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. When the wearer uses Ultimate, increases DMG dealt by the wearer's Ultimate based on their Max Energy. Each point of Energy increases DMG dealt by Ultimate by #2[f2]%. A max of #3[i] points of Energy will be taken into account for this.",
+    "params": [
+      [
+        0.36,
+        0.0036000002,
+        180
+      ],
+      [
+        0.42,
+        0.0042,
+        180
+      ],
+      [
+        0.48,
+        0.0048,
+        180
+      ],
+      [
+        0.54,
+        0.0054,
+        180
+      ],
+      [
+        0.6,
+        0.0059999996,
+        180
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23018.png",
+    "preview": "image/light_cone_preview/23018.png",
+    "portrait": "image/light_cone_portrait/23018.png",
+    "imageOffset": [
+      -1,
+      -111,
+      1.03
     ]
   },
   "Past Self in Mirror": {
@@ -2768,6 +4816,80 @@ let lightcones = {
       1.02
     ]
   },
+  "Solitary Healing": {
+    "lightconeID": 24003,
+    "name": "Solitary Healing",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.2
+      },
+      "2": {
+        "DamageBreak": 0.25
+      },
+      "3": {
+        "DamageBreak": 0.3
+      },
+      "4": {
+        "DamageBreak": 0.35
+      },
+      "5": {
+        "DamageBreak": 0.4
+      }
+    },
+    "skillName": "Chaos Elixir",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When the wearer uses their Ultimate, increases DoT dealt by the wearer by #2[i]%, lasting for #3[i] turn(s). When a target enemy suffering from DoT imposed by the wearer is defeated, regenerates #4[f1] Energy for the wearer.",
+    "params": [
+      [
+        0.2,
+        0.24,
+        2,
+        4
+      ],
+      [
+        0.25,
+        0.3,
+        2,
+        4.5
+      ],
+      [
+        0.3,
+        0.36,
+        2,
+        5
+      ],
+      [
+        0.35,
+        0.42,
+        2,
+        5.5
+      ],
+      [
+        0.4,
+        0.48,
+        2,
+        6
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/24003.png",
+    "preview": "image/light_cone_preview/24003.png",
+    "portrait": "image/light_cone_portrait/24003.png",
+    "imageOffset": [
+      0,
+      -47,
+      1
+    ]
+  },
   "What Is Real?": {
     "lightconeID": 21035,
     "name": "What Is Real?",
@@ -2947,6 +5069,67 @@ let lightcones = {
       1.2
     ]
   },
+  "Flames Afar": {
+    "lightconeID": 21038,
+    "name": "Flames Afar",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 264.6,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {},
+    "skillName": "Deflagration",
+    "desc": "When the wearer's cumulative HP loss during one attack exceeds #1[i]% of their Max HP, or if the amount of their own HP consumed at one time is greater than #1[i]% of their Max HP, immediately heals the wearer for #3[i]% of their Max HP, and at the same time, increases the DMG they deal by #2[i]% for #4[i] turn(s). This effect can only be triggered once every #5[i] turn(s).",
+    "params": [
+      [
+        0.25,
+        0.25,
+        0.15,
+        2,
+        3
+      ],
+      [
+        0.25,
+        0.3125,
+        0.15,
+        2,
+        3
+      ],
+      [
+        0.25,
+        0.375,
+        0.15,
+        2,
+        3
+      ],
+      [
+        0.25,
+        0.4375,
+        0.15,
+        2,
+        3
+      ],
+      [
+        0.25,
+        0.5,
+        0.15,
+        2,
+        3
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21038.png",
+    "preview": "image/light_cone_preview/21038.png",
+    "portrait": "image/light_cone_portrait/21038.png",
+    "imageOffset": [
+      -45,
+      -177,
+      1.3
+    ]
+  },
   "Destiny's Threads Forewoven": {
     "lightconeID": 21039,
     "name": "Destiny's Threads Forewoven",
@@ -3021,6 +5204,210 @@ let lightcones = {
       1.6
     ]
   },
+  "The Day The Cosmos Fell": {
+    "lightconeID": 21040,
+    "name": "The Day The Cosmos Fell",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.16
+      },
+      "2": {
+        "ATK%": 0.18
+      },
+      "3": {
+        "ATK%": 0.2
+      },
+      "4": {
+        "ATK%": 0.22
+      },
+      "5": {
+        "ATK%": 0.24
+      }
+    },
+    "skillName": "Stratagem",
+    "desc": "Increases the wearer's ATK by #1[i]%. When the wearer uses an attack and at least 2 attacked enemies have the corresponding Weakness, the wearer's CRIT DMG increases by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        0.2,
+        2
+      ],
+      [
+        0.18,
+        0.25,
+        2
+      ],
+      [
+        0.2,
+        0.3,
+        2
+      ],
+      [
+        0.22,
+        0.35,
+        2
+      ],
+      [
+        0.24,
+        0.4,
+        2
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21040.png",
+    "preview": "image/light_cone_preview/21040.png",
+    "portrait": "image/light_cone_portrait/21040.png",
+    "imageOffset": [
+      0,
+      -85,
+      1.06
+    ]
+  },
+  "It's Showtime": {
+    "lightconeID": 21041,
+    "name": "It's Showtime",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 264.6,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {},
+    "skillName": "Self-Amusement",
+    "desc": "When the wearer inflicts a debuff on an enemy, gains a stack of Trick. Every stack of Trick increases the wearer's DMG dealt by #1[i]%, stacking up to #2[i] time(s). This effect lasts for #3[i] turn(s). When the wearer's Effect Hit Rate is #4[i]% or higher, increases ATK by #5[i]%.",
+    "params": [
+      [
+        0.06,
+        3,
+        1,
+        0.8,
+        0.2
+      ],
+      [
+        0.07,
+        3,
+        1,
+        0.8,
+        0.24
+      ],
+      [
+        0.08,
+        3,
+        1,
+        0.8,
+        0.28
+      ],
+      [
+        0.09,
+        3,
+        1,
+        0.8,
+        0.32
+      ],
+      [
+        0.1,
+        3,
+        1,
+        0.8,
+        0.36
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21041.png",
+    "preview": "image/light_cone_preview/21041.png",
+    "portrait": "image/light_cone_portrait/21041.png",
+    "imageOffset": [
+      0,
+      83,
+      1.1
+    ]
+  },
+  "Reforged Remembrance": {
+    "lightconeID": 23022,
+    "name": "Reforged Remembrance",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "EffectHitRate": 0.4
+      },
+      "2": {
+        "EffectHitRate": 0.45
+      },
+      "3": {
+        "EffectHitRate": 0.5
+      },
+      "4": {
+        "EffectHitRate": 0.55
+      },
+      "5": {
+        "EffectHitRate": 0.6
+      }
+    },
+    "skillName": "Crystallize",
+    "desc": "Increases the wearer's Effect Hit Rate by #1[i]%. When the wearer deals DMG to an enemy inflicted with Wind Shear, Burn, Shock, or Bleed, each respectively grants 1 stack of Prophet, stacking up to #4[i] time(s). In a single battle, only 1 stack of Prophet can be granted for each type of DoT. Every stack of Prophet increases wearer's ATK by #2[i]% and enables the DoT dealt to ignore #3[f1]% of the target's DEF.",
+    "params": [
+      [
+        0.4,
+        0.05,
+        0.072,
+        4
+      ],
+      [
+        0.45,
+        0.06,
+        0.078999996,
+        4
+      ],
+      [
+        0.5,
+        0.07,
+        0.086,
+        4
+      ],
+      [
+        0.55,
+        0.08,
+        0.093,
+        4
+      ],
+      [
+        0.6,
+        0.09,
+        0.1,
+        4
+      ]
+    ],
+    "statRef": [
+      "StatusProbabilityBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23022.png",
+    "preview": "image/light_cone_preview/23022.png",
+    "portrait": "image/light_cone_portrait/23022.png",
+    "imageOffset": [
+      12,
+      -128,
+      1.4
+    ]
+  },
   "Shared Feeling": {
     "lightconeID": 21007,
     "name": "Shared Feeling",
@@ -3083,6 +5470,85 @@ let lightcones = {
       0,
       -62,
       1.15
+    ]
+  },
+  "Eternal Calculus": {
+    "lightconeID": 24004,
+    "name": "Eternal Calculus",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.08
+      },
+      "2": {
+        "ATK%": 0.09
+      },
+      "3": {
+        "ATK%": 0.1
+      },
+      "4": {
+        "ATK%": 0.11
+      },
+      "5": {
+        "ATK%": 0.12
+      }
+    },
+    "skillName": "Boundless Thought",
+    "desc": "Increases the wearer's ATK by #1[i]%. After using an attack, for each enemy target hit, additionally increases ATK by #2[i]%. This effect can stack up to 5 times and last until the next attack. If there are #3[i] or more enemy targets hit, this unit's SPD increases by #4[i]%, lasting for #5[i] turn(s).",
+    "params": [
+      [
+        0.08,
+        0.04,
+        3,
+        0.08,
+        1
+      ],
+      [
+        0.09,
+        0.05,
+        3,
+        0.1,
+        1
+      ],
+      [
+        0.1,
+        0.06,
+        3,
+        0.12,
+        1
+      ],
+      [
+        0.11,
+        0.07,
+        3,
+        0.14,
+        1
+      ],
+      [
+        0.12,
+        0.08,
+        3,
+        0.16,
+        1
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/24004.png",
+    "preview": "image/light_cone_preview/24004.png",
+    "portrait": "image/light_cone_portrait/24004.png",
+    "imageOffset": [
+      0,
+      -2.5,
+      1.01
     ]
   },
   "Hey, Over Here": {
@@ -3152,6 +5618,218 @@ let lightcones = {
       0,
       -47,
       1.1
+    ]
+  },
+  "Along the Passing Shore": {
+    "lightconeID": 23024,
+    "name": "Along the Passing Shore",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 396.9,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.36
+      },
+      "2": {
+        "CritDamageBase": 0.42
+      },
+      "3": {
+        "CritDamageBase": 0.48
+      },
+      "4": {
+        "CritDamageBase": 0.54
+      },
+      "5": {
+        "CritDamageBase": 0.6
+      }
+    },
+    "skillName": "Steerer",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]%. When the wearer hits an enemy target, inflicts Mirage Fizzle on the enemy, lasting for 1 turn. Each time the wearer attacks, this effect can only trigger 1 time on each target. The wearer deals #2[i]% increased DMG to targets afflicted with Mirage Fizzle, and the DMG dealt by Ultimate additionally increases by #3[i]%.",
+    "params": [
+      [
+        0.36,
+        0.24,
+        0.24
+      ],
+      [
+        0.42,
+        0.28,
+        0.28
+      ],
+      [
+        0.48,
+        0.32,
+        0.32
+      ],
+      [
+        0.54,
+        0.36,
+        0.36
+      ],
+      [
+        0.6,
+        0.4,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23024.png",
+    "preview": "image/light_cone_preview/23024.png",
+    "portrait": "image/light_cone_portrait/23024.png",
+    "imageOffset": [
+      8,
+      273,
+      1.9
+    ]
+  },
+  "Whereabouts Should Dreams Rest": {
+    "lightconeID": 23025,
+    "name": "Whereabouts Should Dreams Rest",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 529.2,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.7
+      },
+      "3": {
+        "DamageBreak": 0.8
+      },
+      "4": {
+        "DamageBreak": 0.9
+      },
+      "5": {
+        "DamageBreak": 1
+      }
+    },
+    "skillName": "Metamorphosis",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When the wearer deals Break DMG to an enemy target, inflicts Routed on the enemy, lasting for #4[i] turn(s). Targets afflicted with Routed receive #2[f1]% increased Break DMG from the wearer, and their SPD is lowered by #3[i]%. Effects of the same type cannot be stacked.",
+    "params": [
+      [
+        0.6,
+        0.24,
+        0.2,
+        2
+      ],
+      [
+        0.7,
+        0.28,
+        0.2,
+        2
+      ],
+      [
+        0.8,
+        0.32,
+        0.2,
+        2
+      ],
+      [
+        0.9,
+        0.36,
+        0.2,
+        2
+      ],
+      [
+        1,
+        0.4,
+        0.2,
+        2
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23025.png",
+    "preview": "image/light_cone_preview/23025.png",
+    "portrait": "image/light_cone_portrait/23025.png",
+    "imageOffset": [
+      3,
+      -118,
+      1.05
+    ]
+  },
+  "Indelible Promise": {
+    "lightconeID": 21042,
+    "name": "Indelible Promise",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.28
+      },
+      "2": {
+        "DamageBreak": 0.35
+      },
+      "3": {
+        "DamageBreak": 0.42
+      },
+      "4": {
+        "DamageBreak": 0.49
+      },
+      "5": {
+        "DamageBreak": 0.56
+      }
+    },
+    "skillName": "Inheritance",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When the wearer uses their Ultimate, increases CRIT Rate by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.28,
+        0.15,
+        2
+      ],
+      [
+        0.35,
+        0.1875,
+        2
+      ],
+      [
+        0.42,
+        0.225,
+        2
+      ],
+      [
+        0.49,
+        0.2625,
+        2
+      ],
+      [
+        0.56,
+        0.3,
+        2
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21042.png",
+    "preview": "image/light_cone_preview/21042.png",
+    "portrait": "image/light_cone_portrait/21042.png",
+    "imageOffset": [
+      0,
+      -54,
+      1.02
     ]
   },
   "Concert for Two": {
@@ -3290,6 +5968,228 @@ let lightcones = {
       15,
       -145,
       1.25
+    ]
+  },
+  "Yet Hope Is Priceless": {
+    "lightconeID": 23028,
+    "name": "Yet Hope Is Priceless",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.16
+      },
+      "2": {
+        "CritRateBase": 0.19
+      },
+      "3": {
+        "CritRateBase": 0.22
+      },
+      "4": {
+        "CritRateBase": 0.25
+      },
+      "5": {
+        "CritRateBase": 0.28
+      }
+    },
+    "skillName": "Promise",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. While the wearer is in battle, for every #3[i]% CRIT DMG that exceeds #2[i]%, the DMG dealt by Follow-Up ATK increases by #4[i]%. This effect can stack up to #5[i] time(s). When the battle starts or after the wearer uses their Basic ATK, enables the DMG dealt by Ultimate or Follow-Up ATK to ignore #6[i]% of the target's DEF, lasting for #7[i] turn(s).",
+    "params": [
+      [
+        0.16,
+        1.2,
+        0.2,
+        0.12,
+        4,
+        0.2,
+        2
+      ],
+      [
+        0.19,
+        1.2,
+        0.2,
+        0.14,
+        4,
+        0.24,
+        2
+      ],
+      [
+        0.22,
+        1.2,
+        0.2,
+        0.16,
+        4,
+        0.28,
+        2
+      ],
+      [
+        0.25,
+        1.2,
+        0.2,
+        0.18,
+        4,
+        0.32,
+        2
+      ],
+      [
+        0.28,
+        1.2,
+        0.2,
+        0.2,
+        4,
+        0.36,
+        2
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23028.png",
+    "preview": "image/light_cone_preview/23028.png",
+    "portrait": "image/light_cone_portrait/23028.png",
+    "imageOffset": [
+      4,
+      -147,
+      1.17
+    ]
+  },
+  "Boundless Choreo": {
+    "lightconeID": 21044,
+    "name": "Boundless Choreo",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.08
+      },
+      "2": {
+        "CritRateBase": 0.1
+      },
+      "3": {
+        "CritRateBase": 0.12
+      },
+      "4": {
+        "CritRateBase": 0.14
+      },
+      "5": {
+        "CritRateBase": 0.16
+      }
+    },
+    "skillName": "Scrutinize",
+    "desc": "Increase the wearer's CRIT Rate by #1[i]%. The wearer deals #2[i]% more CRIT DMG to enemies that are currently Slowed or have reduced DEF.",
+    "params": [
+      [
+        0.08,
+        0.24
+      ],
+      [
+        0.1,
+        0.3
+      ],
+      [
+        0.12,
+        0.36
+      ],
+      [
+        0.14,
+        0.42
+      ],
+      [
+        0.16,
+        0.48
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21044.png",
+    "preview": "image/light_cone_preview/21044.png",
+    "portrait": "image/light_cone_portrait/21044.png",
+    "imageOffset": [
+      -45,
+      -200,
+      1.6
+    ]
+  },
+  "After the Charmony Fall": {
+    "lightconeID": 21045,
+    "name": "After the Charmony Fall",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.28
+      },
+      "2": {
+        "DamageBreak": 0.35
+      },
+      "3": {
+        "DamageBreak": 0.42
+      },
+      "4": {
+        "DamageBreak": 0.49
+      },
+      "5": {
+        "DamageBreak": 0.56
+      }
+    },
+    "skillName": "Quiescence",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. After the wearer uses Ultimate, increases SPD by #2[i]%, lasting for #3[i] turn(s).",
+    "params": [
+      [
+        0.28,
+        0.08,
+        2
+      ],
+      [
+        0.35,
+        0.1,
+        2
+      ],
+      [
+        0.42,
+        0.12,
+        2
+      ],
+      [
+        0.49,
+        0.14,
+        2
+      ],
+      [
+        0.56,
+        0.16,
+        2
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21045.png",
+    "preview": "image/light_cone_preview/21045.png",
+    "portrait": "image/light_cone_portrait/21045.png",
+    "imageOffset": [
+      -66,
+      -164,
+      1.44
     ]
   },
   "Poised to Bloom": {
@@ -3624,6 +6524,164 @@ let lightcones = {
       1
     ]
   },
+  "Dance at Sunset": {
+    "lightconeID": 23030,
+    "name": "Dance at Sunset",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.36
+      },
+      "2": {
+        "CritDamageBase": 0.42
+      },
+      "3": {
+        "CritDamageBase": 0.48
+      },
+      "4": {
+        "CritDamageBase": 0.54
+      },
+      "5": {
+        "CritDamageBase": 0.6
+      }
+    },
+    "skillName": "Deeply Engrossed",
+    "desc": "Greatly increases the wearer's chance of getting attacked and increases CRIT DMG by #1[i]%. After the wearer uses Ultimate, receives 1 stack of \"Firedance,\" lasting for 2 turns and stacking up to #2[i] time(s). Each stack of \"Firedance\" increases the DMG dealt by the wearer's Follow-Up ATK by #3[i]%.",
+    "params": [
+      [
+        0.36,
+        2,
+        0.36,
+        5
+      ],
+      [
+        0.42,
+        2,
+        0.42,
+        5
+      ],
+      [
+        0.48,
+        2,
+        0.48,
+        5
+      ],
+      [
+        0.54,
+        2,
+        0.54,
+        5
+      ],
+      [
+        0.6,
+        2,
+        0.6,
+        5
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23030.png",
+    "preview": "image/light_cone_preview/23030.png",
+    "portrait": "image/light_cone_portrait/23030.png",
+    "imageOffset": [
+      -62,
+      -149,
+      1.9
+    ]
+  },
+  "Those Many Springs": {
+    "lightconeID": 23029,
+    "name": "Those Many Springs",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "EffectHitRate": 0.6
+      },
+      "2": {
+        "EffectHitRate": 0.7
+      },
+      "3": {
+        "EffectHitRate": 0.8
+      },
+      "4": {
+        "EffectHitRate": 0.9
+      },
+      "5": {
+        "EffectHitRate": 1
+      }
+    },
+    "skillName": "Worldly Affairs Leave No Mark",
+    "desc": "Increases the wearer's Effect Hit Rate by #1[i]%. After the wearer uses Basic ATK, Skill, or Ultimate to attack an enemy target, there is a #2[i]% base chance to inflict \"Unarmored\" on the target. While in the Unarmored state, the enemy target receives #3[i]% increased DMG, lasting for #4[i] turn(s). If the target is under a DoT state inflicted by the wearer, there is a #5[i]% base chance to upgrade the \"Unarmored\" state inflicted by the wearer to the \"Cornered\" state, which additionally increases the DMG the enemy target receives by #6[i]%, lasting for #4[i] turn(s). During this period, the wearer cannot inflict \"Unarmored\" on the target.",
+    "params": [
+      [
+        0.6,
+        0.6,
+        0.1,
+        2,
+        0.6,
+        0.14
+      ],
+      [
+        0.7,
+        0.6,
+        0.12,
+        2,
+        0.6,
+        0.16
+      ],
+      [
+        0.8,
+        0.6,
+        0.14,
+        2,
+        0.6,
+        0.18
+      ],
+      [
+        0.9,
+        0.6,
+        0.16,
+        2,
+        0.6,
+        0.2
+      ],
+      [
+        1,
+        0.6,
+        0.18,
+        2,
+        0.6,
+        0.22
+      ]
+    ],
+    "statRef": [
+      "StatusProbabilityBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23029.png",
+    "preview": "image/light_cone_preview/23029.png",
+    "portrait": "image/light_cone_portrait/23029.png",
+    "imageOffset": [
+      -16,
+      -218,
+      1.7
+    ]
+  },
   "I Venture Forth to Hunt": {
     "lightconeID": 23031,
     "name": "I Venture Forth to Hunt",
@@ -3772,6 +6830,223 @@ let lightcones = {
       1.23
     ]
   },
+  "Ninjutsu Inscription: Dazzling Evilbreaker": {
+    "lightconeID": 23033,
+    "name": "Ninjutsu Inscription: Dazzling Evilbreaker",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.7
+      },
+      "3": {
+        "DamageBreak": 0.8
+      },
+      "4": {
+        "DamageBreak": 0.9
+      },
+      "5": {
+        "DamageBreak": 1
+      }
+    },
+    "skillName": "Exorcism",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When entering battle, immediately regenerates #2[f1] Energy. After the wearer uses Ultimate, obtains \"Raiton.\" After using 2 Basic ATKs, advances the wearer's action by #3[i]% and removes \"Raiton.\" After the wearer uses Ultimate, resets \"Raiton.\"",
+    "params": [
+      [
+        0.6,
+        30,
+        0.5
+      ],
+      [
+        0.7,
+        32.5,
+        0.55
+      ],
+      [
+        0.8,
+        35,
+        0.6
+      ],
+      [
+        0.9,
+        37.5,
+        0.65
+      ],
+      [
+        1,
+        40,
+        0.7
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23033.png",
+    "preview": "image/light_cone_preview/23033.png",
+    "portrait": "image/light_cone_portrait/23033.png",
+    "imageOffset": [
+      7,
+      -158,
+      1.4
+    ]
+  },
+  "Ninja Record: Sound Hunt": {
+    "lightconeID": 22003,
+    "name": "Ninja Record: Sound Hunt",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 264.6,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.12
+      },
+      "2": {
+        "HP%": 0.15
+      },
+      "3": {
+        "HP%": 0.18
+      },
+      "4": {
+        "HP%": 0.21
+      },
+      "5": {
+        "HP%": 0.24
+      }
+    },
+    "skillName": "Curtains Up!",
+    "desc": "Increases the wearer's Max HP by #1[i]%. When losing or restoring this unit's HP, increases CRIT DMG by #2[i]%, lasting for #3[i] turn(s). This effect can only trigger once per turn.",
+    "params": [
+      [
+        0.12,
+        0.18,
+        2
+      ],
+      [
+        0.15,
+        0.225,
+        2
+      ],
+      [
+        0.18,
+        0.27,
+        2
+      ],
+      [
+        0.21,
+        0.315,
+        2
+      ],
+      [
+        0.24,
+        0.36,
+        2
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22003.png",
+    "preview": "image/light_cone_preview/22003.png",
+    "portrait": "image/light_cone_portrait/22003.png",
+    "imageOffset": [
+      19,
+      -117,
+      1.2
+    ]
+  },
+  "Long Road Leads Home": {
+    "lightconeID": 23035,
+    "name": "Long Road Leads Home",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 661.5,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.7
+      },
+      "3": {
+        "DamageBreak": 0.8
+      },
+      "4": {
+        "DamageBreak": 0.9
+      },
+      "5": {
+        "DamageBreak": 1
+      }
+    },
+    "skillName": "Rebirth",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When an enemy target's Weakness gets broken, there is a #2[i]% base chance to inflict the \"Charring\" state on it, which increases its Break DMG taken by #3[i]%, lasting for #4[i] turn(s). This effect can stack #5[i] time(s).",
+    "params": [
+      [
+        0.6,
+        1,
+        0.18,
+        2,
+        2
+      ],
+      [
+        0.7,
+        1,
+        0.21,
+        2,
+        2
+      ],
+      [
+        0.8,
+        1,
+        0.24,
+        2,
+        2
+      ],
+      [
+        0.9,
+        1,
+        0.27,
+        2,
+        2
+      ],
+      [
+        1,
+        1,
+        0.3,
+        2,
+        2
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23035.png",
+    "preview": "image/light_cone_preview/23035.png",
+    "portrait": "image/light_cone_portrait/23035.png",
+    "imageOffset": [
+      -5,
+      -189,
+      1.9
+    ]
+  },
   "A Grounded Ascent": {
     "lightconeID": 23034,
     "name": "A Grounded Ascent",
@@ -3900,6 +7175,85 @@ let lightcones = {
       -11,
       -4,
       1.2
+    ]
+  },
+  "Into the Unreachable Veil": {
+    "lightconeID": 23037,
+    "name": "Into the Unreachable Veil",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.12
+      },
+      "2": {
+        "CritRateBase": 0.14
+      },
+      "3": {
+        "CritRateBase": 0.16
+      },
+      "4": {
+        "CritRateBase": 0.18
+      },
+      "5": {
+        "CritRateBase": 0.2
+      }
+    },
+    "skillName": "Mind Game",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. When the wearer uses their Ultimate, increases the wearer's Skill DMG and Ultimate DMG dealt by #4[i]%, lasting for #5[i] turn(s). After the wearer uses their Ultimate, if this Ultimate consumed #3[i] or more Energy, recovers 1 Skill Point.",
+    "params": [
+      [
+        0.12,
+        2,
+        140,
+        0.6,
+        3
+      ],
+      [
+        0.14,
+        2,
+        140,
+        0.7,
+        3
+      ],
+      [
+        0.16,
+        2,
+        140,
+        0.8,
+        3
+      ],
+      [
+        0.18,
+        2,
+        140,
+        0.9,
+        3
+      ],
+      [
+        0.2,
+        2,
+        140,
+        1,
+        3
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23037.png",
+    "preview": "image/light_cone_preview/23037.png",
+    "portrait": "image/light_cone_portrait/23037.png",
+    "imageOffset": [
+      52,
+      -145,
+      1.5
     ]
   },
   "Shadowburn": {
@@ -4354,6 +7708,96 @@ let lightcones = {
       1.1
     ]
   },
+  "Flame of Blood, Blaze My Path": {
+    "lightconeID": 23039,
+    "name": "Flame of Blood, Blaze My Path",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 1375.92
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.18,
+        "HealingIncoming": 0.2
+      },
+      "2": {
+        "HP%": 0.21,
+        "HealingIncoming": 0.25
+      },
+      "3": {
+        "HP%": 0.24,
+        "HealingIncoming": 0.3
+      },
+      "4": {
+        "HP%": 0.27,
+        "HealingIncoming": 0.35
+      },
+      "5": {
+        "HP%": 0.3,
+        "HealingIncoming": 0.4
+      }
+    },
+    "skillName": "Vista",
+    "desc": "Increases the wearer's Max HP by #1[i]% and Incoming Healing by #6[i]%. When using Skill or Ultimate, consumes HP equal to #2[f1]% of the wearer's Max HP and increases the DMG dealt by this attack by #3[i]%. If this effect's consumed HP is greater than #4[i], the DMG additionally increases by #5[i]%.\\nIf the current HP is not sufficient, this effect reduces the wearer's current HP down to 1.",
+    "params": [
+      [
+        0.18,
+        0.06,
+        0.3,
+        500,
+        0.3,
+        0.2
+      ],
+      [
+        0.21,
+        0.065,
+        0.35,
+        500,
+        0.35,
+        0.25
+      ],
+      [
+        0.24,
+        0.07,
+        0.4,
+        500,
+        0.4,
+        0.3
+      ],
+      [
+        0.27,
+        0.075,
+        0.45,
+        500,
+        0.45,
+        0.35
+      ],
+      [
+        0.3,
+        0.08,
+        0.5,
+        500,
+        0.5,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio",
+      "HealTakenRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23039.png",
+    "preview": "image/light_cone_preview/23039.png",
+    "portrait": "image/light_cone_portrait/23039.png",
+    "imageOffset": [
+      38,
+      -148,
+      1.4
+    ]
+  },
   "Long May Rainbows Adorn the Sky": {
     "lightconeID": 23042,
     "name": "Long May Rainbows Adorn the Sky",
@@ -4438,6 +7882,67 @@ let lightcones = {
       1.45
     ]
   },
+  "Life Should Be Cast to Flames": {
+    "lightconeID": 23041,
+    "name": "Life Should Be Cast to Flames",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {},
+    "skillName": "Smelt",
+    "desc": "When the wearer's turn starts, regenerates #5[i] Energy. If the enemy target has a Weakness implanted by the wearer, increases the wearer's DMG dealt to it by #3[i]%.\\nWhen an enemy target gets attacked by the wearer, the wearer decreases the target's DEF by #2[i]%, lasting for #4[i] turn(s). The same types of effects cannot stack.",
+    "params": [
+      [
+        0,
+        0.12,
+        0.6,
+        2,
+        10
+      ],
+      [
+        0,
+        0.15,
+        0.7,
+        2,
+        10
+      ],
+      [
+        0,
+        0.18,
+        0.8,
+        2,
+        10
+      ],
+      [
+        0,
+        0.21,
+        0.9,
+        2,
+        10
+      ],
+      [
+        0,
+        0.24,
+        1,
+        2,
+        10
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23041.png",
+    "preview": "image/light_cone_preview/23041.png",
+    "portrait": "image/light_cone_portrait/23041.png",
+    "imageOffset": [
+      -3,
+      -79,
+      1.07
+    ]
+  },
   "Make Farewells More Beautiful": {
     "lightconeID": 23040,
     "name": "Make Farewells More Beautiful",
@@ -4510,6 +8015,70 @@ let lightcones = {
       3,
       -68,
       1.03
+    ]
+  },
+  "The Great Cosmic Enterprise": {
+    "lightconeID": 22004,
+    "name": "The Great Cosmic Enterprise",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 330.75,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.08
+      },
+      "2": {
+        "ATK%": 0.1
+      },
+      "3": {
+        "ATK%": 0.12
+      },
+      "4": {
+        "ATK%": 0.14
+      },
+      "5": {
+        "ATK%": 0.16
+      }
+    },
+    "skillName": "Mutual Benefit",
+    "desc": "Increases the wearer's ATK by #1[i]%. For every 1 different Weakness Type an enemy target has, increases the DMG dealt to it by the wearer by #2[i]%. Up to a max of 7 Weakness Types can be taken into account for this effect.",
+    "params": [
+      [
+        0.08,
+        0.04
+      ],
+      [
+        0.1,
+        0.05
+      ],
+      [
+        0.12,
+        0.06
+      ],
+      [
+        0.14,
+        0.07
+      ],
+      [
+        0.16,
+        0.08
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/22004.png",
+    "preview": "image/light_cone_preview/22004.png",
+    "portrait": "image/light_cone_portrait/22004.png",
+    "imageOffset": [
+      -3,
+      126,
+      1.05
     ]
   },
   "Journey, Forever Peaceful": {
@@ -4801,6 +8370,366 @@ let lightcones = {
       1.28
     ]
   },
+  "A Trail of Bygone Blood": {
+    "lightconeID": 21058,
+    "name": "A Trail of Bygone Blood",
+    "path": "Destruction",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 330.75,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.12
+      },
+      "2": {
+        "CritRateBase": 0.14
+      },
+      "3": {
+        "CritRateBase": 0.16
+      },
+      "4": {
+        "CritRateBase": 0.18
+      },
+      "5": {
+        "CritRateBase": 0.2
+      }
+    },
+    "skillName": "Massacre",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. The Skill DMG and Ultimate DMG dealt by the wearer increase by #2[i]%.",
+    "params": [
+      [
+        0.12,
+        0.24
+      ],
+      [
+        0.14,
+        0.28
+      ],
+      [
+        0.16,
+        0.32
+      ],
+      [
+        0.18,
+        0.36
+      ],
+      [
+        0.2,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21058.png",
+    "preview": "image/light_cone_preview/21058.png",
+    "portrait": "image/light_cone_portrait/21058.png",
+    "imageOffset": [
+      16,
+      -98,
+      1.12
+    ]
+  },
+  "A Dream Scented in Wheat": {
+    "lightconeID": 21060,
+    "name": "A Dream Scented in Wheat",
+    "path": "Erudition",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.12
+      },
+      "2": {
+        "CritRateBase": 0.14
+      },
+      "3": {
+        "CritRateBase": 0.16
+      },
+      "4": {
+        "CritRateBase": 0.18
+      },
+      "5": {
+        "CritRateBase": 0.2
+      }
+    },
+    "skillName": "Longing",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. The Ultimate DMG and Follow-Up ATK DMG dealt by the wearer increase by #2[i]%.",
+    "params": [
+      [
+        0.12,
+        0.24
+      ],
+      [
+        0.14,
+        0.28
+      ],
+      [
+        0.16,
+        0.32
+      ],
+      [
+        0.18,
+        0.36
+      ],
+      [
+        0.2,
+        0.4
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21060.png",
+    "preview": "image/light_cone_preview/21060.png",
+    "portrait": "image/light_cone_portrait/21060.png",
+    "imageOffset": [
+      0,
+      -62,
+      1.02
+    ]
+  },
+  "Holiday Thermae Escapade": {
+    "lightconeID": 21061,
+    "name": "Holiday Thermae Escapade",
+    "path": "Nihility",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 330.75,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DamageAll": 0.16
+      },
+      "2": {
+        "DamageAll": 0.2
+      },
+      "3": {
+        "DamageAll": 0.24
+      },
+      "4": {
+        "DamageAll": 0.28
+      },
+      "5": {
+        "DamageAll": 0.32
+      }
+    },
+    "skillName": "Chill Out",
+    "desc": "Increases the wearer's DMG dealt by #1[i]%. After the wearer attacks, there is a #2[i]% base chance to inflict the attacked target with Vulnerability, increasing the DMG they receive by #3[i]% for #4[i] turn(s). Effects of the same type cannot stack.",
+    "params": [
+      [
+        0.16,
+        1,
+        0.1,
+        2
+      ],
+      [
+        0.2,
+        1,
+        0.115,
+        2
+      ],
+      [
+        0.24,
+        1,
+        0.13,
+        2
+      ],
+      [
+        0.28,
+        1,
+        0.145,
+        2
+      ],
+      [
+        0.32,
+        1,
+        0.16,
+        2
+      ]
+    ],
+    "statRef": [
+      "AllDamageTypeAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/21061.png",
+    "preview": "image/light_cone_preview/21061.png",
+    "portrait": "image/light_cone_portrait/21061.png",
+    "imageOffset": [
+      -18,
+      -96,
+      1.13
+    ]
+  },
+  "Lies Dance on the Breeze": {
+    "lightconeID": 23043,
+    "name": "Lies Dance on the Breeze",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "SPD%": 0.18
+      },
+      "2": {
+        "SPD%": 0.21
+      },
+      "3": {
+        "SPD%": 0.24
+      },
+      "4": {
+        "SPD%": 0.27
+      },
+      "5": {
+        "SPD%": 0.3
+      }
+    },
+    "skillName": "Deceit",
+    "desc": "Increases the wearer's SPD by #1[i]%. After the wearer uses an attack, there is a #2[i]% base chance to inflict the \"Bamboozle\" state on every enemy target. While under the \"Bamboozle\" state, enemy targets have their DEF decreased by #3[i]% for #4[i] turn(s). If the wearer's SPD is higher than or equal to #7[i], there is a #5[i]% base chance to inflict the \"Theft\" state on every enemy target. While under the \"Theft\" state, enemy targets have their DEF decreased by #6[i]% for #4[i] turn(s). When \"Bamboozle\" or \"Theft\" is repeatedly inflicted, only the most recently inflicted instance takes effect.",
+    "params": [
+      [
+        0.18,
+        1.2,
+        0.16,
+        2,
+        1.2,
+        0.08,
+        170
+      ],
+      [
+        0.21,
+        1.2,
+        0.18,
+        2,
+        1.2,
+        0.09,
+        170
+      ],
+      [
+        0.24,
+        1.2,
+        0.2,
+        2,
+        1.2,
+        0.1,
+        170
+      ],
+      [
+        0.27,
+        1.2,
+        0.22,
+        2,
+        1.2,
+        0.11,
+        170
+      ],
+      [
+        0.3,
+        1.2,
+        0.24,
+        2,
+        1.2,
+        0.12,
+        170
+      ]
+    ],
+    "statRef": [
+      "SpeedAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23043.png",
+    "preview": "image/light_cone_preview/23043.png",
+    "portrait": "image/light_cone_portrait/23043.png",
+    "imageOffset": [
+      -8,
+      77,
+      1.17
+    ]
+  },
+  "Thus Burns the Dawn": {
+    "lightconeID": 23044,
+    "name": "Thus Burns the Dawn",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 687.96,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "SPDBase": 12
+      },
+      "2": {
+        "SPDBase": 14
+      },
+      "3": {
+        "SPDBase": 16
+      },
+      "4": {
+        "SPDBase": 18
+      },
+      "5": {
+        "SPDBase": 20
+      }
+    },
+    "skillName": "Dispossession",
+    "desc": "The wearer's base SPD increases by #1[i]. When dealing DMG, ignores #2[i]% of the target's DEF. After the wearer uses Ultimate, gains \"Blazing Sun,\" which is removed at the start of the turn. While holding \"Blazing Sun,\" increases the wearer's DMG dealt by #3[i]%.",
+    "params": [
+      [
+        12,
+        0.18,
+        0.6
+      ],
+      [
+        14,
+        0.225,
+        0.78
+      ],
+      [
+        16,
+        0.27,
+        0.96
+      ],
+      [
+        18,
+        0.315,
+        1.14
+      ],
+      [
+        20,
+        0.36,
+        1.32
+      ]
+    ],
+    "statRef": [
+      "BaseSpeed"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23044.png",
+    "preview": "image/light_cone_preview/23044.png",
+    "portrait": "image/light_cone_portrait/23044.png",
+    "imageOffset": [
+      23,
+      -67,
+      1.15
+    ]
+  },
   "A Thankless Coronation": {
     "lightconeID": 23045,
     "name": "A Thankless Coronation",
@@ -5026,6 +8955,95 @@ let lightcones = {
       -89,
       -145,
       1.58
+    ]
+  },
+  "Why Does the Ocean Sing": {
+    "lightconeID": 23047,
+    "name": "Why Does the Ocean Sing",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "EffectHitRate": 0.4
+      },
+      "2": {
+        "EffectHitRate": 0.45
+      },
+      "3": {
+        "EffectHitRate": 0.5
+      },
+      "4": {
+        "EffectHitRate": 0.55
+      },
+      "5": {
+        "EffectHitRate": 0.6
+      }
+    },
+    "skillName": "Solo",
+    "desc": "Increases the wearer's Effect Hit Rate by #1[i]%. When an enemy target gets inflicted with a debuff by the wearer, there is a #2[i]% base chance for them to enter \"Enthrallment,\" lasting for #3[i] turn(s). Effects of the same type cannot stack. While the target is in \"Enthrallment,\" for every 1 debuff applied by the wearer on the target, increases the target's received DoT by #4[f1]%, stacking up to #5[i] time(s). When the target gets attacked by an ally, increases the attacker's SPD by #6[f1]% for #7[i] turn(s). When the wearer gets knocked down, removes all \"Enthrallment.\"",
+    "params": [
+      [
+        0.4,
+        0.8,
+        3,
+        0.05,
+        6,
+        0.1,
+        3
+      ],
+      [
+        0.45,
+        0.8,
+        3,
+        0.0625,
+        6,
+        0.125,
+        3
+      ],
+      [
+        0.5,
+        0.8,
+        3,
+        0.075,
+        6,
+        0.15,
+        3
+      ],
+      [
+        0.55,
+        0.8,
+        3,
+        0.0875,
+        6,
+        0.175,
+        3
+      ],
+      [
+        0.6,
+        0.8,
+        3,
+        0.1,
+        6,
+        0.2,
+        3
+      ]
+    ],
+    "statRef": [
+      "StatusProbabilityBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23047.png",
+    "preview": "image/light_cone_preview/23047.png",
+    "portrait": "image/light_cone_portrait/23047.png",
+    "imageOffset": [
+      38,
+      -144,
+      1.33
     ]
   },
   "Epoch Etched in Golden Blood": {
@@ -5317,6 +9335,70 @@ let lightcones = {
       34.5,
       27,
       1.3
+    ]
+  },
+  "Never Forget Her Flame": {
+    "lightconeID": 23050,
+    "name": "Never Forget Her Flame",
+    "path": "Nihility",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 529.2,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "DamageBreak": 0.6
+      },
+      "2": {
+        "DamageBreak": 0.75
+      },
+      "3": {
+        "DamageBreak": 0.9
+      },
+      "4": {
+        "DamageBreak": 1.05
+      },
+      "5": {
+        "DamageBreak": 1.2
+      }
+    },
+    "skillName": "Immolation",
+    "desc": "Increases the wearer's Break Effect by #1[i]%. When entering combat, increases Break DMG dealt by the wearer and another teammate who triggered combat by #2[i]%. If there is no teammate who triggered combat, applies this effect to the wearer and the teammate with the highest Break Effect. Effects of the same type cannot be stacked. When the wearer applies Weakness to an enemy target, recovers 1 Skill Point. This effect can only trigger once. And resets this trigger count when using Ultimate.",
+    "params": [
+      [
+        0.6,
+        0.32
+      ],
+      [
+        0.75,
+        0.42
+      ],
+      [
+        0.9,
+        0.52
+      ],
+      [
+        1.05,
+        0.62
+      ],
+      [
+        1.2,
+        0.72
+      ]
+    ],
+    "statRef": [
+      "BreakDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23050.png",
+    "preview": "image/light_cone_preview/23050.png",
+    "portrait": "image/light_cone_portrait/23050.png",
+    "imageOffset": [
+      -27,
+      -108,
+      1.18
     ]
   },
   "Though Worlds Apart": {

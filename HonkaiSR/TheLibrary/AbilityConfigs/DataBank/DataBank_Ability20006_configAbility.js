@@ -1,0 +1,71 @@
+const configAbility = {
+  "fileName": "DataBank_Ability20006",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "LC_20006_Main"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "LC_20006_Main",
+      "execute": [
+        {
+          "eventTrigger": "Deal Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Attack Type",
+                "attackTypes": [
+                  "Ultimate"
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (0.28) || RETURN",
+                    "displayLines": "0.28",
+                    "constants": [],
+                    "variables": [
+                      0.28
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ],
+  "isLightcone": true,
+  "desc": "Increases DMG dealt by the wearer's Ultimate by #1[i]%.",
+  "params": [
+    [
+      0.28
+    ],
+    [
+      0.35
+    ],
+    [
+      0.42
+    ],
+    [
+      0.49
+    ],
+    [
+      0.56
+    ]
+  ]
+}

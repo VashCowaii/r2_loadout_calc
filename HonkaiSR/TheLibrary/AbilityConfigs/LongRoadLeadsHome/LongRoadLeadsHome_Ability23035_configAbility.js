@@ -1,0 +1,472 @@
+const configAbility = {
+  "fileName": "LongRoadLeadsHome_Ability23035",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": "Caster",
+      "modifier": "LC_23035_Main"
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "LC_23035_ListenBreak",
+      "stackType": "ReplaceByCaster",
+      "modifierFlags": [
+        "RemoveWhenCasterDead"
+      ],
+      "execute": [
+        {
+          "eventTrigger": "Being Weakness Broken: Start [Owner]",
+          "execute": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": "Owner of this Modifier",
+              "modifier": "LC_23035_BreakDebuff",
+              "baseChance": {
+                "operator": "Variables[0] (LC_23035_Chance) || RETURN",
+                "displayLines": "LC_23035_Chance",
+                "constants": [],
+                "variables": [
+                  "LC_23035_Chance"
+                ]
+              },
+              "stackLimit": {
+                "operator": "Variables[0] (LC_23035_MaxLayer) || Constants[0] (1) || ADD || RETURN",
+                "displayLines": "(LC_23035_MaxLayer + 1)",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "LC_23035_MaxLayer"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_PropertyValue1": {
+                  "operator": "Variables[0] (LC_23035_PropertyRatio) || RETURN",
+                  "displayLines": "LC_23035_PropertyRatio",
+                  "constants": [],
+                  "variables": [
+                    "LC_23035_PropertyRatio"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": 1,
+              "success": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Owner of this Modifier",
+                  "modifier": "LC_23035_Sub[<span class=\"descriptionNumberColor\">Charring</span>]",
+                  "duration": {
+                    "operator": "Variables[0] (LC_23035_LifeTime) || RETURN",
+                    "displayLines": "LC_23035_LifeTime",
+                    "constants": [],
+                    "variables": [
+                      "LC_23035_LifeTime"
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] (LC_23035_MaxLayer) || RETURN",
+                    "displayLines": "LC_23035_MaxLayer",
+                    "constants": [],
+                    "variables": [
+                      "LC_23035_MaxLayer"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue1": {
+                      "operator": "Variables[0] (LC_23035_PropertyRatio) || RETURN",
+                      "displayLines": "LC_23035_PropertyRatio",
+                      "constants": [],
+                      "variables": [
+                        "LC_23035_PropertyRatio"
+                      ]
+                    },
+                    "MDF_PropertyValue2": {
+                      "operator": "Variables[0] (LC_23035_MaxLayer) || RETURN",
+                      "displayLines": "LC_23035_MaxLayer",
+                      "constants": [],
+                      "variables": [
+                        "LC_23035_MaxLayer"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "LC_23035_Sub[<span class=\"descriptionNumberColor\">Charring</span>]",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        }
+      ],
+      "stackData": [
+        "MDF_PropertyValue1",
+        "MDF_PropertyValue2"
+      ],
+      "latentQueue": [],
+      "description": "Each stack increases the Break DMG taken by <span class=\"descriptionNumberColor\">MDF_PropertyValue1</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> time(s).",
+      "type": "Debuff",
+      "effectName": "Charring",
+      "statusName": "Charring"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "LC_23035_BreakDebuff",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "Take Damage Start [Owner]: Any",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Attack Type",
+                "attackTypes": [
+                  "Break DMG"
+                ],
+                "target": "Use Prior Target(s) Defined"
+              },
+              "passed": [
+                {
+                  "name": "Adjust Target Stats",
+                  "on": "Defender",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_PropertyValue1) || RETURN",
+                    "displayLines": "MDF_PropertyValue1",
+                    "constants": [],
+                    "variables": [
+                      "MDF_PropertyValue1"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Modifier Values",
+              "target": "Owner of this Modifier",
+              "valueType": "Layer",
+              "variableName": "MDF_Layer",
+              "modifierName": "LC_23035_BreakDebuff",
+              "multiplier": 1
+            },
+            {
+              "name": "Define Custom Variable",
+              "variableName": "MDF_PropertyValue1",
+              "value": {
+                "operator": "Variables[0] (MDF_PropertyValue1) || Variables[1] (MDF_Layer) || Constants[0] (1) || SUB || MUL || RETURN",
+                "displayLines": "(MDF_PropertyValue1 * (MDF_Layer - 1))",
+                "constants": [
+                  1
+                ],
+                "variables": [
+                  "MDF_PropertyValue1",
+                  "MDF_Layer"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "When Losing Modifier [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Modifier Was",
+                "modifier": "LC_23035_Sub[<span class=\"descriptionNumberColor\">Charring</span>]"
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_PropertyValue1",
+                  "value": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Living State",
+                    "state": "Mask_AliveOrRevivable",
+                    "target": "Caster",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable with Modifier Values",
+                      "target": "Owner of this Modifier",
+                      "scope": "ContextModifier",
+                      "valueType": "Layer",
+                      "variableName": "Layer_Count",
+                      "multiplier": 1
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Owner of this Modifier",
+                      "modifier": "LC_23035_BreakDebuff",
+                      "addStacksPerTrigger": {
+                        "operator": "Constants[0] (1) || Variables[0] (Layer_Count) || SUB || RETURN",
+                        "displayLines": "(1 - Layer_Count)",
+                        "constants": [
+                          1
+                        ],
+                        "variables": [
+                          "Layer_Count"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "stackData": [
+        "MDF_PropertyValue1"
+      ],
+      "latentQueue": []
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "LC_23035_Main",
+      "execute": [
+        {
+          "eventTrigger": "Entity Created [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Is Part Of Team",
+                    "target": "Use Prior Target(s) Defined",
+                    "team": "TeamDark"
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": "Use Prior Target(s) Defined",
+                    "modifier": "LC_23035_BreakDebuff",
+                    "invertCondition": true,
+                    "casterFilter": "Caster"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Use Prior Target(s) Defined",
+                  "modifier": "LC_23035_BreakDebuff",
+                  "stackLimit": {
+                    "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(2 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue1": 0,
+                    "MDF_PropertyValue2": 0,
+                    "MDF_Layer": 0
+                  },
+                  "addStacksPerTrigger": 1
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team",
+                "target": "Use Prior Target(s) Defined",
+                "team": "TeamDark"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "All Enemies(All)",
+                  "modifier": "LC_23035_ListenBreak",
+                  "valuePerStack": {
+                    "LC_23035_MaxLayer": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    },
+                    "LC_23035_LifeTime": {
+                      "operator": "Variables[0] (2) || RETURN",
+                      "displayLines": "2",
+                      "constants": [],
+                      "variables": [
+                        2
+                      ]
+                    },
+                    "LC_23035_PropertyRatio": {
+                      "operator": "Variables[0] (0.18) || RETURN",
+                      "displayLines": "0.18",
+                      "constants": [],
+                      "variables": [
+                        0.18
+                      ]
+                    },
+                    "LC_23035_Chance": {
+                      "operator": "Variables[0] (1) || RETURN",
+                      "displayLines": "1",
+                      "constants": [],
+                      "variables": [
+                        1
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Enter Battle",
+          "execute": [
+            {
+              "name": "Find New Target",
+              "from": "All Enemies(All)",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": "Use Prior Target(s) Defined",
+                "modifier": "LC_23035_BreakDebuff",
+                "invertCondition": true,
+                "casterFilter": "Caster"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Use Prior Target(s) Defined",
+                  "modifier": "LC_23035_BreakDebuff",
+                  "stackLimit": {
+                    "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(2 + 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue1": 0,
+                    "MDF_PropertyValue2": 0
+                  },
+                  "addStacksPerTrigger": 1
+                }
+              ]
+            },
+            {
+              "name": "Add Events/Bonuses",
+              "to": "All Enemies(All)",
+              "modifier": "LC_23035_ListenBreak",
+              "valuePerStack": {
+                "LC_23035_MaxLayer": {
+                  "operator": "Variables[0] (2) || RETURN",
+                  "displayLines": "2",
+                  "constants": [],
+                  "variables": [
+                    2
+                  ]
+                },
+                "LC_23035_LifeTime": {
+                  "operator": "Variables[0] (2) || RETURN",
+                  "displayLines": "2",
+                  "constants": [],
+                  "variables": [
+                    2
+                  ]
+                },
+                "LC_23035_PropertyRatio": {
+                  "operator": "Variables[0] (0.18) || RETURN",
+                  "displayLines": "0.18",
+                  "constants": [],
+                  "variables": [
+                    0.18
+                  ]
+                },
+                "LC_23035_Chance": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                }
+              }
+            }
+          ],
+          "priorityLevel": -80
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ],
+  "isLightcone": true,
+  "desc": "Increases the wearer's Break Effect by #1[i]%. When an enemy target's Weakness gets broken, there is a #2[i]% base chance to inflict the \"Charring\" state on it, which increases its Break DMG taken by #3[i]%, lasting for #4[i] turn(s). This effect can stack #5[i] time(s).",
+  "params": [
+    [
+      0.6,
+      1,
+      0.18,
+      2,
+      2
+    ],
+    [
+      0.7,
+      1,
+      0.21,
+      2,
+      2
+    ],
+    [
+      0.8,
+      1,
+      0.24,
+      2,
+      2
+    ],
+    [
+      0.9,
+      1,
+      0.27,
+      2,
+      2
+    ],
+    [
+      1,
+      1,
+      0.3,
+      2,
+      2
+    ]
+  ]
+}
