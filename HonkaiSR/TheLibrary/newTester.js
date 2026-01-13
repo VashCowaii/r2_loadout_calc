@@ -646,6 +646,7 @@ const megaParsingFuckery = {
             "name",
             "value",
             "target",
+            "activeCount",
 
             "maximum",
             "assignState",
@@ -665,6 +666,10 @@ const megaParsingFuckery = {
             ${parseRef.value != undefined ? parseRef.value.displayLines ?? parseRef.value : ""}
         </div>
         <div class="modifierDetailsBox">
+            ${parseRef.activeCount != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Active Count:</div>&nbsp;
+                ${parseRef.activeCount.displayLines ?? parseRef.activeCount}
+            </div>` : ""}
         
             ${parseRef.target != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
@@ -1354,6 +1359,41 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">Override Modifier Name:</div>&nbsp;
             ${parseRef.modifierName ?? ""} to ${parseRef.modifierNameUpdate ?? ""}${parseRef.target ? ` from ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}` : ""}
+        </div>`;
+    },
+    "Modify Skill-Point Extras"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "modifierName",
+            "function",
+            "value",
+            "target",
+            // "valueType",
+            "silentChange",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Modify Skill-Point Extras");
+
+        const functionAdjustments = {
+            "Add": "+",
+            "Set": "=",
+        }
+        const finalAdjustment = parseRef.function ? functionAdjustments[parseRef.function] : "=";
+        if (!finalAdjustment) {throw new Error(`Unknown function key in Modify Skill-Point Extras: ${parseRef.function}`)}
+
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Modify Skill-Point Extras:</div>&nbsp;
+            Extras ${finalAdjustment} ${parseRef.value?.displayLines ?? parseRef.value ?? (finalAdjustment === "+" ? "-1(no value defined)" : "")}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.target != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
+                ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+            </div>` : ""}
+            ${parseRef.silentChange != undefined ? `<div class="actionDetailBody2Detail">
+                <div class="rotationConditionOperatorHeaderInline">Silent Change:</div>&nbsp;
+                ${parseRef.silentChange}
+            </div>` : ""}
         </div>`;
     },
     "Define Modifier Variable"(parseRef,initialCounter) {
@@ -3299,6 +3339,7 @@ const megaParsingFuckery = {
             "abilityTypes",
             "text",
             "controlTypes",
+            "extraText",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Disable Abilities");
 
@@ -3311,6 +3352,10 @@ const megaParsingFuckery = {
             ${parseRef.controlTypes != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Controlled Types:</div>&nbsp;
                 ${parseRef.controlTypes}
+            </div>` : ""}
+            ${parseRef.extraText != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Extra Description:</div>&nbsp;
+                ${parseRef.extraText}
             </div>` : ""}
         </div>`;
     },

@@ -116,6 +116,10 @@ let allowedCharacterList = [
     "trimName": "Bailu"
   },
   {
+    "fullName": "Dan Heng • Imbibitor Lunae",
+    "trimName": "DanHengIL"
+  },
+  {
     "fullName": "Xueyi",
     "trimName": "Xueyi"
   },

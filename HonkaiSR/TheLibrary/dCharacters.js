@@ -16651,6 +16651,742 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Dan Heng • Imbibitor Lunae": {
+    "internalID": 1213,
+    "name": "Dan Heng • Imbibitor Lunae",
+    "path": "Destruction",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 698.544,
+      "DEFBase": 363.82500000000005,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 102,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "121301",
+        "name": "Tethered to Sky",
+        "rank": 1,
+        "desc": "Increases the stackable Righteous Heart count by 4, and gains 1 extra stack of Righteous Heart for each hit during an attack.",
+        "icon": "icon/skill/1213_rank1.png",
+        "paramsEido": [
+          4
+        ]
+      },
+      {
+        "id": "121302",
+        "name": "Imperium On Cloud Nine",
+        "rank": 2,
+        "desc": "After using his Ultimate, Dan Heng • Imbibitor Lunae's action advances by 100% and gains 1 extra \"Squama Sacrosancta.\"",
+        "icon": "icon/skill/1213_rank2.png",
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "121303",
+        "name": "Clothed in Clouds",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1213_skill.png"
+      },
+      {
+        "id": "121304",
+        "name": "Zephyr's Bliss",
+        "rank": 4,
+        "desc": "The buff effect granted by \"Outroar\" lasts until the end of this unit's next turn.",
+        "icon": "icon/skill/1213_rank4.png",
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          }
+        }
+      },
+      {
+        "id": "121305",
+        "name": "Fall is the Pride",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1213_ultimate.png"
+      },
+      {
+        "id": "121306",
+        "name": "Reign, Returned",
+        "rank": 6,
+        "desc": "After another ally character uses their Ultimate, the Imaginary RES PEN of Dan Heng • Imbibitor Lunae's next \"Fulgurant Leap\" attack increases by 20%. This effect can stack up to 3 time(s).",
+        "icon": "icon/skill/1213_rank6.png",
+        "paramsEido": [
+          0.2,
+          3
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Beneficent Lotus": {
+          "variant1": {
+            "skillID": 121301,
+            "trigger": "Skill01",
+            "name": "Beneficent Lotus",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Uses a 2-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill01_Camera",
+              "Avatar_DanHengIL_00_Skill01_Phase01",
+              "Avatar_DanHengIL_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Transcendence": {
+          "variant1": {
+            "skillID": 121308,
+            "trigger": "Skill11",
+            "name": "Transcendence",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Uses a 3-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                2.6
+              ],
+              "7": [
+                2.86
+              ],
+              "8": [
+                3.12
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill11_Camera",
+              "Avatar_DanHengIL_00_Skill11_Phase01",
+              "Avatar_DanHengIL_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Divine Spear": {
+          "variant1": {
+            "skillID": 121310,
+            "trigger": "Skill12",
+            "name": "Divine Spear",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Uses a 5-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target. From the fourth hit onward, simultaneously deals Imaginary DMG equal to #2[i]% of Dan Heng • Imbibitor Lunae's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 35,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 2,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                3.8,
+                0.6
+              ],
+              "7": [
+                4.18,
+                0.66
+              ],
+              "8": [
+                4.56,
+                0.72
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill12_Camera",
+              "Avatar_DanHengIL_00_Skill12_Phase01",
+              "Avatar_DanHengIL_00_Skill12_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fulgurant Leap": {
+          "variant1": {
+            "skillID": 121312,
+            "trigger": "Skill13",
+            "name": "Fulgurant Leap",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Uses a 7-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target. From the fourth hit onward, simultaneously deal Imaginary DMG equal to #2[i]% of Dan Heng • Imbibitor Lunae's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 40,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 40,
+            "skillPointCost": 3,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                5,
+                1.8
+              ],
+              "7": [
+                5.5,
+                1.98
+              ],
+              "8": [
+                6,
+                2.16
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill13_Camera",
+              "Avatar_DanHengIL_00_Skill13_Phase01",
+              "Avatar_DanHengIL_00_Skill13_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 120
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Dracore Libre": {
+          "variant1": {
+            "skillID": 121302,
+            "trigger": "Skill02",
+            "name": "Dracore Libre",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Enhances Basic ATK. Enhancements may be applied up to 3 times consecutively. Using this ability does not consume Skill Points and is not considered as using a Skill.\\nEnhanced once, Beneficent Lotus becomes Transcendence.\\nEnhanced twice, Beneficent Lotus becomes Divine Spear.\\nEnhanced thrice, Beneficent Lotus becomes Fulgurant Leap.\\nWhen using Divine Spear or Fulgurant Leap, starting from the fourth hit, 1 stack of Outroar is gained before every hit. Each stack of Outroar increases Dan Heng • Imbibitor Lunae's CRIT DMG by #1[f1]%, for a max of #2[i] stacks. These stacks last until the end of his turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.0975,
+                4
+              ],
+              "8": [
+                0.105,
+                4
+              ],
+              "9": [
+                0.1125,
+                4
+              ],
+              "10": [
+                0.12,
+                4
+              ],
+              "11": [
+                0.126,
+                4
+              ],
+              "12": [
+                0.132,
+                4
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill02_Camera01",
+              "Avatar_DanHengIL_00_Skill02_Camera02",
+              "Avatar_DanHengIL_00_Skill02_Camera03",
+              "Avatar_DanHengIL_00_Skill02_Phase01",
+              "Avatar_DanHengIL_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Cancel": {
+          "variant1": {
+            "skillID": 121309,
+            "trigger": "Skill21",
+            "name": "Cancel",
+            "type": "Cancel",
+            "slot": "Skill",
+            "desc": "Cancel Enhancement",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill21_Phase01",
+              "Avatar_DanHengIL_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Azure's Aqua Ablutes All": {
+          "variant1": {
+            "skillID": 121303,
+            "trigger": "Skill03",
+            "name": "Azure's Aqua Ablutes All",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Uses a 3-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target. At the same time, deals Imaginary DMG equal to #2[i]% of Dan Heng • Imbibitor Lunae's ATK to adjacent targets. Then, obtains #3[i] \"Squama Sacrosancta.\"\\nIt's possible to hold up to #4[i] \"Squama Sacrosancta,\" which can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. Consuming \"Squama Sacrosancta\" is considered equivalent to consuming skill points.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                2.55,
+                1.19,
+                2,
+                3
+              ],
+              "8": [
+                2.7,
+                1.26,
+                2,
+                3
+              ],
+              "9": [
+                2.85,
+                1.33,
+                2,
+                3
+              ],
+              "10": [
+                3,
+                1.4,
+                2,
+                3
+              ],
+              "11": [
+                3.12,
+                1.456,
+                2,
+                3
+              ],
+              "12": [
+                3.24,
+                1.512,
+                2,
+                3
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_Skill03_Camera",
+              "Avatar_DanHengIL_00_Skill03_EnterReady",
+              "Avatar_DanHengIL_00_Skill03_Phase01",
+              "Avatar_DanHengIL_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Righteous Heart": {
+          "variant1": {
+            "skillID": 121304,
+            "trigger": "SkillP01",
+            "name": "Righteous Heart",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "After each hit dealt during an attack, Dan Heng • Imbibitor Lunae gains 1 stack of Righteous Heart, increasing his DMG by #1[f1]%. This effect can stack up to #2[i] time(s), lasting until the end of his turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.08125,
+                6
+              ],
+              "8": [
+                0.0875,
+                6
+              ],
+              "9": [
+                0.09375,
+                6
+              ],
+              "10": [
+                0.1,
+                6
+              ],
+              "11": [
+                0.105,
+                6
+              ],
+              "12": [
+                0.11,
+                6
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Heaven-Quelling Prismadrakon": {
+          "variant1": {
+            "skillID": 121307,
+            "trigger": "SkillMaze",
+            "name": "Heaven-Quelling Prismadrakon",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using his Technique, Dan Heng • Imbibitor Lunae enters the Leaping Dragon state for #2[i] seconds. While in the Leaping Dragon state, using his attack enables him to move forward rapidly for a set distance, attacking all enemies he touches and blocking all incoming attacks. After entering combat via attacking enemies in the Leaping Dragon state, Dan Heng • Imbibitor Lunae deals Imaginary DMG equal to #3[i]% of his ATK to all enemies, and gains #1[i] Squama Sacrosancta.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                20,
+                1.2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_DanHengIL_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1213_basic_atk.png",
+        "skillRef": {
+          "skillName": "Beneficent Lotus",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1213_skill.png",
+        "skillRef": {
+          "skillName": "Dracore Libre",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1213_ultimate.png",
+        "skillRef": {
+          "skillName": "Azure's Aqua Ablutes All",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1213_talent.png",
+        "skillRef": {
+          "skillName": "Righteous Heart",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1213_technique.png",
+        "skillRef": {
+          "skillName": "Heaven-Quelling Prismadrakon",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Star Veil",
+        "icon": "icon/skill/1213_skilltree1.png",
+        "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
+        "params": [
+          15
+        ]
+      },
+      "Point07": {
+        "name": "Aqua Reign",
+        "icon": "icon/skill/1213_skilltree2.png",
+        "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%.",
+        "params": [
+          0.35
+        ],
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": [
+              0.35
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Jolt Anew",
+        "icon": "icon/skill/1213_skilltree3.png",
+        "desc": "When dealing DMG to enemy targets with Imaginary Weakness, CRIT DMG increases by #1[i]%.",
+        "params": [
+          0.24
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1213.png",
+    "preview": "image/character_preview/1213.png",
+    "portrait": "image/character_portrait/1213.png",
+    "bannerOffsets": [
+      -35.8,
+      -74.6,
+      0.8,
+      -35.8,
+      -74.6,
+      0.8,
+      -35.8,
+      -74.6,
+      0.8
+    ],
+    "isBuffed": false
+  },
   "Xueyi": {
     "internalID": 1214,
     "name": "Xueyi",
