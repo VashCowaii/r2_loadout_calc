@@ -2034,12 +2034,19 @@ const megaParsingFuckery = {
             "name",
             "variableName",
             "target",
+            "casterFilter",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Status Counter");
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Define with Status Count:</div>&nbsp;
             ${parseRef.variableName} = current Status Count on ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.casterFilter != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Caster Filter:</div>&nbsp;
+                ${Array.isArray(parseRef.casterFilter) ? megaParsingFuckery.makeConditionTargetBox(parseRef.casterFilter,initialCounter) : parseRef.casterFilter}
+            </div>` : ""}
         </div>`;
     },
     "Define Custom Variable with Flag Count"(parseRef,initialCounter) {
@@ -3117,8 +3124,9 @@ const megaParsingFuckery = {
         // ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.target} ${parseRef.invertCondition ? "NOT" : ""}= ${parseRef.target2}
+            ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target} ${parseRef.invertCondition ? "NOT" : ""}= ${Array.isArray(parseRef.target2) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target2,initialCounter) : parseRef.target2}
         </div>
+        
         <div class="modifierDetailsBox">
             ${parseRef.state != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">State:</div>&nbsp;
