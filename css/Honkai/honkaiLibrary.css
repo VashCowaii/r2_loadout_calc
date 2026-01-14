@@ -1291,6 +1291,15 @@ div {
     padding-left: 4px;
     padding-right: 4px;
 }
+.eventReaderControlsBoxTrimRow {
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
 .energyAndToughnessRowHolder {
     width: 100%;
     display: flex;
@@ -1985,7 +1994,7 @@ div {
     .mainBodyRowOrColumnRow {
         flex-direction: column;
     }
-    .eventReaderControlsBox,.eventCharacterFileHeader,.eventCharacterFileInfoBox {
+    .eventReaderControlsBox,.eventCharacterFileHeader,.eventCharacterFileInfoBox,.eventReaderControlsBoxTrimRow {
         width: 100%;
         max-width: 100%;
     }
