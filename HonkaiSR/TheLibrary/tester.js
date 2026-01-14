@@ -728,7 +728,15 @@ const customMenu = {
                     Global Abilities
                 </a>
             </div>
-        </details>`
+
+           
+        </details>`;
+
+    //     <div class="starAndSearchRow2">
+    //     <a class="exportIconBoxHolder clickable" id="characterSearchButton" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalModifiersStandardSpecific/" target="_blank">
+    //         Global Modifiers [Standard, Specific]
+    //     </a>
+    // </div>
 
         customMenu.updateSearchResults();
     },
@@ -2662,7 +2670,7 @@ const customMenu = {
 
                 let foundAllowedCharacter = false;
                 for (let allowEntry of allowedCharacterList) {
-                    console.log(allowEntry.fullName,currentCharacterEntry.name)
+                    // console.log(allowEntry.fullName,currentCharacterEntry.name)
                     if (allowEntry.fullName === currentCharacterEntry.name) {
                         foundAllowedCharacter = true;
                         break;
@@ -3226,7 +3234,7 @@ const userTriggers = {
     },
     updateMainMenuDisplayed(elementID) {
 
-        for (let i=1;i<=3;i++) {
+        for (let i=1;i<=4;i++) {
             let currentButton = readSelection(`mainMenuTypeButton${i}`);
 
             currentButton.style.color = "white";
@@ -3240,26 +3248,55 @@ const userTriggers = {
 
         globalUI.currentMainMenuDisplayed = elementID;
 
-        if (elementID === 1) {readSelection("teamBoxMainHolderBox").style.display = "flex";}
-        else {readSelection("teamBoxMainHolderBox").style.display = "none";}
+
+
+
+
+        if (elementID === 1) {
+            readSelection("eventBodyMainBox").style.display = "flex";
+            readSelection("eventReaderControlsBox").style.display = "flex";
+        }
+        else {
+            readSelection("eventBodyMainBox").style.display = "none";
+            readSelection("eventReaderControlsBox").style.display = "none";
+        }
+
+        if (elementID > 1) {
+            readSelection("characterMainCenterDisplayOverview").style.display = "flex";
+            readSelection("teamBoxMainHolderBox").style.display = "flex";
+        }
+        else {
+            readSelection("characterMainCenterDisplayOverview").style.display = "none";
+            readSelection("teamBoxMainHolderBox").style.display = "none";
+        }
 
         if (elementID === 2) {
-            readSelection("battleViewBoxMainHolderBox").style.display = "flex";
-            readSelection("teamBarHolderBox").style.display = "none";//character icons on the top, not needed for battleview
+            readSelection("mainStatsDisplayOverview").style.display = "flex";
+            readSelection("characterMainCenterDisplayOverview").style.display = "flex";
         }
         else {
-            readSelection("battleViewBoxMainHolderBox").style.display = "none";
-            readSelection("teamBarHolderBox").style.display = "flex";
+            readSelection("mainStatsDisplayOverview").style.display = "none";
+            readSelection("characterMainCenterDisplayOverview").style.display = "none";
         }
-
 
         if (elementID === 3) {
-            readSelection("optimizeBoxMainHolderBox").style.display = "flex";
-            readSelection("teamBarHolderBox").style.display = "flex";//character icons on the top, not needed for battleview
+            readSelection("characterMainCenterDisplayTraces").style.display = "flex";
+            readSelection("mainStatsDisplayTraces").style.display = "flex";
+
         }
         else {
-            readSelection("optimizeBoxMainHolderBox").style.display = "none";
-            readSelection("teamBarHolderBox").style.display = "flex";
+            readSelection("characterMainCenterDisplayTraces").style.display = "none";
+            readSelection("mainStatsDisplayTraces").style.display = "none";
+        }
+
+        if (elementID === 4) {
+            readSelection("characterMainCenterDisplayEidolons").style.display = "flex";
+            readSelection("expandedQuarterRight").style.display = "none";
+        }
+        else {
+            readSelection("characterMainCenterDisplayEidolons").style.display = "none";
+            readSelection("expandedQuarterRight").style.display = "flex";
+
         }
 
         // let idRef = ["Overview","Lightcone","Traces","Relics","Eidolons"];
@@ -3434,15 +3471,24 @@ const userTriggers = {
         userTriggers.updateCharacterUI(updateFormulas(charSlot),currentSlot);
         userTriggers.updateCharacterBreakdownClicked(1)
     },
+    "levelFloors": {
+        "Basic ATK": 6,
+        "Skill": 10,
+        "Ultimate": 10,
+        "Talent": 10,
+        "Memosprite Talent": 6,
+        "Memosprite Skill": 6,
+        "Technique": 1,
+    },
     updateSelectedTraceDisplay(traceID) {
         let currentSlot = globalUI.currentCharacterDisplayed;
         let charSlot = `char${currentSlot}`;
         //since viewing a trace isn't actually gonna change our stats, we will NOT call updateformulas here NOR updatecharacterUI
-        let charRef = characters[globalRecords.character[charSlot].name];
+        let charRef = characters[compositeAbilityObject.fullCharacterName];
         let traceRef = charRef.traces;
         let calledID = `Point${traceID.toString().padStart(2, "0")}`;
         let currentTrace = traceRef[calledID];
-        let eidoRank = globalRecords.character[charSlot].rank;
+        let eidoRank = 0;
 
         let levelReference = {
             "Basic ATK": 6,
@@ -3476,8 +3522,8 @@ const userTriggers = {
         }
         else {
             let skillSlot = currentTrace.skillRef.skillSlot;
-            let baseLevel = battleActions.levelFloors[skillSlot];
-            let baseLevelCompare = battleActions.levelFloors[skillSlot];
+            let baseLevel = userTriggers.levelFloors[skillSlot];
+            let baseLevelCompare = userTriggers.levelFloors[skillSlot];
             let levelIsBlue = false;
             if (eidoRank >= 3) {baseLevel += charRef.eidlonLevelBonuses[3][skillSlot] ?? 0;}
             if (eidoRank >= 5) {baseLevel += charRef.eidlonLevelBonuses[5][skillSlot] ?? 0;}
@@ -3535,7 +3581,7 @@ const userTriggers = {
         const traceSummaryBoxElem = readSelection("characterMainCenterDisplayTracesSummary");
         // traceSummaryBoxElem.style.display = "flex";
 
-        const currentCharacterName = globalRecords.character[charSlot].name;
+        const currentCharacterName = compositeAbilityObject.fullCharacterName;
         const characterTraceRef = characters[currentCharacterName].traces;
 
         let traceValueHolder = {};
@@ -3681,71 +3727,145 @@ const userTriggers = {
         }
     },
     updateCharacterUI(statTableRef,currentSlot,silent) {
-        let globalPathChar = globalRecords.character[`char${currentSlot}`];
-        const characterName = globalPathChar.name;
+
+        if (globalIsLightcone || globalIsRelic || globalIsNoImage) {
+
+            // readSelection("mainBodyRowOrColumn").style.flexDirection = "row";
+
+            readSelection("mainBodyRowOrColumn").setAttribute("class", "mainBodyRowOrColumnRow");
+            readSelection("eventReaderControlsBox").setAttribute("class", "eventReaderControlsBoxTrimRow");//s
+            
+
+            // mainBodyRowOrColumnRow
+            
+            // readSelection("eventReaderControlsBox").style.width = "26%"
+
+            readSelection(`menuSwitcherBarTopBox`).style.display = "none";
+            // readSelection(`mainMenuTypeButton3`).style.display = "none";
+            // readSelection(`mainMenuTypeButton4`).style.display = "none";
+
+            readSelection(`characterDisplayElement`).style.display = "none";
+
+            readSelection("eventReaderControlsBox").style.alignItems = "flex-start"
+
+
+            if (globalIsLightcone && !globalIsRelic) {
+                const characterName = compositeAbilityObject.fullCharacterName;
+                let charRef = lightcones[characterName];
+                readSelection("characterName").innerHTML = characterName;
+
+
+                readSelection("characterDisplayPathName").innerHTML = charRef.path;
+                readSelection("characterDisplayPathImage").src = pathImagePaths[charRef.path].small;
+                readSelection("characterStarRatingImage").src = `/HonkaiSR/icon/deco/Star${charRef.rarity}.png`;
+            }
+            else if (globalIsRelic) {
+                const characterName = compositeAbilityObject.fullCharacterName;
+                let charRef = relicSets[characterName];
+                readSelection("characterName").innerHTML = characterName;
+
+                readSelection("characterDisplayPathAndNameBoxRowHolder").style.display = "none";
+                readSelection("characterStarRatingImage").style.display = "none";
+                
+                readSelection("libraryCharacterHeaderPreview").style.height = "70%";
+                readSelection("libraryCharacterHeaderPreview").style.position = "relative";
+                // readSelection("libraryCharacterHeaderPreview").style.scale = 0.7;
+
+                // actionDetailHeaderRowCharacterImage
+            }
+            else if (globalIsNoImage) {
+                readSelection("mainBodyRowOrColumn").setAttribute("class", "mainBodyRowOrColumn");
+                const characterName = compositeAbilityObject.fullCharacterName;
+                readSelection("characterName").innerHTML = characterName;
+
+                readSelection("characterDisplayPathAndNameBoxRowHolder").style.display = "none";
+                readSelection("characterStarRatingImage").style.display = "none";
+                readSelection("libraryCharacterHeaderPreview").style.display = "none";
+            }
+
+
+
+            
+            
+            return;
+        }
+        else {
+            readSelection("eventReaderControlsBox").style.width = "100%";
+
+            readSelection("eventReaderControlsBox").style.width = "100%";
+            readSelection("eventReaderControlsBox").style.justifyContent = "center";
+            // readSelection("eventCharacterFileHeader").style.flexDirection = "row";
+
+            
+        }
+
+
+        // let globalPathChar = globalRecords.character[`char${currentSlot}`];
+        const characterName = compositeAbilityObject.fullCharacterName;
         let charRef = characters[characterName];
-        let lightconeRef = lightcones[globalPathChar.lcName];
+        const charRank = 0;
+        // let lightconeRef = lightcones[globalPathChar.lcName];
         // let imgPathTest = "/HonkaiSR/" + charRef.icon;
         // readSelection(`teamBarChar1IMG`).src = "/HonkaiSR/" + characters[globalRecords.character.char1.name].icon;
         // readSelection(`teamBarChar2IMG`).src = "/HonkaiSR/" + characters[globalRecords.character.char2.name].icon;
         // readSelection(`teamBarChar3IMG`).src = "/HonkaiSR/" + characters[globalRecords.character.char3.name].icon;
         // readSelection(`teamBarChar4IMG`).src = "/HonkaiSR/" + characters[globalRecords.character.char4.name].icon;
 
-        for (let i=1;i<=4;i++) {
-            let globalCharRef = characters[globalRecords.character[`char${i}`].name]
-            readSelection(`teamBarChar${i}IMG`).src = "/HonkaiSR/" + globalCharRef.icon;
-            readSelection(`teamBarChar${i}IMG`).style.border = `2px solid ${customMenu.rarityColors[globalCharRef.rarity]}`;
-            readSelection(`teamBarChar${i}IMG`).style.filter = `brightness(0.5)`;
+        // for (let i=1;i<=4;i++) {
+        //     let globalCharRef = characters[globalRecords.character[`char${i}`].name]
+        //     readSelection(`teamBarChar${i}IMG`).src = "/HonkaiSR/" + globalCharRef.icon;
+        //     readSelection(`teamBarChar${i}IMG`).style.border = `2px solid ${customMenu.rarityColors[globalCharRef.rarity]}`;
+        //     readSelection(`teamBarChar${i}IMG`).style.filter = `brightness(0.5)`;
 
-            readSelection(`characterFiltersSwitchIcon${i}`).src = "/HonkaiSR/" + globalCharRef.preview;
-            readSelection(`characterFiltersSwitchIcon${i}`).style.filter = `brightness(0.3)`;
+        //     readSelection(`characterFiltersSwitchIcon${i}`).src = "/HonkaiSR/" + globalCharRef.preview;
+        //     readSelection(`characterFiltersSwitchIcon${i}`).style.filter = `brightness(0.3)`;
             
-        }
-        readSelection(`teamBarChar${currentSlot}IMG`).style.filter = "brightness(1)";
-        readSelection(`characterFiltersSwitchIcon${currentSlot}`).style.filter = "brightness(1)";
+        // }
+        // readSelection(`teamBarChar${currentSlot}IMG`).style.filter = "brightness(1)";
+        // readSelection(`characterFiltersSwitchIcon${currentSlot}`).style.filter = "brightness(1)";
 
-        readSelection("rotationsDisableCharacterToggle").checked = globalPathChar.disabled;
+        // readSelection("rotationsDisableCharacterToggle").checked = globalPathChar.disabled;
         // style="border: 2px solid #ffdb91;"
 
-        readSelection("characterMainCenterImageOverview").src = "/HonkaiSR/" + charRef.portrait;
+        // readSelection("characterMainCenterImageOverview").src = "/HonkaiSR/" + charRef.portrait;
         // readSelection("characterMainCenterImageOverview").src = "/HonkaiSR/" + charRef.portrait;
 
-        if (true) {
-            let imageOffsetTest = charRef.bannerOffsets;
-            readSelection("characterMainCenterImageOverview").style.transform = '';
+        // if (true) {
+        //     // let imageOffsetTest = charRef.bannerOffsets;
+        //     // readSelection("characterMainCenterImageOverview").style.transform = '';
 
 
-            const dx = imageOffsetTest[0];
-            const dy = -imageOffsetTest[1];
+        //     const dx = imageOffsetTest[0];
+        //     const dy = -imageOffsetTest[1];
 
-            const natHeight = 2160;//2160 //2048
-            const natWidth = 3840;//3840 //2048
+        //     const natHeight = 2160;//2160 //2048
+        //     const natWidth = 3840;//3840 //2048
 
-            const borderWidth = 0;
+        //     const borderWidth = 0;
 
-            const borderScalar = (natHeight + natWidth - borderWidth*4) / (natHeight + natWidth);
-            const scale = imageOffsetTest[2]/borderScalar;
+        //     const borderScalar = (natHeight + natWidth - borderWidth*4) / (natHeight + natWidth);
+        //     const scale = imageOffsetTest[2]/borderScalar;
 
-            // const gameWidth = 3840;
-            // const gameWidth = 3840*3;
-            const gameWidth = 3840; //for frib seems like no *3 would work
-            const elemWidth = 500;
+        //     // const gameWidth = 3840;
+        //     // const gameWidth = 3840*3;
+        //     const gameWidth = 3840; //for frib seems like no *3 would work
+        //     const elemWidth = 500;
 
-            const scalar = gameWidth/(elemWidth - borderWidth*(natHeight/natWidth));
-            const shrunkenImageHeight = gameWidth * (natHeight/natWidth) * scalar;
-            const finalDy = dy * (natHeight / shrunkenImageHeight);
-            const finalDx = dx * (natWidth / gameWidth)/scalar;
+        //     const scalar = gameWidth/(elemWidth - borderWidth*(natHeight/natWidth));
+        //     const shrunkenImageHeight = gameWidth * (natHeight/natWidth) * scalar;
+        //     const finalDy = dy * (natHeight / shrunkenImageHeight);
+        //     const finalDx = dx * (natWidth / gameWidth)/scalar;
 
-            readSelection("characterMainCenterImageOverview").style.width = `100%`;
-            if (imageOffsetTest.length) {
-                // readSelection("characterMainCenterImageOverview").style.transform = `translate(${finalDx*3}px, ${finalDy*3}px) scale(${scale*3})`;
-                readSelection("characterMainCenterImageOverview").style.transform = `scale(${scale*3}) translate(${finalDx*3}px, ${finalDy*3}px)`;
-            }
-            else {
-                // console.log(imageOffsetTest)
-                readSelection("characterMainCenterImageOverview").style.transform = `scale(${1.75})`;
-            }
-        }
+        //     readSelection("characterMainCenterImageOverview").style.width = `100%`;
+        //     if (imageOffsetTest.length) {
+        //         // readSelection("characterMainCenterImageOverview").style.transform = `translate(${finalDx*3}px, ${finalDy*3}px) scale(${scale*3})`;
+        //         readSelection("characterMainCenterImageOverview").style.transform = `scale(${scale*3}) translate(${finalDx*3}px, ${finalDy*3}px)`;
+        //     }
+        //     else {
+        //         // console.log(imageOffsetTest)
+        //         readSelection("characterMainCenterImageOverview").style.transform = `scale(${1.75})`;
+        //     }
+        // }
 
         // "AvatarDropOffset": [
         //     -44,
@@ -3765,161 +3885,12 @@ const userTriggers = {
 
 
 
-        readSelection("characterDisplayName").innerHTML = charRef.name;
+        readSelection("characterName").innerHTML = charRef.name;
         readSelection("characterDisplayElement").src = elementImagePaths[charRef.element];
         readSelection("characterDisplayPathName").innerHTML = charRef.path;
         readSelection("characterDisplayPathImage").src = pathImagePaths[charRef.path].small;
         readSelection("characterStarRatingImage").src = `/HonkaiSR/icon/deco/Star${charRef.rarity}.png`;
 
-
-        readSelection("lightconeDisplayName").innerHTML = lightconeRef.name
-        readSelection("lightconeDisplayPathName").innerHTML = lightconeRef.path;
-        readSelection("lightconeDisplayPathImage").src = pathImagePaths[lightconeRef.path].small;
-        readSelection("lightconeDisplaySkillName").innerHTML = lightconeRef.skillName;
-        readSelection("lightconeSkillDescription").innerHTML = pagePopulation.cleanDescription(lightconeRef.params[globalPathChar.lcRank-1],lightconeRef.desc);
-        
-
-        readSelection("lightconeStarRatingImage").src = `/HonkaiSR/icon/deco/Star${lightconeRef.rarity}.png`;
-        readSelection("characterMainCenterImageLightcone").src = "/HonkaiSR/" + lightconeRef.portrait;
-        readSelection("characterDisplayLightconePreviewImageText").innerHTML = lightconeRef.name;
-
-        //superimpositionButton1
-        for (let i=1;i<=5;i++) {
-            readSelection(`superimpositionButton${i}`).style.backgroundColor = "transparent";
-            readSelection(`superimpositionButton${i}`).style.color = "#e1e1e4";
-        }
-        readSelection(`superimpositionButton${globalPathChar.lcRank}`).style.backgroundColor = "#e1e1e4";
-        readSelection(`superimpositionButton${globalPathChar.lcRank}`).style.color = "black";
-
-        for (let i=0;i<=6;i++) {
-            readSelection(`eidolonRankButton${i}`).style.backgroundColor = "transparent";
-            readSelection(`eidolonRankButton${i}`).style.color = "#e1e1e4";
-        }
-        readSelection(`eidolonRankButton${globalPathChar.rank}`).style.backgroundColor = "#e1e1e4";
-        readSelection(`eidolonRankButton${globalPathChar.rank}`).style.color = "black";
-
-        const eidolonLevelBox = readSelection("eidolonLevelBonuses");
-
-        let levelBonuses = {};
-        if (globalPathChar.rank >= 3) {
-            const path3 = charRef.eidlonLevelBonuses[3];
-            for (let entry in path3) {
-                if (!levelBonuses[entry]) {
-                    levelBonuses[entry] = path3[entry];
-                }
-                else {
-                    levelBonuses[entry] += path3[entry];
-                }
-            }
-        }
-        if (globalPathChar.rank >= 5) {
-            const path5 = charRef.eidlonLevelBonuses[5];
-            for (let entry in path5) {
-                if (!levelBonuses[entry]) {
-                    levelBonuses[entry] = path5[entry];
-                }
-                else {
-                    levelBonuses[entry] += path5[entry];
-                }
-            }
-        }
-
-        let sumLevelBonusString = "";
-        for (let levelBonus in levelBonuses) {
-            sumLevelBonusString += `<div class="eidolonBonusLevelRow">${levelBonus}: +${levelBonuses[levelBonus]}</div>`;
-        }
-
-        if (sumLevelBonusString === "") {sumLevelBonusString = "&nbsp;None"}
-        eidolonLevelBox.innerHTML = sumLevelBonusString;
-
-        // let eidoRank = globalRecords.character[charSlot].rank;
-        // if (eidoRank >= 3) {baseLevel += charRef.eidlonLevelBonuses[3][skillSlot] ?? 0;}
-        //     if (eidoRank >= 5) {baseLevel += charRef.eidlonLevelBonuses[5][skillSlot] ?? 0;}
-
-    
-        let src1 = "/HonkaiSR/" + lightconeRef.portrait;
-        const topContainer = readSelection('testContainer');
-
-        topContainer.innerHTML = "";
-        const img = document.createElement('img');
-        img.src = src1;
-    
-        const dx = lightconeRef.imageOffset[0];
-        const dy = -lightconeRef.imageOffset[1];
-
-        const natHeight = 1260;
-        const natWidth = 904;
-        const borderWidth = 14;
-
-        const borderScalar = (natHeight + natWidth - borderWidth*4) / (natHeight + natWidth);
-        const scale = lightconeRef.imageOffset[2]/borderScalar;
-
-        const gameWidth = 520;
-        const elemWidth = 247;
-
-        const scalar = gameWidth/(elemWidth - borderWidth*(natHeight/natWidth));
-        const shrunkenImageHeight = gameWidth * (natHeight/natWidth) * scalar;
-        const finalDy = dy * (natHeight / shrunkenImageHeight);
-        const finalDx = dx * (natWidth / gameWidth)/scalar;
-        
-        img.style.width = "100%";
-        img.style.transform = `translate(${finalDx}px, ${finalDy}px) scale(${scale})`;
-        topContainer.appendChild(img);
-
-        //some shit I wrote out to help fribbels fix their LC offsets, then they didn't even care LMAO, is what it is
-        // if (true) {
-        //     // testContainer4 //240 by 280
-        //     let src1 = "/HonkaiSR/" + lightconeRef.portrait;
-        //     const fribSizeTest = readSelection('testContainer4');
-
-        //     fribSizeTest.innerHTML = "";
-        //     const testIMG = document.createElement('img');
-        //     testIMG.src = src1;
-        
-        //     const dx = lightconeRef.imageOffset[0];
-        //     let dy = -lightconeRef.imageOffset[1];
-
-
-        //     // 404 x 128 is the width/height aspect ratio normally applied to game-matching offsets
-
-        //     const natHeight = 1260;
-        //     const natWidth = 904;
-        //     const natBorder = 14;//all the portaits have that white border, and it DOES matter
-
-        //     const borderScalar = (natHeight + natWidth - natBorder*4) / (natHeight + natWidth);
-        //     const scale = lightconeRef.imageOffset[2]/borderScalar;
-
-        //     const gameWidth = 520;
-        //     //WIDTH AND HEIGHT HERE CAN BE ANYTHING BUT YOU DO NEED TO CLARIFY WHAT THEY ARE
-        //     //so rn I'm using your "stat score only" dimensions
-        //     //only diff from the prior example is now the height needs to specified, before it was just width
-        //     const elemWidthYOURS = 240;
-        //     const elemHeight = 280;
-
-        //     const borderWidthSumYOURS = 0;//if you use borderbox and have a 2px border width, then this is a 4px sum
-        //     const elemWidthAdjusted = (elemWidthYOURS-borderWidthSumYOURS)*borderScalar;
-
-        //     const scalar = gameWidth/(elemWidthAdjusted - natBorder*(natHeight/natWidth));
-        //     const beeg = gameWidth * (natHeight/natWidth) * scalar;
-        //     let finalDy = dy * (natHeight / beeg);
-        //     const finalDx = dx * (natWidth / gameWidth)/scalar;
-
-        //     const fullyScaledHeight = elemWidthYOURS * (natHeight/natWidth) * scale * 0.5;
-        //     const fullyScaledBorder = (natBorder*2.5)/natHeight * fullyScaledHeight;
-        //     const halfContainerHeight = elemHeight * 0.5;
-
-        //     if ((finalDy - halfContainerHeight) < -fullyScaledHeight + fullyScaledBorder) {
-        //         finalDy += -((finalDy - halfContainerHeight) + fullyScaledHeight - fullyScaledBorder);
-        //     }
-        //     else if ((finalDy + halfContainerHeight) > +fullyScaledHeight - fullyScaledBorder) {
-        //         finalDy += -((finalDy + halfContainerHeight) - fullyScaledHeight + fullyScaledBorder);
-        //     }
-
-            
-        //     testIMG.style.width = "100%";
-        //     testIMG.style.transform = `translate(${finalDx}px, ${finalDy}px) scale(${scale})`;//ORDER MATTERS HERE
-        //     fribSizeTest.appendChild(testIMG);
-        // }
 
 
         
@@ -3930,30 +3901,6 @@ const userTriggers = {
         
 
 
-        readSelection("relicSetName1").innerHTML = globalPathChar.planar;
-        readSelection("relicSetDesc1").innerHTML = "2-Pc: " + pagePopulation.cleanDescription(relicSets[globalPathChar.planar].params[0],relicSets[globalPathChar.planar].desc[0]);
-        readSelection("relicSetIcon1").src = "/HonkaiSR/" + relicSets[globalPathChar.planar].icon;
-
-        readSelection("relicSetName2").innerHTML = globalPathChar["2pc"];
-        readSelection("relicSetDesc2").innerHTML = "2-Pc: " + pagePopulation.cleanDescription(relicSets[globalPathChar["2pc"]].params[0],relicSets[globalPathChar["2pc"]].desc[0]);
-        readSelection("relicSetIcon2").src = "/HonkaiSR/" + relicSets[globalPathChar["2pc"]].icon;
-
-        //if we have a full 4pc effect, there is no need to display a 3rd set name, so hide it if so
-        if (globalPathChar["2pc"] === globalPathChar["4pc"]) {
-            readSelection("relicSetName3").innerHTML = "";
-            readSelection("relicsExtraSetNameHidden").style.display = "none";
-            readSelection("relicSetIcon3").src = "/HonkaiSR/" + relicSets[globalPathChar["2pc"]].icon;
-
-            readSelection("relicSetDesc3").innerHTML = "4-Pc: " + pagePopulation.cleanDescription(relicSets[globalPathChar["2pc"]].params[1],relicSets[globalPathChar["2pc"]].desc[1]);
-        }
-        else {
-            readSelection("relicsExtraSetNameHidden").style.display = "flex";
-            readSelection("relicSetIcon3").src = "/HonkaiSR/" + relicSets[globalPathChar["4pc"]].icon;
-
-            readSelection("relicSetName3").innerHTML = globalPathChar["4pc"];
-            readSelection("relicSetDesc3").innerHTML = "2-Pc: " + pagePopulation.cleanDescription(relicSets[globalPathChar["4pc"]].params[0],relicSets[globalPathChar["4pc"]].desc[0]);
-        }
-
 
 
 
@@ -3962,16 +3909,40 @@ const userTriggers = {
         let rankCounter = 0;
         for (let entry of eidoRef) {
             rankCounter++;
+
+            let paramsStringer = "";
+            const paramsCheck = entry.paramsEido
+            if (paramsCheck?.length) {
+
+                let paramString = "";
+                let paramCounter = 0;
+                for (let paramEntry of paramsCheck) {
+                    // console.log(paramEntry)
+                    paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                    paramCounter++;
+                }
+
+                paramsStringer += `
+                    <div class="actionDetailBody">
+                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                    </div>
+                `
+            }
+
+
+            // onclick="userTriggers.updateEidolonRank(${rankCounter})"
             eidoString += `
-            <div class="eidolonRowBoxHolder" style="opacity:${globalPathChar.rank >= entry.rank ? 1 : 0.5}">
+            <div class="eidolonRowBoxHolder" style="opacity: .9">
                 <div class="eidolonRowIconHolder">
-                    <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable" onclick="userTriggers.updateEidolonRank(${rankCounter})"/>
+                    <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable"/>
                 </div>
                 
                 <div class="rightDescriptionBoxEidolons smallFont">
                     <div class="eidolonRowName">${entry.name}</div>
                     ${entry.desc}
+                    ${paramsStringer}
                 </div>
+                
             </div>
             `;
             
@@ -3979,44 +3950,301 @@ const userTriggers = {
         readSelection("eidolonsMainBoxHolder").innerHTML = eidoString;
 
 
+        const traceRef = charRef.traces;
+        const skillRef = charRef.skills;
+        let overviewString = ``;
+        // let rankCounter = 0;
+        for (let traceEntry in traceRef) {
+            const currentTraceRef = traceRef[traceEntry];
+            if (!currentTraceRef.desc && !currentTraceRef.skillRef) {continue}
+
+            const traceIcon = currentTraceRef.icon;
+            const currentTraceRefSkill = currentTraceRef.skillRef;
+            const skillSlot = currentTraceRefSkill?.skillSlot;
+
+
+            const skillLevel = userTriggers.levelFloors[skillSlot];
+
+            let entryString = "";
 
 
 
+            entryString += `
+            <div class="rotationsSectionRowHolder2Overview">
+            <div class="eidolonRowBoxHolder">
+                <div class="eidolonRowIconHolder">
+                    <img src="/HonkaiSR/${traceIcon}" class="eidolonRowIcon clickable"/>
+                </div>
+                
+                <div class="rightDescriptionBoxEidolons smallFont">
+                    <div class="eidolonRowName">
+                        ${skillSlot ? `<div class="eidolonRowNameSkillLevelSelection">
+                                            <div class="toggleArrowBox clickable" onclick="userTriggers.updateSkillLevel('${skillSlot}',-1)">◀</div>
+                                            <div class="traitLevelDisplay" id="skillSlotValue${skillSlot}">
+                                                ${skillLevelStore[skillSlot] ??= userTriggers.levelFloors[skillSlot]}
+                                            </div> 
+                                            <div class="toggleArrowBox clickable" onclick="userTriggers.updateSkillLevel('${skillSlot}',1)">▶</div>
+                                        </div>` : ""}
+                        ${skillSlot ?? currentTraceRef.name}
+                    </div>
+                    
+            `;
+            // ${entry.desc}
+
+
+
+
+            // "skillRef": {
+            //     "skillName": "I Choose You!",
+            //     "skillSlot": "Skill"
+            // }
+            if (currentTraceRefSkill) {
+                // const skillName = currentTraceRefSkill.skillName;
+                const skillSlot = currentTraceRefSkill.skillSlot;
+
+                const skillEntry = skillRef[skillSlot];
+
+                for (let innerSkill in skillEntry) {
+                    const currentInnerSkill = skillEntry[innerSkill];
+
+
+
+
+                    entryString += `
+                        <div class="rotationsSectionRowHolder1Overview">
+                            <div class="eidolonRowBoxHolder">
+                                
+                                    <div class="eidolonRowNameSkill">${innerSkill}</div>
+
+                            </div>
+
+                                
+
+                            `;
+
+
+
+                    for (let innerSkillVariant in currentInnerSkill) {
+                        const currentInnerSkillVariant = currentInnerSkill[innerSkillVariant];
+
+                        const paramsCheck = currentInnerSkillVariant?.params[skillLevelStore[skillSlot]];
+                        let paramsStringer = "";
+                        if (paramsCheck?.length) {
+
+                            let paramString = "";
+                            let paramCounter = 0;
+                            for (let paramEntry of paramsCheck) {
+                                // console.log(paramEntry)
+                                paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                                paramCounter++;
+                            }
+        
+                            paramsStringer += `
+                                <div class="actionDetailBody">
+                                    <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                                </div>
+                            `
+                        }
+
+
+                        entryString += `
+                            <div class="rotationsSectionRowHolder3Overview">
+                                <div class="eidolonRowBoxHolder">
+                                    
+                                    <div class="rightDescriptionBoxEidolons smallFont">
+                                        <div class="eidolonRowNameTrigger">${currentInnerSkillVariant.trigger}${currentInnerSkillVariant.type ? ` <span class="traceAttackTargetType">[${currentInnerSkillVariant.type}]</span>` : ""}</div>
+
+                                    </div>
+
+                                    
+
+                                </div>
+
+                                <div class="overviewSkillDataBox">
+                                    
+                                
+                                    ${(currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain) ? `<div class="traceToughnessBoxOverviewSkill">
+                                        <div class="traceToughnessTitleBox">Skill Points</div>
+                                        <div class="traceToughnessValueBox">${currentInnerSkillVariant.skillPointGain ? "+" : "-"}${currentInnerSkillVariant.skillPointCost || currentInnerSkillVariant.skillPointGain}</div>
+                                    </div>` : ""}
+                                    ${currentInnerSkillVariant.energyCost ? `<div class="traceToughnessBoxOverviewSkill">
+                                        <div class="traceToughnessTitleBox">Energy Cost</div>
+                                        <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyCost}</div>
+                                    </div>` : ""}
+                                    ${currentInnerSkillVariant.energyRegen ? `<div class="traceToughnessBoxOverviewSkill">
+                                        <div class="traceToughnessTitleBox">Energy</div>
+                                        <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyRegen}</div>
+                                    </div>` : ""}
+
+                                    ${currentInnerSkillVariant.toughnessList?.length ? `<div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
+                                        <div class="traceToughnessTitleBoxToughnessRow">
+                                            ${currentInnerSkillVariant.toughnessList[0].Value ? `ST[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[0].Value/3}</span>] ` : ""}
+                                            ${currentInnerSkillVariant.toughnessList[1].Value ? `AOE[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[1].Value/3}</span>] ` : ""}
+                                            ${currentInnerSkillVariant.toughnessList[2].Value ? `Blast[<span class="traceToughnessValueBoxToughness">${currentInnerSkillVariant.toughnessList[2].Value/3}</span>] ` : ""}
+                                        </div>
+                                    </div>` : ""}
+                                    
+                                </div>
+                                
+
+                                <div class="actionDetailBody">
+                                    <div class="actionDetailBody2Description">
+                                        ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkillVariant.desc)}
+                                    </div>
+                                </div>
+                                ${paramsStringer}
+                            </div>`;
+                    }
+
+                    entryString += `
+
+                        </div>`
+
+                    // trigger
+
+
+                    // const paramsCheck = currentInnerSkill.variant1?.params[skillLevel];
+                    // let paramsStringer = "";
+                    // if (paramsCheck?.length) {
+
+                    //     let paramString = "";
+                    //     let paramCounter = 0;
+                    //     for (let paramEntry of paramsCheck) {
+                    //         // console.log(paramEntry)
+                    //         paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                    //         paramCounter++;
+                    //     }
+    
+                    //     paramsStringer += `<div class="rotationsSectionRowHolder2Overview">
+                    //         <div class="actionDetailBody">
+                    //             <div class="rotationConditionOperatorHeaderInline">Parameters: [${paramString}]</div>
+                    //         </div>
+                    //     </div>`
+                    // }
+
+
+                    // entryString += `
+                    //     <div class="rotationsSectionRowHolder1Overview">
+                    //         <div class="eidolonRowBoxHolder">
+                                
+                    //             <div class="rightDescriptionBoxEidolons smallFont">
+                    //                 <div class="eidolonRowName">${innerSkill}</div>
+
+                    //             </div>
+
+                                
+
+                    //         </div>
+
+                    //         <div class="actionDetailBody">
+                    //             <div class="actionDetailBody2Description">
+                    //                 ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkill.variant1.desc)}
+                    //             </div>
+                    //         </div>
+                    //         ${paramsStringer}
+                    //     </div>`;
+                }
+
+
+                // entryString += `<div class="rotationsSectionRowHolder1Overview">
+                //     <div class="actionDetailBody">
+                //         <div class="rotationConditionOperatorHeaderInline">Description:</div>&nbsp;
+                //         <div class="actionDetailBody2Description">
+                //         ${pagePopulation.cleanDescription(currentTraceRef.params,currentTraceRef.desc)}
+                //         </div>
+                //     </div>
+                // </div>`
+
+
+            }
+            else {
+
+                // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
+                entryString += `<div class="rotationsSectionRowHolder1Overview">
+                    <div class="actionDetailBody">
+                        <div class="actionDetailBody2Description">
+                            ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc)}
+                        </div>
+                    </div>
+                `
+
+                if (currentTraceRef.params?.length) {
+
+                    let paramString = "";
+                    let paramCounter = 0;
+                    for (let paramEntry of currentTraceRef.params) {
+                        paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                        paramCounter++;
+                    }
+
+                    entryString += `
+                        <div class="actionDetailBody">
+                            <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                        </div>
+                    `
+                }
+
+                entryString += `</div>`
+            }
+
+
+
+            entryString += `</div>
+            </div>
+            </div>`;
+
+            overviewString += entryString;
+            
+        }
+        readSelection("overviewMainBoxHolder").innerHTML = overviewString;
 
         let statBox = readSelection("characterDisplayStatsBasic");
         statBox.innerHTML = "";
-        const menuBoxDisplayOrder = ["HPFinal","ATKFinal","DEFFinal","SPDFinal","CritRateFinal","CritDamageFinal"];
-        statBox.innerHTML = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,statTableRef.returnObject);
+        // const menuBoxDisplayOrder = Object.keys(charRef.baseStats);
 
-        statBox = readSelection("lightconeDisplayStatsBasic");
-        statBox.innerHTML = "";
+
+        charRef.baseStats.EnergyMax = charRef.energyMax;
+
+        const menuBoxDisplayOrder = [];
+        let destinationArray = [];
+        const convertedDisplayObject = {};
+
+        // console.log(menuBoxDisplayOrder)
+        for (let statNameEntry in charRef.baseStats) {
+            menuBoxDisplayOrder.push(greatTableIndex[statNameEntry]);
+            // destinationArray.push(charRef.baseStats[statNameEntry]);
+            convertedDisplayObject[greatTableIndex[statNameEntry]] = charRef.baseStats[statNameEntry]
+
+        }
+        // console.log(menuBoxDisplayOrder)
+
+
+        // ["HPFinal","ATKFinal","DEFFinal","SPDFinal","CritRateFinal","CritDamageFinal"];
+        statBox.innerHTML = customHTML.createAlternatingStatRowsFullNames(menuBoxDisplayOrder,convertedDisplayObject);
+
+
+    },
+    updateSkillLevel(skillSlot,valueToChange) {
+        const currentSlot = skillLevelStore[skillSlot];
+
+
         
+        const characterName = compositeAbilityObject.fullCharacterName;
+        let charRef = characters[characterName];
+        const skillRef = charRef.skills;
+
+        const innerSkillSlot = skillRef[skillSlot];
+        const currentSkill = innerSkillSlot[Object.keys(innerSkillSlot)[0]].variant1.params;
+
+        const proposedValue = currentSlot + valueToChange;
+
+        if (currentSkill[proposedValue]) {skillLevelStore[skillSlot] = proposedValue;}
 
 
-        const newLightconeBase = {};
-        for (let entry in lightconeRef.baseStats) {
-            newLightconeBase[greatTableIndex[entry]] = lightconeRef.baseStats[entry]
-        }
-        // const menuBoxDisplayOrder2 = ["HPBase","ATKBase","DEFBase"];
-        const menuBoxDisplayOrder2 = [greatTableIndex["HPBase"],greatTableIndex["ATKBase"],greatTableIndex["DEFBase"]];
-        statBox.innerHTML = customHTML.createAlternatingStatRows(menuBoxDisplayOrder2,newLightconeBase);
+        const displayID = `skillSlotValue${skillSlot}`;
 
-        statBox = readSelection("customMenuSearchBodyStats");
-        statBox.innerHTML = "";
-        // tableReference,returnObject
-        // console.log(statTableRef.tableReference)
-        const menuBoxDisplayOrder3 = [...Object.keys(statTableRef.tableReference),...Object.keys(statTableRef.returnObject)].sort();
-        menuBoxDisplayOrder3.splice(0,1);
-        statBox.innerHTML = customHTML.createAlternatingStatRows(menuBoxDisplayOrder3,{...statTableRef.tableReference,...statTableRef.returnObject},null,null,true);
-
-
-        // characterName
-        customHTML.megaRotationFuckery(characterName);
-
-
-        if (globalUI.pageLoadIsDone && !silent) {
-            userTriggers.getUpdatedBattleLog();
-        }
+        readSelection(displayID).innerHTML = skillLevelStore[skillSlot];
+        userTriggers.updateCharacterUI();
     },
     getUpdatedBattleLog() {
         console.log("battle simulate start")
