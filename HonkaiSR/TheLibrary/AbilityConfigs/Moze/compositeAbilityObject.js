@@ -18,6 +18,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Moze_Moze_TechniqueInLevel": {
       "fileName": "Moze_Moze_TechniqueInLevel",
+      "childAbilityList": [
+        "Moze_Moze_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -731,6 +735,14 @@ const compositeAbilityObject = {
     },
     "Moze_Moze_PassiveAbility01": {
       "fileName": "Moze_Moze_PassiveAbility01",
+      "childAbilityList": [
+        "Moze_Moze_PassiveAbility01",
+        "Moze_Moze_Insert_Part01",
+        "Moze_Moze_Insert_Camera",
+        "Moze_Moze_Insert_Part01_Eidolon6Extra",
+        "Moze_Moze_Insert_End_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 10,
       "toughnessList": [
@@ -2180,6 +2192,13 @@ const compositeAbilityObject = {
     },
     "Moze_Moze_Ability03_Part01": {
       "fileName": "Moze_Moze_Ability03_Part01",
+      "childAbilityList": [
+        "Moze_Moze_Ability03_Camera",
+        "Moze_Moze_Ability03_EnterReady",
+        "Moze_Moze_Ability03_Part01",
+        "Moze_Moze_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -2357,6 +2376,12 @@ const compositeAbilityObject = {
     },
     "Moze_Moze_Ability02_Part01": {
       "fileName": "Moze_Moze_Ability02_Part01",
+      "childAbilityList": [
+        "Moze_Moze_Ability02_Camera",
+        "Moze_Moze_Ability02_Part01",
+        "Moze_Moze_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2419,6 +2444,12 @@ const compositeAbilityObject = {
     },
     "Moze_Moze_Ability01_Part01": {
       "fileName": "Moze_Moze_Ability01_Part01",
+      "childAbilityList": [
+        "Moze_Moze_Ability01_Camera",
+        "Moze_Moze_Ability01_Part01",
+        "Moze_Moze_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2577,16 +2608,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2691,16 +2719,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TotalDamage) || RETURN",
-                        "displayLines": "MDF_TotalDamage",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TotalDamage"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                          "value": "MDF_TotalDamage"
+                        }
+                      ]
                     }
                   ]
                 }

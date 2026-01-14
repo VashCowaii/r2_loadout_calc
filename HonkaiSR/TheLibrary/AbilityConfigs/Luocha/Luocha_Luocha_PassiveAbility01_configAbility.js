@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Luocha_Luocha_PassiveAbility01",
+  "childAbilityList": [
+    "Luocha_Luocha_PassiveAbility01_Camera",
+    "Luocha_Luocha_PassiveAbility01",
+    "Luocha_Luocha_Passive01_InsertAbility",
+    "Luocha_Luocha_Ability02_InsertAbility"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

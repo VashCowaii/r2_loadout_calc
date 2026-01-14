@@ -158,18 +158,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_DefenceAddedRatio) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_DefenceAddedRatio)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_DefenceAddedRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(0 - MDF_DefenceAddedRatio)"
+                    }
+                  ]
                 }
               ]
             }

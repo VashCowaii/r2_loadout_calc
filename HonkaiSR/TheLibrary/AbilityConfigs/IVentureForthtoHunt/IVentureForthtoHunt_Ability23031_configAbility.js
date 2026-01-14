@@ -41,17 +41,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.27) || INVERT || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(-0.27 * _Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.27,
-                      "_Layer"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(-0.27 * _Layer)"
+                    }
+                  ]
                 }
               ]
             }

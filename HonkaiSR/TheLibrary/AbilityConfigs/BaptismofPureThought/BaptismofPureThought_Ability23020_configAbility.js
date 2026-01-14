@@ -49,16 +49,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue2) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue2",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue2"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-MDF_PropertyValue2"
+                    }
+                  ]
                 }
               ]
             }
@@ -135,17 +132,13 @@ const configAbility = {
             },
             {
               "name": "Adjust Target Stats",
-              "on": "Attacker",
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_DebuffCount) || MUL || RETURN",
-                "displayLines": "(MDF_PropertyValue * _DebuffCount)",
-                "constants": [],
-                "variables": [
-                  "MDF_PropertyValue",
-                  "_DebuffCount"
-                ]
-              }
+              "modifiedValuesArray": [
+                {
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                  "value": "(MDF_PropertyValue * _DebuffCount)"
+                }
+              ]
             }
           ]
         },
@@ -170,16 +163,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.36) || RETURN",
-                        "displayLines": "0.36",
-                        "constants": [],
-                        "variables": [
-                          0.36
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.36"
+                        }
+                      ]
                     }
                   ]
                 },

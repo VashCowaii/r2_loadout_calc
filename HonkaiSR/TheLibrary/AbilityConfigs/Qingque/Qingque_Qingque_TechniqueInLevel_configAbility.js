@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Qingque_Qingque_TechniqueInLevel",
+  "childAbilityList": [
+    "Qingque_Qingque_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

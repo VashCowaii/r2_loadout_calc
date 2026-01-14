@@ -70,17 +70,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || Variables[1] (_layer) || MUL || INVERT || RETURN",
-                        "displayLines": "-(MDF_PropertyValue2 * _layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2",
-                          "_layer"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "-(MDF_PropertyValue2 * _layer)"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -152,16 +148,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.05) || RETURN",
-                        "displayLines": "0.05",
-                        "constants": [],
-                        "variables": [
-                          0.05
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                          "value": "0.05"
+                        }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -232,16 +225,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.05) || RETURN",
-                        "displayLines": "0.05",
-                        "constants": [],
-                        "variables": [
-                          0.05
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                          "value": "0.05"
+                        }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -312,16 +302,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.05) || RETURN",
-                        "displayLines": "0.05",
-                        "constants": [],
-                        "variables": [
-                          0.05
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                          "value": "0.05"
+                        }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -392,16 +379,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.05) || RETURN",
-                        "displayLines": "0.05",
-                        "constants": [],
-                        "variables": [
-                          0.05
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                          "value": "0.05"
+                        }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",

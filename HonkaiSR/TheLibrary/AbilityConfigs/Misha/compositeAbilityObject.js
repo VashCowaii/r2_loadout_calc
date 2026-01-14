@@ -219,16 +219,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.3) || RETURN",
-                        "displayLines": "0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                          "value": "0.3"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -242,6 +239,10 @@ const compositeAbilityObject = {
     },
     "Misha_Misha_TechniqueInLevel": {
       "fileName": "Misha_Misha_TechniqueInLevel",
+      "childAbilityList": [
+        "Misha_Misha_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -301,6 +302,10 @@ const compositeAbilityObject = {
     },
     "Misha_Misha_PassiveAbility01": {
       "fileName": "Misha_Misha_PassiveAbility01",
+      "childAbilityList": [
+        "Misha_Misha_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1089,6 +1094,13 @@ const compositeAbilityObject = {
     },
     "Misha_Misha_Ability03_Part01": {
       "fileName": "Misha_Misha_Ability03_Part01",
+      "childAbilityList": [
+        "Misha_Misha_Ability03_Camera",
+        "Misha_Misha_Ability03_EnterReady",
+        "Misha_Misha_Ability03_Part01",
+        "Misha_Misha_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1191,6 +1203,12 @@ const compositeAbilityObject = {
     },
     "Misha_Misha_Ability02_Part01": {
       "fileName": "Misha_Misha_Ability02_Part01",
+      "childAbilityList": [
+        "Misha_Misha_Ability02_Camera",
+        "Misha_Misha_Ability02_Part01",
+        "Misha_Misha_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1247,6 +1265,12 @@ const compositeAbilityObject = {
     },
     "Misha_Misha_Ability01_Part01": {
       "fileName": "Misha_Misha_Ability01_Part01",
+      "childAbilityList": [
+        "Misha_Misha_Ability01_Camera",
+        "Misha_Misha_Ability01_Part01",
+        "Misha_Misha_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

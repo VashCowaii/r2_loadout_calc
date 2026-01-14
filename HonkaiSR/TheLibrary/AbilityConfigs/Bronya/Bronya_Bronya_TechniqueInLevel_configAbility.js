@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Bronya_Bronya_TechniqueInLevel",
+  "childAbilityList": [
+    "Bronya_Bronya_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

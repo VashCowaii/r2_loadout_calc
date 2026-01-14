@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Welt_Welt_PassiveAbility01",
+  "childAbilityList": [
+    "Welt_Welt_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

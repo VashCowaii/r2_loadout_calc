@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Herta_Herta_PassiveAbility01",
+  "childAbilityList": [
+    "Herta_Herta_PassiveAbility01",
+    "Herta_Herta_Passive1Atk_Ability_Camera",
+    "Herta_Herta_PassiveAtkReady_Ability"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 5,
   "toughnessList": [

@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Blade_AdvancedRen_PassiveAbility01",
+  "childAbilityList": [
+    "Blade_Ren_Passive_Camera",
+    "Blade_AdvancedRen_PassiveAbility01",
+    "Blade_AdvancedRen_Passive1Atk_Ability",
+    "Blade_AdvancedRen_Passive1Atk02_Ability"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 10,
   "toughnessList": [

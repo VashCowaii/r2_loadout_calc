@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "Huohuo_Huohuo_PassiveAbility01",
+  "childAbilityList": [
+    "Huohuo_Huohuo_PassiveAbility01",
+    "Huohuo_Huohuo_Eidolon2_Insert"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

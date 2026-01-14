@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Guinaifen_Guinaifen_PassiveAbility01",
+  "childAbilityList": [
+    "Guinaifen_Guinaifen_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

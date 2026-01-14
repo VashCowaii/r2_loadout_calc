@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Lynx_Lynx_PassiveAbility01",
+  "childAbilityList": [
+    "Lynx_Lynx_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

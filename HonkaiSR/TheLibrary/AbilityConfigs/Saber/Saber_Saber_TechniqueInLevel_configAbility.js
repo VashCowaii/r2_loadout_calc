@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Saber_Saber_TechniqueInLevel",
+  "childAbilityList": [
+    "Saber_Saber_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

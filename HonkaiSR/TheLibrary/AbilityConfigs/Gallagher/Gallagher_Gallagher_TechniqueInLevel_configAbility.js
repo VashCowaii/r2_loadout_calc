@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Gallagher_Gallagher_TechniqueInLevel",
+  "childAbilityList": [
+    "Gallagher_Gallagher_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

@@ -198,6 +198,10 @@ const compositeAbilityObject = {
     },
     "Natasha_Natasha_TechniqueInLevel": {
       "fileName": "Natasha_Natasha_TechniqueInLevel",
+      "childAbilityList": [
+        "Natasha_Natasha_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -310,6 +314,10 @@ const compositeAbilityObject = {
     },
     "Natasha_Natasha_PassiveAbility01": {
       "fileName": "Natasha_Natasha_PassiveAbility01",
+      "childAbilityList": [
+        "Natasha_Natasha_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -609,6 +617,13 @@ const compositeAbilityObject = {
     },
     "Natasha_Natasha_Ability03_Part01": {
       "fileName": "Natasha_Natasha_Ability03_Part01",
+      "childAbilityList": [
+        "Natasha_Natasha_Ability03_Camera",
+        "Natasha_Natasha_Ability03_EnterReady",
+        "Natasha_Natasha_Ability03_Part01",
+        "Natasha_Natasha_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -769,6 +784,13 @@ const compositeAbilityObject = {
     },
     "Natasha_Natasha_Ability02_Part01": {
       "fileName": "Natasha_Natasha_Ability02_Part01",
+      "childAbilityList": [
+        "Natasha_Natasha_Ability02_Camera_Self",
+        "Natasha_Natasha_Ability02_Camera_Other",
+        "Natasha_Natasha_Ability02_Part01",
+        "Natasha_Natasha_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -872,6 +894,12 @@ const compositeAbilityObject = {
     },
     "Natasha_Natasha_Ability01_Part01": {
       "fileName": "Natasha_Natasha_Ability01_Part01",
+      "childAbilityList": [
+        "Natasha_Natasha_Ability01_Camera",
+        "Natasha_Natasha_Ability01_Part01",
+        "Natasha_Natasha_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Gepard_Gepard_TechniqueInLevel",
+  "childAbilityList": [
+    "Gepard_Gepard_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

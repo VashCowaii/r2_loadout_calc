@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "RuanMei_RuanMei_PassiveAbility01",
+  "childAbilityList": [
+    "RuanMei_RuanMei_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Basic ATK",
   "energy": null,
   "toughnessList": [

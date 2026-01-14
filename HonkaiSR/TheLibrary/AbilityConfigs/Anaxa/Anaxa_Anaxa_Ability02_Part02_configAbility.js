@@ -222,17 +222,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_TargetCount) || Variables[1] (0.2) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetCount * 0.2)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TargetCount",
-                      0.2
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "(MDF_TargetCount * 0.2)"
+                    }
+                  ]
                 }
               ]
             }

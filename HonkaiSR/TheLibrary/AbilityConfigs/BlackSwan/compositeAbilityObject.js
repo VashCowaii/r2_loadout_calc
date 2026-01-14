@@ -876,18 +876,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWind</span>&nbsp;",
-                          "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Defender",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWind</span>&nbsp;",
+                              "value": "(0 - MDF_PropertyValue)"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -934,18 +929,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysical</span>&nbsp;",
-                          "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Defender",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysical</span>&nbsp;",
+                              "value": "(0 - MDF_PropertyValue)"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -992,18 +982,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFire</span>&nbsp;",
-                          "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Defender",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFire</span>&nbsp;",
+                              "value": "(0 - MDF_PropertyValue)"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1050,18 +1035,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightning</span>&nbsp;",
-                          "value": {
-                            "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                            "displayLines": "(0 - MDF_PropertyValue)",
-                            "constants": [
-                              0
-                            ],
-                            "variables": [
-                              "MDF_PropertyValue"
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Defender",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightning</span>&nbsp;",
+                              "value": "(0 - MDF_PropertyValue)"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1729,7 +1709,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                     "target": "Use Prior Target(s) Defined",
                     "mustBeAlive2": true
                   },
@@ -1763,7 +1743,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },
@@ -2595,6 +2575,11 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_TechniqueInLevel": {
       "fileName": "BlackSwan_BlackSwan_TechniqueInLevel",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_TechniqueInLevel",
+        "BlackSwan_BlackSwan_TechniqueInLevel_Insert"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -2668,6 +2653,10 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_PassiveAbility01": {
       "fileName": "BlackSwan_BlackSwan_PassiveAbility01",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -3292,6 +3281,13 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_Ability03_Part01": {
       "fileName": "BlackSwan_BlackSwan_Ability03_Part01",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_Ability03_Camera",
+        "BlackSwan_BlackSwan_Ability03_Part01",
+        "BlackSwan_BlackSwan_Ability03_Part02",
+        "BlackSwan_BlackSwan_Ability03_Cutin"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -3874,6 +3870,12 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_Ability02_Part01": {
       "fileName": "BlackSwan_BlackSwan_Ability02_Part01",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_Ability02_Camera",
+        "BlackSwan_BlackSwan_Ability02_Part01",
+        "BlackSwan_BlackSwan_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -4186,6 +4188,12 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_Ability01_Part01": {
       "fileName": "BlackSwan_BlackSwan_Ability01_Part01",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_Ability01_Camera",
+        "BlackSwan_BlackSwan_Ability01_Part01",
+        "BlackSwan_BlackSwan_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -4343,16 +4351,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -4516,18 +4521,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_PropertyValue)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "(0 - MDF_PropertyValue)"
+                        }
+                      ]
                     }
                   ]
                 }

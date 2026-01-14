@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Himeko_Himeko_PassiveAbility01",
+  "childAbilityList": [
+    "Himeko_Himeko_Passive1Atk_Ability_Camera",
+    "Himeko_Himeko_PassiveAbility01",
+    "Himeko_Himeko_Passive1Atk_Ability",
+    "Himeko_Himeko_Passive1Atk02_Ability"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 10,
   "toughnessList": [

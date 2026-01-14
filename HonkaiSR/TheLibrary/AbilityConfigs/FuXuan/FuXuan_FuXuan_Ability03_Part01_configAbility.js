@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "FuXuan_FuXuan_Ability03_Part01",
+  "childAbilityList": [
+    "FuXuan_FuXuan_Ability03_Part01",
+    "FuXuan_FuXuan_Ability03_Part02",
+    "FuXuan_FuXuan_Ability03_Camera",
+    "FuXuan_FuXuan_Ability03_EnterReady"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

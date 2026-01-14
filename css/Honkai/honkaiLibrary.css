@@ -332,7 +332,7 @@ div {
     justify-content: left;
     align-items: center;
     padding-left: 2px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .imageRowStatisticStatBox {
@@ -341,7 +341,7 @@ div {
     justify-content: right;
     align-items: center;
     padding-right: 2px;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 
@@ -609,8 +609,9 @@ div {
     /* width: auto; */
 
     /* width: 100%; */
-    width: fit-content;
-    width: 250px;
+    width: auto;
+    /* width: 250px; */
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: left;

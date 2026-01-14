@@ -101,8 +101,8 @@ const configAbility = {
           "variableName": "MDF_LifeTime",
           "valueRanges": [
             {
-              "name": "Changes",
-              "execute": [
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -149,8 +149,8 @@ const configAbility = {
           "variableName": "MDF_LifeTime",
           "valueRanges": [
             {
-              "name": "Changes",
-              "execute": [
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
                 {
                   "name": "IF",
                   "conditions": {

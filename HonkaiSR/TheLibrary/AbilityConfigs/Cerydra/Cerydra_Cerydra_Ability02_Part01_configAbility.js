@@ -1,5 +1,16 @@
 const configAbility = {
   "fileName": "Cerydra_Cerydra_Ability02_Part01",
+  "childAbilityList": [
+    "Cerydra_Cerydra_Ability02_Part01",
+    "Cerydra_Cerydra_Ability02_Camera_TimeLine",
+    "Cerydra_Cerydra_Ability02_1_Camera_TimeLine",
+    "Cerydra_Cerydra_Ability02_2_Camera_TimeLine",
+    "Cerydra_Cerydra_Ability02_Others_Part02",
+    "Cerydra_Cerydra_Ability02_InsertEidolon1",
+    "Cerydra_Cerydra_Ability02_Insert_Camera",
+    "Cerydra_Cerydra_Ability02_3_Camera_TimeLine"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

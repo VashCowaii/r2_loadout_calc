@@ -27,6 +27,10 @@ const compositeAbilityObject = {
     },
     "Jingliu_Advanced_Jingliu_TechniqueInLevel": {
       "fileName": "Jingliu_Advanced_Jingliu_TechniqueInLevel",
+      "childAbilityList": [
+        "Jingliu_Advanced_Jingliu_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -307,6 +311,11 @@ const compositeAbilityObject = {
     },
     "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability": {
       "fileName": "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability",
+      "childAbilityList": [
+        "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability",
+        "Jingliu_Jingliu_PassiveAtk_Camera"
+      ],
+      "skillTrigger": "Skill21",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1169,6 +1178,12 @@ const compositeAbilityObject = {
     },
     "Jingliu_Advanced_Jingliu_PassiveAbility01": {
       "fileName": "Jingliu_Advanced_Jingliu_PassiveAbility01",
+      "childAbilityList": [
+        "Jingliu_Advanced_Jingliu_PassiveAbility01",
+        "Jingliu_Jingliu_Passive_Camera",
+        "Jingliu_Advanced_Jingliu_PassiveAtkReady_Part01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1579,6 +1594,13 @@ const compositeAbilityObject = {
     },
     "Jingliu_Advanced_Jingliu_Ability03_Part01": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability03_Part01",
+      "childAbilityList": [
+        "Jingliu_Jingliu_Ability03_Camera",
+        "Jingliu_Advanced_Jingliu_Ability03_Part01",
+        "Jingliu_Advanced_Jingliu_Ability03_Part02",
+        "Jingliu_Advanced_Jingliu_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1709,6 +1731,12 @@ const compositeAbilityObject = {
     },
     "Jingliu_Advanced_Jingliu_Ability02_Part01": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability02_Part01",
+      "childAbilityList": [
+        "Jingliu_Jingliu_Ability02_Camera",
+        "Jingliu_Advanced_Jingliu_Ability02_Part01",
+        "Jingliu_Advanced_Jingliu_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 20,
       "toughnessList": [
@@ -1796,6 +1824,12 @@ const compositeAbilityObject = {
     },
     "Jingliu_Advanced_Jingliu_Ability01_Part01": {
       "fileName": "Jingliu_Advanced_Jingliu_Ability01_Part01",
+      "childAbilityList": [
+        "Jingliu_Jingliu_Ability01_Camera",
+        "Jingliu_Advanced_Jingliu_Ability01_Part01",
+        "Jingliu_Advanced_Jingliu_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2013,16 +2047,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
-                        "displayLines": "MDF_PropertyValue2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue2"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2113,18 +2144,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_PropertyValue)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "(0 - MDF_PropertyValue)"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2502,16 +2528,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }

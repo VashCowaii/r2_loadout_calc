@@ -20,6 +20,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "DrRatio_Dr_Ratio_TechniqueInLevel": {
       "fileName": "DrRatio_Dr_Ratio_TechniqueInLevel",
+      "childAbilityList": [
+        "DrRatio_Dr_Ratio_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -539,6 +543,14 @@ const compositeAbilityObject = {
     },
     "DrRatio_Dr_Ratio_PassiveAbility01": {
       "fileName": "DrRatio_Dr_Ratio_PassiveAbility01",
+      "childAbilityList": [
+        "DrRatio_Dr_Ratio_PassiveAbility01",
+        "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part01",
+        "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part02",
+        "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Camera",
+        "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Camera01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 5,
       "toughnessList": [
@@ -1448,6 +1460,15 @@ const compositeAbilityObject = {
     },
     "DrRatio_Dr_Ratio_Ability03_Part01": {
       "fileName": "DrRatio_Dr_Ratio_Ability03_Part01",
+      "childAbilityList": [
+        "DrRatio_Dr_Ratio_Ability03_Camera",
+        "DrRatio_Dr_Ratio_Ability03_EnterReady",
+        "DrRatio_Dr_Ratio_Ability03_Part01",
+        "DrRatio_Dr_Ratio_Ability03_Part02",
+        "DrRatio_Dr_Ratio_Bonus",
+        "DrRatio_Dr_Ratio_Bonus_Camera"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1940,6 +1961,12 @@ const compositeAbilityObject = {
     },
     "DrRatio_Dr_Ratio_Ability02_Part01": {
       "fileName": "DrRatio_Dr_Ratio_Ability02_Part01",
+      "childAbilityList": [
+        "DrRatio_Dr_Ratio_Ability02_Camera",
+        "DrRatio_Dr_Ratio_Ability02_Part01",
+        "DrRatio_Dr_Ratio_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2017,6 +2044,12 @@ const compositeAbilityObject = {
     },
     "DrRatio_Dr_Ratio_Ability01_Part01": {
       "fileName": "DrRatio_Dr_Ratio_Ability01_Part01",
+      "childAbilityList": [
+        "DrRatio_Dr_Ratio_Ability01_Camera",
+        "DrRatio_Dr_Ratio_Ability01_Part01",
+        "DrRatio_Dr_Ratio_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2096,16 +2129,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2224,16 +2254,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValueChange) || RETURN",
-                    "displayLines": "MDF_PropertyValueChange",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValueChange"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_PropertyValueChange"
+                    }
+                  ]
                 }
               ]
             },

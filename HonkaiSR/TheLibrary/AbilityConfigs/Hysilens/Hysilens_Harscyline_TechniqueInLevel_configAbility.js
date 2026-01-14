@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Hysilens_Harscyline_TechniqueInLevel",
+  "childAbilityList": [
+    "Hysilens_Harscyline_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

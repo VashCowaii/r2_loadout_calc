@@ -20,6 +20,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Kafka_Advanced_Kafka_TechniqueInLevel": {
       "fileName": "Kafka_Advanced_Kafka_TechniqueInLevel",
+      "childAbilityList": [
+        "Kafka_Advanced_Kafka_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -409,8 +413,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1012,6 +1016,12 @@ const compositeAbilityObject = {
     },
     "Kafka_Advanced_Kafka_PassiveAbility01": {
       "fileName": "Kafka_Advanced_Kafka_PassiveAbility01",
+      "childAbilityList": [
+        "Kafka_Advanced_Kafka_PassiveAbility01",
+        "Kafka_Advanced_Kafka_PassiveAtk_Ability",
+        "Kafka_Kafka_Passive1Atk_Ability_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 10,
       "toughnessList": [
@@ -1972,6 +1982,13 @@ const compositeAbilityObject = {
     },
     "Kafka_Advanced_Kafka_Ability03_Part01": {
       "fileName": "Kafka_Advanced_Kafka_Ability03_Part01",
+      "childAbilityList": [
+        "Kafka_Kafka_Ability03_Camera",
+        "Kafka_Advanced_Kafka_Ability03_Part01",
+        "Kafka_Advanced_Kafka_Ability03_Part02",
+        "Kafka_Advanced_Kafka_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -2258,6 +2275,12 @@ const compositeAbilityObject = {
     },
     "Kafka_Advanced_Kafka_Ability02_Part01": {
       "fileName": "Kafka_Advanced_Kafka_Ability02_Part01",
+      "childAbilityList": [
+        "Kafka_Kafka_Ability02_Camera",
+        "Kafka_Advanced_Kafka_Ability02_Part01",
+        "Kafka_Advanced_Kafka_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2398,6 +2421,12 @@ const compositeAbilityObject = {
     },
     "Kafka_Advanced_Kafka_Ability01_Part01": {
       "fileName": "Kafka_Advanced_Kafka_Ability01_Part01",
+      "childAbilityList": [
+        "Kafka_Kafka_Ability01_Camera",
+        "Kafka_Advanced_Kafka_Ability01_Part01",
+        "Kafka_Advanced_Kafka_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2541,16 +2570,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_DotRatio) || RETURN",
-                        "displayLines": "MDF_DotRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_DotRatio"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_DotRatio"
+                        }
+                      ]
                     }
                   ]
                 }

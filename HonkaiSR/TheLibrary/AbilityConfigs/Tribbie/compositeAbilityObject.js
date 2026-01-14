@@ -201,6 +201,10 @@ const compositeAbilityObject = {
     },
     "Tribbie_Tribbie_TechniqueInLevel": {
       "fileName": "Tribbie_Tribbie_TechniqueInLevel",
+      "childAbilityList": [
+        "Tribbie_Tribbie_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -292,6 +296,11 @@ const compositeAbilityObject = {
     },
     "Tribbie_Tribbie_PassiveAbility01": {
       "fileName": "Tribbie_Tribbie_PassiveAbility01",
+      "childAbilityList": [
+        "Tribbie_Tribbie_PassiveAbility01",
+        "Tribbie_Tribbie_Insert"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 5,
       "toughnessList": [
@@ -1008,6 +1017,13 @@ const compositeAbilityObject = {
     },
     "Tribbie_Tribbie_Ability03_Part01": {
       "fileName": "Tribbie_Tribbie_Ability03_Part01",
+      "childAbilityList": [
+        "Tribbie_Tribbie_Ability03_Camera",
+        "Tribbie_Tribbie_Ability03_EnterReady",
+        "Tribbie_Tribbie_Ability03_Part01",
+        "Tribbie_Tribbie_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1186,6 +1202,12 @@ const compositeAbilityObject = {
     },
     "Tribbie_Tribbie_Ability02_Part01": {
       "fileName": "Tribbie_Tribbie_Ability02_Part01",
+      "childAbilityList": [
+        "Tribbie_Tribbie_Ability02_Camera",
+        "Tribbie_Tribbie_Ability02_Part01",
+        "Tribbie_Tribbie_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1275,6 +1297,12 @@ const compositeAbilityObject = {
     },
     "Tribbie_Tribbie_Ability01_Part01": {
       "fileName": "Tribbie_Tribbie_Ability01_Part01",
+      "childAbilityList": [
+        "Tribbie_Tribbie_Ability01_Camera",
+        "Tribbie_Tribbie_Ability01_Part01",
+        "Tribbie_Tribbie_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2327,18 +2355,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(0 - MDF_PropertyValue)"
+                    }
+                  ]
                 }
               ]
             }
@@ -2495,16 +2518,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Luocha_Luocha_TechniqueInLevel",
+  "childAbilityList": [
+    "Luocha_Luocha_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

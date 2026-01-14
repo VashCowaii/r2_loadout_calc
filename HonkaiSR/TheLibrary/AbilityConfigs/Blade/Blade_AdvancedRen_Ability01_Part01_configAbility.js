@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Blade_AdvancedRen_Ability01_Part01",
+  "childAbilityList": [
+    "Blade_Ren_Ability01_Camera",
+    "Blade_AdvancedRen_Ability01_Part01",
+    "Blade_AdvancedRen_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

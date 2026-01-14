@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Tingyun_TingYun_Ability03_Part01",
+  "childAbilityList": [
+    "Tingyun_TingYun_Ability03_EnterReady",
+    "Tingyun_Tingyun_Ability03_Camera",
+    "Tingyun_TingYun_Ability03_Part01",
+    "Tingyun_TingYun_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

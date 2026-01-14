@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "TopazNumby_Topaz_Ability02_Part01",
+  "childAbilityList": [
+    "TopazNumby_Topaz_Ability02_Camera",
+    "TopazNumby_Topaz_Ability02_Part01",
+    "TopazNumby_Topaz_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

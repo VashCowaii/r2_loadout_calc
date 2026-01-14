@@ -176,6 +176,10 @@ let allowedCharacterList = [
     "trimName": "BlackSwan"
   },
   {
+    "fullName": "Robin",
+    "trimName": "Robin"
+  },
+  {
     "fullName": "Misha",
     "trimName": "Misha"
   },
@@ -202,6 +206,14 @@ let allowedCharacterList = [
   {
     "fullName": "Trailblazer - Preservation",
     "trimName": "TrailblazerPreservation"
+  },
+  {
+    "fullName": "Trailblazer - Remembrance",
+    "trimName": "TrailblazerRemembrance"
+  },
+  {
+    "fullName": "Mem",
+    "trimName": "Mem"
   },
   {
     "fullName": "Saber",

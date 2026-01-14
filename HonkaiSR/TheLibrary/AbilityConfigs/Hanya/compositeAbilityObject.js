@@ -16,6 +16,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Hanya_Hanya_TechniqueInLevel": {
       "fileName": "Hanya_Hanya_TechniqueInLevel",
+      "childAbilityList": [
+        "Hanya_Hanya_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -175,6 +179,10 @@ const compositeAbilityObject = {
     },
     "Hanya_Hanya_PassiveAbility01": {
       "fileName": "Hanya_Hanya_PassiveAbility01",
+      "childAbilityList": [
+        "Hanya_Hanya_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -452,6 +460,13 @@ const compositeAbilityObject = {
     },
     "Hanya_Hanya_Ability03_Part01": {
       "fileName": "Hanya_Hanya_Ability03_Part01",
+      "childAbilityList": [
+        "Hanya_Hanya_Ability03_EnterReady",
+        "Hanya_Hanya_Ability03_Part01",
+        "Hanya_Hanya_Ability03_Part02",
+        "Hanya_Hanya_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -631,6 +646,12 @@ const compositeAbilityObject = {
     },
     "Hanya_Hanya_Ability02_Part01": {
       "fileName": "Hanya_Hanya_Ability02_Part01",
+      "childAbilityList": [
+        "Hanya_Hanya_Ability02_Part01",
+        "Hanya_Hanya_Ability02_Camera",
+        "Hanya_Hanya_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -688,6 +709,12 @@ const compositeAbilityObject = {
     },
     "Hanya_Hanya_Ability01_Part01": {
       "fileName": "Hanya_Hanya_Ability01_Part01",
+      "childAbilityList": [
+        "Hanya_Hanya_Ability01_Part01",
+        "Hanya_Hanya_Ability01_Camera",
+        "Hanya_Hanya_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

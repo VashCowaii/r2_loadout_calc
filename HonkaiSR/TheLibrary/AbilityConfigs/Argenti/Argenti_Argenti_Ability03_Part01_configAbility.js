@@ -1,5 +1,13 @@
 const configAbility = {
   "fileName": "Argenti_Argenti_Ability03_Part01",
+  "childAbilityList": [
+    "Argenti_Argenti_Ability03_Camera",
+    "Argenti_Argenti_Ability03_Camera_End01",
+    "Argenti_Argenti_Ability03_EnterReady",
+    "Argenti_Argenti_Ability03_Part01",
+    "Argenti_Argenti_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

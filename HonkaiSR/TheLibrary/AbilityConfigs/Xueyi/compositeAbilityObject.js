@@ -28,6 +28,10 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_TechniqueInLevel": {
       "fileName": "Xueyi_Xueyi_TechniqueInLevel",
+      "childAbilityList": [
+        "Xueyi_Xueyi_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -385,6 +389,14 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_PassiveAbility01": {
       "fileName": "Xueyi_Xueyi_PassiveAbility01",
+      "childAbilityList": [
+        "Xueyi_Xueyi_PassiveAbility01",
+        "Xueyi_Xueyi_PassiveAtk_Insert01",
+        "Xueyi_Xueyi_PassiveAtk_Insert02",
+        "Xueyi_Xueyi_Passive1Atk_Ability_Camera",
+        "Xueyi_Xueyi_Passive1Atk_Ability_Camera_01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 2,
       "toughnessList": [
@@ -598,7 +610,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                     "target": "Use Prior Target(s) Defined",
                     "mustBeAlive2": true
                   },
@@ -1302,6 +1314,13 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_Ability03_Part01": {
       "fileName": "Xueyi_Xueyi_Ability03_Part01",
+      "childAbilityList": [
+        "Xueyi_Xueyi_Ability03_Camera",
+        "Xueyi_Xueyi_Ability03_Part01",
+        "Xueyi_Xueyi_Ability03_Part02",
+        "Xueyi_Xueyi_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1391,6 +1410,12 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_Ability02_Part01": {
       "fileName": "Xueyi_Xueyi_Ability02_Part01",
+      "childAbilityList": [
+        "Xueyi_Xueyi_Ability02_Camera",
+        "Xueyi_Xueyi_Ability02_Part01",
+        "Xueyi_Xueyi_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1491,6 +1516,12 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_Ability01_Part01": {
       "fileName": "Xueyi_Xueyi_Ability01_Part01",
+      "childAbilityList": [
+        "Xueyi_Xueyi_Ability01_Camera",
+        "Xueyi_Xueyi_Ability01_Part01",
+        "Xueyi_Xueyi_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -1538,16 +1569,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2434,16 +2462,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_SkillTree02_AllDamageTypeAddedRatio) || RETURN",
-                    "displayLines": "MDF_SkillTree02_AllDamageTypeAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SkillTree02_AllDamageTypeAddedRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_SkillTree02_AllDamageTypeAddedRatio"
+                    }
+                  ]
                 }
               ]
             }
@@ -2619,16 +2644,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AddAttackRatio) || RETURN",
-                    "displayLines": "MDF_AddAttackRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddAttackRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_AddAttackRatio"
+                    }
+                  ]
                 }
               ]
             }
@@ -2757,7 +2779,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },

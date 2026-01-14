@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Hook_Hook_TechniqueInLevel",
+  "childAbilityList": [
+    "Hook_Hook_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

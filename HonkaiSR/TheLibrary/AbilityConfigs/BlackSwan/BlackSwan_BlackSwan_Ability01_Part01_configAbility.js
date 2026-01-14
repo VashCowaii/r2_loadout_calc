@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "BlackSwan_BlackSwan_Ability01_Part01",
+  "childAbilityList": [
+    "BlackSwan_BlackSwan_Ability01_Camera",
+    "BlackSwan_BlackSwan_Ability01_Part01",
+    "BlackSwan_BlackSwan_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Clara_Klara_Ability02_Part01",
+  "childAbilityList": [
+    "Clara_Klara_Ability02_Camera",
+    "Clara_Klara_Ability02_Part01",
+    "Clara_Klara_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

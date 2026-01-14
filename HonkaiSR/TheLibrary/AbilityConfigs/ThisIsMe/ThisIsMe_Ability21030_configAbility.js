@@ -52,17 +52,13 @@ const configAbility = {
                 },
                 {
                   "name": "Adjust Target Stats",
-                  "on": "AttackData",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DMG%Total</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.6) || Variables[1] (AttackerDefence) || MUL || RETURN",
-                    "displayLines": "(0.6 * AttackerDefence)",
-                    "constants": [],
-                    "variables": [
-                      0.6,
-                      "AttackerDefence"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "AttackData",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DMG%Total</span>&nbsp;",
+                      "value": "(0.6 * AttackerDefence)"
+                    }
+                  ]
                 },
                 {
                   "name": "Add Events/Bonuses",

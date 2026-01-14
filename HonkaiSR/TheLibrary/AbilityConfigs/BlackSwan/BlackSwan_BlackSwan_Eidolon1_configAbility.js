@@ -383,18 +383,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWind</span>&nbsp;",
-                      "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_PropertyValue)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWind</span>&nbsp;",
+                          "value": "(0 - MDF_PropertyValue)"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -441,18 +436,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysical</span>&nbsp;",
-                      "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_PropertyValue)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysical</span>&nbsp;",
+                          "value": "(0 - MDF_PropertyValue)"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -499,18 +489,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFire</span>&nbsp;",
-                      "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_PropertyValue)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFire</span>&nbsp;",
+                          "value": "(0 - MDF_PropertyValue)"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -557,18 +542,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightning</span>&nbsp;",
-                      "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                        "displayLines": "(0 - MDF_PropertyValue)",
-                        "constants": [
-                          0
-                        ],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightning</span>&nbsp;",
+                          "value": "(0 - MDF_PropertyValue)"
+                        }
+                      ]
                     }
                   ]
                 },

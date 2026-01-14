@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Hanya_Hanya_PassiveAbility01",
+  "childAbilityList": [
+    "Hanya_Hanya_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

@@ -19,6 +19,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Saber_Saber_TechniqueInLevel": {
       "fileName": "Saber_Saber_TechniqueInLevel",
+      "childAbilityList": [
+        "Saber_Saber_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -220,6 +224,13 @@ const compositeAbilityObject = {
     },
     "Saber_Saber_PassiveAbility01": {
       "fileName": "Saber_Saber_PassiveAbility01",
+      "childAbilityList": [
+        "Saber_Activity_FateStory_Saber_Insert_Camera",
+        "Saber_Activity_FateStory_Saber_Insert_Part01",
+        "Saber_Activity_FateStory_Saber_Insert_Part02",
+        "Saber_Saber_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 10,
       "toughnessList": [
@@ -1373,16 +1384,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.6) || RETURN",
-                        "displayLines": "0.6",
-                        "constants": [],
-                        "variables": [
-                          0.6
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.6"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1647,16 +1655,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.2) || RETURN",
-                        "displayLines": "0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
+                          "value": "0.2"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1988,6 +1993,13 @@ const compositeAbilityObject = {
     },
     "Saber_Saber_Ability03_Part01": {
       "fileName": "Saber_Saber_Ability03_Part01",
+      "childAbilityList": [
+        "Saber_Saber_Ability03_Camera",
+        "Saber_Saber_Ability03_Part01",
+        "Saber_Saber_Ability03_Part02",
+        "Saber_Saber_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -2615,6 +2627,12 @@ const compositeAbilityObject = {
     },
     "Saber_Saber_Ability02_Part01": {
       "fileName": "Saber_Saber_Ability02_Part01",
+      "childAbilityList": [
+        "Saber_Saber_Ability02_Camera",
+        "Saber_Saber_Ability02_Part01",
+        "Saber_Saber_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2916,6 +2934,12 @@ const compositeAbilityObject = {
     },
     "Saber_Saber_Ability11_Part01": {
       "fileName": "Saber_Saber_Ability11_Part01",
+      "childAbilityList": [
+        "Saber_Saber_Ability11_Camera",
+        "Saber_Saber_Ability11_Part01",
+        "Saber_Saber_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 30,
       "toughnessList": [
@@ -2977,6 +3001,12 @@ const compositeAbilityObject = {
     },
     "Saber_Saber_Ability01_Part01": {
       "fileName": "Saber_Saber_Ability01_Part01",
+      "childAbilityList": [
+        "Saber_Saber_Ability01_Camera",
+        "Saber_Saber_Ability01_Part01",
+        "Saber_Saber_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -3211,17 +3241,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || INVERT || RETURN",
-                    "displayLines": "-(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-(MDF_PropertyValue * MDF_Layer)"
+                    }
+                  ]
                 }
               ]
             }

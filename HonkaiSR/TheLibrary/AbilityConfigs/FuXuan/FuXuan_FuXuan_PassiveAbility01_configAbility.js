@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "FuXuan_FuXuan_PassiveAbility01",
+  "childAbilityList": [
+    "FuXuan_FuXuan_PassiveAbility01",
+    "FuXuan_FuXuan_Passive_Ability",
+    "FuXuan_FuXuan_PassiveAbility01_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

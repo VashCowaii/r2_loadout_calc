@@ -41,6 +41,10 @@ const compositeAbilityObject = {
     },
     "Bailu_Bailu_TechniqueInLevel": {
       "fileName": "Bailu_Bailu_TechniqueInLevel",
+      "childAbilityList": [
+        "Bailu_Bailu_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -394,6 +398,11 @@ const compositeAbilityObject = {
     },
     "Bailu_Bailu_PassiveAbility01": {
       "fileName": "Bailu_Bailu_PassiveAbility01",
+      "childAbilityList": [
+        "Bailu_Bailu_PassiveAbility01",
+        "Bailu_Bailu_PassiveAbility_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -869,6 +878,13 @@ const compositeAbilityObject = {
     },
     "Bailu_Bailu_Ability03_Part01": {
       "fileName": "Bailu_Bailu_Ability03_Part01",
+      "childAbilityList": [
+        "Bailu_Bailu_Ability03_Camera",
+        "Bailu_Bailu_Ability03_EnterReady",
+        "Bailu_Bailu_Ability03_Part01",
+        "Bailu_Bailu_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1165,6 +1181,13 @@ const compositeAbilityObject = {
     },
     "Bailu_Bailu_Ability02_Part01": {
       "fileName": "Bailu_Bailu_Ability02_Part01",
+      "childAbilityList": [
+        "Bailu_Bailu_Ability02_Camera_Self",
+        "Bailu_Bailu_Ability02_Camera_Other",
+        "Bailu_Bailu_Ability02_Part01",
+        "Bailu_Bailu_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1223,6 +1246,12 @@ const compositeAbilityObject = {
     },
     "Bailu_Bailu_Ability01_Part01": {
       "fileName": "Bailu_Bailu_Ability01_Part01",
+      "childAbilityList": [
+        "Bailu_Bailu_Ability01_Camera",
+        "Bailu_Bailu_Ability01_Part01",
+        "Bailu_Bailu_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

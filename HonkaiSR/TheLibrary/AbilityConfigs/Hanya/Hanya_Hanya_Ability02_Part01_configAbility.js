@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Hanya_Hanya_Ability02_Part01",
+  "childAbilityList": [
+    "Hanya_Hanya_Ability02_Part01",
+    "Hanya_Hanya_Ability02_Camera",
+    "Hanya_Hanya_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "FuXuan_FuXuan_TechniqueInLevel",
+  "childAbilityList": [
+    "FuXuan_FuXuan_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

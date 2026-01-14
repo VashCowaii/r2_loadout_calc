@@ -17,6 +17,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Hysilens_Harscyline_TechniqueInLevel": {
       "fileName": "Hysilens_Harscyline_TechniqueInLevel",
+      "childAbilityList": [
+        "Hysilens_Harscyline_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -80,6 +84,10 @@ const compositeAbilityObject = {
     },
     "Hysilens_Harscyline_PassiveAbility01": {
       "fileName": "Hysilens_Harscyline_PassiveAbility01",
+      "childAbilityList": [
+        "Hysilens_Harscyline_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -746,6 +754,13 @@ const compositeAbilityObject = {
     },
     "Hysilens_Harscyline_Ability03_Part01": {
       "fileName": "Hysilens_Harscyline_Ability03_Part01",
+      "childAbilityList": [
+        "Hysilens_Harscyline_Ability03_Camera",
+        "Hysilens_Harscyline_Ability03_Part01",
+        "Hysilens_Harscyline_Ability03_Part02",
+        "Hysilens_Harscyline_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -842,6 +857,12 @@ const compositeAbilityObject = {
     },
     "Hysilens_Harscyline_Ability02_Part01": {
       "fileName": "Hysilens_Harscyline_Ability02_Part01",
+      "childAbilityList": [
+        "Hysilens_Harscyline_Ability02_Camera",
+        "Hysilens_Harscyline_Ability02_Part01",
+        "Hysilens_Harscyline_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -927,6 +948,12 @@ const compositeAbilityObject = {
     },
     "Hysilens_Harscyline_Ability01_Part01": {
       "fileName": "Hysilens_Harscyline_Ability01_Part01",
+      "childAbilityList": [
+        "Hysilens_Harscyline_Ability01_Camera",
+        "Hysilens_Harscyline_Ability01_Part01",
+        "Hysilens_Harscyline_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2683,7 +2710,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },
@@ -2745,7 +2772,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },

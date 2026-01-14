@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Pela_Pela_Ability02_Part01",
+  "childAbilityList": [
+    "Pela_Pela_Ability02_Camera",
+    "Pela_Pela_Ability02_Part01",
+    "Pela_Pela_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

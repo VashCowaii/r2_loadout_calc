@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Tingyun_TingYun_Ability01_Part01",
+  "childAbilityList": [
+    "Tingyun_Tingyun_Ability01_Camera",
+    "Tingyun_TingYun_Ability01_Part01",
+    "Tingyun_TingYun_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "Gepard_Gepard_PassiveAbility01",
+  "childAbilityList": [
+    "Gepard_Gepard_PassiveAbility01",
+    "Gepard_Gepard_PassiveAbility_1_Insert"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

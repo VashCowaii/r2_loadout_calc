@@ -20,16 +20,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Adjust Target Stats",
-              "on": "Defender",
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (0.1) || INVERT || RETURN",
-                "displayLines": "-0.1",
-                "constants": [],
-                "variables": [
-                  0.1
-                ]
-              }
+              "modifiedValuesArray": [
+                {
+                  "on": "Defender",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                  "value": "-0.1"
+                }
+              ]
             },
             {
               "name": "IF",
@@ -41,16 +38,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.1) || INVERT || RETURN",
-                    "displayLines": "-0.1",
-                    "constants": [],
-                    "variables": [
-                      0.1
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-0.1"
+                    }
+                  ]
                 }
               ]
             }

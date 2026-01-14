@@ -1,5 +1,14 @@
 const configAbility = {
   "fileName": "Archer_Archer_PassiveAbility01",
+  "childAbilityList": [
+    "Archer_Archer_PassiveAbility01",
+    "Archer_Archer_Insert_Part01",
+    "Archer_Archer_Insert_Part02",
+    "Archer_Archer_Insert_Camera",
+    "Archer_Archer_Bonus",
+    "Archer_Archer_Bonus_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 5,
   "toughnessList": [
@@ -118,16 +127,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-MDF_PropertyValue"
+                    }
+                  ]
                 }
               ]
             }
@@ -157,16 +163,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_PropertyValue"
+                    }
+                  ]
                 }
               ]
             }

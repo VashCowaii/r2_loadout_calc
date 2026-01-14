@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Sushang_Sushang_TechniqueInLevel",
+  "childAbilityList": [
+    "Sushang_Sushang_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

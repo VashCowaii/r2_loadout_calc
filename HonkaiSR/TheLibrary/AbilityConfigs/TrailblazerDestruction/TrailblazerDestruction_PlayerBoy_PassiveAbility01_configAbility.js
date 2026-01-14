@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "TrailblazerDestruction_PlayerBoy_PassiveAbility01",
+  "childAbilityList": [
+    "TrailblazerDestruction_PlayerBoy_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [
@@ -305,16 +309,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.25) || RETURN",
-                    "displayLines": "0.25",
-                    "constants": [],
-                    "variables": [
-                      0.25
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                      "value": "0.25"
+                    }
+                  ]
                 }
               ]
             }

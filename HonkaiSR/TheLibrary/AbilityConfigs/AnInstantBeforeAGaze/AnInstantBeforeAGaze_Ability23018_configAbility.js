@@ -29,17 +29,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.0036000002) || Variables[1] (CasterMaxSP) || MUL || RETURN",
-                    "displayLines": "(0.0036000002 * CasterMaxSP)",
-                    "constants": [],
-                    "variables": [
-                      0.0036000002,
-                      "CasterMaxSP"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "(0.0036000002 * CasterMaxSP)"
+                    }
+                  ]
                 }
               ]
             }

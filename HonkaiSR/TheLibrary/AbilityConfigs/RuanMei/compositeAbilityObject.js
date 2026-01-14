@@ -324,6 +324,11 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_TechniqueInLevel": {
       "fileName": "RuanMei_RuanMei_TechniqueInLevel",
+      "childAbilityList": [
+        "RuanMei_RuanMei_TechniqueInLevel",
+        "RuanMei_RuanMei_TechniqueInLevel_Insert"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -460,6 +465,10 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_PassiveAbility01": {
       "fileName": "RuanMei_RuanMei_PassiveAbility01",
+      "childAbilityList": [
+        "RuanMei_RuanMei_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": [
@@ -1135,8 +1144,8 @@ const compositeAbilityObject = {
               "variableName": "MDF_LifeTime",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1183,8 +1192,8 @@ const compositeAbilityObject = {
               "variableName": "MDF_LifeTime",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1224,6 +1233,14 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_Ability03_Part01": {
       "fileName": "RuanMei_RuanMei_Ability03_Part01",
+      "childAbilityList": [
+        "RuanMei_RuanMei_Ability03_Camera",
+        "RuanMei_RuanMei_Ability03_EnterReady",
+        "RuanMei_RuanMei_Ability03_Part01",
+        "RuanMei_RuanMei_Ability03_Part02",
+        "RuanMei_RuanMei_TriggerImprintEffect"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1338,8 +1355,8 @@ const compositeAbilityObject = {
               "variableName": "MDF_LifeTime",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1575,6 +1592,12 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_Ability02_Part01": {
       "fileName": "RuanMei_RuanMei_Ability02_Part01",
+      "childAbilityList": [
+        "RuanMei_RuanMei_Ability02_Camera",
+        "RuanMei_RuanMei_Ability02_Part01",
+        "RuanMei_RuanMei_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1632,6 +1655,12 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_Ability01_Part01": {
       "fileName": "RuanMei_RuanMei_Ability01_Part01",
+      "childAbilityList": [
+        "RuanMei_RuanMei_Ability01_Camera",
+        "RuanMei_RuanMei_Ability01_Part01",
+        "RuanMei_RuanMei_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2395,16 +2424,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (AbilityRank_Eidolon2_P1_AttackUpRatio) || RETURN",
-                        "displayLines": "AbilityRank_Eidolon2_P1_AttackUpRatio",
-                        "constants": [],
-                        "variables": [
-                          "AbilityRank_Eidolon2_P1_AttackUpRatio"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                          "value": "AbilityRank_Eidolon2_P1_AttackUpRatio"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2429,18 +2455,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
-                    "displayLines": "(0 - MDF_PropertyValue)",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(0 - MDF_PropertyValue)"
+                    }
+                  ]
                 }
               ]
             }

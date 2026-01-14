@@ -329,19 +329,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (0.04) || Variables[1] (_WeakCount) || MUL || SUB || RETURN",
-                    "displayLines": "(0 - (0.04 * _WeakCount))",
-                    "constants": [
-                      0
-                    ],
-                    "variables": [
-                      0.04,
-                      "_WeakCount"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "(0 - (0.04 * _WeakCount))"
+                    }
+                  ]
                 }
               ]
             }
@@ -728,6 +722,10 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_TechniqueInLevel": {
       "fileName": "Anaxa_Anaxa_TechniqueInLevel",
+      "childAbilityList": [
+        "Anaxa_Anaxa_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -979,6 +977,10 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_PassiveAbility01": {
       "fileName": "Anaxa_Anaxa_PassiveAbility01",
+      "childAbilityList": [
+        "Anaxa_Anaxa_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1024,16 +1026,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
-                        "displayLines": "MDF_PropertyRatio",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyRatio"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyRatio"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1534,6 +1533,13 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_Ability03_Part01": {
       "fileName": "Anaxa_Anaxa_Ability03_Part01",
+      "childAbilityList": [
+        "Anaxa_Anaxa_Ability03_Camera",
+        "Anaxa_Anaxa_Ability03_EnterReady",
+        "Anaxa_Anaxa_Ability03_Part01",
+        "Anaxa_Anaxa_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1884,17 +1890,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_TargetCount) || Variables[1] (0.2) || MUL || RETURN",
-                        "displayLines": "(MDF_TargetCount * 0.2)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_TargetCount",
-                          0.2
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "(MDF_TargetCount * 0.2)"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1926,6 +1928,12 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_Ability02_Part01": {
       "fileName": "Anaxa_Anaxa_Ability02_Part01",
+      "childAbilityList": [
+        "Anaxa_Anaxa_Ability02_Camera",
+        "Anaxa_Anaxa_Ability02_Part01",
+        "Anaxa_Anaxa_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 6,
       "toughnessList": [
@@ -2005,6 +2013,12 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_Ability01_Part01": {
       "fileName": "Anaxa_Anaxa_Ability01_Part01",
+      "childAbilityList": [
+        "Anaxa_Anaxa_Ability01_Camera",
+        "Anaxa_Anaxa_Ability01_Part01",
+        "Anaxa_Anaxa_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

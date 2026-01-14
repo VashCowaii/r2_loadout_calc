@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Gallagher_Gallagher_PassiveAbility01",
+  "childAbilityList": [
+    "Gallagher_Gallagher_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Natasha_Natasha_TechniqueInLevel",
+  "childAbilityList": [
+    "Natasha_Natasha_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

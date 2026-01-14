@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Natasha_Natasha_Ability03_Part01",
+  "childAbilityList": [
+    "Natasha_Natasha_Ability03_Camera",
+    "Natasha_Natasha_Ability03_EnterReady",
+    "Natasha_Natasha_Ability03_Part01",
+    "Natasha_Natasha_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

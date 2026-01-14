@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Himeko_Himeko_TechniqueInLevel",
+  "childAbilityList": [
+    "Himeko_Himeko_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

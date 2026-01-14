@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "JingYuan_JingYuan_TechniqueInLevel",
+  "childAbilityList": [
+    "JingYuan_JingYuan_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

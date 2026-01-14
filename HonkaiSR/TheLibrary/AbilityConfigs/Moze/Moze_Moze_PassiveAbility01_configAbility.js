@@ -1,5 +1,13 @@
 const configAbility = {
   "fileName": "Moze_Moze_PassiveAbility01",
+  "childAbilityList": [
+    "Moze_Moze_PassiveAbility01",
+    "Moze_Moze_Insert_Part01",
+    "Moze_Moze_Insert_Camera",
+    "Moze_Moze_Insert_Part01_Eidolon6Extra",
+    "Moze_Moze_Insert_End_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 10,
   "toughnessList": [

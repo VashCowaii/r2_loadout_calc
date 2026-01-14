@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Hook_Hook_Ability02_Part01",
+  "childAbilityList": [
+    "Hook_Hook_Ability02_Camera",
+    "Hook_Hook_Ability02_Part01",
+    "Hook_Hook_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

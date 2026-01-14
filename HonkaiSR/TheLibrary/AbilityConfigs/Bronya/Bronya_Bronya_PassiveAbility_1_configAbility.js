@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Bronya_Bronya_PassiveAbility_1",
+  "childAbilityList": [
+    "Bronya_Bronya_PassiveAbility_1",
+    "Bronya_Bronya_Eidolon4_ATK",
+    "Bronya_Bronya_Eidolon4_ATK_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 5,
   "toughnessList": [

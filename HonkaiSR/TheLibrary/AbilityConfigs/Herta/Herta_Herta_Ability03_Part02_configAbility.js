@@ -157,16 +157,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Adjust Target Stats",
-              "on": "Attacker",
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (MDF_AllDamageTakenRatio) || RETURN",
-                "displayLines": "MDF_AllDamageTakenRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_AllDamageTakenRatio"
-                ]
-              }
+              "modifiedValuesArray": [
+                {
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": "MDF_AllDamageTakenRatio"
+                }
+              ]
             }
           ]
         }

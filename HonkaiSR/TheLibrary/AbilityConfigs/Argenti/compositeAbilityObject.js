@@ -19,6 +19,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Argenti_Argenti_TechniqueInLevel": {
       "fileName": "Argenti_Argenti_TechniqueInLevel",
+      "childAbilityList": [
+        "Argenti_Argenti_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -116,6 +120,10 @@ const compositeAbilityObject = {
     },
     "Argenti_Argenti_PassiveAbility01": {
       "fileName": "Argenti_Argenti_PassiveAbility01",
+      "childAbilityList": [
+        "Argenti_Argenti_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -485,6 +493,14 @@ const compositeAbilityObject = {
     },
     "Argenti_Argenti_Ability31_Part01": {
       "fileName": "Argenti_Argenti_Ability31_Part01",
+      "childAbilityList": [
+        "Argenti_Argenti_Ability31_Camera",
+        "Argenti_Argenti_Ability31_Camera_End02",
+        "Argenti_Argenti_Ability31_EnterReady",
+        "Argenti_Argenti_Ability31_Part01",
+        "Argenti_Argenti_Ability31_Part02"
+      ],
+      "skillTrigger": "Skill31",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -643,6 +659,14 @@ const compositeAbilityObject = {
     },
     "Argenti_Argenti_Ability03_Part01": {
       "fileName": "Argenti_Argenti_Ability03_Part01",
+      "childAbilityList": [
+        "Argenti_Argenti_Ability03_Camera",
+        "Argenti_Argenti_Ability03_Camera_End01",
+        "Argenti_Argenti_Ability03_EnterReady",
+        "Argenti_Argenti_Ability03_Part01",
+        "Argenti_Argenti_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -761,6 +785,12 @@ const compositeAbilityObject = {
     },
     "Argenti_Argenti_Ability02_Part01": {
       "fileName": "Argenti_Argenti_Ability02_Part01",
+      "childAbilityList": [
+        "Argenti_Argenti_Ability02_Camera",
+        "Argenti_Argenti_Ability02_Part01",
+        "Argenti_Argenti_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -862,6 +892,12 @@ const compositeAbilityObject = {
     },
     "Argenti_Argenti_Ability01_Part01": {
       "fileName": "Argenti_Argenti_Ability01_Part01",
+      "childAbilityList": [
+        "Argenti_Argenti_Ability01_Camera",
+        "Argenti_Argenti_Ability01_Part01",
+        "Argenti_Argenti_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -1026,16 +1062,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.15) || RETURN",
-                        "displayLines": "0.15",
-                        "constants": [],
-                        "variables": [
-                          0.15
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.15"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1154,16 +1187,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.3) || INVERT || RETURN",
-                        "displayLines": "-0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "-0.3"
+                        }
+                      ]
                     }
                   ]
                 }

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Hanya_Hanya_TechniqueInLevel",
+  "childAbilityList": [
+    "Hanya_Hanya_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

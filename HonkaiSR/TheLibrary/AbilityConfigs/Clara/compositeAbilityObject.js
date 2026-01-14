@@ -330,6 +330,10 @@ const compositeAbilityObject = {
     },
     "Clara_Klara_TechniqueInLevel": {
       "fileName": "Clara_Klara_TechniqueInLevel",
+      "childAbilityList": [
+        "Clara_Klara_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -630,16 +634,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTypeAddRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTypeAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTypeAddRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_AllDamageTypeAddRatio"
+                    }
+                  ]
                 }
               ]
             }
@@ -653,6 +654,12 @@ const compositeAbilityObject = {
     },
     "Clara_Klara_PassiveAbility01": {
       "fileName": "Clara_Klara_PassiveAbility01",
+      "childAbilityList": [
+        "Clara_Klara_PassiveAbility_Camera",
+        "Clara_Klara_PassiveAbility01",
+        "Clara_Klara_PassiveAbility01_InsertAbility"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 5,
       "toughnessList": [
@@ -1240,6 +1247,13 @@ const compositeAbilityObject = {
     },
     "Clara_Klara_Ability03_Part01": {
       "fileName": "Clara_Klara_Ability03_Part01",
+      "childAbilityList": [
+        "Clara_Klara_Ability03_Camera",
+        "Clara_Klara_Ability03_EnterReady",
+        "Clara_Klara_Ability03_Part01",
+        "Clara_Klara_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1360,6 +1374,12 @@ const compositeAbilityObject = {
     },
     "Clara_Klara_Ability02_Part01": {
       "fileName": "Clara_Klara_Ability02_Part01",
+      "childAbilityList": [
+        "Clara_Klara_Ability02_Camera",
+        "Clara_Klara_Ability02_Part01",
+        "Clara_Klara_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1417,6 +1437,12 @@ const compositeAbilityObject = {
     },
     "Clara_Klara_Ability01_Part01": {
       "fileName": "Clara_Klara_Ability01_Part01",
+      "childAbilityList": [
+        "Clara_Klara_Ability01_Camera",
+        "Clara_Klara_Ability01_Part01",
+        "Clara_Klara_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

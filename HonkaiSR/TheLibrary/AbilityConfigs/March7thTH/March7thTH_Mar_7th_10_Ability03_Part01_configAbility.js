@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "March7thTH_Mar_7th_10_Ability03_Part01",
+  "childAbilityList": [
+    "March7thTH_Mar_7th_10_Ability03_EnterReady",
+    "March7thTH_Mar_7th_10_Ability03_Part01",
+    "March7thTH_Mar_7th_10_Ability03_Part02",
+    "March7thTH_Mar_7th_10_Ability03_Camera"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "BlackSwan_BlackSwan_TechniqueInLevel",
+  "childAbilityList": [
+    "BlackSwan_BlackSwan_TechniqueInLevel",
+    "BlackSwan_BlackSwan_TechniqueInLevel_Insert"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

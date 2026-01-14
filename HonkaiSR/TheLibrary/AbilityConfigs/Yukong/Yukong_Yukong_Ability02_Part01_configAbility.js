@@ -1,5 +1,13 @@
 const configAbility = {
   "fileName": "Yukong_Yukong_Ability02_Part01",
+  "childAbilityList": [
+    "Yukong_Yukong_Ability02_Camera",
+    "Yukong_Yukong_Ability02_Part01",
+    "Yukong_Yukong_Ability02_Part02",
+    "Yukong_Yukong_Ability02_AddFlower",
+    "Yukong_Yukong_Ability02_CountDown"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "Hook_Hook_PassiveAbility01",
+  "childAbilityList": [
+    "Hook_Hook_PassiveAbility01",
+    "Hook_Hook_PassiveAbility01_2"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

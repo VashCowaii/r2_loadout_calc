@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Sparkle_Sparkle_TechniqueInLevel",
+  "childAbilityList": [
+    "Sparkle_Sparkle_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

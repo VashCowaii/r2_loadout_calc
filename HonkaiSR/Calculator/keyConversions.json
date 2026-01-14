@@ -28,7 +28,7 @@
     "CurExtraSpecialSP": "EnergyCurrentSpecialOverflow",
     "MaxExtraSpecialSP": "EnergyMaxSpecialOverflow",
 
-    "BaseAggro": "AggroBase",
+    "BaseAggro": "CharacterAggroBase",
     "AggroAddedRatio": "Aggro%",
     "AggroDelta": "AggroFlat",
     "AggroBase": "BaseAggroValue",
@@ -62,9 +62,11 @@
     "StatusResistanceBase": "EffectRES",
     "StatusResistance": "EffectRESSUM",
 
+    "FixedCriticalChance": "CritRateFIXED",
     "CriticalChance": "CritRateSUM",
     "CriticalChanceBase": "CritRateBase",
     "CriticalChanceConvert": "CritRateConverted",
+    "FixedCriticalDamage": "CritDamageFIXED",
     "CriticalDamage": "CritDamageSUM",
     "CriticalDamageBase": "CritDamageBase",
     "CriticalDamageConvert": "CritDamageConverted",

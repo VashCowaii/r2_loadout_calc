@@ -58,16 +58,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.12) || RETURN",
-                        "displayLines": "0.12",
-                        "constants": [],
-                        "variables": [
-                          0.12
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                          "value": "0.12"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -343,6 +340,10 @@ const compositeAbilityObject = {
     },
     "DanHeng_DanHeng_TechniqueInLevel": {
       "fileName": "DanHeng_DanHeng_TechniqueInLevel",
+      "childAbilityList": [
+        "DanHeng_DanHeng_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -489,6 +490,13 @@ const compositeAbilityObject = {
     },
     "DanHeng_DanHeng_PassiveAbility01": {
       "fileName": "DanHeng_DanHeng_PassiveAbility01",
+      "childAbilityList": [
+        "DanHeng_DanHeng_PassiveAbility01",
+        "DanHeng_DanHeng_PassiveAbility01_Enhance_Part01",
+        "DanHeng_DanHeng_PassiveAbility01_Enhance_Part02",
+        "DanHeng_DanHeng_PassiveAbility01_Enhance_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -997,6 +1005,13 @@ const compositeAbilityObject = {
     },
     "DanHeng_DanHeng_Ability03_Part01": {
       "fileName": "DanHeng_DanHeng_Ability03_Part01",
+      "childAbilityList": [
+        "DanHeng_DanHeng_Ability03_Camera",
+        "DanHeng_DanHeng_Ability03_EnterReady",
+        "DanHeng_DanHeng_Ability03_Part01",
+        "DanHeng_DanHeng_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1284,6 +1299,12 @@ const compositeAbilityObject = {
     },
     "DanHeng_DanHeng_Ability02_Part01": {
       "fileName": "DanHeng_DanHeng_Ability02_Part01",
+      "childAbilityList": [
+        "DanHeng_DanHeng_Ability02_Camera",
+        "DanHeng_DanHeng_Ability02_Part01",
+        "DanHeng_DanHeng_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1410,16 +1431,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.4) || RETURN",
-                        "displayLines": "0.4",
-                        "constants": [],
-                        "variables": [
-                          0.4
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.4"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1433,6 +1451,12 @@ const compositeAbilityObject = {
     },
     "DanHeng_DanHeng_Ability01_Part01": {
       "fileName": "DanHeng_DanHeng_Ability01_Part01",
+      "childAbilityList": [
+        "DanHeng_DanHeng_Ability01_Camera",
+        "DanHeng_DanHeng_Ability01_Part01",
+        "DanHeng_DanHeng_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -1490,16 +1514,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (DanHeng_PassivePene) || RETURN",
-                        "displayLines": "DanHeng_PassivePene",
-                        "constants": [],
-                        "variables": [
-                          "DanHeng_PassivePene"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
+                          "value": "DanHeng_PassivePene"
+                        }
+                      ]
                     }
                   ]
                 }

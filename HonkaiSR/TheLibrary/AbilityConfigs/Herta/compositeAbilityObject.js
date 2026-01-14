@@ -71,6 +71,10 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_TechniqueInLevel": {
       "fileName": "Herta_Herta_TechniqueInLevel",
+      "childAbilityList": [
+        "Herta_Herta_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -433,16 +437,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (SkillRank_Rank04_P1_DamagePercentage) || RETURN",
-                    "displayLines": "SkillRank_Rank04_P1_DamagePercentage",
-                    "constants": [],
-                    "variables": [
-                      "SkillRank_Rank04_P1_DamagePercentage"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "SkillRank_Rank04_P1_DamagePercentage"
+                    }
+                  ]
                 }
               ]
             }
@@ -502,6 +503,12 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_PassiveAbility01": {
       "fileName": "Herta_Herta_PassiveAbility01",
+      "childAbilityList": [
+        "Herta_Herta_PassiveAbility01",
+        "Herta_Herta_Passive1Atk_Ability_Camera",
+        "Herta_Herta_PassiveAtkReady_Ability"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 5,
       "toughnessList": [
@@ -917,16 +924,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTakenRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_AllDamageTakenRatio"
+                    }
+                  ]
                 }
               ]
             }
@@ -940,6 +944,13 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_Ability03_Part01": {
       "fileName": "Herta_Herta_Ability03_Part01",
+      "childAbilityList": [
+        "Herta_Herta_Ability03_Camera",
+        "Herta_Herta_Ability03_Part01",
+        "Herta_Herta_Ability03_Part02",
+        "Herta_Herta_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1080,32 +1091,25 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.2) || Variables[1] (0.25) || ADD || RETURN",
-                            "displayLines": "(0.2 + 0.25)",
-                            "constants": [],
-                            "variables": [
-                              0.2,
-                              0.25
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                              "value": "(0.2 + 0.25)"
+                            }
+                          ]
                         }
                       ],
                       "failed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.2) || RETURN",
-                            "displayLines": "0.2",
-                            "constants": [],
-                            "variables": [
-                              0.2
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                              "value": "0.2"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1121,6 +1125,12 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_Ability02_Part01": {
       "fileName": "Herta_Herta_Ability02_Part01",
+      "childAbilityList": [
+        "Herta_Herta_Ability02_Camera",
+        "Herta_Herta_Ability02_Part01",
+        "Herta_Herta_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1315,6 +1325,12 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_Ability01_Part01": {
       "fileName": "Herta_Herta_Ability01_Part01",
+      "childAbilityList": [
+        "Herta_Herta_Ability01_Camera",
+        "Herta_Herta_Ability01_Part01",
+        "Herta_Herta_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

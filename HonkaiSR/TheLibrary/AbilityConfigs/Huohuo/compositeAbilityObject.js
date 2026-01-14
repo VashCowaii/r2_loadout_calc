@@ -208,6 +208,10 @@ const compositeAbilityObject = {
     },
     "Huohuo_Huohuo_TechniqueInLevel": {
       "fileName": "Huohuo_Huohuo_TechniqueInLevel",
+      "childAbilityList": [
+        "Huohuo_Huohuo_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -319,6 +323,11 @@ const compositeAbilityObject = {
     },
     "Huohuo_Huohuo_PassiveAbility01": {
       "fileName": "Huohuo_Huohuo_PassiveAbility01",
+      "childAbilityList": [
+        "Huohuo_Huohuo_PassiveAbility01",
+        "Huohuo_Huohuo_Eidolon2_Insert"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -759,6 +768,13 @@ const compositeAbilityObject = {
     },
     "Huohuo_Huohuo_Ability03_Part01": {
       "fileName": "Huohuo_Huohuo_Ability03_Part01",
+      "childAbilityList": [
+        "Huohuo_Huohuo_Ability03_Camera",
+        "Huohuo_Huohuo_Ability03_EnterReady",
+        "Huohuo_Huohuo_Ability03_Part01",
+        "Huohuo_Huohuo_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -881,6 +897,12 @@ const compositeAbilityObject = {
     },
     "Huohuo_Huohuo_Ability02_Part01": {
       "fileName": "Huohuo_Huohuo_Ability02_Part01",
+      "childAbilityList": [
+        "Huohuo_Huohuo_Ability02_Camera",
+        "Huohuo_Huohuo_Ability02_Part01",
+        "Huohuo_Huohuo_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1021,6 +1043,12 @@ const compositeAbilityObject = {
     },
     "Huohuo_Huohuo_Ability01_Part01": {
       "fileName": "Huohuo_Huohuo_Ability01_Part01",
+      "childAbilityList": [
+        "Huohuo_Huohuo_Ability01_Camera",
+        "Huohuo_Huohuo_Ability01_Part01",
+        "Huohuo_Huohuo_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

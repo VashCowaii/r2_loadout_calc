@@ -16,6 +16,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Sushang_Sushang_TechniqueInLevel": {
       "fileName": "Sushang_Sushang_TechniqueInLevel",
+      "childAbilityList": [
+        "Sushang_Sushang_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -89,6 +93,10 @@ const compositeAbilityObject = {
     },
     "Sushang_Sushang_PassiveAbility01": {
       "fileName": "Sushang_Sushang_PassiveAbility01",
+      "childAbilityList": [
+        "Sushang_Sushang_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -528,6 +536,13 @@ const compositeAbilityObject = {
     },
     "Sushang_Sushang_Ability03_Part01": {
       "fileName": "Sushang_Sushang_Ability03_Part01",
+      "childAbilityList": [
+        "Sushang_Sushang_Ability03_EnterReady",
+        "Sushang_Sushang_Ability03_Part01",
+        "Sushang_Sushang_Ability03_Part02",
+        "Sushang_Sushang_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1383,16 +1398,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_PropertyValue"
+                    }
+                  ]
                 }
               ]
             }
@@ -1430,6 +1442,12 @@ const compositeAbilityObject = {
     },
     "Sushang_Sushang_Ability02_Part01": {
       "fileName": "Sushang_Sushang_Ability02_Part01",
+      "childAbilityList": [
+        "Sushang_Sushang_Ability02_Part01",
+        "Sushang_Sushang_Ability02_Part02",
+        "Sushang_Sushang_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1541,6 +1559,12 @@ const compositeAbilityObject = {
     },
     "Sushang_Sushang_Ability01_Part01": {
       "fileName": "Sushang_Sushang_Ability01_Part01",
+      "childAbilityList": [
+        "Sushang_Sushang_Ability01_Part01",
+        "Sushang_Sushang_Ability01_Part02",
+        "Sushang_Sushang_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "Tribbie_Tribbie_PassiveAbility01",
+  "childAbilityList": [
+    "Tribbie_Tribbie_PassiveAbility01",
+    "Tribbie_Tribbie_Insert"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 5,
   "toughnessList": [

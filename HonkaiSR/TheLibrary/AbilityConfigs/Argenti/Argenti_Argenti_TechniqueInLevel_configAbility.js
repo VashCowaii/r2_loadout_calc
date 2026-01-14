@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Argenti_Argenti_TechniqueInLevel",
+  "childAbilityList": [
+    "Argenti_Argenti_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

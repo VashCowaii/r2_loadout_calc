@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "JingYuan_JingYuan_Ability02_Part01",
+  "childAbilityList": [
+    "JingYuan_JingYuan_Ability02_Camera",
+    "JingYuan_JingYuan_Ability02_Part01",
+    "JingYuan_JingYuan_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

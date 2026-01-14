@@ -6,6 +6,9 @@
 
 let contentGuides = [
     // {"author": "Vash","topic": "","isYTVid": true,"date": 20240000,"embedLink": "","contentType": "Build","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "How Skill Duplication(Windfury) Works","isYTVid": true,"date": 20260109,"embedLink": "H_I3IgIABQk","contentType": "Guide","isOutdated": false,"entityArray": ["Cerydra","Mydei","Anaxa","Archer"],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "The 4 Bugs of Cyrene","isYTVid": true,"date": 20260104,"embedLink": "8woSnG_GV6o","contentType": "Guide","isOutdated": false,"entityArray": ["Cyrene","Cerydra","Hysilens"],"pinnedCommentFlag": false},
+    {"author": "Vash","topic": "Solving the Archer Bug","isYTVid": true,"date": 20251229,"embedLink": "YbtI8UZo52Q","contentType": "Guide","isOutdated": false,"entityArray": ["Archer"],"pinnedCommentFlag": false},
 
     {"author": "Vash","topic": "How Additional DMG Works","isYTVid": true,"date": 20251207,"embedLink": "bDcwxscR3FI","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},
     {"author": "Vash","topic": "How Summons Work","isYTVid": true,"date": 20251205,"embedLink": "8LGOLu4RWTw","contentType": "Guide","isOutdated": false,"entityArray": [],"pinnedCommentFlag": false},

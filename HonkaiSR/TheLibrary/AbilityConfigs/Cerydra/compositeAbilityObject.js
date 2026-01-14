@@ -19,6 +19,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Cerydra_Cerydra_TechniqueInLevel": {
       "fileName": "Cerydra_Cerydra_TechniqueInLevel",
+      "childAbilityList": [
+        "Cerydra_Cerydra_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -145,6 +149,10 @@ const compositeAbilityObject = {
     },
     "Cerydra_Cerydra_PassiveAbility": {
       "fileName": "Cerydra_Cerydra_PassiveAbility",
+      "childAbilityList": [
+        "Cerydra_Cerydra_PassiveAbility"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -967,8 +975,8 @@ const compositeAbilityObject = {
               "from": "ContextOwner",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1299,6 +1307,13 @@ const compositeAbilityObject = {
     },
     "Cerydra_Cerydra_Ability03_Part01": {
       "fileName": "Cerydra_Cerydra_Ability03_Part01",
+      "childAbilityList": [
+        "Cerydra_Cerydra_Ability03_Camera",
+        "Cerydra_Cerydra_Ability03_EnterReady",
+        "Cerydra_Cerydra_Ability03_Part01",
+        "Cerydra_Cerydra_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1550,6 +1565,17 @@ const compositeAbilityObject = {
     },
     "Cerydra_Cerydra_Ability02_Part01": {
       "fileName": "Cerydra_Cerydra_Ability02_Part01",
+      "childAbilityList": [
+        "Cerydra_Cerydra_Ability02_Part01",
+        "Cerydra_Cerydra_Ability02_Camera_TimeLine",
+        "Cerydra_Cerydra_Ability02_1_Camera_TimeLine",
+        "Cerydra_Cerydra_Ability02_2_Camera_TimeLine",
+        "Cerydra_Cerydra_Ability02_Others_Part02",
+        "Cerydra_Cerydra_Ability02_InsertEidolon1",
+        "Cerydra_Cerydra_Ability02_Insert_Camera",
+        "Cerydra_Cerydra_Ability02_3_Camera_TimeLine"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1757,6 +1783,12 @@ const compositeAbilityObject = {
     },
     "Cerydra_Cerydra_Ability01_Part01": {
       "fileName": "Cerydra_Cerydra_Ability01_Part01",
+      "childAbilityList": [
+        "Cerydra_Cerydra_Ability01_Camera",
+        "Cerydra_Cerydra_Ability01_Part01",
+        "Cerydra_Cerydra_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -1806,8 +1838,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "Cerydra_Template_PromotionEidolon0"
@@ -1821,8 +1853,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "Cerydra_Template_PromotionEidolon0"
@@ -2005,29 +2037,23 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.72) || RETURN",
-                        "displayLines": "0.72",
-                        "constants": [],
-                        "variables": [
-                          0.72
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                          "value": "0.72"
+                        }
+                      ]
                     },
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.1) || RETURN",
-                        "displayLines": "0.1",
-                        "constants": [],
-                        "variables": [
-                          0.1
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+                          "value": "0.1"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2762,16 +2788,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                    "displayLines": "-MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-MDF_PropertyValue"
+                    }
+                  ]
                 },
                 {
                   "name": "IF",
@@ -2794,16 +2817,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue2) || INVERT || RETURN",
-                        "displayLines": "-MDF_PropertyValue2",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue2"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "-MDF_PropertyValue2"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -3368,8 +3388,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "Cerydra_PointB1_CriticalCriticalDamageAddedRatio"
@@ -3383,8 +3403,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "Cerydra_PointB1_CriticalCriticalDamageAddedRatio"
@@ -3398,8 +3418,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "Cerydra_PointB1_CriticalCriticalDamageAddedRatio"

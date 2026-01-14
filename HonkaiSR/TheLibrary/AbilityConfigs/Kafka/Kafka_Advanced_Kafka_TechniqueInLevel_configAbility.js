@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Kafka_Advanced_Kafka_TechniqueInLevel",
+  "childAbilityList": [
+    "Kafka_Advanced_Kafka_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

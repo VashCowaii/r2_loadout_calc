@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "March7thP_Mar_7th_PassiveAbility01",
+  "childAbilityList": [
+    "March7thP_Mar_7th_PassiveAbility01",
+    "March7thP_Mar_7th_PassiveAbility01_InsertAbility",
+    "March7thP_Mar_7th_PassiveAbility01_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 10,
   "toughnessList": [

@@ -108,8 +108,8 @@ const configAbility = {
           "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
           "valueRanges": [
             {
-              "name": "Changes",
-              "execute": [
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": "Caster",

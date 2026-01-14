@@ -157,17 +157,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (_Layer) || Variables[1] (0.06) || MUL || RETURN",
-                        "displayLines": "(_Layer * 0.06)",
-                        "constants": [],
-                        "variables": [
-                          "_Layer",
-                          0.06
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "(_Layer * 0.06)"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -182,17 +178,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (_Layer) || Variables[1] (0.12) || MUL || RETURN",
-                        "displayLines": "(_Layer * 0.12)",
-                        "constants": [],
-                        "variables": [
-                          "_Layer",
-                          0.12
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                          "value": "(_Layer * 0.12)"
+                        }
+                      ]
                     }
                   ]
                 }

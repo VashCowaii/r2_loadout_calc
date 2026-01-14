@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Welt_Welt_Ability01_Part01",
+  "childAbilityList": [
+    "Welt_Welt_Ability01_Camera",
+    "Welt_Welt_Ability01_Part01",
+    "Welt_Welt_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

@@ -119,13 +119,13 @@ const configAbility = {
                     "name": "Character ID",
                     "ID": 8007,
                     "target": "Caster",
-                    "characterName": "{NICKNAME}"
+                    "characterName": "Trailblazer - Remembrance[M]"
                   },
                   {
                     "name": "Character ID",
                     "ID": 8008,
                     "target": "Caster",
-                    "characterName": "{NICKNAME}"
+                    "characterName": "Trailblazer - Remembrance[F]"
                   }
                 ]
               },

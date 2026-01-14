@@ -568,6 +568,10 @@ const compositeAbilityObject = {
     },
     "Yukong_Yukong_TechniqueInLevel": {
       "fileName": "Yukong_Yukong_TechniqueInLevel",
+      "childAbilityList": [
+        "Yukong_Yukong_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -617,6 +621,10 @@ const compositeAbilityObject = {
     },
     "Yukong_Yukong_PassiveAbility01": {
       "fileName": "Yukong_Yukong_PassiveAbility01",
+      "childAbilityList": [
+        "Yukong_Yukong_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1080,6 +1088,14 @@ const compositeAbilityObject = {
     },
     "Yukong_Yukong_Ability03_Part01": {
       "fileName": "Yukong_Yukong_Ability03_Part01",
+      "childAbilityList": [
+        "Yukong_Yukong_Ability03_Camera",
+        "Yukong_Yukong_Ability03_EnterReady",
+        "Yukong_Yukong_Ability03_Part01",
+        "Yukong_Yukong_Ability03_Part02",
+        "Yukong_Yukong_Ability03_AddFlower"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1325,6 +1341,14 @@ const compositeAbilityObject = {
     },
     "Yukong_Yukong_Ability02_Part01": {
       "fileName": "Yukong_Yukong_Ability02_Part01",
+      "childAbilityList": [
+        "Yukong_Yukong_Ability02_Camera",
+        "Yukong_Yukong_Ability02_Part01",
+        "Yukong_Yukong_Ability02_Part02",
+        "Yukong_Yukong_Ability02_AddFlower",
+        "Yukong_Yukong_Ability02_CountDown"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1624,6 +1648,13 @@ const compositeAbilityObject = {
     },
     "Yukong_Yukong_Ability01_Part01": {
       "fileName": "Yukong_Yukong_Ability01_Part01",
+      "childAbilityList": [
+        "Yukong_Yukong_Ability01_Camera",
+        "Yukong_Yukong_Ability01_Camera_V2",
+        "Yukong_Yukong_Ability01_Part01",
+        "Yukong_Yukong_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

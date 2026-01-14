@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Luocha_Luocha_Ability01_Part01",
+  "childAbilityList": [
+    "Luocha_Luocha_Ability01_Camera",
+    "Luocha_Luocha_Ability01_Part01",
+    "Luocha_Luocha_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

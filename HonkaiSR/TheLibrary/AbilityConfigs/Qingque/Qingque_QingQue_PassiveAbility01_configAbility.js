@@ -1,5 +1,14 @@
 const configAbility = {
   "fileName": "Qingque_QingQue_PassiveAbility01",
+  "childAbilityList": [
+    "Qingque_QingQue_PassiveAbility01",
+    "Qingque_Qingque_Bonus",
+    "Qingque_Qingque_Eidolon4_ATK_Camera",
+    "Qingque_Qingque_Bonus_Camera",
+    "Qingque_Qingque_Eidolon4_ATK_Special_Camera",
+    "Qingque_Qingque_UltraGangFix_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

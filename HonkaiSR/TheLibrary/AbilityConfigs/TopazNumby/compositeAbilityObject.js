@@ -827,6 +827,10 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_TechniqueInLevel": {
       "fileName": "TopazNumby_Topaz_TechniqueInLevel",
+      "childAbilityList": [
+        "TopazNumby_Topaz_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -881,6 +885,13 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_PassiveAbility01": {
       "fileName": "TopazNumby_Topaz_PassiveAbility01",
+      "childAbilityList": [
+        "TopazNumby_Topaz_PassiveAbility01",
+        "TopazNumby_Topaz_Eidolon4_ReduceDelay",
+        "TopazNumby_Topaz_BE_NormalAttackDamage",
+        "TopazNumby_Topaz_BE_UltraAttackDamage"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1038,7 +1049,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },
@@ -1074,7 +1085,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },
@@ -1110,7 +1121,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },
@@ -1146,7 +1157,7 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },
@@ -1453,16 +1464,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.15) || RETURN",
-                        "displayLines": "0.15",
-                        "constants": [],
-                        "variables": [
-                          0.15
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.15"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1859,6 +1867,15 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_Ability03_Part01": {
       "fileName": "TopazNumby_Topaz_Ability03_Part01",
+      "childAbilityList": [
+        "TopazNumby_Topaz_Ability03_Camera",
+        "TopazNumby_Topaz_Ability03_EnterReady",
+        "TopazNumby_Topaz_Ability03_Part01",
+        "TopazNumby_Topaz_Ability03_Part02",
+        "TopazNumby_Klara_Ability03_EnterReady",
+        "TopazNumby_Klara_Ability03_Part01"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -2453,6 +2470,12 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_Ability02_Part01": {
       "fileName": "TopazNumby_Topaz_Ability02_Part01",
+      "childAbilityList": [
+        "TopazNumby_Topaz_Ability02_Camera",
+        "TopazNumby_Topaz_Ability02_Part01",
+        "TopazNumby_Topaz_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2579,6 +2602,12 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_Ability01_Part01": {
       "fileName": "TopazNumby_Topaz_Ability01_Part01",
+      "childAbilityList": [
+        "TopazNumby_Topaz_Ability01_Camera",
+        "TopazNumby_Topaz_Ability01_Part01",
+        "TopazNumby_Topaz_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -3209,16 +3238,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue1_DamageAdd) || RETURN",
-                        "displayLines": "MDF_PropertyValue1_DamageAdd",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue1_DamageAdd"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue1_DamageAdd"
+                        }
+                      ]
                     },
                     {
                       "name": "IF",
@@ -3229,17 +3255,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue4_InsertCriticalDamageAddLayer) || Variables[1] (MDF_PropertyValue3_InsertCriticalDamageAddRatio) || MUL || RETURN",
-                            "displayLines": "(MDF_PropertyValue4_InsertCriticalDamageAddLayer * MDF_PropertyValue3_InsertCriticalDamageAddRatio)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-                              "MDF_PropertyValue3_InsertCriticalDamageAddRatio"
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                              "value": "(MDF_PropertyValue4_InsertCriticalDamageAddLayer * MDF_PropertyValue3_InsertCriticalDamageAddRatio)"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3319,7 +3341,7 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                         "target": "Use Prior Target(s) Defined",
                         "mustBeAlive2": true
                       },

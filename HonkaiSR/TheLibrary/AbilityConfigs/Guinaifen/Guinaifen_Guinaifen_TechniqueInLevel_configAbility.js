@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Guinaifen_Guinaifen_TechniqueInLevel",
+  "childAbilityList": [
+    "Guinaifen_Guinaifen_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

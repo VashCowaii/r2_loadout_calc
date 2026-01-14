@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Pela_Pela_PassiveAbility01",
+  "childAbilityList": [
+    "Pela_Pela_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Hook_Hook_Ability01_Part01",
+  "childAbilityList": [
+    "Hook_Hook_Ability01_Camera",
+    "Hook_Hook_Ability01_Part01",
+    "Hook_Hook_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

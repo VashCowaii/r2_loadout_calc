@@ -18,6 +18,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "TrailblazerPreservation_PlayerBoy_10_TechniqueInLevel": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_TechniqueInLevel",
+      "childAbilityList": [
+        "TrailblazerPreservation_PlayerBoy_10_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -147,6 +151,10 @@ const compositeAbilityObject = {
     },
     "TrailblazerPreservation_PlayerBoy_10_PassiveAbility01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_PassiveAbility01",
+      "childAbilityList": [
+        "TrailblazerPreservation_PlayerBoy_10_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -881,6 +889,13 @@ const compositeAbilityObject = {
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability03_Part01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability03_Part01",
+      "childAbilityList": [
+        "TrailblazerPreservation_PlayerBoy_10_Ability03_Camera",
+        "TrailblazerPreservation_PlayerBoy_10_Ability03_EnterReady",
+        "TrailblazerPreservation_PlayerBoy_10_Ability03_Part01",
+        "TrailblazerPreservation_PlayerBoy_10_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1282,6 +1297,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability02_Part01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability02_Part01",
+      "childAbilityList": [
+        "TrailblazerPreservation_PlayerBoy_10_Ability02_Camera_Self",
+        "TrailblazerPreservation_PlayerBoy_10_Ability02_Part01",
+        "TrailblazerPreservation_PlayerBoy_10_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1701,6 +1722,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability11_Part01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability11_Part01",
+      "childAbilityList": [
+        "TrailblazerPreservation_PlayerBoy_10_Ability11_Part01",
+        "TrailblazerPreservation_PlayerBoy_10_Ability11_Part02",
+        "TrailblazerPreservation_PlayerBoy_10_Ability11_Camera"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 30,
       "toughnessList": [
@@ -1958,6 +1985,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerPreservation_PlayerBoy_10_Ability01_Part01": {
       "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability01_Part01",
+      "childAbilityList": [
+        "TrailblazerPreservation_PlayerBoy_10_Ability01_Camera",
+        "TrailblazerPreservation_PlayerBoy_10_Ability01_Part01",
+        "TrailblazerPreservation_PlayerBoy_10_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

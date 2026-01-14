@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Luka_Luka_TechniqueInLevel",
+  "childAbilityList": [
+    "Luka_Luka_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

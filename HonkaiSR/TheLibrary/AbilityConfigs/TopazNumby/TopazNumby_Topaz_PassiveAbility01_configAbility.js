@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "TopazNumby_Topaz_PassiveAbility01",
+  "childAbilityList": [
+    "TopazNumby_Topaz_PassiveAbility01",
+    "TopazNumby_Topaz_Eidolon4_ReduceDelay",
+    "TopazNumby_Topaz_BE_NormalAttackDamage",
+    "TopazNumby_Topaz_BE_UltraAttackDamage"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [
@@ -157,7 +164,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                     "target": "Use Prior Target(s) Defined",
                     "mustBeAlive2": true
                   },
@@ -193,7 +200,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                     "target": "Use Prior Target(s) Defined",
                     "mustBeAlive2": true
                   },
@@ -229,7 +236,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                     "target": "Use Prior Target(s) Defined",
                     "mustBeAlive2": true
                   },
@@ -265,7 +272,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                     "target": "Use Prior Target(s) Defined",
                     "mustBeAlive2": true
                   },
@@ -572,16 +579,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.15) || RETURN",
-                    "displayLines": "0.15",
-                    "constants": [],
-                    "variables": [
-                      0.15
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "0.15"
+                    }
+                  ]
                 }
               ]
             }

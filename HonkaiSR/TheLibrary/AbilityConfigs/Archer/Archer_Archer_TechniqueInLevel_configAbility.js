@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Archer_Archer_TechniqueInLevel",
+  "childAbilityList": [
+    "Archer_Archer_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

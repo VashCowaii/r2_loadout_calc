@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Sushang_Sushang_Ability02_Part01",
+  "childAbilityList": [
+    "Sushang_Sushang_Ability02_Part01",
+    "Sushang_Sushang_Ability02_Part02",
+    "Sushang_Sushang_Ability02_Camera"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

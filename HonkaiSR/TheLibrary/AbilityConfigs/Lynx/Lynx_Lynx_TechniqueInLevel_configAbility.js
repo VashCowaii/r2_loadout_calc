@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Lynx_Lynx_TechniqueInLevel",
+  "childAbilityList": [
+    "Lynx_Lynx_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

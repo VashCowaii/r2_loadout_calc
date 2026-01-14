@@ -455,6 +455,10 @@ const compositeAbilityObject = {
     },
     "Bronya_Bronya_TechniqueInLevel": {
       "fileName": "Bronya_Bronya_TechniqueInLevel",
+      "childAbilityList": [
+        "Bronya_Bronya_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -551,6 +555,12 @@ const compositeAbilityObject = {
     },
     "Bronya_Bronya_PassiveAbility_1": {
       "fileName": "Bronya_Bronya_PassiveAbility_1",
+      "childAbilityList": [
+        "Bronya_Bronya_PassiveAbility_1",
+        "Bronya_Bronya_Eidolon4_ATK",
+        "Bronya_Bronya_Eidolon4_ATK_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 5,
       "toughnessList": [
@@ -736,6 +746,13 @@ const compositeAbilityObject = {
     },
     "Bronya_Bronya_Ability03_Part01": {
       "fileName": "Bronya_Bronya_Ability03_Part01",
+      "childAbilityList": [
+        "Bronya_Bronya_Ability03_Camera",
+        "Bronya_Bronya_Ability03_EnterReady",
+        "Bronya_Bronya_Ability03_Part01",
+        "Bronya_Bronya_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1105,6 +1122,14 @@ const compositeAbilityObject = {
     },
     "Bronya_Bronya_Ability02_Part01": {
       "fileName": "Bronya_Bronya_Ability02_Part01",
+      "childAbilityList": [
+        "Bronya_Bronya_Ability02_Others_Camera",
+        "Bronya_Bronya_Ability02_Self_Camera",
+        "Bronya_Bronya_Ability02_Part01",
+        "Bronya_Bronya_Ability02_Others_Part02",
+        "Bronya_Bronya_Ability02_Self_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1243,9 +1268,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                      "value": 1
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                          "value": 1
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1259,6 +1288,12 @@ const compositeAbilityObject = {
     },
     "Bronya_Bronya_Ability01_Part01": {
       "fileName": "Bronya_Bronya_Ability01_Part01",
+      "childAbilityList": [
+        "Bronya_Bronya_Ability01_Camera",
+        "Bronya_Bronya_Ability01_Part01",
+        "Bronya_Bronya_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

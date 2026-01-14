@@ -208,6 +208,10 @@ const compositeAbilityObject = {
     },
     "Archer_Archer_TechniqueInLevel": {
       "fileName": "Archer_Archer_TechniqueInLevel",
+      "childAbilityList": [
+        "Archer_Archer_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -590,6 +594,15 @@ const compositeAbilityObject = {
     },
     "Archer_Archer_PassiveAbility01": {
       "fileName": "Archer_Archer_PassiveAbility01",
+      "childAbilityList": [
+        "Archer_Archer_PassiveAbility01",
+        "Archer_Archer_Insert_Part01",
+        "Archer_Archer_Insert_Part02",
+        "Archer_Archer_Insert_Camera",
+        "Archer_Archer_Bonus",
+        "Archer_Archer_Bonus_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 5,
       "toughnessList": [
@@ -708,16 +721,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",
-                        "displayLines": "-MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "-MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -747,16 +757,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2060,6 +2067,13 @@ const compositeAbilityObject = {
     },
     "Archer_Archer_Ability03_Part01": {
       "fileName": "Archer_Archer_Ability03_Part01",
+      "childAbilityList": [
+        "Archer_Archer_Ability03_Camera",
+        "Archer_Archer_Ability03_EnterReady",
+        "Archer_Archer_Ability03_Part01",
+        "Archer_Archer_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -2117,6 +2131,11 @@ const compositeAbilityObject = {
     },
     "Archer_Archer_Ability02Cancel_Part01": {
       "fileName": "Archer_Archer_Ability02Cancel_Part01",
+      "childAbilityList": [
+        "Archer_Archer_Ability02Cancel_Part01",
+        "Archer_Archer_Ability02Cancel_Part02"
+      ],
+      "skillTrigger": "Skill21",
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [
@@ -2423,6 +2442,15 @@ const compositeAbilityObject = {
     },
     "Archer_Archer_Ability02_Part01": {
       "fileName": "Archer_Archer_Ability02_Part01",
+      "childAbilityList": [
+        "Archer_Archer_Ability02_Camera",
+        "Archer_Archer_Ability02_Part01",
+        "Archer_Archer_Ability02_Part02",
+        "Archer_Archer_Ability02_End_Camera",
+        "Archer_Archer_Ability02_C02_Camera",
+        "Archer_Archer_Ability02_C01andC02_Camera"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2574,6 +2602,12 @@ const compositeAbilityObject = {
     },
     "Archer_Archer_Ability01_Part01": {
       "fileName": "Archer_Archer_Ability01_Part01",
+      "childAbilityList": [
+        "Archer_Archer_Ability01_Camera",
+        "Archer_Archer_Ability01_Part01",
+        "Archer_Archer_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2911,17 +2945,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_Skill02ExtraCount) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
-                        "displayLines": "(MDF_Skill02ExtraCount * MDF_PropertyValue)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_Skill02ExtraCount",
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "(MDF_Skill02ExtraCount * MDF_PropertyValue)"
+                        }
+                      ]
                     }
                   ]
                 }

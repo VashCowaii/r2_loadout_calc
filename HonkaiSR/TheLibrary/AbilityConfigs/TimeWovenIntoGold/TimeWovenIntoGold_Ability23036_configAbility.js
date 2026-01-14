@@ -44,16 +44,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (_NormalDamageRatioTotal) || RETURN",
-                    "displayLines": "_NormalDamageRatioTotal",
-                    "constants": [],
-                    "variables": [
-                      "_NormalDamageRatioTotal"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "_NormalDamageRatioTotal"
+                    }
+                  ]
                 }
               ]
             }
@@ -139,16 +136,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (_NormalDamageRatioTotal) || RETURN",
-                    "displayLines": "_NormalDamageRatioTotal",
-                    "constants": [],
-                    "variables": [
-                      "_NormalDamageRatioTotal"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "_NormalDamageRatioTotal"
+                    }
+                  ]
                 }
               ]
             }

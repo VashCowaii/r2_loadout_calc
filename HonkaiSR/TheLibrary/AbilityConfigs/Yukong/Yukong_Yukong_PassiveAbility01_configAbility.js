@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Yukong_Yukong_PassiveAbility01",
+  "childAbilityList": [
+    "Yukong_Yukong_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Cerydra_Cerydra_PassiveAbility",
+  "childAbilityList": [
+    "Cerydra_Cerydra_PassiveAbility"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [
@@ -822,8 +826,8 @@ const configAbility = {
           "from": "ContextOwner",
           "valueRanges": [
             {
-              "name": "Changes",
-              "execute": [
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
                 {
                   "name": "IF",
                   "conditions": {

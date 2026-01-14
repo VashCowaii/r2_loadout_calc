@@ -120,6 +120,10 @@ const compositeAbilityObject = {
     },
     "TrailblazerDestruction_PlayerBoy_PassiveAbility01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_PassiveAbility01",
+      "childAbilityList": [
+        "TrailblazerDestruction_PlayerBoy_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -425,16 +429,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.25) || RETURN",
-                        "displayLines": "0.25",
-                        "constants": [],
-                        "variables": [
-                          0.25
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                          "value": "0.25"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -676,6 +677,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerDestruction_PlayerBoy_Ability21_Part01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability21_Part01",
+      "childAbilityList": [
+        "TrailblazerDestruction_PlayerBoy_Ability21_Camera",
+        "TrailblazerDestruction_PlayerBoy_Ability21_Part01",
+        "TrailblazerDestruction_PlayerBoy_Ability21_Part02"
+      ],
+      "skillTrigger": "Skill21",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -786,6 +793,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerDestruction_PlayerBoy_Ability02_Part01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability02_Part01",
+      "childAbilityList": [
+        "TrailblazerDestruction_PlayerBoy_Ability02_Camera",
+        "TrailblazerDestruction_PlayerBoy_Ability02_Part01",
+        "TrailblazerDestruction_PlayerBoy_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -883,6 +896,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerDestruction_PlayerBoy_Ability11_Part01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability11_Part01",
+      "childAbilityList": [
+        "TrailblazerDestruction_PlayerBoy_Ability11_Camera",
+        "TrailblazerDestruction_PlayerBoy_Ability11_Part01",
+        "TrailblazerDestruction_PlayerBoy_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -944,6 +963,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerDestruction_PlayerBoy_Ability01_Part01": {
       "fileName": "TrailblazerDestruction_PlayerBoy_Ability01_Part01",
+      "childAbilityList": [
+        "TrailblazerDestruction_PlayerBoy_Ability01_Camera",
+        "TrailblazerDestruction_PlayerBoy_Ability01_Part01",
+        "TrailblazerDestruction_PlayerBoy_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -1016,16 +1041,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.25) || RETURN",
-                    "displayLines": "0.25",
-                    "constants": [],
-                    "variables": [
-                      0.25
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "0.25"
+                    }
+                  ]
                 }
               ]
             }

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Serval_Serval_PassiveAbility01",
+  "childAbilityList": [
+    "Serval_Serval_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [
