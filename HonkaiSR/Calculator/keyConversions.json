@@ -28,7 +28,7 @@
     "CurExtraSpecialSP": "EnergyCurrentSpecialOverflow",
     "MaxExtraSpecialSP": "EnergyMaxSpecialOverflow",
 
-    "BaseAggro": "AggroBase",
+    "BaseAggro": "CharacterAggroBase",
     "AggroAddedRatio": "Aggro%",
     "AggroDelta": "AggroFlat",
     "AggroBase": "BaseAggroValue",

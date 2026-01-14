@@ -107,14 +107,34 @@
 
             <div class="mainBodyBufferleftBox">
               <img src="/HonkaiSR/image/simulated_event/HoshinoKami_Herta.png" class="cardBoxBannerCardIcon">
+
+              <!-- <div class="libraryOverviewCountsBox">
+                <div class="libraryCountsBoxVertical">
+                  <img src="/HonkaiSR/misc/UI_Message_Group_Default.png" class="cardBoxCharacterCardIconCounts">
+                  <div class="cardBoxIconText" id="charactersCompletedPercent">Lightcones</div>
+                  <div class="cardBoxIconText" id="charactersCompletedCount">Lightcones</div>
+                </div>
+                
+              </div> -->
               <!-- <div class="cardBoxIconTextBanner">The Library</div> -->
+
+              <div class="cardBoxIconTextVersion">
+                The Library
+                <span id="versionUpdateValue" class="smallProgressValue"></span>
+              </div>
             </div>
 
             <div class="mainBodyCardBox">
 
               <div class="cardBoxCharacterCard cardHoverOpacity" onclick="customMenu.createCharacterSearchMenu();">
                 <img src="/HonkaiSR/image/character_portrait/1005.png" class="cardBoxCharacterCardIcon">
-                <div class="cardBoxIconText">Characters</div>
+                <div class="cardBoxIconText">Characters
+                  <br>
+                  <span id="charactersCompletedPercent" class="smallProgressValue"></span>
+                </div>
+
+                <!-- <div class="cardBoxIconText" id="charactersCompletedPercent">Lightcones</div>
+                <div class="cardBoxIconText" id="charactersCompletedCount">Lightcones</div> -->
               </div>
 
               <div class="cardBoxLCAndRelicBox">
@@ -123,14 +143,22 @@
                 </div> -->
                 <div class="cardBoxLightconeCard cardHoverOpacity" onclick="customMenu.createLightconeSearchMenu();">
                   <img src="/HonkaiSR/image/light_cone_portrait/23004.png" class="cardBoxLightconeCardIcon">
-                  <div class="cardBoxIconText">Lightcones</div>
+                  <div class="cardBoxIconText">
+                    Lightcones
+                    <br>
+                    <span id="lightconesCompletedPercent" class="smallProgressValue"></span>
+                  </div>
                 </div>
 
                 <div class="cardBoxRelicCard cardHoverOpacity" onclick="customMenu.createRelicSearchMenu();">
                 <!-- <div class="cardBoxRelicCard cardHoverOpacity" onclick="alert('No relics yet. The list you see on characters and lightcones are what is available to view currently.\n\nI will add more daily.')"> -->
                   <img src="/HonkaiSR/icon/relic/308_0.png" class="cardBoxRelicCardIcon2">
                   <img src="/HonkaiSR/icon/relic/110_0.png" class="cardBoxRelicCardIcon1">
-                  <div class="cardBoxIconText">Relics</div>
+                  <div class="cardBoxIconText">
+                    Relics
+                    <br>
+                    <span id="relicsCompletedPercent" class="smallProgressValue"></span>
+                  </div>
                 </div>
               </div>
 
@@ -192,6 +220,13 @@
 
 <!-- <script src="/HonkaiSR/TheLibrary/newTester.js"></script> -->
 <script src="/HonkaiSR/TheLibrary/allowedCharacterList.js"></script>
+
+<script src="readyCharacterCounts.js"></script>
+<script src="readyLightconeCounts.js"></script>
+<script src="readyRelicCounts.js"></script>
+<script src="lastVerionHSR.js"></script>
+
+<script src="pageLoadLibrary.js"></script>
 
 <script src="/MainJS/buildTime.js"></script>
 

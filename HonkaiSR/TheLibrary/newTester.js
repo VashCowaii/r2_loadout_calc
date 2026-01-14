@@ -234,15 +234,23 @@ const megaParsingFuckery = {
                 1: "AOE",
                 2: "Blast"
             }
-            for (let i=0;i<3;i++) {
-                toughnessRowString += `<div class="toughnessTableRowItemBox">
-                    <div class="toughnessTableRowItemHeader">${toughnessIndexConversion[i]}</div>
-                    <div class="toughnessTableRowItemValue">${configAbility.toughnessList[i]}</div>
-                </div>`
+
+            const check1 = configAbility.toughnessList[0] != 0;
+            const check2 = configAbility.toughnessList[1] != 0;
+            const check3 = configAbility.toughnessList[2] != 0;
+            const hasActualValues = check1 || check2 || check3;
+
+            if (hasActualValues) {
+                for (let i=0;i<3;i++) {
+                    toughnessRowString += `<div class="toughnessTableRowItemBox">
+                        <div class="toughnessTableRowItemHeader">${toughnessIndexConversion[i]}</div>
+                        <div class="toughnessTableRowItemValue">${configAbility.toughnessList[i]}</div>
+                    </div>`;
+                }
             }
         }
 
-        let toughnessString = !isLightcone ? `<div class="toughnessTableRowBox">
+        let toughnessString = !isLightcone && toughnessRowString != "" ? `<div class="toughnessTableRowBox">
             <div class="toughnessTableRowHeader">Toughness</div>
 
             <div class="toughnessTableRowTableRow">

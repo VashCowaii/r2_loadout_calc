@@ -11,9 +11,9 @@ let characters = {
       "DEFBase": 573.3,
       "HPBase": 1058.4,
       "SPDBase": 101,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 150
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
     },
     "eidolons": [
       {
@@ -601,9 +601,9 @@ let characters = {
       "DEFBase": 396.9,
       "HPBase": 882,
       "SPDBase": 110,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -1150,9 +1150,9 @@ let characters = {
       "DEFBase": 436.59000000000003,
       "HPBase": 1047.816,
       "SPDBase": 96,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -1697,9 +1697,9 @@ let characters = {
       "DEFBase": 509.355,
       "HPBase": 1125.4319999999998,
       "SPDBase": 102,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -2281,9 +2281,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1086.624,
       "SPDBase": 100,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -2889,9 +2889,9 @@ let characters = {
       "DEFBase": 460.845,
       "HPBase": 1047.816,
       "SPDBase": 107,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -3522,9 +3522,9 @@ let characters = {
       "DEFBase": 330.75,
       "HPBase": 1199.52,
       "SPDBase": 102,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -4041,9 +4041,9 @@ let characters = {
       "DEFBase": 463.04999999999995,
       "HPBase": 1023.12,
       "SPDBase": 106,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -4565,9 +4565,9 @@ let characters = {
       "DEFBase": 396.9,
       "HPBase": 952.56,
       "SPDBase": 100,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -5105,9 +5105,9 @@ let characters = {
       "DEFBase": 533.61,
       "HPBase": 1241.8560000000002,
       "SPDBase": 99,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -5660,9 +5660,9 @@ let characters = {
       "DEFBase": 363.82500000000005,
       "HPBase": 931.392,
       "SPDBase": 115,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -6209,9 +6209,9 @@ let characters = {
       "DEFBase": 374.85,
       "HPBase": 917.28,
       "SPDBase": 104,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -6774,9 +6774,9 @@ let characters = {
       "DEFBase": 654.885,
       "HPBase": 1397.088,
       "SPDBase": 92,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 150
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
     },
     "eidolons": [
       {
@@ -7319,9 +7319,9 @@ let characters = {
       "DEFBase": 507.15,
       "HPBase": 1164.2399999999998,
       "SPDBase": 98,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -7872,9 +7872,9 @@ let characters = {
       "DEFBase": 463.04999999999995,
       "HPBase": 987.8399999999999,
       "SPDBase": 105,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -8454,9 +8454,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1241.8560000000002,
       "SPDBase": 90,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -9043,9 +9043,9 @@ let characters = {
       "DEFBase": 352.79999999999995,
       "HPBase": 1340.6399999999999,
       "SPDBase": 94,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -9691,9 +9691,9 @@ let characters = {
       "DEFBase": 551.25,
       "HPBase": 1058.4,
       "SPDBase": 100,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -10274,9 +10274,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 917.28,
       "SPDBase": 103,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -10913,9 +10913,9 @@ let characters = {
       "DEFBase": 412.33500000000004,
       "HPBase": 931.392,
       "SPDBase": 110,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -11485,9 +11485,9 @@ let characters = {
       "DEFBase": 441,
       "HPBase": 1023.12,
       "SPDBase": 98,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -12059,9 +12059,9 @@ let characters = {
       "DEFBase": 396.9,
       "HPBase": 846.72,
       "SPDBase": 112,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -12593,9 +12593,9 @@ let characters = {
       "DEFBase": 363.82500000000005,
       "HPBase": 1280.664,
       "SPDBase": 101,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -13169,9 +13169,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1164.2399999999998,
       "SPDBase": 99,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -13727,9 +13727,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1358.2800000000002,
       "SPDBase": 97,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -14392,9 +14392,9 @@ let characters = {
       "DEFBase": 418.95000000000005,
       "HPBase": 917.28,
       "SPDBase": 107,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -14949,9 +14949,9 @@ let characters = {
       "DEFBase": 374.85,
       "HPBase": 917.28,
       "SPDBase": 107,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -15491,9 +15491,9 @@ let characters = {
       "DEFBase": 606.375,
       "HPBase": 1474.7040000000002,
       "SPDBase": 100,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 150
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
     },
     "eidolons": [
       {
@@ -16044,9 +16044,9 @@ let characters = {
       "DEFBase": 412.33500000000004,
       "HPBase": 892.5840000000001,
       "SPDBase": 109,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -16630,9 +16630,9 @@ let characters = {
       "DEFBase": 441,
       "HPBase": 882,
       "SPDBase": 106,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -17228,9 +17228,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1319.4720000000002,
       "SPDBase": 98,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -17788,9 +17788,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1435.8960000000002,
       "SPDBase": 96,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -18445,9 +18445,9 @@ let characters = {
       "DEFBase": 363.82500000000005,
       "HPBase": 1241.8560000000002,
       "SPDBase": 102,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -19181,9 +19181,9 @@ let characters = {
       "DEFBase": 396.9,
       "HPBase": 1058.4,
       "SPDBase": 103,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -19731,9 +19731,9 @@ let characters = {
       "DEFBase": 352.79999999999995,
       "HPBase": 917.28,
       "SPDBase": 110,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -20258,9 +20258,9 @@ let characters = {
       "DEFBase": 509.355,
       "HPBase": 1358.2800000000002,
       "SPDBase": 98,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -20860,9 +20860,9 @@ let characters = {
       "DEFBase": 352.79999999999995,
       "HPBase": 811.44,
       "SPDBase": 111,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -21445,9 +21445,9 @@ let characters = {
       "DEFBase": 441,
       "HPBase": 1058.4,
       "SPDBase": 102,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -22077,9 +22077,9 @@ let characters = {
       "DEFBase": 441,
       "HPBase": 1305.3600000000001,
       "SPDBase": 98,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -22657,9 +22657,9 @@ let characters = {
       "DEFBase": 363.82500000000005,
       "HPBase": 1047.816,
       "SPDBase": 103,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -23257,9 +23257,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1086.624,
       "SPDBase": 104,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -23830,9 +23830,9 @@ let characters = {
       "DEFBase": 460.845,
       "HPBase": 1047.816,
       "SPDBase": 103,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -24428,9 +24428,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1397.088,
       "SPDBase": 101,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -24978,9 +24978,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1086.624,
       "SPDBase": 102,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -25659,9 +25659,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1280.664,
       "SPDBase": 102,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -26239,9 +26239,9 @@ let characters = {
       "DEFBase": 396.9,
       "HPBase": 1270.08,
       "SPDBase": 96,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -26804,9 +26804,9 @@ let characters = {
       "DEFBase": 727.6500000000001,
       "HPBase": 1047.816,
       "SPDBase": 96,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -27376,9 +27376,9 @@ let characters = {
       "DEFBase": 557.865,
       "HPBase": 970.2,
       "SPDBase": 97,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
@@ -27904,9 +27904,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1203.0479999999998,
       "SPDBase": 102,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -28509,9 +28509,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1358.2800000000002,
       "SPDBase": 99,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -29093,9 +29093,9 @@ let characters = {
       "DEFBase": 460.845,
       "HPBase": 1203.0479999999998,
       "SPDBase": 100,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -29729,9 +29729,9 @@ let characters = {
       "DEFBase": 606.375,
       "HPBase": 1241.8560000000002,
       "SPDBase": 95,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 150
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
     },
     "eidolons": [
       {
@@ -30323,9 +30323,9 @@ let characters = {
       "DEFBase": 630.6300000000001,
       "HPBase": 1047.816,
       "SPDBase": 103,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 100
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
     },
     "eidolons": [
       {
@@ -31282,9 +31282,9 @@ let characters = {
       "DEFBase": 654.885,
       "HPBase": 1241.8560000000002,
       "SPDBase": 101,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 125
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
     },
     "eidolons": [
       {
@@ -31938,9 +31938,9 @@ let characters = {
       "DEFBase": 485.1,
       "HPBase": 1164.2399999999998,
       "SPDBase": 105,
-      "CritRateSUM": 0.05,
-      "CritDamageSUM": 0.5,
-      "AggroBase": 75
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
     },
     "eidolons": [
       {
