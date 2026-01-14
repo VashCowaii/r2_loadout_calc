@@ -1,6 +1,7 @@
 const compositeAbilityObject = {
   "fullCharacterName": "Trailblazer - Remembrance",
   "trimCharacterName": "TrailblazerRemembrance",
+  "trimSummonName": "Mem",
   "abilityList": [
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon4",
     "TrailblazerRemembrance_PlayerBoy_30_Eidolon2",

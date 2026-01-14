@@ -113,7 +113,15 @@ const megaParsingFuckery = {
         const isRelic = compositeAbilityObject.isRelic;
 
         loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
-        const configAbility = compositeAbilityObject.abilityObject[loadFile];
+        let configAbility = compositeAbilityObject.abilityObject[loadFile];
+
+        if (!configAbility) {
+            loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
+            console.log(loadFile)
+            configAbility = compositeAbilityObject.abilityObject[loadFile];
+            // compositeAbilityObject.trimSummonName
+
+        }
 
         let initialCounter = 1;
         let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
@@ -124,6 +132,8 @@ const megaParsingFuckery = {
 
         let referenceBodyString = configAbility.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
         currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
+
+        
 
         let referenceGlobalString = configAbility.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
         let referenceGlobalFunctionString = configAbility.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
@@ -429,7 +439,7 @@ const megaParsingFuckery = {
             "name",
             "abilityList",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Ability")
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Joint-Attack Ability")
         // let returnString = "";
 
         // console.log(parseRef)
