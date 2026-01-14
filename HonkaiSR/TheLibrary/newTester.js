@@ -117,7 +117,7 @@ const megaParsingFuckery = {
 
         if (!configAbility) {
             loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
-            console.log(loadFile)
+            // console.log(loadFile)
             configAbility = compositeAbilityObject.abilityObject[loadFile];
             // compositeAbilityObject.trimSummonName
 
@@ -165,6 +165,8 @@ const megaParsingFuckery = {
             // {leftHand: "File", keyValue: "fileName"},
             {leftHand: "Ability", keyValue: "abilityType"},
             {leftHand: "Energy", keyValue: "energy"},
+            {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
+            
             // {leftHand: "Toughness", keyValue: "toughnessList"},
         ];
         let startingString = `<div class="eventCharacterFileHeader">
@@ -187,6 +189,29 @@ const megaParsingFuckery = {
         let rowAlternating = 1;
         if (!isLightcone) {
             for (let entry of startingKeys) {
+                if (configAbility[entry.keyValue] == null) {
+
+                    // loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
+
+                    for (let findAbilityEntry of compositeAbilityObject.abilityList) {
+                        const testCurrentEntry = compositeAbilityObject.abilityObject[findAbilityEntry];
+                        if (!testCurrentEntry.childAbilityList) {continue;}
+
+                        const newSet = new Set(testCurrentEntry.childAbilityList)
+                        if (newSet.has(loadFile)) {
+                            configAbility["energy"] = testCurrentEntry["energy"];
+                            configAbility["abilityType"] = testCurrentEntry["abilityType"];
+                            configAbility["skillTrigger"] = testCurrentEntry["skillTrigger"];
+                            configAbility.toughnessList = testCurrentEntry.toughnessList;
+                            break;
+                        }
+                    }
+
+                    // childAbilityList
+
+
+                    continue;
+                }
                 // startingString += `<div class="">${configAbility[entry]}</div>`;
 
                 // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Welt_Welt_TechniqueInLevel",
+  "childAbilityList": [
+    "Welt_Welt_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

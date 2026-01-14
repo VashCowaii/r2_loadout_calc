@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Xueyi_Xueyi_TechniqueInLevel",
+  "childAbilityList": [
+    "Xueyi_Xueyi_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

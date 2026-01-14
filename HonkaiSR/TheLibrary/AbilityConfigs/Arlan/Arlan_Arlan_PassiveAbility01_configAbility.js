@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "Arlan_Arlan_PassiveAbility01",
+  "childAbilityList": [
+    "Arlan_Arlan_PassiveAbility01",
+    "Arlan_Arlan_PassiveAbility03_Insert"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

@@ -27,6 +27,10 @@ const compositeAbilityObject = {
     },
     "Sparkle_Sparkle_TechniqueInLevel": {
       "fileName": "Sparkle_Sparkle_TechniqueInLevel",
+      "childAbilityList": [
+        "Sparkle_Sparkle_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -83,6 +87,11 @@ const compositeAbilityObject = {
     },
     "Sparkle_Sparkle_PassiveAbility_1": {
       "fileName": "Sparkle_Sparkle_PassiveAbility_1",
+      "childAbilityList": [
+        "Sparkle_Sparkle_PassiveAbility_1",
+        "Sparkle_Sparkle_Eidolon6_BP"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1006,6 +1015,13 @@ const compositeAbilityObject = {
     },
     "Sparkle_Sparkle_Ability03_Part01": {
       "fileName": "Sparkle_Sparkle_Ability03_Part01",
+      "childAbilityList": [
+        "Sparkle_Sparkle_Ability03_Camera",
+        "Sparkle_Sparkle_Ability03_EnterReady",
+        "Sparkle_Sparkle_Ability03_Part01",
+        "Sparkle_Sparkle_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1383,6 +1399,14 @@ const compositeAbilityObject = {
     },
     "Sparkle_Sparkle_Ability02_Part01": {
       "fileName": "Sparkle_Sparkle_Ability02_Part01",
+      "childAbilityList": [
+        "Sparkle_Sparkle_Ability02_Part01",
+        "Sparkle_Sparkle_Ability02_Self_Camera",
+        "Sparkle_Sparkle_Ability02_Self_Part02",
+        "Sparkle_Sparkle_Ability02_Others_Camera",
+        "Sparkle_Sparkle_Ability02_Others_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1481,6 +1505,12 @@ const compositeAbilityObject = {
     },
     "Sparkle_Sparkle_Ability01_Part01": {
       "fileName": "Sparkle_Sparkle_Ability01_Part01",
+      "childAbilityList": [
+        "Sparkle_Sparkle_Ability01_Camera",
+        "Sparkle_Sparkle_Ability01_Part01",
+        "Sparkle_Sparkle_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

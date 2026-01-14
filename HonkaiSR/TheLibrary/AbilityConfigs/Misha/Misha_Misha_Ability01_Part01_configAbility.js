@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Misha_Misha_Ability01_Part01",
+  "childAbilityList": [
+    "Misha_Misha_Ability01_Camera",
+    "Misha_Misha_Ability01_Part01",
+    "Misha_Misha_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

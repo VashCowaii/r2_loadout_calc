@@ -57,6 +57,10 @@ const compositeAbilityObject = {
     },
     "Tingyun_TingYun_PassiveAbility01": {
       "fileName": "Tingyun_TingYun_PassiveAbility01",
+      "childAbilityList": [
+        "Tingyun_TingYun_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": [
@@ -244,6 +248,13 @@ const compositeAbilityObject = {
     },
     "Tingyun_TingYun_Ability03_Part01": {
       "fileName": "Tingyun_TingYun_Ability03_Part01",
+      "childAbilityList": [
+        "Tingyun_TingYun_Ability03_EnterReady",
+        "Tingyun_Tingyun_Ability03_Camera",
+        "Tingyun_TingYun_Ability03_Part01",
+        "Tingyun_TingYun_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -773,6 +784,13 @@ const compositeAbilityObject = {
     },
     "Tingyun_TingYun_Ability02_Part01": {
       "fileName": "Tingyun_TingYun_Ability02_Part01",
+      "childAbilityList": [
+        "Tingyun_Tingyun_Ability02_Camera_Self",
+        "Tingyun_TingYun_Ability02_Part01",
+        "Tingyun_TingYun_Ability02_Part02",
+        "Tingyun_Tingyun_Ability02_Camera_Others"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -913,6 +931,12 @@ const compositeAbilityObject = {
     },
     "Tingyun_TingYun_Ability01_Part01": {
       "fileName": "Tingyun_TingYun_Ability01_Part01",
+      "childAbilityList": [
+        "Tingyun_Tingyun_Ability01_Camera",
+        "Tingyun_TingYun_Ability01_Part01",
+        "Tingyun_TingYun_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

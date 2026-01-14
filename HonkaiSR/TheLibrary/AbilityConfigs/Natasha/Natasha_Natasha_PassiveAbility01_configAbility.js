@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Natasha_Natasha_PassiveAbility01",
+  "childAbilityList": [
+    "Natasha_Natasha_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

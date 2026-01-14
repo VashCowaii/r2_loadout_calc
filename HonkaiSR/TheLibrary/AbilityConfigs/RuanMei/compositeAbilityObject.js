@@ -324,6 +324,11 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_TechniqueInLevel": {
       "fileName": "RuanMei_RuanMei_TechniqueInLevel",
+      "childAbilityList": [
+        "RuanMei_RuanMei_TechniqueInLevel",
+        "RuanMei_RuanMei_TechniqueInLevel_Insert"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -460,6 +465,10 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_PassiveAbility01": {
       "fileName": "RuanMei_RuanMei_PassiveAbility01",
+      "childAbilityList": [
+        "RuanMei_RuanMei_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Basic ATK",
       "energy": null,
       "toughnessList": [
@@ -1224,6 +1233,14 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_Ability03_Part01": {
       "fileName": "RuanMei_RuanMei_Ability03_Part01",
+      "childAbilityList": [
+        "RuanMei_RuanMei_Ability03_Camera",
+        "RuanMei_RuanMei_Ability03_EnterReady",
+        "RuanMei_RuanMei_Ability03_Part01",
+        "RuanMei_RuanMei_Ability03_Part02",
+        "RuanMei_RuanMei_TriggerImprintEffect"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1575,6 +1592,12 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_Ability02_Part01": {
       "fileName": "RuanMei_RuanMei_Ability02_Part01",
+      "childAbilityList": [
+        "RuanMei_RuanMei_Ability02_Camera",
+        "RuanMei_RuanMei_Ability02_Part01",
+        "RuanMei_RuanMei_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1632,6 +1655,12 @@ const compositeAbilityObject = {
     },
     "RuanMei_RuanMei_Ability01_Part01": {
       "fileName": "RuanMei_RuanMei_Ability01_Part01",
+      "childAbilityList": [
+        "RuanMei_RuanMei_Ability01_Camera",
+        "RuanMei_RuanMei_Ability01_Part01",
+        "RuanMei_RuanMei_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

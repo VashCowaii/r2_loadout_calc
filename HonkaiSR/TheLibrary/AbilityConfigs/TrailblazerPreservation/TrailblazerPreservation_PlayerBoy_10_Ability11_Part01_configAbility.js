@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "TrailblazerPreservation_PlayerBoy_10_Ability11_Part01",
+  "childAbilityList": [
+    "TrailblazerPreservation_PlayerBoy_10_Ability11_Part01",
+    "TrailblazerPreservation_PlayerBoy_10_Ability11_Part02",
+    "TrailblazerPreservation_PlayerBoy_10_Ability11_Camera"
+  ],
+  "skillTrigger": "Skill11",
   "abilityType": "Basic ATK",
   "energy": 30,
   "toughnessList": [

@@ -290,6 +290,10 @@ const compositeAbilityObject = {
     },
     "SilverWolf_Advanced_Silwolf_TechniqueInLevel": {
       "fileName": "SilverWolf_Advanced_Silwolf_TechniqueInLevel",
+      "childAbilityList": [
+        "SilverWolf_Advanced_Silwolf_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -968,6 +972,10 @@ const compositeAbilityObject = {
     },
     "SilverWolf_Advanced_Silwolf_PassiveAbility01": {
       "fileName": "SilverWolf_Advanced_Silwolf_PassiveAbility01",
+      "childAbilityList": [
+        "SilverWolf_Advanced_Silwolf_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1568,6 +1576,13 @@ const compositeAbilityObject = {
     },
     "SilverWolf_Advanced_Silwolf_Ability03_Part01": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability03_Part01",
+      "childAbilityList": [
+        "SilverWolf_Advanced_Silwolf_Ability03_Camera",
+        "SilverWolf_Advanced_Silwolf_Ability03_EnterReady",
+        "SilverWolf_Advanced_Silwolf_Ability03_Part01",
+        "SilverWolf_Advanced_Silwolf_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -2079,6 +2094,14 @@ const compositeAbilityObject = {
     },
     "SilverWolf_Advanced_Silwolf_Ability02_Part01": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability02_Part01",
+      "childAbilityList": [
+        "SilverWolf_Advanced_Silwolf_Ability02_Camera",
+        "SilverWolf_Advanced_Silwolf_Ability02_Part01",
+        "SilverWolf_Advanced_Silwolf_Ability02_Part02",
+        "SilverWolf_Advanced_Silwolf_Ability02_Success_Camera",
+        "SilverWolf_Advanced_Silwolf_Ability02_Failed_Camera"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2193,6 +2216,13 @@ const compositeAbilityObject = {
     },
     "SilverWolf_Advanced_Silwolf_Ability01_Part01": {
       "fileName": "SilverWolf_Advanced_Silwolf_Ability01_Part01",
+      "childAbilityList": [
+        "SilverWolf_Advanced_Silwolf_Ability01_Camera",
+        "SilverWolf_Advanced_Silwolf_Ability01_Part01",
+        "SilverWolf_Advanced_Silwolf_Ability01_Part02",
+        "SilverWolf_Advanced_Silwolf_PassiveAbility_RandomBug"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

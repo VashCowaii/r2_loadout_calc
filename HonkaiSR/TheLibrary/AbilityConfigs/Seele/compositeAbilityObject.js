@@ -360,6 +360,10 @@ const compositeAbilityObject = {
     },
     "Seele_Seele_TechniqueInLevel": {
       "fileName": "Seele_Seele_TechniqueInLevel",
+      "childAbilityList": [
+        "Seele_Seele_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -453,6 +457,12 @@ const compositeAbilityObject = {
     },
     "Seele_Seele_PassiveAbility_1": {
       "fileName": "Seele_Seele_PassiveAbility_1",
+      "childAbilityList": [
+        "Seele_Seele_Bonus_Camera",
+        "Seele_Seele_PassiveAbility_1",
+        "Seele_Seele_Bonus"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1057,6 +1067,13 @@ const compositeAbilityObject = {
     },
     "Seele_Seele_Ability03_Part01": {
       "fileName": "Seele_Seele_Ability03_Part01",
+      "childAbilityList": [
+        "Seele_Seele_Ability03_Camera",
+        "Seele_Seele_Ability03_EnterReady",
+        "Seele_Seele_Ability03_Part01",
+        "Seele_Seele_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1278,6 +1295,12 @@ const compositeAbilityObject = {
     },
     "Seele_Seele_Ability02_Part01": {
       "fileName": "Seele_Seele_Ability02_Part01",
+      "childAbilityList": [
+        "Seele_Seele_Ability02_Camera",
+        "Seele_Seele_Ability02_Part01",
+        "Seele_Seele_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1519,6 +1542,12 @@ const compositeAbilityObject = {
     },
     "Seele_Seele_Ability01_Part01": {
       "fileName": "Seele_Seele_Ability01_Part01",
+      "childAbilityList": [
+        "Seele_Seele_Ability01_Camera",
+        "Seele_Seele_Ability01_Part01",
+        "Seele_Seele_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

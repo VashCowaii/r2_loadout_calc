@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Mem_Servant_PlayerBoyServant_30_BattleCry",
+  "childAbilityList": [
+    "Mem_Servant_PlayerBoyServant_30_BattleCry"
+  ],
+  "skillTrigger": "SkillP03",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

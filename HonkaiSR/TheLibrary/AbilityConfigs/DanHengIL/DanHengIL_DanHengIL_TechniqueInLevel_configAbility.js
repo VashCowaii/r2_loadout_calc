@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "DanHengIL_DanHengIL_TechniqueInLevel",
+  "childAbilityList": [
+    "DanHengIL_DanHengIL_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

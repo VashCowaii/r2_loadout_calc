@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Tribbie_Tribbie_Ability02_Part01",
+  "childAbilityList": [
+    "Tribbie_Tribbie_Ability02_Camera",
+    "Tribbie_Tribbie_Ability02_Part01",
+    "Tribbie_Tribbie_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

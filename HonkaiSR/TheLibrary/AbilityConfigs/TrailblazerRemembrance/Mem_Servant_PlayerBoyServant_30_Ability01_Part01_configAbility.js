@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
+  "childAbilityList": [
+    "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
+    "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
+    "Mem_Servant_PlayerBoyServant_30_Ability01_Camera",
+    "Mem_Servant_PlayerBoyServant_30_Ability01_Camera_Charm"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Memosprite",
   "energy": 20,
   "toughnessList": [

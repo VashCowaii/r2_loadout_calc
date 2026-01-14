@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Gallagher_Gallagher_Ability01_Part01",
+  "childAbilityList": [
+    "Gallagher_Gallagher_Ability01_Camera",
+    "Gallagher_Gallagher_Ability01_Part01",
+    "Gallagher_Gallagher_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

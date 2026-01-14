@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Cerydra_Cerydra_Ability03_Part01",
+  "childAbilityList": [
+    "Cerydra_Cerydra_Ability03_Camera",
+    "Cerydra_Cerydra_Ability03_EnterReady",
+    "Cerydra_Cerydra_Ability03_Part01",
+    "Cerydra_Cerydra_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

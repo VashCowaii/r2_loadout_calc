@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Anaxa_Anaxa_Ability01_Part01",
+  "childAbilityList": [
+    "Anaxa_Anaxa_Ability01_Camera",
+    "Anaxa_Anaxa_Ability01_Part01",
+    "Anaxa_Anaxa_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

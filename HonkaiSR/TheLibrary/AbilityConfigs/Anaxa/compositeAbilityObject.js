@@ -722,6 +722,10 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_TechniqueInLevel": {
       "fileName": "Anaxa_Anaxa_TechniqueInLevel",
+      "childAbilityList": [
+        "Anaxa_Anaxa_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -973,6 +977,10 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_PassiveAbility01": {
       "fileName": "Anaxa_Anaxa_PassiveAbility01",
+      "childAbilityList": [
+        "Anaxa_Anaxa_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1525,6 +1533,13 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_Ability03_Part01": {
       "fileName": "Anaxa_Anaxa_Ability03_Part01",
+      "childAbilityList": [
+        "Anaxa_Anaxa_Ability03_Camera",
+        "Anaxa_Anaxa_Ability03_EnterReady",
+        "Anaxa_Anaxa_Ability03_Part01",
+        "Anaxa_Anaxa_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1913,6 +1928,12 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_Ability02_Part01": {
       "fileName": "Anaxa_Anaxa_Ability02_Part01",
+      "childAbilityList": [
+        "Anaxa_Anaxa_Ability02_Camera",
+        "Anaxa_Anaxa_Ability02_Part01",
+        "Anaxa_Anaxa_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 6,
       "toughnessList": [
@@ -1992,6 +2013,12 @@ const compositeAbilityObject = {
     },
     "Anaxa_Anaxa_Ability01_Part01": {
       "fileName": "Anaxa_Anaxa_Ability01_Part01",
+      "childAbilityList": [
+        "Anaxa_Anaxa_Ability01_Camera",
+        "Anaxa_Anaxa_Ability01_Part01",
+        "Anaxa_Anaxa_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

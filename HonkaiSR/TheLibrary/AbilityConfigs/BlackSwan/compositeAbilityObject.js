@@ -2575,6 +2575,11 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_TechniqueInLevel": {
       "fileName": "BlackSwan_BlackSwan_TechniqueInLevel",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_TechniqueInLevel",
+        "BlackSwan_BlackSwan_TechniqueInLevel_Insert"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -2648,6 +2653,10 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_PassiveAbility01": {
       "fileName": "BlackSwan_BlackSwan_PassiveAbility01",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -3272,6 +3281,13 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_Ability03_Part01": {
       "fileName": "BlackSwan_BlackSwan_Ability03_Part01",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_Ability03_Camera",
+        "BlackSwan_BlackSwan_Ability03_Part01",
+        "BlackSwan_BlackSwan_Ability03_Part02",
+        "BlackSwan_BlackSwan_Ability03_Cutin"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -3854,6 +3870,12 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_Ability02_Part01": {
       "fileName": "BlackSwan_BlackSwan_Ability02_Part01",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_Ability02_Camera",
+        "BlackSwan_BlackSwan_Ability02_Part01",
+        "BlackSwan_BlackSwan_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -4166,6 +4188,12 @@ const compositeAbilityObject = {
     },
     "BlackSwan_BlackSwan_Ability01_Part01": {
       "fileName": "BlackSwan_BlackSwan_Ability01_Part01",
+      "childAbilityList": [
+        "BlackSwan_BlackSwan_Ability01_Camera",
+        "BlackSwan_BlackSwan_Ability01_Part01",
+        "BlackSwan_BlackSwan_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

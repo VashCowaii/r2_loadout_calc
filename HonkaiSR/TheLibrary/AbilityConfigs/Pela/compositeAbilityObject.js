@@ -164,6 +164,10 @@ const compositeAbilityObject = {
     },
     "Pela_Pela_TechniqueInLevel": {
       "fileName": "Pela_Pela_TechniqueInLevel",
+      "childAbilityList": [
+        "Pela_Pela_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -276,6 +280,10 @@ const compositeAbilityObject = {
     },
     "Pela_Pela_PassiveAbility01": {
       "fileName": "Pela_Pela_PassiveAbility01",
+      "childAbilityList": [
+        "Pela_Pela_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -672,6 +680,13 @@ const compositeAbilityObject = {
     },
     "Pela_Pela_Ability03_Part01": {
       "fileName": "Pela_Pela_Ability03_Part01",
+      "childAbilityList": [
+        "Pela_Pela_Ability03_Camera",
+        "Pela_Pela_Ability03_Part01",
+        "Pela_Pela_Ability03_Part02",
+        "Pela_Pela_Ability03_Cutin"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -875,6 +890,12 @@ const compositeAbilityObject = {
     },
     "Pela_Pela_Ability02_Part01": {
       "fileName": "Pela_Pela_Ability02_Part01",
+      "childAbilityList": [
+        "Pela_Pela_Ability02_Camera",
+        "Pela_Pela_Ability02_Part01",
+        "Pela_Pela_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -969,6 +990,12 @@ const compositeAbilityObject = {
     },
     "Pela_Pela_Ability01_Part01": {
       "fileName": "Pela_Pela_Ability01_Part01",
+      "childAbilityList": [
+        "Pela_Pela_Ability01_Camera",
+        "Pela_Pela_Ability01_Part01",
+        "Pela_Pela_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

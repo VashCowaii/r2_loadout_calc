@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Moze_Moze_TechniqueInLevel",
+  "childAbilityList": [
+    "Moze_Moze_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

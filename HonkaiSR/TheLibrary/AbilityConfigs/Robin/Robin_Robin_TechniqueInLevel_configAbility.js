@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Robin_Robin_TechniqueInLevel",
+  "childAbilityList": [
+    "Robin_Robin_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

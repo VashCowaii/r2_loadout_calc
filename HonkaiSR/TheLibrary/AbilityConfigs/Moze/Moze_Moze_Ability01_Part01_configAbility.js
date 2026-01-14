@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Moze_Moze_Ability01_Part01",
+  "childAbilityList": [
+    "Moze_Moze_Ability01_Camera",
+    "Moze_Moze_Ability01_Part01",
+    "Moze_Moze_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

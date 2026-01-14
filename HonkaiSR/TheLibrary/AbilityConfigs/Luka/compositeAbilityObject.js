@@ -18,6 +18,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Luka_Luka_TechniqueInLevel": {
       "fileName": "Luka_Luka_TechniqueInLevel",
+      "childAbilityList": [
+        "Luka_Luka_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -146,6 +150,10 @@ const compositeAbilityObject = {
     },
     "Luka_Luka_PassiveAbility01": {
       "fileName": "Luka_Luka_PassiveAbility01",
+      "childAbilityList": [
+        "Luka_Luka_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -405,6 +413,13 @@ const compositeAbilityObject = {
     },
     "Luka_Luka_Ability03_Part01": {
       "fileName": "Luka_Luka_Ability03_Part01",
+      "childAbilityList": [
+        "Luka_Luka_Ability03_Part01",
+        "Luka_Luka_Ability03_Part02",
+        "Luka_Luka_Ability03_Camera",
+        "Luka_Luka_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -596,6 +611,12 @@ const compositeAbilityObject = {
     },
     "Luka_Luka_Ability02_Part01": {
       "fileName": "Luka_Luka_Ability02_Part01",
+      "childAbilityList": [
+        "Luka_Luka_Ability02_Part01",
+        "Luka_Luka_Ability02_Part02",
+        "Luka_Luka_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1214,6 +1235,15 @@ const compositeAbilityObject = {
     },
     "Luka_Luka_Ability11_Part01": {
       "fileName": "Luka_Luka_Ability11_Part01",
+      "childAbilityList": [
+        "Luka_Luka_Ability11_Part01",
+        "Luka_Luka_Ability11_Part02",
+        "Luka_Luka_Ability11_End_Camera",
+        "Luka_Luka_Ability11_Camera",
+        "Luka_Luka_Ability11_Loop_Camera",
+        "Luka_Luka_Ability11_Loop2_Camera"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -1352,6 +1382,12 @@ const compositeAbilityObject = {
     },
     "Luka_Luka_Ability01_Part01": {
       "fileName": "Luka_Luka_Ability01_Part01",
+      "childAbilityList": [
+        "Luka_Luka_Ability01_Part01",
+        "Luka_Luka_Ability01_Part02",
+        "Luka_Luka_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

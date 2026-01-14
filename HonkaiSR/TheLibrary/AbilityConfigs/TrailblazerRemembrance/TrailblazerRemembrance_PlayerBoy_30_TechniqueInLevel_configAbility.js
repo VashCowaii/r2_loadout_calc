@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel",
+  "childAbilityList": [
+    "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

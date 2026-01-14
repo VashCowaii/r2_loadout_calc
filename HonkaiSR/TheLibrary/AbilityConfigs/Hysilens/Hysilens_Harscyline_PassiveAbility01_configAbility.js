@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Hysilens_Harscyline_PassiveAbility01",
+  "childAbilityList": [
+    "Hysilens_Harscyline_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

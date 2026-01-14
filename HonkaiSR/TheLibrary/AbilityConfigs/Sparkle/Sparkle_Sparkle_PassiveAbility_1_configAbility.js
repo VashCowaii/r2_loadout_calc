@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "Sparkle_Sparkle_PassiveAbility_1",
+  "childAbilityList": [
+    "Sparkle_Sparkle_PassiveAbility_1",
+    "Sparkle_Sparkle_Eidolon6_BP"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

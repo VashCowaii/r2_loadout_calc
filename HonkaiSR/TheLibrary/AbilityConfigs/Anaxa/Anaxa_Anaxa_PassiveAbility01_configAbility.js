@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Anaxa_Anaxa_PassiveAbility01",
+  "childAbilityList": [
+    "Anaxa_Anaxa_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

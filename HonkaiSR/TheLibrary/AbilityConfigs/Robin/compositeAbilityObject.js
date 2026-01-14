@@ -19,6 +19,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Robin_Robin_TechniqueInLevel": {
       "fileName": "Robin_Robin_TechniqueInLevel",
+      "childAbilityList": [
+        "Robin_Robin_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -65,6 +69,10 @@ const compositeAbilityObject = {
     },
     "Robin_Robin_PassiveAbility01": {
       "fileName": "Robin_Robin_PassiveAbility01",
+      "childAbilityList": [
+        "Robin_Robin_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -174,6 +182,13 @@ const compositeAbilityObject = {
     },
     "Robin_Robin_Ability03_Part01": {
       "fileName": "Robin_Robin_Ability03_Part01",
+      "childAbilityList": [
+        "Robin_Robin_Ability03_Camera",
+        "Robin_Robin_Ability03_EnterReady",
+        "Robin_Robin_Ability03_Part01",
+        "Robin_Robin_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -300,6 +315,13 @@ const compositeAbilityObject = {
     },
     "Robin_Robin_Ability02_Part01": {
       "fileName": "Robin_Robin_Ability02_Part01",
+      "childAbilityList": [
+        "Robin_Robin_Ability02_Camera",
+        "Robin_Robin_Ability02_Part01",
+        "Robin_Robin_Ability02_Part02",
+        "Robin_Robin_Ability02_FriendAttack"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -416,6 +438,12 @@ const compositeAbilityObject = {
     },
     "Robin_Robin_Ability01_Part01": {
       "fileName": "Robin_Robin_Ability01_Part01",
+      "childAbilityList": [
+        "Robin_Robin_Ability01_Camera",
+        "Robin_Robin_Ability01_Part01",
+        "Robin_Robin_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

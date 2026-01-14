@@ -67,6 +67,10 @@ const compositeAbilityObject = {
     },
     "Serval_Serval_TechniqueInLevel": {
       "fileName": "Serval_Serval_TechniqueInLevel",
+      "childAbilityList": [
+        "Serval_Serval_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -293,6 +297,10 @@ const compositeAbilityObject = {
     },
     "Serval_Serval_PassiveAbility01": {
       "fileName": "Serval_Serval_PassiveAbility01",
+      "childAbilityList": [
+        "Serval_Serval_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -502,6 +510,13 @@ const compositeAbilityObject = {
     },
     "Serval_Serval_Ability03_Part01": {
       "fileName": "Serval_Serval_Ability03_Part01",
+      "childAbilityList": [
+        "Serval_Serval_Ability03_Camera",
+        "Serval_Serval_Ability03_EnterReady",
+        "Serval_Serval_Ability03_Part01",
+        "Serval_Serval_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -653,6 +668,12 @@ const compositeAbilityObject = {
     },
     "Serval_Serval_Ability02_Part01": {
       "fileName": "Serval_Serval_Ability02_Part01",
+      "childAbilityList": [
+        "Serval_Serval_Ability02_Camera",
+        "Serval_Serval_Ability02_Part01",
+        "Serval_Serval_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -759,6 +780,12 @@ const compositeAbilityObject = {
     },
     "Serval_Serval_Ability01_Part01": {
       "fileName": "Serval_Serval_Ability01_Part01",
+      "childAbilityList": [
+        "Serval_Serval_Ability01_Camera",
+        "Serval_Serval_Ability01_Part01",
+        "Serval_Serval_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

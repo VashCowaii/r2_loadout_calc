@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Herta_Herta_TechniqueInLevel",
+  "childAbilityList": [
+    "Herta_Herta_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

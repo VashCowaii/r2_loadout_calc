@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Kafka_Advanced_Kafka_PassiveAbility01",
+  "childAbilityList": [
+    "Kafka_Advanced_Kafka_PassiveAbility01",
+    "Kafka_Advanced_Kafka_PassiveAtk_Ability",
+    "Kafka_Kafka_Passive1Atk_Ability_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 10,
   "toughnessList": [

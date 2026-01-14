@@ -459,6 +459,10 @@ const compositeAbilityObject = {
     },
     "JingYuan_JingYuan_TechniqueInLevel": {
       "fileName": "JingYuan_JingYuan_TechniqueInLevel",
+      "childAbilityList": [
+        "JingYuan_JingYuan_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -643,6 +647,13 @@ const compositeAbilityObject = {
     },
     "JingYuan_JingYuan_PassiveAbility01": {
       "fileName": "JingYuan_JingYuan_PassiveAbility01",
+      "childAbilityList": [
+        "JingYuan_JingYuan_PassiveAbility01",
+        "JingYuan_JingYuan_Passive_Insert",
+        "JingYuan_JingYuan_Passive_Insert_Camera",
+        "JingYuan_JingYuan_Passive_Insert_Ability"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1280,6 +1291,13 @@ const compositeAbilityObject = {
     },
     "JingYuan_JingYuan_Ability03_Part01": {
       "fileName": "JingYuan_JingYuan_Ability03_Part01",
+      "childAbilityList": [
+        "JingYuan_JingYuan_Ability03_Camera",
+        "JingYuan_JingYuan_Ability03_EnterReady",
+        "JingYuan_JingYuan_Ability03_Part01",
+        "JingYuan_JingYuan_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1716,6 +1734,12 @@ const compositeAbilityObject = {
     },
     "JingYuan_JingYuan_Ability02_Part01": {
       "fileName": "JingYuan_JingYuan_Ability02_Part01",
+      "childAbilityList": [
+        "JingYuan_JingYuan_Ability02_Camera",
+        "JingYuan_JingYuan_Ability02_Part01",
+        "JingYuan_JingYuan_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1802,6 +1826,12 @@ const compositeAbilityObject = {
     },
     "JingYuan_JingYuan_Ability01_Part01": {
       "fileName": "JingYuan_JingYuan_Ability01_Part01",
+      "childAbilityList": [
+        "JingYuan_JingYuan_Ability01_Camera",
+        "JingYuan_JingYuan_Ability01_Part01",
+        "JingYuan_JingYuan_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Bailu_Bailu_TechniqueInLevel",
+  "childAbilityList": [
+    "Bailu_Bailu_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

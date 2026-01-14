@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Tingyun_TingYun_PassiveAbility01",
+  "childAbilityList": [
+    "Tingyun_TingYun_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Basic ATK",
   "energy": null,
   "toughnessList": [

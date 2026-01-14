@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Argenti_Argenti_PassiveAbility01",
+  "childAbilityList": [
+    "Argenti_Argenti_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

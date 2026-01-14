@@ -71,6 +71,10 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_TechniqueInLevel": {
       "fileName": "Herta_Herta_TechniqueInLevel",
+      "childAbilityList": [
+        "Herta_Herta_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -499,6 +503,12 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_PassiveAbility01": {
       "fileName": "Herta_Herta_PassiveAbility01",
+      "childAbilityList": [
+        "Herta_Herta_PassiveAbility01",
+        "Herta_Herta_Passive1Atk_Ability_Camera",
+        "Herta_Herta_PassiveAtkReady_Ability"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 5,
       "toughnessList": [
@@ -934,6 +944,13 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_Ability03_Part01": {
       "fileName": "Herta_Herta_Ability03_Part01",
+      "childAbilityList": [
+        "Herta_Herta_Ability03_Camera",
+        "Herta_Herta_Ability03_Part01",
+        "Herta_Herta_Ability03_Part02",
+        "Herta_Herta_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1108,6 +1125,12 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_Ability02_Part01": {
       "fileName": "Herta_Herta_Ability02_Part01",
+      "childAbilityList": [
+        "Herta_Herta_Ability02_Camera",
+        "Herta_Herta_Ability02_Part01",
+        "Herta_Herta_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1302,6 +1325,12 @@ const compositeAbilityObject = {
     },
     "Herta_Herta_Ability01_Part01": {
       "fileName": "Herta_Herta_Ability01_Part01",
+      "childAbilityList": [
+        "Herta_Herta_Ability01_Camera",
+        "Herta_Herta_Ability01_Part01",
+        "Herta_Herta_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

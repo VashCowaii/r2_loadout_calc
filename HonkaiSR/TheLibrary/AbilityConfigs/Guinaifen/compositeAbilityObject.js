@@ -46,6 +46,10 @@ const compositeAbilityObject = {
     },
     "Guinaifen_Guinaifen_TechniqueInLevel": {
       "fileName": "Guinaifen_Guinaifen_TechniqueInLevel",
+      "childAbilityList": [
+        "Guinaifen_Guinaifen_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -273,6 +277,10 @@ const compositeAbilityObject = {
     },
     "Guinaifen_Guinaifen_PassiveAbility01": {
       "fileName": "Guinaifen_Guinaifen_PassiveAbility01",
+      "childAbilityList": [
+        "Guinaifen_Guinaifen_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -377,6 +385,13 @@ const compositeAbilityObject = {
     },
     "Guinaifen_Guinaifen_Ability03_Part01": {
       "fileName": "Guinaifen_Guinaifen_Ability03_Part01",
+      "childAbilityList": [
+        "Guinaifen_Guinaifen_Ability03_Camera",
+        "Guinaifen_Guinaifen_Ability03_EnterReady",
+        "Guinaifen_Guinaifen_Ability03_Part01",
+        "Guinaifen_Guinaifen_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -606,6 +621,12 @@ const compositeAbilityObject = {
     },
     "Guinaifen_Guinaifen_Ability02_Part01": {
       "fileName": "Guinaifen_Guinaifen_Ability02_Part01",
+      "childAbilityList": [
+        "Guinaifen_Guinaifen_Ability02_Camera",
+        "Guinaifen_Guinaifen_Ability02_Part01",
+        "Guinaifen_Guinaifen_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -663,6 +684,12 @@ const compositeAbilityObject = {
     },
     "Guinaifen_Guinaifen_Ability01_Part01": {
       "fileName": "Guinaifen_Guinaifen_Ability01_Part01",
+      "childAbilityList": [
+        "Guinaifen_Guinaifen_Ability01_Camera",
+        "Guinaifen_Guinaifen_Ability01_Part01",
+        "Guinaifen_Guinaifen_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

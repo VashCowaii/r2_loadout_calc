@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Saber_Saber_PassiveAbility01",
+  "childAbilityList": [
+    "Saber_Activity_FateStory_Saber_Insert_Camera",
+    "Saber_Activity_FateStory_Saber_Insert_Part01",
+    "Saber_Activity_FateStory_Saber_Insert_Part02",
+    "Saber_Saber_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 10,
   "toughnessList": [

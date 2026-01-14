@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Moze_Moze_Ability03_Part01",
+  "childAbilityList": [
+    "Moze_Moze_Ability03_Camera",
+    "Moze_Moze_Ability03_EnterReady",
+    "Moze_Moze_Ability03_Part01",
+    "Moze_Moze_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Xueyi_Xueyi_Ability02_Part01",
+  "childAbilityList": [
+    "Xueyi_Xueyi_Ability02_Camera",
+    "Xueyi_Xueyi_Ability02_Part01",
+    "Xueyi_Xueyi_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Pela_Pela_TechniqueInLevel",
+  "childAbilityList": [
+    "Pela_Pela_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

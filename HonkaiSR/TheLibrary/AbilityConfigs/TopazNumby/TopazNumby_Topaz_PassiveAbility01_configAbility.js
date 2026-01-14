@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "TopazNumby_Topaz_PassiveAbility01",
+  "childAbilityList": [
+    "TopazNumby_Topaz_PassiveAbility01",
+    "TopazNumby_Topaz_Eidolon4_ReduceDelay",
+    "TopazNumby_Topaz_BE_NormalAttackDamage",
+    "TopazNumby_Topaz_BE_UltraAttackDamage"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

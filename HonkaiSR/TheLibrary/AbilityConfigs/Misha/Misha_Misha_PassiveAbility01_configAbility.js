@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Misha_Misha_PassiveAbility01",
+  "childAbilityList": [
+    "Misha_Misha_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

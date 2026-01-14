@@ -90,6 +90,10 @@ const compositeAbilityObject = {
     },
     "Welt_Welt_TechniqueInLevel": {
       "fileName": "Welt_Welt_TechniqueInLevel",
+      "childAbilityList": [
+        "Welt_Welt_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -169,6 +173,10 @@ const compositeAbilityObject = {
     },
     "Welt_Welt_PassiveAbility01": {
       "fileName": "Welt_Welt_PassiveAbility01",
+      "childAbilityList": [
+        "Welt_Welt_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -521,6 +529,13 @@ const compositeAbilityObject = {
     },
     "Welt_Welt_Ability03_Part01": {
       "fileName": "Welt_Welt_Ability03_Part01",
+      "childAbilityList": [
+        "Welt_Welt_Ability03_Camera",
+        "Welt_Welt_Ability03_EnterReady",
+        "Welt_Welt_Ability03_Part01",
+        "Welt_Welt_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -748,6 +763,12 @@ const compositeAbilityObject = {
     },
     "Welt_Welt_Ability02_Part01": {
       "fileName": "Welt_Welt_Ability02_Part01",
+      "childAbilityList": [
+        "Welt_Welt_Ability02_Camera",
+        "Welt_Welt_Ability02_Part01",
+        "Welt_Welt_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 10,
       "toughnessList": [
@@ -840,6 +861,12 @@ const compositeAbilityObject = {
     },
     "Welt_Welt_Ability01_Part01": {
       "fileName": "Welt_Welt_Ability01_Part01",
+      "childAbilityList": [
+        "Welt_Welt_Ability01_Camera",
+        "Welt_Welt_Ability01_Part01",
+        "Welt_Welt_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

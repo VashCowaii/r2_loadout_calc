@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Lynx_Lynx_Ability01_Part01",
+  "childAbilityList": [
+    "Lynx_Lynx_Ability01_Part01",
+    "Lynx_Lynx_Ability01_Part02",
+    "Lynx_Lynx_Ability01_Camera"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

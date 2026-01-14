@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Seele_Seele_Ability02_Part01",
+  "childAbilityList": [
+    "Seele_Seele_Ability02_Camera",
+    "Seele_Seele_Ability02_Part01",
+    "Seele_Seele_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

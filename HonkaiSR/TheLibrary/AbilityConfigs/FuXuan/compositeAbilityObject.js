@@ -59,6 +59,10 @@ const compositeAbilityObject = {
     },
     "FuXuan_FuXuan_TechniqueInLevel": {
       "fileName": "FuXuan_FuXuan_TechniqueInLevel",
+      "childAbilityList": [
+        "FuXuan_FuXuan_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -280,6 +284,12 @@ const compositeAbilityObject = {
     },
     "FuXuan_FuXuan_PassiveAbility01": {
       "fileName": "FuXuan_FuXuan_PassiveAbility01",
+      "childAbilityList": [
+        "FuXuan_FuXuan_PassiveAbility01",
+        "FuXuan_FuXuan_Passive_Ability",
+        "FuXuan_FuXuan_PassiveAbility01_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -698,6 +708,13 @@ const compositeAbilityObject = {
     },
     "FuXuan_FuXuan_Ability03_Part01": {
       "fileName": "FuXuan_FuXuan_Ability03_Part01",
+      "childAbilityList": [
+        "FuXuan_FuXuan_Ability03_Part01",
+        "FuXuan_FuXuan_Ability03_Part02",
+        "FuXuan_FuXuan_Ability03_Camera",
+        "FuXuan_FuXuan_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -857,6 +874,12 @@ const compositeAbilityObject = {
     },
     "FuXuan_FuXuan_Ability02_Part01": {
       "fileName": "FuXuan_FuXuan_Ability02_Part01",
+      "childAbilityList": [
+        "FuXuan_FuXuan_Ability02_Part01",
+        "FuXuan_FuXuan_Ability02_Part02",
+        "FuXuan_FuXuan_Ability02_Camera"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -919,6 +942,12 @@ const compositeAbilityObject = {
     },
     "FuXuan_FuXuan_Ability01_Part01": {
       "fileName": "FuXuan_FuXuan_Ability01_Part01",
+      "childAbilityList": [
+        "FuXuan_FuXuan_Ability01_Part01",
+        "FuXuan_FuXuan_Ability01_Part02",
+        "FuXuan_FuXuan_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

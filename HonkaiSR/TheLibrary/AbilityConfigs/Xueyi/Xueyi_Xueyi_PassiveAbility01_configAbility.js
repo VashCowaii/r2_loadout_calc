@@ -1,5 +1,13 @@
 const configAbility = {
   "fileName": "Xueyi_Xueyi_PassiveAbility01",
+  "childAbilityList": [
+    "Xueyi_Xueyi_PassiveAbility01",
+    "Xueyi_Xueyi_PassiveAtk_Insert01",
+    "Xueyi_Xueyi_PassiveAtk_Insert02",
+    "Xueyi_Xueyi_Passive1Atk_Ability_Camera",
+    "Xueyi_Xueyi_Passive1Atk_Ability_Camera_01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 2,
   "toughnessList": [

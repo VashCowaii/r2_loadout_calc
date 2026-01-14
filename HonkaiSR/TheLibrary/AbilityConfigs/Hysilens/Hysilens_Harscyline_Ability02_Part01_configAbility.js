@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Hysilens_Harscyline_Ability02_Part01",
+  "childAbilityList": [
+    "Hysilens_Harscyline_Ability02_Camera",
+    "Hysilens_Harscyline_Ability02_Part01",
+    "Hysilens_Harscyline_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

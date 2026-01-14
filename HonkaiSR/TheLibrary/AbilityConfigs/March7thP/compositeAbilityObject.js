@@ -155,6 +155,10 @@ const compositeAbilityObject = {
     },
     "March7thP_Mar_7th_TechniqueInLevel": {
       "fileName": "March7thP_Mar_7th_TechniqueInLevel",
+      "childAbilityList": [
+        "March7thP_Mar_7th_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -487,6 +491,12 @@ const compositeAbilityObject = {
     },
     "March7thP_Mar_7th_PassiveAbility01": {
       "fileName": "March7thP_Mar_7th_PassiveAbility01",
+      "childAbilityList": [
+        "March7thP_Mar_7th_PassiveAbility01",
+        "March7thP_Mar_7th_PassiveAbility01_InsertAbility",
+        "March7thP_Mar_7th_PassiveAbility01_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 10,
       "toughnessList": [
@@ -1511,6 +1521,13 @@ const compositeAbilityObject = {
     },
     "March7thP_Mar_7th_Ability03_Part01": {
       "fileName": "March7thP_Mar_7th_Ability03_Part01",
+      "childAbilityList": [
+        "March7thP_Mar_7th_Ability03_Part01",
+        "March7thP_Mar_7th_Ability03_Part02",
+        "March7thP_Mar_7th_Ability03_Camera",
+        "March7thP_Mar_7th_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1783,6 +1800,13 @@ const compositeAbilityObject = {
     },
     "March7thP_Mar_7th_Ability02_Part01": {
       "fileName": "March7thP_Mar_7th_Ability02_Part01",
+      "childAbilityList": [
+        "March7thP_Mar_7th_Ability02_Part01",
+        "March7thP_Mar_7th_Ability02_Part02",
+        "March7thP_Mar_7th_Ability02_Camera_Self",
+        "March7thP_Mar_7th_Ability02_Camera_Other"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1857,6 +1881,12 @@ const compositeAbilityObject = {
     },
     "March7thP_Mar_7th_Ability01_Part01": {
       "fileName": "March7thP_Mar_7th_Ability01_Part01",
+      "childAbilityList": [
+        "March7thP_Mar_7th_Ability01_Part01",
+        "March7thP_Mar_7th_Ability01_Part02",
+        "March7thP_Mar_7th_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

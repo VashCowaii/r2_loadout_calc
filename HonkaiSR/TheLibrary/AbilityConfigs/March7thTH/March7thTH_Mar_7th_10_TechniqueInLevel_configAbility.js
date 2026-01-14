@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "March7thTH_Mar_7th_10_TechniqueInLevel",
+  "childAbilityList": [
+    "March7thTH_Mar_7th_10_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

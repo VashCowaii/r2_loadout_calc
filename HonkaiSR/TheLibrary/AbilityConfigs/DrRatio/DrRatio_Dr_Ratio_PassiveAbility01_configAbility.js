@@ -1,5 +1,13 @@
 const configAbility = {
   "fileName": "DrRatio_Dr_Ratio_PassiveAbility01",
+  "childAbilityList": [
+    "DrRatio_Dr_Ratio_PassiveAbility01",
+    "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part01",
+    "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Part02",
+    "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Camera",
+    "DrRatio_Dr_Ratio_PassiveAbility01_Insert_Camera01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 5,
   "toughnessList": [

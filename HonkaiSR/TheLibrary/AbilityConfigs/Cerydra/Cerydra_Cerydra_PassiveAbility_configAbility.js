@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Cerydra_Cerydra_PassiveAbility",
+  "childAbilityList": [
+    "Cerydra_Cerydra_PassiveAbility"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

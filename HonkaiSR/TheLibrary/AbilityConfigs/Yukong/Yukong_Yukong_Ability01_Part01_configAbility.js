@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Yukong_Yukong_Ability01_Part01",
+  "childAbilityList": [
+    "Yukong_Yukong_Ability01_Camera",
+    "Yukong_Yukong_Ability01_Camera_V2",
+    "Yukong_Yukong_Ability01_Part01",
+    "Yukong_Yukong_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

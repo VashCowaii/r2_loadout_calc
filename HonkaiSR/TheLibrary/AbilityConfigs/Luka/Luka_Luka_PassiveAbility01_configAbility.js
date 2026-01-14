@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Luka_Luka_PassiveAbility01",
+  "childAbilityList": [
+    "Luka_Luka_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

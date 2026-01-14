@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Yanqing_Yanqing_PassiveAbility01",
+  "childAbilityList": [
+    "Yanqing_Yanqing_PassiveAbility01_InsertAbility_Camera",
+    "Yanqing_Yanqing_PassiveAbility01",
+    "Yanqing_Yanqing_PassiveAbility01_InsertAbility",
+    "Yanqing_Yanqing_PassiveAbility01_InsertAbilityPhase02"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 10,
   "toughnessList": [

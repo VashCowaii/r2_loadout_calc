@@ -113,6 +113,10 @@ const compositeAbilityObject = {
     },
     "Hook_Hook_TechniqueInLevel": {
       "fileName": "Hook_Hook_TechniqueInLevel",
+      "childAbilityList": [
+        "Hook_Hook_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -351,6 +355,11 @@ const compositeAbilityObject = {
     },
     "Hook_Hook_PassiveAbility01": {
       "fileName": "Hook_Hook_PassiveAbility01",
+      "childAbilityList": [
+        "Hook_Hook_PassiveAbility01",
+        "Hook_Hook_PassiveAbility01_2"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -594,6 +603,13 @@ const compositeAbilityObject = {
     },
     "Hook_Hook_Ability03_Part01": {
       "fileName": "Hook_Hook_Ability03_Part01",
+      "childAbilityList": [
+        "Hook_Hook_Ability03_Camera",
+        "Hook_Hook_Ability03_EnterReady",
+        "Hook_Hook_Ability03_Part01",
+        "Hook_Hook_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -889,6 +905,12 @@ const compositeAbilityObject = {
     },
     "Hook_Hook_Ability21_Part01": {
       "fileName": "Hook_Hook_Ability21_Part01",
+      "childAbilityList": [
+        "Hook_Hook_Ability21_Camera",
+        "Hook_Hook_Ability21_Part01",
+        "Hook_Hook_Ability21_Part02"
+      ],
+      "skillTrigger": "Skill21",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1026,6 +1048,12 @@ const compositeAbilityObject = {
     },
     "Hook_Hook_Ability02_Part01": {
       "fileName": "Hook_Hook_Ability02_Part01",
+      "childAbilityList": [
+        "Hook_Hook_Ability02_Camera",
+        "Hook_Hook_Ability02_Part01",
+        "Hook_Hook_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1102,6 +1130,12 @@ const compositeAbilityObject = {
     },
     "Hook_Hook_Ability01_Part01": {
       "fileName": "Hook_Hook_Ability01_Part01",
+      "childAbilityList": [
+        "Hook_Hook_Ability01_Camera",
+        "Hook_Hook_Ability01_Part01",
+        "Hook_Hook_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

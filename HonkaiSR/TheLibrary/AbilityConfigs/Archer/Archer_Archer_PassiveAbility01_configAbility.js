@@ -1,5 +1,14 @@
 const configAbility = {
   "fileName": "Archer_Archer_PassiveAbility01",
+  "childAbilityList": [
+    "Archer_Archer_PassiveAbility01",
+    "Archer_Archer_Insert_Part01",
+    "Archer_Archer_Insert_Part02",
+    "Archer_Archer_Insert_Camera",
+    "Archer_Archer_Bonus",
+    "Archer_Archer_Bonus_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": 5,
   "toughnessList": [

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Robin_Robin_PassiveAbility01",
+  "childAbilityList": [
+    "Robin_Robin_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

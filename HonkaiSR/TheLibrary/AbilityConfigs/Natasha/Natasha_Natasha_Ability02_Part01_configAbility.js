@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Natasha_Natasha_Ability02_Part01",
+  "childAbilityList": [
+    "Natasha_Natasha_Ability02_Camera_Self",
+    "Natasha_Natasha_Ability02_Camera_Other",
+    "Natasha_Natasha_Ability02_Part01",
+    "Natasha_Natasha_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

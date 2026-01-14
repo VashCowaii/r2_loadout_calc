@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Anaxa_Anaxa_Ability03_Part01",
+  "childAbilityList": [
+    "Anaxa_Anaxa_Ability03_Camera",
+    "Anaxa_Anaxa_Ability03_EnterReady",
+    "Anaxa_Anaxa_Ability03_Part01",
+    "Anaxa_Anaxa_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

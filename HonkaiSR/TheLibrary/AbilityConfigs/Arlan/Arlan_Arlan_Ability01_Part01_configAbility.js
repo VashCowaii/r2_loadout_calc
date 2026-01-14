@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Arlan_Arlan_Ability01_Part01",
+  "childAbilityList": [
+    "Arlan_Arlan_Ability01_Camera",
+    "Arlan_Arlan_Ability01_Part01",
+    "Arlan_Arlan_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

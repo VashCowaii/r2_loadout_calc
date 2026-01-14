@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Misha_Misha_TechniqueInLevel",
+  "childAbilityList": [
+    "Misha_Misha_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

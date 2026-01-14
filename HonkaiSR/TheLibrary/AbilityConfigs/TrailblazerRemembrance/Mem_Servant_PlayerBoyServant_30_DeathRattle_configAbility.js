@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Mem_Servant_PlayerBoyServant_30_DeathRattle",
+  "childAbilityList": [
+    "Mem_Servant_PlayerBoyServant_30_DeathRattle"
+  ],
+  "skillTrigger": "SkillP04",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

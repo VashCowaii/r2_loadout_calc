@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Gepard_Gepard_Ability02_Part01",
+  "childAbilityList": [
+    "Gepard_Gepard_Ability02_Camera",
+    "Gepard_Gepard_Ability02_Part01",
+    "Gepard_Gepard_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Arlan_Arlan_TechniqueInLevel",
+  "childAbilityList": [
+    "Arlan_Arlan_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

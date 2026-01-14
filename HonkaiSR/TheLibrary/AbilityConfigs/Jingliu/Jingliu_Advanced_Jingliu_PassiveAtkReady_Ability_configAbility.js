@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability",
+  "childAbilityList": [
+    "Jingliu_Advanced_Jingliu_PassiveAtkReady_Ability",
+    "Jingliu_Jingliu_PassiveAtk_Camera"
+  ],
+  "skillTrigger": "Skill21",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

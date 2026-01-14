@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "DanHengIL_DanHengIL_PassiveAbility01",
+  "childAbilityList": [
+    "DanHengIL_DanHengIL_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

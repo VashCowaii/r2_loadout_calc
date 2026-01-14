@@ -827,6 +827,10 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_TechniqueInLevel": {
       "fileName": "TopazNumby_Topaz_TechniqueInLevel",
+      "childAbilityList": [
+        "TopazNumby_Topaz_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -881,6 +885,13 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_PassiveAbility01": {
       "fileName": "TopazNumby_Topaz_PassiveAbility01",
+      "childAbilityList": [
+        "TopazNumby_Topaz_PassiveAbility01",
+        "TopazNumby_Topaz_Eidolon4_ReduceDelay",
+        "TopazNumby_Topaz_BE_NormalAttackDamage",
+        "TopazNumby_Topaz_BE_UltraAttackDamage"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1856,6 +1867,15 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_Ability03_Part01": {
       "fileName": "TopazNumby_Topaz_Ability03_Part01",
+      "childAbilityList": [
+        "TopazNumby_Topaz_Ability03_Camera",
+        "TopazNumby_Topaz_Ability03_EnterReady",
+        "TopazNumby_Topaz_Ability03_Part01",
+        "TopazNumby_Topaz_Ability03_Part02",
+        "TopazNumby_Klara_Ability03_EnterReady",
+        "TopazNumby_Klara_Ability03_Part01"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -2450,6 +2470,12 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_Ability02_Part01": {
       "fileName": "TopazNumby_Topaz_Ability02_Part01",
+      "childAbilityList": [
+        "TopazNumby_Topaz_Ability02_Camera",
+        "TopazNumby_Topaz_Ability02_Part01",
+        "TopazNumby_Topaz_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2576,6 +2602,12 @@ const compositeAbilityObject = {
     },
     "TopazNumby_Topaz_Ability01_Part01": {
       "fileName": "TopazNumby_Topaz_Ability01_Part01",
+      "childAbilityList": [
+        "TopazNumby_Topaz_Ability01_Camera",
+        "TopazNumby_Topaz_Ability01_Part01",
+        "TopazNumby_Topaz_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

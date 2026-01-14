@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "RuanMei_RuanMei_TechniqueInLevel",
+  "childAbilityList": [
+    "RuanMei_RuanMei_TechniqueInLevel",
+    "RuanMei_RuanMei_TechniqueInLevel_Insert"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

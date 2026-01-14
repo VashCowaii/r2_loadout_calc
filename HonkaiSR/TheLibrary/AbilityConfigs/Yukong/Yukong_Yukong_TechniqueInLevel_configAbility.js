@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Yukong_Yukong_TechniqueInLevel",
+  "childAbilityList": [
+    "Yukong_Yukong_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

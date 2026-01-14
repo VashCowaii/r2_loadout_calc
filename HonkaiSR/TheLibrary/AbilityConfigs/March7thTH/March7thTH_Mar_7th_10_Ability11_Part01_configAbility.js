@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "March7thTH_Mar_7th_10_Ability11_Part01",
+  "childAbilityList": [
+    "March7thTH_Mar_7th_10_Ability11_Part01",
+    "March7thTH_Mar_7th_10_Ability11_Part02",
+    "March7thTH_Mar_7th_10_Ability11_Camera",
+    "March7thTH_Mar_7th_10_Ability11_Camera_Alt"
+  ],
+  "skillTrigger": "Skill11",
   "abilityType": "Basic ATK",
   "energy": 30,
   "toughnessList": [

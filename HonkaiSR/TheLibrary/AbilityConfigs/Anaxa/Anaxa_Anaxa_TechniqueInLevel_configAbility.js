@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Anaxa_Anaxa_TechniqueInLevel",
+  "childAbilityList": [
+    "Anaxa_Anaxa_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

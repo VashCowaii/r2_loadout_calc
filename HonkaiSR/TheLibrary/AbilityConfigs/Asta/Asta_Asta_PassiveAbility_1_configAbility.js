@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Asta_Asta_PassiveAbility_1",
+  "childAbilityList": [
+    "Asta_Asta_PassiveAbility_1"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

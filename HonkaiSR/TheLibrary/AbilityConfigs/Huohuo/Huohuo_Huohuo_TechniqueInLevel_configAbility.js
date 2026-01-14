@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Huohuo_Huohuo_TechniqueInLevel",
+  "childAbilityList": [
+    "Huohuo_Huohuo_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

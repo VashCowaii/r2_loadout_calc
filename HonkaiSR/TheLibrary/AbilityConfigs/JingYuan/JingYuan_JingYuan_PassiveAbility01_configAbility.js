@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "JingYuan_JingYuan_PassiveAbility01",
+  "childAbilityList": [
+    "JingYuan_JingYuan_PassiveAbility01",
+    "JingYuan_JingYuan_Passive_Insert",
+    "JingYuan_JingYuan_Passive_Insert_Camera",
+    "JingYuan_JingYuan_Passive_Insert_Ability"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

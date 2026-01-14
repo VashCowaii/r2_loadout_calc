@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "DanHeng_DanHeng_PassiveAbility01",
+  "childAbilityList": [
+    "DanHeng_DanHeng_PassiveAbility01",
+    "DanHeng_DanHeng_PassiveAbility01_Enhance_Part01",
+    "DanHeng_DanHeng_PassiveAbility01_Enhance_Part02",
+    "DanHeng_DanHeng_PassiveAbility01_Enhance_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

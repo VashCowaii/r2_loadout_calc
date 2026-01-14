@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Serval_Serval_TechniqueInLevel",
+  "childAbilityList": [
+    "Serval_Serval_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

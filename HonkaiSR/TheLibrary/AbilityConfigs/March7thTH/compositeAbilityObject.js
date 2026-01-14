@@ -701,6 +701,10 @@ const compositeAbilityObject = {
     },
     "March7thTH_Mar_7th_10_TechniqueInLevel": {
       "fileName": "March7thTH_Mar_7th_10_TechniqueInLevel",
+      "childAbilityList": [
+        "March7thTH_Mar_7th_10_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -777,6 +781,13 @@ const compositeAbilityObject = {
     },
     "March7thTH_Mar_7th_10_PassiveAbility01": {
       "fileName": "March7thTH_Mar_7th_10_PassiveAbility01",
+      "childAbilityList": [
+        "March7thTH_Mar_7th_10_PassiveAbility01",
+        "March7thTH_Mar_7th_10_Camera_Insert",
+        "March7thTH_Mar_7th_10_Ready_Special",
+        "March7thTH_Mar_7th_10_Ready_Special_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 5,
       "toughnessList": [
@@ -1482,6 +1493,13 @@ const compositeAbilityObject = {
     },
     "March7thTH_Mar_7th_10_Ability03_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Ability03_Part01",
+      "childAbilityList": [
+        "March7thTH_Mar_7th_10_Ability03_EnterReady",
+        "March7thTH_Mar_7th_10_Ability03_Part01",
+        "March7thTH_Mar_7th_10_Ability03_Part02",
+        "March7thTH_Mar_7th_10_Ability03_Camera"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1948,6 +1966,14 @@ const compositeAbilityObject = {
     },
     "March7thTH_Mar_7th_10_Ability02_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Ability02_Part01",
+      "childAbilityList": [
+        "March7thTH_Mar_7th_10_Ability02_Part01",
+        "March7thTH_Mar_7th_10_Ability02_Part02",
+        "March7thTH_Mar_7th_10_Ability02_Camera",
+        "March7thTH_Mar_7th_10_BPExtraTurn",
+        "March7thTH_Mar_7th_10_Bonus_Camera"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -2525,6 +2551,13 @@ const compositeAbilityObject = {
     },
     "March7thTH_Mar_7th_10_Ability11_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Ability11_Part01",
+      "childAbilityList": [
+        "March7thTH_Mar_7th_10_Ability11_Part01",
+        "March7thTH_Mar_7th_10_Ability11_Part02",
+        "March7thTH_Mar_7th_10_Ability11_Camera",
+        "March7thTH_Mar_7th_10_Ability11_Camera_Alt"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 30,
       "toughnessList": [
@@ -2987,6 +3020,15 @@ const compositeAbilityObject = {
     },
     "March7thTH_Mar_7th_10_Ability01_Part01": {
       "fileName": "March7thTH_Mar_7th_10_Ability01_Part01",
+      "childAbilityList": [
+        "March7thTH_Mar_7th_10_Ability01_Part01",
+        "March7thTH_Mar_7th_10_Ability01_Part02",
+        "March7thTH_Mar_7th_10_Ability01_Camera",
+        "March7thTH_Mar_7th_10_Eidolon2_Insert_SelectTarget",
+        "March7thTH_Mar_7th_10_Eidolon2_Insert_Part01",
+        "March7thTH_Mar_7th_10_Eidolon2_Insert_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

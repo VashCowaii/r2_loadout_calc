@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Misha_Misha_Ability03_Part01",
+  "childAbilityList": [
+    "Misha_Misha_Ability03_Camera",
+    "Misha_Misha_Ability03_EnterReady",
+    "Misha_Misha_Ability03_Part01",
+    "Misha_Misha_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

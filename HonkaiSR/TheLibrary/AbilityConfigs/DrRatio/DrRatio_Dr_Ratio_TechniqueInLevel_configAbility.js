@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "DrRatio_Dr_Ratio_TechniqueInLevel",
+  "childAbilityList": [
+    "DrRatio_Dr_Ratio_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

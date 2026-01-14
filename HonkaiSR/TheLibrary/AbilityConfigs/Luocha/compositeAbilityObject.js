@@ -72,6 +72,10 @@ const compositeAbilityObject = {
     },
     "Luocha_Luocha_TechniqueInLevel": {
       "fileName": "Luocha_Luocha_TechniqueInLevel",
+      "childAbilityList": [
+        "Luocha_Luocha_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -779,6 +783,13 @@ const compositeAbilityObject = {
     },
     "Luocha_Luocha_PassiveAbility01": {
       "fileName": "Luocha_Luocha_PassiveAbility01",
+      "childAbilityList": [
+        "Luocha_Luocha_PassiveAbility01_Camera",
+        "Luocha_Luocha_PassiveAbility01",
+        "Luocha_Luocha_Passive01_InsertAbility",
+        "Luocha_Luocha_Ability02_InsertAbility"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1297,6 +1308,13 @@ const compositeAbilityObject = {
     },
     "Luocha_Luocha_Ability03_Part01": {
       "fileName": "Luocha_Luocha_Ability03_Part01",
+      "childAbilityList": [
+        "Luocha_Luocha_Ability03_Camera",
+        "Luocha_Luocha_Ability03_EnterReady",
+        "Luocha_Luocha_Ability03_Part01",
+        "Luocha_Luocha_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1503,6 +1521,12 @@ const compositeAbilityObject = {
     },
     "Luocha_Luocha_Ability02_Part01": {
       "fileName": "Luocha_Luocha_Ability02_Part01",
+      "childAbilityList": [
+        "Luocha_Luocha_Ability02_Camera",
+        "Luocha_Luocha_Ability02_Part01",
+        "Luocha_Luocha_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1616,6 +1640,12 @@ const compositeAbilityObject = {
     },
     "Luocha_Luocha_Ability01_Part01": {
       "fileName": "Luocha_Luocha_Ability01_Part01",
+      "childAbilityList": [
+        "Luocha_Luocha_Ability01_Camera",
+        "Luocha_Luocha_Ability01_Part01",
+        "Luocha_Luocha_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

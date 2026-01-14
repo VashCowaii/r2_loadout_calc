@@ -155,6 +155,10 @@ const compositeAbilityObject = {
     },
     "Gepard_Gepard_TechniqueInLevel": {
       "fileName": "Gepard_Gepard_TechniqueInLevel",
+      "childAbilityList": [
+        "Gepard_Gepard_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -362,6 +366,11 @@ const compositeAbilityObject = {
     },
     "Gepard_Gepard_PassiveAbility01": {
       "fileName": "Gepard_Gepard_PassiveAbility01",
+      "childAbilityList": [
+        "Gepard_Gepard_PassiveAbility01",
+        "Gepard_Gepard_PassiveAbility_1_Insert"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -649,6 +658,13 @@ const compositeAbilityObject = {
     },
     "Gepard_Gepard_Ability03_Part01": {
       "fileName": "Gepard_Gepard_Ability03_Part01",
+      "childAbilityList": [
+        "Gepard_Gepard_Ability03_Camera",
+        "Gepard_Gepard_Ability03_EnterReady",
+        "Gepard_Gepard_Ability03_Part01",
+        "Gepard_Gepard_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -842,6 +858,12 @@ const compositeAbilityObject = {
     },
     "Gepard_Gepard_Ability02_Part01": {
       "fileName": "Gepard_Gepard_Ability02_Part01",
+      "childAbilityList": [
+        "Gepard_Gepard_Ability02_Camera",
+        "Gepard_Gepard_Ability02_Part01",
+        "Gepard_Gepard_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -932,6 +954,12 @@ const compositeAbilityObject = {
     },
     "Gepard_Gepard_Ability01_Part01": {
       "fileName": "Gepard_Gepard_Ability01_Part01",
+      "childAbilityList": [
+        "Gepard_Gepard_Ability01_Camera",
+        "Gepard_Gepard_Ability01_Part01",
+        "Gepard_Gepard_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

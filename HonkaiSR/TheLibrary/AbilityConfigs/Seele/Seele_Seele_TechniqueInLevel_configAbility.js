@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Seele_Seele_TechniqueInLevel",
+  "childAbilityList": [
+    "Seele_Seele_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

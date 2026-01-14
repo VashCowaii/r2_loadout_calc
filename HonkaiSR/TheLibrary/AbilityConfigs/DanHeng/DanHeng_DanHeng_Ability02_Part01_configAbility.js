@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "DanHeng_DanHeng_Ability02_Part01",
+  "childAbilityList": [
+    "DanHeng_DanHeng_Ability02_Camera",
+    "DanHeng_DanHeng_Ability02_Part01",
+    "DanHeng_DanHeng_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

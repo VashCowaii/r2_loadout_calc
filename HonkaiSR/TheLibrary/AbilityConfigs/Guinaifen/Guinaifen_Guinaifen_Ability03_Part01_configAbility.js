@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Guinaifen_Guinaifen_Ability03_Part01",
+  "childAbilityList": [
+    "Guinaifen_Guinaifen_Ability03_Camera",
+    "Guinaifen_Guinaifen_Ability03_EnterReady",
+    "Guinaifen_Guinaifen_Ability03_Part01",
+    "Guinaifen_Guinaifen_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

@@ -18,6 +18,10 @@ const compositeAbilityObject = {
   "abilityObject": {
     "Gallagher_Gallagher_TechniqueInLevel": {
       "fileName": "Gallagher_Gallagher_TechniqueInLevel",
+      "childAbilityList": [
+        "Gallagher_Gallagher_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -267,6 +271,10 @@ const compositeAbilityObject = {
     },
     "Gallagher_Gallagher_PassiveAbility01": {
       "fileName": "Gallagher_Gallagher_PassiveAbility01",
+      "childAbilityList": [
+        "Gallagher_Gallagher_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -639,6 +647,13 @@ const compositeAbilityObject = {
     },
     "Gallagher_Gallagher_Ability03_Part01": {
       "fileName": "Gallagher_Gallagher_Ability03_Part01",
+      "childAbilityList": [
+        "Gallagher_Gallagher_Ability03_Camera",
+        "Gallagher_Gallagher_Ability03_EnterReady",
+        "Gallagher_Gallagher_Ability03_Part01",
+        "Gallagher_Gallagher_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -742,6 +757,13 @@ const compositeAbilityObject = {
     },
     "Gallagher_Gallagher_Ability02_Part01": {
       "fileName": "Gallagher_Gallagher_Ability02_Part01",
+      "childAbilityList": [
+        "Gallagher_Gallagher_Ability02_Camera",
+        "Gallagher_Gallagher_Ability02_Camera_End",
+        "Gallagher_Gallagher_Ability02_Part01",
+        "Gallagher_Gallagher_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -876,6 +898,12 @@ const compositeAbilityObject = {
     },
     "Gallagher_Gallagher_Ability11_Part01": {
       "fileName": "Gallagher_Gallagher_Ability11_Part01",
+      "childAbilityList": [
+        "Gallagher_Gallagher_Ability11_Camera",
+        "Gallagher_Gallagher_Ability11_Part01",
+        "Gallagher_Gallagher_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -961,6 +989,12 @@ const compositeAbilityObject = {
     },
     "Gallagher_Gallagher_Ability01_Part01": {
       "fileName": "Gallagher_Gallagher_Ability01_Part01",
+      "childAbilityList": [
+        "Gallagher_Gallagher_Ability01_Camera",
+        "Gallagher_Gallagher_Ability01_Part01",
+        "Gallagher_Gallagher_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

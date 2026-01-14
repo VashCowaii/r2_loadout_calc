@@ -1,5 +1,13 @@
 const configAbility = {
   "fileName": "Qingque_QingQue_Ability03_Part01",
+  "childAbilityList": [
+    "Qingque_Qingque_Ability03_Camera",
+    "Qingque_QingQue_Ability03_Part01",
+    "Qingque_QingQue_Ability03_Part02",
+    "Qingque_Pela_Ability03_Cutin",
+    "Qingque_Qingque_Ability03_EnterReady"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

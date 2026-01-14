@@ -31,6 +31,10 @@ const compositeAbilityObject = {
     },
     "Blade_AdvancedRen_TechniqueInLevel": {
       "fileName": "Blade_AdvancedRen_TechniqueInLevel",
+      "childAbilityList": [
+        "Blade_AdvancedRen_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -379,6 +383,13 @@ const compositeAbilityObject = {
     },
     "Blade_AdvancedRen_PassiveAbility01": {
       "fileName": "Blade_AdvancedRen_PassiveAbility01",
+      "childAbilityList": [
+        "Blade_Ren_Passive_Camera",
+        "Blade_AdvancedRen_PassiveAbility01",
+        "Blade_AdvancedRen_Passive1Atk_Ability",
+        "Blade_AdvancedRen_Passive1Atk02_Ability"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 10,
       "toughnessList": [
@@ -1452,6 +1463,13 @@ const compositeAbilityObject = {
     },
     "Blade_AdvancedRen_Ability03_Part01": {
       "fileName": "Blade_AdvancedRen_Ability03_Part01",
+      "childAbilityList": [
+        "Blade_Ren_Ability03_Camera",
+        "Blade_AdvancedRen_Ability03_EnterReady",
+        "Blade_AdvancedRen_Ability03_Part01",
+        "Blade_AdvancedRen_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1564,6 +1582,14 @@ const compositeAbilityObject = {
     },
     "Blade_AdvancedRen_Ability02_Part01": {
       "fileName": "Blade_AdvancedRen_Ability02_Part01",
+      "childAbilityList": [
+        "Blade_Ren_Ability02_Camera",
+        "Blade_AdvancedRen_Ability02_Part01",
+        "Blade_AdvancedRen_Ability02_Part02",
+        "Blade_AdvancedRen_Bonus",
+        "Blade_Ren_Bonus_Camera"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [
@@ -1894,6 +1920,12 @@ const compositeAbilityObject = {
     },
     "Blade_AdvancedRen_Ability11_Part01": {
       "fileName": "Blade_AdvancedRen_Ability11_Part01",
+      "childAbilityList": [
+        "Blade_AdvancedRen_Ability11_Part01",
+        "Blade_AdvancedRen_Ability11_Part02",
+        "Blade_Ren_Ability11_Camera"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 30,
       "toughnessList": [
@@ -1981,6 +2013,12 @@ const compositeAbilityObject = {
     },
     "Blade_AdvancedRen_Ability01_Part01": {
       "fileName": "Blade_AdvancedRen_Ability01_Part01",
+      "childAbilityList": [
+        "Blade_Ren_Ability01_Camera",
+        "Blade_AdvancedRen_Ability01_Part01",
+        "Blade_AdvancedRen_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

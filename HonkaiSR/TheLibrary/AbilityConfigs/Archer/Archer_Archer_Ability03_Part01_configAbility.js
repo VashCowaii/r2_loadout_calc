@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Archer_Archer_Ability03_Part01",
+  "childAbilityList": [
+    "Archer_Archer_Ability03_Camera",
+    "Archer_Archer_Ability03_EnterReady",
+    "Archer_Archer_Ability03_Part01",
+    "Archer_Archer_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

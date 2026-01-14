@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Clara_Klara_TechniqueInLevel",
+  "childAbilityList": [
+    "Clara_Klara_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

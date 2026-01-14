@@ -28,6 +28,10 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_TechniqueInLevel": {
       "fileName": "Xueyi_Xueyi_TechniqueInLevel",
+      "childAbilityList": [
+        "Xueyi_Xueyi_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -385,6 +389,14 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_PassiveAbility01": {
       "fileName": "Xueyi_Xueyi_PassiveAbility01",
+      "childAbilityList": [
+        "Xueyi_Xueyi_PassiveAbility01",
+        "Xueyi_Xueyi_PassiveAtk_Insert01",
+        "Xueyi_Xueyi_PassiveAtk_Insert02",
+        "Xueyi_Xueyi_Passive1Atk_Ability_Camera",
+        "Xueyi_Xueyi_Passive1Atk_Ability_Camera_01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 2,
       "toughnessList": [
@@ -1302,6 +1314,13 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_Ability03_Part01": {
       "fileName": "Xueyi_Xueyi_Ability03_Part01",
+      "childAbilityList": [
+        "Xueyi_Xueyi_Ability03_Camera",
+        "Xueyi_Xueyi_Ability03_Part01",
+        "Xueyi_Xueyi_Ability03_Part02",
+        "Xueyi_Xueyi_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1391,6 +1410,12 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_Ability02_Part01": {
       "fileName": "Xueyi_Xueyi_Ability02_Part01",
+      "childAbilityList": [
+        "Xueyi_Xueyi_Ability02_Camera",
+        "Xueyi_Xueyi_Ability02_Part01",
+        "Xueyi_Xueyi_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1491,6 +1516,12 @@ const compositeAbilityObject = {
     },
     "Xueyi_Xueyi_Ability01_Part01": {
       "fileName": "Xueyi_Xueyi_Ability01_Part01",
+      "childAbilityList": [
+        "Xueyi_Xueyi_Ability01_Camera",
+        "Xueyi_Xueyi_Ability01_Part01",
+        "Xueyi_Xueyi_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

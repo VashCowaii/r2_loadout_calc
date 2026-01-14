@@ -127,6 +127,10 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_TechniqueInLevel": {
       "fileName": "DanHengIL_DanHengIL_TechniqueInLevel",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -332,6 +336,10 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_PassiveAbility01": {
       "fileName": "DanHengIL_DanHengIL_PassiveAbility01",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1283,6 +1291,13 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_Ability03_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability03_Part01",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_Ability03_Camera",
+        "DanHengIL_DanHengIL_Ability03_EnterReady",
+        "DanHengIL_DanHengIL_Ability03_Part01",
+        "DanHengIL_DanHengIL_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1351,6 +1366,11 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_Ability21_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability21_Part01",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_Ability21_Part01",
+        "DanHengIL_DanHengIL_Ability21_Part02"
+      ],
+      "skillTrigger": "Skill21",
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [
@@ -1743,6 +1763,14 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_Ability02_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability02_Part01",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_Ability02_Camera01",
+        "DanHengIL_DanHengIL_Ability02_Camera02",
+        "DanHengIL_DanHengIL_Ability02_Camera03",
+        "DanHengIL_DanHengIL_Ability02_Part01",
+        "DanHengIL_DanHengIL_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [
@@ -2486,6 +2514,12 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_Ability13_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability13_Part01",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_Ability13_Camera",
+        "DanHengIL_DanHengIL_Ability13_Part01",
+        "DanHengIL_DanHengIL_Ability13_Part02"
+      ],
+      "skillTrigger": "Skill13",
       "abilityType": "Basic ATK",
       "energy": 40,
       "toughnessList": [
@@ -3079,6 +3113,12 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_Ability12_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability12_Part01",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_Ability12_Camera",
+        "DanHengIL_DanHengIL_Ability12_Part01",
+        "DanHengIL_DanHengIL_Ability12_Part02"
+      ],
+      "skillTrigger": "Skill12",
       "abilityType": "Basic ATK",
       "energy": 35,
       "toughnessList": [
@@ -3340,6 +3380,12 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_Ability11_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability11_Part01",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_Ability11_Camera",
+        "DanHengIL_DanHengIL_Ability11_Part01",
+        "DanHengIL_DanHengIL_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 30,
       "toughnessList": [
@@ -3462,6 +3508,12 @@ const compositeAbilityObject = {
     },
     "DanHengIL_DanHengIL_Ability01_Part01": {
       "fileName": "DanHengIL_DanHengIL_Ability01_Part01",
+      "childAbilityList": [
+        "DanHengIL_DanHengIL_Ability01_Camera",
+        "DanHengIL_DanHengIL_Ability01_Part01",
+        "DanHengIL_DanHengIL_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

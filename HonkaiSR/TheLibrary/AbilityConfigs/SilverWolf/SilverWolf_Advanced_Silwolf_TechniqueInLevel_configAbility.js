@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "SilverWolf_Advanced_Silwolf_TechniqueInLevel",
+  "childAbilityList": [
+    "SilverWolf_Advanced_Silwolf_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

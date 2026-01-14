@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
+  "childAbilityList": [
+    "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
+    "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
+    "Mem_Servant_PlayerBoyServant_30_Ability11_Together"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

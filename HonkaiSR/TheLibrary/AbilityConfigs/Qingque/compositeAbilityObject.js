@@ -135,6 +135,10 @@ const compositeAbilityObject = {
     },
     "Qingque_Qingque_TechniqueInLevel": {
       "fileName": "Qingque_Qingque_TechniqueInLevel",
+      "childAbilityList": [
+        "Qingque_Qingque_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -177,6 +181,15 @@ const compositeAbilityObject = {
     },
     "Qingque_QingQue_PassiveAbility01": {
       "fileName": "Qingque_QingQue_PassiveAbility01",
+      "childAbilityList": [
+        "Qingque_QingQue_PassiveAbility01",
+        "Qingque_Qingque_Bonus",
+        "Qingque_Qingque_Eidolon4_ATK_Camera",
+        "Qingque_Qingque_Bonus_Camera",
+        "Qingque_Qingque_Eidolon4_ATK_Special_Camera",
+        "Qingque_Qingque_UltraGangFix_Camera"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -432,6 +445,14 @@ const compositeAbilityObject = {
     },
     "Qingque_QingQue_Ability03_Part01": {
       "fileName": "Qingque_QingQue_Ability03_Part01",
+      "childAbilityList": [
+        "Qingque_Qingque_Ability03_Camera",
+        "Qingque_QingQue_Ability03_Part01",
+        "Qingque_QingQue_Ability03_Part02",
+        "Qingque_Pela_Ability03_Cutin",
+        "Qingque_Qingque_Ability03_EnterReady"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1140,6 +1161,17 @@ const compositeAbilityObject = {
     },
     "Qingque_QingQue_Ability02_Part01": {
       "fileName": "Qingque_QingQue_Ability02_Part01",
+      "childAbilityList": [
+        "Qingque_Qingque_Ability02_Camera",
+        "Qingque_QingQue_Ability02_Part01",
+        "Qingque_QingQue_Ability02_Part02",
+        "Qingque_Qingque_BpInsertAction",
+        "Qingque_Qingque_BpInsertAction_Camera",
+        "Qingque_Qingque_BpInsertAction_Tiao",
+        "Qingque_Qingque_BpInsertAction_Tong",
+        "Qingque_Qingque_BpInsertAction_Wan"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": null,
       "toughnessList": [
@@ -1313,6 +1345,13 @@ const compositeAbilityObject = {
     },
     "Qingque_QingQue_Ability11_Part01": {
       "fileName": "Qingque_QingQue_Ability11_Part01",
+      "childAbilityList": [
+        "Qingque_Qingque_Ability011_Camera",
+        "Qingque_QingQue_Ability11_Part01",
+        "Qingque_Qingque_Eidolon4_ATK_Special",
+        "Qingque_QingQue_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -2673,6 +2712,13 @@ const compositeAbilityObject = {
     },
     "Qingque_QingQue_Ability01_Part01": {
       "fileName": "Qingque_QingQue_Ability01_Part01",
+      "childAbilityList": [
+        "Qingque_Qingque_Ability01_Camera",
+        "Qingque_QingQue_Ability01_Part01",
+        "Qingque_QingQue_Ability01_Part02",
+        "Qingque_Qingque_Eidolon4_ATK"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

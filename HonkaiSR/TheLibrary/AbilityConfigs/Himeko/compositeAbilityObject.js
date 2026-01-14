@@ -296,6 +296,10 @@ const compositeAbilityObject = {
     },
     "Himeko_Himeko_TechniqueInLevel": {
       "fileName": "Himeko_Himeko_TechniqueInLevel",
+      "childAbilityList": [
+        "Himeko_Himeko_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -555,6 +559,13 @@ const compositeAbilityObject = {
     },
     "Himeko_Himeko_PassiveAbility01": {
       "fileName": "Himeko_Himeko_PassiveAbility01",
+      "childAbilityList": [
+        "Himeko_Himeko_Passive1Atk_Ability_Camera",
+        "Himeko_Himeko_PassiveAbility01",
+        "Himeko_Himeko_Passive1Atk_Ability",
+        "Himeko_Himeko_Passive1Atk02_Ability"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": 10,
       "toughnessList": [
@@ -1511,6 +1522,13 @@ const compositeAbilityObject = {
     },
     "Himeko_Himeko_Ability03_Part01": {
       "fileName": "Himeko_Himeko_Ability03_Part01",
+      "childAbilityList": [
+        "Himeko_Himeko_Ability03_Camera",
+        "Himeko_Himeko_Ability03_EnterReady",
+        "Himeko_Himeko_Ability03_Part01",
+        "Himeko_Himeko_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -1809,6 +1827,12 @@ const compositeAbilityObject = {
     },
     "Himeko_Himeko_Ability02_Part01": {
       "fileName": "Himeko_Himeko_Ability02_Part01",
+      "childAbilityList": [
+        "Himeko_Himeko_Ability02_Camera",
+        "Himeko_Himeko_Ability02_Part01",
+        "Himeko_Himeko_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1893,6 +1917,12 @@ const compositeAbilityObject = {
     },
     "Himeko_Himeko_Ability01_Part01": {
       "fileName": "Himeko_Himeko_Ability01_Part01",
+      "childAbilityList": [
+        "Himeko_Himeko_Ability01_Camera",
+        "Himeko_Himeko_Ability01_Part01",
+        "Himeko_Himeko_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [

@@ -1,5 +1,12 @@
 const configAbility = {
   "fileName": "Blade_AdvancedRen_Ability03_Part01",
+  "childAbilityList": [
+    "Blade_Ren_Ability03_Camera",
+    "Blade_AdvancedRen_Ability03_EnterReady",
+    "Blade_AdvancedRen_Ability03_Part01",
+    "Blade_AdvancedRen_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
   "abilityType": "Ultimate",
   "energy": 5,
   "toughnessList": [

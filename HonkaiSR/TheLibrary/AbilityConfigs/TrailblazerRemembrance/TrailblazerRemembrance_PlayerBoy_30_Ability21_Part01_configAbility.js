@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01",
+  "childAbilityList": [
+    "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01",
+    "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part02"
+  ],
+  "skillTrigger": "Skill21",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

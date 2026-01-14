@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Jingliu_Advanced_Jingliu_TechniqueInLevel",
+  "childAbilityList": [
+    "Jingliu_Advanced_Jingliu_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

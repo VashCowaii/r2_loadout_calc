@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Tribbie_Tribbie_TechniqueInLevel",
+  "childAbilityList": [
+    "Tribbie_Tribbie_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

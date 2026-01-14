@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Yanqing_Yanqing_Ability02_Part01",
+  "childAbilityList": [
+    "Yanqing_Yanqing_Ability02_Camera",
+    "Yanqing_Yanqing_Ability02_Part01",
+    "Yanqing_Yanqing_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

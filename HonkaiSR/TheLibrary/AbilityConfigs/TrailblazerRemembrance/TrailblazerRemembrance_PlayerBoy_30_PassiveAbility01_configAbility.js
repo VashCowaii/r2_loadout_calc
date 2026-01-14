@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01",
+  "childAbilityList": [
+    "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

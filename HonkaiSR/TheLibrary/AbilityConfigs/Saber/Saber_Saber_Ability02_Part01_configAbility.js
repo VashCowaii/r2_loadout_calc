@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Saber_Saber_Ability02_Part01",
+  "childAbilityList": [
+    "Saber_Saber_Ability02_Camera",
+    "Saber_Saber_Ability02_Part01",
+    "Saber_Saber_Ability02_Part02"
+  ],
+  "skillTrigger": "Skill02",
   "abilityType": "Skill",
   "energy": 30,
   "toughnessList": [

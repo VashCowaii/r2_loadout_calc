@@ -1,5 +1,11 @@
 const configAbility = {
   "fileName": "Huohuo_Huohuo_Ability01_Part01",
+  "childAbilityList": [
+    "Huohuo_Huohuo_Ability01_Camera",
+    "Huohuo_Huohuo_Ability01_Part01",
+    "Huohuo_Huohuo_Ability01_Part02"
+  ],
+  "skillTrigger": "Skill01",
   "abilityType": "Basic ATK",
   "energy": 20,
   "toughnessList": [

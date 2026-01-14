@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Cerydra_Cerydra_TechniqueInLevel",
+  "childAbilityList": [
+    "Cerydra_Cerydra_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

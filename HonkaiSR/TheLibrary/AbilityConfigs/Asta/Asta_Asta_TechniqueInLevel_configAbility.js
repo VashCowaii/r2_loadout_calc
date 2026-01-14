@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "Asta_Asta_TechniqueInLevel",
+  "childAbilityList": [
+    "Asta_Asta_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [

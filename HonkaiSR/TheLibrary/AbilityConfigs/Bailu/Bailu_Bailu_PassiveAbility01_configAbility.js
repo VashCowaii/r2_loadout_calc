@@ -1,5 +1,10 @@
 const configAbility = {
   "fileName": "Bailu_Bailu_PassiveAbility01",
+  "childAbilityList": [
+    "Bailu_Bailu_PassiveAbility01",
+    "Bailu_Bailu_PassiveAbility_Camera"
+  ],
+  "skillTrigger": "SkillP01",
   "abilityType": "Talent",
   "energy": null,
   "toughnessList": [

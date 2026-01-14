@@ -454,6 +454,10 @@ const compositeAbilityObject = {
     },
     "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_TechniqueInLevel"
+      ],
+      "skillTrigger": "SkillMaze",
       "abilityType": "Technique",
       "energy": null,
       "toughnessList": [
@@ -547,6 +551,10 @@ const compositeAbilityObject = {
     },
     "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_PassiveAbility01"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -859,6 +867,14 @@ const compositeAbilityObject = {
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part01",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_Ability03_Camera",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability03_EnterReady",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part01",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability03_Part02_Charge"
+      ],
+      "skillTrigger": "Skill03",
       "abilityType": "Ultimate",
       "energy": 5,
       "toughnessList": [
@@ -931,6 +947,11 @@ const compositeAbilityObject = {
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part01",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability21_Part02"
+      ],
+      "skillTrigger": "Skill21",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -987,6 +1008,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part01",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_Ability02_Camera",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part01",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
       "abilityType": "Skill",
       "energy": 30,
       "toughnessList": [
@@ -1078,6 +1105,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Camera",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part01",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability11_Part02"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Basic ATK",
       "energy": 30,
       "toughnessList": [
@@ -1166,6 +1199,12 @@ const compositeAbilityObject = {
     },
     "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part01": {
       "fileName": "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part01",
+      "childAbilityList": [
+        "TrailblazerRemembrance_PlayerBoy_30_Ability01_Camera",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part01",
+        "TrailblazerRemembrance_PlayerBoy_30_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Basic ATK",
       "energy": 20,
       "toughnessList": [
@@ -1602,6 +1641,10 @@ const compositeAbilityObject = {
     },
     "Mem_Servant_PlayerBoyServant_30_DeathRattle": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_DeathRattle",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_DeathRattle"
+      ],
+      "skillTrigger": "SkillP04",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1643,6 +1686,10 @@ const compositeAbilityObject = {
     },
     "Mem_Servant_PlayerBoyServant_30_BattleCry": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_BattleCry",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_BattleCry"
+      ],
+      "skillTrigger": "SkillP03",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -1690,6 +1737,12 @@ const compositeAbilityObject = {
     },
     "Mem_Servant_PlayerBoyServant_30_PassiveAbility01": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_PassiveAbility01",
+        "Mem_Servant_PlayerBoyServant_30_Ability03_Part02",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Together"
+      ],
+      "skillTrigger": "SkillP01",
       "abilityType": "Talent",
       "energy": null,
       "toughnessList": [
@@ -2390,6 +2443,14 @@ const compositeAbilityObject = {
     },
     "Mem_Servant_PlayerBoyServant_30_Ability11_Part01": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Entry",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Entry_Camera",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Part01",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Part02",
+        "Mem_Servant_PlayerBoyServant_30_Ability11_Camera"
+      ],
+      "skillTrigger": "Skill11",
       "abilityType": "Memosprite",
       "energy": 30,
       "toughnessList": [
@@ -2602,6 +2663,13 @@ const compositeAbilityObject = {
     },
     "Mem_Servant_PlayerBoyServant_30_Ability01_Part01": {
       "fileName": "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
+      "childAbilityList": [
+        "Mem_Servant_PlayerBoyServant_30_Ability01_Part01",
+        "Mem_Servant_PlayerBoyServant_30_Ability01_Part02",
+        "Mem_Servant_PlayerBoyServant_30_Ability01_Camera",
+        "Mem_Servant_PlayerBoyServant_30_Ability01_Camera_Charm"
+      ],
+      "skillTrigger": "Skill01",
       "abilityType": "Memosprite",
       "energy": 20,
       "toughnessList": [

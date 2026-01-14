@@ -1,5 +1,9 @@
 const configAbility = {
   "fileName": "TopazNumby_Topaz_TechniqueInLevel",
+  "childAbilityList": [
+    "TopazNumby_Topaz_TechniqueInLevel"
+  ],
+  "skillTrigger": "SkillMaze",
   "abilityType": "Technique",
   "energy": null,
   "toughnessList": [
