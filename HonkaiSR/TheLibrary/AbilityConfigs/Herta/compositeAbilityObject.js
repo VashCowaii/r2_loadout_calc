@@ -433,16 +433,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (SkillRank_Rank04_P1_DamagePercentage) || RETURN",
-                    "displayLines": "SkillRank_Rank04_P1_DamagePercentage",
-                    "constants": [],
-                    "variables": [
-                      "SkillRank_Rank04_P1_DamagePercentage"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "SkillRank_Rank04_P1_DamagePercentage"
+                    }
+                  ]
                 }
               ]
             }
@@ -917,16 +914,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AllDamageTakenRatio) || RETURN",
-                    "displayLines": "MDF_AllDamageTakenRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AllDamageTakenRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_AllDamageTakenRatio"
+                    }
+                  ]
                 }
               ]
             }
@@ -1080,32 +1074,25 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.2) || Variables[1] (0.25) || ADD || RETURN",
-                            "displayLines": "(0.2 + 0.25)",
-                            "constants": [],
-                            "variables": [
-                              0.2,
-                              0.25
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                              "value": "(0.2 + 0.25)"
+                            }
+                          ]
                         }
                       ],
                       "failed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.2) || RETURN",
-                            "displayLines": "0.2",
-                            "constants": [],
-                            "variables": [
-                              0.2
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                              "value": "0.2"
+                            }
+                          ]
                         }
                       ]
                     }

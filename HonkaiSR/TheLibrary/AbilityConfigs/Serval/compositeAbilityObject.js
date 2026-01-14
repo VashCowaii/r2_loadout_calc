@@ -47,16 +47,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.3) || RETURN",
-                        "displayLines": "0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.3"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -916,16 +913,13 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MAvatar_Serval_00_Rank06_ShowRatio) || RETURN",
-                        "displayLines": "MAvatar_Serval_00_Rank06_ShowRatio",
-                        "constants": [],
-                        "variables": [
-                          "MAvatar_Serval_00_Rank06_ShowRatio"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MAvatar_Serval_00_Rank06_ShowRatio"
+                        }
+                      ]
                     }
                   ]
                 }

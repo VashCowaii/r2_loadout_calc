@@ -1373,16 +1373,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.6) || RETURN",
-                        "displayLines": "0.6",
-                        "constants": [],
-                        "variables": [
-                          0.6
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.6"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1647,16 +1644,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.2) || RETURN",
-                        "displayLines": "0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
+                          "value": "0.2"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -3211,17 +3205,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || INVERT || RETURN",
-                    "displayLines": "-(MDF_PropertyValue * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "MDF_Layer"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-(MDF_PropertyValue * MDF_Layer)"
+                    }
+                  ]
                 }
               ]
             }

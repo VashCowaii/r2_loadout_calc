@@ -188,16 +188,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Adjust Target Stats",
-              "on": "Attacker",
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (MDF_Pela_SkillTree03_DamageAddedRatio) || RETURN",
-                "displayLines": "MDF_Pela_SkillTree03_DamageAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_Pela_SkillTree03_DamageAddedRatio"
-                ]
-              }
+              "modifiedValuesArray": [
+                {
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": "MDF_Pela_SkillTree03_DamageAddedRatio"
+                }
+              ]
             }
           ]
         },

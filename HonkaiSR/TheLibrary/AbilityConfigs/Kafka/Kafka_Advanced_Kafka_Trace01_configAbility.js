@@ -94,8 +94,8 @@ const configAbility = {
           "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
           "valueRanges": [
             {
-              "name": "Changes",
-              "execute": [
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
                 {
                   "name": "IF",
                   "conditions": {

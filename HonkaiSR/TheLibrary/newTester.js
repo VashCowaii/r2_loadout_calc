@@ -40,29 +40,30 @@ const customHTML = {
         for (let entry of displayOrder) {
             const isUnique = customHTML.rowUniqueStatExceptions[entry];
 
-            if (isUnique) {
-                returnString += `
-                <div class="imageRowStatisticBox${rowAlternating}">
-                    <div class="imageRowStatisticNameBox">${isUnique.statName}</div>
-                    <div class="imageRowStatisticStatBox">${statLocation[entry]}${isUnique.statUnit}</div>
-                </div>`;
-                continue;
-            }
+            // if (isUnique) {
+            //     returnString += `
+            //     <div class="imageRowStatisticBox${rowAlternating}">
+            //         <div class="imageRowStatisticNameBox">${isUnique.statName}</div>
+            //         <div class="imageRowStatisticStatBox">${statLocation[entry]}${isUnique.statUnit}</div>
+            //     </div>`;
+            //     continue;
+            // }
 
             
             let valuePre = statLocation[entry];
-            let valueRef = (valuePre)?.toFixed(3) || 0;
+            console.log(valuePre)
+            let valueRef = typeof valuePre === "string" ? valuePre : (valuePre ?? 0)?.toFixed(3) || 0;
 
             // greatTableIndex
             // greatTableKeys
-            if (isStatMenuCreation && valuePre === 0) {continue;}
+            // if (isStatMenuCreation && valuePre === 0) {continue;}
             if (rowAlternating==2) {rowAlternating--;}
             else {rowAlternating++;}
             
             returnString += `
             <div class="imageRowStatisticBox${rowAlternating}">
                 <div class="imageRowStatisticNameBox">${entry}</div>
-                <div class="imageRowStatisticStatBox">${(+valueRef ?? 0)}</div>
+                <div class="imageRowStatisticStatBox">${(typeof valuePre === "string" ? valueRef : +valueRef ?? 0)}</div>
             </div>
             `;
             loopCounter++;
@@ -793,6 +794,22 @@ const megaParsingFuckery = {
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>
+        </div>
+        `;
+    },
+    "Active: Fast-Forward Animations"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "invertCondition",
+            // "target",
+
+            // "action",
+            // "valueList",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Active: Fast-Forward Animations");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}${parseRef.invertCondition ? " [NOT]" : ""}</div>
         </div>
         `;
     },
@@ -1541,9 +1558,10 @@ const megaParsingFuckery = {
     "Adjust Target Stats"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
-            "on",
-            "statName",
-            "value",
+            "modifiedValuesArray",
+            // "on",
+            // "statName",
+            // "value",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Adjust Target Stats");
 
@@ -1553,11 +1571,26 @@ const megaParsingFuckery = {
         // const finalAdjustment = parseRef.function ? functionAdjustments[parseRef.function] : "=";
         // if (!finalAdjustment) {throw new Error(`Unknown function key in Define Modifier Variable: ${parseRef.function}`)}
 
+
+        let lightconeStatRow = "";
+        if (parseRef.modifiedValuesArray && parseRef.modifiedValuesArray.length) {
+            const pseudoStatsObject = {};
+            for (let statEntry of parseRef.modifiedValuesArray) {
+                pseudoStatsObject[`<span>${statEntry.on}: </span> ${statEntry.statName}`] = statEntry.value ?? 0;
+            }
+
+            const menuBoxDisplayOrder = Object.keys(pseudoStatsObject);
+            lightconeStatRow = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,pseudoStatsObject);
+        }
+
         // initialCounter++;
         return `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">Adjust Target Stats:</div>&nbsp;
-            ${parseRef.statName} (${parseRef.value?.displayLines ?? parseRef.value}) on ${parseRef.on}
-        </div>`;
+            <div class="rotationConditionOperatorHeaderInline">Adjust Target Stats:</div>
+        </div>
+        ${lightconeStatRow  ? `<div class="actionDetailBody2BattleEventOverrides">
+            <div class="rotationConditionOperatorHeaderInline">Stat Changes:</div>&nbsp;
+            ${lightconeStatRow}
+        </div>` : ""}`;
     },
     "Stack Target Resistance"(parseRef,initialCounter) {
         const knownKeySet = new Set ([

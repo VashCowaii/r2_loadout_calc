@@ -54,16 +54,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.24) || RETURN",
-                        "displayLines": "0.24",
-                        "constants": [],
-                        "variables": [
-                          0.24
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                          "value": "0.24"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -3542,17 +3539,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryPEN</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(MDF_PropertyValue * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue",
-                          "MDF_Layer"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceImaginaryPEN</span>&nbsp;",
+                          "value": "(MDF_PropertyValue * MDF_Layer)"
+                        }
+                      ]
                     }
                   ]
                 }

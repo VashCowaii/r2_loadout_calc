@@ -122,16 +122,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.08) || RETURN",
-                            "displayLines": "0.08",
-                            "constants": [],
-                            "variables": [
-                              0.08
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                              "value": "0.08"
+                            }
+                          ]
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -152,16 +149,13 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.08) || RETURN",
-                        "displayLines": "0.08",
-                        "constants": [],
-                        "variables": [
-                          0.08
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                          "value": "0.08"
+                        }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",

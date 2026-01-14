@@ -158,8 +158,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": "Owner of this Modifier",
@@ -204,8 +204,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFFlat</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": "Owner of this Modifier",
@@ -250,8 +250,8 @@ const compositeAbilityObject = {
               "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;",
               "valueRanges": [
                 {
-                  "name": "Changes",
-                  "execute": [
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": "Owner of this Modifier",

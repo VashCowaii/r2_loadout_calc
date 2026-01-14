@@ -45,16 +45,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (LC_23040_PropertyValue) || INVERT || RETURN",
-                    "displayLines": "-LC_23040_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "LC_23040_PropertyValue"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-LC_23040_PropertyValue"
+                    }
+                  ]
                 }
               ]
             }
@@ -74,16 +71,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_DefenceAddedRatio) || INVERT || RETURN",
-                    "displayLines": "-MDF_DefenceAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_DefenceAddedRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                      "value": "-MDF_DefenceAddedRatio"
+                    }
+                  ]
                 }
               ]
             }

@@ -1026,16 +1026,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.15) || RETURN",
-                        "displayLines": "0.15",
-                        "constants": [],
-                        "variables": [
-                          0.15
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.15"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1154,16 +1151,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.3) || INVERT || RETURN",
-                        "displayLines": "-0.3",
-                        "constants": [],
-                        "variables": [
-                          0.3
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "-0.3"
+                        }
+                      ]
                     }
                   ]
                 }

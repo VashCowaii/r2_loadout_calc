@@ -88,17 +88,13 @@ const configAbility = {
                     },
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.08) || INVERT || Variables[1] (MDF_Layer) || MUL || RETURN",
-                        "displayLines": "(-0.08 * MDF_Layer)",
-                        "constants": [],
-                        "variables": [
-                          0.08,
-                          "MDF_Layer"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "(-0.08 * MDF_Layer)"
+                        }
+                      ]
                     },
                     {
                       "name": "Remove Events/Bonuses",

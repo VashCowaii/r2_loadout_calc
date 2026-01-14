@@ -266,16 +266,13 @@ const configAbility = {
           "execute": [
             {
               "name": "Adjust Target Stats",
-              "on": "Attacker",
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (SkillRank_Rank04_P1_DamagePercentage) || RETURN",
-                "displayLines": "SkillRank_Rank04_P1_DamagePercentage",
-                "constants": [],
-                "variables": [
-                  "SkillRank_Rank04_P1_DamagePercentage"
-                ]
-              }
+              "modifiedValuesArray": [
+                {
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": "SkillRank_Rank04_P1_DamagePercentage"
+                }
+              ]
             }
           ]
         }

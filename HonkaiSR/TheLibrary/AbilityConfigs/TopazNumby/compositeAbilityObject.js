@@ -1453,16 +1453,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.15) || RETURN",
-                        "displayLines": "0.15",
-                        "constants": [],
-                        "variables": [
-                          0.15
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.15"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -3209,16 +3206,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue1_DamageAdd) || RETURN",
-                        "displayLines": "MDF_PropertyValue1_DamageAdd",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue1_DamageAdd"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue1_DamageAdd"
+                        }
+                      ]
                     },
                     {
                       "name": "IF",
@@ -3229,17 +3223,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue4_InsertCriticalDamageAddLayer) || Variables[1] (MDF_PropertyValue3_InsertCriticalDamageAddRatio) || MUL || RETURN",
-                            "displayLines": "(MDF_PropertyValue4_InsertCriticalDamageAddLayer * MDF_PropertyValue3_InsertCriticalDamageAddRatio)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
-                              "MDF_PropertyValue3_InsertCriticalDamageAddRatio"
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                              "value": "(MDF_PropertyValue4_InsertCriticalDamageAddLayer * MDF_PropertyValue3_InsertCriticalDamageAddRatio)"
+                            }
+                          ]
                         }
                       ]
                     }

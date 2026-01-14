@@ -81,33 +81,25 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.12) || Constants[0] (2) || MUL || RETURN",
-                            "displayLines": "(0.12 * 2)",
-                            "constants": [
-                              2
-                            ],
-                            "variables": [
-                              0.12
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                              "value": "(0.12 * 2)"
+                            }
+                          ]
                         }
                       ],
                       "failed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.12) || RETURN",
-                            "displayLines": "0.12",
-                            "constants": [],
-                            "variables": [
-                              0.12
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                              "value": "0.12"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -140,33 +132,25 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Adjust Target Stats",
-                              "on": "Attacker",
-                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                              "value": {
-                                "operator": "Variables[0] (0.08) || Constants[0] (2) || MUL || RETURN",
-                                "displayLines": "(0.08 * 2)",
-                                "constants": [
-                                  2
-                                ],
-                                "variables": [
-                                  0.08
-                                ]
-                              }
+                              "modifiedValuesArray": [
+                                {
+                                  "on": "Attacker",
+                                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                                  "value": "(0.08 * 2)"
+                                }
+                              ]
                             }
                           ],
                           "failed": [
                             {
                               "name": "Adjust Target Stats",
-                              "on": "Attacker",
-                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                              "value": {
-                                "operator": "Variables[0] (0.08) || RETURN",
-                                "displayLines": "0.08",
-                                "constants": [],
-                                "variables": [
-                                  0.08
-                                ]
-                              }
+                              "modifiedValuesArray": [
+                                {
+                                  "on": "Attacker",
+                                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                                  "value": "0.08"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -270,16 +254,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }

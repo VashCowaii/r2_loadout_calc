@@ -46,17 +46,13 @@ const configAbility = {
             },
             {
               "name": "Adjust Target Stats",
-              "on": "Attacker",
-              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-              "value": {
-                "operator": "Variables[0] (0.04) || Variables[1] (_WeakCount) || MUL || RETURN",
-                "displayLines": "(0.04 * _WeakCount)",
-                "constants": [],
-                "variables": [
-                  0.04,
-                  "_WeakCount"
-                ]
-              }
+              "modifiedValuesArray": [
+                {
+                  "on": "Attacker",
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": "(0.04 * _WeakCount)"
+                }
+              ]
             }
           ]
         }

@@ -66,16 +66,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_TotalDotDamageAddRatio) || RETURN",
-                    "displayLines": "MDF_TotalDotDamageAddRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_TotalDotDamageAddRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                      "value": "MDF_TotalDotDamageAddRatio"
+                    }
+                  ]
                 }
               ]
             }

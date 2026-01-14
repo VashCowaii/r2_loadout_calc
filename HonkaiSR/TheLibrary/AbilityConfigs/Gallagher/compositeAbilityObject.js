@@ -1241,16 +1241,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_BreakDamagTaken) || RETURN",
-                        "displayLines": "MDF_BreakDamagTaken",
-                        "constants": [],
-                        "variables": [
-                          "MDF_BreakDamagTaken"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_BreakDamagTaken"
+                        }
+                      ]
                     }
                   ]
                 }

@@ -134,16 +134,13 @@ const configAbility = {
                 },
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MAvatar_Serval_00_Rank06_ShowRatio) || RETURN",
-                    "displayLines": "MAvatar_Serval_00_Rank06_ShowRatio",
-                    "constants": [],
-                    "variables": [
-                      "MAvatar_Serval_00_Rank06_ShowRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MAvatar_Serval_00_Rank06_ShowRatio"
+                    }
+                  ]
                 }
               ]
             }

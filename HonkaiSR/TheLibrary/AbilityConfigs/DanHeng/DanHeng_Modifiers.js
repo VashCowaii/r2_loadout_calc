@@ -37,16 +37,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (DanHeng_PassivePene) || RETURN",
-                    "displayLines": "DanHeng_PassivePene",
-                    "constants": [],
-                    "variables": [
-                      "DanHeng_PassivePene"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
+                      "value": "DanHeng_PassivePene"
+                    }
+                  ]
                 }
               ]
             }

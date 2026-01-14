@@ -572,16 +572,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.15) || RETURN",
-                    "displayLines": "0.15",
-                    "constants": [],
-                    "variables": [
-                      0.15
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "0.15"
+                    }
+                  ]
                 }
               ]
             }

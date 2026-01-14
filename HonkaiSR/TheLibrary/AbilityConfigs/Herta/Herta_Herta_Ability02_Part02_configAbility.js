@@ -112,32 +112,25 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.2) || Variables[1] (0.25) || ADD || RETURN",
-                        "displayLines": "(0.2 + 0.25)",
-                        "constants": [],
-                        "variables": [
-                          0.2,
-                          0.25
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "(0.2 + 0.25)"
+                        }
+                      ]
                     }
                   ],
                   "failed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.2) || RETURN",
-                        "displayLines": "0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.2"
+                        }
+                      ]
                     }
                   ]
                 }

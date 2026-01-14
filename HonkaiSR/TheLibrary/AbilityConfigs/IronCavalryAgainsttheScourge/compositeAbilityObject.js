@@ -46,32 +46,25 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue1) || INVERT || Variables[1] (MDF_PropertyValue2) || SUB || RETURN",
-                            "displayLines": "(-MDF_PropertyValue1 - MDF_PropertyValue2)",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue1",
-                              "MDF_PropertyValue2"
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Defender",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                              "value": "(-MDF_PropertyValue1 - MDF_PropertyValue2)"
+                            }
+                          ]
                         }
                       ],
                       "failed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (MDF_PropertyValue1) || INVERT || RETURN",
-                            "displayLines": "-MDF_PropertyValue1",
-                            "constants": [],
-                            "variables": [
-                              "MDF_PropertyValue1"
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Defender",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                              "value": "-MDF_PropertyValue1"
+                            }
+                          ]
                         }
                       ]
                     }

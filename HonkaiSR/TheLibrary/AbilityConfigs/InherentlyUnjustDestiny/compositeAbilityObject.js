@@ -45,16 +45,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Defender",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                    "displayLines": "MDF_PropertyValue",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Defender",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                      "value": "MDF_PropertyValue"
+                    }
+                  ]
                 }
               ]
             }
@@ -195,16 +192,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Defender",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.1) || RETURN",
-                            "displayLines": "0.1",
-                            "constants": [],
-                            "variables": [
-                              0.1
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Defender",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                              "value": "0.1"
+                            }
+                          ]
                         },
                         {
                           "name": "Define Custom Variable",

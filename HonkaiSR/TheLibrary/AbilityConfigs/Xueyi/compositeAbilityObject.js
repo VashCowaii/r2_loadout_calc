@@ -1538,16 +1538,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
-                        "displayLines": "MDF_PropertyValue",
-                        "constants": [],
-                        "variables": [
-                          "MDF_PropertyValue"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -2434,16 +2431,13 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_SkillTree02_AllDamageTypeAddedRatio) || RETURN",
-                    "displayLines": "MDF_SkillTree02_AllDamageTypeAddedRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_SkillTree02_AllDamageTypeAddedRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_SkillTree02_AllDamageTypeAddedRatio"
+                    }
+                  ]
                 }
               ]
             }
@@ -2619,16 +2613,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_AddAttackRatio) || RETURN",
-                    "displayLines": "MDF_AddAttackRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_AddAttackRatio"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "MDF_AddAttackRatio"
+                    }
+                  ]
                 }
               ]
             }

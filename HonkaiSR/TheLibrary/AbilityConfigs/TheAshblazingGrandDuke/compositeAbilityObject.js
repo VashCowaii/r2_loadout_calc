@@ -128,16 +128,13 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Adjust Target Stats",
-                              "on": "Attacker",
-                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                              "value": {
-                                "operator": "Variables[0] (0.06) || RETURN",
-                                "displayLines": "0.06",
-                                "constants": [],
-                                "variables": [
-                                  0.06
-                                ]
-                              }
+                              "modifiedValuesArray": [
+                                {
+                                  "on": "Attacker",
+                                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                                  "value": "0.06"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -166,16 +163,13 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.06) || RETURN",
-                            "displayLines": "0.06",
-                            "constants": [],
-                            "variables": [
-                              0.06
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                              "value": "0.06"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -213,17 +207,13 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (Old_Layer) || INVERT || Variables[1] (0.06) || MUL || RETURN",
-                            "displayLines": "(-Old_Layer * 0.06)",
-                            "constants": [],
-                            "variables": [
-                              "Old_Layer",
-                              0.06
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+                              "value": "(-Old_Layer * 0.06)"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -289,16 +279,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.2) || RETURN",
-                        "displayLines": "0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "0.2"
+                        }
+                      ]
                     }
                   ]
                 }

@@ -45,44 +45,35 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.1) || RETURN",
-                            "displayLines": "0.1",
-                            "constants": [],
-                            "variables": [
-                              0.1
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                              "value": "0.1"
+                            }
+                          ]
                         },
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.2) || RETURN",
-                            "displayLines": "0.2",
-                            "constants": [],
-                            "variables": [
-                              0.2
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                              "value": "0.2"
+                            }
+                          ]
                         }
                       ],
                       "failed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.1) || RETURN",
-                            "displayLines": "0.1",
-                            "constants": [],
-                            "variables": [
-                              0.1
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+                              "value": "0.1"
+                            }
+                          ]
                         }
                       ]
                     }

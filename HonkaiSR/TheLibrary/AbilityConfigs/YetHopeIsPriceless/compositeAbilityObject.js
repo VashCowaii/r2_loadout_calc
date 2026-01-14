@@ -55,16 +55,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.2) || INVERT || RETURN",
-                        "displayLines": "-0.2",
-                        "constants": [],
-                        "variables": [
-                          0.2
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "-0.2"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -195,17 +192,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (_Layer) || Variables[1] (0.12) || MUL || RETURN",
-                        "displayLines": "(_Layer * 0.12)",
-                        "constants": [],
-                        "variables": [
-                          "_Layer",
-                          0.12
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "(_Layer * 0.12)"
+                        }
+                      ]
                     }
                   ]
                 }

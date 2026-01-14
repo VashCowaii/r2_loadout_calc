@@ -39,32 +39,25 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.12) || INVERT || RETURN",
-                        "displayLines": "-0.12",
-                        "constants": [],
-                        "variables": [
-                          0.12
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+                          "value": "-0.12"
+                        }
+                      ]
                     }
                   ]
                 },
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (0.14) || Variables[1] (MDF_Layer) || MUL || RETURN",
-                    "displayLines": "(0.14 * MDF_Layer)",
-                    "constants": [],
-                    "variables": [
-                      0.14,
-                      "MDF_Layer"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "(0.14 * MDF_Layer)"
+                    }
+                  ]
                 }
               ]
             }

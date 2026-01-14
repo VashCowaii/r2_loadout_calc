@@ -66,17 +66,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Adjust Target Stats",
-                  "on": "Attacker",
-                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                  "value": {
-                    "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_DebuffCount) || MUL || RETURN",
-                    "displayLines": "(MDF_PropertyValue * _DebuffCount)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_PropertyValue",
-                      "_DebuffCount"
-                    ]
-                  }
+                  "modifiedValuesArray": [
+                    {
+                      "on": "Attacker",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                      "value": "(MDF_PropertyValue * _DebuffCount)"
+                    }
+                  ]
                 }
               ]
             }

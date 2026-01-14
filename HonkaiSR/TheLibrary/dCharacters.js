@@ -25647,6 +25647,586 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Robin": {
+    "internalID": 1309,
+    "name": "Robin",
+    "path": "Harmony",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 160,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 485.1,
+      "HPBase": 1280.664,
+      "SPDBase": 102,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130901",
+        "name": "Land of Smiles",
+        "rank": 1,
+        "desc": "While the \"Concerto\" state is active, all allies' All-Type RES PEN increases by 24%.",
+        "icon": "icon/skill/1309_rank1.png",
+        "paramsEido": [
+          0.24
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      {
+        "id": "130902",
+        "name": "Afternoon Tea For Two",
+        "rank": 2,
+        "desc": "While the Concerto state is active, all allies' SPD increases by 16%. The Talent's Energy Regeneration effect additionally increases by 1.",
+        "icon": "icon/skill/1309_rank2.png",
+        "paramsEido": [
+          0.16,
+          1
+        ]
+      },
+      {
+        "id": "130903",
+        "name": "Inverted Tuning",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nUltimate Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1309_skill.png"
+      },
+      {
+        "id": "130904",
+        "name": "Raindrop Key",
+        "rank": 4,
+        "desc": "When using the Ultimate, dispels Crowd Control debuffs from all allies. While Robin is in the \"Concerto\" state, increases the Effect RES of all allies by 50%.",
+        "icon": "icon/skill/1309_rank4.png",
+        "paramsEido": [
+          0.5
+        ],
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+          }
+        }
+      },
+      {
+        "id": "130905",
+        "name": "Lonestar's Lament",
+        "rank": 5,
+        "desc": "Basic ATK Lv. +1, up to a maximum of Lv. 10.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1309_rank5.png"
+      },
+      {
+        "id": "130906",
+        "name": "Moonless Midnight",
+        "rank": 6,
+        "desc": "While the \"Concerto\" state is active, the CRIT DMG for the Physical Additional DMG caused by the Ultimate increases by 450%. The effect of \"Moonless Midnight\" can trigger up to 8 time(s) and the trigger count resets each time the Ultimate is used.",
+        "icon": "icon/skill/1309_rank6.png",
+        "paramsEido": [
+          8,
+          4.5
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Ultimate": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Wingflip White Noise": {
+          "variant1": {
+            "skillID": 130901,
+            "trigger": "Skill01",
+            "name": "Wingflip White Noise",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Robin's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Robin_00_Skill01_Camera",
+              "Avatar_Robin_00_Skill01_Phase01",
+              "Avatar_Robin_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Pinion's Aria": {
+          "variant1": {
+            "skillID": 130902,
+            "trigger": "Skill02",
+            "name": "Pinion's Aria",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Increase DMG dealt by all allies by #1[i]%, lasting for #2[i] turn(s). This duration decreases by 1 at the start of Robin's every turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.40625,
+                3
+              ],
+              "8": [
+                0.4375,
+                3
+              ],
+              "9": [
+                0.46875,
+                3
+              ],
+              "10": [
+                0.5,
+                3
+              ],
+              "11": [
+                0.525,
+                3
+              ],
+              "12": [
+                0.55,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Robin_00_Skill02_Camera",
+              "Avatar_Robin_00_Skill02_Phase01",
+              "Avatar_Robin_00_Skill02_Phase02",
+              "Avatar_Robin_00_Skill02_FriendAttack"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Vox Harmonique, Opus Cosmique": {
+          "variant1": {
+            "skillID": 130903,
+            "trigger": "Skill03",
+            "name": "Vox Harmonique, Opus Cosmique",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Robin enters the \"Concerto\" state and makes all teammates (i.e., excluding this unit) immediately take action.\\nWhile in the \"Concerto\" state, increases all allies' ATK by #1[f1]% of Robin's ATK plus #3[i]. Moreover, after every attack by ally targets, Robin deals Physical Additional DMG equal to #4[i]% of her ATK for 1 time, with a fixed CRIT Rate for this damage set at #5[i]% and fixed CRIT DMG set at #6[i]%.\\nWhile in the \"Concerto\" state, Robin is immune to Crowd Control debuffs and cannot enter her turn or take action until the \"Concerto\" state ends.\\nA \"Concerto\" countdown appears in the Action Order. When the countdown's turn begins, Robin exits the \"Concerto\" state and immediately takes action. The countdown has its own fixed SPD of #2[i].",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.1995,
+                90,
+                143.75,
+                1.02,
+                1,
+                1.5
+              ],
+              "8": [
+                0.209,
+                90,
+                162.5,
+                1.08,
+                1,
+                1.5
+              ],
+              "9": [
+                0.2185,
+                90,
+                181.25,
+                1.14,
+                1,
+                1.5
+              ],
+              "10": [
+                0.228,
+                90,
+                200,
+                1.2,
+                1,
+                1.5
+              ],
+              "11": [
+                0.2356,
+                90,
+                215,
+                1.248,
+                1,
+                1.5
+              ],
+              "12": [
+                0.2432,
+                90,
+                230,
+                1.296,
+                1,
+                1.5
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Robin_00_Skill03_Camera",
+              "Avatar_Robin_00_Skill03_EnterReady",
+              "Avatar_Robin_00_Skill03_Phase01",
+              "Avatar_Robin_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Tonal Resonance": {
+          "variant1": {
+            "skillID": 130904,
+            "trigger": "SkillP01",
+            "name": "Tonal Resonance",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "Increase all allies' CRIT DMG by #1[f1]%. Moreover, after allies attack enemy targets, Robin additionally regenerates #2[i] Energy for herself.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.14375,
+                2
+              ],
+              "8": [
+                0.1625,
+                2
+              ],
+              "9": [
+                0.18125,
+                2
+              ],
+              "10": [
+                0.2,
+                2
+              ],
+              "11": [
+                0.215,
+                2
+              ],
+              "12": [
+                0.23,
+                2
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Robin_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Overture of Inebriation": {
+          "variant1": {
+            "skillID": 130907,
+            "trigger": "SkillMaze",
+            "name": "Overture of Inebriation",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension around the character that lasts for #1[i] seconds. Enemies within this dimension will not attack Robin and will follow Robin while the dimension is active. After entering battle while the dimension is active, Robin regenerates #2[i] Energy at the start of each wave. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                15,
+                5
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Robin_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1309_basic_atk.png",
+        "skillRef": {
+          "skillName": "Wingflip White Noise",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1309_skill.png",
+        "skillRef": {
+          "skillName": "Pinion's Aria",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1309_ultimate.png",
+        "skillRef": {
+          "skillName": "Vox Harmonique, Opus Cosmique",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1309_talent.png",
+        "skillRef": {
+          "skillName": "Tonal Resonance",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1309_technique.png",
+        "skillRef": {
+          "skillName": "Overture of Inebriation",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Coloratura Cadenza",
+        "icon": "icon/skill/1309_skilltree1.png",
+        "desc": "When the battle begins, action advances this character by #1[i]%.",
+        "params": [
+          0.25
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.25
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Impromptu Flourish",
+        "icon": "icon/skill/1309_skilltree2.png",
+        "desc": "While the \"Concerto\" state is active, the CRIT DMG dealt when all allies launch Follow-Up ATK increases by #1[i]%.",
+        "params": [
+          0.25
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.25
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Sequential Passage",
+        "icon": "icon/skill/1309_skilltree3.png",
+        "desc": "When using Skill, additionally regenerates #1[i] Energy.",
+        "params": [
+          5
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1309.png",
+    "preview": "image/character_preview/1309.png",
+    "portrait": "image/character_portrait/1309.png",
+    "bannerOffsets": [
+      -4,
+      -64,
+      0.62,
+      -4,
+      -64,
+      0.62,
+      -4,
+      -64,
+      0.62
+    ],
+    "isBuffed": false
+  },
   "Misha": {
     "internalID": 1312,
     "name": "Misha",

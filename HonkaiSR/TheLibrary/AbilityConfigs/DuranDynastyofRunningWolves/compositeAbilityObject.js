@@ -37,17 +37,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.05) || Variables[1] (_Layer) || MUL || RETURN",
-                        "displayLines": "(0.05 * _Layer)",
-                        "constants": [],
-                        "variables": [
-                          0.05,
-                          "_Layer"
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "(0.05 * _Layer)"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -193,16 +189,13 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Adjust Target Stats",
-                          "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                          "value": {
-                            "operator": "Variables[0] (0.25) || RETURN",
-                            "displayLines": "0.25",
-                            "constants": [],
-                            "variables": [
-                              0.25
-                            ]
-                          }
+                          "modifiedValuesArray": [
+                            {
+                              "on": "Attacker",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+                              "value": "0.25"
+                            }
+                          ]
                         }
                       ]
                     }

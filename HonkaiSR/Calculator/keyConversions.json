@@ -62,9 +62,11 @@
     "StatusResistanceBase": "EffectRES",
     "StatusResistance": "EffectRESSUM",
 
+    "FixedCriticalChance": "CritRateFIXED",
     "CriticalChance": "CritRateSUM",
     "CriticalChanceBase": "CritRateBase",
     "CriticalChanceConvert": "CritRateConverted",
+    "FixedCriticalDamage": "CritDamageFIXED",
     "CriticalDamage": "CritDamageSUM",
     "CriticalDamageBase": "CritDamageBase",
     "CriticalDamageConvert": "CritDamageConverted",

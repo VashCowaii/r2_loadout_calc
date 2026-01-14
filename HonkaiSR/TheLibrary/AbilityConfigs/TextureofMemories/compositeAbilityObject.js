@@ -112,16 +112,13 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Adjust Target Stats",
-                      "on": "Defender",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
-                      "value": {
-                        "operator": "Variables[0] (0.12) || RETURN",
-                        "displayLines": "0.12",
-                        "constants": [],
-                        "variables": [
-                          0.12
-                        ]
-                      }
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
+                          "value": "0.12"
+                        }
+                      ]
                     }
                   ]
                 }
