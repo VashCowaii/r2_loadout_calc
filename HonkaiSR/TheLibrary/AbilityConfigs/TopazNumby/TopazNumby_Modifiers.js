@@ -698,7 +698,7 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events/Summon)",
+                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
                     "target": "Use Prior Target(s) Defined",
                     "mustBeAlive2": true
                   },

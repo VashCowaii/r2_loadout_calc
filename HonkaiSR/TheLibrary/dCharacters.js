@@ -30311,6 +30311,965 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Trailblazer - Remembrance": {
+    "internalID": 8007,
+    "name": "Trailblazer - Remembrance",
+    "path": "Remembrance",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 160,
+    "baseStats": {
+      "ATKBase": 543.312,
+      "DEFBase": 630.6300000000001,
+      "HPBase": 1047.816,
+      "SPDBase": 103,
+      "CritRateSUM": 0.05,
+      "CritDamageSUM": 0.5,
+      "AggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "800701",
+        "name": "Narrator of the Present",
+        "rank": 1,
+        "desc": "Increases the CRIT Rate of ally targets with \"Mem's Support\" by 10%. When an ally target has \"Mem's Support,\" the effect of \"Mem's Support\" also applies to the target's memosprite/memomaster. This effect cannot stack.",
+        "icon": "icon/skill/8007_rank1.png",
+        "paramsEido": [
+          0.1
+        ]
+      },
+      {
+        "id": "800702",
+        "name": "Gleaner of the Past",
+        "rank": 2,
+        "desc": "When ally memosprites (aside from Mem) take action, Trailblazer regenerates 8 Energy. This effect can trigger a max of 1 time(s) per turn. The trigger count resets at the start of Trailblazer's turn.",
+        "icon": "icon/skill/8007_rank2.png",
+        "paramsEido": [
+          8,
+          1
+        ]
+      },
+      {
+        "id": "800703",
+        "name": "Chanter of the Future",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/8007_skill.png"
+      },
+      {
+        "id": "800704",
+        "name": "Dancer of the Muse",
+        "rank": 4,
+        "desc": "When an ally target with 0 Max Energy actively uses an ability, Mem can also gain 3% Charge, and the multiplier of the True DMG dealt by this target via \"Mem's Support\" additionally increases by 6%.",
+        "icon": "icon/skill/8007_rank4.png",
+        "paramsEido": [
+          0.03,
+          0.06
+        ]
+      },
+      {
+        "id": "800705",
+        "name": "Seamster of the Ode",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/8007_ultimate.png"
+      },
+      {
+        "id": "800706",
+        "name": "Bearer of the Revelation",
+        "rank": 6,
+        "desc": "Ultimate's CRIT Rate is set at 100%.",
+        "icon": "icon/skill/8007_rank6.png",
+        "paramsEido": [
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2,
+        "Memosprite Talent": 1
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Memosprite Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Leave It to Me!": {
+          "variant1": {
+            "skillID": 800701,
+            "trigger": "Skill01",
+            "name": "Leave It to Me!",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Trailblazer's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_30_Skill01_Camera",
+              "Avatar_PlayerBoy_30_Skill01_Phase01",
+              "Avatar_PlayerBoy_30_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Together, We Script Tomorrow!": {
+          "variant1": {
+            "skillID": 800708,
+            "trigger": "Skill11",
+            "name": "Together, We Script Tomorrow!",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Consumes 1 stack of \"Epic\" to dispel all Crowd Control debuffs on Mem. Trailblazer and Mem launch a Joint ATK, dealing Ice DMG to all enemies equal to #1[i]% of Trailblazer's ATK and #2[i]% of Mem's ATK respectively. Then, Mem gains #3[i]% Charge.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "6": [
+                1.2,
+                1.2,
+                0.1
+              ],
+              "7": [
+                1.32,
+                1.32,
+                0.1
+              ],
+              "8": [
+                1.44,
+                1.44,
+                0.1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_30_Skill11_Camera",
+              "Avatar_PlayerBoy_30_Skill11_Phase01",
+              "Avatar_PlayerBoy_30_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              },
+              "Joint Attack": {
+                "desc": "Multiple targets respectively use attacks on enemy targets in one action."
+              }
+            }
+          }
+        }
+      },
+      "Skill": {
+        "I Choose You!": {
+          "variant1": {
+            "skillID": 800702,
+            "trigger": "Skill02",
+            "name": "I Choose You!",
+            "type": "Summon",
+            "slot": "Skill",
+            "desc": "Summons the memosprite Mem. If Mem is already on the field, restores Mem's HP by an amount equal to #1[i]% of Mem's Max HP, and grants Mem #2[i]% Charge.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                0.4875,
+                0.1
+              ],
+              "8": [
+                0.525,
+                0.1
+              ],
+              "9": [
+                0.5625,
+                0.1
+              ],
+              "10": [
+                0.6,
+                0.1
+              ],
+              "11": [
+                0.63,
+                0.1
+              ],
+              "12": [
+                0.66,
+                0.1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_30_Skill02_Camera",
+              "Avatar_PlayerBoy_30_Skill02_Phase01",
+              "Avatar_PlayerBoy_30_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          },
+          "variant2": {
+            "skillID": 800709,
+            "trigger": "Skill21",
+            "name": "I Choose You!",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Summons the memosprite Mem. If Mem is already on the field, restores Mem's HP, and grants Mem Charge.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": [],
+              "11": [],
+              "12": []
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_30_Skill21_Phase01",
+              "Avatar_PlayerBoy_30_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Together, Mem!": {
+          "variant1": {
+            "skillID": 800703,
+            "trigger": "Skill03",
+            "name": "Together, Mem!",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Summons memosprite Mem. Grants Mem #2[i]% Charge, then makes Mem deal Ice DMG equal to #1[i]% of Mem's ATK to all enemies.",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                1.95,
+                0.4
+              ],
+              "8": [
+                2.1,
+                0.4
+              ],
+              "9": [
+                2.25,
+                0.4
+              ],
+              "10": [
+                2.4,
+                0.4
+              ],
+              "11": [
+                2.52,
+                0.4
+              ],
+              "12": [
+                2.64,
+                0.4
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_30_Skill03_Camera",
+              "Avatar_PlayerBoy_30_Skill03_EnterReady",
+              "Avatar_PlayerBoy_30_Skill03_Phase01",
+              "Avatar_PlayerBoy_30_Skill03_Phase02",
+              "Avatar_PlayerBoy_30_Skill03_Phase02_Charge"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Almighty Companion": {
+          "variant1": {
+            "skillID": 800704,
+            "trigger": "SkillP01",
+            "name": "Almighty Companion",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Memosprite Mem has an initial SPD of #1[i] and a Max HP equal to #2[i]% of Trailblazer's Max HP plus #4[i]. For every #3[i] Energy regenerated by all allies in total, Mem gains 1% Charge.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "7": [
+                130,
+                0.6875,
+                10,
+                550
+              ],
+              "8": [
+                130,
+                0.725,
+                10,
+                580
+              ],
+              "9": [
+                130,
+                0.7625,
+                10,
+                610
+              ],
+              "10": [
+                130,
+                0.8,
+                10,
+                640
+              ],
+              "11": [
+                130,
+                0.83,
+                10,
+                664
+              ],
+              "12": [
+                130,
+                0.86,
+                10,
+                688
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_30_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Memories Back as Echoes": {
+          "variant1": {
+            "skillID": 800707,
+            "trigger": "SkillMaze",
+            "name": "Memories Back as Echoes",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that lasts for #1[i] second(s). Enemies within the Special Dimension are placed in a Time Stop state, halting all their actions.\\nAfter entering battle against enemies afflicted with the Time Stop state, delays the action of all enemies by #2[i]%, and then deals Ice DMG to all enemies equal to #3[i]% of Trailblazer's ATK.\\nOnly 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0.5,
+                1
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_30_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Baddies! Trouble!": {
+          "variant1": {
+            "skillID": 1800701,
+            "trigger": "Skill01",
+            "name": "Baddies! Trouble!",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Deals #2[i] instance(s) of DMG, with each instance dealing Ice DMG equal to #1[f1]% of Mem's ATK to one random enemy. At the end, deals Ice DMG equal to #3[i]% of Mem's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 15,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                0.36,
+                4,
+                0.9
+              ],
+              "7": [
+                0.396,
+                4,
+                0.99
+              ],
+              "8": [
+                0.432,
+                4,
+                1.08
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_PlayerBoyServant_30_Skill01_Phase01",
+              "Servant_PlayerBoyServant_30_Skill01_Phase02",
+              "Servant_PlayerBoyServant_30_Skill01_Camera",
+              "Servant_PlayerBoyServant_30_Skill01_Camera_Charm"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Lemme! Help You!": {
+          "variant1": {
+            "skillID": 1800707,
+            "trigger": "Skill11",
+            "name": "Lemme! Help You!",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Advances the action of one designated ally by #3[i]% and grants them \"Mem's Support,\" lasting for #2[i] turn(s).\\nFor every 1 instance of DMG dealt by a target that has \"Mem's Support,\" additionally deals 1 instance of True DMG equal to #1[i]% of the original DMG.\\nWhen using this ability on this unit, cannot trigger the action advance effect.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                0.28,
+                3,
+                1
+              ],
+              "7": [
+                0.3,
+                3,
+                1
+              ],
+              "8": [
+                0.32,
+                3,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_PlayerBoyServant_30_Skill11_Entry",
+              "Servant_PlayerBoyServant_30_Skill11_Entry_Camera",
+              "Servant_PlayerBoyServant_30_Skill11_Phase01",
+              "Servant_PlayerBoyServant_30_Skill11_Phase02",
+              "Servant_PlayerBoyServant_30_Skill11_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "True DMG": {
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+              }
+            }
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Friends! Together!": {
+          "variant1": {
+            "skillID": 1800703,
+            "trigger": "SkillP01",
+            "name": "Friends! Together!",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "Increases all allies' CRIT DMG by an amount equal to #1[f1]% of Mem's CRIT DMG plus #2[f1]%.\\nIf the Charge has yet to reach 100%, Mem automatically uses \"Baddies! Trouble!\" when taking action. When the Charge reaches 100%, Mem immediately takes action. In the next action, can select one ally and use \"Lemme! Help You!\".",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                0.12,
+                0.24
+              ],
+              "7": [
+                0.132,
+                0.264
+              ],
+              "8": [
+                0.144,
+                0.288
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_PlayerBoyServant_30_PassiveSkill01",
+              "Servant_PlayerBoyServant_30_Skill03_Phase02",
+              "Servant_PlayerBoyServant_30_Skill11_Together"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Go, Mem, Go!": {
+          "variant1": {
+            "skillID": 1800705,
+            "trigger": "SkillP03",
+            "name": "Go, Mem, Go!",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When Mem is summoned, immediately gains #1[i]% Charge.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.5
+              ],
+              "8": [
+                0.5
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_PlayerBoyServant_30_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "No... Regrets": {
+          "variant1": {
+            "skillID": 1800706,
+            "trigger": "SkillP04",
+            "name": "No... Regrets",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When Mem disappears, Trailblazer's action advances by #1[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "6": [
+                0.25
+              ],
+              "7": [
+                0.25
+              ],
+              "8": [
+                0.25
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_PlayerBoyServant_30_DeathRattle"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/8007_basic_atk.png",
+        "skillRef": {
+          "skillName": "Leave It to Me!",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/8007_skill.png",
+        "skillRef": {
+          "skillName": "I Choose You!",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/8007_ultimate.png",
+        "skillRef": {
+          "skillName": "Together, Mem!",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/8007_talent.png",
+        "skillRef": {
+          "skillName": "Almighty Companion",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/8007_technique.png",
+        "skillRef": {
+          "skillName": "Memories Back as Echoes",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Rhapsode's Scepter",
+        "icon": "icon/skill/8007_skilltree1.png",
+        "desc": "When the battle starts, Trailblazer's action advances by #1[i]%. When Mem is first summoned, grants Mem #2[i]% Charge.",
+        "params": [
+          0.3,
+          0.4
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.3,
+              0.4
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Petite Parable",
+        "icon": "icon/skill/8007_skilltree2.png",
+        "desc": "When using \"Baddies! Trouble!,\" Mem immediately gains #1[i]% Charge.",
+        "params": [
+          0.05
+        ]
+      },
+      "Point08": {
+        "name": "Magnets and Long Chains",
+        "icon": "icon/skill/8007_skilltree3.png",
+        "desc": "When the Max Energy of an ally target that has \"Mem's Support\" exceeds #1[i], for every #2[i] excess Energy, additionally increases the multiplier of the True DMG dealt via \"Mem's Support\" by #3[i]%, up to a max increase of #4[i]%.",
+        "params": [
+          100,
+          10,
+          0.02,
+          0.2
+        ],
+        "extraEffects": {
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack.",
+            "params": [
+              100,
+              10,
+              0.02,
+              0.2
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point19": {
+        "name": "Baddies! Trouble!",
+        "icon": "icon/skill/8007_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Baddies! Trouble!",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Friends! Together!",
+        "icon": "icon/skill/8007_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Friends! Together!",
+          "skillSlot": "Memosprite Talent"
+        }
+      },
+      "Point21": {
+        "name": "Unfinished Epilogue",
+        "icon": "icon/skill/8007_basic_atk2.png",
+        "desc": "After using Ultimate, gains 1 stack of \"Epic,\" up to #1[i] stacks. When this unit has \"Epic\" and Mem is on the field, Basic ATK gets enhanced to \"Together, We Script Tomorrow!\"",
+        "params": [
+          2
+        ]
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/8007.png",
+    "preview": "image/character_preview/8007.png",
+    "portrait": "image/character_portrait/8007.png",
+    "bannerOffsets": [],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 100
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 18007,
+    "summonName": "Mem"
+  },
   "Saber": {
     "internalID": 1014,
     "name": "Saber",
