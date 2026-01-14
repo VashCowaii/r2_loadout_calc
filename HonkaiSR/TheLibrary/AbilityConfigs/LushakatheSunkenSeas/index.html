@@ -97,15 +97,170 @@
 
 
         <div class="mainGridRow" style="display: flex;width: 100%;">
+
+          <div class="libraryCharacterDataHeaderBox">
+            <div class="libraryCharacterDataHeader">
+
+
+                <div class="actionDetailHeaderRowCharacterImageAndEnergyBox">
+                    <img src="" class="actionDetailHeaderRowCharacterImage" id="libraryCharacterHeaderPreview">
+
+                    <img src="/HonkaiSR/icon/deco/Star5.png" class="lighconeStarRatingRow" id="characterStarRatingImage">
+
+                </div>
+
+
+
+              
+              <div class="libraryCharacterDataHeaderCharNameBox" id="libraryCharacterDataHeaderCharName">
+                <div class="libraryCharacterDataHeaderCharName" id="libraryCharacterDataHeaderCharName">
+                  <div class="characterDisplayElementBox">
+                    <img src="/HonkaiSR/icon/element/Wind.png" class="characterDisplayElement" id="characterDisplayElement">
+                  </div>
+                  <div class="libraryCharacterDataHeaderCharNameInner" id="characterName"></div>
+                </div>
+
+                <div class="characterDisplayPathAndNameBoxRowHolder" id="characterDisplayPathAndNameBoxRowHolder">
+                  <div class="characterDisplayPathAndNameBoxExtra">
+                    <div class="characterDisplayPathImageBox">
+                        <img src="/HonkaiSR/icon/path/DestructionSmall.png" class="characterDisplayPathImage" id="characterDisplayPathImage">
+                    </div>
+                    <div class="characterDisplayPathNameBoxExtra" id="characterDisplayPathName">Destruction</div>
+                  </div>
+                </div>
+                
+                <div class="menuSwitcherBarTopBox scrollHolderHorizontal">
+                  <!-- <div class="characterSelectionsOverview scrollHolderHorizontalBody"> -->
+                  <div class="menuSwitcherBarTopBox scrollHolderHorizontalBody" id="menuSwitcherBarTopBox">
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton1" onclick="userTriggers.updateMainMenuDisplayed(1)" style="color: rgb(255, 219, 145); opacity: 1; background-color: rgba(255, 255, 255, 0.1);">Event-Reader</div>
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton2" onclick="userTriggers.updateMainMenuDisplayed(2)" style="color: white; opacity: 0.75;">Overview</div>
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton3" onclick="userTriggers.updateMainMenuDisplayed(3)" style="color: white; opacity: 0.75;">Traces</div>
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton4" onclick="userTriggers.updateMainMenuDisplayed(4)" style="color: white; opacity: 0.75;">Eidolons</div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="mainBodyRowOrColumn" id="mainBodyRowOrColumn">
+            <div class="eventReaderControlsBox" id="eventReaderControlsBox"></div>
             <div class="eventBodyMainBox" id="eventBodyMainBox"></div>
+          </div>
+
+
+
+
+
+
+          <div class="expandedDataHolderHolderBox" id="teamBoxMainHolderBox">
+
+
+            <div class="characterMainCenterDisplay expandedMiddle">
+
+                <div class="characterMainCenterDisplayOverviewHolderBox" id="characterMainCenterDisplayOverview">
+                    <div class="skillsMainBoxHolder" id="overviewMainBoxHolder">
+
+                    </div>
+                </div>
+
+                <div class="centerDisplayHolderBox" id="characterMainCenterDisplayTraces" style="display: none;">
+                    <div class="traceMainBoxHolder" id="traceMainBoxHolder"></div>
+                    
+
+                    <div class="centerDisplayHolderBoxTraceSummary" id="characterMainCenterDisplayTracesSummary">
+                        asdf
+                    </div>
+                </div>
+
+                <div class="centerDisplayHolderBox" id="characterMainCenterDisplayEidolons" style="display: none; border: none;flex-direction: column;">
+                    <div class="eidolonsMainBoxHolder" id="eidolonsMainBoxHolder"></div>
+                </div>
+                
+            </div>
+
+            <div class="characterSummaryStats expandedQuarters" id="expandedQuarterRight">
+
+
+
+              <div class="characterBasicMenuStatsBox" id="mainStatsDisplayOverview">
+                      
+                <div class="characterDisplayNameAndElement">
+                    <div class="characterDisplayNameBox">Base Stats</div>
+                </div>
+
+
+
+                <div class="characterDisplayAscension"></div>
+                <div class="characterDisplayLevel"></div>
+                <div class="characterDisplayStatsAndAbility"></div>
+                <div class="characterDisplayStatsBasic" id="characterDisplayStatsBasic">
+                    <div class="imageRowStatisticBox1">
+                        <div class="imageRowStatisticImageBox"></div>
+                        <div class="imageRowStatisticNameBox"></div>
+                        <div class="imageRowStatisticStatBox"></div>
+
+                    </div>
+                    <div class="imageRowStatisticBox2">test</div>
+                </div>
+
+            </div>
+
+
+                <!-- TRACES -->
+                <div class="characterBasicMenuStatsBox" id="mainStatsDisplayTraces" style="display: none;">
+                    <div class="traceTypeDisplayBox">
+                        <div class="traceTypeDisplay" id="traceAttackType"></div>
+                    </div>
+                    <div class="traceContentBodyBox" id="traceContentBodyBox"></div>
+                </div>
+
+
+                <!-- EIDOLONS -->
+                <div class="characterBasicMenuStatsBox" id="mainStatsDisplayEidolons" style="display: none;">
+                    <!-- <div class="traceContentBodyBox" id="eidolonContentBodyBox"></div> -->
+
+                    <div class="characterDisplayNameAndElement">
+                        <div class="characterDisplayNameBox">Eidolon Rank</div>
+                    </div>
+                    
+                    <div class="eidolonRankRowHolder">
+                        <div class="eidolonRankHolderbox">
+                            <div class="superimpositionButton clickable" id="eidolonRankButton0" onclick="userTriggers.updateEidolonRank(0)">0</div>
+                            <div class="superimpositionButton clickable" id="eidolonRankButton1" onclick="userTriggers.updateEidolonRank(1)">1</div>
+                            <div class="superimpositionButton clickable" id="eidolonRankButton2" onclick="userTriggers.updateEidolonRank(2)">2</div>
+                            <div class="superimpositionButton clickable" id="eidolonRankButton3" onclick="userTriggers.updateEidolonRank(3)">3</div>
+                            <div class="superimpositionButton clickable" id="eidolonRankButton4" onclick="userTriggers.updateEidolonRank(4)">4</div>
+                            <div class="superimpositionButton clickable" id="eidolonRankButton5" onclick="userTriggers.updateEidolonRank(5)">5</div>
+                            <div class="superimpositionButton clickable" id="eidolonRankButton6" onclick="userTriggers.updateEidolonRank(6)">6</div>
+                        </div>
+                    </div>
+
+                    <div class="characterDisplayNameBox"></div>
+
+                    <div class="characterDisplayPathAndNameBox">
+                        <div class="characterDisplayPathNameBox">Bonus Levels</div>
+                    </div>
+                    
+                    <div class="rightDescriptionBox" id="eidolonLevelBonuses"></div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        
-    
 
-    </div>
-    <footer class="generalFooter" id="footerPlaceholder"></footer>
+
+      </div>
+
+      
+  
+
+  </div>
+  <footer class="generalFooter" id="footerPlaceholder"></footer>
 </div>
 
 
@@ -123,7 +278,7 @@
 <script src="dRelics.js"></script>
 <script src="dRelicSets.js"></script> -->
 
-<!-- <script src="/HonkaiSR/Calculator/statList.js"></script> -->
+<script src="/HonkaiSR/Calculator/statListData.js"></script>
 <!-- <script src="wavePresets.js"></script> -->
 <!-- <script src="formulas.js"></script> -->
 <!-- <script src="globalRecords.js"></script> -->
@@ -135,34 +290,7 @@
 <script src="/MainJS/Tooltips/tooltips.js"></script> <!-- generalized tooltip handling -->
 
 
-
-<!-- <script src="/HonkaiSR/Calculator/tester.js"></script> -->
-
-<!-- <script src="su_Maslow.js"></script> -->
-<!-- <script src="suffering4Analytics.js"></script> -->
-<!-- <script src="suffering3Gear.js"></script> -->
-<!-- <script src="suffering2Char.js"></script> -->
-<!-- <script src="t_combos.js"></script> -->
-<!-- <script src="suffering1Sim.js"></script> -->
-<!-- <script src="testerValues.js"></script> -->
-<!-- <script src="tester.js"></script> -->
-<!-- <script src="pagePopulation.js"></script> -->
-
-
-<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill01.js"></script> -->
-<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill11.js"></script> -->
-<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Skill02.js"></script> -->
 <script src="compositeAbilityObject.js"></script>
-
-<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_SkillP01.js"></script> -->
-<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_SkillMaze.js"></script> -->
-
-
-<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Modifiers.js"></script> -->
-<!-- <script src="/HonkaiSR/TheLibrary/AbilityConfigs/configAbility_Saber_Functions.js"></script> -->
-
-
-
 
 <script src="/HonkaiSR/TheLibrary/newTester.js"></script>
 

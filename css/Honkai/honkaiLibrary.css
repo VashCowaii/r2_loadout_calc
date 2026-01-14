@@ -4,6 +4,15 @@
 }
 
 
+.smallFont,.actionDetailBody,.actionDetailBodyCenterTags,.totalHealingValueBoss,.actionDetailBodyDetailExpandHeader,.buffShieldHealthValueDisplay,.actionDetailBodyBuffSource,.actionDetailBodyInner,
+.traceContentBodyBoxRotations,.buffToughnessHealthValueDisplay,.turnOrderDisplayPreviewActionExpandRow,.analyticsResultRowDMG,.queryBarGainText,.characterDisplayEnemyLineupBarHeader,.filtersQuarterDescription,.filtersTagName,.filterTagsContainer,
+.filtersQuarterDescriptionDarkRow,.importCharacterBoxHeader,.characterSearchButtonOptimize,.comboDebugWindow,.statsRowName,.traceContentBodyBoxRotationsWarning,.rowSummaryDMGNameAndPercentACTIONBAR,.rowSummaryDMGNameAndPercentACTIONBARGained,
+.rowSummaryDMGNameAndPercentACTIONBARSpent,.statFiltersRowContainerSubstatsTrashRow,.imageRowStatisticNameBoxDMGDetails,.rotationConditionOperatorHeaderInlineParams,.eidolonRowNameTrigger,.traceToughnessTitleBoxToughnessRow,
+.traitLevelDisplay,.imageRowStatisticStatBoxDETAILS {
+    font-family: "Montserrat-Light";
+}
+
+
 div {
     color: white;
 }
@@ -245,14 +254,14 @@ div {
 .eventCharacterFileHeader {
     /* width: 100%; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     /* margin-left: 5px;
     margin-top: 5px; */
     margin: 5px;
-    max-width: 250px;
+    /* max-width: 250px; */
 }
 .eventCharacterFileIcon {
     z-index: 1;
@@ -306,6 +315,23 @@ div {
     background-color: #c0c1d633;
 }
 
+.mainBodyRowOrColumn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* justify-content: ; */
+}
+.mainBodyRowOrColumnRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    box-sizing: border-box;
+    /* justify-content: ; */
+}
+
 
 
 .imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBoxMain,.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
@@ -314,16 +340,35 @@ div {
     justify-content: center;
     align-items: center;
     height: 25px;
+    height: auto;
     /* padding-left: 10px; */
     box-sizing: border-box;
 }
 .imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
-    justify-content: space-between;
-    padding-left: 2px;
-    padding-right: 2px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    flex-direction: column;
+    display: flex;
+    width: auto;
+    box-sizing: border-box;
+    height: 50px;
+    /* background-color: none;
+    background: none; */
 }
 .imageRowStatisticBox1,.imageRowStatisticBox1DETAILS {
     background-color: #c0c1d60D;
+}
+
+.imageRowStatisticNameBoxDETAILS,.imageRowStatisticStatBoxDETAILS {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageRowStatisticNameBoxDETAILS + .imageRowStatisticStatBoxDETAILS {
+    border-top: 2px solid grey;
 }
 
 .imageRowStatisticNameBox,.imageRowStatisticNameBoxMain,.imageRowStatisticNameBoxFilterRow,.imageRowStatisticNameBoxDMGDetails {
@@ -336,7 +381,7 @@ div {
 }
 
 .imageRowStatisticStatBox {
-    width: 30%;
+    /* width: 30%; */
     display: flex;
     justify-content: right;
     align-items: center;
@@ -345,8 +390,19 @@ div {
 }
 
 
+.imageRowStatisticStatBox2 {
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 2px;
+    font-size: 18px;
+}
+
+
 .toughnessTableRowBox {
     width: 100%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -380,7 +436,7 @@ div {
 }
 
 .eventBodyScrollerMain {
-    width: 75%;
+    width: 100%;
     height: 100%;
     /* min-height: 100%; */
     /* max-height: 95%; */
@@ -542,6 +598,14 @@ div {
 .rotationConditionOperatorHeader {
     /* width: 100%; */
     font-size: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+.rotationConditionOperatorHeaderInlineParams {
+    /* width: 100%; */
+    font-size: 14px;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -728,7 +792,7 @@ div {
 }
 
 
-.rotationsSectionRowHolder1 {
+.rotationsSectionRowHolder1, .rotationsSectionRowHolder1Overview {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -744,7 +808,7 @@ div {
     /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
     background: linear-gradient(340deg, transparent,transparent,transparent,#ffffff21);
 }
-.rotationsSectionRowHolder2 {
+.rotationsSectionRowHolder2, .rotationsSectionRowHolder2Overview {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -759,6 +823,26 @@ div {
 
     /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
     background: linear-gradient(340deg, transparent,transparent,transparent,#0d393b7a);
+}
+
+.rotationsSectionRowHolder3, .rotationsSectionRowHolder3Overview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: hidden;
+
+    /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
+    background: linear-gradient(340deg, transparent,transparent,transparent,#0000007a);
+}
+.rotationsSectionRowHolder2Overview, .rotationsSectionRowHolder1Overview {
+    padding: 5px;
 }
 
 .rotationsConditionsBodyBox1 {
@@ -970,7 +1054,941 @@ div {
 
 
 
+
+
+
+.libraryCharacterDataHeaderBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* padding: 5px; */
+
+}
+
+.libraryCharacterDataHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.199);
+
+}
+
+.libraryCharacterDataHeaderCharNameBox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-color: rgba(0, 0, 0, 0.486); */
+    /* padding-left: 10px; */
+}
+.libraryCharacterDataHeaderCharName {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    /* font-size: 55px; */
+    padding-left: 10px;
+}
+.libraryCharacterDataHeaderCharNameInner {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 55px;
+    /* padding-left: 10px; */
+}
+
+.characterDisplayElementBox {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.characterDisplayElement {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+.characterDisplayPathAndNameBoxRowHolder, .characterDisplayPathAndNameBoxRowHolderStars {
+    width: 100%;
+    height: 29px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* padding-left: 25px; */
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 7px;
+}
+.characterDisplayPathAndNameBoxRowHolderStars {
+    padding: 0;
+}
+.characterDisplayPathAndNameBox {
+    width: 100%;
+    /* width: fit-content; */
+    /* max-width: 350px; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    /* border-top-right-radius: 10px; */
+    /* padding-right: 50px; */
+    box-sizing: border-box;
+
+    /* position: absolute;
+    left: 5%; */
+
+
+    /* background: linear-gradient(to right, #c0c1d633, #c0c1d633, #c0c1d633, transparent); */
+
+    background-color: #c0c1d633;
+}
+
+.characterDisplayPathAndNameBoxExtra {
+    width: 100%;
+    width: fit-content;
+    max-width: 350px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-top-right-radius: 10px;
+    padding-right: 50px;
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 5%;
+
+
+    background: linear-gradient(to right, #c0c1d633, #c0c1d633, #c0c1d633, transparent);
+
+    /* background-color: #c0c1d633; */
+}
+
+.characterDisplayPathNameBox {
+    font-size: 16px;
+    /* margin-left: 5px; */
+    box-sizing: border-box;
+}
+.characterDisplayPathNameBoxExtra {
+    font-size: 20px;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+.characterDisplayPathImageBox {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.characterDisplayPathImage {
+    width: 25px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+
+.actionDetailHeaderRowCharacterImage {
+    height: 150%;
+    /* width: auto; */
+    object-fit: contain;
+    /* transform: translateY(15%) scale(0.85); */
+    /* transform: scale(0.90); */
+    /* border: 1px solid red; */
+    box-sizing: border-box; 
+    position: absolute;
+    left: 0;
+    top: 0;
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+}
+
+.actionDetailHeaderRowCharacterImageAndEnergyBox {
+    width: 100%;
+    max-width: 225px;
+    height: 100%;
+    height: 200px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid green; */
+}
+
+
+
+.menuSwitcherBarTopBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; */
+    /* border: 2px solid #434343; */
+    border-top: none;
+    margin: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.menuSwitcherButtonTop {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 20%;
+    font-size: 25px;
+    position: relative;
+    z-index: 1;
+    opacity: 0.75;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.menuSwitcherButtonTop + .menuSwitcherButtonTop {
+    /* border-left: 2px solid #434343; */
+}
+.menuSwitcherButtonTop:hover {
+    background: #ffffff1A;
+}
+
+
+
+.eventReaderControlsBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.energyAndToughnessRowHolder {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+.energyAndToughnessRowHolderItems {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.lighconeStarRatingRow {
+    height: 25px;
+    width: auto;
+    /* max-height: 15px; */
+    /* min-height: 20px; */
+    object-fit: contain;
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.295);
+
+}
+
+
+
+/* .cardBoxIconText,.cardBoxIconTextVersion {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.562);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 2%;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+} */
+
+
+
+.expandedDataHolderHolderBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid #434343; */
+    box-sizing: border-box;
+}
+.characterMainCenterDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+
+.centerDisplayHolderBox {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid#e1e1e4;
+    border-top: 1px solid#e1e1e4;
+    border-radius: 10px;
+}
+
+.traceMainBoxHolder {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white; */
+    /* outline: 1px solid white; */
+    /* outline-offset: -15px; */
+    /* border-radius: 50%; */
+    aspect-ratio: 1/1;
+    max-width: 600px;
+    /* overflow: hidden; */
+}
+
+.centerDisplayHolderBoxTraceSummary {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+
+}
+
+
+.expandedMiddle {
+    width: 70%;
+    height: 725px;
+}
+
+.expandedQuarters {
+    width: 20%;
+    height: 500px;
+    min-width: 250px;
+    /* border-right: 1px solid #434343;
+    border-left: 1px solid #434343; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* position: relative; */
+    /* padding: 2px; */
+    z-index: 1;
+}
+.quartersBackgroundTransparent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 0;
+    display: none;
+}
+
+.characterBasicMenuStatsBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    backdrop-filter: blur(5px);
+    background: #1e1e1ea6;
+    border-radius: 10px;
+}
+
+.traceTypeDisplayBox {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.traceTypeDisplay {
+
+    font-size: 18px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: #121212;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* color: #e1e1e4; */
+    background-color: #ffffff;
+    margin: 2px;
+    opacity: 1;
+}
+
+.traceToughnessBox {
+    background-color: #cacacc1A;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 3px;
+}
+.traceToughnessBoxOverviewSkill {
+    max-width: 200px;
+    background-color: #cacacc1A;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    margin-top: 3px;
+}
+.traceLevelBox {
+    /* background-color: #cacacc1A; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+}
+.traceToughnessTitleBox {
+    width: 100%;
+    height: 100%;
+    justify-content: left;
+    align-items: center;
+    color: #dde0e2;
+    text-align: left;
+    padding-left: 4px;
+}
+.traceToughnessTitleBoxToughnessRow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding-left: 4px;
+}
+.eidolonRowNameSkillLevelSelection {
+    background-color: rgba(0, 0, 0, 0.315);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 5px;
+}
+.traitLevelDisplay {
+    min-width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.toggleArrowBox {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.toggleArrowBox:hover {
+    opacity: 0.5;
+}
+.traceToughnessValueBox {
+    min-width: 40px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #dcc491;
+    padding-right: 4px;
+    text-align: right;
+}
+.traceToughnessValueBoxToughness {
+    /* min-width: 40px; */
+    /* display: flex;
+    justify-content: right;
+    align-items: center; */
+    color: #dcc491;
+    /* padding-right: 4px; */
+    /* text-align: right; */
+}
+.traceContentBodyBox {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+    padding-left: 4px;
+}
+.traceDisplayNameBox {
+    font-size: 25px;
+    width: 85%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 2px;
+    box-sizing: border-box;
+}
+.traceDisplayNameBoxAlt {
+    font-size: 25px;
+    width: 85%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 4px;
+    box-sizing: border-box;
+    border-left: 2px solid #dbc291;
+}
+.traceAttackTargetType {
+    width: 90%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 4px;
+    text-align: left;
+    color: #dd9337;;
+    white-space: normal;
+}
+
+
+
+.eidolonsMainBoxHolder {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.skillsMainBoxHolder {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* overflow-y: scroll; */
+    box-sizing: border-box;
+}
+.overviewSkillDataBox { 
+    width: 100%;
+
+    /* height: 50%;
+    max-height: 50%;
+    min-height: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: column;
+    align-items: left;
+    /* margin: 2px; */
+    /* max-width: 400px; */
+    box-sizing: border-box;
+    padding-left: 4px;
+}
+.eidolonRowBoxHolder { 
+    width: 100%;
+
+    /* height: 50%;
+    max-height: 50%;
+    min-height: 50%; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    /* margin: 2px; */
+    /* max-width: 400px; */
+    box-sizing: border-box;
+}
+.eidolonRowName {
+    font-size: 25px;
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.eidolonRowNameSkill {
+    font-size: 25px;
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    /* padding-left: 5px; */
+    box-sizing: border-box;
+}
+.eidolonRowNameTrigger {
+    font-size: 20px;
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-top: 2px;
+    /* padding-left: 5px; */
+    box-sizing: border-box;
+}
+.eidolonRowIconHolder {
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
+.eidolonRowIcon {
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    border: 2px solid #e1e1e4;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    background: radial-gradient(
+      circle at center,
+      #473824 0%,
+      #473824 10%,
+      transparent 80%
+    );
+}
+.eidolonRowIcon:hover {
+    opacity: 0.5;
+}
+.rightDescriptionBoxEidolons {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+    padding-right: 5px;
+}
+.eidolonRankRowHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+.eidolonRankRowName {
+    font-size: 25px;
+    width: auto;;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 2px;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+.eidolonRankHolderbox {
+    width: 100%;
+    max-width: 400px;
+    /* background-color: #e1e1e4; */
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 2px solid #e1e1e4; */
+    overflow: hidden;
+
+    /* filter: brightness(0.5); */
+}
+.eidolonBonusLevelRow {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+
+.characterMainCenterImageTrace {
+    /* border: 1px solid white;
+    border: 1px solid white;
+    outline: 1px solid white;
+    outline-offset: 15px;
+    border-radius: 50%; */
+    /* width: 100%; */
+    /* max-width: 90%; */
+    /* width: 100%; */
+    /* height: auto;
+    object-fit: cover;
+    box-sizing: border-box; */
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translateY(-50%) translateX(50%) (0.7) ; */
+    opacity: 0.15;
+    width: 100%;
+    height: 100%;
+
+    /* right: 10px; */
+    /* top: 50%;
+    transform: translateY(50%); */
+    /* font-size: 40px; */
+    
+}
+
+
+.centerDisplayHolderBoxTraceSummary {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+
+}
+.traceSummaryEntryBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.traceSummaryEntryImage {
+    width: 40px;
+    height: 40px;
+}
+
+.hoveredTraceIcon:hover {
+    filter: brightness(5);
+    outline: 5px solid #1b86ff;
+    outline-offset: 5px;
+    border-radius: 50%;
+}
+.characterMinorTraceCircle {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color: #e1e1e4;
+    border-radius: 50%;
+}
+.characterSkillTraceCircle {
+    background-color: #1e2137;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #928d85;
+}
+
+
+
+
+
+
+
+.characterDisplayStatsBasic {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageRowStatisticImageBox {
+    width: 10%;
+    max-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imageRowStatisticImage,.imageRowStatisticImageMain,.imageRowStatisticImageStatMenu {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    scale: 1.2;
+}
+.imageRowStatisticImageStatMenu {
+    width: 20px;
+    height: 20px;
+}
+.imageRowStatisticImageMain {
+    filter: invert(72%) sepia(63%) saturate(528%) hue-rotate(356deg) brightness(200%) contrast(91%) drop-shadow(1px 1px 4px rgba(0,0,0,1));
+    /* filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6)); */
+}
+.imageRowStatisticNameBox,.imageRowStatisticNameBoxMain,.imageRowStatisticNameBoxFilterRow,.imageRowStatisticNameBoxDMGDetails {
+    width: 60%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2px;
+    font-size: 16px;
+}
+
+
+
+
+.characterDisplayNameBox {
+    font-size: 25px;
+    width: 100%;
+    /* white-space: normal; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 2px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.characterMainCenterDisplayOverviewHolderBox {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
+    .expandedDataHolderHolderBox {
+        flex-direction: column;
+    }
+    .expandedMiddle,.expandedQuarters {
+        width: 100%;
+        height: auto;
+    }
+
+    .actionDetailHeaderRowCharacterImage {
+        /* height: 100%; */
+        z-index: 0;
+    }
+    .actionDetailHeaderRowCharacterImageAndEnergyBox {
+        /* overflow-y: hidden;
+        overflow-x: hidden; */
+        width: 100%;
+        padding-left: 0px;
+        /* width: max-content; */
+    }
+    .libraryCharacterDataHeader {
+        flex-direction: column;
+    }
+    .libraryCharacterDataHeaderCharNameBox {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+
+    }
+
+    .libraryCharacterDataHeaderCharName {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        max-width: 100%;
+    }
+    .libraryCharacterDataHeaderCharNameInner {
+        white-space: normal;
+        z-index: 1;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.137);
+    }
+
+    .mainBodyRowOrColumnRow {
+        flex-direction: column;
+    }
+    .eventReaderControlsBox,.eventCharacterFileHeader,.eventCharacterFileInfoBox {
+        width: 100%;
+        max-width: 100%;
+    }
     .eventBodyMainBox {
         flex-direction: column;
     }
