@@ -109,7 +109,146 @@ const configAbility = {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
           "target": "All Hostile Entities (AOE)",
-          "paramSequence": []
+          "paramSequence": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Use Prior Target(s) Defined",
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Thunder",
+                "Damage": {
+                  "operator": "Variables[0] (0.66) || RETURN",
+                  "displayLines": "0.66",
+                  "constants": [],
+                  "variables": [
+                    0.66
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "Tags": [
+                  "Summon-Tag DMG"
+                ],
+                "attackType": "Follow-up"
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 1
+              },
+              "passed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Thunder",
+                    "Damage": {
+                      "operator": "Variables[0] (0.66) || Variables[1] (0.25) || Variables[2] (0.25) || ADD || MUL || RETURN",
+                      "displayLines": "(0.66 * (0.25 + 0.25))",
+                      "constants": [],
+                      "variables": [
+                        0.66,
+                        0.25,
+                        0.25
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": [
+                      "Summon-Tag DMG"
+                    ],
+                    "attackType": "Follow-up"
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Thunder",
+                    "Damage": {
+                      "operator": "Variables[0] (0.66) || Variables[1] (0.25) || MUL || RETURN",
+                      "displayLines": "(0.66 * 0.25)",
+                      "constants": [],
+                      "variables": [
+                        0.66,
+                        0.25
+                      ]
+                    },
+                    "Toughness": null,
+                    "Tags": [
+                      "Summon-Tag DMG"
+                    ],
+                    "attackType": "Follow-up"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 4
+              },
+              "passed": [
+                {
+                  "name": "Update Energy",
+                  "on": "Caster",
+                  "value": {
+                    "operator": "Variables[0] (2) || RETURN",
+                    "displayLines": "2",
+                    "constants": [],
+                    "variables": [
+                      2
+                    ]
+                  },
+                  "isFixed": "* ERR"
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Eidolon Activated",
+                "eidolon": 6
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": "Use Prior Target(s) Defined",
+                  "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
+                  "stackLimit": {
+                    "operator": "Variables[0] (3) || RETURN",
+                    "displayLines": "3",
+                    "constants": [],
+                    "variables": [
+                      3
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_PropertyValue": {
+                      "operator": "Variables[0] (0.12) || RETURN",
+                      "displayLines": "0.12",
+                      "constants": [],
+                      "variables": [
+                        0.12
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -139,7 +278,149 @@ const configAbility = {
               "name": "Use Custom Character Function",
               "functionName": "Bounce_SelectTarget",
               "target": "All Hostile Entities (AOE)",
-              "paramSequence": []
+              "paramSequence": [
+                {
+                  "name": "ATK Scaling DMG",
+                  "target": "Use Prior Target(s) Defined",
+                  "canPhase": true,
+                  "AttackScaling": {
+                    "DamageType": "Thunder",
+                    "Damage": {
+                      "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || RETURN",
+                      "displayLines": "(0.66 + JINGYUAN_OBJECT_UNUSED_1)",
+                      "constants": [],
+                      "variables": [
+                        0.66,
+                        "JINGYUAN_OBJECT_UNUSED_1"
+                      ]
+                    },
+                    "Toughness": {
+                      "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                      "displayLines": "ST Toughness Value",
+                      "constants": [],
+                      "variables": [
+                        "ST Toughness Value"
+                      ]
+                    },
+                    "Tags": [
+                      "Summon-Tag DMG"
+                    ],
+                    "attackType": "Follow-up"
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || Variables[2] (0.25) || Variables[3] (0.25) || ADD || MUL || RETURN",
+                          "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * (0.25 + 0.25))",
+                          "constants": [],
+                          "variables": [
+                            0.66,
+                            "JINGYUAN_OBJECT_UNUSED_1",
+                            0.25,
+                            0.25
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": [
+                          "Summon-Tag DMG"
+                        ],
+                        "attackType": "Follow-up"
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "ATK Scaling DMG",
+                      "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                      "canPhase": true,
+                      "AttackScaling": {
+                        "DamageType": "Thunder",
+                        "Damage": {
+                          "operator": "Variables[0] (0.66) || Variables[1] (JINGYUAN_OBJECT_UNUSED_1) || ADD || Variables[2] (0.25) || MUL || RETURN",
+                          "displayLines": "((0.66 + JINGYUAN_OBJECT_UNUSED_1) * 0.25)",
+                          "constants": [],
+                          "variables": [
+                            0.66,
+                            "JINGYUAN_OBJECT_UNUSED_1",
+                            0.25
+                          ]
+                        },
+                        "Toughness": null,
+                        "Tags": [
+                          "Summon-Tag DMG"
+                        ],
+                        "attackType": "Follow-up"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 4
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Energy",
+                      "on": "Caster",
+                      "value": {
+                        "operator": "Variables[0] (2) || RETURN",
+                        "displayLines": "2",
+                        "constants": [],
+                        "variables": [
+                          2
+                        ]
+                      },
+                      "isFixed": "* ERR"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Eidolon Activated",
+                    "eidolon": 6
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": "Use Prior Target(s) Defined",
+                      "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
+                      "stackLimit": {
+                        "operator": "Variables[0] (3) || RETURN",
+                        "displayLines": "3",
+                        "constants": [],
+                        "variables": [
+                          3
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (0.12) || RETURN",
+                          "displayLines": "0.12",
+                          "constants": [],
+                          "variables": [
+                            0.12
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

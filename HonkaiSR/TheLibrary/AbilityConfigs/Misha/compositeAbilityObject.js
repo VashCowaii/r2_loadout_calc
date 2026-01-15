@@ -868,7 +868,23 @@ const compositeAbilityObject = {
               "name": "Use Custom Character Function",
               "functionName": "Bounce_SelectTarget",
               "target": "All Hostile Entities (AOE)",
-              "paramSequence": []
+              "paramSequence": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "Misha_Ability03_SingleAttack",
+                  "variables": {
+                    "parameter[01]_StanceRatio": 0.5,
+                    "parameter[02]_Frozen_Chance": {
+                      "operator": "Variables[0] (0.2) || RETURN",
+                      "displayLines": "0.2",
+                      "constants": [],
+                      "variables": [
+                        0.2
+                      ]
+                    }
+                  }
+                }
+              ]
             }
           ]
         },
@@ -890,7 +906,23 @@ const compositeAbilityObject = {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
           "target": "All Hostile Entities (AOE)",
-          "paramSequence": []
+          "paramSequence": [
+            {
+              "name": "Use Custom Character Function",
+              "functionName": "Misha_Ability03_SingleAttack",
+              "variables": {
+                "parameter[01]_StanceRatio": 0.5,
+                "parameter[02]_Frozen_Chance": {
+                  "operator": "Variables[0] (0.2) || RETURN",
+                  "displayLines": "0.2",
+                  "constants": [],
+                  "variables": [
+                    0.2
+                  ]
+                }
+              }
+            }
+          ]
         },
         "Trigger: Attack End",
         {
