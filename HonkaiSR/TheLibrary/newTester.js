@@ -5406,6 +5406,7 @@ const megaParsingFuckery = {
         const knownKeySet = new Set ([
             "name",
             "target",
+            "enable",
             // "living",
             
             // "healPercent",
@@ -5419,6 +5420,12 @@ const megaParsingFuckery = {
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Automatically use Ultimate:</div>&nbsp;
             ${Array.isArray(parseRef.target) ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.target}${parseRef.living ? "(Living)" : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.enable != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">enable:</div>&nbsp;
+                ${parseRef.enable}
+            </div>` : ""}
         </div>
         `;
     },
@@ -9098,7 +9105,7 @@ const megaParsingFuckery = {
             // "AdditionConfig",
             // "DynamicValues"
         ])
-        console.log(parseRef)
+        console.log(parseRef.eventTrigger ?? parseRef["$type"])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"eventTrigger");
 
         let parseString = "";

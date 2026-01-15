@@ -477,9 +477,7 @@ const compositeAbilityObject = {
             }
           ],
           "stackData": [],
-          "latentQueue": [
-            "Saber_00_EntityMaxStockSP"
-          ]
+          "latentQueue": []
         },
         {
           "name": "Modifier Construction",
@@ -1290,9 +1288,7 @@ const compositeAbilityObject = {
             }
           ],
           "stackData": [],
-          "latentQueue": [
-            "Saber_00_EntityMaxStockSP"
-          ]
+          "latentQueue": []
         },
         {
           "name": "Modifier Construction",
@@ -1362,9 +1358,7 @@ const compositeAbilityObject = {
             }
           ],
           "stackData": [],
-          "latentQueue": [
-            "Saber_00_EntityMaxStockSP"
-          ]
+          "latentQueue": []
         },
         {
           "name": "Modifier Construction",
@@ -1526,9 +1520,7 @@ const compositeAbilityObject = {
             }
           ],
           "stackData": [],
-          "latentQueue": [
-            "Saber_00_EntityMaxStockSP"
-          ]
+          "latentQueue": []
         },
         {
           "name": "Modifier Construction",
@@ -1630,9 +1622,7 @@ const compositeAbilityObject = {
             }
           ],
           "stackData": [],
-          "latentQueue": [
-            "Saber_00_EntityMaxStockSP"
-          ],
+          "latentQueue": [],
           "description": "Wind RES PEN increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
           "type": "Buff",
           "statusName": "The Saga of Sixteen Winter Days"
@@ -1680,9 +1670,7 @@ const compositeAbilityObject = {
             }
           ],
           "stackData": [],
-          "latentQueue": [
-            "Saber_00_EntityMaxStockSP"
-          ]
+          "latentQueue": []
         },
         {
           "name": "Modifier Construction",
@@ -3150,9 +3138,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]",
           "stackData": [],
-          "latentQueue": [
-            "S11_Alive_Count"
-          ],
+          "latentQueue": [],
           "description": "When Saber has \"Core Resonance,\" and if using Skill and consuming \"Core Resonance\" can fully regenerate her Energy, consumes \"Mana Burst\" to cause Saber to immediately take action and recover 1 Skill Point for allies.",
           "type": "Other",
           "effectName": "Mana Burst",
@@ -3185,9 +3171,7 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_PropertyValue"
           ],
-          "latentQueue": [
-            "Saber_00_EntityMaxStockSP"
-          ],
+          "latentQueue": [],
           "description": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "effectName": "CRIT DMG Boost",
@@ -3255,9 +3239,7 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_PropertyValue"
           ],
-          "latentQueue": [
-            "S11_Alive_Count"
-          ],
+          "latentQueue": [],
           "description": "Each stack causes DMG dealt by Saber to ignore <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P2_Ratio</span> of the target's DEF.",
           "type": "Buff",
           "statusName": "The Lost Oath of the Round Table"
@@ -3290,9 +3272,7 @@ const compositeAbilityObject = {
           "stackData": [
             "MDF_PropertyValue"
           ],
-          "latentQueue": [
-            "S11_Alive_Count"
-          ],
+          "latentQueue": [],
           "description": "Each stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
           "statusName": "Crown of the Star"
