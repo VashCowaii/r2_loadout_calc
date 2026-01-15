@@ -253,9 +253,7 @@ const configAbility = {
         }
       ],
       "stackData": [],
-      "latentQueue": [
-        "Saber_00_EntityMaxStockSP"
-      ]
+      "latentQueue": []
     },
     {
       "name": "Modifier Construction",
@@ -1066,9 +1064,7 @@ const configAbility = {
         }
       ],
       "stackData": [],
-      "latentQueue": [
-        "Saber_00_EntityMaxStockSP"
-      ]
+      "latentQueue": []
     },
     {
       "name": "Modifier Construction",
@@ -1138,9 +1134,7 @@ const configAbility = {
         }
       ],
       "stackData": [],
-      "latentQueue": [
-        "Saber_00_EntityMaxStockSP"
-      ]
+      "latentQueue": []
     },
     {
       "name": "Modifier Construction",
@@ -1302,9 +1296,7 @@ const configAbility = {
         }
       ],
       "stackData": [],
-      "latentQueue": [
-        "Saber_00_EntityMaxStockSP"
-      ]
+      "latentQueue": []
     },
     {
       "name": "Modifier Construction",
@@ -1406,9 +1398,7 @@ const configAbility = {
         }
       ],
       "stackData": [],
-      "latentQueue": [
-        "Saber_00_EntityMaxStockSP"
-      ],
+      "latentQueue": [],
       "description": "Wind RES PEN increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank04_P1_Ratio</span>.",
       "type": "Buff",
       "statusName": "The Saga of Sixteen Winter Days"
@@ -1456,9 +1446,7 @@ const configAbility = {
         }
       ],
       "stackData": [],
-      "latentQueue": [
-        "Saber_00_EntityMaxStockSP"
-      ]
+      "latentQueue": []
     },
     {
       "name": "Modifier Construction",

@@ -34581,6 +34581,798 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "The Dahlia": {
+    "internalID": 1321,
+    "name": "The Dahlia",
+    "path": "Nihility",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 606.375,
+      "HPBase": 1086.624,
+      "SPDBase": 96,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "132101",
+        "name": "When a Bud Readies to Bloom",
+        "rank": 1,
+        "desc": "The Super Break DMG multiplier provided by Talent to \"Dance Partners\" now applies to all ally characters, with \"Dance Partners\" additionally receiving a 40% boost. After \"Dance Partners\" use an attack, additionally deals the attacked enemy targets a fixed amount of Toughness Reduction equal to 25% of their Max Toughness (minimum 10, maximum 300). This effect can only trigger once per enemy target, and this trigger count resets after the enemy target receives a killing blow.",
+        "icon": "icon/skill/1321_rank1.png",
+        "paramsEido": [
+          0.25,
+          10,
+          300,
+          0.4
+        ],
+        "extraEffects": {
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+          }
+        }
+      },
+      {
+        "id": "132102",
+        "name": "Fresh, Ethereal, and Beloved",
+        "rank": 2,
+        "desc": "When The Dahlia is on the field, decreases all enemies' All-Type RES by 20%. When an enemy target enters the field, immediately inflicts \"Wilt\" on them, lasting for 3 turn(s).",
+        "icon": "icon/skill/1321_rank2.png",
+        "paramsEido": [
+          0.2,
+          3
+        ]
+      },
+      {
+        "id": "132103",
+        "name": "Pity Its Petals Thin as Mist",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1321_ultimate.png"
+      },
+      {
+        "id": "132104",
+        "name": "Pity Its Heart Gnawed by Worms",
+        "rank": 4,
+        "desc": "Increases the number of DMG instances dealt by Talent's Follow-Up ATK by 5. Upon its use, the DMG taken by all enemy targets increases by 12%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1321_rank4.png",
+        "paramsEido": [
+          0.12,
+          2,
+          5
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "132105",
+        "name": "Fallen, Decayed, and Despised",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1321_skill.png"
+      },
+      {
+        "id": "132106",
+        "name": "And Yet, Always, Deathly Beautiful",
+        "rank": 6,
+        "desc": "Increases Dance Partners' Break Effect by 150%. When using Talent's Follow-Up ATK, advances the next action of all \"Dance Partners\" by 20%.",
+        "icon": "icon/skill/1321_rank6.png",
+        "paramsEido": [
+          1.5,
+          0.2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          },
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Fiddle... Fissured Memory": {
+          "variant1": {
+            "skillID": 132101,
+            "trigger": "Skill01",
+            "name": "Fiddle... Fissured Memory",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of The Dahlia's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Constance_00_Skill01_Camera",
+              "Avatar_Constance_00_Skill01_Phase01",
+              "Avatar_Constance_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Lick... Enkindled Betrayal": {
+          "variant1": {
+            "skillID": 132102,
+            "trigger": "Skill02",
+            "name": "Lick... Enkindled Betrayal",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deploys a Zone that lasts for #2[i] turn(s). This duration decreases by 1 at the start of The Dahlia's turn. Then, deals Fire DMG equal to #1[i]% of The Dahlia's ATK to one designated enemy and their adjacent targets.\\nWhile the Zone lasts, increases all allies' Weakness Break Efficiency by #3[i]%. Toughness Reduction taken by enemy targets while not Weakness Broken can also be converted into Super Break DMG.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                3,
+                0.5
+              ],
+              "2": [
+                0.88,
+                3,
+                0.5
+              ],
+              "3": [
+                0.96,
+                3,
+                0.5
+              ],
+              "4": [
+                1.04,
+                3,
+                0.5
+              ],
+              "5": [
+                1.12,
+                3,
+                0.5
+              ],
+              "6": [
+                1.2,
+                3,
+                0.5
+              ],
+              "7": [
+                1.3,
+                3,
+                0.5
+              ],
+              "8": [
+                1.4,
+                3,
+                0.5
+              ],
+              "9": [
+                1.5,
+                3,
+                0.5
+              ],
+              "10": [
+                1.6,
+                3,
+                0.5
+              ],
+              "11": [
+                1.68,
+                3,
+                0.5
+              ],
+              "12": [
+                1.76,
+                3,
+                0.5
+              ],
+              "13": [
+                1.84,
+                3,
+                0.5
+              ],
+              "14": [
+                1.92,
+                3,
+                0.5
+              ],
+              "15": [
+                2,
+                3,
+                0.5
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Constance_00_Skill02_Camera",
+              "Avatar_Constance_00_Skill02_Phase01",
+              "Avatar_Constance_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Super Break DMG": {
+                "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Wallow... Entombed Ash": {
+          "variant1": {
+            "skillID": 132103,
+            "trigger": "Skill03",
+            "name": "Wallow... Entombed Ash",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Inflicts a \"Wilt\" state on all enemies, lasting for #2[i] turn(s). Then, deals Fire DMG equal to #1[i]% of The Dahlia's ATK, which is distributed evenly across all enemies.\\nEnemy targets in the \"Wilt\" state have their DEF reduced by #3[f1]% and will be implanted with Weakness of all Dance Partners' Types.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.8,
+                4,
+                0.08
+              ],
+              "2": [
+                1.92,
+                4,
+                0.09
+              ],
+              "3": [
+                2.04,
+                4,
+                0.1
+              ],
+              "4": [
+                2.16,
+                4,
+                0.11
+              ],
+              "5": [
+                2.28,
+                4,
+                0.12
+              ],
+              "6": [
+                2.4,
+                4,
+                0.13
+              ],
+              "7": [
+                2.55,
+                4,
+                0.1425
+              ],
+              "8": [
+                2.7,
+                4,
+                0.155
+              ],
+              "9": [
+                2.85,
+                4,
+                0.1675
+              ],
+              "10": [
+                3,
+                4,
+                0.18
+              ],
+              "11": [
+                3.12,
+                4,
+                0.19
+              ],
+              "12": [
+                3.24,
+                4,
+                0.2
+              ],
+              "13": [
+                3.36,
+                4,
+                0.21
+              ],
+              "14": [
+                3.48,
+                4,
+                0.22
+              ],
+              "15": [
+                3.6,
+                4,
+                0.23
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Constance_00_Skill03_Camera",
+              "Avatar_Constance_00_Skill03_EnterReady",
+              "Avatar_Constance_00_Skill03_Phase01",
+              "Avatar_Constance_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Who's Afraid of Constance?": {
+          "variant1": {
+            "skillID": 132104,
+            "trigger": "SkillP01",
+            "name": "Who's Afraid of Constance?",
+            "type": "Bounce",
+            "slot": "Talent",
+            "desc": "When entering combat, The Dahlia regenerates #4[i] Energy and becomes \"Dance Partners\" along with the teammate that triggered combat. Whenever there is no other \"Dance Partner\" on the field, this unit and the teammate with the highest Break Effect become \"Dance Partners\" together. After a \"Dance Partner\" attacks a Weakness Broken enemy target, the Toughness Reduction from this attack will be converted into 1 instance of Super Break DMG at #5[i]%.\\nAfter an enemy target gets attacked by the other \"Dance Partner,\" The Dahlia launches Follow-Up ATK and deals #2[i] instance(s) of DMG, each dealing Fire DMG equal to #1[i]% of The Dahlia's ATK to one random enemy. After each instance of DMG dealt to a Weakness Broken enemy target, the Toughness Reduction from this DMG will be converted into 1 instance of Super Break DMG at #3[i]%.\\nThis effect can only trigger once per turn. If the target is defeated before the Follow-Up ATK is used, it will be launched at one random enemy instead.",
+            "energyCost": null,
+            "energyRegen": 2,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 3,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                5,
+                1,
+                35,
+                0.3
+              ],
+              "2": [
+                0.165,
+                5,
+                1.1,
+                35,
+                0.33
+              ],
+              "3": [
+                0.18,
+                5,
+                1.2,
+                35,
+                0.36
+              ],
+              "4": [
+                0.195,
+                5,
+                1.3,
+                35,
+                0.39
+              ],
+              "5": [
+                0.21,
+                5,
+                1.4,
+                35,
+                0.42
+              ],
+              "6": [
+                0.225,
+                5,
+                1.5,
+                35,
+                0.45
+              ],
+              "7": [
+                0.24375,
+                5,
+                1.625,
+                35,
+                0.4875
+              ],
+              "8": [
+                0.2625,
+                5,
+                1.75,
+                35,
+                0.525
+              ],
+              "9": [
+                0.28125,
+                5,
+                1.875,
+                35,
+                0.5625
+              ],
+              "10": [
+                0.3,
+                5,
+                2,
+                35,
+                0.6
+              ],
+              "11": [
+                0.315,
+                5,
+                2.1,
+                35,
+                0.63
+              ],
+              "12": [
+                0.33,
+                5,
+                2.2,
+                35,
+                0.66
+              ],
+              "13": [
+                0.345,
+                5,
+                2.3,
+                35,
+                0.69
+              ],
+              "14": [
+                0.36,
+                5,
+                2.4,
+                35,
+                0.72
+              ],
+              "15": [
+                0.375,
+                5,
+                2.5,
+                35,
+                0.75
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Constance_00_PassiveSkill01",
+              "Avatar_Constance_00_Insert_SelectTarget",
+              "Avatar_Constance_00_Insert_Camera",
+              "Avatar_Constance_00_Insert_Phase01",
+              "Avatar_Constance_00_Insert_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 9
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Super Break DMG": {
+                "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+              },
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "The Heart Makes the Finest Tomb": {
+          "variant1": {
+            "skillID": 132107,
+            "trigger": "SkillMaze",
+            "name": "The Heart Makes the Finest Tomb",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that lasts for #1[i] second(s). Enemies within this dimension will not actively attack ally targets. After entering combat with enemies in the Special Dimension, The Dahlia immediately deploys her Skill's Zone, and converts the combat-triggering Toughness Reduction into 1 instance of Super Break DMG at #2[i]% against enemy targets that are Weakness Broken.\\nOnly 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                0.6
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Constance_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Super Break DMG": {
+                "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1321_basic_atk.png",
+        "skillRef": {
+          "skillName": "Fiddle... Fissured Memory",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1321_skill.png",
+        "skillRef": {
+          "skillName": "Lick... Enkindled Betrayal",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1321_ultimate.png",
+        "skillRef": {
+          "skillName": "Wallow... Entombed Ash",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1321_talent.png",
+        "skillRef": {
+          "skillName": "Who's Afraid of Constance?",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1321_technique.png",
+        "skillRef": {
+          "skillName": "The Heart Makes the Finest Tomb",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Yet Another Funeral",
+        "icon": "icon/skill/1321_skilltree1.png",
+        "desc": "When entering combat, increases other characters' Break Effect by an amount equal to #1[i]% of The Dahlia's Break Effect plus #3[i]%, lasting for #2[i] turn(s). When The Dahlia receives healing or a Shield provided by a teammate, this effect triggers again, lasting for #4[i] turn(s). Cannot trigger repeatedly within one turn.",
+        "params": [
+          0.24,
+          1,
+          0.5,
+          3
+        ]
+      },
+      "Point07": {
+        "name": "Lament, Lost Soul",
+        "icon": "icon/skill/1321_skilltree2.png",
+        "desc": "When using Talent's Follow-Up ATK, recovers 1 Skill Point for allies. For every #1[i] instance(s) of Talent's Follow-Up ATK used, this effect can trigger once.",
+        "params": [
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              2
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Outgrow the Old, Espouse the New",
+        "icon": "icon/skill/1321_skilltree3.png",
+        "desc": "When an ally target adds Weakness to an enemy target, increases SPD by #3[i]% for #4[i] turn(s). If a Fire ally character has implanted a Weakness when using an attack, then after the attack, additionally deals a fixed amount of #5[i] Fire Toughness Reduction to every target implanted with Weakness. Also, regenerates Energy equal to #2[i]% of Max Energy. This effect can regenerate Energy up to #1[i]% of Max Energy.",
+        "params": [
+          0.5,
+          0.1,
+          0.3,
+          2,
+          20
+        ]
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1321.png",
+    "preview": "image/character_preview/1321.png",
+    "portrait": "image/character_portrait/1321.png",
+    "bannerOffsets": [
+      -12.7,
+      -20.74,
+      0.63,
+      -12.7,
+      -20.74,
+      0.63,
+      -12.7,
+      -20.74,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Tribbie": {
     "internalID": 1403,
     "name": "Tribbie",
@@ -39155,6 +39947,673 @@ let characters = {
       0,
       1
     ],
+    "isBuffed": false
+  },
+  "Trailblazer - Harmony": {
+    "internalID": 8005,
+    "name": "Trailblazer - Harmony",
+    "path": "Harmony",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 446.29200000000003,
+      "DEFBase": 679.1400000000001,
+      "HPBase": 1086.624,
+      "SPDBase": 105,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "800501",
+        "name": "Best Seat in the House",
+        "rank": 1,
+        "desc": "After using Skill for the first time, immediately recovers 1 Skill Point(s).",
+        "icon": "icon/skill/8005_rank1.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "800502",
+        "name": "Jailbreaking Rainbowwalk",
+        "rank": 2,
+        "desc": "When the battle starts, the Trailblazer's Energy Regeneration Rate increases by 25%, lasting for 3 turn(s).",
+        "icon": "icon/skill/8005_rank2.png",
+        "paramsEido": [
+          0.25,
+          3
+        ]
+      },
+      {
+        "id": "800503",
+        "name": "Sanatorium for Rest Notes",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/8005_skill.png"
+      },
+      {
+        "id": "800504",
+        "name": "Dove in Tophat",
+        "rank": 4,
+        "desc": "While the Trailblazer is on the field, increases the Break Effect of all teammates (excluding the Trailblazer), by an amount equal to 15% of the Trailblazer's Break Effect.",
+        "icon": "icon/skill/8005_rank4.png",
+        "paramsEido": [
+          0.15
+        ]
+      },
+      {
+        "id": "800505",
+        "name": "Poem Favors Rhythms of Old",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/8005_ultimate.png"
+      },
+      {
+        "id": "800506",
+        "name": "Tomorrow, Rest in Spotlight",
+        "rank": 6,
+        "desc": "The number of additional DMG applications by the Skill increases by 2.",
+        "icon": "icon/skill/8005_rank6.png",
+        "paramsEido": [
+          2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Swing Dance Etiquette": {
+          "variant1": {
+            "skillID": 800501,
+            "trigger": "Skill01",
+            "name": "Swing Dance Etiquette",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_Skill01_Camera",
+              "Avatar_PlayerBoy_20_Skill01_Phase01",
+              "Avatar_PlayerBoy_20_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Halftime to Make It Rain": {
+          "variant1": {
+            "skillID": 800502,
+            "trigger": "Skill02",
+            "name": "Halftime to Make It Rain",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy target and additionally deals DMG for 4 times, with each time dealing Imaginary DMG equal to #1[i]% of the Trailblazer's ATK to a random enemy.",
+            "energyCost": null,
+            "energyRegen": 6,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                2
+              ],
+              "2": [
+                0.275,
+                2
+              ],
+              "3": [
+                0.3,
+                2
+              ],
+              "4": [
+                0.325,
+                2
+              ],
+              "5": [
+                0.35,
+                2
+              ],
+              "6": [
+                0.375,
+                2
+              ],
+              "7": [
+                0.40625,
+                2
+              ],
+              "8": [
+                0.4375,
+                2
+              ],
+              "9": [
+                0.46875,
+                2
+              ],
+              "10": [
+                0.5,
+                2
+              ],
+              "11": [
+                0.525,
+                2
+              ],
+              "12": [
+                0.55,
+                2
+              ],
+              "13": [
+                0.575,
+                2
+              ],
+              "14": [
+                0.6,
+                2
+              ],
+              "15": [
+                0.625,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_Skill02_Camera",
+              "Avatar_PlayerBoy_20_Skill02_Phase01",
+              "Avatar_PlayerBoy_20_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "All-Out Footlight Parade": {
+          "variant1": {
+            "skillID": 800503,
+            "trigger": "Skill03",
+            "name": "All-Out Footlight Parade",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Grants all allies the Backup Dancer effect, lasting for #1[i] turn(s). This duration decreases by 1 at the start of Trailblazer's every turn. Allies with the Backup Dancer effect have their Break Effect increased by #3[i]%. And when they attack enemy targets that are in the Weakness Broken state, the Toughness Reduction of the attack will be converted into 1 instance of Super Break DMG.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                1,
+                0.15
+              ],
+              "2": [
+                3,
+                1,
+                0.165
+              ],
+              "3": [
+                3,
+                1,
+                0.18
+              ],
+              "4": [
+                3,
+                1,
+                0.195
+              ],
+              "5": [
+                3,
+                1,
+                0.21
+              ],
+              "6": [
+                3,
+                1,
+                0.225
+              ],
+              "7": [
+                3,
+                1,
+                0.24375
+              ],
+              "8": [
+                3,
+                1,
+                0.2625
+              ],
+              "9": [
+                3,
+                1,
+                0.28125
+              ],
+              "10": [
+                3,
+                1,
+                0.3
+              ],
+              "11": [
+                3,
+                1,
+                0.315
+              ],
+              "12": [
+                3,
+                1,
+                0.33
+              ],
+              "13": [
+                3,
+                1,
+                0.345
+              ],
+              "14": [
+                3,
+                1,
+                0.36
+              ],
+              "15": [
+                3,
+                1,
+                0.375
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_Skill03_Camera",
+              "Avatar_PlayerBoy_20_Skill03_EnterReady",
+              "Avatar_PlayerBoy_20_Skill03_Phase01",
+              "Avatar_PlayerBoy_20_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Super Break DMG": {
+                "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Full-on Aerial Dance": {
+          "variant1": {
+            "skillID": 800504,
+            "trigger": "SkillP01",
+            "name": "Full-on Aerial Dance",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "The Trailblazer immediately regenerates #1[f1] Energy when an enemy target's Weakness is Broken.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5
+              ],
+              "2": [
+                5.5
+              ],
+              "3": [
+                6
+              ],
+              "4": [
+                6.5
+              ],
+              "5": [
+                7
+              ],
+              "6": [
+                7.5
+              ],
+              "7": [
+                8.125
+              ],
+              "8": [
+                8.75
+              ],
+              "9": [
+                9.375
+              ],
+              "10": [
+                10
+              ],
+              "11": [
+                10.5
+              ],
+              "12": [
+                11
+              ],
+              "13": [
+                11.5
+              ],
+              "14": [
+                12
+              ],
+              "15": [
+                12.5
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_PassiveSkill_01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Now! I'm the Band!": {
+          "variant1": {
+            "skillID": 800507,
+            "trigger": "SkillMaze",
+            "name": "Now! I'm the Band!",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After the Technique is used, at the start of the next battle, all allies' Break Effect increases by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/8005_basic_atk.png",
+        "skillRef": {
+          "skillName": "Swing Dance Etiquette",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/8005_skill.png",
+        "skillRef": {
+          "skillName": "Halftime to Make It Rain",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/8005_ultimate.png",
+        "skillRef": {
+          "skillName": "All-Out Footlight Parade",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/8005_talent.png",
+        "skillRef": {
+          "skillName": "Full-on Aerial Dance",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/8005_technique.png",
+        "skillRef": {
+          "skillName": "Now! I'm the Band!",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Dance With the One",
+        "icon": "icon/skill/8005_skilltree1.png",
+        "desc": "When the number of enemy targets on the field is 5 (or more)/4/3/2/1, the Super Break DMG triggered by the Backup Dancer effect increases by #1[i]%/#2[i]%/#3[i]%/#4[i]%/#5[i]%.",
+        "params": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "extraEffects": {
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG.",
+            "params": [
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Shuffle Along",
+        "icon": "icon/skill/8005_skilltree2.png",
+        "desc": "When using Skill, additionally increases the Toughness Reduction of the first instance of DMG by #1[i]%.",
+        "params": [
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Hat of the Theater",
+        "icon": "icon/skill/8005_skilltree3.png",
+        "desc": "After ally targets break weakness, additionally delays the action of the enemy target by #1[i]%.",
+        "params": [
+          0.3
+        ],
+        "extraEffects": {
+          "Action Delayed": {
+            "desc": "Increases the target's waiting interval before the next action.",
+            "params": [
+              0.3
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/8005.png",
+    "preview": "image/character_preview/8005.png",
+    "portrait": "image/character_portrait/8005.png",
+    "bannerOffsets": [],
     "isBuffed": false
   },
   "Trailblazer - Remembrance": {
