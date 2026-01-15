@@ -3250,7 +3250,12 @@ const userTriggers = {
 
 
 
+        // expandedMiddle
+        // characterMainCenterDisplay
 
+        // expandedMiddleNoQuarters
+
+        
 
         if (elementID === 1) {
             readSelection("eventBodyMainBox").style.display = "flex";
@@ -3264,6 +3269,7 @@ const userTriggers = {
         if (elementID > 1) {
             readSelection("characterMainCenterDisplayOverview").style.display = "flex";
             readSelection("teamBoxMainHolderBox").style.display = "flex";
+            
         }
         else {
             readSelection("characterMainCenterDisplayOverview").style.display = "none";
@@ -3271,31 +3277,37 @@ const userTriggers = {
         }
 
         if (elementID === 2) {
-            readSelection("mainStatsDisplayOverview").style.display = "flex";
             readSelection("characterMainCenterDisplayOverview").style.display = "flex";
+            
         }
         else {
-            readSelection("mainStatsDisplayOverview").style.display = "none";
             readSelection("characterMainCenterDisplayOverview").style.display = "none";
+            
         }
 
         if (elementID === 3) {
             readSelection("characterMainCenterDisplayTraces").style.display = "flex";
             readSelection("mainStatsDisplayTraces").style.display = "flex";
+            readSelection("expandedQuarterRight").style.display = "flex";
+            readSelection("expandedMiddle").setAttribute("class", "expandedMiddle characterMainCenterDisplay");
 
         }
         else {
             readSelection("characterMainCenterDisplayTraces").style.display = "none";
             readSelection("mainStatsDisplayTraces").style.display = "none";
+            readSelection("expandedQuarterRight").style.display = "none";
+            readSelection("expandedMiddle").setAttribute("class", "expandedMiddleNoQuarters characterMainCenterDisplay");
         }
 
         if (elementID === 4) {
+            readSelection("mainStatsDisplayOverview").style.display = "flex";
             readSelection("characterMainCenterDisplayEidolons").style.display = "flex";
-            readSelection("expandedQuarterRight").style.display = "none";
+            // readSelection("expandedQuarterRight").style.display = "none";
         }
         else {
+            readSelection("mainStatsDisplayOverview").style.display = "none";
             readSelection("characterMainCenterDisplayEidolons").style.display = "none";
-            readSelection("expandedQuarterRight").style.display = "flex";
+            // readSelection("expandedQuarterRight").style.display = "flex";
 
         }
 
@@ -3901,55 +3913,6 @@ const userTriggers = {
         
 
 
-
-
-
-        let eidoRef = charRef.eidolons;
-        let eidoString = ``;
-        let rankCounter = 0;
-        for (let entry of eidoRef) {
-            rankCounter++;
-
-            let paramsStringer = "";
-            const paramsCheck = entry.paramsEido
-            if (paramsCheck?.length) {
-
-                let paramString = "";
-                let paramCounter = 0;
-                for (let paramEntry of paramsCheck) {
-                    // console.log(paramEntry)
-                    paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
-                    paramCounter++;
-                }
-
-                paramsStringer += `
-                    <div class="actionDetailBody">
-                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
-                    </div>
-                `
-            }
-
-
-            // onclick="userTriggers.updateEidolonRank(${rankCounter})"
-            eidoString += `
-            <div class="eidolonRowBoxHolder" style="opacity: .9">
-                <div class="eidolonRowIconHolder">
-                    <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable"/>
-                </div>
-                
-                <div class="rightDescriptionBoxEidolons smallFont">
-                    <div class="eidolonRowName">${entry.name}</div>
-                    ${entry.desc}
-                    ${paramsStringer}
-                </div>
-                
-            </div>
-            `;
-            
-        }
-        readSelection("eidolonsMainBoxHolder").innerHTML = eidoString;
-
-
         const traceRef = charRef.traces;
         const skillRef = charRef.skills;
         let overviewString = ``;
@@ -4196,8 +4159,109 @@ const userTriggers = {
             overviewString += entryString;
             
         }
+
+
+
+
+
+        let eidoRef = charRef.eidolons;
+        let eidoString = ``;
+        let rankCounter = 0;
+        for (let entry of eidoRef) {
+            rankCounter++;
+
+            let paramsStringer = "";
+            const paramsCheck = entry.paramsEido
+            if (paramsCheck?.length) {
+
+                let paramString = "";
+                let paramCounter = 0;
+                for (let paramEntry of paramsCheck) {
+                    // console.log(paramEntry)
+                    paramString += `${paramEntry}${paramCounter != paramsCheck.length-1 ? ", " : ""}`;
+                    paramCounter++;
+                }
+
+                paramsStringer += `
+                    <div class="actionDetailBody">
+                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                    </div>
+                `
+            }
+
+
+            // // onclick="userTriggers.updateEidolonRank(${rankCounter})"
+            // eidoString += `
+            // <div class="eidolonRowBoxHolder" style="opacity: .9">
+            //     <div class="eidolonRowIconHolder">
+            //         <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable"/>
+            //     </div>
+                
+            //     <div class="rightDescriptionBoxEidolons smallFont">
+            //         <div class="eidolonRowName">${entry.name}</div>
+            //         ${entry.desc}
+            //         ${paramsStringer}
+            //     </div>
+                
+            // </div>
+            // `;
+
+
+            eidoString += `
+            <div class="rotationsSectionRowHolder2Overview">
+            <div class="eidolonRowBoxHolder">
+                <div class="eidolonRowIconHolder">
+                    <img src="/HonkaiSR/${entry.icon}" class="eidolonRowIcon clickable"/>
+                </div>
+                
+                <div class="rightDescriptionBoxEidolons smallFont">
+                    <div class="eidolonRowName">
+                        E${rankCounter}: ${entry.name}
+                    </div>
+                    
+            `;
+            // ${entry.desc}
+
+
+
+
+            // "skillRef": {
+            //     "skillName": "I Choose You!",
+            //     "skillSlot": "Skill"
+            // }
+
+            // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
+            eidoString += `<div class="rotationsSectionRowHolder1Overview">
+                <div class="actionDetailBody">
+                    <div class="actionDetailBody2Description">
+                        ${pagePopulation.cleanDescription(entry.params ?? [],entry.desc)}
+                    </div>
+                </div>
+            `
+
+
+            eidoString += paramsStringer + `</div>`
+
+
+
+            eidoString += `</div>
+            </div>
+            </div>`;
+            
+        }
+        overviewString += eidoString; 
+
+
+
+
+
+
+
+
+        
         readSelection("overviewMainBoxHolder").innerHTML = overviewString;
 
+        // readSelection("eidolonsMainBoxHolder").innerHTML
         let statBox = readSelection("characterDisplayStatsBasic");
         statBox.innerHTML = "";
         // const menuBoxDisplayOrder = Object.keys(charRef.baseStats);

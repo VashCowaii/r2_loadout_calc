@@ -135,7 +135,7 @@
                     <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton1" onclick="userTriggers.updateMainMenuDisplayed(1)" style="color: rgb(255, 219, 145); opacity: 1; background-color: rgba(255, 255, 255, 0.1);">Event-Reader</div>
                     <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton2" onclick="userTriggers.updateMainMenuDisplayed(2)" style="color: white; opacity: 0.75;">Overview</div>
                     <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton3" onclick="userTriggers.updateMainMenuDisplayed(3)" style="color: white; opacity: 0.75;">Traces</div>
-                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton4" onclick="userTriggers.updateMainMenuDisplayed(4)" style="color: white; opacity: 0.75;">Eidolons</div>
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton4" onclick="userTriggers.updateMainMenuDisplayed(4)" style="color: white; opacity: 0.75;">Stats</div>
                   </div>
                 </div>
 
@@ -158,7 +158,7 @@
           <div class="expandedDataHolderHolderBox" id="teamBoxMainHolderBox">
 
 
-            <div class="characterMainCenterDisplay expandedMiddle">
+            <div class="characterMainCenterDisplay expandedMiddle" id="expandedMiddle">
 
                 <div class="characterMainCenterDisplayOverviewHolderBox" id="characterMainCenterDisplayOverview">
                     <div class="skillsMainBoxHolder" id="overviewMainBoxHolder">
@@ -176,7 +176,30 @@
                 </div>
 
                 <div class="centerDisplayHolderBox" id="characterMainCenterDisplayEidolons" style="display: none; border: none;flex-direction: column;">
-                    <div class="eidolonsMainBoxHolder" id="eidolonsMainBoxHolder"></div>
+                    <!-- <div class="eidolonsMainBoxHolder" id="eidolonsMainBoxHolder"></div> -->
+
+                    <div class="characterBasicMenuStatsBox" id="mainStatsDisplayOverview" style="display: flex;">
+                      
+                      <div class="characterDisplayNameAndElement">
+                          <div class="characterDisplayNameBox">Base Stats</div>
+                      </div>
+      
+      
+      
+                      <div class="characterDisplayAscension"></div>
+                      <div class="characterDisplayLevel"></div>
+                      <div class="characterDisplayStatsAndAbility"></div>
+                      <div class="characterDisplayStatsBasic" id="characterDisplayStatsBasic">
+                          <div class="imageRowStatisticBox1">
+                              <div class="imageRowStatisticImageBox"></div>
+                              <div class="imageRowStatisticNameBox"></div>
+                              <div class="imageRowStatisticStatBox"></div>
+      
+                          </div>
+                          <div class="imageRowStatisticBox2">test</div>
+                      </div>
+      
+                    </div>
                 </div>
                 
             </div>
@@ -185,7 +208,7 @@
 
 
 
-              <div class="characterBasicMenuStatsBox" id="mainStatsDisplayOverview">
+              <!-- <div class="characterBasicMenuStatsBox" id="mainStatsDisplayOverview">
                       
                 <div class="characterDisplayNameAndElement">
                     <div class="characterDisplayNameBox">Base Stats</div>
@@ -206,7 +229,7 @@
                     <div class="imageRowStatisticBox2">test</div>
                 </div>
 
-            </div>
+              </div> -->
 
 
                 <!-- TRACES -->

@@ -1060,8 +1060,6 @@ let globalIsLightcone = false;
 let globalIsRelic = false;
 let globalIsNoImage = false;
 
-console.log(0x0F)
-
 const megaParsingFuckery = {
     checkKnownKeys(keySet,objectToCheck,functionName) {
         if (keySet.size) {
@@ -1157,8 +1155,9 @@ const megaParsingFuckery = {
         const startingKeys = [
             // {leftHand: "File", keyValue: "fileName"},
             {leftHand: "Ability", keyValue: "abilityType"},
-            {leftHand: "Energy", keyValue: "energy"},
             {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
+            {leftHand: "Energy", keyValue: "energy"},
+            
             
             // {leftHand: "Toughness", keyValue: "toughnessList"},
         ];
@@ -1176,8 +1175,11 @@ const megaParsingFuckery = {
             
             
             <div class="eventCharacterFileInfoBox">
-            
-            <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">
+
+            <div class="abilitySelectorFloaterBox">
+                <div class="abilitySelectorFloaterBoxName">Ability Selection</div>
+                <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">
+            </div>
             `;
             
 
@@ -1189,9 +1191,31 @@ const megaParsingFuckery = {
         optionsString += "</select></div>"
         startingString += optionsString;
 
+
+
         let rowAlternating = 1;
         startingString += `<div class="${globalIsLightcone || globalIsRelic ? "energyAndToughnessRowHolderItems" : "energyAndToughnessRowHolder"}">`;
         if (!isLightcone) {
+
+
+            const propertyDisplayTemplates = {
+                energy(keyValue,configAbility) {
+                    return `<div class="imageRowStatisticBoxWithIcon">
+                        <img src="/HonkaiSR/icon/property/IconEnergyRecovery.png" class="characterDisplayLogStatIcon"></img>
+                        <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
+                    </div>`;
+                },
+                skillTrigger(keyValue,configAbility) {
+                    return `<div class="imageRowStatisticBoxWithIcon">
+                        <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}${configAbility.abilityType ? `[${configAbility.abilityType}]` : ""}</div>
+                    </div>`;
+                },
+                // abilityType(keyValue) {
+                //     return `<div class="imageRowStatisticBoxWithIcon">
+                //         <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
+                //     </div>`;
+                // },
+            }
             
             for (let entry of startingKeys) {
                 if (configAbility[entry.keyValue] == null) {
@@ -1217,14 +1241,20 @@ const megaParsingFuckery = {
 
                     continue;
                 }
+                if (entry.keyValue === "abilityType") {continue;}
                 // startingString += `<div class="">${configAbility[entry]}</div>`;
 
                 // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
                 // ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
-                startingString +=  `<div class="imageRowStatisticBox${(globalIsLightcone || globalIsRelic) ? rowAlternating : 0}DETAILS">
-                    <div class="imageRowStatisticNameBoxDETAILS">${entry.leftHand}</div>
-                    <div class="imageRowStatisticStatBoxDETAILS">${configAbility[entry.keyValue]}</div>
-                </div>`;
+
+
+                if (propertyDisplayTemplates[entry.keyValue]) {startingString += propertyDisplayTemplates[entry.keyValue](configAbility[entry.keyValue],configAbility);}
+                else {
+                    startingString +=  `<div class="imageRowStatisticBox${(globalIsLightcone || globalIsRelic) ? rowAlternating : 0}DETAILS">
+                        <div class="imageRowStatisticNameBoxDETAILS">${entry.leftHand}</div>
+                        <div class="imageRowStatisticStatBoxDETAILS">${configAbility[entry.keyValue]}</div>
+                    </div>`;
+                }
 
                 if (rowAlternating === 2) {rowAlternating = 1;}
                 else {rowAlternating++;}
@@ -1245,8 +1275,13 @@ const megaParsingFuckery = {
             const check3 = configAbility.toughnessList[2] != 0;
             const hasActualValues = check1 || check2 || check3;
 
+            
+
             if (hasActualValues) {
+                toughnessRowString += `<img src="/HonkaiSR/icon/property/IconBreakUp.png" class="characterDisplayLogStatIconCenter"></img>`;
+
                 for (let i=0;i<3;i++) {
+                    if (configAbility.toughnessList[i] === 0) {continue;}
                     toughnessRowString += `<div class="toughnessTableRowItemBox">
                         <div class="toughnessTableRowItemHeader">${toughnessIndexConversion[i]}</div>
                         <div class="toughnessTableRowItemValue">${configAbility.toughnessList[i]}</div>
@@ -1255,8 +1290,9 @@ const megaParsingFuckery = {
             }
         }
 
+        // <div class="toughnessTableRowHeader">Toughness</div>
         let toughnessString = !isLightcone && toughnessRowString != "" ? `<div class="toughnessTableRowBox">
-            <div class="toughnessTableRowHeader">Toughness</div>
+            
 
             <div class="toughnessTableRowTableRow">
                 ${toughnessRowString}
@@ -3420,6 +3456,7 @@ const megaParsingFuckery = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Energy");
         // initialCounter++;
         return `<div class="actionDetailBody2">
+            <img src="/HonkaiSR/icon/property/IconEnergyRecovery.png" class="characterDisplayLogStatIcon"></img>
             <div class="rotationConditionOperatorHeaderInline">Update Energy${parseRef.isSpecialEnergy ? " [SPECIAL]" : ""}:</div>&nbsp;
             ${parseRef.on ? `${Array.isArray(parseRef.on) ? megaParsingFuckery.makeConditionTargetBox(parseRef.on,initialCounter) : parseRef.on}` : ""} 
         </div>
@@ -3465,7 +3502,8 @@ const megaParsingFuckery = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Energy");
         // initialCounter++;
         return `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">Update Energy:</div>&nbsp;
+            <img src="/HonkaiSR/icon/property/IconEnergyRecovery.png" class="characterDisplayLogStatIcon"></img>
+            <div class="rotationConditionOperatorHeaderInline">Update Energy Value:</div>&nbsp;
             ${parseRef.adjustment} ${parseRef.value.displayLines ?? parseRef.value} on ${parseRef.on}
         </div>
         <div class="modifierDetailsBox">
@@ -5246,7 +5284,7 @@ const megaParsingFuckery = {
                 <div class="rotationConditionOperatorHeaderInline">Living State:</div>&nbsp;
                 ${parseRef.livingState}
             </div>` : ""}
-            ${parseRef.ToughnessDMGType != undefined ? `<div class="actionDetailBody2">
+            ${parseRef.ToughnessDMGType != undefined && (typeof parseRef?.ToughnessDMGType?.sourceType === "object" ? Object.keys(parseRef.ToughnessDMGType.sourceType).length : true) ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Toughness DMG Type:</div>&nbsp;
                 ${Array.isArray(parseRef.ToughnessDMGType) ? megaParsingFuckery.makeConditionTargetBox(parseRef.ToughnessDMGType,initialCounter) : parseRef.ToughnessDMGType}
             </div>` : ""}
