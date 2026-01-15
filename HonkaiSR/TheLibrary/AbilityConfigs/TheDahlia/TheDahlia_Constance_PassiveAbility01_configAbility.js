@@ -175,23 +175,23 @@ const configAbility = {
                   "scope": "ContextModifier",
                   "variableName": "MDF_StanceValue",
                   "value": {
-                    "operator": "Variables[0] (MDF_TargetMaxStanceValue) || Variables[1] (MDF_StanceValue) || MUL || RETURN",
-                    "displayLines": "(MDF_TargetMaxStanceValue * MDF_StanceValue)",
+                    "operator": "Variables[0] (MDF_TargetMaxStanceValue) || Variables[1] (MDF_StanceRatio) || MUL || RETURN",
+                    "displayLines": "(MDF_TargetMaxStanceValue * MDF_StanceRatio)",
                     "constants": [],
                     "variables": [
                       "MDF_TargetMaxStanceValue",
-                      "MDF_StanceValue"
+                      "MDF_StanceRatio"
                     ]
                   }
                 },
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (MDF_StanceRatio) || RETURN",
-                    "displayLines": "MDF_StanceRatio",
+                    "operator": "Variables[0] (MDF_StanceValue) || RETURN",
+                    "displayLines": "MDF_StanceValue",
                     "constants": [],
                     "variables": [
-                      "MDF_StanceRatio"
+                      "MDF_StanceValue"
                     ]
                   },
                   "attacker": "Owner of this Modifier",
@@ -223,11 +223,11 @@ const configAbility = {
         "show": "Hide",
         "isPercentofMaxToughness": true,
         "addedPercent": {
-          "operator": "Variables[0] (MDF_StanceValue) || RETURN",
-          "displayLines": "MDF_StanceValue",
+          "operator": "Variables[0] (MDF_StanceRatio) || RETURN",
+          "displayLines": "MDF_StanceRatio",
           "constants": [],
           "variables": [
-            "MDF_StanceValue"
+            "MDF_StanceRatio"
           ]
         },
         "maxToughness": {
