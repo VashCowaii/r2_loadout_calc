@@ -106,6 +106,12 @@ const configAbility = {
           ]
         }
       ],
+      "stackData": [
+        "MDF_PropertyValue"
+      ],
+      "latentQueue": [
+        "ATKCountSum"
+      ],
       "addStacksPerTrigger": 1
     },
     {

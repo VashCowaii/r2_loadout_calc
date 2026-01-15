@@ -55,7 +55,35 @@ const configAbility = {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
           "target": "Target Group",
-          "paramSequence": []
+          "paramSequence": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Use Prior Target(s) Defined",
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Ice",
+                "Damage": {
+                  "operator": "Variables[0] (0.36) || RETURN",
+                  "displayLines": "0.36",
+                  "constants": [],
+                  "variables": [
+                    0.36
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Memosprite"
+              },
+              "attackType": "Memosprite"
+            }
+          ]
         }
       ]
     },

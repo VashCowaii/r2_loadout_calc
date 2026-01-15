@@ -179,7 +179,34 @@ const configAbility = {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
           "target": "All Hostile Entities (AOE)",
-          "paramSequence": []
+          "paramSequence": [
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Use Prior Target(s) Defined",
+              "canPhase": true,
+              "AttackScaling": {
+                "DamageType": "Physical",
+                "Damage": {
+                  "operator": "Variables[0] (0.95) || RETURN",
+                  "displayLines": "0.95",
+                  "constants": [],
+                  "variables": [
+                    0.95
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Ultimate"
+              }
+            }
+          ]
         }
       ]
     },

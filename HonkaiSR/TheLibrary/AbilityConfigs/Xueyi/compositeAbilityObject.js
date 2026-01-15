@@ -206,19 +206,103 @@ const compositeAbilityObject = {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
           "target": "All Hostile Entities (AOE)",
-          "paramSequence": []
+          "paramSequence": [
+            "Select Random Target from List",
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Use Prior Target(s) Defined",
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Variables[0] (0.9) || RETURN",
+                  "displayLines": "0.9",
+                  "constants": [],
+                  "variables": [
+                    0.9
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Follow-up",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
         },
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
           "target": "All Hostile Entities (AOE)",
-          "paramSequence": []
+          "paramSequence": [
+            "Select Random Target from List",
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Use Prior Target(s) Defined",
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Variables[0] (0.9) || RETURN",
+                  "displayLines": "0.9",
+                  "constants": [],
+                  "variables": [
+                    0.9
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Follow-up",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
         },
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
           "target": "All Hostile Entities (AOE)",
-          "paramSequence": []
+          "paramSequence": [
+            "Select Random Target from List",
+            {
+              "name": "ATK Scaling DMG",
+              "target": "Use Prior Target(s) Defined",
+              "AttackScaling": {
+                "DamageType": "Quantum",
+                "Damage": {
+                  "operator": "Variables[0] (0.9) || RETURN",
+                  "displayLines": "0.9",
+                  "constants": [],
+                  "variables": [
+                    0.9
+                  ]
+                },
+                "Toughness": {
+                  "operator": "Variables[0] (ST Toughness Value) || RETURN",
+                  "displayLines": "ST Toughness Value",
+                  "constants": [],
+                  "variables": [
+                    "ST Toughness Value"
+                  ]
+                },
+                "Tags": null,
+                "attackType": "Follow-up",
+                "EnergyGainPercent": "100%"
+              }
+            }
+          ]
         },
         "Trigger: Attack End",
         {

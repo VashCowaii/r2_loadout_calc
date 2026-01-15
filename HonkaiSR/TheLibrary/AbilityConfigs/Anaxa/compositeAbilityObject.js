@@ -1809,7 +1809,12 @@ const compositeAbilityObject = {
                   "name": "Use Custom Character Function",
                   "functionName": "Bounce_SelectTarget",
                   "target": "All Hostile Entities (AOE)",
-                  "paramSequence": []
+                  "paramSequence": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "Anaxa_Ability02_SingleHit"
+                    }
+                  ]
                 }
               ]
             }
