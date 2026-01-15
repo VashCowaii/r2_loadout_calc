@@ -39949,6 +39949,673 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Trailblazer - Harmony": {
+    "internalID": 8005,
+    "name": "Trailblazer - Harmony",
+    "path": "Harmony",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 446.29200000000003,
+      "DEFBase": 679.1400000000001,
+      "HPBase": 1086.624,
+      "SPDBase": 105,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "800501",
+        "name": "Best Seat in the House",
+        "rank": 1,
+        "desc": "After using Skill for the first time, immediately recovers 1 Skill Point(s).",
+        "icon": "icon/skill/8005_rank1.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "800502",
+        "name": "Jailbreaking Rainbowwalk",
+        "rank": 2,
+        "desc": "When the battle starts, the Trailblazer's Energy Regeneration Rate increases by 25%, lasting for 3 turn(s).",
+        "icon": "icon/skill/8005_rank2.png",
+        "paramsEido": [
+          0.25,
+          3
+        ]
+      },
+      {
+        "id": "800503",
+        "name": "Sanatorium for Rest Notes",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/8005_skill.png"
+      },
+      {
+        "id": "800504",
+        "name": "Dove in Tophat",
+        "rank": 4,
+        "desc": "While the Trailblazer is on the field, increases the Break Effect of all teammates (excluding the Trailblazer), by an amount equal to 15% of the Trailblazer's Break Effect.",
+        "icon": "icon/skill/8005_rank4.png",
+        "paramsEido": [
+          0.15
+        ]
+      },
+      {
+        "id": "800505",
+        "name": "Poem Favors Rhythms of Old",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/8005_ultimate.png"
+      },
+      {
+        "id": "800506",
+        "name": "Tomorrow, Rest in Spotlight",
+        "rank": 6,
+        "desc": "The number of additional DMG applications by the Skill increases by 2.",
+        "icon": "icon/skill/8005_rank6.png",
+        "paramsEido": [
+          2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Swing Dance Etiquette": {
+          "variant1": {
+            "skillID": 800501,
+            "trigger": "Skill01",
+            "name": "Swing Dance Etiquette",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_Skill01_Camera",
+              "Avatar_PlayerBoy_20_Skill01_Phase01",
+              "Avatar_PlayerBoy_20_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Halftime to Make It Rain": {
+          "variant1": {
+            "skillID": 800502,
+            "trigger": "Skill02",
+            "name": "Halftime to Make It Rain",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy target and additionally deals DMG for 4 times, with each time dealing Imaginary DMG equal to #1[i]% of the Trailblazer's ATK to a random enemy.",
+            "energyCost": null,
+            "energyRegen": 6,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                2
+              ],
+              "2": [
+                0.275,
+                2
+              ],
+              "3": [
+                0.3,
+                2
+              ],
+              "4": [
+                0.325,
+                2
+              ],
+              "5": [
+                0.35,
+                2
+              ],
+              "6": [
+                0.375,
+                2
+              ],
+              "7": [
+                0.40625,
+                2
+              ],
+              "8": [
+                0.4375,
+                2
+              ],
+              "9": [
+                0.46875,
+                2
+              ],
+              "10": [
+                0.5,
+                2
+              ],
+              "11": [
+                0.525,
+                2
+              ],
+              "12": [
+                0.55,
+                2
+              ],
+              "13": [
+                0.575,
+                2
+              ],
+              "14": [
+                0.6,
+                2
+              ],
+              "15": [
+                0.625,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_Skill02_Camera",
+              "Avatar_PlayerBoy_20_Skill02_Phase01",
+              "Avatar_PlayerBoy_20_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "All-Out Footlight Parade": {
+          "variant1": {
+            "skillID": 800503,
+            "trigger": "Skill03",
+            "name": "All-Out Footlight Parade",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Grants all allies the Backup Dancer effect, lasting for #1[i] turn(s). This duration decreases by 1 at the start of Trailblazer's every turn. Allies with the Backup Dancer effect have their Break Effect increased by #3[i]%. And when they attack enemy targets that are in the Weakness Broken state, the Toughness Reduction of the attack will be converted into 1 instance of Super Break DMG.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                1,
+                0.15
+              ],
+              "2": [
+                3,
+                1,
+                0.165
+              ],
+              "3": [
+                3,
+                1,
+                0.18
+              ],
+              "4": [
+                3,
+                1,
+                0.195
+              ],
+              "5": [
+                3,
+                1,
+                0.21
+              ],
+              "6": [
+                3,
+                1,
+                0.225
+              ],
+              "7": [
+                3,
+                1,
+                0.24375
+              ],
+              "8": [
+                3,
+                1,
+                0.2625
+              ],
+              "9": [
+                3,
+                1,
+                0.28125
+              ],
+              "10": [
+                3,
+                1,
+                0.3
+              ],
+              "11": [
+                3,
+                1,
+                0.315
+              ],
+              "12": [
+                3,
+                1,
+                0.33
+              ],
+              "13": [
+                3,
+                1,
+                0.345
+              ],
+              "14": [
+                3,
+                1,
+                0.36
+              ],
+              "15": [
+                3,
+                1,
+                0.375
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_Skill03_Camera",
+              "Avatar_PlayerBoy_20_Skill03_EnterReady",
+              "Avatar_PlayerBoy_20_Skill03_Phase01",
+              "Avatar_PlayerBoy_20_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Super Break DMG": {
+                "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Full-on Aerial Dance": {
+          "variant1": {
+            "skillID": 800504,
+            "trigger": "SkillP01",
+            "name": "Full-on Aerial Dance",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "The Trailblazer immediately regenerates #1[f1] Energy when an enemy target's Weakness is Broken.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5
+              ],
+              "2": [
+                5.5
+              ],
+              "3": [
+                6
+              ],
+              "4": [
+                6.5
+              ],
+              "5": [
+                7
+              ],
+              "6": [
+                7.5
+              ],
+              "7": [
+                8.125
+              ],
+              "8": [
+                8.75
+              ],
+              "9": [
+                9.375
+              ],
+              "10": [
+                10
+              ],
+              "11": [
+                10.5
+              ],
+              "12": [
+                11
+              ],
+              "13": [
+                11.5
+              ],
+              "14": [
+                12
+              ],
+              "15": [
+                12.5
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_PassiveSkill_01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Now! I'm the Band!": {
+          "variant1": {
+            "skillID": 800507,
+            "trigger": "SkillMaze",
+            "name": "Now! I'm the Band!",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After the Technique is used, at the start of the next battle, all allies' Break Effect increases by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_PlayerBoy_20_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/8005_basic_atk.png",
+        "skillRef": {
+          "skillName": "Swing Dance Etiquette",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/8005_skill.png",
+        "skillRef": {
+          "skillName": "Halftime to Make It Rain",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/8005_ultimate.png",
+        "skillRef": {
+          "skillName": "All-Out Footlight Parade",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/8005_talent.png",
+        "skillRef": {
+          "skillName": "Full-on Aerial Dance",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/8005_technique.png",
+        "skillRef": {
+          "skillName": "Now! I'm the Band!",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Dance With the One",
+        "icon": "icon/skill/8005_skilltree1.png",
+        "desc": "When the number of enemy targets on the field is 5 (or more)/4/3/2/1, the Super Break DMG triggered by the Backup Dancer effect increases by #1[i]%/#2[i]%/#3[i]%/#4[i]%/#5[i]%.",
+        "params": [
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6
+        ],
+        "extraEffects": {
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG.",
+            "params": [
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Shuffle Along",
+        "icon": "icon/skill/8005_skilltree2.png",
+        "desc": "When using Skill, additionally increases the Toughness Reduction of the first instance of DMG by #1[i]%.",
+        "params": [
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Hat of the Theater",
+        "icon": "icon/skill/8005_skilltree3.png",
+        "desc": "After ally targets break weakness, additionally delays the action of the enemy target by #1[i]%.",
+        "params": [
+          0.3
+        ],
+        "extraEffects": {
+          "Action Delayed": {
+            "desc": "Increases the target's waiting interval before the next action.",
+            "params": [
+              0.3
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/8005.png",
+    "preview": "image/character_preview/8005.png",
+    "portrait": "image/character_portrait/8005.png",
+    "bannerOffsets": [],
+    "isBuffed": false
+  },
   "Trailblazer - Remembrance": {
     "internalID": 8007,
     "name": "Trailblazer - Remembrance",

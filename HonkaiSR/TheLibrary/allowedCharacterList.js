@@ -212,6 +212,10 @@ let allowedCharacterList = [
     "trimName": "TrailblazerPreservation"
   },
   {
+    "fullName": "Trailblazer - Harmony",
+    "trimName": "TrailblazerHarmony"
+  },
+  {
     "fullName": "Trailblazer - Remembrance",
     "trimName": "TrailblazerRemembrance"
   },
