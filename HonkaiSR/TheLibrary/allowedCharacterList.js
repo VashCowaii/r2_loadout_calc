@@ -184,6 +184,10 @@ let allowedCharacterList = [
     "trimName": "Misha"
   },
   {
+    "fullName": "The Dahlia",
+    "trimName": "TheDahlia"
+  },
+  {
     "fullName": "Tribbie",
     "trimName": "Tribbie"
   },

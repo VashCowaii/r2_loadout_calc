@@ -1124,7 +1124,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Taking Toughness DMG [Owner]",
+          "eventTrigger": "Taking Toughness DMG [Owner]: End",
           "execute": [
             {
               "name": "IF",
