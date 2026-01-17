@@ -1097,7 +1097,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "modifier": "Monster_W3_Aventurine_Gambling",
+                        "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]",
                         "invertCondition": true
                       },
                       "passed": [
@@ -1297,7 +1297,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Monster_W3_Aventurine_Gambling"
+                    "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]"
                   },
                   "passed": [
                     {
@@ -1324,7 +1324,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Was",
-                    "modifier": "Monster_W3_Aventurine_Gambling"
+                    "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]"
                   },
                   "passed": [
                     {

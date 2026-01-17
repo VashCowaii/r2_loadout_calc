@@ -3956,6 +3956,8 @@ const userTriggers = {
 
 
 
+            
+
 
             // "skillRef": {
             //     "skillName": "I Choose You!",
@@ -4009,6 +4011,38 @@ const userTriggers = {
                             `
                         }
 
+                        let paramString2 = "";
+                        if (currentInnerSkillVariant.extraEffects && Object.keys(currentInnerSkillVariant.extraEffects).length) {
+
+                            // let paramString = "";
+                            let paramCounter = 0;
+                            for (let paramEntry in currentInnerSkillVariant.extraEffects) {
+                                const currentEffect = currentInnerSkillVariant.extraEffects[paramEntry];
+        
+        
+                                paramString2 += `<div class="rotationsSectionRowHolder3Overview">
+                                    <div class="actionDetailBody">
+                                        <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
+                                    </div>
+                                    <div class="actionDetailBody">
+                                        <div class="actionDetailBody3Description">
+                                            ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
+                                        </div>
+                                    </div>
+                                </div>`;
+        
+                                // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                                // paramCounter++;
+                            }
+        
+                            // entryString += `
+                            //     <div class="actionDetailBody">
+                            //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                            //     </div>
+                            // `
+                            // entryString += paramString;
+                        } 
+
 
                         entryString += `
                             <div class="rotationsSectionRowHolder3Overview">
@@ -4056,6 +4090,7 @@ const userTriggers = {
                                     </div>
                                 </div>
                                 ${paramsStringer}
+                                ${paramString2}
                             </div>`;
                     }
 
@@ -4147,6 +4182,37 @@ const userTriggers = {
                     `
                 }
 
+                if (currentTraceRef.extraEffects && Object.keys(currentTraceRef.extraEffects).length) {
+
+                    let paramString = "";
+                    let paramCounter = 0;
+                    for (let paramEntry in currentTraceRef.extraEffects) {
+                        const currentEffect = currentTraceRef.extraEffects[paramEntry];
+
+
+                        paramString += `<div class="rotationsSectionRowHolder3Overview">
+                            <div class="actionDetailBody">
+                                <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
+                            </div>
+                            <div class="actionDetailBody">
+                                <div class="actionDetailBody3Description">
+                                    ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
+                                </div>
+                            </div>
+                        </div>`;
+
+                        // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                        // paramCounter++;
+                    }
+
+                    // entryString += `
+                    //     <div class="actionDetailBody">
+                    //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                    //     </div>
+                    // `
+                    entryString += paramString;
+                } 
+
                 entryString += `</div>`
             }
 
@@ -4188,6 +4254,40 @@ const userTriggers = {
                     </div>
                 `
             }
+
+
+
+            let paramString2 = "";
+            if (entry.extraEffects && Object.keys(entry.extraEffects).length) {
+
+                // let paramString = "";
+                let paramCounter = 0;
+                for (let paramEntry in entry.extraEffects) {
+                    const currentEffect = entry.extraEffects[paramEntry];
+
+
+                    paramString2 += `<div class="rotationsSectionRowHolder3Overview">
+                        <div class="actionDetailBody">
+                            <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${paramEntry}</div>
+                        </div>
+                        <div class="actionDetailBody">
+                            <div class="actionDetailBody3Description">
+                                ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
+                            </div>
+                        </div>
+                    </div>`;
+
+                    // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                    // paramCounter++;
+                }
+
+                // entryString += `
+                //     <div class="actionDetailBody">
+                //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                //     </div>
+                // `
+                // entryString += paramString;
+            } 
 
 
             // // onclick="userTriggers.updateEidolonRank(${rankCounter})"
@@ -4240,7 +4340,7 @@ const userTriggers = {
             `
 
 
-            eidoString += paramsStringer + `</div>`
+            eidoString += paramsStringer + paramString2 + `</div>`
 
 
 
