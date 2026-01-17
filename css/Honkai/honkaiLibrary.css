@@ -634,6 +634,24 @@ div {
     align-items: center;
     text-align: left;
 }
+.rotationConditionOperatorHeaderInlineParamsExtraEffectHeader {
+    /* width: 100%; */
+    font-size: 16px;
+    margin-bottom: -5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color: rgb(202, 202, 202);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.281);
+}
+.actionDetailBody3Description {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: #808080;
+    box-sizing: border-box;
+}
 .rotationConditionOperatorHeaderInline {
     /* width: 100%; */
     font-size: 14px;
