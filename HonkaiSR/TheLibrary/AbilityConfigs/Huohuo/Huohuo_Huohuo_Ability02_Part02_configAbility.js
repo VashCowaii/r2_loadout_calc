@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Dispel Debuffs",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "dispelCount": {
         "operator": "Variables[0] (1) || RETURN",
         "displayLines": "1",
@@ -19,12 +22,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Huohuo_DealHeal"
     },
     {
       "name": "Heal",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.21) || RETURN",
         "displayLines": "0.21",
@@ -45,7 +54,10 @@ const configAbility = {
     },
     {
       "name": "Heal",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.168) || RETURN",
         "displayLines": "0.168",
@@ -66,24 +78,39 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Skill Target List",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Target List}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Compare: Target",
-        "target": "Use Prior Target(s) Defined",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Huohuo_DealHeal"
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

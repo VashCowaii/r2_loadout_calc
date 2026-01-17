@@ -15,22 +15,34 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Arlan_Passive"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Arlan_Ability02_LoseHPPreShow"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Arlan_Eidolon1"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Arlan_Eidolon6"
     },
     {
@@ -42,7 +54,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Arlan_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -68,13 +83,22 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -84,7 +108,10 @@ const configAbility = {
                   "skillType": [
                     "Skill"
                   ],
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "previewType": null,
                   "previewValue": {
                     "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.15) || MUL || RETURN",
@@ -114,13 +141,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "_Arlan_00_PassiveSkill03_InsertController"
             },
             {
               "name": "Declare Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "Arlan_00_PassiveSkill03Success"
             },
@@ -148,7 +181,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_Arlan_00_PassiveSkill03_InsertController",
                     "compareType": "=",
                     "value2": 0,
@@ -161,7 +197,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": "<=",
                     "value2": 0
@@ -169,14 +208,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "Arlan_00_PassiveSkill03Success",
                       "value": 1
                     },
                     {
                       "name": "Dispel Debuffs",
-                      "target": "Owner of this Modifier"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
                     },
                     {
                       "name": "Define Custom Variable",
@@ -193,7 +238,10 @@ const configAbility = {
                     },
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "_Arlan_00_PassiveSkill03_InsertController",
                       "value": 1
@@ -223,7 +271,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "=",
                 "value2": 1
@@ -231,12 +282,18 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_HPRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -263,7 +320,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "=",
                 "value2": 1
@@ -271,19 +331,28 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]"
                 }
               ],
               "failed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_HPRatio"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -329,7 +398,10 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": 0.5
@@ -377,7 +449,10 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": 0.5

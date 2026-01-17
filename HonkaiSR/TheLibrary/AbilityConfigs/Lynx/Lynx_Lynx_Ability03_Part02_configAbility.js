@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Dispel Debuffs",
-      "target": "All Team Members(In Context)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "dispelCount": {
         "operator": "Variables[0] (1) || RETURN",
         "displayLines": "1",
@@ -19,7 +22,10 @@ const configAbility = {
     },
     {
       "name": "Heal",
-      "target": "All Team Members(In Context)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.135) || RETURN",
         "displayLines": "0.135",
@@ -47,7 +53,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "All Team Members(In Context)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
           "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -97,7 +106,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "All Team Members(In Context)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
           "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -146,20 +158,32 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
     },
     {
       "name": "Find New Target",
-      "from": "Skill Target List",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Target List}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Compare: Target",
-        "target": "Use Prior Target(s) Defined",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },

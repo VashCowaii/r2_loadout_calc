@@ -18,12 +18,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Constance_Passive"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Constance_Ultimate_AddWeaknessPreShow"
     },
     {
@@ -79,23 +85,38 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Sub-Target in HP-Share Group",
-                "target": "Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies(All)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
                       {
                         "name": "Is Sub-Target in HP-Share Group",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -103,7 +124,10 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Constance_ReduceStanceTriggerCD",
                       "removeToBeAdded": true
                     }
@@ -113,7 +137,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_ReduceStanceTriggerCD",
               "removeToBeAdded": true
             }
@@ -130,7 +157,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "includeDyingTargets": true,
               "conditions": {
                 "name": "AND",
@@ -140,12 +170,18 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "MuteBreak"
                       },
                       {
                         "name": "Compare: Ability Value",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;",
                         "compareType": ">",
                         "value2": 0
@@ -155,7 +191,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Constance_ReduceStanceTriggerCD",
                     "invertCondition": true
                   }
@@ -164,14 +203,20 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_TargetMaxStanceValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
                   "warningType": "MaxToughness"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "variableName": "MDF_StanceValue",
                   "value": {
@@ -194,7 +239,10 @@ const configAbility = {
                       "MDF_StanceValue"
                     ]
                   },
-                  "attacker": "Owner of this Modifier",
+                  "attacker": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "forceReduction": true,
                   "ignoreAttackerBonuses": true,
                   "canDelay": true,
@@ -206,7 +254,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Constance_ReduceStanceTriggerCD"
                 }
               ]
@@ -258,12 +309,18 @@ const configAbility = {
               "conditionList": [
                 {
                   "name": "Has Flag",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "flagName": "MuteBreak"
                 },
                 {
                   "name": "Compare: Ability Value",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "value1": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;",
                   "compareType": ">",
                   "value2": 0
@@ -273,7 +330,10 @@ const configAbility = {
             },
             {
               "name": "Has Modifier",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Constance_ReduceStanceTriggerCD",
               "invertCondition": true
             }
@@ -294,12 +354,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "DealSuperBreakDamage_DamagePerformance",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variables": {
                     "value_0_DamagePercentage": {
                       "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
@@ -314,17 +380,26 @@ const configAbility = {
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "PursuedDamage_PerformanceDelay",
-                      "target": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "ReadTargetType",
-                          "target": "Owner of this Modifier"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          }
                         },
                         "DamageBreak": {
                           "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
@@ -364,7 +439,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "_M_Constance_Aura_ElementDamage",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
@@ -431,7 +509,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "_M_Constance_Aura_ElementDamage",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
@@ -461,8 +542,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Owner of this Modifier",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               }
             }
           ]
@@ -484,14 +571,23 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Owner of this Modifier",
-                "target2": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "invertCondition": true
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Teammates + Unselectable (Excluding Owner, and Owner of this Modifier)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}} - {{Modifier Holder}}"
+                  },
                   "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ]
@@ -505,7 +601,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Constance_DancerSuperBreak",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -522,12 +621,18 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Constance_Dancer_UITOP"
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Constance_StancePreview",
           "conditions": {
             "name": "Eidolon Activated",
@@ -562,7 +667,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Constance_Eidolon1_ReduceStance",
           "conditions": {
             "name": "Eidolon Activated",
@@ -611,31 +719,49 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Constance_InsertCD[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]",
                     "invertCondition": true
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                   }
                 ]
@@ -645,7 +771,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -656,8 +785,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Constance_Insert_SelectTarget",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -671,7 +806,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "_M_Constance_InsertCheck"
                     }
                   ]
@@ -691,29 +829,44 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
             },
             {
               "name": "Find New Target",
-              "from": "All Team Members(In Context, with Untargetable, exclude Owner)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}} - {{Caster}}"
+              },
               "maxTargets": 1,
               "conditions": {
                 "name": "Has Flag",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "flagName": "STAT_TriggerBattleCharacter"
               },
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ],
               "noTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates + Unselectable (Living, Excluding Owner) [Sort by Break Effect][Reverse][1]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
+                  },
                   "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ]
@@ -722,7 +875,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "Rank01_Activated",
                 "compareType": ">=",
                 "value2": 1
@@ -730,7 +886,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Teammates + Unselectable (Excluding Owner, Memosprites, and Dahlia's Dance Partners)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[removeMemosprite]] - {{Dahlia's Dance Partners}}"
+                  },
                   "modifier": "Constance_Eidolon1_SuperBreak[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -757,13 +916,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Teammates + Unselectable (Excluding Owner)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Dahlia's Dance Partners [Exclude Caster]",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Dahlia's Dance Partners}} - {{Caster}}"
+                    },
                     "value1": "TeamCharacterCount",
                     "compareType": "<=",
                     "value2": 0
@@ -773,7 +941,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates + Unselectable (Living, Excluding Owner) [Sort by Break Effect][Reverse][1]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
+                  },
                   "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ]
@@ -785,19 +956,31 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable, NO Memosprites)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]",
                     "invertCondition": true
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Rank01_Activated",
                     "compareType": ">=",
                     "value2": 1
@@ -807,7 +990,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Constance_Eidolon1_SuperBreak[<span class=\"descriptionNumberColor\">When a Bud Readies to Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -839,11 +1025,17 @@ const configAbility = {
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOrLimbo",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Dahlia's Dance Partners [Exclude Caster]",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Dahlia's Dance Partners}} - {{Caster}}"
+                    },
                     "value1": "TeamCharacterCount",
                     "compareType": "<=",
                     "value2": 0
@@ -853,7 +1045,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates + Unselectable (Living, Excluding Owner) [Sort by Break Effect][Reverse][1]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[livingOrLimbo]].[[sortByBreakEffect]].[[reverse]].[[index0]]"
+                  },
                   "modifier": "Constance_Dancer[<span class=\"descriptionNumberColor\">Dance Partner</span>]"
                 }
               ]
@@ -872,10 +1067,8 @@ const configAbility = {
         "show": "Hide",
         "skillType": "Ultimate",
         "addedDisplayWeakness": {
-          "TargetType": "TargetAlias",
-          "TargetAlias": "Constance_Dancers",
-          "Sequence": [],
-          "TargetList": []
+          "name": "Target Name",
+          "target": "{{Dahlia's Dance Partners}}"
         }
       }
     },
@@ -892,7 +1085,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -922,7 +1118,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Constance_Eidolon2_PropertyValue[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -944,14 +1143,23 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "All Hostile Entities (AOE)(ALL)",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Constance_Eidolon2_PropertyValue[<span class=\"descriptionNumberColor\">Fresh, Ethereal, and Beloved</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -983,17 +1191,26 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Enemies(All)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
               "conditions": {
                 "name": "OR",
                 "conditionList": [
                   {
                     "name": "Is Sub-Target in HP-Share Group",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Enemy_Standard_ChangephaseMark"
                   }
                 ]
@@ -1001,7 +1218,10 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Constance_ReduceStanceTriggerCD",
                   "removeToBeAdded": true
                 }
@@ -1024,7 +1244,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1051,7 +1274,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Dahlia's Dance Partners",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Dahlia's Dance Partners}}"
+              },
               "modifier": "Constance_Eidolon6_Property[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1079,7 +1305,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Constance_Eidolon6_Property[<span class=\"descriptionNumberColor\">And Yet, Always, Deathly Beautiful</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -1108,14 +1337,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "MDF_PropertyValueCaster",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "context": "ContextModifier"
             },
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "ContextModifier",
               "variableName": "MDF_PropertyValue",
               "value": {
@@ -1131,7 +1366,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1164,13 +1402,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Teammates + Battle Events(Excluding Owner)",
-                    "target": "Use Prior Target(s) Defined(REAL SOURCE OF)",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members(Exclude Self)}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target's Source Owner}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "_M_Constance_Tree01_CD",
                     "invertCondition": true
                   }
@@ -1179,13 +1426,19 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "_M_Constance_Tree01_CD",
                   "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable, NO Memosprites)[Exclude Caster]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
+                  },
                   "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -1214,7 +1467,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable, NO Memosprites)[Exclude Caster]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
+                  },
                   "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -1240,18 +1496,33 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Teammates + Battle Events(Excluding Owner)",
-                    "target": "Use Prior Target(s) Defined(REAL SOURCE OF)",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members(Exclude Self)}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target's Source Owner}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Secondary Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "_M_Constance_Tree01_CD",
                     "invertCondition": true
                   }
@@ -1260,13 +1531,19 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "_M_Constance_Tree01_CD",
                   "referenceModifier": "MReference_Mark_RemoveOnTurnEnd"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable, NO Memosprites)[Exclude Caster]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
+                  },
                   "modifier": "Constance_Tree01_Property[<span class=\"descriptionNumberColor\">Yet Another Funeral</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -1304,7 +1581,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (35) || RETURN",
                     "displayLines": "35",
@@ -1317,7 +1597,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "_M_Constance_DancerManager"
                 }
               ]
@@ -1331,7 +1614,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Constance_MonsterPhaseChangeControl",
           "conditions": {
             "name": "Eidolon Activated",
@@ -1340,7 +1626,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Constance_Eidolon6_PropertyListen",
           "conditions": {
             "name": "Eidolon Activated",
@@ -1359,7 +1648,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Constance_ListenTrace01",
           "conditions": {
             "name": "Trace Activated",
@@ -1368,7 +1660,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Constance_Eidolon2_Halo",
           "conditions": {
             "name": "Eidolon Activated",
@@ -1387,7 +1682,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "_M_Constance_ListenInsert_SubOnEnemy",
           "aliveOnly": "False",
           "haloStatus": true

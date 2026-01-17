@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Gepard_Maze_Modifier"
     }
   ],
@@ -37,13 +40,19 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "Avatar_Gepard_BaseDefenceValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "modifier": "Gepard_Ultimate_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",

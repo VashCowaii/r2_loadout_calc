@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Lynx_Modifier"
     }
   ],
@@ -44,7 +47,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -94,7 +100,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",

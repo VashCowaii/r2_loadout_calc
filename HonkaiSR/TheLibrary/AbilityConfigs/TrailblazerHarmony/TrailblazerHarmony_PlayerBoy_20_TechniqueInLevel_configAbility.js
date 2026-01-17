@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_PlayerBoy_20_Modifier"
     }
   ],
@@ -37,7 +40,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "PlayerBoy_20_TechniqueUsage_Bonus[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",

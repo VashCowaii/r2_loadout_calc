@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "MDF_Sparkle_CritDmgValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
     },
@@ -57,31 +60,43 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": [
-            {
-              "name": "Target List",
-              "target": "All Teammates (Excluding Owner)"
-            },
-            {
-              "name": "Target Filter",
-              "conditions": {
-                "name": "OR",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
-                    "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
-                  },
-                  {
-                    "name": "Is Part Of",
-                    "of": "Use Prior Target(s) Defined",
-                    "target": "Single Target (Primary)",
-                    "mustBeAlive2": true
-                  }
-                ]
+          "to": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "OR",
+                  "conditionList": [
+                    {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                    },
+                    {
+                      "name": "Is Part Of",
+                      "of": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
+                      "mustBeAlive2": true
+                    }
+                  ]
+                }
               }
-            }
-          ],
+            ]
+          },
           "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -115,7 +130,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -148,13 +166,19 @@ const configAbility = {
     },
     {
       "name": "Action Advance/Delay",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "advanceType": "Advance",
       "value": "-0.5"
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

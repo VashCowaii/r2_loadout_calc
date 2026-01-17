@@ -21,14 +21,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "SpeedUp_Count",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (SpeedUp_Count) || MUL || RETURN",
@@ -67,7 +73,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -103,7 +112,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (seele_dmg_percent) || RETURN",
@@ -127,7 +139,10 @@ const configAbility = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_Penetrate) || RETURN",

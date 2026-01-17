@@ -28,12 +28,21 @@ const configAbility = {
                     "attackTypes": [
                       "DOT"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Battle Events/Summon)",
-                    "target": "Use [REAL SUMMONER OF] Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}.[[getSourceCreator]]"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -70,7 +79,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Harscyline_Eidolon1_DamageUp",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
@@ -112,14 +124,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "Modifier_Poison_PoisonLayer",
               "multiplier": 1
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -143,14 +161,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "Modifier_Poison_PoisonLayer",
               "multiplier": 1
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -207,7 +231,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
@@ -243,7 +270,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
@@ -255,7 +285,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
@@ -325,7 +358,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -349,7 +385,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
@@ -361,7 +400,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -407,13 +449,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Prior Snapshot Entity",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Snapshot Stat Source}}"
+              },
               "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
@@ -472,13 +520,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Prior Snapshot Entity",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Snapshot Stat Source}}"
+              },
               "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
@@ -532,7 +586,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
@@ -555,13 +612,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Prior Snapshot Entity",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Snapshot Stat Source}}"
+              },
               "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
@@ -615,7 +678,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
@@ -663,14 +729,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "Modifier_Poison_PoisonLayer",
               "multiplier": 1
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -694,14 +766,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "Modifier_Poison_PoisonLayer",
               "multiplier": 1
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -758,7 +836,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
@@ -794,7 +875,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
@@ -806,7 +890,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
@@ -876,7 +963,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -900,7 +990,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
@@ -912,7 +1005,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -958,13 +1054,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Prior Snapshot Entity",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Snapshot Stat Source}}"
+              },
               "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
@@ -1023,13 +1125,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Prior Snapshot Entity",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Snapshot Stat Source}}"
+              },
               "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
@@ -1083,7 +1191,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
@@ -1107,7 +1218,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
@@ -1119,13 +1233,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_TargetMaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Prior Snapshot Entity",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Snapshot Stat Source}}"
+              },
               "variableName": "MDF_CasterAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
@@ -1179,7 +1299,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
@@ -1264,7 +1387,10 @@ const configAbility = {
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
@@ -1287,7 +1413,10 @@ const configAbility = {
                   "conditions": {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   }
                 }
               ]
@@ -1305,13 +1434,22 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
@@ -1342,8 +1480,14 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -1399,7 +1543,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Harscyline_TriggerDotFlag"
             },
             {
@@ -1424,7 +1571,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Harscyline_TriggerDotFlag"
             },
             {
@@ -1482,20 +1632,29 @@ const configAbility = {
                         "attackTypes": [
                           "DOT"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "AND",
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "Memosprite_CyreneServant_AmazingBonus_Harscyline[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]"
                           },
                           {
                             "name": "Character ID",
                             "ID": 1415,
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "characterName": "Cyrene"
                           }
                         ]
@@ -1512,13 +1671,19 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Harscyline_Ability03_Flag",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Harscyline_TriggerDotFlag",
                         "invertCondition": true
                       },
@@ -1549,7 +1714,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Harscyline_TriggerDotFlag"
                     }
                   ],
@@ -1591,7 +1759,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Entity a Battle Event/Summon",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -1632,7 +1803,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Harscyline_Ability03_Flag",
                     "invertCondition": true
                   }
@@ -1664,7 +1838,10 @@ const configAbility = {
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "AttackScaling": {
                         "DamageType": "Physical",
                         "Damage": {
@@ -1696,15 +1873,24 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Harscyline_TriggerDotFlag"
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "passed": [
                 {
@@ -1726,7 +1912,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Harscyline_TriggerDotFlag"
             },
             {
@@ -1736,14 +1925,26 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "All Hostile Entities (AOE)(ALL)",
-                    "target": "Use [LIST OF] Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target List}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -1773,7 +1974,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Harscyline_TriggerDotFlag"
             },
             {
@@ -1798,14 +2002,26 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "All Hostile Entities (AOE)(ALL)",
-                    "target": "Use [LIST OF] Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target List}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -1813,7 +2029,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
@@ -1840,7 +2059,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Harscyline_TriggerDotFlag"
             },
             {
@@ -1865,7 +2087,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Harscyline_TriggerDotFlag"
             },
             {
@@ -1895,7 +2120,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -1931,7 +2159,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_DefenceDownRatio) || SUB || RETURN",
@@ -1946,7 +2177,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_AttackDownRatio) || SUB || RETURN",
@@ -1964,12 +2198,18 @@ const configAbility = {
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 4,
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDownRatio) || SUB || RETURN",
@@ -2005,7 +2245,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -2058,7 +2301,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team(ALL, exclude Owner) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster}}"
+              },
               "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
             },
             {
@@ -2163,7 +2409,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Harscyline_Maze_Flag"
               },
               "failed": [
@@ -2176,7 +2425,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Harscyline_Maze_Flag"
                 }
               ]
@@ -2195,7 +2447,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Harscyline_PassiveDot_Trigger",
           "haloStatus": true,
           "valuePerStack": {
@@ -2219,7 +2474,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Harscyline_PassiveDot_Part1Listen",
           "haloStatus": true,
           "valuePerStack": {
@@ -2243,7 +2501,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Harscyline_HaloDebuff[<span class=\"descriptionNumberColor\">Maelstrom Rhapsody</span>]",
           "haloStatus": true,
           "valuePerStack": {
@@ -2291,7 +2552,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Allied Team(ALL, exclude Owner) [Exclude battle mechanics]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster}}"
+          },
           "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
           "haloStatus": true,
           "conditions": {

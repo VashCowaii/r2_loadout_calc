@@ -45,7 +45,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Ren_TechniqueUsage_AOE"
         }
       ],
@@ -81,7 +84,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "CurrentHP%",
                             "compareType": ">",
                             "value2": 0.5
@@ -103,7 +109,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Consume",
                       "consumeFrom": "MaxHP",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "consumePercent": {
                         "operator": "Variables[0] (0.2) || RETURN",
                         "displayLines": "0.2",
@@ -117,7 +126,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "All Hostile Entities (AOE)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Wind",
@@ -168,7 +180,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Ren_Trace03"
             }
           ]
@@ -215,7 +230,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "ATK Scaling DMG",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -245,7 +263,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -274,7 +295,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Heal",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.25) || RETURN",
             "displayLines": "0.25",
@@ -294,7 +318,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (15) || RETURN",
                 "displayLines": "15",
@@ -309,7 +336,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]"
         },
         {
@@ -337,7 +367,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Ren_Trace03"
             }
           ]
@@ -355,7 +388,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Enemies Still Alive",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "includeNonTargets": true
           },
           "passed": [
@@ -371,8 +407,14 @@ const compositeAbilityObject = {
             },
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Single Target (Primary)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "ability": "AdvancedRen_Passive1Atk02_Ability",
               "isTrigger": true
             }
@@ -400,12 +442,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_Passive"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_LoseHPPreShow"
         },
         {
@@ -420,13 +468,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "CasterMaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "CasterCurrentHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
@@ -486,7 +540,10 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": ">",
                 "value2": 0.5
@@ -578,7 +635,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CasterCurrentHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 }
@@ -591,7 +651,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Entity a Battle Event/Summon",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
@@ -630,7 +693,10 @@ const compositeAbilityObject = {
                           "DOT",
                           "Additional DMG"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       "failed": [
                         {
@@ -666,7 +732,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CasterCurrentHP2",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 },
@@ -716,7 +785,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -748,13 +820,19 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "flagName": "STAT_CTRL",
                                 "invertCondition": true
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "flagName": "DisableAction",
                                 "invertCondition": true
                               }
@@ -769,8 +847,14 @@ const compositeAbilityObject = {
                                 "typeValue": 1
                               },
                               "abilityName": "AdvancedRen_Passive1Atk_Ability",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "All Hostile Entities (AOE)",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -790,7 +874,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": 0.5
@@ -821,7 +908,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Advanced_Ren_Eidolon4_Add"
                         }
                       ]
@@ -846,7 +936,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CasterCurrentHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 }
@@ -894,7 +987,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Ren_Trace02[<span class=\"descriptionNumberColor\">Neverending Deaths</span>]"
                     }
                   ]
@@ -926,13 +1022,19 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -947,8 +1049,14 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "AdvancedRen_Passive1Atk_Ability",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -988,7 +1096,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Flag",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "flagName": "STAT_CTRL"
                         }
                       },
@@ -996,7 +1107,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Flag",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "flagName": "DisableAction"
                         }
                       },
@@ -1005,12 +1119,18 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Modifier Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "STAT_CTRL"
                           },
                           {
                             "name": "Modifier Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "DisableAction"
                           }
                         ]
@@ -1026,8 +1146,14 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "AdvancedRen_Passive1Atk_Ability",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -1065,13 +1191,19 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -1086,8 +1218,14 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "AdvancedRen_Passive1Atk_Ability",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -1113,13 +1251,19 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "CasterCurrentHP2",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "CasterMaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
@@ -1159,7 +1303,10 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "CasterCurrentHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     }
@@ -1184,7 +1331,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "value1": "CurrentHP%",
             "compareType": ">=",
             "value2": 0.5
@@ -1192,7 +1342,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with HP%",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "DamageExtra_HPRatio"
             }
           ],
@@ -1206,13 +1359,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "CasterCurrentHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
           "name": "Set HP Value",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "clearNegativeHP": true,
           "setValue": {
             "operator": "Variables[0] (CasterMaxHP) || Constants[0] (0.5) || MUL || RETURN",
@@ -1280,7 +1439,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -1311,7 +1473,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -1341,7 +1506,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -1419,7 +1587,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Ren_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1450,7 +1621,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Ren_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]"
             }
           ]
@@ -1481,7 +1655,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "AdvancedRen_Ability03_Part02",
           "isTrigger": true
         }
@@ -1514,14 +1691,20 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "CasterCurrentHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
           "name": "Consume",
           "consumeFrom": "MaxHP",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "consumePercent": {
             "operator": "Variables[0] (0.3) || RETURN",
             "displayLines": "0.3",
@@ -1535,7 +1718,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_Attack_Transfer[<span class=\"descriptionNumberColor\">Hellscape</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -1548,7 +1734,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_Attack[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -1600,7 +1789,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "AdvancedRen_Ability02_Part02",
           "isTrigger": true
         },
@@ -1616,14 +1808,20 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "CasterCurrentHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
         },
         {
           "name": "Consume",
           "consumeFrom": "MaxHP",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "consumePercent": {
             "operator": "Variables[0] (0.1) || RETURN",
             "displayLines": "0.1",
@@ -1690,7 +1888,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -1722,7 +1923,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -1804,7 +2008,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -1834,7 +2041,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -1861,7 +2071,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -1888,7 +2101,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -1937,7 +2153,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "AdvancedRen_Ability11_Part02",
           "isTrigger": true
         }
@@ -1952,7 +2171,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -1980,7 +2202,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2030,7 +2255,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "AdvancedRen_Ability01_Part02",
           "isTrigger": true
         }
@@ -2058,13 +2286,22 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
@@ -2074,7 +2311,10 @@ const compositeAbilityObject = {
                       "skillType": [
                         "Skill"
                       ],
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "previewType": null,
                       "previewValue": {
                         "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.3) || MUL || RETURN",
@@ -2090,7 +2330,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Advanced_Ren_Attack_Transfer[<span class=\"descriptionNumberColor\">Hellscape</span>]"
                       },
                       "passed": [
@@ -2100,7 +2343,10 @@ const compositeAbilityObject = {
                           "skillType": [
                             "Basic ATK"
                           ],
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "previewType": null,
                           "previewValue": {
                             "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.1) || MUL || RETURN",
@@ -2118,7 +2364,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": ">=",
                         "value2": 0.5
@@ -2126,7 +2375,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "variableName": "MDF_CurrentHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                         },
@@ -2136,7 +2388,10 @@ const compositeAbilityObject = {
                           "skillType": [
                             "Ultimate"
                           ],
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "previewType": null,
                           "previewValue": {
                             "operator": "Variables[0] (MDF_CurrentHP) || Variables[1] (MDF_MaxHP) || Constants[0] (0.5) || MUL || SUB || RETURN",
@@ -2182,7 +2437,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_CriticalIncrease) || RETURN",
@@ -2210,7 +2468,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Ren_Eidolon4[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -2248,7 +2509,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Rank04_Layer",
                   "multiplier": 1
@@ -2268,7 +2532,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
@@ -2343,7 +2610,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "CasterLostHP2"
                 },
                 {
@@ -2371,7 +2641,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.2) || RETURN",
@@ -2621,7 +2894,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2634,7 +2910,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
@@ -2669,23 +2948,35 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Advanced_Ren_Attack[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Advanced_Ren_Eidolon2[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Basic ATK"
                 }
@@ -2696,19 +2987,28 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill11",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Show",
                   "abilityName": "Basic ATK"
                 },
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Skill"
                   ]
@@ -2722,7 +3022,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Advanced_Ren_Eidolon2[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]"
                     }
                   ]
@@ -2827,7 +3130,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Ren_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {

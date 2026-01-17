@@ -41,12 +41,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Gallagher_PreTechniqueUsage"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Gallagher_TechniqueUsage"
         }
       ],
@@ -77,7 +83,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Hostile Entities (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "searchRandom": true,
                       "ifTargetFound": [
                         {
@@ -91,7 +100,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Fire",
@@ -136,7 +148,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "ATK Scaling DMG",
-                                  "target": "Use Prior Target(s) Defined",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
                                   "canPhase": true,
                                   "AttackScaling": {
                                     "DamageType": "Fire",
@@ -172,7 +187,10 @@ const compositeAbilityObject = {
                               "failed": [
                                 {
                                   "name": "ATK Scaling DMG",
-                                  "target": "Use Prior Target(s) Defined",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
                                   "canPhase": true,
                                   "AttackScaling": {
                                     "DamageType": "Fire",
@@ -237,7 +255,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -299,7 +320,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Gallagher_Eidolon1_Modifier"
             }
           ]
@@ -318,7 +342,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Gallagher_PointB3_Modifier"
             }
           ],
@@ -339,7 +366,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Gallagher_Eidolon2_Modifier"
             }
           ]
@@ -353,7 +383,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Gallagher_PointB2_PreshowModifier"
             }
           ]
@@ -367,7 +400,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Gallagher_Eidolon6_Modifier"
             }
           ]
@@ -381,7 +417,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Gallagher_Passive_Trace01"
             }
           ]
@@ -397,7 +436,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.5) || RETURN",
@@ -430,12 +472,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Gallagher_Eidolon1_AddStatusModifier"
                     },
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (20) || RETURN",
                         "displayLines": "20",
@@ -464,7 +512,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.2) || RETURN",
@@ -477,7 +528,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.2) || RETURN",
@@ -502,7 +556,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "skillType": [
               "Ultimate"
             ],
@@ -564,7 +621,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (Rank04_AddLifeTime) || ADD || RETURN",
@@ -588,7 +648,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -615,7 +678,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Gallagher_NormalAttckAlter_Enable"
         },
         {
@@ -634,7 +700,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Action Advance/Delay",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "advanceType": "Advance",
               "value": -1
             }
@@ -665,7 +734,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Gallagher_Ability03_Part02",
           "isTrigger": true
         }
@@ -695,7 +767,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Dispel Debuffs",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "dispelCount": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -708,7 +783,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "MWGallagher_Ability02_StatusResModifier[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -733,7 +811,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Heal",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "healFlat": {
             "operator": "Variables[0] (1600) || RETURN",
             "displayLines": "1600",
@@ -748,7 +829,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           }
         },
         "Trigger: Ability End"
@@ -775,8 +859,14 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
-          "inherentTarget": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ability": "Gallagher_Ability02_Part02",
           "isTrigger": true
         },
@@ -792,7 +882,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -819,7 +912,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -846,7 +942,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -874,7 +973,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "MWGallagher_Ability11_AttackDownModifier[<span class=\"descriptionNumberColor\">ATK Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -915,7 +1017,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Gallagher_Ability11_Part02",
           "isTrigger": true
         }
@@ -930,7 +1035,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -957,7 +1065,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -1006,7 +1117,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Gallagher_Ability01_Part02",
           "isTrigger": true
         }
@@ -1033,7 +1147,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1091,7 +1208,10 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "MDF_CurrentBreakDamageAddedRatio",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
                 },
@@ -1140,7 +1260,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Gallagher_HealRatioAddedRatio",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -1169,7 +1292,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.15) || INVERT || RETURN",
@@ -1200,13 +1326,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Basic ATK"
                 }
@@ -1217,13 +1349,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill11",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Show",
                   "abilityName": "Basic ATK"
                 }
@@ -1241,7 +1379,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Gallagher_NormalAttckAlter_Enable"
                     }
                   ]
@@ -1270,7 +1411,10 @@ const compositeAbilityObject = {
                     "attackTypes": [
                       "Break DMG"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
@@ -1311,7 +1455,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
@@ -1328,7 +1475,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "Gallagher_NormalAttckAlter_Enable"
                           },
                           {
@@ -1340,12 +1490,18 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "Allied Team",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
                           "searchRandom": true,
                           "ifTargetFound": [
                             {
                               "name": "Heal",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "healFlat": {
                                 "operator": "Variables[0] (640) || RETURN",
                                 "displayLines": "640",
@@ -1361,7 +1517,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Heal",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "healFlat": {
                             "operator": "Variables[0] (640) || RETURN",
                             "displayLines": "640",
@@ -1397,7 +1556,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1430,7 +1592,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

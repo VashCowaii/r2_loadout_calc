@@ -11,21 +11,33 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_PlayerBoyServant_30_EnableAbility"
     },
     {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target",
-        "target": "Single Target (Primary)",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       },
       "passed": [
         {
           "name": "Action Advance/Delay",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "advanceType": "Set",
           "value": "(0 - 1)"
         }
@@ -33,7 +45,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
@@ -104,7 +119,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -114,7 +132,10 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_PlayerBoy_30_BE_Ability02_Preshow"
     }
   ],
@@ -127,7 +148,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Current Visual Target(All)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player's Aim Target List}}"
+        },
         "skillType": [
           "Memosprite"
         ],
@@ -136,13 +160,22 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Has Modifier",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_PlayerBoyServant_30_EnableAbility"
             },
             {
               "name": "Is Part Of",
-              "of": "Owner of this Modifier",
-              "target": "Use Prior Target(s) Defined",
+              "of": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "mustBeAlive2": true,
               "invertCondition": true
             }

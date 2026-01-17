@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23023_Main"
         }
       ],
@@ -83,7 +86,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -123,7 +129,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_23023_Sub2[<span class=\"descriptionNumberColor\">All-In</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -156,9 +165,15 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "LC_23023_Sub2[<span class=\"descriptionNumberColor\">All-In</span>]",
-                        "casterFilter": "Owner of this Modifier"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       "failed": [
                         {
@@ -175,14 +190,23 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "LC_23023_Sub2[<span class=\"descriptionNumberColor\">All-In</span>]",
                             "justAddedOrActive": true,
-                            "casterFilter": "Owner of this Modifier"
+                            "casterFilter": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            }
                           },
                           {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "MDF_First",
                             "compareType": "=",
                             "value2": 0
@@ -218,13 +242,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Modifier Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "Shield"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_23023_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",

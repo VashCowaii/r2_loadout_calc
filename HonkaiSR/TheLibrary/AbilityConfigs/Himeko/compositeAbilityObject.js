@@ -27,7 +27,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Himeko_Eidolon2_DamageUP",
           "valuePerStack": {
             "MDF_HPRatio": {
@@ -61,7 +64,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
@@ -105,7 +111,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Himeko_Trace03"
         }
       ],
@@ -120,7 +129,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -150,7 +162,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
@@ -165,7 +180,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -189,7 +207,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
@@ -204,7 +225,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -221,7 +245,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Himeko_CriticalChance[<span class=\"descriptionNumberColor\">Benchmark</span>]"
                     }
                   ]
@@ -242,7 +269,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Himeko_Trace01"
         }
       ],
@@ -256,7 +286,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Target Group(Attack List)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Attack Targets}}"
+                  },
                   "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -310,7 +343,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Himeko_Modifier"
         }
       ],
@@ -335,7 +371,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "Himeko_FireTakenRatio[<span class=\"descriptionNumberColor\">Fire Vulnerability</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -383,7 +422,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]"
         },
         {
@@ -395,7 +437,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Himeko_AbilityEidolon1_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -424,7 +469,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "ATK Scaling DMG",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
@@ -453,7 +501,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -495,7 +546,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -530,7 +584,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Enemies Still Alive",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "includeNonTargets": true
           },
           "passed": [
@@ -541,7 +598,10 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ability": "Himeko_Passive1Atk02_Ability",
               "isTrigger": true
             }
@@ -576,12 +636,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Himeko_Passive1_Modifier"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
           "stackLimit": {
             "operator": "Variables[0] (3) || RETURN",
@@ -633,7 +699,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_Pursuit_Layer",
                   "value": 0
                 },
@@ -667,7 +736,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Pursuit_Layer",
                   "multiplier": 1
@@ -676,7 +748,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_Pursuit_Layer",
                     "compareType": "=",
                     "value2": {
@@ -761,7 +836,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]"
                 }
               ]
@@ -790,7 +868,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -825,18 +906,27 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Enemies Still Alive",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "includeNonTargets": true
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "flagName": "STAT_CTRL",
                                 "invertCondition": true
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "flagName": "DisableAction",
                                 "invertCondition": true
                               }
@@ -846,8 +936,14 @@ const compositeAbilityObject = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Himeko_Passive1Atk_Ability",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "All Hostile Entities (AOE)",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -869,12 +965,18 @@ const compositeAbilityObject = {
                                 "conditionList": [
                                   {
                                     "name": "Has Flag",
-                                    "target": "Caster",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
+                                    },
                                     "flagName": "STAT_CTRL"
                                   },
                                   {
                                     "name": "Has Flag",
-                                    "target": "Caster",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
+                                    },
                                     "flagName": "DisableAction"
                                   }
                                 ]
@@ -927,13 +1029,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "DisableAction",
                             "invertCondition": true
                           }
@@ -962,15 +1070,24 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "includeNonTargets": true
                           },
                           "passed": [
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Himeko_Passive1Atk_Ability",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "All Hostile Entities (AOE)",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -1029,18 +1146,27 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Enemies Still Alive",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "includeNonTargets": true
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "flagName": "STAT_CTRL",
                                 "invertCondition": true
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "flagName": "DisableAction",
                                 "invertCondition": true
                               }
@@ -1050,8 +1176,14 @@ const compositeAbilityObject = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Himeko_Passive1Atk_Ability",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "All Hostile Entities (AOE)",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -1088,14 +1220,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Monster Rank",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "compareType": ">=",
                     "value2": 3
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -1127,7 +1265,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Current Action Holder Is",
-                            "target": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           {
                             "name": "Skill Type",
@@ -1138,7 +1279,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -1163,7 +1307,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -1191,7 +1338,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -1210,7 +1360,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Flag",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "flagName": "STAT_CTRL"
                         }
                       },
@@ -1218,7 +1371,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Flag",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "flagName": "DisableAction"
                         }
                       }
@@ -1245,15 +1401,24 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "includeNonTargets": true
                           },
                           "passed": [
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Himeko_Passive1Atk_Ability",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "All Hostile Entities (AOE)",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -1316,18 +1481,27 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Enemies Still Alive",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "includeNonTargets": true
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "flagName": "STAT_CTRL",
                                 "invertCondition": true
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "flagName": "DisableAction",
                                 "invertCondition": true
                               }
@@ -1337,8 +1511,14 @@ const compositeAbilityObject = {
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Himeko_Passive1Atk_Ability",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "All Hostile Entities (AOE)",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -1392,12 +1572,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Himeko_Ability03_Modifier"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -1434,13 +1620,19 @@ const compositeAbilityObject = {
               "Event": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Fire",
@@ -1466,7 +1658,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Himeko_Ability03_Modifier"
         },
         "Trigger: Skip Death Handling",
@@ -1483,7 +1678,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -1501,7 +1699,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -1540,7 +1741,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Himeko_Ability03_Part02",
           "isTrigger": true
         }
@@ -1570,14 +1774,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Himeko_AbilityBurnDamageUP"
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
@@ -1603,7 +1813,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
@@ -1628,7 +1841,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
@@ -1654,7 +1870,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
@@ -1683,7 +1902,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
@@ -1711,7 +1933,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -1738,7 +1963,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -1760,7 +1988,10 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": null,
-            "hitOwner": "Skill Target List"
+            "hitOwner": {
+              "name": "Target Name",
+              "target": "{{Ability Target List}}"
+            }
           }
         },
         "Trigger: Attack End",
@@ -1773,7 +2004,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Himeko_AbilityBurnDamageUP"
             }
           ]
@@ -1795,7 +2029,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Target Receiving DMG",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target TAKING DMG}}"
+                        },
                         "flagName": "STAT_DOT_Burn"
                       },
                       {
@@ -1844,7 +2081,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Himeko_Ability02_Part02",
           "isTrigger": true
         }
@@ -1859,7 +2099,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
@@ -1885,7 +2128,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -1934,7 +2180,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Himeko_Ability01_Part02",
           "isTrigger": true
         }
@@ -1962,7 +2211,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">FireVulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

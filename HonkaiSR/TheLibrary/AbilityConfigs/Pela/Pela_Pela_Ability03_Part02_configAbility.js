@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Pela_Ultimate_DroneAnalysis[<span class=\"descriptionNumberColor\">Exposed</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
@@ -37,7 +40,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",
@@ -79,7 +85,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_DefenceDownRatio) || SUB || RETURN",

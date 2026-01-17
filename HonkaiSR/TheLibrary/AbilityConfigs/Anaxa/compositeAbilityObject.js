@@ -28,7 +28,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Anaxa_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Everything Is in Everything</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
@@ -87,7 +90,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Anaxa_Eidolon2"
         }
       ],
@@ -103,18 +109,27 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "function_Anaxa_AddWeakness",
-                      "target": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Anaxa_Eidolon2_Property[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
                       "referenceModifier": "MReference_AllDamageTypeResistanceDown",
                       "valuePerStack": {
@@ -143,16 +158,25 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)(ALL)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                  },
                   "ifTargetFound": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "function_Anaxa_AddWeakness",
-                      "target": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Anaxa_Eidolon2_Property[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
                       "referenceModifier": "MReference_AllDamageTypeResistanceDown",
                       "valuePerStack": {
@@ -170,7 +194,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_Anaxa_Eidolon2_Bonus_OnCharacterCreate"
                 },
                 "Modifier Deletes Itself"
@@ -191,12 +218,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Anaxa_Eidolon1"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Anaxa_Eidolon1_FirstBP"
         }
       ],
@@ -252,7 +285,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Anaxa_Eidolon1_Property[<span class=\"descriptionNumberColor\">Magician, Isolated by Stars</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -292,7 +328,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Anaxa_Trace03"
         }
       ],
@@ -306,8 +345,14 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Weakness Count",
-                  "target": "Use Prior Target(s) Defined",
-                  "target2": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variable": "_WeakCount",
                   "context": "ContextModifier",
                   "weaknessFilter": "All"
@@ -353,7 +398,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Anaxa_Trace02"
         }
       ],
@@ -368,7 +416,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -396,7 +447,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -425,13 +479,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -485,7 +545,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
@@ -506,19 +569,28 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "All Team Members(In Context, with Untargetable)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members with Unselectables}}"
+                          },
                           "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Anaxa_Trace02_SubAllListener"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Team Members(In Context, with Untargetable)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members with Unselectables}}"
+                          },
                           "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
@@ -533,7 +605,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Anaxa_Trace02_SubAllListener"
                         },
                         {
@@ -544,7 +619,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]"
                         }
                       ]
@@ -574,7 +652,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
@@ -595,7 +676,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Team Members(In Context, with Untargetable)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members with Unselectables}}"
+                          },
                           "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
@@ -610,7 +694,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Anaxa_Trace02_SubAllListener"
                         }
                       ],
@@ -622,13 +709,19 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Find New Target",
-                          "from": "All Team Members(In Context, with Untargetable)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members with Unselectables}}"
+                          },
                           "conditions": {
                             "name": "Target is Pathstrider",
                             "path": [
                               "Erudition"
                             ],
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           "ifTargetFound": [
                             {
@@ -658,7 +751,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "Anaxa_Trace02_Sub[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyRatio": {
@@ -681,7 +777,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Team Members(In Context, with Untargetable)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members with Unselectables}}"
+                              },
                               "modifier": "Anaxa_Trace02_SubAll[<span class=\"descriptionNumberColor\">Imperative Hiatus</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyRatio": {
@@ -696,7 +795,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "Anaxa_Trace02_SubAllListener"
                             },
                             {
@@ -736,7 +838,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Anaxa_Modifier"
         }
       ],
@@ -755,7 +860,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Level Entity",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Level Entity}}"
+                        },
                         "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
                         "invertCondition": true
                       },
@@ -773,10 +881,16 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Team Members(In Context, with Untargetable)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "STAT_TriggerBattleCharacter"
                       },
                       "ifTargetFound": [
@@ -784,7 +898,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Physical"
@@ -793,7 +910,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Hostile Entities (AOE)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
@@ -810,7 +930,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Fire"
@@ -819,7 +942,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Hostile Entities (AOE)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
@@ -836,7 +962,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Ice"
@@ -845,7 +974,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Hostile Entities (AOE)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
@@ -862,7 +994,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Thunder"
@@ -871,7 +1006,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Hostile Entities (AOE)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
@@ -888,7 +1026,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Wind"
@@ -897,7 +1038,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Hostile Entities (AOE)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
@@ -914,7 +1058,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Quantum"
@@ -923,7 +1070,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Hostile Entities (AOE)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
@@ -940,7 +1090,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Imaginary"
@@ -949,7 +1102,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Hostile Entities (AOE)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
@@ -991,7 +1147,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Anaxa_PassiveAbility"
         }
       ],
@@ -1010,12 +1169,21 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_PropertyRatio",
                         "compareType": ">",
                         "value2": 0,
@@ -1071,19 +1239,34 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Main-Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       "passed": [
@@ -1136,8 +1319,14 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Weakness Count",
-                  "target": "Owner of this Modifier",
-                  "target2": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variable": "MDF_WeakCount",
                   "context": "ContextModifier",
                   "weaknessFilter": "All"
@@ -1149,8 +1338,14 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Weakness Count",
-                  "target": "Owner of this Modifier",
-                  "target2": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variable": "MDF_WeakCount",
                   "context": "ContextModifier",
                   "weaknessFilter": "All"
@@ -1162,8 +1357,14 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Weakness Count",
-                  "target": "Owner of this Modifier",
-                  "target2": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variable": "MDF_WeakCount",
                   "context": "ContextModifier",
                   "weaknessFilter": "All"
@@ -1172,7 +1373,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_WeakCount",
                     "compareType": ">=",
                     "value2": {
@@ -1188,7 +1392,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -1223,8 +1430,14 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Weakness Count",
-                  "target": "Owner of this Modifier",
-                  "target2": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variable": "MDF_WeakCount",
                   "context": "ContextModifier",
                   "weaknessFilter": "All"
@@ -1236,8 +1449,14 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Weakness Count",
-                  "target": "Owner of this Modifier",
-                  "target2": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variable": "MDF_WeakCount",
                   "context": "ContextModifier",
                   "weaknessFilter": "All"
@@ -1264,7 +1483,10 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -1294,7 +1516,10 @@ const compositeAbilityObject = {
                   "whenLeavingRange": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                     },
                     {
@@ -1339,15 +1564,27 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Owner of this Modifier",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Hostile Entities (AOE)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE)}}"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                         },
                         "invertCondition": true
@@ -1361,7 +1598,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (30) || RETURN",
                         "displayLines": "30",
@@ -1383,7 +1623,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "function_Anaxa_AddWeakness",
-                  "target": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 }
               ]
             },
@@ -1410,12 +1653,18 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Skill Target List",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target List}}"
+                        },
                         "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "M_Anaxa_StartFreeBP",
                         "invertCondition": true
                       }
@@ -1424,12 +1673,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Skill Target List",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target List}}"
+                      },
                       "modifier": "M_Anaxa_InsertMainTargetMark"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_Anaxa_PrepareFreeBP",
                       "addStacksPerTrigger": 1
                     },
@@ -1438,17 +1693,26 @@ const compositeAbilityObject = {
                       "actionTag": "Anaxa_Passive",
                       "skillType": "ControlSkill02",
                       "forceAction": true,
-                      "castTarget": "Skill Target List",
+                      "castTarget": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target List}}"
+                      },
                       "afterInjection": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "M_Anaxa_PrepareFreeBP",
                           "addStacksPerTrigger": -1
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "M_Anaxa_InsertActionCheck",
                           "addStacksPerTrigger": 1
                         }
@@ -1465,13 +1729,19 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Anaxa_Passive_Mark_Property",
               "haloStatus": true
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Anaxa_Passive_WeaknessListener",
               "haloStatus": true,
               "valuePerStack": {
@@ -1497,12 +1767,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Anaxa_UltraDebuff[<span class=\"descriptionNumberColor\">Sublimation</span>]"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -1551,7 +1827,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Anaxa_Ability03_Part02",
           "isTrigger": true
         },
@@ -1559,7 +1838,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target Count",
-            "target": "Anaxa Ultimate Targets",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}"
+            },
             "compareType": ">=",
             "value2": 3,
             "isClientOnly": true
@@ -1569,7 +1851,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity a Part/Body Extension",
-                "target": "Anaxa Ultimate Targets (3 MAX)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Anaxa's Ult Target List}}.[[index2]]"
+                },
                 "invertCondition": true
               }
             }
@@ -1579,7 +1864,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target Count",
-            "target": "Anaxa Ultimate Targets",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}"
+            },
             "compareType": ">=",
             "value2": 2,
             "isClientOnly": true
@@ -1589,7 +1877,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity a Part/Body Extension",
-                "target": "Anaxa Ultimate Targets (2 MAX)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Anaxa's Ult Target List}}.[[index1]]"
+                },
                 "invertCondition": true
               }
             }
@@ -1599,7 +1890,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target Count",
-            "target": "Anaxa Ultimate Targets",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}"
+            },
             "compareType": ">=",
             "value2": 4,
             "isClientOnly": true
@@ -1609,7 +1903,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity a Part/Body Extension",
-                "target": "Anaxa Ultimate Targets (4 MAX)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Anaxa's Ult Target List}}.[[index3]]"
+                },
                 "invertCondition": true
               }
             }
@@ -1619,7 +1916,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target Count",
-            "target": "Anaxa Ultimate Targets",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}"
+            },
             "compareType": ">=",
             "value2": 1,
             "isClientOnly": true
@@ -1629,7 +1929,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity a Part/Body Extension",
-                "target": "Anaxa Ultimate Targets (1 MAX)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Anaxa's Ult Target List}}.[[index0]]"
+                },
                 "invertCondition": true
               }
             }
@@ -1639,7 +1942,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target Count",
-            "target": "Anaxa Ultimate Targets",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}"
+            },
             "compareType": ">=",
             "value2": 5,
             "isClientOnly": true
@@ -1649,7 +1955,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity a Part/Body Extension",
-                "target": "Anaxa Ultimate Targets (5 MAX)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Anaxa's Ult Target List}}.[[index4]]"
+                },
                 "invertCondition": true
               }
             }
@@ -1674,7 +1983,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Anaxa_BPAbility_ModifyDamage"
         },
         {
@@ -1686,7 +1998,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Anaxa_BPAbility_Bonus[<span class=\"descriptionNumberColor\">Blaze, Plunged to Canyon</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -1739,7 +2054,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -1766,7 +2084,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "M_Anaxa_Ability02_HitMark"
         },
         {
@@ -1782,19 +2103,28 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Define Custom Variable with Added Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_count",
               "context": "ContextAbility",
               "value": 1
             },
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "M_Anaxa_Ability02_HitMark",
                 "invertCondition": true
               },
@@ -1808,7 +2138,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "Bounce_SelectTarget",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "paramSequence": [
                     {
                       "name": "Use Custom Character Function",
@@ -1834,7 +2167,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -1912,7 +2248,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "variableName": "MDF_TargetCount",
                   "livingTargets": true,
                   "context": "ContextModifier"
@@ -1950,7 +2289,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Anaxa_Ability02_Part02",
           "isTrigger": true
         }
@@ -1972,7 +2314,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -1987,7 +2332,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2035,7 +2383,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Anaxa_Ability01_Part02",
           "isTrigger": true
         }
@@ -2110,18 +2461,27 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "M_Anaxa_StartFreeBP"
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_Anaxa_StartFreeBP"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_Anaxa_PrepareFreeBP",
                       "addStacksPerTrigger": -1
                     }
@@ -2142,7 +2502,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_Anaxa_StartFreeBP"
                     },
                     {
@@ -2219,14 +2582,23 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOrRevivable",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
@@ -2247,12 +2619,18 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "living": true
                   },
                   "ifTargetFound": [
@@ -2269,7 +2647,10 @@ const compositeAbilityObject = {
                       "Event": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "M_Anaxa_PrepareFreeBP",
                           "addStacksPerTrigger": 1
                         },
@@ -2278,17 +2659,26 @@ const compositeAbilityObject = {
                           "actionTag": "Anaxa_Passive",
                           "skillType": "ControlSkill02",
                           "forceAction": true,
-                          "castTarget": "Use Prior Target(s) Defined",
+                          "castTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "afterInjection": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "M_Anaxa_PrepareFreeBP",
                               "addStacksPerTrigger": -1
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "M_Anaxa_InsertActionCheck",
                               "addStacksPerTrigger": 1
                             }
@@ -2323,7 +2713,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_HaveCTRLResistance",
                     "compareType": "=",
                     "value2": 0
@@ -2333,7 +2726,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Target Exists",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "living": true
                       },
                       "passed": [
@@ -2341,7 +2737,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "STAT_CTRL_Frozen_Effect",
                             "invertCondition": true
                           }
@@ -2359,7 +2758,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_HaveCTRLResistance",
                     "compareType": "=",
                     "value2": 0
@@ -2379,7 +2781,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Flag Resistance",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_HaveCTRLResistance",
                   "context": "ContextModifier",
                   "flagName": "STAT_CTRL"
@@ -2391,14 +2796,20 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_HaveCTRLResistance",
                         "compareType": "=",
                         "value2": 0
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "Endurance",
                         "invertCondition": true
                       }
@@ -2411,7 +2822,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Flags to Modifier",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "flagName": [
                         "DisableAction",
                         "STAT_CTRL",
@@ -2419,13 +2833,19 @@ const compositeAbilityObject = {
                         "FixedPerformTime"
                       ],
                       "modifierName": "Anaxa_UltraDebuff[<span class=\"descriptionNumberColor\">Sublimation</span>]",
-                      "casterFilter": "Caster"
+                      "casterFilter": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      }
                     }
                   ]
                 },
                 {
                   "name": "Modify Weaknesses",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "action": "Attach",
                   "valueList": [
                     "Physical"
@@ -2433,7 +2853,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Modify Weaknesses",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "action": "Attach",
                   "valueList": [
                     "Fire"
@@ -2441,7 +2864,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Modify Weaknesses",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "action": "Attach",
                   "valueList": [
                     "Thunder"
@@ -2449,7 +2875,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Modify Weaknesses",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "action": "Attach",
                   "valueList": [
                     "Ice"
@@ -2457,7 +2886,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Modify Weaknesses",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "action": "Attach",
                   "valueList": [
                     "Wind"
@@ -2465,7 +2897,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Modify Weaknesses",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "action": "Attach",
                   "valueList": [
                     "Quantum"
@@ -2473,7 +2908,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Modify Weaknesses",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "action": "Attach",
                   "valueList": [
                     "Imaginary"
@@ -2511,7 +2949,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Physical",
                 "weaknessFilter": "All"
               },
@@ -2520,14 +2961,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Function's Target List}}"
+                    },
                     "DamageType": "Physical",
                     "weaknessFilter": "AllDefault"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoPhysical"
                     }
@@ -2535,7 +2982,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoPhysical",
                       "value": 0.0009999999
@@ -2546,7 +2996,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoPhysical",
                   "value": 1000
@@ -2557,7 +3010,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Wind",
                 "weaknessFilter": "All"
               },
@@ -2566,14 +3022,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Function's Target List}}"
+                    },
                     "DamageType": "Wind",
                     "weaknessFilter": "AllDefault"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoWind"
                     }
@@ -2581,7 +3043,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoWind",
                       "value": 0.0009999999
@@ -2592,7 +3057,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoWind",
                   "value": 1000
@@ -2603,7 +3071,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Fire",
                 "weaknessFilter": "All"
               },
@@ -2612,14 +3083,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Function's Target List}}"
+                    },
                     "DamageType": "Fire",
                     "weaknessFilter": "AllDefault"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoFire"
                     }
@@ -2627,7 +3104,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoFire",
                       "value": 0.0009999999
@@ -2638,7 +3118,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoFire",
                   "value": 1000
@@ -2649,7 +3132,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Thunder",
                 "weaknessFilter": "All"
               },
@@ -2658,14 +3144,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Function's Target List}}"
+                    },
                     "DamageType": "Thunder",
                     "weaknessFilter": "AllDefault"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoThunder"
                     }
@@ -2673,7 +3165,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoThunder",
                       "value": 0.0009999999
@@ -2684,7 +3179,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoThunder",
                   "value": 1000
@@ -2695,7 +3193,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Ice",
                 "weaknessFilter": "All"
               },
@@ -2704,14 +3205,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Function's Target List}}"
+                    },
                     "DamageType": "Ice",
                     "weaknessFilter": "AllDefault"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoIce"
                     }
@@ -2719,7 +3226,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoIce",
                       "value": 0.0009999999
@@ -2730,7 +3240,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoIce",
                   "value": 1000
@@ -2741,7 +3254,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Quantum",
                 "weaknessFilter": "All"
               },
@@ -2750,14 +3266,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Function's Target List}}"
+                    },
                     "DamageType": "Quantum",
                     "weaknessFilter": "AllDefault"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoQuantum"
                     }
@@ -2765,7 +3287,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoQuantum",
                       "value": 0.0009999999
@@ -2776,7 +3301,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoQuantum",
                   "value": 1000
@@ -2787,7 +3315,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Imaginary",
                 "weaknessFilter": "All"
               },
@@ -2796,14 +3327,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Function's Target List}}"
+                    },
                     "DamageType": "Imaginary",
                     "weaknessFilter": "AllDefault"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoImaginary"
                     }
@@ -2811,7 +3348,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextTaskTemplate",
                       "variableName": "TDF_NoImaginary",
                       "value": 0.0009999999
@@ -2822,7 +3362,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoImaginary",
                   "value": 1000
@@ -3029,7 +3572,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Function's Target List}}"
+                  },
                   "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -3042,7 +3588,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Function's Target List}}"
+                  },
                   "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -3055,7 +3604,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Function's Target List}}"
+                  },
                   "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -3068,7 +3620,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Function's Target List}}"
+                  },
                   "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -3081,7 +3636,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Function's Target List}}"
+                  },
                   "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -3094,7 +3652,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Function's Target List}}"
+                  },
                   "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -3107,7 +3668,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Function's Target List}}"
+                  },
                   "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -3128,7 +3692,10 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -3156,7 +3723,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "M_Anaxa_Ability02_HitMark"
             }
           ]

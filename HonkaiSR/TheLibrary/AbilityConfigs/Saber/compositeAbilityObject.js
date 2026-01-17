@@ -33,7 +33,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Technique_Saber_Modifier"
         }
       ],
@@ -48,7 +51,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -85,7 +91,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_TechniqueUsage_Bonus[<span class=\"descriptionNumberColor\">Behold, the King of Knights</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -110,7 +119,10 @@ const compositeAbilityObject = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Add to Value (Default)",
                       "variableName": "DV_SurgePoint",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -140,7 +152,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (8) || RETURN",
@@ -180,7 +195,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (15) || RETURN",
@@ -241,14 +259,20 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_AIFlag"
         },
         {
           "name": "Read Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "DV_SurgePoint",
-          "on": "Caster"
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
         },
         {
           "name": "Define Custom Variable",
@@ -279,7 +303,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_PassiveAbility01"
         },
         {
@@ -291,12 +318,18 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Trace01_Bonus[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -355,12 +388,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Passive_ReturnSpValue"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Passive_StockSpValue"
             }
           ]
@@ -374,7 +413,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Trace03"
             }
           ]
@@ -388,7 +430,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Eidolon1"
             }
           ]
@@ -402,7 +447,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Eidolon4[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]"
             }
           ]
@@ -416,7 +464,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Eidolon6"
             }
           ]
@@ -450,7 +501,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Trace03_Bonus[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -522,8 +576,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
@@ -535,7 +595,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Passive_Bonus[<span class=\"descriptionNumberColor\">Dragon Reactor Core</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -560,7 +623,10 @@ const compositeAbilityObject = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Add to Value (Default)",
                       "variableName": "DV_SurgePoint",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -579,7 +645,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (8) || RETURN",
@@ -619,7 +688,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (15) || RETURN",
@@ -696,7 +768,10 @@ const compositeAbilityObject = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Add to Value (Default)",
                       "variableName": "DV_SurgePoint",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -737,7 +812,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (8) || RETURN",
@@ -777,7 +855,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (15) || RETURN",
@@ -827,7 +908,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Energy%",
                         "compareType": "<",
                         "value2": {
@@ -844,13 +928,19 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "_MaxSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                     },
                     {
                       "name": "Update Energy Value",
-                      "on": "Owner of this Modifier",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (_MaxSP) || Variables[1] (0.6) || MUL || RETURN",
                         "displayLines": "(_MaxSP * 0.6)",
@@ -905,7 +995,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
                           "counter": {
                             "operator": "Variables[0] (DV_SurgePoint) || RETURN",
@@ -920,7 +1013,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]"
                         }
                       ]
@@ -948,7 +1044,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
                           "counter": {
                             "operator": "Variables[0] (DV_SurgePoint) || RETURN",
@@ -963,7 +1062,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]"
                         }
                       ]
@@ -1006,7 +1108,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1048,7 +1153,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                       "value": {
                         "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
@@ -1064,7 +1172,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                       "value": 1
                     }
@@ -1121,13 +1232,19 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "variableName": "Saber_00_EntityCurrentSP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                         },
                         {
                           "name": "Define Custom Variable",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "variableName": "Saber_00_EntityCurrentSP",
                           "value": {
                             "operator": "Variables[0] (Saber_00_EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
@@ -1142,7 +1259,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "variableName": "Saber_00_EntityMaxSP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                         },
@@ -1150,7 +1270,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "Saber_00_EntityCurrentSP",
                             "compareType": ">",
                             "value2": {
@@ -1165,7 +1288,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "variableName": "Saber_00_EntityStockSP",
                               "value": {
                                 "operator": "Variables[0] (Saber_00_EntityStockSP) || Variables[1] (Saber_00_EntityCurrentSP) || ADD || Variables[2] (Saber_00_EntityMaxSP) || SUB || RETURN",
@@ -1196,7 +1322,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",
-                                  "target": "Owner of this Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "variableName": "Saber_00_EntityStockSP",
                                   "value": {
                                     "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
@@ -1213,23 +1342,35 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]"
                               },
                               "passed": [
                                 {
                                   "name": "Define Custom Variable with Copy",
-                                  "target": "Owner of this Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "variable": "Saber_00_EntityStockSPForShow",
-                                  "target2": "Owner of this Modifier",
+                                  "target2": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "variable2": "_Current_Show_Value"
                                 },
                                 {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Compare: Variable",
-                                    "target": "Owner of this Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Modifier Holder}}"
+                                    },
                                     "value1": "_Current_Show_Value",
                                     "compareType": "<",
                                     "value2": {
@@ -1244,7 +1385,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Add Events/Bonuses",
-                                      "to": "Owner of this Modifier",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
                                       "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                       "valuePerStack": {
                                         "value_0_Saber_EntityStockSPForShow": {
@@ -1263,7 +1407,10 @@ const compositeAbilityObject = {
                               "failed": [
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Owner of this Modifier",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "valuePerStack": {
                                     "value_0_Saber_EntityStockSPForShow": {
@@ -1307,13 +1454,19 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "_CurrentSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "Saber_00_EntityMaxSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                     },
@@ -1336,12 +1489,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]"
                     },
                     {
                       "name": "Update Energy",
-                      "on": "Owner of this Modifier",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (_Temp_Return_SP) || RETURN",
                         "displayLines": "_Temp_Return_SP",
@@ -1413,7 +1572,10 @@ const compositeAbilityObject = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Add to Value (Default)",
                       "variableName": "DV_SurgePoint",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -1443,7 +1605,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (8) || RETURN",
@@ -1483,7 +1648,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (15) || RETURN",
@@ -1532,7 +1700,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
@@ -1561,7 +1732,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.08) || RETURN",
@@ -1586,7 +1760,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Saber_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -1662,7 +1839,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
                   "counter": 1
                 }
@@ -1691,7 +1871,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
                         "compareType": ">",
                         "value2": 1
@@ -1718,7 +1901,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Update Energy",
-                          "on": "Owner of this Modifier",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (300) || RETURN",
                             "displayLines": "300",
@@ -1766,7 +1952,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Enemies (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -1806,12 +1995,18 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Find New Target",
-              "from": "All Enemies (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "CurrentHP",
                 "compareType": ">",
                 "value2": 0
@@ -1819,7 +2014,10 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
@@ -1848,14 +2046,20 @@ const compositeAbilityObject = {
               "noTargetFound": [
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
@@ -1888,12 +2092,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "All Enemies (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "value1": "CurrentHP",
             "compareType": ">",
             "value2": 0
@@ -1901,7 +2111,10 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -1931,14 +2144,20 @@ const compositeAbilityObject = {
           "noTargetFound": [
             {
               "name": "Find New Target",
-              "from": "All Enemies (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "maxTargets": 1,
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Wind",
@@ -1971,7 +2190,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Wind_Ability03_buff"
         },
         "Trigger: Skip Death Handling",
@@ -1999,7 +2221,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Saber_Ability03_Part02",
           "isTrigger": true
         }
@@ -2034,19 +2259,28 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "S02_SP_R",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRateSUM</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "S02_MSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "S02_CSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
         },
@@ -2086,7 +2320,10 @@ const compositeAbilityObject = {
               "name": "Adjust Variable Value",
               "adjustmentType": "Add to Value (Default)",
               "variableName": "DV_SurgePoint",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -2105,7 +2342,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (8) || RETURN",
@@ -2145,7 +2385,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (15) || RETURN",
@@ -2196,7 +2439,10 @@ const compositeAbilityObject = {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Overwrite Value",
                   "variableName": "DV_SurgePoint",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (DV_SurgePointMax) || RETURN",
                     "displayLines": "DV_SurgePointMax",
@@ -2285,7 +2531,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2318,7 +2567,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2350,7 +2602,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2383,7 +2638,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2415,7 +2673,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2448,7 +2709,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2480,7 +2744,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2513,7 +2780,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2560,7 +2830,10 @@ const compositeAbilityObject = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "DV_SurgePoint",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Constants[0] (0) || Variables[0] (DV_SurgePointUse) || SUB || RETURN",
             "displayLines": "(0 - DV_SurgePointUse)",
@@ -2583,7 +2856,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (8) || Variables[1] (Check_Surge_Use_Before) || Variables[2] (DV_SurgePoint) || SUB || MUL || RETURN",
                 "displayLines": "(8 * (Check_Surge_Use_Before - DV_SurgePoint))",
@@ -2631,7 +2907,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Saber_Ability02_Part02",
           "isTrigger": true
         },
@@ -2647,7 +2926,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": "All Enemies (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "variableName": "S11_Alive_Count",
           "livingTargets": true
         },
@@ -2664,7 +2946,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
                 }
               ]
@@ -2679,7 +2964,10 @@ const compositeAbilityObject = {
               "name": "Adjust Variable Value",
               "adjustmentType": "Add to Value (Default)",
               "variableName": "DV_SurgePoint",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -2698,7 +2986,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (8) || RETURN",
@@ -2738,7 +3029,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (15) || RETURN",
@@ -2784,7 +3078,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Enemies (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2831,7 +3128,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "All Enemies (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Wind",
@@ -2855,7 +3155,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "All Enemies (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -2877,7 +3180,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Enemies (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -2911,7 +3217,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Wind_Ability03_buff"
             }
           ]
@@ -2938,7 +3247,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Saber_Ability11_Part02",
           "isTrigger": true
         },
@@ -2958,7 +3270,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -3005,7 +3320,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Saber_Ability01_Part02",
           "isTrigger": true
         },
@@ -3033,19 +3351,28 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill02",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"
@@ -3057,25 +3384,37 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill11",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "display": "Show",
                   "abilityName": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Skill"
                 },
                 {
                   "name": "Disable Abilities",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityTypes": [
                     "Skill"
                   ]
@@ -3095,7 +3434,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Disable Abilities",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityTypes": [
                     "Skill"
                   ]
@@ -3118,7 +3460,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Current Turn Is",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
@@ -3154,7 +3499,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -3187,7 +3535,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -3254,7 +3605,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -3309,26 +3663,38 @@ const compositeAbilityObject = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_SP_R",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRateSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_MaxSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_C_SP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
             },
             {
               "name": "Update UI Preview",
               "show": "Show",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "previewType": "Energy Gain",
               "previewValue": {
                 "operator": "Variables[0] (8) || Variables[1] (DV_SurgePointShow) || MUL || Constants[0] (30) || Variables[2] (_SP_R) || MUL || ADD || RETURN",
@@ -3382,7 +3748,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
                       }
                     ]
@@ -3397,8 +3766,14 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target",
-                        "target": "Caster",
-                        "target2": "Current Turn Owner"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Current Turn Owner}}"
+                        }
                       },
                       "passed": [
                         {
@@ -3411,17 +3786,26 @@ const compositeAbilityObject = {
                     {
                       "name": "Action Advance/Delay",
                       "advanceType": "Set",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": 0
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Ability03_CD_02"
                     }
                   ]
@@ -3441,7 +3825,10 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Saber_Wind_Ability03_buff"
                   },
                   {
@@ -3467,7 +3854,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Skill"
                 }
@@ -3475,7 +3865,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "display": "Show",
                   "abilityName": "Skill"
                 }

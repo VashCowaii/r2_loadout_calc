@@ -18,7 +18,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
@@ -43,7 +46,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Yanqing_Ability03_Bonus[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
                   "function": "Add",
                   "value": 1,
@@ -128,13 +134,19 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "Avatar_Yanqing_AggroBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">BaseAggroValue</span>&nbsp;"
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">BaseAggroValue</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (1) || INVERT || Variables[0] (Avatar_Yanqing_AggroBase) || MUL || Constants[1] (0.6) || MUL || RETURN",
@@ -150,7 +162,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_CriticalBoost) || RETURN",
@@ -163,7 +178,10 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_ALLCriticalDamage",
               "value": {
                 "operator": "Variables[0] (MDF_CriticaDamage) || Variables[1] (MDF_AddCriticalDamage) || ADD || RETURN",
@@ -177,7 +195,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_ALLCriticalDamage) || RETURN",
@@ -190,7 +211,10 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_AddCriticalDamage",
               "value": 0
             },
@@ -203,7 +227,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_StatusResistance) || RETURN",
@@ -225,7 +252,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AddSPRatio) || RETURN",
@@ -252,7 +282,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
                   "function": "Add",
                   "value": 1,
@@ -289,7 +322,10 @@ const configAbility = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
                     }
                   ]
@@ -310,7 +346,10 @@ const configAbility = {
                   "Skill",
                   "Ultimate"
                 ],
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
@@ -330,7 +369,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Skill Target List",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target List}}"
+                      },
                       "modifier": "Yanqing_BonusTargetMark"
                     }
                   ]
@@ -344,20 +386,32 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Yanqing_BonusTargetMark"
               },
               "ifTargetFound": [
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Yanqing_PassiveAbility01_InsertAbility",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Use Prior Target(s) Defined",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -402,7 +456,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
                   "duration": 1,
                   "valuePerStack": {

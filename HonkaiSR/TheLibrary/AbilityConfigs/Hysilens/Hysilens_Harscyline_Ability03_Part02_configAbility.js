@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Harscyline_Ability03_Flag"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Harscyline_Ability03_HaloStatus",
       "duration": {
         "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
@@ -66,7 +72,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Physical",
@@ -101,7 +110,10 @@ const configAbility = {
           },
           {
             "name": "Has Flag",
-            "target": "All Hostile Entities (AOE)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
             "flagName": "STAT_DOT"
           }
         ]
@@ -109,7 +121,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Trigger Modifier Event",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT",
           "value": {
@@ -126,7 +141,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Harscyline_Ability03_Flag"
     },
     "Trigger: Skip Death Handling",

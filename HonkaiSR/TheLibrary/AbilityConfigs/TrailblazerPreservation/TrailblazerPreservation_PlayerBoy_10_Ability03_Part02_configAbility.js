@@ -6,13 +6,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterDefence",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -48,7 +54,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "PlayerBoy_10_WeaponCharge_Free[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]"
     },
     {
@@ -76,12 +85,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "PlayerBoy_10_ChangeAttack"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "PlayerBoy_Weapon_Effect"
     },
     "Trigger: Skip Death Handling",
@@ -94,7 +109,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_10_Eidolon6_Stack[<span class=\"descriptionNumberColor\">DEF Boost</span>]",
           "stackLimit": {
             "operator": "Variables[0] (3) || RETURN",
@@ -119,13 +137,19 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterDefence",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "All Team Members(In Context)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "modifier": "MWPlayerBoy_10_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",

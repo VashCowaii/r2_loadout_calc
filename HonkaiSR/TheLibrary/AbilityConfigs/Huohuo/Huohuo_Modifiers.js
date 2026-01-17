@@ -23,7 +23,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": "<=",
                     "value2": 0
@@ -39,7 +42,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Copy",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variable": "Huohuo_Rank02_ReviveCount",
                   "target2": null,
                   "variable2": "MDF_ReviveCount"
@@ -68,8 +74,14 @@ const configAbility = {
                     }
                   },
                   "abilityName": "Huohuo_Eidolon2_Insert",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Owner of this Modifier",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "priorityTag": "AvatarReviveOthers",
                   "ownerState": "Mask_AliveOrLimbo",
                   "targetState": "Mask_AliveOrLimbo",
@@ -127,7 +139,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                       },
                       {
@@ -141,7 +156,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable, NO Memosprites)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
+                      },
                       "modifier": "Huohuo_Eidolon2",
                       "valuePerStack": {
                         "MDF_HealPercentage": {
@@ -166,7 +184,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "modifier": "Huohuo_Eidolon2"
                     },
                     {
@@ -207,7 +228,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
@@ -247,7 +271,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "CurrentHPRatio"
                 },
                 {
@@ -287,7 +314,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -316,7 +346,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_AttackUP) || RETURN",
@@ -367,7 +400,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -391,7 +427,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Dispel Debuffs",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "dispelCount": {
                     "operator": "Variables[0] (_DispelNum) || RETURN",
                     "displayLines": "_DispelNum",
@@ -420,12 +459,18 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Huohuo_DealHeal"
             },
             {
               "name": "Heal",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (HPRatio) || RETURN",
                 "displayLines": "HPRatio",
@@ -446,15 +491,24 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Huohuo_DealHeal"
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team(Living, sort by HP)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}.[[living]].[[sortByHPCurrent]]"
+              },
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
@@ -476,7 +530,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -500,7 +557,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Dispel Debuffs",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "dispelCount": {
                         "operator": "Variables[0] (_DispelNum) || RETURN",
                         "displayLines": "_DispelNum",
@@ -529,12 +589,18 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Huohuo_DealHeal"
                 },
                 {
                   "name": "Heal",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (HPRatio) || RETURN",
                     "displayLines": "HPRatio",
@@ -555,7 +621,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Huohuo_DealHeal"
                 }
               ]
@@ -581,7 +650,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -605,7 +677,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Dispel Debuffs",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "dispelCount": {
                         "operator": "Variables[0] (_DispelNum) || RETURN",
                         "displayLines": "_DispelNum",
@@ -634,12 +709,18 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Huohuo_DealHeal"
                 },
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (HPRatio) || RETURN",
                     "displayLines": "HPRatio",
@@ -660,15 +741,24 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Huohuo_DealHeal"
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(Living, sort by HP)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}.[[living]].[[sortByHPCurrent]]"
+                  },
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
@@ -690,7 +780,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
@@ -714,7 +807,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Dispel Debuffs",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "dispelCount": {
                             "operator": "Variables[0] (_DispelNum) || RETURN",
                             "displayLines": "_DispelNum",
@@ -743,12 +839,18 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_DealHeal"
                     },
                     {
                       "name": "Heal",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (HPRatio) || RETURN",
                         "displayLines": "HPRatio",
@@ -769,7 +871,10 @@ const configAbility = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_DealHeal"
                     }
                   ]
@@ -801,7 +906,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Huohuo_Eidolon2"
             }
           ]
@@ -811,7 +919,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "LifeTime",
               "variableName": "Huohuo_Passive_HotCount",
               "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
@@ -824,7 +935,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "LifeTime",
               "variableName": "Huohuo_Passive_HotCount",
               "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
@@ -877,7 +991,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable, NO Memosprites)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
+                  },
                   "modifier": "Huohuo_Eidolon2",
                   "valuePerStack": {
                     "MDF_HealPercentage": {
@@ -971,7 +1088,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Huohuo_Passive_HealHP",
           "haloStatus": true,
           "valuePerStack": {
@@ -1003,7 +1123,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Huohuo_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "haloStatus": true,
           "conditions": {

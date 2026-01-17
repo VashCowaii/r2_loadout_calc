@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21031_Main"
     }
   ],
@@ -28,7 +31,10 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Flag_21031",
                     "compareType": "=",
                     "value2": 0,
@@ -53,14 +59,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Dispel Debuffs",
-                      "target": "Target Receiving DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target TAKING DMG}}"
+                      },
                       "typeOverride": "Buff",
                       "dispelCount": 1,
                       "dispelOrder": "LastAdded"
                     },
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "Flag_21031",
                       "value": 1
@@ -76,7 +88,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "Flag_21031"
             }
@@ -87,7 +102,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "Flag_21031"
             }

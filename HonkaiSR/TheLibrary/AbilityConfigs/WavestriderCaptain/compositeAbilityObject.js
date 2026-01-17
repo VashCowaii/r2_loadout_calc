@@ -13,7 +13,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_126_Main"
         }
       ],
@@ -28,7 +31,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
@@ -93,7 +99,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_126_Sub2[<span class=\"descriptionNumberColor\">Wavestrider Captain</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -139,28 +148,49 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true,
                         "invertCondition": true
                       },
                       {
                         "name": "Is Teammate",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "OR",
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
-                            "target": "Caster",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "mustBeAlive2": true
                           },
                           {
                             "name": "Is Part Of",
-                            "of": "Use [SKILL SUB-TARGETS OF] Prior Target(s) Defined",
-                            "target": "Caster",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Sub-Targets}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "mustBeAlive2": true
                           }
                         ]
@@ -170,7 +200,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_126_Sub[<span class=\"descriptionNumberColor\">Help</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",

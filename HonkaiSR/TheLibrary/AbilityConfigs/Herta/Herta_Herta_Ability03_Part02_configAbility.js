@@ -13,20 +13,29 @@ const configAbility = {
       "passed": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "ifTargetFound": [
             {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "flagName": "STAT_CTRL_Frozen"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Herta_Trace03_AddDamageUp",
                   "valuePerStack": {
                     "MDF_AllDamageTakenRatio": {
@@ -47,7 +56,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",
@@ -81,7 +93,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Herta_AbilityEidolon6_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -108,7 +123,10 @@ const configAbility = {
     "Trigger: Skip Death Handling",
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Herta_Trace03_AddDamageUp"
     },
     "Trigger: Ability End"
@@ -124,7 +142,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",

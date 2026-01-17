@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Qingque_Ability03_Eidolon1"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Quantum",
@@ -38,24 +44,36 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Qingque_Ability03_Eidolon1"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "QingQue_Passive_Tiao",
       "removeAllInstances": true
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "QingQue_Passive_Tong",
       "removeAllInstances": true
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "QingQue_Passive_Wan",
       "removeAllInstances": true
     },
@@ -81,7 +99,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {
@@ -96,7 +117,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "QingQue_Passive_Hu_Flag_Yu"
     },
     {
@@ -106,7 +130,10 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Current Turn Is",
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           },
           "Turn Owner is in Action"
         ]
@@ -114,13 +141,19 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_01"
         },
         {
           "name": "Inject Ability Use",
           "abilityName": "Qingque_Bonus",
-          "abilitySource": "Caster",
+          "abilitySource": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "priorityTag": "AvatarBuffSelf",
           "canHitNonTargets": true,
           "showInActionOrder": true,

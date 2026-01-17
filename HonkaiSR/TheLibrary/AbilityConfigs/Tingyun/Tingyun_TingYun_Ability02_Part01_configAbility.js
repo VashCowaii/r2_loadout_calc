@@ -17,7 +17,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "TingYun_Ability02_Part02",
       "isTrigger": true
     },
@@ -25,7 +28,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Current Action Holder Is",
-        "target": "Single Target (Primary)"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        }
       },
       "passed": [
         "Deleted bullshit"

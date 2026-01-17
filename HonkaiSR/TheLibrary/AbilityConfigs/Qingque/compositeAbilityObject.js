@@ -35,7 +35,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Quantum",
@@ -61,7 +64,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Quantum",
@@ -83,7 +89,10 @@ const compositeAbilityObject = {
                 },
                 "Tags": null,
                 "attackType": "Follow-up",
-                "hitOwner": "Single Target (Primary)"
+                "hitOwner": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                }
               }
             }
           ]
@@ -104,7 +113,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
@@ -160,7 +172,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_PassiveCount_QingqueSelf",
               "valuePerStack": {
                 "AbilityRank_Eidolon2_P1_SPAdd": {
@@ -254,7 +269,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_PassiveCount",
           "valuePerStack": {
             "MDF_PropertyValue01": {
@@ -278,12 +296,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Qingque_Ability03_Eidolon1"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -310,24 +334,36 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Qingque_Ability03_Eidolon1"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Tiao",
           "removeAllInstances": true
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Tong",
           "removeAllInstances": true
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Wan",
           "removeAllInstances": true
         },
@@ -353,7 +389,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -368,7 +407,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_Flag_Yu"
         },
         {
@@ -378,7 +420,10 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Current Turn Is",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "Turn Owner is in Action"
             ]
@@ -386,13 +431,19 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Hu_01"
             },
             {
               "name": "Inject Ability Use",
               "abilityName": "Qingque_Bonus",
-              "abilitySource": "Caster",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "priorityTag": "AvatarBuffSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
@@ -464,7 +515,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "QingQue_Ability03_Part02",
           "isTrigger": true
         }
@@ -494,7 +548,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Ability11PreShowModifier"
             }
           ]
@@ -508,7 +565,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "QingQue_Passive_Hu_Flag_Tong"
           },
           "failed": [
@@ -516,7 +576,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "QingQue_Passive_Hu_Flag_Tiao"
               },
               "failed": [
@@ -524,7 +587,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "QingQue_Passive_Hu_Flag_Wan"
                   },
                   "failed": [
@@ -532,7 +598,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "QingQue_Passive_Hu_Flag_Yu"
                       }
                     }
@@ -556,7 +625,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "QingQue_Passive_Hu_Flag_Yu"
           },
           "passed": [
@@ -584,7 +656,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "QingQue_Passive_Hu_Flag_Yu"
           },
           "passed": [
@@ -612,7 +687,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "QingQue_Passive_Hu_Flag_Yu"
           },
           "passed": [
@@ -713,7 +791,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (4) || RETURN",
@@ -740,7 +821,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (4) || RETURN",
@@ -787,7 +871,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Eidolon4_ATK[<span class=\"descriptionNumberColor\">Self-Sufficer</span>]"
                 }
               ]
@@ -796,7 +883,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -814,7 +904,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_PassiveCount_QingqueSelf",
               "valuePerStack": {
                 "AbilityRank_Eidolon2_P1_SPAdd": {
@@ -847,7 +940,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Ability11PreShowModifier"
                 }
               ]
@@ -862,19 +958,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Tiao",
               "removeAllInstances": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Tong",
               "removeAllInstances": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Wan",
               "removeAllInstances": true
             },
@@ -900,7 +1005,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -915,7 +1023,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Hu_Flag_Tiao"
             }
           ],
@@ -938,7 +1049,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Ability11PreShowModifier"
                     }
                   ]
@@ -953,19 +1067,28 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Tiao",
                   "removeAllInstances": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Tong",
                   "removeAllInstances": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Wan",
                   "removeAllInstances": true
                 },
@@ -991,7 +1114,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -1006,7 +1132,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Hu_Flag_Wan"
                 }
               ],
@@ -1029,7 +1158,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Ability11PreShowModifier"
                         }
                       ]
@@ -1044,19 +1176,28 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Passive_Tiao",
                       "removeAllInstances": true
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Passive_Tong",
                       "removeAllInstances": true
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Passive_Wan",
                       "removeAllInstances": true
                     },
@@ -1082,7 +1223,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1097,7 +1241,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Passive_Hu_Flag_Tong"
                     }
                   ],
@@ -1106,7 +1253,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Target has Extra-Turn Queued",
-                        "target": "Allied Team"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All}}"
+                        }
                       },
                       "passed": [
                         {
@@ -1182,7 +1332,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "QingQue_Ability02_Part02",
           "isTrigger": true
         },
@@ -1201,7 +1354,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Quantum",
@@ -1227,7 +1383,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Quantum",
@@ -1248,44 +1407,68 @@ const compositeAbilityObject = {
                   ]
                 },
                 "Tags": null,
-                "hitOwner": "Skill Target List"
+                "hitOwner": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target List}}"
+                }
               }
             }
           ]
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "MWQingque_Attack_Transfer"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_01"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_Flag_Wan"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_Flag_Tong"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_Flag_Tiao"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_Flag_Yu"
         },
         "Refresh QingQue Bar-State",
@@ -1303,7 +1486,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Qingque_SpeedUpPointB3[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": 1,
               "valuePerStack": {
@@ -1321,7 +1507,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_Flag"
         },
         "Trigger: Attack End",
@@ -1363,7 +1552,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "QingQue_Ability11_Part02",
           "isTrigger": true
         }
@@ -1387,17 +1579,26 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Tiao"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Tong"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Wan"
             },
             {
@@ -1458,7 +1659,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Wan"
                             },
                             {
@@ -1479,7 +1683,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tong"
                             },
                             {
@@ -1529,7 +1736,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Wan"
                             },
                             {
@@ -1541,7 +1751,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tiao"
                             },
                             {
@@ -1571,7 +1784,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -1583,7 +1799,10 @@ const compositeAbilityObject = {
                               "failed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tiao"
                                 },
                                 {
@@ -1610,7 +1829,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Passive_Wan"
                     },
                     {
@@ -1640,7 +1862,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Passive_Tong"
                     },
                     {
@@ -1670,7 +1895,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Passive_Tiao"
                     },
                     {
@@ -1734,7 +1962,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tiao"
                             },
                             {
@@ -1764,7 +1995,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Wan"
                             },
                             {
@@ -1794,7 +2028,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tiao"
                             },
                             {
@@ -1824,7 +2061,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Wan"
                             },
                             {
@@ -1865,7 +2105,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -1895,7 +2138,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Wan"
                                 },
                                 {
@@ -1925,7 +2171,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -1955,7 +2204,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Wan"
                                 },
                                 {
@@ -1996,7 +2248,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tong"
                                     },
                                     {
@@ -2026,7 +2281,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tiao"
                                     },
                                     {
@@ -2056,7 +2314,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tong"
                                     },
                                     {
@@ -2086,7 +2347,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tiao"
                                     },
                                     {
@@ -2147,7 +2411,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Wan"
                                     },
                                     {
@@ -2175,7 +2442,10 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Remove Events/Bonuses",
-                                          "to": "Caster",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Caster}}"
+                                          },
                                           "modifier": "QingQue_Passive_Tiao"
                                         },
                                         {
@@ -2196,7 +2466,10 @@ const compositeAbilityObject = {
                                       "failed": [
                                         {
                                           "name": "Remove Events/Bonuses",
-                                          "to": "Caster",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Caster}}"
+                                          },
                                           "modifier": "QingQue_Passive_Tong"
                                         },
                                         {
@@ -2259,7 +2532,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Wan"
                             },
                             {
@@ -2269,7 +2545,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tiao"
                             },
                             {
@@ -2290,7 +2569,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Wan"
                                 },
                                 {
@@ -2300,7 +2582,10 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -2321,7 +2606,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tiao"
                                     },
                                     {
@@ -2331,7 +2619,10 @@ const compositeAbilityObject = {
                                     },
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tong"
                                     },
                                     {
@@ -2372,7 +2663,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Wan"
                                     },
                                     {
@@ -2384,7 +2678,10 @@ const compositeAbilityObject = {
                                   "failed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tiao"
                                     },
                                     {
@@ -2414,7 +2711,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tong"
                                     },
                                     {
@@ -2426,7 +2726,10 @@ const compositeAbilityObject = {
                                   "failed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tiao"
                                     },
                                     {
@@ -2456,7 +2759,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Wan"
                                     },
                                     {
@@ -2468,7 +2774,10 @@ const compositeAbilityObject = {
                                   "failed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tong"
                                     },
                                     {
@@ -2518,7 +2827,10 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Remove Events/Bonuses",
-                                          "to": "Caster",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Caster}}"
+                                          },
                                           "modifier": "QingQue_Passive_Wan"
                                         },
                                         {
@@ -2530,7 +2842,10 @@ const compositeAbilityObject = {
                                       "failed": [
                                         {
                                           "name": "Remove Events/Bonuses",
-                                          "to": "Caster",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Caster}}"
+                                          },
                                           "modifier": "QingQue_Passive_Tong"
                                         },
                                         {
@@ -2562,7 +2877,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Wan"
                                     },
                                     {
@@ -2574,7 +2892,10 @@ const compositeAbilityObject = {
                                   "failed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tiao"
                                     },
                                     {
@@ -2624,7 +2945,10 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Remove Events/Bonuses",
-                                          "to": "Caster",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Caster}}"
+                                          },
                                           "modifier": "QingQue_Passive_Tong"
                                         },
                                         {
@@ -2636,7 +2960,10 @@ const compositeAbilityObject = {
                                       "failed": [
                                         {
                                           "name": "Remove Events/Bonuses",
-                                          "to": "Caster",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Caster}}"
+                                          },
                                           "modifier": "QingQue_Passive_Tiao"
                                         },
                                         {
@@ -2680,7 +3007,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
@@ -2729,7 +3059,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "QingQue_Ability01_Part02",
           "isTrigger": true
         },
@@ -2765,7 +3098,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "QingQue_Eidolon4_ATK[<span class=\"descriptionNumberColor\">Self-Sufficer</span>]"
                       }
                     ]
@@ -2775,7 +3111,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Action Target List",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Target List}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": 0
@@ -2783,7 +3122,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Eidolon4_ATK[<span class=\"descriptionNumberColor\">Self-Sufficer</span>]"
                         }
                       ],
@@ -2792,20 +3134,32 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "QingQue_Passive_Hu_Flag"
                           },
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Eidolon4_ATK[<span class=\"descriptionNumberColor\">Self-Sufficer</span>]"
                             },
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Qingque_Eidolon4_ATK_Special",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "Skill Point Entity",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Skill Point User}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -2819,14 +3173,23 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Eidolon4_ATK[<span class=\"descriptionNumberColor\">Self-Sufficer</span>]"
                             },
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Qingque_Eidolon4_ATK",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "Skill Point Entity",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Skill Point User}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -2866,7 +3229,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_SpeedUp) || RETURN",
@@ -2941,13 +3307,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Basic ATK"
                 }
@@ -2958,19 +3330,28 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill11",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Show",
                   "abilityName": "Basic ATK"
                 },
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Skill"
                   ]
@@ -3001,7 +3382,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "QingQue_PassiveCount"
                   },
                   "passed": [
@@ -3037,7 +3421,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "QingQue_PassiveCount"
                   },
                   "passed": [
@@ -3073,7 +3460,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "QingQue_PassiveCount"
                   },
                   "passed": [
@@ -3106,13 +3496,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Hu_Flag",
                   "removeAllInstances": true
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_PassiveCount_QingqueSelf",
                   "valuePerStack": {
                     "AbilityRank_Eidolon2_P1_SPAdd": {
@@ -3129,7 +3525,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Current Action Holder Is",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -3166,7 +3565,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -3181,12 +3583,18 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Hu_Flag_Wan"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Wan",
                           "removeAllInstances": true
                         },
@@ -3236,7 +3644,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
@@ -3251,12 +3662,18 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Hu_Flag_Tong"
                             },
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tong",
                               "removeAllInstances": true
                             },
@@ -3306,7 +3723,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
@@ -3321,12 +3741,18 @@ const compositeAbilityObject = {
                                 },
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Hu_Flag_Tiao"
                                 },
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tiao",
                                   "removeAllInstances": true
                                 },
@@ -3352,7 +3778,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]"
                   },
                   "passed": [
@@ -3362,7 +3791,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Hu_01"
                         }
                       },
@@ -3370,7 +3802,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Qingque_Bonus",
-                          "abilitySource": "Caster",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "priorityTag": "AvatarBuffSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -3392,7 +3827,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates (Excluding Owner)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
                   "modifier": "QingQue_PassiveCount_Teammate",
                   "valuePerStack": {
                     "QingQue_CardCount_Teammate": {
@@ -3412,7 +3850,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Teammates (Excluding Owner)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
                   "modifier": "QingQue_PassiveCount_Teammate"
                 }
               ]
@@ -3436,13 +3877,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "QingQue_PassiveCount"
                   },
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_PassiveCount_QingqueSelf",
                       "valuePerStack": {
                         "AbilityRank_Eidolon2_P1_SPAdd": {
@@ -3480,7 +3927,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "QingQue_PassiveCount"
                   },
                   "passed": [
@@ -3490,7 +3940,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]"
                         }
                       },
@@ -3512,7 +3965,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Owner of this Modifier",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (SkillRank_Rank02_P1_SPAdd) || RETURN",
                         "displayLines": "SkillRank_Rank02_P1_SPAdd",
@@ -3551,7 +4007,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Wan"
                         }
                       ],
@@ -3565,14 +4024,20 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tong"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tiao"
                             }
                           ]
@@ -3654,7 +4119,10 @@ const compositeAbilityObject = {
                                       "passed": [
                                         {
                                           "name": "Add Events/Bonuses",
-                                          "to": "Caster",
+                                          "to": {
+                                            "name": "Target Name",
+                                            "target": "{{Caster}}"
+                                          },
                                           "modifier": "QingQue_Passive_Wan"
                                         }
                                       ],
@@ -3668,14 +4136,20 @@ const compositeAbilityObject = {
                                           "passed": [
                                             {
                                               "name": "Add Events/Bonuses",
-                                              "to": "Caster",
+                                              "to": {
+                                                "name": "Target Name",
+                                                "target": "{{Caster}}"
+                                              },
                                               "modifier": "QingQue_Passive_Tong"
                                             }
                                           ],
                                           "failed": [
                                             {
                                               "name": "Add Events/Bonuses",
-                                              "to": "Caster",
+                                              "to": {
+                                                "name": "Target Name",
+                                                "target": "{{Caster}}"
+                                              },
                                               "modifier": "QingQue_Passive_Tiao"
                                             }
                                           ]
@@ -3743,7 +4217,10 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Tiao"
                                                 },
                                                 {
@@ -3764,7 +4241,10 @@ const compositeAbilityObject = {
                                               "failed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Wan"
                                                 },
                                                 {
@@ -3812,7 +4292,10 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Tong"
                                                     },
                                                     {
@@ -3833,7 +4316,10 @@ const compositeAbilityObject = {
                                                   "failed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Wan"
                                                     },
                                                     {
@@ -3894,7 +4380,10 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Tiao"
                                                 },
                                                 {
@@ -3931,7 +4420,10 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Tong"
                                                     },
                                                     {
@@ -3959,7 +4451,10 @@ const compositeAbilityObject = {
                                                       "passed": [
                                                         {
                                                           "name": "Remove Events/Bonuses",
-                                                          "to": "Caster",
+                                                          "to": {
+                                                            "name": "Target Name",
+                                                            "target": "{{Caster}}"
+                                                          },
                                                           "modifier": "QingQue_Passive_Tong"
                                                         },
                                                         {
@@ -3980,7 +4475,10 @@ const compositeAbilityObject = {
                                                       "failed": [
                                                         {
                                                           "name": "Remove Events/Bonuses",
-                                                          "to": "Caster",
+                                                          "to": {
+                                                            "name": "Target Name",
+                                                            "target": "{{Caster}}"
+                                                          },
                                                           "modifier": "QingQue_Passive_Tiao"
                                                         },
                                                         {
@@ -4068,7 +4566,10 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Tiao"
                                                 },
                                                 {
@@ -4089,7 +4590,10 @@ const compositeAbilityObject = {
                                               "failed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Tong"
                                                 },
                                                 {
@@ -4137,7 +4641,10 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Tong"
                                                     },
                                                     {
@@ -4158,7 +4665,10 @@ const compositeAbilityObject = {
                                                   "failed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Wan"
                                                     },
                                                     {
@@ -4219,7 +4729,10 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Tiao"
                                                 },
                                                 {
@@ -4256,7 +4769,10 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Wan"
                                                     },
                                                     {
@@ -4284,7 +4800,10 @@ const compositeAbilityObject = {
                                                       "passed": [
                                                         {
                                                           "name": "Remove Events/Bonuses",
-                                                          "to": "Caster",
+                                                          "to": {
+                                                            "name": "Target Name",
+                                                            "target": "{{Caster}}"
+                                                          },
                                                           "modifier": "QingQue_Passive_Wan"
                                                         },
                                                         {
@@ -4305,7 +4824,10 @@ const compositeAbilityObject = {
                                                       "failed": [
                                                         {
                                                           "name": "Remove Events/Bonuses",
-                                                          "to": "Caster",
+                                                          "to": {
+                                                            "name": "Target Name",
+                                                            "target": "{{Caster}}"
+                                                          },
                                                           "modifier": "QingQue_Passive_Tiao"
                                                         },
                                                         {
@@ -4393,7 +4915,10 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Tiao"
                                                 },
                                                 {
@@ -4414,7 +4939,10 @@ const compositeAbilityObject = {
                                               "failed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Tong"
                                                 },
                                                 {
@@ -4462,7 +4990,10 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Tiao"
                                                     },
                                                     {
@@ -4483,7 +5014,10 @@ const compositeAbilityObject = {
                                                   "failed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Wan"
                                                     },
                                                     {
@@ -4544,7 +5078,10 @@ const compositeAbilityObject = {
                                               "passed": [
                                                 {
                                                   "name": "Remove Events/Bonuses",
-                                                  "to": "Caster",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Caster}}"
+                                                  },
                                                   "modifier": "QingQue_Passive_Tong"
                                                 },
                                                 {
@@ -4581,7 +5118,10 @@ const compositeAbilityObject = {
                                                   "passed": [
                                                     {
                                                       "name": "Remove Events/Bonuses",
-                                                      "to": "Caster",
+                                                      "to": {
+                                                        "name": "Target Name",
+                                                        "target": "{{Caster}}"
+                                                      },
                                                       "modifier": "QingQue_Passive_Wan"
                                                     },
                                                     {
@@ -4609,7 +5149,10 @@ const compositeAbilityObject = {
                                                       "passed": [
                                                         {
                                                           "name": "Remove Events/Bonuses",
-                                                          "to": "Caster",
+                                                          "to": {
+                                                            "name": "Target Name",
+                                                            "target": "{{Caster}}"
+                                                          },
                                                           "modifier": "QingQue_Passive_Wan"
                                                         },
                                                         {
@@ -4630,7 +5173,10 @@ const compositeAbilityObject = {
                                                       "failed": [
                                                         {
                                                           "name": "Remove Events/Bonuses",
-                                                          "to": "Caster",
+                                                          "to": {
+                                                            "name": "Target Name",
+                                                            "target": "{{Caster}}"
+                                                          },
                                                           "modifier": "QingQue_Passive_Tong"
                                                         },
                                                         {
@@ -4688,7 +5234,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -4701,7 +5250,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "MWQingque_Attack_Transfer"
                 },
                 {
@@ -4732,7 +5284,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "removeAllInstances": true
                 }
@@ -4743,14 +5298,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "multiplier": 1
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -4786,7 +5347,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Ability11PreShowModifier"
                 }
               ]
@@ -4799,7 +5363,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Basic ATK"
             ],
@@ -4807,7 +5374,10 @@ const compositeAbilityObject = {
               "name": "NOT",
               "condition": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Qingque_SpeedUpPointB3[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
               }
             },

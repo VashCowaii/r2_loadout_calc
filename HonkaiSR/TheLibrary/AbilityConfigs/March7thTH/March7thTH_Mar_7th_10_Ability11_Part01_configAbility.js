@@ -74,7 +74,10 @@ const configAbility = {
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Mar_7th_10_Ability11_Part02",
       "isTrigger": true
     },

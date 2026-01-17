@@ -33,7 +33,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Argenti_Modifier"
         }
       ],
@@ -52,7 +55,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Level Entity",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Level Entity}}"
+                        },
                         "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
                         "invertCondition": true
                       },
@@ -70,12 +76,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Hostile Entities (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "searchRandom": true,
                       "ifTargetFound": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
@@ -96,7 +108,10 @@ const compositeAbilityObject = {
                     "Trigger: Attack End",
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (15) || RETURN",
                         "displayLines": "15",
@@ -146,13 +161,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "Base_MaxSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Argenti_UltraAbilityPrepare"
         },
         {
@@ -164,7 +185,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_Eidolon2_TargetNumberListen"
             }
           ]
@@ -202,7 +226,10 @@ const compositeAbilityObject = {
               "Event": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -240,7 +267,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_PointB1_AutoBonusLayerModifier"
             }
           ]
@@ -254,7 +284,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_PointB2_SummonSpModifier"
             }
           ]
@@ -268,7 +301,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_PointB3_DamageUpModifier"
             }
           ]
@@ -291,19 +327,28 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_Eidolon6_DefPentModifier"
             }
           ]
         },
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "ifTargetFound": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -332,7 +377,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -349,7 +397,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
@@ -388,7 +439,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "maxTargets": 1,
@@ -397,13 +451,19 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Argenti_Bonus_Modifier01",
                     "invertCondition": true
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": ">",
                     "value2": 0
@@ -413,27 +473,39 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Argenti_Bonus_Modifier01"
                 }
               ],
               "noTargetFound": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Argenti_Bonus_Modifier01",
                     "invertCondition": true
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Argenti_Bonus_Modifier01"
                     }
                   ]
@@ -456,11 +528,17 @@ const compositeAbilityObject = {
             {
               "name": "Use Custom Character Function",
               "functionName": "Bounce_SelectTarget",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "paramSequence": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
@@ -491,7 +569,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Argenti_Bonus_Modifier01"
         },
         {
@@ -508,7 +589,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_Eidolon6_DefPentModifier"
             }
           ]
@@ -545,7 +629,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Argenti_Ability31_Part02",
           "isTrigger": true
         },
@@ -576,19 +663,28 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_Eidolon6_DefPentModifier"
             }
           ]
         },
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "ifTargetFound": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -617,7 +713,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -634,7 +733,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -674,7 +776,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_Eidolon6_DefPentModifier"
             }
           ]
@@ -705,7 +810,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Argenti_Ability03_Part02",
           "isTrigger": true
         },
@@ -729,12 +837,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "ifTargetFound": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (3) || RETURN",
                 "displayLines": "3",
@@ -763,7 +877,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -780,7 +897,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -829,7 +949,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Argenti_Ability02_Part02",
           "isTrigger": true
         }
@@ -844,7 +967,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -873,7 +999,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -888,7 +1017,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -936,7 +1068,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Argenti_Ability01_Part02",
           "isTrigger": true
         }
@@ -963,7 +1098,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1003,7 +1141,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Custom Variable with Team Count",
-                      "target": "All Enemies (AOE)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "variableName": "TargetNumber",
                       "livingTargets": true
                     },
@@ -1025,7 +1166,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Argenti_Eidolon2_AttackRatioUp[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",
@@ -1065,7 +1209,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "TargetMonster_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -1073,7 +1220,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                     "compareType": "<=",
                     "value2": {
@@ -1116,13 +1266,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -1177,7 +1333,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -1240,7 +1399,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "multiplier": 1
@@ -1260,7 +1422,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_CritChance) || RETURN",
@@ -1297,7 +1462,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (MDF_CritDamage) || RETURN",
@@ -1343,7 +1511,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill03",
                   "skillSlot": "Ultimate",
                   "enableSecondaryType": "ControlSkill03"
@@ -1355,7 +1526,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "MDF_SPMax",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
@@ -1363,7 +1537,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
@@ -1383,7 +1560,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Update Ability Binding",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "abilityName": "Skill31",
                       "skillSlot": "Ultimate",
                       "enableSecondaryType": "ControlSkill03"
@@ -1397,7 +1577,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Update Ability Binding",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "abilityName": "Skill03",
                       "skillSlot": "Ultimate",
                       "enableSecondaryType": "ControlSkill03"

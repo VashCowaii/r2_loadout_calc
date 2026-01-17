@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_310_Main"
     }
   ],
@@ -24,7 +27,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.1) || RETURN",
@@ -50,7 +56,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -58,7 +67,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectRESSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
@@ -73,7 +85,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "modifier": "Relic_310_Sub"
                     }
                   ]
@@ -98,7 +113,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectRESSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
@@ -113,7 +131,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "modifier": "Relic_310_Sub"
                     }
                   ]
@@ -143,7 +164,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "Relic_310_Sub",
                   "onlyRemoveOwnersInstance": true
                 }
@@ -151,7 +175,10 @@ const configAbility = {
               "whenLeavingRange": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "Relic_310_Sub"
                 }
               ]

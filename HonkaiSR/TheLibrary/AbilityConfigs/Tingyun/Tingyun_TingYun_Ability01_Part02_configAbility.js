@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Tingyun_Ability01_Trace_B2"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Thunder",
@@ -38,7 +44,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Thunder",
@@ -66,7 +75,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Tingyun_Ability01_Trace_B2"
     },
     "Trigger: Ability End"

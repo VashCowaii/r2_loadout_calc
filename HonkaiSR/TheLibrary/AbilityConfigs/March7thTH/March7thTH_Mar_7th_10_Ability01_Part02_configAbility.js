@@ -6,13 +6,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "variableName": "_target_stance_before_attack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -39,7 +45,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",
@@ -92,7 +101,10 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Mar_7th_10_Ability01_Preshow"
     }
   ],
@@ -110,7 +122,10 @@ const configAbility = {
         "skillType": "Basic ATK",
         "conditions": {
           "name": "Has Modifier",
-          "target": "Owner of this Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Mar_7th_10_Enhance",
           "invertCondition": true
         },

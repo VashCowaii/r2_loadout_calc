@@ -11,7 +11,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -41,20 +44,29 @@ const configAbility = {
       "Event": [
         {
           "name": "Find New Target",
-          "from": "Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "DanHengIL_Ability03Target",
             "invertCondition": true
           },
           "ifTargetFound": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -79,7 +91,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "DanHengIL_Ability03Target"
             }
           ]
@@ -102,12 +117,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "DanHengIL_Ability03Target"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -137,20 +158,29 @@ const configAbility = {
       "Event": [
         {
           "name": "Find New Target",
-          "from": "Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "DanHengIL_Ability03Target",
             "invertCondition": true
           },
           "ifTargetFound": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -175,7 +205,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "DanHengIL_Ability03Target"
             }
           ]
@@ -198,12 +231,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "DanHengIL_Ability03Target"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",
@@ -230,7 +269,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",
@@ -271,7 +313,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "DanHengIL_Ability03Target"
     },
     {
@@ -285,7 +330,10 @@ const configAbility = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "BPExChange",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
             "displayLines": "(2 + 1)",
@@ -299,7 +347,10 @@ const configAbility = {
         },
         {
           "name": "Modify Skill-Point Extras",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "function": "Set",
           "value": {
             "operator": "Variables[0] (BPExChange) || RETURN",
@@ -335,7 +386,10 @@ const configAbility = {
         },
         {
           "name": "Define Modifier Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "value": {
             "operator": "Variables[0] (BPExChange) || RETURN",
@@ -348,7 +402,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "counter": {
             "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
@@ -383,7 +440,10 @@ const configAbility = {
         },
         {
           "name": "Action Advance/Delay",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "advanceType": "Advance",
           "value": -1
         }
@@ -393,7 +453,10 @@ const configAbility = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "BPExChange",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -405,7 +468,10 @@ const configAbility = {
         },
         {
           "name": "Modify Skill-Point Extras",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "function": "Set",
           "value": {
             "operator": "Variables[0] (BPExChange) || RETURN",
@@ -441,7 +507,10 @@ const configAbility = {
         },
         {
           "name": "Define Modifier Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "value": {
             "operator": "Variables[0] (BPExChange) || RETURN",
@@ -454,7 +523,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "counter": {
             "operator": "Variables[0] (2) || RETURN",

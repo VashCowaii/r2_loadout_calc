@@ -23,7 +23,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Ability01PreShowModifier_Fixed",
           "valuePerStack": {
             "MDF_Ability01_Delay": {
@@ -40,12 +43,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Ability02PreShowModifier"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Local_Seele_ListenKill",
       "valuePerStack": {
         "dmg_percent": {
@@ -97,7 +106,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Local_Seele_PassiveActionModifier[<span class=\"descriptionNumberColor\">Resurgence</span>]"
             }
           ]
@@ -126,7 +138,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Ability Ongoing",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -139,7 +154,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Seele_Passive_DamageUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -196,7 +214,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Ability Ongoing",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -209,7 +230,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Seele_Passive_DamageUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -274,7 +298,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   "passed": [
@@ -284,7 +311,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Local_Seele_PassiveActionModifier[<span class=\"descriptionNumberColor\">Resurgence</span>]"
                     }
                   ],
@@ -295,7 +325,10 @@ const configAbility = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Local_Seele_PassiveActionModifier[<span class=\"descriptionNumberColor\">Resurgence</span>]"
                     }
                   ]
@@ -337,7 +370,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Local_Seele_PassiveActionModifier[<span class=\"descriptionNumberColor\">Resurgence</span>]"
                 }
               ]
@@ -385,7 +421,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Skill"
         ],
@@ -396,7 +435,10 @@ const configAbility = {
               "name": "NOT",
               "condition": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Seele_BPAbility_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
               }
             },
@@ -407,13 +449,19 @@ const configAbility = {
                   "name": "NOT",
                   "condition": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Seele_BPAbility_SpeedUpEidolon2[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
                   }
                 },
                 {
                   "name": "Compare: Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value1": "Seele_BPAbility_SpeedUpEidolon2[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "compareType": "<",
                   "value2": {
@@ -446,7 +494,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Basic ATK"
         ],

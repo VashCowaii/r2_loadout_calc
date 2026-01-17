@@ -18,7 +18,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -67,7 +70,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Charge_Count) || MUL || RETURN",
@@ -120,16 +126,19 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]"
             },
             {
@@ -141,7 +150,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                 }
               ]
@@ -195,7 +207,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
@@ -209,7 +224,10 @@ const configAbility = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
@@ -229,7 +247,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Count) || MUL || RETURN",
@@ -245,7 +266,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates + Unselectable (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
               "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
@@ -277,7 +301,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
                     "compareType": ">=",
                     "value2": {
@@ -292,7 +319,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -316,7 +346,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_Count",
               "multiplier": 1
             },
@@ -324,12 +357,18 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Teammate",
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Asta_TeamAttackUP[<span class=\"descriptionNumberColor\">Charging</span>]",
                   "valuePerStack": {
                     "MDF_AttackAddedRatio": {
@@ -378,7 +417,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

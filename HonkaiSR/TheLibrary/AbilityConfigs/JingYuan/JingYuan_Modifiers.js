@@ -18,7 +18,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -51,7 +54,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -83,7 +89,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "modifierName": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
@@ -91,7 +100,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -171,7 +183,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "modifierName": "JingYuan_BattleEvent_SpeedUp",
@@ -179,7 +194,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -212,8 +230,14 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "JingYuan_Passive_Insert",
-              "abilitySource": "Caster [of Battle Event]",
-              "abilityTarget": "All Enemies (AOE)",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "priorityTag": "AvatarInsertAttackSelf",
               "canHitNonTargets": true,
               "abortFlags": [

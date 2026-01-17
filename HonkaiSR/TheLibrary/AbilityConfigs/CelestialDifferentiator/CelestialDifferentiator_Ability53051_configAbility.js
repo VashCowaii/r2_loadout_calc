@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_305_Main"
     }
   ],
@@ -20,7 +23,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.6) || RETURN",
@@ -44,7 +50,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Relic_305_Sub",
               "onlyRemoveOwnersInstance": true
             }
@@ -66,7 +75,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
@@ -81,7 +93,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_305_Sub"
                     }
                   ]

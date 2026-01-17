@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_PlayerBoy_20_Modifier"
         }
       ],
@@ -53,7 +56,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "modifier": "PlayerBoy_20_TechniqueUsage_Bonus[<span class=\"descriptionNumberColor\">Now! I'm the Band!</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -108,7 +114,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_20_Eidolon4_Bonus"
             }
           ]
@@ -122,7 +131,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_20_PointB2_Bonus"
             }
           ]
@@ -136,7 +148,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_20_PointB3_Bonus",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -160,7 +175,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_20_Eidolon1"
             }
           ]
@@ -174,7 +192,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_20_Eidolon2[<span class=\"descriptionNumberColor\">Jailbreaking Rainbowwalk</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -214,7 +235,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_20_Passive_BonusArea"
         }
       ],
@@ -228,7 +252,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_20_AbilityP01_ListenRedShieldModifier",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -285,7 +312,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -314,7 +344,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_20_Ability03_Part02"
         }
       ],
@@ -343,7 +376,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Imaginary",
@@ -374,7 +410,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Imaginary",
@@ -409,7 +448,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextCaster",
               "variableName": "Bounce_Count",
               "value": {
@@ -427,7 +469,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextCaster",
               "variableName": "Bounce_Count",
               "value": 4
@@ -448,11 +493,17 @@ const compositeAbilityObject = {
             {
               "name": "Use Custom Character Function",
               "functionName": "Bounce_SelectTarget",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "paramSequence": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Imaginary",
@@ -506,7 +557,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_20_Ability02_Part02",
           "isTrigger": true
         }
@@ -521,7 +575,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -569,7 +626,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_20_Ability01_Part02",
           "isTrigger": true
         }
@@ -595,7 +655,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -661,7 +724,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "modifier": "PlayerBoy_20_PointB3_Bonus_Preshow",
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
@@ -683,13 +749,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
                       "modifier": "PlayerBoy_20_PointB3_Bonus_Preshow",
                       "valuePerStack": {
                         "MDF_PropertyValue2": {
@@ -713,13 +785,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Secondary Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "advanceType": "Set",
                       "value": "MDF_PropertyValue"
                     }
@@ -746,11 +824,20 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Current Visual Target(All)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
             "conditions": {
               "name": "Has Toughness Reduction Preview",
-              "caster": "Owner of this Modifier",
-              "target": "Use Prior Target(s) Defined"
+              "caster": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
             },
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
@@ -835,18 +922,30 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Current Visual Target(All)",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "Break"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self"
                       }
                     ]
@@ -871,19 +970,31 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Current Visual Target(All)",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "mustBeAlive2": true,
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "Break"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self"
                       }
                     ]
@@ -914,7 +1025,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",
@@ -929,13 +1043,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "PlayerBoy_20_Passive_SpecialMark"
                     }
                   ]
@@ -947,7 +1067,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "PlayerBoy_20_Passive_SpecialMark"
                 }
               ]
@@ -967,7 +1090,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "DealSuperBreakDamage_DamagePerformance",
-                  "target": "Ability Target List",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "variables": {
                     "value_0_DamagePercentage": {
                       "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
@@ -982,17 +1108,26 @@ const compositeAbilityObject = {
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "PursuedDamage_PerformanceDelay",
-                      "target": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "ReadTargetType",
-                          "target": "Owner of this Modifier"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          }
                         },
                         "DamageBreak": {
                           "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
@@ -1035,13 +1170,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self",
                   "modifierNameUpdate": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1100,7 +1241,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "All Hostile Entities (AOE)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE)}}"
+                        },
                         "compareType": ">=",
                         "value2": 5,
                         "livingTargets": true
@@ -1127,7 +1271,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count",
-                            "target": "All Hostile Entities (AOE)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Hostile Entities(AOE)}}"
+                            },
                             "compareType": "=",
                             "value2": 4,
                             "livingTargets": true
@@ -1154,7 +1301,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Target Count",
-                                "target": "All Hostile Entities (AOE)",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Hostile Entities(AOE)}}"
+                                },
                                 "compareType": "=",
                                 "value2": 3,
                                 "livingTargets": true
@@ -1181,7 +1331,10 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Compare: Target Count",
-                                    "target": "All Hostile Entities (AOE)",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Hostile Entities(AOE)}}"
+                                    },
                                     "compareType": "=",
                                     "value2": 2,
                                     "livingTargets": true
@@ -1231,7 +1384,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_20_Ability03_ElementDamage",
                   "valuePerStack": {
                     "MDF_SuperBreakDamagePercentage": {
@@ -1280,7 +1436,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1327,7 +1486,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "All Hostile Entities (AOE)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE)}}"
+                        },
                         "compareType": ">=",
                         "value2": 5,
                         "livingTargets": true
@@ -1354,7 +1516,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count",
-                            "target": "All Hostile Entities (AOE)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Hostile Entities(AOE)}}"
+                            },
                             "compareType": "=",
                             "value2": 4,
                             "livingTargets": true
@@ -1381,7 +1546,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Target Count",
-                                "target": "All Hostile Entities (AOE)",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Hostile Entities(AOE)}}"
+                                },
                                 "compareType": "=",
                                 "value2": 3,
                                 "livingTargets": true
@@ -1408,7 +1576,10 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Compare: Target Count",
-                                    "target": "All Hostile Entities (AOE)",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Hostile Entities(AOE)}}"
+                                    },
                                     "compareType": "=",
                                     "value2": 2,
                                     "livingTargets": true
@@ -1458,7 +1629,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_20_Ability03_ElementDamage",
                   "valuePerStack": {
                     "MDF_SuperBreakDamagePercentage": {
@@ -1510,7 +1684,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
                 }
               ]
@@ -1520,7 +1697,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "LifeTime",
                   "variableName": "MDF_HarmonyEnergy",
                   "modifierName": "PlayerBoy_20_AbilityP01_ListenRedShieldModifier",
@@ -1558,7 +1738,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Teammates + Unselectable (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
               "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]",
               "haloStatus": true,
               "valuePerStack": {
@@ -1623,7 +1806,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self",
               "haloStatus": true,
               "duration": {
@@ -1696,7 +1882,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "PlayerBoy_20_Ability03_ElementDamage",
               "haloStatus": true,
               "valuePerStack": {
@@ -1715,7 +1904,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AddBreakDamageRatio) || RETURN",
@@ -1743,7 +1935,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]"
                 }
               ]
@@ -1764,7 +1959,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
@@ -1781,7 +1979,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]"
                 }
               ]
@@ -1841,7 +2042,10 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "MDF_BreakDamageBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
                 },
@@ -1860,7 +2064,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates + Unselectable (Excluding Owner)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                  },
                   "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]",
                   "valuePerStack": {
                     "MDF_AddBreakDamageRatio": {
@@ -1889,7 +2096,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_BreakDamageAddedRatio) || RETURN",

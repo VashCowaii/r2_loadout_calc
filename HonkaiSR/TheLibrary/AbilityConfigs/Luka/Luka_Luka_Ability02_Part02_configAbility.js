@@ -11,7 +11,10 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Bleed"
           },
           {
@@ -23,7 +26,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luka_Eidolon1_Sub[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -59,7 +65,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Dispel Debuffs",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "typeOverride": "Buff",
               "dispelCount": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -76,7 +85,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -103,7 +115,10 @@ const configAbility = {
         "Trigger: Attack End",
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Luka_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -144,7 +159,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Luka_ReloadBullet",
       "valuePerStack": {
         "MDF_AddValue": {

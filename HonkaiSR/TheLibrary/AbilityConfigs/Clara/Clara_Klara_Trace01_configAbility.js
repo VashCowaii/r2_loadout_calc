@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Klara_Trace01",
       "valuePerStack": {
         "MDF_Chance": {
@@ -44,7 +47,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Dispel Debuffs",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "dispelCount": 1,
                   "dispelOrder": "LastAdded"
                 }

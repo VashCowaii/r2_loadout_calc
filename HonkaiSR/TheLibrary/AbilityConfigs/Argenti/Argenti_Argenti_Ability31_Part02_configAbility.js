@@ -13,19 +13,28 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Argenti_Eidolon6_DefPentModifier"
         }
       ]
     },
     {
       "name": "Find New Target",
-      "from": "All Hostile Entities (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "searchRandom": true,
       "ifTargetFound": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -54,7 +63,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -71,7 +83,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
@@ -110,7 +125,10 @@ const configAbility = {
       "Event": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "maxTargets": 1,
@@ -119,13 +137,19 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Argenti_Bonus_Modifier01",
                 "invertCondition": true
               },
               {
                 "name": "Compare: Variable",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "CurrentHP",
                 "compareType": ">",
                 "value2": 0
@@ -135,27 +159,39 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Argenti_Bonus_Modifier01"
             }
           ],
           "noTargetFound": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Argenti_Bonus_Modifier01",
                 "invertCondition": true
               },
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Argenti_Bonus_Modifier01"
                 }
               ]
@@ -178,11 +214,17 @@ const configAbility = {
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "paramSequence": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
@@ -213,7 +255,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Argenti_Bonus_Modifier01"
     },
     {
@@ -230,7 +275,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Argenti_Eidolon6_DefPentModifier"
         }
       ]

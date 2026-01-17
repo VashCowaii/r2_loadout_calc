@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_312_Main"
     }
   ],
@@ -24,7 +27,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.1) || RETURN",
@@ -50,7 +56,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -58,7 +67,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Physical"
@@ -69,7 +81,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Physical"
@@ -78,7 +93,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -89,7 +107,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Fire"
@@ -100,7 +121,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -109,7 +133,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -120,7 +147,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Ice"
@@ -131,7 +161,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Ice"
@@ -140,7 +173,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -151,7 +187,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Wind"
@@ -162,7 +201,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Wind"
@@ -171,7 +213,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -182,7 +227,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Thunder"
@@ -193,7 +241,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Thunder"
@@ -202,7 +253,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -213,7 +267,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Quantum"
@@ -224,7 +281,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -233,7 +293,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -244,7 +307,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Imaginary"
@@ -255,7 +321,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Imaginary"
@@ -264,7 +333,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -291,7 +363,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Physical"
@@ -300,11 +375,17 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "searchRandom": true,
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Physical"
@@ -313,7 +394,10 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -324,7 +408,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Fire"
@@ -333,11 +420,17 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "searchRandom": true,
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -346,7 +439,10 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -357,7 +453,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Ice"
@@ -366,11 +465,17 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "searchRandom": true,
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Ice"
@@ -379,7 +484,10 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -390,7 +498,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Wind"
@@ -399,11 +510,17 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "searchRandom": true,
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Wind"
@@ -412,7 +529,10 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -423,7 +543,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Thunder"
@@ -432,11 +555,17 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "searchRandom": true,
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Thunder"
@@ -445,7 +574,10 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -456,7 +588,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Quantum"
@@ -465,11 +600,17 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "searchRandom": true,
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -478,7 +619,10 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]
@@ -489,7 +633,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Imaginary"
@@ -498,11 +645,17 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "searchRandom": true,
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Imaginary"
@@ -511,7 +664,10 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_312_Sub"
                         }
                       ]

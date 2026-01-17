@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_20010_Main"
     }
   ],
@@ -27,7 +30,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (0.18) || RETURN",
                     "displayLines": "0.18",

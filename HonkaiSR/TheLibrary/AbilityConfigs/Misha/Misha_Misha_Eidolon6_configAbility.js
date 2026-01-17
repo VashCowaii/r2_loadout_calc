@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Misha_Eidolon6"
     }
   ],
@@ -64,7 +67,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -100,7 +106,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Misha_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
                   "duration": 1,
                   "valuePerStack": {
@@ -116,7 +125,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Misha_Eidolon6_RecoverBP[<span class=\"descriptionNumberColor\">Estrangement of Dream</span>]",
                   "valuePerStack": {
                     "MDF_Value": {

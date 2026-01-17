@@ -21,7 +21,10 @@ const configAbility = {
         "name": "NOT",
         "condition": {
           "name": "Has Modifier",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Yukong_Passive_BonusCD"
         }
       },
@@ -34,7 +37,10 @@ const configAbility = {
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Yukong_Ability01_Part02",
       "isTrigger": true
     }

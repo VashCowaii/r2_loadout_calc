@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Himeko_Trace01"
     }
   ],
@@ -20,7 +23,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Target Group(Attack List)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Attack Targets}}"
+              },
               "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",

@@ -20,7 +20,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]"
           },
           "failed": [
@@ -45,7 +48,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
                   "duration": 1
                 }
@@ -57,7 +63,10 @@ const configAbility = {
     },
     {
       "name": "Dispel Debuffs",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "dispelCount": 1,
       "dispelOrder": "LastAdded"
     },
@@ -82,7 +91,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Bronya_BPAbility_Eidolon2_Listen",
           "valuePerStack": {
             "Bronya_SpeedUP_Ratio_01": {
@@ -106,7 +118,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
             "operator": "Variables[0] (1) || Variables[1] (1) || ADD || RETURN",
@@ -132,7 +147,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -157,7 +175,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

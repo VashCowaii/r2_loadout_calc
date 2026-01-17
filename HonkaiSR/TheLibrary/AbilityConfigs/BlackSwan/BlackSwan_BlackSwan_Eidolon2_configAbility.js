@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "BlackSwan_Eidolon2"
     }
   ],
@@ -22,7 +25,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Target Exists",
-                "target": "Use Secondary Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target 2}}"
+                }
               },
               "passed": [
                 {
@@ -32,14 +38,20 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
                         "name": "NOT",
                         "condition": {
                           "name": "Is Part Of Team",
-                          "target": "Use Secondary Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target 2}}"
+                          },
                           "team": "TeamDark"
                         }
                       },
@@ -48,19 +60,28 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "M_BlackSwan_DOTFlag",
                             "justAddedOrActive": true
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "M_BlackSwan_P01_AddDOTFlag",
                             "justAddedOrActive": true
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "M_BlackSwan_Tree02_AddDOTFlag",
                             "justAddedOrActive": true
                           }
@@ -71,7 +92,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Targets Adjacent to Parameter Target}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 2,
                       "ifTargetFound": [
@@ -120,7 +144,10 @@ const configAbility = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
                             "operator": "Variables[0] (1) || RETURN",

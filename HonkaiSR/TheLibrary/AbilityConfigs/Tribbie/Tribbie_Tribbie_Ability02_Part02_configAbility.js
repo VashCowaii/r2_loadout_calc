@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Find New Target",
-      "from": "Allied Team TARGETS (Left to Right",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Player Team All(Left to Right)}}"
+      },
       "ifTargetFound": [
         {
           "name": "IF",
@@ -87,7 +90,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
@@ -134,7 +140,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

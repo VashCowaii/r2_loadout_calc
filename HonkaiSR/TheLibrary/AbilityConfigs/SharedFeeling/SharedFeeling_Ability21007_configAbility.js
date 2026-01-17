@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21007_Main"
     }
   ],
@@ -27,7 +30,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Allied Team (One per Pairing of Memo/Owner)",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Player Team(Exclude Memosprites)v2}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",

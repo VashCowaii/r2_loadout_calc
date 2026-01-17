@@ -60,7 +60,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "All Team Members(In Context)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
@@ -98,7 +101,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_Sparkle_CritDmgValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
         },
@@ -117,18 +123,27 @@ const configAbility = {
         },
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
           },
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
               "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -162,32 +177,44 @@ const configAbility = {
         },
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
           },
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Teammates (Excluding Owner)"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
-                    "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
-                    "invertCondition": true
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+                      "invertCondition": true
+                    }
                   }
-                }
-              ],
+                ]
+              },
               "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -223,7 +250,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

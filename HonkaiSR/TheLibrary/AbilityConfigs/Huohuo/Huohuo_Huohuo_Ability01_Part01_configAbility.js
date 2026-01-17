@@ -16,7 +16,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Huohuo_Ability01_Part02",
       "isTrigger": true
     },

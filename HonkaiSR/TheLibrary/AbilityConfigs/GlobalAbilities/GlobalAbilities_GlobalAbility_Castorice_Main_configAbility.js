@@ -7,7 +7,10 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Level Entity",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Level Entity}}"
+      },
       "modifier": "GlobalAbility_Castorice_CreateBattleEvent"
     }
   ],

@@ -58,7 +58,10 @@ const configAbility = {
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "DanHengIL_Ability02_Part02",
       "isTrigger": true
     }

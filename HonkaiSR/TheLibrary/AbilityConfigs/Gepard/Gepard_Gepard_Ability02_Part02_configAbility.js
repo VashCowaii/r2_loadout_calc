@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
@@ -35,7 +38,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
@@ -64,7 +70,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",
@@ -95,7 +104,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
       "duration": {
         "operator": "Variables[0] (1) || RETURN",
@@ -134,7 +146,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Gepard_Eidolon2_Delay",
               "valuePerStack": {
                 "MDF_SPD": {

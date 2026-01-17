@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Bailu_Modifier"
     }
   ],
@@ -121,7 +124,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -183,7 +189,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Team Members(In Context)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members}}"
+                          },
                           "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                           "valuePerStack": {
                             "MDF_DamageResistance": {

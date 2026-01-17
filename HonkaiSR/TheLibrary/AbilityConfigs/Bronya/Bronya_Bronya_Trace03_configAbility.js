@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Bronya_Tree03"
     }
   ],
@@ -20,16 +23,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "Bronya_Tree03_DamageUp",
               "onlyRemoveOwnersInstance": true
             }
@@ -40,7 +46,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Team Members(In Context)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
               "modifier": "Bronya_Tree03_DamageUp",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddedRatio": {
@@ -62,12 +71,18 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Teammate",
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Bronya_Tree03_DamageUp",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {

@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster [of Battle Event]",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Battle Event's Caster}}"
+        },
         "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       },
       "passed": [
@@ -22,14 +25,23 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster [of Battle Event]",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Battle Event's Caster}}"
+        },
         "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       },
       "passed": [
         {
           "name": "Trigger Ability",
-          "from": "Caster [of Battle Event]",
-          "inherentTarget": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Battle Event's Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ability": "Topaz_BE_UltraAttackDamage",
           "isTrigger": true
         }
@@ -37,8 +49,14 @@ const configAbility = {
       "failed": [
         {
           "name": "Trigger Ability",
-          "from": "Caster [of Battle Event]",
-          "inherentTarget": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Battle Event's Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ability": "Topaz_BE_NormalAttackDamage",
           "isTrigger": true
         }
@@ -53,12 +71,18 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Flag",
-            "target": "Caster [of Battle Event]",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Battle Event's Caster}}"
+            },
             "flagName": "STAT_CTRL"
           },
           {
             "name": "Has Flag",
-            "target": "Caster [of Battle Event]",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Battle Event's Caster}}"
+            },
             "flagName": "STAT_CTRL_Frozen"
           }
         ]

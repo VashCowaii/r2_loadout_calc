@@ -27,7 +27,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_Eidolon1"
         }
       ],
@@ -43,7 +46,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Target Receiving DMG",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": {
@@ -84,7 +90,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_DanHeng_Tree02"
         }
       ],
@@ -102,7 +111,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -144,7 +156,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "DanHeng_PointB2_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -183,7 +198,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_LowHP_AggroDown",
           "valuePerStack": {
             "MDF_HPRatio": {
@@ -217,7 +235,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -250,7 +271,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
@@ -265,7 +289,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "DanHeng_Trace_AggroDown[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -289,7 +316,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
@@ -304,7 +334,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "DanHeng_Trace_AggroDown[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -321,7 +354,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "DanHeng_Trace_AggroDown[<span class=\"descriptionNumberColor\">Hidden Dragon</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
@@ -354,7 +390,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Technique_DanHeng_Modifier"
         }
       ],
@@ -369,7 +408,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -406,7 +448,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">Splitting Spearhead</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -446,7 +491,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
           "valuePerStack": {
             "DanHeng_PassivePene": {
@@ -472,14 +520,20 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Enemies Still Alive",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "includeNonTargets": true
           },
           "passed": [
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ability": "DanHeng_PassiveAbility01_Enhance_Part02",
               "isTrigger": true
             }
@@ -514,24 +568,36 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "AbilityPreShowModifier"
             }
           ]
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "AbilityPreShowModifier2"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_CheckSelfBeingTarget"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
         },
         {
@@ -583,7 +649,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
@@ -591,7 +660,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
@@ -599,28 +671,49 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Is Part Of",
-                          "of": "Use Prior Target(s) Defined",
-                          "target": "Caster",
+                          "of": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "mustBeAlive2": true
                         }
                       },
                       {
                         "name": "Is Teammate",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "OR",
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
-                            "target": "Caster",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "mustBeAlive2": true
                           },
                           {
                             "name": "Is Part Of",
-                            "of": "Use [SKILL SUB-TARGETS OF] Prior Target(s) Defined",
-                            "target": "Caster",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Sub-Targets}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "mustBeAlive2": true
                           }
                         ]
@@ -630,7 +723,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
@@ -652,7 +748,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
@@ -671,7 +770,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
@@ -679,7 +781,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
@@ -687,19 +792,34 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Is Part Of",
-                          "of": "Use Prior Target(s) Defined",
-                          "target": "Caster",
+                          "of": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "mustBeAlive2": true
                         }
                       },
                       {
                         "name": "Is Teammate",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use [LIST OF] Prior Target(s) Defined",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target List}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -707,7 +827,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
@@ -729,7 +852,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
@@ -748,7 +874,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
@@ -756,7 +885,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                         }
                       },
@@ -764,19 +896,34 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Is Part Of",
-                          "of": "Use Prior Target(s) Defined",
-                          "target": "Caster",
+                          "of": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "mustBeAlive2": true
                         }
                       },
                       {
                         "name": "Is Teammate",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use [LIST OF] Prior Target(s) Defined",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target List}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -784,7 +931,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "valuePerStack": {
                         "DanHeng_PassivePene": {
@@ -806,7 +956,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
@@ -832,7 +985,10 @@ const compositeAbilityObject = {
               "name": "NOT",
               "condition": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]"
               }
             },
@@ -850,12 +1006,18 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "conditions": {
               "name": "NOT",
               "condition": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "DanHeng_PointB2_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
               }
             },
@@ -882,7 +1044,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "DanHeng_Eidolon4_Trigger"
             }
           ]
@@ -891,13 +1056,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_SpeedDown"
           },
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -926,7 +1097,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -962,7 +1136,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "DanHeng_Eidolon4_Trigger"
             }
           ]
@@ -981,7 +1158,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Action Advance/Delay",
                   "advanceType": "Set",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": 0
                 }
               ]
@@ -992,7 +1172,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Action Advance/Delay",
                   "advanceType": "Set",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": 0
                 }
               ]
@@ -1023,7 +1206,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "DanHeng_Ability03_Part02",
           "isTrigger": true
         }
@@ -1079,7 +1265,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_Ability02_CheckCritical_Modifier",
           "valuePerStack": {
             "MDF_Chance": {
@@ -1094,7 +1283,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -1120,7 +1312,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -1146,7 +1341,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -1172,7 +1370,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -1200,7 +1401,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_Ability02_CheckCritical_Modifier"
         },
         "Trigger: Ability End"
@@ -1219,7 +1423,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -1255,7 +1462,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -1316,7 +1526,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "DanHeng_Ability02_Part02",
           "isTrigger": true
         }
@@ -1338,14 +1551,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "DanHeng_Tree03_DamageAddedRatio"
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -1371,7 +1590,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -1406,7 +1628,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "DanHeng_Tree03_DamageAddedRatio"
             }
           ]
@@ -1425,7 +1650,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Target Receiving DMG",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
                     "flagName": "STAT_SpeedDown"
                   },
                   "passed": [
@@ -1468,7 +1696,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "DanHeng_Ability01_Part02",
           "isTrigger": true
         }
@@ -1553,7 +1784,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
@@ -1587,7 +1821,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -1617,7 +1854,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
@@ -1647,7 +1887,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
@@ -1680,7 +1923,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -1709,7 +1955,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   ]
@@ -1736,7 +1985,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 },
                 {

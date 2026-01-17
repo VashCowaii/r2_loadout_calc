@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Variable",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "value1": "CurrentHP%",
         "compareType": ">",
         "value2": 0.5
@@ -83,7 +86,10 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Heal",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.9) || RETURN",
             "displayLines": "0.9",

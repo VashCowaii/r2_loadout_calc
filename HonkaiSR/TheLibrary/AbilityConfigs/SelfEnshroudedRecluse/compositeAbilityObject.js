@@ -14,7 +14,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_128_Main"
         }
       ],
@@ -29,7 +32,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.15) || RETURN",
@@ -59,24 +65,39 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Shield",
-                    "casterFilter": "Caster"
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
                         "invertCondition": true,
-                        "casterFilter": "Caster"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]"
                         }
                       ]
@@ -92,23 +113,38 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Shield",
-                    "casterFilter": "Caster"
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "failed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
-                        "casterFilter": "Caster"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
                           "onlyRemoveOwnersInstance": true
                         }
@@ -125,24 +161,39 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Shield",
-                    "casterFilter": "Caster"
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]",
                         "invertCondition": true,
-                        "casterFilter": "Caster"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Relic_128_Sub1[<span class=\"descriptionNumberColor\">Self-Enshrouded Recluse</span>]"
                         }
                       ]
@@ -162,7 +213,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.12) || RETURN",
@@ -181,7 +235,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "Relic_128_Sub",
               "haloStatus": true
             }
@@ -212,7 +269,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_128_Main2"
         }
       ],
@@ -226,7 +286,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.1) || RETURN",

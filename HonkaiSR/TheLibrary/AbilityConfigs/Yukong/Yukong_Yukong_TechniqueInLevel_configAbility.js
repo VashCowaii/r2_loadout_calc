@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yukong_YuKong_Maze_Modifier"
     }
   ],
@@ -37,7 +40,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "ability": "Yukong_Ability02_AddFlower"
                 }
               ]

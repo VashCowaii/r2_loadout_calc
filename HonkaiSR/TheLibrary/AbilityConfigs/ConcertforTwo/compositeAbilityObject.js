@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21043_Main"
         }
       ],
@@ -58,7 +61,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DmgAddValue) || RETURN",
@@ -91,12 +97,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "Shield"
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       }
                     ]
@@ -128,10 +140,16 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "Shield"
                       },
                       "ifTargetFound": [
@@ -162,7 +180,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                         }
                       ],
@@ -185,7 +206,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "valuePerStack": {
                                 "MDF_DmgAddNum": {
@@ -224,12 +248,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Modifier Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "Shield"
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       }
                     ]
@@ -261,10 +291,16 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "Shield"
                       },
                       "ifTargetFound": [
@@ -295,7 +331,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                         }
                       ],
@@ -318,7 +357,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "LC_21043_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                               "valuePerStack": {
                                 "MDF_DmgAddNum": {

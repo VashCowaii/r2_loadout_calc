@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23049_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier + Memosprite",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getMemosprite]]"
+              },
               "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
               "onlyRemoveOwnersInstance": true
             }
@@ -32,7 +38,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier + Memosprite",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getMemosprite]]"
+              },
               "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
               "valuePerStack": {
                 "MDF_Show": {
@@ -47,7 +56,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team(ALL) Memosprites",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)}}.[[getMemosprite]]"
+              },
               "modifier": "LC_23049_Sub3[<span class=\"descriptionNumberColor\">Sleepless</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -72,13 +84,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "LC_23049_Sub[<span class=\"descriptionNumberColor\">Noctis</span>]"
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -86,7 +107,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(ALL) Memosprites",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)}}.[[getMemosprite]]"
+                  },
                   "modifier": "LC_23049_Sub3[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -110,13 +134,22 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "[MEMOSPRITE OF] Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier + Memosprite",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}} + {{Modifier Holder}}.[[getMemosprite]]"
+                  },
                   "modifier": "LC_23049_Sub2[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_Show": {
@@ -135,13 +168,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity Type",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "type": "Memosprite"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_23049_Sub3[<span class=\"descriptionNumberColor\">Sleepless</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -209,7 +248,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_Show) || RETURN",
@@ -246,13 +288,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "LC_23049_Sub[<span class=\"descriptionNumberColor\">Noctis</span>]"
               },
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue_3) || RETURN",
                     "displayLines": "MDF_PropertyValue_3",
@@ -272,7 +320,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "LC_23049_Sub[<span class=\"descriptionNumberColor\">Noctis</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -314,7 +365,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster (Memosprite)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "modifier": "LC_23049_Listen",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -352,13 +406,22 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "[MEMOSPRITE OF] Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_23049_Listen",
                   "valuePerStack": {
                     "MDF_PropertyValue": {

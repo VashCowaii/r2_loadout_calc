@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Yanqing_BonusTargetMark"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yanqing_Ability03_Bonus[<span class=\"descriptionNumberColor\">Amidst the Raining Bliss</span>]",
       "duration": 1,
       "immediateEffect": true,
@@ -30,13 +36,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]"
       },
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Yanqing_FrozenMark[<span class=\"descriptionNumberColor\">Soulsteel Sync</span>]",
           "duration": 1,
           "immediateEffect": true,
@@ -71,7 +83,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",

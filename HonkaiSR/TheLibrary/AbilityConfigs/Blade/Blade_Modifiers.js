@@ -19,13 +19,22 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -35,7 +44,10 @@ const configAbility = {
                   "skillType": [
                     "Skill"
                   ],
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "previewType": null,
                   "previewValue": {
                     "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.3) || MUL || RETURN",
@@ -51,7 +63,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Advanced_Ren_Attack_Transfer[<span class=\"descriptionNumberColor\">Hellscape</span>]"
                   },
                   "passed": [
@@ -61,7 +76,10 @@ const configAbility = {
                       "skillType": [
                         "Basic ATK"
                       ],
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "previewType": null,
                       "previewValue": {
                         "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.1) || MUL || RETURN",
@@ -79,7 +97,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": ">=",
                     "value2": 0.5
@@ -87,7 +108,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "MDF_CurrentHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
@@ -97,7 +121,10 @@ const configAbility = {
                       "skillType": [
                         "Ultimate"
                       ],
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "previewType": null,
                       "previewValue": {
                         "operator": "Variables[0] (MDF_CurrentHP) || Variables[1] (MDF_MaxHP) || Constants[0] (0.5) || MUL || SUB || RETURN",
@@ -143,7 +170,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_CriticalIncrease) || RETURN",
@@ -171,7 +201,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Ren_Eidolon4[<span class=\"descriptionNumberColor\">Heal All Bones</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -209,7 +242,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Rank04_Layer",
               "multiplier": 1
@@ -229,7 +265,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
@@ -304,7 +343,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Healing",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "CasterLostHP2"
             },
             {
@@ -332,7 +374,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingIncoming</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.2) || RETURN",
@@ -582,7 +627,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -595,7 +643,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
@@ -630,23 +681,35 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill01",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Advanced_Ren_Attack[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Advanced_Ren_Eidolon2[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "display": "Hide",
               "abilityName": "Basic ATK"
             }
@@ -657,19 +720,28 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill11",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Show",
               "abilityName": "Basic ATK"
             },
             {
               "name": "Disable Abilities",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityTypes": [
                 "Skill"
               ]
@@ -683,7 +755,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Advanced_Ren_Eidolon2[<span class=\"descriptionNumberColor\">Grievous Penitence</span>]"
                 }
               ]

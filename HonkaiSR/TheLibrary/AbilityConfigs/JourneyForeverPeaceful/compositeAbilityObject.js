@@ -14,7 +14,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21053_Main"
         }
       ],
@@ -32,7 +35,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.12) || RETURN",
@@ -66,7 +72,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
                     "compareType": ">",
                     "value2": 0
@@ -74,7 +83,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_21053_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ]
@@ -94,7 +106,10 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_21053_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
@@ -102,7 +117,10 @@ const compositeAbilityObject = {
                   "whenLeavingRange": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_21053_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ]
@@ -120,7 +138,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Shield%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.12) || RETURN",
@@ -140,13 +161,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21053_Sub"
                     }
                   ]
@@ -167,7 +194,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "LC_21053_Sub"
                     }
                   ]

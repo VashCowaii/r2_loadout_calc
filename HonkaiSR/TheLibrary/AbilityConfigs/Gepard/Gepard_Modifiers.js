@@ -18,7 +18,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_AddStatusResistance) || RETURN",
@@ -53,7 +56,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRaito) || SUB || RETURN",
@@ -88,12 +94,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Modifier Was",
-                    "casterFilter": "Caster",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Gepard_Eidolon2_Delay"
                   }
                 ]
@@ -101,7 +113,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Gepard_Eidolon2_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_Lifetime) || RETURN",
@@ -144,7 +159,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -184,7 +202,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Shield",
-              "target": "Owner of this Modifier"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
             },
             {
               "name": "Set Shield State/Value",
@@ -197,7 +218,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Create Shield",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (MDF_ShowValue) || RETURN",
                 "displayLines": "MDF_ShowValue",

@@ -27,7 +27,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Seele_Eidolon6"
         }
       ],
@@ -41,7 +44,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "Seele_Eidolon6_Flag[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]"
                 }
               ]
@@ -53,7 +59,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Current Action Holder Is",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -86,7 +95,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Seele_Eidolon4",
           "valuePerStack": {
             "MDF_AddSP": {
@@ -110,7 +122,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_AddSP) || RETURN",
                     "displayLines": "MDF_AddSP",
@@ -139,7 +154,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Seele_Eidolon1"
         }
       ],
@@ -153,7 +171,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -161,7 +182,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                     "compareType": "<=",
                     "value2": {
@@ -203,7 +227,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Seele_LowHP_AggroDown",
           "valuePerStack": {
             "MDF_HPRatio": {
@@ -237,7 +264,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -270,7 +300,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
@@ -285,7 +318,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -309,7 +345,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
@@ -324,7 +363,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -341,7 +383,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
@@ -374,7 +419,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Seele_Maze_Modifier"
         }
       ],
@@ -397,7 +445,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Seele_Passive_DamageUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -480,7 +531,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Ability01PreShowModifier_Fixed",
               "valuePerStack": {
                 "MDF_Ability01_Delay": {
@@ -497,12 +551,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Ability02PreShowModifier"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Local_Seele_ListenKill",
           "valuePerStack": {
             "dmg_percent": {
@@ -554,7 +614,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Local_Seele_PassiveActionModifier[<span class=\"descriptionNumberColor\">Resurgence</span>]"
                 }
               ]
@@ -583,7 +646,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Ability Ongoing",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -596,7 +662,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Seele_Passive_DamageUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -653,7 +722,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Ability Ongoing",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -666,7 +738,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Seele_Passive_DamageUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -731,7 +806,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "passed": [
@@ -741,7 +819,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Local_Seele_PassiveActionModifier[<span class=\"descriptionNumberColor\">Resurgence</span>]"
                         }
                       ],
@@ -752,7 +833,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Local_Seele_PassiveActionModifier[<span class=\"descriptionNumberColor\">Resurgence</span>]"
                         }
                       ]
@@ -794,7 +878,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Local_Seele_PassiveActionModifier[<span class=\"descriptionNumberColor\">Resurgence</span>]"
                     }
                   ]
@@ -842,7 +929,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Skill"
             ],
@@ -853,7 +943,10 @@ const compositeAbilityObject = {
                   "name": "NOT",
                   "condition": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Seele_BPAbility_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
                   }
                 },
@@ -864,13 +957,19 @@ const compositeAbilityObject = {
                       "name": "NOT",
                       "condition": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Seele_BPAbility_SpeedUpEidolon2[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
                       }
                     },
                     {
                       "name": "Compare: Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "value1": "Seele_BPAbility_SpeedUpEidolon2[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "compareType": "<",
                       "value2": {
@@ -903,7 +1002,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Basic ATK"
             ],
@@ -930,7 +1032,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Seele_Passive_DamageUp[<span class=\"descriptionNumberColor\">Amplification</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -961,7 +1066,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -995,7 +1103,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Seele_Eidolon6_Flag[<span class=\"descriptionNumberColor\">Butterfly Flurry</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -1035,7 +1146,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
@@ -1085,7 +1199,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Seele_Ability03_Part02",
           "isTrigger": true
         }
@@ -1115,7 +1232,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Seele_BPAbility_SpeedUpEidolon2[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -1148,7 +1268,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Seele_BPAbility_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -1173,7 +1296,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
@@ -1202,7 +1328,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
@@ -1231,7 +1360,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
@@ -1260,7 +1392,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -1312,7 +1447,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Seele_Ability02_Part02",
           "isTrigger": true
         }
@@ -1327,7 +1465,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
@@ -1353,7 +1494,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -1396,12 +1540,18 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Current Turn Is",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Seele_Trace02_ModifyAction",
                       "valuePerStack": {
                         "MDF_DelayCost": {
@@ -1418,7 +1568,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "advanceType": "Advance",
                       "value": "-0.2"
                     }
@@ -1440,7 +1593,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Ability01PreShowModifier_AppliedRatio",
                   "valuePerStack": {
                     "MDF_Ability01_Delay": {
@@ -1479,7 +1635,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Basic ATK"
             ],
@@ -1506,7 +1665,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "advanceType": "Advance",
                   "value": "-0.2"
                 },
@@ -1521,7 +1683,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Basic ATK"
             ],
@@ -1559,7 +1724,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Seele_Ability01_Part02",
           "isTrigger": true
         }
@@ -1589,14 +1757,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "SpeedUp_Count",
                   "multiplier": 1
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (SpeedUp_Count) || MUL || RETURN",
@@ -1635,7 +1809,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1671,7 +1848,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (seele_dmg_percent) || RETURN",
@@ -1695,7 +1875,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceQuantumPEN</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (MDF_Penetrate) || RETURN",

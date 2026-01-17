@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_24001_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.2) || RETURN",
@@ -51,7 +57,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Target Receiving DMG",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target TAKING DMG}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
@@ -83,7 +92,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_24001_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",

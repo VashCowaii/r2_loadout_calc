@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Anaxa_Eidolon2"
     }
   ],
@@ -22,18 +25,27 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "function_Anaxa_AddWeakness",
-                  "target": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Anaxa_Eidolon2_Property[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
                   "referenceModifier": "MReference_AllDamageTypeResistanceDown",
                   "valuePerStack": {
@@ -62,16 +74,25 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)(ALL)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "function_Anaxa_AddWeakness",
-                  "target": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Anaxa_Eidolon2_Property[<span class=\"descriptionNumberColor\">Soul, True to History</span>]",
                   "referenceModifier": "MReference_AllDamageTypeResistanceDown",
                   "valuePerStack": {
@@ -89,7 +110,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_Anaxa_Eidolon2_Bonus_OnCharacterCreate"
             },
             "Modifier Deletes Itself"

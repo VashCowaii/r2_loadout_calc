@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21040_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.2) || RETURN",
@@ -59,7 +65,10 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "conditions": {
@@ -70,7 +79,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -78,7 +90,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Weakness",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": "Fire"
                       }
                     ]
@@ -88,7 +103,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Thunder"
@@ -96,7 +114,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Weakness",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": "Thunder"
                       }
                     ]
@@ -106,7 +127,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Physical"
@@ -114,7 +138,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Weakness",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": "Physical"
                       }
                     ]
@@ -124,7 +151,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Wind"
@@ -132,7 +162,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Weakness",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": "Wind"
                       }
                     ]
@@ -142,7 +175,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -150,7 +186,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Weakness",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": "Quantum"
                       }
                     ]
@@ -160,7 +199,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Ice"
@@ -168,7 +210,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Weakness",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": "Ice"
                       }
                     ]
@@ -178,7 +223,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Imaginary"
@@ -186,7 +234,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Weakness",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": "Imaginary"
                       }
                     ]
@@ -228,7 +279,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "LC_21040_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",

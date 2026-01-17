@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_Ability03_DamageAddModifier[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -38,7 +41,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Thunder",
@@ -68,7 +74,10 @@ const configAbility = {
       "conditions": {
         "name": "Living State",
         "state": "Mask_AliveOnly",
-        "target": "Single Target (Primary)"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        }
       },
       "passed": [
         {
@@ -79,8 +88,14 @@ const configAbility = {
             "typeValue": 1
           },
           "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-          "abilitySource": "Caster",
-          "abilityTarget": "Single Target (Primary)",
+          "abilitySource": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "abilityTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "priorityTag": "AvatarInsertAttackSelf",
           "canHitNonTargets": true,
           "showInActionOrder": true,
@@ -94,13 +109,19 @@ const configAbility = {
       "failed": [
         {
           "name": "Find New Target",
-          "from": "All Enemies (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Living State",
             "state": "Mask_AliveOnly",
-            "target": "Use Prior Target(s) Defined"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            }
           },
           "ifTargetFound": [
             {
@@ -111,8 +132,14 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-              "abilitySource": "Caster",
-              "abilityTarget": "Use Prior Target(s) Defined",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "priorityTag": "AvatarInsertAttackSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
@@ -128,13 +155,19 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "All Enemies (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
       "searchRandom": true,
       "includeDyingTargets": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Has Modifier",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
       }
     },
@@ -152,7 +185,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_DamageAddRatio) || RETURN",
@@ -184,7 +220,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Attack-Type Extension",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "typeToExtend": "Ultimate",
               "isRemove": true
             }
@@ -195,7 +234,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Attack-Type Extension",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "typeToExtend": "Ultimate",
               "extendTypeTo": "Follow-up"
             }
@@ -206,7 +248,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_Moze_Ultimate_AddRegardAsAttackType"
             }
           ]

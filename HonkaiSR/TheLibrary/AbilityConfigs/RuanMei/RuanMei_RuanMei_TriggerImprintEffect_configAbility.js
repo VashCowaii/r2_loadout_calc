@@ -13,13 +13,19 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "RuanMei_DelayHint",
       "referenceModifier": "MReference_Empty"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "variableName": "DV_Ultra_Damage_MaxStance",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
       "warningType": "MaxToughness"
@@ -43,7 +49,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",
@@ -64,20 +73,29 @@ const configAbility = {
     },
     {
       "name": "Action Advance/Delay",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "advanceType": "Set",
       "value": "MDF_BreakAttackToDelay"
     },
     {
       "name": "Define Custom Variable",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "scope": "TargetEntity",
       "variableName": "DV_NeedDettachEffect",
       "value": 1
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "RuanMei_DelayHint"
     }
   ],

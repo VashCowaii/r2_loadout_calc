@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Added Value",
-      "target": "Caster's Memosprite",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}.[[getMemosprite]]"
+      },
       "variableName": "CurEnergy",
       "context": "TargetEntity",
       "value": {
@@ -22,7 +25,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

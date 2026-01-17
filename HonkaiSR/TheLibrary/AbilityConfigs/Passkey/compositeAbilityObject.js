@@ -14,7 +14,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_20013_Main"
         }
       ],
@@ -54,7 +57,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (8) || RETURN",
                             "displayLines": "8",

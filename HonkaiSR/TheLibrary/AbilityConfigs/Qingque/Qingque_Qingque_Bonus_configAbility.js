@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Ability11PreShowModifier"
         }
       ]
@@ -27,7 +30,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "QingQue_Passive_Hu_Flag_Tong"
       },
       "failed": [
@@ -35,7 +41,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "QingQue_Passive_Hu_Flag_Tiao"
           },
           "failed": [
@@ -43,7 +52,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "QingQue_Passive_Hu_Flag_Wan"
               },
               "failed": [
@@ -51,7 +63,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "QingQue_Passive_Hu_Flag_Yu"
                   }
                 }

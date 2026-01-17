@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23038_Main"
         }
       ],
@@ -45,7 +48,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -74,7 +80,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -95,7 +104,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL, exclude Owner) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.RemoveBattleEvent-{{Caster}}"
+              },
               "modifier": "LC_23038_AuraBonus_Buff[<span class=\"descriptionNumberColor\">Presage</span>]",
               "haloStatus": true,
               "valuePerStack": {
@@ -155,7 +167,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_23038_AuraBonus[<span class=\"descriptionNumberColor\">Presage</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -178,7 +193,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (12) || RETURN",
                         "displayLines": "12",
@@ -207,7 +225,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_23038_AuraBonus[<span class=\"descriptionNumberColor\">Presage</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -230,7 +251,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (21) || RETURN",
                         "displayLines": "21",

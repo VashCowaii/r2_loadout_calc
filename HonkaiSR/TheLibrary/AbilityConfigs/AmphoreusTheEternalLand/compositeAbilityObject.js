@@ -13,7 +13,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_323_Main"
         }
       ],
@@ -30,7 +33,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.08) || RETURN",
@@ -65,7 +71,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Relic_323_Sub3[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]"
                     }
                   ]
@@ -76,7 +85,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "Relic_323_Sub3[<span class=\"descriptionNumberColor\">Amphoreus, The Eternal Land</span>]",
               "haloStatus": true
             }
@@ -93,13 +105,22 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster (Memosprite)"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Relic_323_Sub2"
                     }
                   ]

@@ -26,13 +26,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "Arlan_MaxHPValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
         {
           "name": "Set HP Value",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "setValue": {
             "operator": "Variables[0] (Arlan_MaxHPValue) || Variables[1] (0.25) || MUL || RETURN",
             "displayLines": "(Arlan_MaxHPValue * 0.25)",
@@ -50,7 +56,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Declare Custom Variable",
-          "target": "Owner of this Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "scope": "TargetEntity",
           "variableName": "_Arlan_00_PassiveSkill03_InsertController"
         }
@@ -67,7 +76,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "value1": "CurrentHP%",
             "compareType": "<=",
             "value2": {
@@ -82,7 +94,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "BlockDamage_Count[<span class=\"descriptionNumberColor\">Repel</span>]"
             }
           ]
@@ -98,7 +113,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Stack Target Resistance",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "statName": "STAT_DOT",
           "value": {
             "operator": "Variables[0] (0.5) || RETURN",
@@ -120,7 +138,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Arlan_Tree01"
         }
       ],
@@ -136,7 +157,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
@@ -151,7 +175,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Heal",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (0.2) || RETURN",
                         "displayLines": "0.2",
@@ -188,7 +215,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Arlan_TechniqueUsage_Proc"
         }
       ],
@@ -219,7 +249,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "All Hostile Entities (AOE)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -266,22 +299,34 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Arlan_Passive"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Arlan_Ability02_LoseHPPreShow"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Arlan_Eidolon1"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Arlan_Eidolon6"
         },
         {
@@ -293,7 +338,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Arlan_PassiveAbility_UnDead[<span class=\"descriptionNumberColor\">Turn the Tables</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -319,13 +367,22 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
@@ -335,7 +392,10 @@ const compositeAbilityObject = {
                       "skillType": [
                         "Skill"
                       ],
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "previewType": null,
                       "previewValue": {
                         "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.15) || MUL || RETURN",
@@ -365,13 +425,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "_Arlan_00_PassiveSkill03_InsertController"
                 },
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Arlan_00_PassiveSkill03Success"
                 },
@@ -399,7 +465,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "_Arlan_00_PassiveSkill03_InsertController",
                         "compareType": "=",
                         "value2": 0,
@@ -412,7 +481,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "CurrentHP",
                         "compareType": "<=",
                         "value2": 0
@@ -420,14 +492,20 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Declare Custom Variable",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "scope": "TargetEntity",
                           "variableName": "Arlan_00_PassiveSkill03Success",
                           "value": 1
                         },
                         {
                           "name": "Dispel Debuffs",
-                          "target": "Owner of this Modifier"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          }
                         },
                         {
                           "name": "Define Custom Variable",
@@ -444,7 +522,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Declare Custom Variable",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "scope": "TargetEntity",
                           "variableName": "_Arlan_00_PassiveSkill03_InsertController",
                           "value": 1
@@ -474,7 +555,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "=",
                     "value2": 1
@@ -482,12 +566,18 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "_HPRatio"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -514,7 +604,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "=",
                     "value2": 1
@@ -522,19 +615,28 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "_HPRatio"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Arlan_Passive_DamageUp[<span class=\"descriptionNumberColor\">Pain and Anger</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -580,7 +682,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": 0.5
@@ -628,7 +733,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": 0.5
@@ -671,7 +779,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Dispel Debuffs",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "dispelCount": 1,
               "dispelOrder": "LastAdded"
             }
@@ -679,7 +790,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -717,7 +831,10 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Compare: Variable",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": 0.5
@@ -727,7 +844,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -757,7 +877,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -787,7 +910,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -826,7 +952,10 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Compare: Variable",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": 0.5
@@ -836,7 +965,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Thunder",
@@ -867,7 +999,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Thunder",
@@ -898,7 +1033,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -937,7 +1075,10 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Compare: Variable",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": 0.5
@@ -947,7 +1088,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Thunder",
@@ -978,7 +1122,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Thunder",
@@ -1032,7 +1179,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Arlan_Ability03_Part02",
           "isTrigger": true
         },
@@ -1057,7 +1207,10 @@ const compositeAbilityObject = {
         {
           "name": "Consume",
           "consumeFrom": "MaxHP",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "consumePercent": {
             "operator": "Variables[0] (0.15) || RETURN",
             "displayLines": "0.15",
@@ -1077,7 +1230,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Dispel Debuffs",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "dispelCount": 1,
               "dispelOrder": "LastAdded"
             }
@@ -1085,7 +1241,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -1136,7 +1295,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Arlan_Ability02_Part02",
           "isTrigger": true
         },
@@ -1152,7 +1314,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -1181,7 +1346,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -1233,7 +1401,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Arlan_Ability01_Part02",
           "isTrigger": true
         }
@@ -1260,7 +1431,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21021_Main"
     }
   ],
@@ -20,12 +23,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Teammates (Excluding Owner)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "Energy%",
                 "compareType": "<",
                 "value2": {
@@ -40,7 +49,10 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Update Energy",
-                  "on": "Use Prior Target(s) Defined",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (8) || RETURN",
                     "displayLines": "8",

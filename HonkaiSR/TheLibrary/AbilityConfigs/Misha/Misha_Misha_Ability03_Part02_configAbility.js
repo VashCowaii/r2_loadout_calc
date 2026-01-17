@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Misha_Ability03_StatusProbabilityUp[<span class=\"descriptionNumberColor\">Interlock</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
@@ -42,7 +45,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "variableName": "Skill03_Hit_Count",
           "livingTargets": true,
           "context": "ContextCaster"
@@ -112,7 +118,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Find New Target",
-          "from": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "ifTargetFound": [
@@ -138,7 +147,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Find New Target",
-          "from": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "ifTargetFound": [
@@ -193,7 +205,10 @@ const configAbility = {
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "paramSequence": [
             {
               "name": "Use Custom Character Function",
@@ -231,7 +246,10 @@ const configAbility = {
     {
       "name": "Use Custom Character Function",
       "functionName": "Bounce_SelectTarget",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "paramSequence": [
         {
           "name": "Use Custom Character Function",
@@ -253,7 +271,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -265,7 +286,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Misha_Ability03_StatusProbabilityUp[<span class=\"descriptionNumberColor\">Interlock</span>]"
     },
     "Trigger: Ability End"
@@ -284,7 +308,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Misha_Eidolon2_DefenceDown[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -317,7 +344,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Use Prior Target(s) Defined",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": 1,
           "baseChance": {
@@ -341,7 +371,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -382,7 +415,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
@@ -419,7 +455,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",

@@ -18,7 +18,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary) + Blast (Adjacent)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
           "modifier": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -51,7 +54,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
@@ -77,7 +83,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
@@ -103,7 +112,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Thunder",
@@ -130,7 +142,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Thunder",
@@ -155,11 +170,17 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Single Target (Primary) + Blast (Adjacent)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{ST and Blast}}"
+      },
       "includeDyingTargets": true,
       "conditions": {
         "name": "Has Flag",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "flagName": "STAT_DOT"
       },
       "ignoreParallelWarning": true,
@@ -177,20 +198,32 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Single Target (Primary) + Blast (Adjacent)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{ST and Blast}}"
+      },
       "ifTargetFound": [
         {
           "name": "IF",
           "conditions": {
             "name": "Is Part Of",
-            "of": "Single Target (Primary)",
-            "target": "Use Prior Target(s) Defined",
+            "of": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "mustBeAlive2": true
           },
           "passed": [
             {
               "name": "Trigger Modifier Event",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT",
               "value": {
@@ -206,7 +239,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Trigger Modifier Event",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT",
               "value": {
@@ -224,7 +260,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "flagName": "STAT_DOT"
           },
           "passed": [

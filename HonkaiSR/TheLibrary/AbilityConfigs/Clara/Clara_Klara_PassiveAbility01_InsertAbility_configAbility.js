@@ -13,7 +13,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
       }
     },
@@ -21,7 +24,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
       }
     },
@@ -29,7 +35,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
       },
       "passed": [
@@ -71,7 +80,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Klara_Trace03",
           "valuePerStack": {
             "MDF_AllDamageTypeAddRatio": {
@@ -90,13 +102,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
       },
       "passed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
@@ -128,13 +146,19 @@ const configAbility = {
         },
         {
           "name": "Find New Target",
-          "from": "Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "searchRandom": true,
           "ignoreParallelWarning": true,
           "ifTargetFound": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
@@ -177,7 +201,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
@@ -211,7 +238,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Klara_Trace03"
     }
   ],

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21025_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.16) || RETURN",
@@ -56,19 +62,34 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Teammates (Excluding Owner)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Target is Next Turn",
-                    "target": "Use Prior Target(s) Defined",
-                    "partOf": "All Teammates (Excluding Owner)",
-                    "exclude": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "partOf": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members(Exclude Self)}}"
+                    },
+                    "exclude": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21025_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",

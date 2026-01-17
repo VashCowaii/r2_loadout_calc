@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Dispel Debuffs",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "dispelCount": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -28,7 +31,10 @@ const configAbility = {
     },
     {
       "name": "Heal",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.105) || RETURN",
         "displayLines": "0.105",
@@ -77,7 +83,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Natasha_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
       "duration": {
         "operator": "Variables[0] (2) || Variables[1] (SkillTree_LifeTime) || ADD || RETURN",
@@ -109,20 +118,32 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
     },
     {
       "name": "Find New Target",
-      "from": "Skill Target List",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Target List}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Compare: Target",
-        "target": "Use Prior Target(s) Defined",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },

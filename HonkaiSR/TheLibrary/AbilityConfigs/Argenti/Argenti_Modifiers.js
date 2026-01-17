@@ -18,7 +18,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -58,7 +61,10 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": "All Enemies (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "variableName": "TargetNumber",
                   "livingTargets": true
                 },
@@ -80,7 +86,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Argenti_Eidolon2_AttackRatioUp[<span class=\"descriptionNumberColor\">Agate's Humility</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -120,7 +129,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "TargetMonster_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
@@ -128,7 +140,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Ability Value",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                 "compareType": "<=",
                 "value2": {
@@ -171,13 +186,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -232,7 +253,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -295,7 +319,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "multiplier": 1
@@ -315,7 +342,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_CritChance) || RETURN",
@@ -352,7 +382,10 @@ const configAbility = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_CritDamage) || RETURN",
@@ -398,7 +431,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill03",
               "skillSlot": "Ultimate",
               "enableSecondaryType": "ControlSkill03"
@@ -410,7 +446,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "MDF_SPMax",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
@@ -418,7 +457,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Ability Value",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
@@ -438,7 +480,10 @@ const configAbility = {
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill31",
                   "skillSlot": "Ultimate",
                   "enableSecondaryType": "ControlSkill03"
@@ -452,7 +497,10 @@ const configAbility = {
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill03",
                   "skillSlot": "Ultimate",
                   "enableSecondaryType": "ControlSkill03"

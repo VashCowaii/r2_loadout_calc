@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_119_Main"
     }
   ],
@@ -78,7 +81,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Ability Value",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
@@ -93,7 +99,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_119_Sub",
                   "valuePerStack": {
                     "MDF_PropertyValue1": {
@@ -120,7 +129,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
@@ -135,7 +147,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_119_Sub",
                       "valuePerStack": {
                         "MDF_PropertyValue1": {
@@ -175,7 +190,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_119_Sub",
                   "onlyRemoveOwnersInstance": true
                 }
@@ -202,7 +220,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_119_Sub",
                   "valuePerStack": {
                     "MDF_PropertyValue1": {
@@ -231,7 +252,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_119_Sub",
                   "valuePerStack": {
                     "MDF_PropertyValue1": {

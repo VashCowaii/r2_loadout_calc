@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Harscyline_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Overtone Hum: Chorus After Dark Tides</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
@@ -37,7 +40,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Physical",

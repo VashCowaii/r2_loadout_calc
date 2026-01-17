@@ -8,14 +8,20 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster [of Battle Event]",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Battle Event's Caster}}"
+        },
         "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       },
       "passed": [
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "target": "Caster [of Battle Event]",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Battle Event's Caster}}"
+          },
           "scope": "ContextCaster",
           "variableName": "_damageStart",
           "value": 1
@@ -25,7 +31,10 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "target": "Caster [of Battle Event]",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Battle Event's Caster}}"
+          },
           "scope": "ContextCaster",
           "variableName": "_damageStart",
           "value": 1

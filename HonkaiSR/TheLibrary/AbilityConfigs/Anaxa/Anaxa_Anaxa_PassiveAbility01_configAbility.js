@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Anaxa_PassiveAbility"
     }
   ],
@@ -33,12 +36,21 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_PropertyRatio",
                     "compareType": ">",
                     "value2": 0,
@@ -94,19 +106,34 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Main-Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Primary-Target}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   "passed": [
@@ -159,8 +186,14 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Weakness Count",
-              "target": "Owner of this Modifier",
-              "target2": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variable": "MDF_WeakCount",
               "context": "ContextModifier",
               "weaknessFilter": "All"
@@ -172,8 +205,14 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Weakness Count",
-              "target": "Owner of this Modifier",
-              "target2": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variable": "MDF_WeakCount",
               "context": "ContextModifier",
               "weaknessFilter": "All"
@@ -185,8 +224,14 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Weakness Count",
-              "target": "Owner of this Modifier",
-              "target2": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variable": "MDF_WeakCount",
               "context": "ContextModifier",
               "weaknessFilter": "All"
@@ -195,7 +240,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "MDF_WeakCount",
                 "compareType": ">=",
                 "value2": {
@@ -211,7 +259,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
@@ -246,8 +297,14 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Weakness Count",
-              "target": "Owner of this Modifier",
-              "target2": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variable": "MDF_WeakCount",
               "context": "ContextModifier",
               "weaknessFilter": "All"
@@ -259,8 +316,14 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Weakness Count",
-              "target": "Owner of this Modifier",
-              "target2": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variable": "MDF_WeakCount",
               "context": "ContextModifier",
               "weaknessFilter": "All"
@@ -287,7 +350,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
@@ -317,7 +383,10 @@ const configAbility = {
               "whenLeavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                 },
                 {
@@ -362,15 +431,27 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Owner of this Modifier",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Hostile Entities (AOE)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                     },
                     "invertCondition": true
@@ -384,7 +465,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (30) || RETURN",
                     "displayLines": "30",
@@ -406,7 +490,10 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "function_Anaxa_AddWeakness",
-              "target": "Use Prior Target(s) Defined"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              }
             }
           ]
         },
@@ -433,12 +520,18 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Skill Target List",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target List}}"
+                    },
                     "modifier": "Anaxa_Passive_Mark[<span class=\"descriptionNumberColor\">Qualitative Disclosure</span>]"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "M_Anaxa_StartFreeBP",
                     "invertCondition": true
                   }
@@ -447,12 +540,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Skill Target List",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target List}}"
+                  },
                   "modifier": "M_Anaxa_InsertMainTargetMark"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_Anaxa_PrepareFreeBP",
                   "addStacksPerTrigger": 1
                 },
@@ -461,17 +560,26 @@ const configAbility = {
                   "actionTag": "Anaxa_Passive",
                   "skillType": "ControlSkill02",
                   "forceAction": true,
-                  "castTarget": "Skill Target List",
+                  "castTarget": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target List}}"
+                  },
                   "afterInjection": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_Anaxa_PrepareFreeBP",
                       "addStacksPerTrigger": -1
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_Anaxa_InsertActionCheck",
                       "addStacksPerTrigger": 1
                     }
@@ -488,13 +596,19 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Anaxa_Passive_Mark_Property",
           "haloStatus": true
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Anaxa_Passive_WeaknessListener",
           "haloStatus": true,
           "valuePerStack": {

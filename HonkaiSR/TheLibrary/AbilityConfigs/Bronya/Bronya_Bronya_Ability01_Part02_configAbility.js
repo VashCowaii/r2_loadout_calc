@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Bronya_Critcal"
         }
       ]
@@ -23,7 +26,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -59,7 +65,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Bronya_Critcal"
         }
       ]
@@ -67,7 +76,10 @@ const configAbility = {
     {
       "name": "Use Custom Character Function",
       "functionName": "ReduceNextActionDelay",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variables": {
         "parameter[0]_NormalizedValue": {
           "operator": "Variables[0] (0.3) || RETURN",

@@ -41,7 +41,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sparkle_Maze_Modifier"
         }
       ],
@@ -106,12 +109,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sparkle_PassiveAbility_Listen"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sparkle_AbilityPreshow"
         },
         {
@@ -208,12 +217,18 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Memosprite"
                       }
                     ]
@@ -221,7 +236,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team(No Memosprite)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}.[[removeMemosprite]]"
+                      },
                       "searchRandom": true,
                       "maxTargets": 4,
                       "conditions": {
@@ -229,7 +247,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Quantum"
@@ -237,7 +258,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "Sparkle_PointB3_Mark",
                             "invertCondition": true
                           }
@@ -261,7 +285,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Sparkle_PointB3_Mark"
                         }
                       ]
@@ -277,7 +304,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Allied Team",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
                           "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -311,7 +341,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Allied Team",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Player Team All}}"
+                              },
                               "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
@@ -345,7 +378,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Allied Team",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Player Team All}}"
+                                  },
                                   "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
@@ -410,7 +446,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       }
                     ]
@@ -418,7 +457,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "modifier": "Sparkle_PassiveAbility_AllDamageAddedRatio02[<span class=\"descriptionNumberColor\">Red Herring</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -490,7 +532,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team(No Memosprite)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}.[[removeMemosprite]]"
+                      },
                       "searchRandom": true,
                       "maxTargets": 4,
                       "conditions": {
@@ -498,7 +543,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Quantum"
@@ -506,7 +554,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "Sparkle_PointB3_Mark",
                             "invertCondition": true
                           }
@@ -530,7 +581,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Sparkle_PointB3_Mark"
                         }
                       ]
@@ -546,7 +600,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Allied Team",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
                           "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -580,7 +637,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Allied Team",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Player Team All}}"
+                              },
                               "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
@@ -614,7 +674,10 @@ const compositeAbilityObject = {
                               "passed": [
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Allied Team",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Player Team All}}"
+                                  },
                                   "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
@@ -658,14 +721,23 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Current Visual Target(All)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
             "skillType": [
               "Skill"
             ],
             "conditions": {
               "name": "Is Part Of",
-              "of": "Owner of this Modifier",
-              "target": "Use Prior Target(s) Defined",
+              "of": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "mustBeAlive2": true,
               "invertCondition": true
             },
@@ -687,7 +759,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           },
           "passed": [
             "Deleted bullshit"
@@ -698,7 +773,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_Sparkle_CritDmgValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
         },
@@ -729,7 +807,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -762,15 +843,24 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Is Part Of",
-            "of": "Single Target (Primary)",
-            "target": "Caster",
+            "of": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "mustBeAlive2": true,
             "invertCondition": true
           },
           "passed": [
             {
               "name": "Action Advance/Delay",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "advanceType": "Advance",
               "value": "-0.5"
             }
@@ -841,7 +931,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "All Team Members(In Context)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
           "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -879,7 +972,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "MDF_Sparkle_CritDmgValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
             },
@@ -898,18 +994,27 @@ const compositeAbilityObject = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
               },
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates (Excluding Owner)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
                   "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -943,32 +1048,44 @@ const compositeAbilityObject = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
               },
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Teammates (Excluding Owner)"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
-                        "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
-                        "invertCondition": true
+                  "to": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
+                          "invertCondition": true
+                        }
                       }
-                    }
-                  ],
+                    ]
+                  },
                   "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -1004,7 +1121,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1033,7 +1153,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Sparkle_Ability03_Part02"
         }
       ],
@@ -1055,7 +1178,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_Sparkle_CritDmgValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
         },
@@ -1106,7 +1232,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -1138,25 +1267,31 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Teammates (Excluding Owner)"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
-                        "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
-                      }
-                    ]
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "OR",
+                      "conditionList": [
+                        {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                        }
+                      ]
+                    }
                   }
-                }
-              ],
+                ]
+              },
               "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -1190,7 +1325,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -1223,7 +1361,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1240,7 +1381,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_Sparkle_CritDmgValue",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
         },
@@ -1291,31 +1435,43 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Teammates (Excluding Owner)"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "OR",
-                    "conditionList": [
-                      {
-                        "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
-                        "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined",
-                        "target": "Single Target (Primary)",
-                        "mustBeAlive2": true
-                      }
-                    ]
+              "to": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "OR",
+                      "conditionList": [
+                        {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
+                        },
+                        {
+                          "name": "Is Part Of",
+                          "of": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
+                          "mustBeAlive2": true
+                        }
+                      ]
+                    }
                   }
-                }
-              ],
+                ]
+              },
               "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -1349,7 +1505,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -1382,13 +1541,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Action Advance/Delay",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "advanceType": "Advance",
           "value": "-0.5"
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1419,13 +1584,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           },
           "passed": [
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ability": "Sparkle_Ability02_Self_Part02",
               "isTrigger": true
             }
@@ -1434,7 +1605,10 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ability": "Sparkle_Ability02_Others_Part02",
               "isTrigger": true
             }
@@ -1458,7 +1632,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -1473,7 +1650,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -1522,7 +1702,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Sparkle_Ability01_Part02",
           "isTrigger": true
         }
@@ -1557,7 +1740,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -1565,7 +1751,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "type": "Memosprite",
                         "invertCondition": true
                       }
@@ -1587,7 +1776,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_PropertyValue2) || ADD || RETURN",
@@ -1615,7 +1807,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1650,20 +1845,32 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Good-Team + All Bad-Team[With unselectable]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player & Enemy Team All(with Unselectable)}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "maxTargets": 10,
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "invertCondition": true
                   },
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Sparkle_Eidolon6_Mark"
                     }
                   ]
@@ -1706,7 +1913,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AllDamageAddedRatio) || RETURN",
@@ -1737,7 +1947,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio"
                 }
               ]
@@ -1747,7 +1960,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Count",
                   "multiplier": 1
@@ -1756,7 +1972,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_Count",
                     "compareType": ">=",
                     "value2": {
@@ -1787,7 +2006,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Sparkle_Ability03_PowerUp[<span class=\"descriptionNumberColor\">Cipher</span>]"
                   },
                   "passed": [
@@ -1850,7 +2072,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
                   "valuePerStack": {
                     "MDF_AllDamageAddedRatio": {
@@ -1890,8 +2115,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -1912,7 +2143,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
                       "valuePerStack": {
                         "MDF_AllDamageAddedRatio": {
@@ -1951,8 +2185,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -1974,7 +2214,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Sparkle_PassiveAbility_Real_AllDamageAddedRatio",
                       "valuePerStack": {
                         "MDF_AllDamageAddedRatio": {
@@ -2033,7 +2276,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValueConvert) || RETURN",
@@ -2072,7 +2318,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
@@ -2115,7 +2364,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
                       "duration": 1,
                       "valuePerStack": {
@@ -2147,7 +2399,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Sparkle_Ability02_CritDmgAddedRatio02[<span class=\"descriptionNumberColor\">Dreamdiver</span>]"
                 },
                 {
@@ -2165,7 +2420,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValueConvert) || Variables[1] (MDF_PropertyValueBase) || ADD || RETURN",
@@ -2229,7 +2487,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",

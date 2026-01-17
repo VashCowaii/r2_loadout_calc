@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
@@ -33,7 +36,10 @@ const configAbility = {
         },
         {
           "name": "Heal",
-          "target": "All Teammates (Excluding Owner)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
           "healFlat": {
             "operator": "Variables[0] (HealHPValue) || RETURN",
             "displayLines": "HealHPValue",
@@ -54,7 +60,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "CasterMaxHP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
         },
@@ -92,7 +101,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -126,7 +138,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -197,7 +212,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Variable",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "value1": "CurrentHP",
         "compareType": ">",
         "value2": 0
@@ -210,7 +228,10 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Compare: Variable",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
@@ -245,8 +266,14 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "FuXuan_Passive_Ability",
-              "abilitySource": "Caster",
-              "abilityTarget": "Caster",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "priorityTag": "AvatarHealSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,

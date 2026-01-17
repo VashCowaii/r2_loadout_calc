@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Action Advance/Delay",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "advanceType": "Set",
       "value": "(0 - 0.2)"
     }

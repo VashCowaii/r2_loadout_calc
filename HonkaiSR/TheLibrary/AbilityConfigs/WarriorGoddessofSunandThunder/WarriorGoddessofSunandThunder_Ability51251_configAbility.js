@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_125_Main"
     }
   ],
@@ -20,7 +23,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (AbilityRelic_125_4_P2_DamageAddRatio) || RETURN",
@@ -52,7 +58,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "Relic_125_Bonus2[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
               "onlyRemoveOwnersInstance": true
             }
@@ -63,7 +72,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (AbilityRelic_125_4_P1_SpeedAddRatio) || RETURN",
@@ -88,7 +100,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Relic_125_Bonus2[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
                   "valuePerStack": {
                     "AbilityRelic_125_4_P2_DamageAddRatio": {
@@ -113,7 +128,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Allied Team(ALL) [Exclude battle mechanics]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
           "modifier": "Relic_125_Bonus2[<span class=\"descriptionNumberColor\">Warrior Goddess of Sun and Thunder</span>]",
           "haloStatus": true,
           "valuePerStack": {
@@ -143,13 +161,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Allied Team(ALL, exclude Owner & Memosprite)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] -{{Caster}} -{{Caster's Memosprite}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Relic_125_Flag"
                   }
                 ]
@@ -157,12 +184,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Relic_125_Flag"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Relic_125_Bonus[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -198,7 +231,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Relic_125_Flag"
             }
           ]
@@ -213,13 +249,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Allied Team(ALL, exclude Owner & Memosprite)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] -{{Caster}} -{{Caster's Memosprite}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Relic_125_Flag"
                   }
                 ]
@@ -227,12 +272,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Relic_125_Flag"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_125_Bonus[<span class=\"descriptionNumberColor\">Gentle Rain</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -262,7 +313,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Relic_125_Flag"
             }
           ]
@@ -284,12 +338,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Relic_125_Sub"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster (Memosprite)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "modifier": "Relic_125_Sub2"
             }
           ]
@@ -301,13 +361,22 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster (Memosprite)"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Relic_125_Sub2"
                 }
               ]

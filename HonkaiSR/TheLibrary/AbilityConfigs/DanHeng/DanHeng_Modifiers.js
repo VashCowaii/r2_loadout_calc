@@ -76,7 +76,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
@@ -110,7 +113,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -140,7 +146,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 }
               ]
@@ -170,7 +179,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
@@ -203,7 +215,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -232,7 +247,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 }
               ]
@@ -259,7 +277,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
             },
             {

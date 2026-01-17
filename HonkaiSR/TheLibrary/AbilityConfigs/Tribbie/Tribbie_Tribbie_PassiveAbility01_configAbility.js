@@ -22,7 +22,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_PointB3_AddSpModifier"
         }
       ]
@@ -72,7 +75,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -89,7 +95,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Tribbie_Passive_Listen"
     },
     {
@@ -129,7 +138,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]"
               },
               "passed": [
@@ -200,20 +212,32 @@ const configAbility = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Caster",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true,
                         "invertCondition": true
                       }
@@ -232,20 +256,32 @@ const configAbility = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Caster",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -260,7 +296,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                       },
                       {
@@ -272,8 +311,14 @@ const configAbility = {
                           },
                           {
                             "name": "Is Part Of",
-                            "of": "Caster",
-                            "target": "Use Prior Target(s) Defined",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "mustBeAlive2": true
                           }
                         ]
@@ -283,7 +328,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                     },
                     {
@@ -295,7 +343,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
@@ -306,8 +357,14 @@ const configAbility = {
                             "typeValue": 1
                           },
                           "abilityName": "Tribbie_Insert",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -339,7 +396,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(ALL) [Exclude Owner and battle mechanics, NO Memosprites]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]] - {{Caster}}"
+                  },
                   "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                 }
               ]
@@ -356,20 +416,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -384,7 +453,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -395,8 +467,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Tribbie_Insert",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -422,20 +500,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -450,7 +537,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -461,8 +551,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Tribbie_Insert",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -488,20 +584,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -516,7 +621,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -527,8 +635,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Tribbie_Insert",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -557,12 +671,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Attack Targets",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_AttackCount"
             },
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (MDF_AttackCount) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
                 "displayLines": "(MDF_AttackCount * MDF_PropertyValue)",
@@ -596,7 +716,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (30) || RETURN",
                     "displayLines": "30",
@@ -618,7 +741,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Allied Team(ALL, exclude Owner) [Exclude battle mechanics]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Caster}}"
+          },
           "modifier": "Tribbie_PointB3_AddSpAura",
           "haloStatus": true,
           "valuePerStack": {

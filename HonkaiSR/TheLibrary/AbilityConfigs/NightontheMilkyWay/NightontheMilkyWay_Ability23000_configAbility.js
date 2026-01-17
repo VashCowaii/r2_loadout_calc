@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23000_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -46,7 +52,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -75,7 +84,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "variableName": "EnemyCount",
               "livingTargets": true
             },
@@ -97,7 +109,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_23000_AttackAddedRatio",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -136,7 +151,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "variableName": "EnemyCount",
               "livingTargets": true
             },
@@ -158,7 +176,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_23000_AttackAddedRatio",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -179,7 +200,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "LC_23000_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -202,7 +226,10 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "variableName": "EnemyCount",
               "livingTargets": true
             },
@@ -224,7 +251,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_23000_AttackAddedRatio",
               "valuePerStack": {
                 "MDF_PropertyValue": {

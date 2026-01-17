@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Force Entity Death",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "ignoreHPLossTriggers": true,
       "ignoreDeathTriggers": true
     }

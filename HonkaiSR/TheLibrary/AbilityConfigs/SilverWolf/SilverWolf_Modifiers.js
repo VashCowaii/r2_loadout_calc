@@ -18,7 +18,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -73,13 +76,19 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_StatusProbability",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_StatusProbabilityConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateConverted</span>&nbsp;"
             },
@@ -128,7 +137,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]"
                 }
               ],
@@ -166,7 +178,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -201,7 +216,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -236,7 +254,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -270,7 +291,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -308,7 +332,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -346,7 +373,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -384,7 +414,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -485,7 +518,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Implant Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "element": null,
               "resReduction": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -526,7 +562,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark",
                 "invertCondition": true
               },
@@ -589,7 +628,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -631,7 +673,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -673,7 +718,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -715,7 +763,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -757,7 +808,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -799,7 +853,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -841,7 +898,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -899,7 +959,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -941,7 +1004,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -983,7 +1049,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -1025,7 +1094,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -1067,7 +1139,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -1109,7 +1184,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -1151,7 +1229,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Implant Weaknesses",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "element": null,
                           "resReduction": {
                             "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -1215,7 +1296,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark",
                 "invertCondition": true
               },
@@ -1243,7 +1327,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Advanced_Silwolf_Passive_Deathrattle_Sub",
               "valuePerStack": {
                 "_WeakType": {

@@ -17,12 +17,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Ren_Passive"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Ren_LoseHPPreShow"
     },
     {
@@ -37,13 +43,19 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterMaxHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterCurrentHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
     },
@@ -103,7 +115,10 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Compare: Variable",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "value1": "CurrentHP%",
             "compareType": ">",
             "value2": 0.5
@@ -195,7 +210,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "CasterCurrentHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             }
@@ -208,7 +226,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity a Battle Event/Summon",
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
@@ -247,7 +268,10 @@ const configAbility = {
                       "DOT",
                       "Additional DMG"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "failed": [
                     {
@@ -283,7 +307,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "CasterCurrentHP2",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             },
@@ -333,7 +360,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (MWRen_Qi_MaxLayer) || RETURN",
@@ -365,13 +395,19 @@ const configAbility = {
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "DisableAction",
                             "invertCondition": true
                           }
@@ -386,8 +422,14 @@ const configAbility = {
                             "typeValue": 1
                           },
                           "abilityName": "AdvancedRen_Passive1Atk_Ability",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -407,7 +449,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": 0.5
@@ -438,7 +483,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Ren_Eidolon4_Add"
                     }
                   ]
@@ -463,7 +511,10 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "CasterCurrentHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             }
@@ -511,7 +562,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Ren_Trace02[<span class=\"descriptionNumberColor\">Neverending Deaths</span>]"
                 }
               ]
@@ -543,13 +597,19 @@ const configAbility = {
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -564,8 +624,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "AdvancedRen_Passive1Atk_Ability",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -605,7 +671,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "flagName": "STAT_CTRL"
                     }
                   },
@@ -613,7 +682,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "flagName": "DisableAction"
                     }
                   },
@@ -622,12 +694,18 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Modifier Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL"
                       },
                       {
                         "name": "Modifier Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction"
                       }
                     ]
@@ -643,8 +721,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "AdvancedRen_Passive1Atk_Ability",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -682,13 +766,19 @@ const configAbility = {
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -703,8 +793,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "AdvancedRen_Passive1Atk_Ability",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -730,13 +826,19 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CasterCurrentHP2",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CasterMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -776,7 +878,10 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CasterCurrentHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                 }

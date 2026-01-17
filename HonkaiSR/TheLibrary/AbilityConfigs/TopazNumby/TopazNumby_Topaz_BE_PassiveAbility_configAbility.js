@@ -7,7 +7,10 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_BETag"
     },
     {
@@ -44,13 +47,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Topaz_BE_ReduceDelay"
               },
               "passed": [
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster [of Battle Event]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  },
                   "ability": "Topaz_Eidolon4_ReduceDelay"
                 }
               ]
@@ -59,17 +68,26 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count SUM",
-                "target": "All Enemies (AOE)(Living)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All}}.[[living]]"
+                },
                 "conditions": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 }
               },
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Topaz_BE_FindNoTargetFlag"
                 }
               ]
@@ -78,10 +96,16 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count SUM",
-                "target": "All Enemies (AOE)(Living)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All}}.[[living]]"
+                },
                 "conditions": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 }
               },
@@ -89,21 +113,30 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Topaz_BE_LaterAttack",
-                  "abilitySource": "Caster",
-                  "abilityTarget": [
-                    {
-                      "name": "Target List",
-                      "target": "All Enemies (AOE)(Living)"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
-                        "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}.[[living]]"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                        }
                       }
-                    }
-                  ],
+                    ]
+                  },
                   "priorityTag": "LevelPerformAvatar",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
@@ -125,7 +158,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Topaz_Passive"
               }
             }
@@ -138,7 +174,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Topaz_Passive"
               }
             }
@@ -157,12 +196,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster [of Battle Event]",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Battle Event's Caster}}"
+                    },
                     "flagName": "STAT_CTRL"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster [of Battle Event]",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Battle Event's Caster}}"
+                    },
                     "flagName": "STAT_CTRL_Frozen"
                   }
                 ]
@@ -177,7 +222,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Topaz_Passive"
               }
             }

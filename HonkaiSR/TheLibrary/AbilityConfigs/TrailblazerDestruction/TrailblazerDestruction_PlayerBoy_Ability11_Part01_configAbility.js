@@ -16,7 +16,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "PlayerBoy_Ability11_Part02",
       "isTrigger": true
     },

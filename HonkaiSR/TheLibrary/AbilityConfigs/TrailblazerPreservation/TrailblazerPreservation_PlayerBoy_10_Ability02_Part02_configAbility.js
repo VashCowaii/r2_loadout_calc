@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "MWPlayerBoy_10_DamageResistance[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
       "duration": {
         "operator": "Variables[0] (1) || RETURN",
@@ -36,7 +39,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Allied Team",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "modifier": "PlayerBoy_10_DamageResistance_Team[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -63,7 +69,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]"
       },
       "passed": [
@@ -71,12 +80,18 @@ const configAbility = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "MDF_Energy_Count",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": 1
         },
         {
           "name": "Define Modifier Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifierName": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]",
           "value": {
             "operator": "Variables[0] (MDF_Energy_Count) || RETURN",
@@ -89,7 +104,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_Weapon_Effect"
         },
         {
@@ -133,7 +151,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_10_ChangeAttack"
             }
           ]
@@ -142,14 +163,20 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]"
         },
         {
           "name": "Adjust Variable Value",
           "adjustmentType": "Overwrite Value",
           "variableName": "MDF_Energy_Count",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": 1
         }
       ]
@@ -214,25 +241,37 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
     },
     {
       "name": "Change Character Transformation",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "phase": "Phase2"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterDefence",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "All Team Members(In Context)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "modifier": "MWPlayerBoy_10_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
@@ -259,7 +298,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Standard_CTRL_Taunt[<span class=\"descriptionNumberColor\">Taunt</span>]",
       "duration": {
         "operator": "Variables[0] (1) || RETURN",
@@ -290,19 +332,28 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "Target_AggroAddedRatio",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "Target_AggroDelta",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AggroFlat</span>&nbsp;"
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (1) || Variables[0] (Target_AggroAddedRatio) || ADD || INVERT || RETURN",
@@ -317,7 +368,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AggroFlat</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (Target_AggroDelta) || RETURN",
@@ -343,16 +397,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "MWPlayerBoy_10_NullifyAggro"
             }
           ]
@@ -362,7 +419,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
               "modifier": "MWPlayerBoy_10_NullifyAggro"
             }
           ]

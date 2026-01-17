@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21061_Main"
         }
       ],
@@ -45,7 +48,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.1) || RETURN",
@@ -73,12 +79,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "searchRandom": true,
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21061_Sub[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",

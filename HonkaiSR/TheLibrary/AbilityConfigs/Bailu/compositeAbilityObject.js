@@ -33,7 +33,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bailu_PointB1"
         }
       ],
@@ -55,7 +58,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Bailu_Modifier"
         }
       ],
@@ -162,7 +168,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -224,7 +233,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "All Team Members(In Context)",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members}}"
+                              },
                               "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                               "valuePerStack": {
                                 "MDF_DamageResistance": {
@@ -262,7 +274,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "value1": "CurrentHP",
             "compareType": "<=",
             "value2": 0
@@ -270,7 +285,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Modifier Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifierName": "Bailu_ReviveEvent",
               "function": "Add"
             },
@@ -281,12 +299,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "Dispel Debuffs",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "silent": true
             },
             {
               "name": "Heal",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (0.18) || RETURN",
                 "displayLines": "0.18",
@@ -309,7 +333,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Bailu_ReviveEvent"
               },
               "passed": [
@@ -388,7 +415,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Bailu_Revive_Mark"
             }
           ]
@@ -455,12 +485,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bailu_DieEvent"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bailu_ReviveEvent",
           "counter": {
             "operator": "Variables[0] (MDF_ReviveTime) || RETURN",
@@ -488,7 +524,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates (Excluding Owner, NO Memosprites)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
+                  },
                   "modifier": "Bailu_Revive_Ready"
                 },
                 {
@@ -522,13 +561,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Teammates (Excluding Owner, NO Memosprites)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
+                      },
                       "modifier": "Bailu_Revive_Ready"
                     }
                   ]
@@ -540,12 +585,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Bailu_Revive_Ready"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Bailu_Revive_Mark"
                 }
               ]
@@ -564,7 +615,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Bailu_ReviveEvent",
                         "invertCondition": true
                       }
@@ -573,22 +627,28 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "modifier": "Bailu_Revive_Ready",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": [
-                        {
-                          "name": "Target List",
-                          "target": "All Team Members(In Context)"
-                        },
-                        {
-                          "name": "Target List",
-                          "target": "All Untargetable"
-                        }
-                      ],
+                      "to": {
+                        "name": "Join Targets",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members}}"
+                          },
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Unselectable Targets}}"
+                          }
+                        ]
+                      },
                       "modifier": "Bailu_Revive_Mark"
                     }
                   ]
@@ -609,7 +669,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Heal",
-          "target": "All Team Members(In Context)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.135) || RETURN",
             "displayLines": "0.135",
@@ -630,20 +693,29 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "searchRandom": true,
           "ifTargetFound": [
             {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]"
               },
               "passed": [
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifierName": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "function": "Add",
                   "value": 1,
@@ -737,7 +809,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -800,7 +875,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                           "valuePerStack": {
                             "MDF_DamageResistance": {
@@ -830,7 +908,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Bailu_Eidolon2[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -855,20 +936,32 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
         },
         {
           "name": "Find New Target",
-          "from": "Skill Target List",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Target List}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Compare: Target",
-            "target": "Use Prior Target(s) Defined",
-            "target2": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "invertCondition": true
           }
         },
@@ -895,7 +988,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Bailu_Ability03_Part02",
           "isTrigger": true
         },
@@ -926,7 +1022,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Bailu_Eidolon4"
             }
           ]
@@ -937,7 +1036,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Heal",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (0.117) || RETURN",
                 "displayLines": "0.117",
@@ -958,7 +1060,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Standard_AbilityTarget"
             }
           ]
@@ -989,7 +1094,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "ifTargetFound": [
@@ -1029,7 +1137,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Heal",
-                  "target": "Projectile Target Hit",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Projectile's Target}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
                     "displayLines": "MDF_HealPercentage",
@@ -1050,7 +1161,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Projectile Target Hit",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Projectile's Target}}"
+                  },
                   "modifier": "Standard_AbilityTarget"
                 }
               ]
@@ -1072,7 +1186,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "ifTargetFound": [
@@ -1112,7 +1229,10 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Heal",
-                      "target": "Projectile Target Hit",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Projectile's Target}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
                         "displayLines": "MDF_HealPercentage",
@@ -1133,7 +1253,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Projectile Target Hit",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Projectile's Target}}"
+                      },
                       "modifier": "Standard_AbilityTarget"
                     }
                   ]
@@ -1144,7 +1267,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1158,20 +1284,32 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Bailu_Eidolon4"
             }
           ]
         },
         {
           "name": "Find New Target",
-          "from": "Skill Target List",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Target List}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Compare: Target",
-            "target": "Use Prior Target(s) Defined",
-            "target2": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "invertCondition": true
           }
         },
@@ -1198,7 +1336,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Bailu_Ability02_Part02",
           "isTrigger": true
         },
@@ -1215,7 +1356,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -1262,7 +1406,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Bailu_Ability01_Part02",
           "isTrigger": true
         }
@@ -1296,12 +1443,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction"
                       }
                     ]
@@ -1314,7 +1467,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "CurrentHP",
                         "compareType": "<=",
                         "value2": 0
@@ -1335,8 +1491,14 @@ const compositeAbilityObject = {
                         }
                       },
                       "abilityName": "Bailu_InsertAbility_Revive",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "Owner of this Modifier",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "priorityTag": "AvatarReviveOthers",
                       "targetState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -1367,7 +1529,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "multiplier": 1
@@ -1387,7 +1552,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackUpRatio) || RETURN",
@@ -1415,7 +1583,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Bailu_Eidolon4_AttackUp[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -1461,7 +1632,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1493,7 +1667,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
@@ -1526,7 +1703,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
@@ -1554,7 +1734,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "Overflowheal",
                   "healProperty": "Result_OverflowHealAmount"
                 },
@@ -1569,7 +1752,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_LifeTime) || RETURN",
@@ -1608,7 +1794,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "Overflowheal",
                   "healProperty": "Result_OverflowHealAmount"
                 },
@@ -1623,7 +1812,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -1653,7 +1845,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Bailu_PointB1_Sub",
                   "valuePerStack": {
                     "MDF_LifeTime": {
@@ -1697,14 +1892,20 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": "=",
                         "value2": 1
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_AddSP",
                         "compareType": ">",
                         "value2": 0,
@@ -1715,7 +1916,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Owner of this Modifier",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (MDF_AddSP) || RETURN",
                         "displayLines": "MDF_AddSP",
@@ -1730,7 +1934,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]"
                 }
               ]
@@ -1760,7 +1967,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": ">",
                     "value2": 0
@@ -1768,7 +1978,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Heal",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (MDF__HealPercentage2) || RETURN",
                         "displayLines": "MDF__HealPercentage2",
@@ -1840,7 +2053,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "CurrentHP",
                         "compareType": "<=",
                         "value2": 0
@@ -1853,8 +2069,14 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Is Part Of",
-                                "of": "Owner of this Modifier",
-                                "target": "Caster",
+                                "of": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "mustBeAlive2": true
                               }
                             ]
@@ -1864,7 +2086,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Variable",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "value1": "CurrentHP",
                                 "compareType": "<=",
                                 "value2": 0
@@ -1877,12 +2102,18 @@ const compositeAbilityObject = {
                                     "conditionList": [
                                       {
                                         "name": "Has Flag",
-                                        "target": "Caster",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Caster}}"
+                                        },
                                         "flagName": "STAT_CTRL"
                                       },
                                       {
                                         "name": "Has Flag",
-                                        "target": "Caster",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Caster}}"
+                                        },
                                         "flagName": "DisableAction"
                                       }
                                     ]
@@ -1890,7 +2121,10 @@ const compositeAbilityObject = {
                                   "failed": [
                                     {
                                       "name": "Add Events/Bonuses",
-                                      "to": "Owner of this Modifier",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
                                       "modifier": "Bailu_Revive_Mark"
                                     }
                                   ]

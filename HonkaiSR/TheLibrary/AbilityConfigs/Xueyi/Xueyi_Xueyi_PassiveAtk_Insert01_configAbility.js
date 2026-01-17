@@ -11,7 +11,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Xueyi_BP_Passive02"
     },
     {
@@ -20,7 +23,10 @@ const configAbility = {
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Xueyi_PassiveAtk_Insert02",
       "isTrigger": true
     },
@@ -31,7 +37,10 @@ const configAbility = {
         "name": "NOT",
         "condition": {
           "name": "Enemies Still Alive",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "includeNonTargets": true
         }
       },

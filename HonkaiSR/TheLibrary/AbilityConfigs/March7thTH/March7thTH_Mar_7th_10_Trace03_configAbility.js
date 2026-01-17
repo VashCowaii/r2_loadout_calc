@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Mar_7th_10_Trace03"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -50,7 +56,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -87,7 +96,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Mar_7th_10_Enhance"
                   }
                 ]
@@ -125,23 +137,35 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Teammates + Unselectable (Excluding Owner)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   },
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "March 7th's Shifu",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Marth 7th's Shifu}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Mar_7th_10_PointB3_Kill_Property[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -164,7 +188,10 @@ const configAbility = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Mar_7th_10_PointB3_Break_Property[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",

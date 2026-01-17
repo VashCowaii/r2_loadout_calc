@@ -26,13 +26,19 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "Base_MaxSP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Argenti_UltraAbilityPrepare"
     },
     {
@@ -44,7 +50,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Argenti_Eidolon2_TargetNumberListen"
         }
       ]
@@ -82,7 +91,10 @@ const configAbility = {
           "Event": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Argenti_Passive_Charge[<span class=\"descriptionNumberColor\">Apotheosis</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (MDF_MaxCount) || RETURN",
@@ -120,7 +132,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Argenti_PointB1_AutoBonusLayerModifier"
         }
       ]
@@ -134,7 +149,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Argenti_PointB2_SummonSpModifier"
         }
       ]
@@ -148,7 +166,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Argenti_PointB3_DamageUpModifier"
         }
       ]

@@ -13,8 +13,14 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target",
-        "target": "Single Target (Primary)",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },

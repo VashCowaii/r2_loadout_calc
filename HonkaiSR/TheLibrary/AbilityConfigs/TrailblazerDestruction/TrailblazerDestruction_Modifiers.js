@@ -21,13 +21,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill01",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill02",
               "skillSlot": "Skill",
               "enableSecondaryType": "ControlSkill02"
@@ -75,7 +81,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Energy",
-              "on": "Owner of this Modifier",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -94,7 +103,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Energy",
-              "on": "Owner of this Modifier",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",

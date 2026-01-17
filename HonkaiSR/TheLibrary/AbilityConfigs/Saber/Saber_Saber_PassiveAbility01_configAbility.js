@@ -17,14 +17,20 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Saber_AIFlag"
     },
     {
       "name": "Read Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "DV_SurgePoint",
-      "on": "Caster"
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      }
     },
     {
       "name": "Define Custom Variable",
@@ -55,7 +61,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Saber_PassiveAbility01"
     },
     {
@@ -67,12 +76,18 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Trace01_Bonus[<span class=\"descriptionNumberColor\">Knight of the Dragon</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -131,12 +146,18 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Passive_ReturnSpValue"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Passive_StockSpValue"
         }
       ]
@@ -150,7 +171,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Trace03"
         }
       ]
@@ -164,7 +188,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Eidolon1"
         }
       ]
@@ -178,7 +205,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Eidolon4[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]"
         }
       ]
@@ -192,7 +222,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Eidolon6"
         }
       ]
@@ -226,7 +259,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Trace03_Bonus[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -298,8 +334,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
@@ -311,7 +353,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Passive_Bonus[<span class=\"descriptionNumberColor\">Dragon Reactor Core</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -336,7 +381,10 @@ const configAbility = {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Add to Value (Default)",
                   "variableName": "DV_SurgePoint",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (3) || RETURN",
                     "displayLines": "3",
@@ -355,7 +403,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (8) || RETURN",
@@ -395,7 +446,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (15) || RETURN",
@@ -472,7 +526,10 @@ const configAbility = {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Add to Value (Default)",
                   "variableName": "DV_SurgePoint",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -513,7 +570,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (8) || RETURN",
@@ -553,7 +613,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (15) || RETURN",
@@ -603,7 +666,10 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Energy%",
                     "compareType": "<",
                     "value2": {
@@ -620,13 +686,19 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_MaxSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
                 {
                   "name": "Update Energy Value",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (_MaxSP) || Variables[1] (0.6) || MUL || RETURN",
                     "displayLines": "(_MaxSP * 0.6)",
@@ -681,7 +753,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
                       "counter": {
                         "operator": "Variables[0] (DV_SurgePoint) || RETURN",
@@ -696,7 +771,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]"
                     }
                   ]
@@ -724,7 +802,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]",
                       "counter": {
                         "operator": "Variables[0] (DV_SurgePoint) || RETURN",
@@ -739,7 +820,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Energy_Count[<span class=\"descriptionNumberColor\">Core Resonance</span>]"
                     }
                   ]
@@ -782,7 +866,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -824,7 +911,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                   "value": {
                     "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
@@ -840,7 +930,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                   "value": 1
                 }
@@ -897,13 +990,19 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "Saber_00_EntityCurrentSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "Saber_00_EntityCurrentSP",
                       "value": {
                         "operator": "Variables[0] (Saber_00_EntityCurrentSP) || Variables[1] (_SPChangeValue) || SUB || Variables[2] (_SPChangeValueRaw) || ADD || RETURN",
@@ -918,7 +1017,10 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "Saber_00_EntityMaxSP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                     },
@@ -926,7 +1028,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Saber_00_EntityCurrentSP",
                         "compareType": ">",
                         "value2": {
@@ -941,7 +1046,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "variableName": "Saber_00_EntityStockSP",
                           "value": {
                             "operator": "Variables[0] (Saber_00_EntityStockSP) || Variables[1] (Saber_00_EntityCurrentSP) || ADD || Variables[2] (Saber_00_EntityMaxSP) || SUB || RETURN",
@@ -972,7 +1080,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "variableName": "Saber_00_EntityStockSP",
                               "value": {
                                 "operator": "Variables[0] (Saber_00_EntityMaxStockSP) || RETURN",
@@ -989,23 +1100,35 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]"
                           },
                           "passed": [
                             {
                               "name": "Define Custom Variable with Copy",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                               "variable": "Saber_00_EntityStockSPForShow",
-                              "target2": "Owner of this Modifier",
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "variable2": "_Current_Show_Value"
                             },
                             {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Variable",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "value1": "_Current_Show_Value",
                                 "compareType": "<",
                                 "value2": {
@@ -1020,7 +1143,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Owner of this Modifier",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                                   "valuePerStack": {
                                     "value_0_Saber_EntityStockSPForShow": {
@@ -1039,7 +1165,10 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
                               "valuePerStack": {
                                 "value_0_Saber_EntityStockSPForShow": {
@@ -1083,13 +1212,19 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_CurrentSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "Saber_00_EntityMaxSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
@@ -1112,12 +1247,18 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Saber_Passive_ExceedSpStatus[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]"
                 },
                 {
                   "name": "Update Energy",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (_Temp_Return_SP) || RETURN",
                     "displayLines": "_Temp_Return_SP",
@@ -1189,7 +1330,10 @@ const configAbility = {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Add to Value (Default)",
                   "variableName": "DV_SurgePoint",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -1219,7 +1363,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (8) || RETURN",
@@ -1259,7 +1406,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (15) || RETURN",
@@ -1308,7 +1458,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
@@ -1337,7 +1490,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.08) || RETURN",
@@ -1362,7 +1518,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Saber_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">The Saga of Sixteen Winter Days</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -1438,7 +1597,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
               "counter": 1
             }
@@ -1467,7 +1629,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Saber_Eidolon6_Count[<span class=\"descriptionNumberColor\">The Long Fated Night</span>]",
                     "compareType": ">",
                     "value2": 1
@@ -1494,7 +1659,10 @@ const configAbility = {
                     },
                     {
                       "name": "Update Energy",
-                      "on": "Owner of this Modifier",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (300) || RETURN",
                         "displayLines": "300",

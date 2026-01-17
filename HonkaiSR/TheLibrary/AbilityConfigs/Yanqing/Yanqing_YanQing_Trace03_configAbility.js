@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Yanqing_Tree03",
       "valuePerStack": {
         "MDF_SpeedValue": {
@@ -31,7 +34,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_SpeedValue) || RETURN",
@@ -66,7 +72,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_Yanqing_Tree03SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",

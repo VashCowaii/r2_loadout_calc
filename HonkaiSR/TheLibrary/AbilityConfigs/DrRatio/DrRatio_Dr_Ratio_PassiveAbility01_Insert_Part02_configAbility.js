@@ -68,7 +68,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Enemies(All)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
               "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
             },
             {
@@ -101,7 +104,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -123,12 +129,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Enemies(All)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All(with Unselectable)}}"
+      },
       "modifier": "Dr_Ratio_Insert_Flag"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Dr_Ratio_Insert_Flag_Caster"
     },
     {
@@ -140,7 +152,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Status Counter",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "_DebuffCount"
         }
       ]
@@ -154,7 +169,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (15) || RETURN",
             "displayLines": "15",
@@ -169,7 +187,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -243,7 +264,10 @@ const configAbility = {
           "Event": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Imaginary",
@@ -272,12 +296,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Dr_Ratio_InsertAbility"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio"
     },
     {

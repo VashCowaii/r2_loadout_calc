@@ -34,7 +34,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Kafka_Modifier"
         }
       ],
@@ -69,7 +72,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "modifier": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -102,7 +108,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "All Hostile Entities (AOE)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -194,7 +203,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
@@ -243,7 +255,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Kafka_Eidolon2"
         }
       ],
@@ -257,16 +272,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Team Members(In Context)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "All Untargetable"
-                    }
-                  ],
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
                   "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]"
                 }
               ]
@@ -276,7 +294,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -296,7 +317,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -325,7 +349,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Kafka_PointB1"
         }
       ],
@@ -342,7 +369,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -374,7 +404,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
@@ -389,7 +422,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Advanced_Kafka_PointB1_Effect[<span class=\"descriptionNumberColor\">Torture</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -419,7 +455,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Ability Value",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
@@ -434,7 +473,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Advanced_Kafka_PointB1_Effect[<span class=\"descriptionNumberColor\">Torture</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -451,7 +493,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Advanced_Kafka_PointB1_Effect[<span class=\"descriptionNumberColor\">Torture</span>]"
                         }
                       ]
@@ -471,7 +516,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team(ALL)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
                   "modifier": "Advanced_Kafka_PointB1_Sub"
                 }
               ]
@@ -483,13 +531,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Advanced_Kafka_PointB1_Sub"
                     }
                   ]
@@ -501,7 +555,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "modifier": "Advanced_Kafka_PointB1_Sub"
                 }
               ],
@@ -521,7 +578,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Kafka_Tree02"
         }
       ],
@@ -537,7 +597,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Use Secondary Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    }
                   },
                   "passed": [
                     {
@@ -547,20 +610,29 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "team": "TeamDark"
                           },
                           {
                             "name": "NOT",
                             "condition": {
                               "name": "Is Part Of Team",
-                              "target": "Use Secondary Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target 2}}"
+                              },
                               "team": "TeamDark"
                             }
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "flagName": "STAT_DOT_Electric"
                           }
                         ]
@@ -568,7 +640,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (5) || RETURN",
                             "displayLines": "5",
@@ -599,7 +674,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Added Value",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "_InsertCount",
           "value": -1,
           "max": {
@@ -671,7 +749,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Advanced_Kafka_Friend_Mark_Main"
         },
         {
@@ -761,7 +842,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -794,7 +878,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -821,7 +908,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -848,7 +938,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -875,7 +968,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -902,7 +998,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -929,7 +1028,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -957,7 +1059,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
@@ -996,7 +1101,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Trigger Modifier Event",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT",
               "value": {
@@ -1037,7 +1145,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Kafka_Passive"
         },
         {
@@ -1086,7 +1197,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Kafka_Passive_DotSpecialMark_Listen"
         },
         {
@@ -1103,7 +1217,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Kafka_Eidolon4"
             }
           ]
@@ -1129,7 +1246,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Added Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "_InsertCount",
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -1187,8 +1307,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Teammates + Unselectable (Excluding Owner) [Exclude battle events]",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[removeBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
@@ -1209,19 +1335,28 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Hostile Entities (AOE)(ALL)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                        },
                         "conditions": {
                           "name": "AND",
                           "conditionList": [
                             {
                               "name": "Has Modifier",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Advanced_Kafka_Friend_Mark_Main"
                             },
                             {
                               "name": "Living State",
                               "state": "Mask_AliveOnly",
-                              "target": "Use Prior Target(s) Defined"
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
                             }
                           ]
                         },
@@ -1232,27 +1367,39 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count",
-                            "target": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Attack Targets}}"
+                            },
                             "compareType": "=",
                             "value2": 1
                           },
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target's Attack Targets}}"
+                              },
                               "modifier": "Advanced_Kafka_Friend_Mark_Main"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Find New Target",
-                              "from": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                              "from": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target's Attack Targets}}"
+                              },
                               "searchRandom": true,
                               "maxTargets": 1,
                               "ifTargetFound": [
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Use Prior Target(s) Defined",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
                                   "modifier": "Advanced_Kafka_Friend_Mark_Main"
                                 }
                               ]
@@ -1263,21 +1410,30 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target's Attack Targets}}"
+                      },
                       "maxTargets": 1,
                       "conditions": {
                         "name": "AND",
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "Advanced_Kafka_Friend_Mark_Main",
                             "justAddedOrActive": true
                           },
                           {
                             "name": "Living State",
                             "state": "Mask_AliveOnly",
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           }
                         ]
                       },
@@ -1290,8 +1446,14 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Advanced_Kafka_PassiveAtk_Ability",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "Use Prior Target(s) Defined",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -1316,13 +1478,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Teammates + Unselectable (Excluding Owner)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "team": "TeamDark"
                       }
                     ]
@@ -1332,7 +1503,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "compareType": "=",
                         "value2": 1,
                         "livingTargets": true
@@ -1340,25 +1514,37 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target's Ability Targets}}"
+                          },
                           "modifier": "Advanced_Kafka_Friend_Mark_Main"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)(ALL)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                          },
                           "modifier": "Advanced_Kafka_Friend_Mark_Main"
                         },
                         {
                           "name": "Find New Target",
-                          "from": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target's Ability Targets}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Advanced_Kafka_Friend_Mark_Main"
                             }
                           ]
@@ -1399,8 +1585,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -1420,13 +1612,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_DOT"
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
@@ -1435,8 +1636,14 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Current Visual Target(All)",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "mustBeAlive2": true
                       },
                       "passed": [
@@ -1470,8 +1677,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -1516,8 +1729,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -1537,20 +1756,35 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Current Visual Target(All)",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "mustBeAlive2": true,
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_DOT"
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
@@ -1581,7 +1815,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_DOT"
                       }
                     ]
@@ -1591,8 +1828,14 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
@@ -1615,8 +1858,14 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
@@ -1648,12 +1897,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
                 }
               ]
@@ -1668,12 +1923,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "STAT_DOT"
                       }
                     ]
@@ -1681,12 +1942,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
                     }
                   ]
@@ -1703,12 +1970,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "STAT_DOT"
                       }
                     ]
@@ -1716,12 +1989,18 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
                     }
                   ]
@@ -1753,7 +2032,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Hostile Entities (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "modifier": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -1786,7 +2068,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -1885,7 +2170,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
           "duration": {
             "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
@@ -1917,7 +2205,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Trigger Modifier Event",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT",
           "value": {
@@ -1939,7 +2230,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Added Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_InsertCount",
               "value": 1,
               "max": {
@@ -2000,7 +2294,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Kafka_Ability03_Part02",
           "isTrigger": true
         }
@@ -2035,7 +2332,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary) + Blast (Adjacent)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{ST and Blast}}"
+              },
               "modifier": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -2068,7 +2368,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -2094,7 +2397,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -2120,7 +2426,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -2147,7 +2456,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -2172,11 +2484,17 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Single Target (Primary) + Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
           "includeDyingTargets": true,
           "conditions": {
             "name": "Has Flag",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "flagName": "STAT_DOT"
           },
           "ignoreParallelWarning": true,
@@ -2194,20 +2512,32 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Single Target (Primary) + Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
           "ifTargetFound": [
             {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Single Target (Primary)",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
                 {
                   "name": "Trigger Modifier Event",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "DOT_TriggerRatio",
                   "eventType": "DOT",
                   "value": {
@@ -2223,7 +2553,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Trigger Modifier Event",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "DOT_TriggerRatio",
                   "eventType": "DOT",
                   "value": {
@@ -2241,7 +2574,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "flagName": "STAT_DOT"
               },
               "passed": [
@@ -2291,17 +2627,26 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "Single Target (Primary) + Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
           "maxTargets": 1,
           "conditions": {
             "name": "Has Flag",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "flagName": "STAT_DOT"
           }
         },
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Kafka_Ability02_Part02",
           "isTrigger": true
         },
@@ -2324,7 +2669,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -2357,7 +2705,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -2386,7 +2737,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -2437,7 +2791,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Kafka_Ability01_Part02",
           "isTrigger": true
         },
@@ -2476,24 +2833,39 @@ const compositeAbilityObject = {
                         "attackTypes": [
                           "DOT"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Is Damage Type/Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "list": [
                           "Lightning"
                         ]
                       },
                       {
                         "name": "Is Joint-Attack",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined(REAL SOURCE OF)",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Source Owner}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -2501,7 +2873,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -2529,13 +2904,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Enemies (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "modifier": "Advanced_Kafka_Eidolon4_Sub"
                     }
                   ]
@@ -2565,7 +2946,10 @@ const compositeAbilityObject = {
                     "attackTypes": [
                       "DOT"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
@@ -2604,17 +2988,26 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)(ALL) [Exclude Owner]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}} - {{Modifier Holder}}"
+                  },
                   "maxTargets": 99,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Advanced_Kafka_Friend_Mark_Main"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Advanced_Kafka_Friend_Mark_Main"
                     }
                   ]
@@ -2631,14 +3024,26 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined",
-                        "target": "Caster's Entire Team [Exclude Owner]",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}.[[getTeamMembers]] - {{Caster}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use [LIST OF] Prior Target(s) Defined",
-                        "target": "All Hostile Entities (AOE)(ALL)",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target List}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]

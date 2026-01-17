@@ -21,7 +21,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Kafka_Passive"
     },
     {
@@ -70,7 +73,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Kafka_Passive_DotSpecialMark_Listen"
     },
     {
@@ -87,7 +93,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Kafka_Eidolon4"
         }
       ]
@@ -113,7 +122,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Added Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_InsertCount",
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -171,8 +183,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Teammates + Unselectable (Excluding Owner) [Exclude battle events]",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[removeBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
@@ -193,19 +211,28 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Hostile Entities (AOE)(ALL)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                    },
                     "conditions": {
                       "name": "AND",
                       "conditionList": [
                         {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Advanced_Kafka_Friend_Mark_Main"
                         },
                         {
                           "name": "Living State",
                           "state": "Mask_AliveOnly",
-                          "target": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       ]
                     },
@@ -216,27 +243,39 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Attack Targets}}"
+                        },
                         "compareType": "=",
                         "value2": 1
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target's Attack Targets}}"
+                          },
                           "modifier": "Advanced_Kafka_Friend_Mark_Main"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Find New Target",
-                          "from": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target's Attack Targets}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Advanced_Kafka_Friend_Mark_Main"
                             }
                           ]
@@ -247,21 +286,30 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target's Attack Targets}}"
+                  },
                   "maxTargets": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Advanced_Kafka_Friend_Mark_Main",
                         "justAddedOrActive": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       }
                     ]
                   },
@@ -274,8 +322,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Advanced_Kafka_PassiveAtk_Ability",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "Use Prior Target(s) Defined",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -300,13 +354,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Teammates + Unselectable (Excluding Owner)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target's Ability Targets}}"
+                    },
                     "team": "TeamDark"
                   }
                 ]
@@ -316,7 +379,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target's Ability Targets}}"
+                    },
                     "compareType": "=",
                     "value2": 1,
                     "livingTargets": true
@@ -324,25 +390,37 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target's Ability Targets}}"
+                      },
                       "modifier": "Advanced_Kafka_Friend_Mark_Main"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)(ALL)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                      },
                       "modifier": "Advanced_Kafka_Friend_Mark_Main"
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target's Ability Targets}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Advanced_Kafka_Friend_Mark_Main"
                         }
                       ]
@@ -383,8 +461,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
@@ -404,13 +488,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT"
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Current Action Owner",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -419,8 +512,14 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "Owner of this Modifier",
-                    "target": "Current Visual Target(All)",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "mustBeAlive2": true
                   },
                   "passed": [
@@ -454,8 +553,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
@@ -500,8 +605,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
@@ -521,20 +632,35 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Owner of this Modifier",
-                    "target": "Current Visual Target(All)",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "mustBeAlive2": true,
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT"
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Current Action Owner",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -565,7 +691,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT"
                   }
                 ]
@@ -575,8 +704,14 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -599,8 +734,14 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -632,12 +773,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Enemies (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Enemies (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
             }
           ]
@@ -652,12 +799,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_DOT"
                   }
                 ]
@@ -665,12 +818,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
                 }
               ]
@@ -687,12 +846,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_DOT"
                   }
                 ]
@@ -700,12 +865,18 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Advanced_Kafka_Passive_DotSpecialMark"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Advanced_Kafka_Passive_DotSpecialMarkTrigger"
                 }
               ]

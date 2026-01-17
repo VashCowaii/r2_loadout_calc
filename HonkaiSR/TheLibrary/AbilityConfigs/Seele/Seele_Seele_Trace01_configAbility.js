@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Seele_LowHP_AggroDown",
       "valuePerStack": {
         "MDF_HPRatio": {
@@ -40,7 +43,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -73,7 +79,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
@@ -88,7 +97,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -112,7 +124,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
@@ -127,7 +142,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -144,7 +162,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Seele_Trace_AggroDown[<span class=\"descriptionNumberColor\">Nightshade</span>]",
                   "onlyRemoveOwnersInstance": true
                 }

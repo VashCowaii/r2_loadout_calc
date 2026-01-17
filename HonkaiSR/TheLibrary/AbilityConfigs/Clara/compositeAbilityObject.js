@@ -27,7 +27,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Klara_Eidolon6_Passive",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -51,7 +54,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
                 },
                 {
@@ -72,7 +78,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       }
                     ]
@@ -80,7 +89,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Klara_PassiveATK_Mark"
                     }
                   ]
@@ -98,7 +110,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates + Unselectable (Excluding Owner)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                  },
                   "modifier": "Klara_Eidolon6_ListenBeHit",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -120,12 +135,18 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Teammate",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Teammates + Unselectable (Excluding Owner)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                      },
                       "modifier": "Klara_Eidolon6_ListenBeHit",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -147,16 +168,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Team Members(In Context)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "All Untargetable"
-                    }
-                  ],
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
                   "modifier": "Klara_Eidolon6_ListenBeHit",
                   "onlyRemoveOwnersInstance": true
                 }
@@ -178,7 +202,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Klara_Eidolon4_ListenBeingAttack"
         }
       ],
@@ -194,7 +221,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -221,7 +251,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Klara_Eidolon4_DamageReduce[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                   "duration": 1,
                   "immediateEffect": true,
@@ -252,7 +285,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Stack Target Resistance",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "statName": "STAT_CTRL",
           "value": {
             "operator": "Variables[0] (0.35) || RETURN",
@@ -274,7 +310,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Klara_Trace01",
           "valuePerStack": {
             "MDF_Chance": {
@@ -312,7 +351,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Dispel Debuffs",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "dispelCount": 1,
                       "dispelOrder": "LastAdded"
                     }
@@ -344,7 +386,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Technique_Klara_Modifier"
         }
       ],
@@ -375,7 +420,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Klara_TechniqueUsage_AggroUP[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -422,7 +470,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
           }
         },
@@ -430,7 +481,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
           }
         },
@@ -438,7 +492,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
           },
           "passed": [
@@ -480,7 +537,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Klara_Trace03",
               "valuePerStack": {
                 "MDF_AllDamageTypeAddRatio": {
@@ -499,13 +559,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]"
           },
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
@@ -537,13 +603,19 @@ const compositeAbilityObject = {
             },
             {
               "name": "Find New Target",
-              "from": "Blast (Adjacent)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "searchRandom": true,
               "ignoreParallelWarning": true,
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
@@ -586,7 +658,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
@@ -620,7 +695,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Klara_Trace03"
         }
       ],
@@ -687,7 +765,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Klara_PassiveAbility01_ListenCounter",
           "valuePerStack": {
             "MDF_Chance": {
@@ -702,12 +783,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Klara_PassiveAbility01_AddRevenge"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Klara_Passive_DamageReduce[<span class=\"descriptionNumberColor\">Guardian</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -731,7 +818,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
                 }
               ]
@@ -741,7 +831,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
                 }
               ]
@@ -775,7 +868,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       }
                     ]
@@ -783,7 +879,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Klara_PassiveATK_Mark"
                     }
                   ]
@@ -839,7 +938,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Klara_Eidolon2_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -872,7 +974,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Klara_Ultimate_WarriorMode[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -904,7 +1009,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
               "counter": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -939,7 +1047,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Klara_Ultimate_WarriorMode[<span class=\"descriptionNumberColor\">Promise, Not Command</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -971,7 +1082,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Klara_PassiveATKCount[<span class=\"descriptionNumberColor\">Enhanced Counter</span>]",
               "counter": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -1004,7 +1118,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1022,7 +1139,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackUP) || RETURN",
@@ -1056,13 +1176,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Klara_PassiveATK_Mark"
                     }
                   ]
@@ -1082,16 +1208,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Team Members(In Context)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "All Untargetable"
-                    }
-                  ],
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
                   "modifier": "Klara_PassiveATK_TeamMember",
                   "onlyRemoveOwnersInstance": true
                 },
@@ -1127,7 +1256,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Klara_PassiveATK_TeamMember"
                 }
               ]
@@ -1139,12 +1271,18 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Teammate",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Klara_PassiveATK_TeamMember"
                     }
                   ]
@@ -1156,16 +1294,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Team Members(In Context)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "All Untargetable"
-                    }
-                  ],
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
                   "modifier": "Klara_PassiveATK_TeamMember",
                   "onlyRemoveOwnersInstance": true
                 },
@@ -1206,7 +1347,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AggroAddedRatio) || RETURN",
@@ -1219,7 +1363,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1264,7 +1411,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Klara_Ability03_Part02",
           "isTrigger": true
         },
@@ -1288,26 +1438,41 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Team Count",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "variableName": "Skill02_TargetNumber",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
           }
         },
         {
           "name": "Shot Fired",
-          "caster": "Psuedo Partners",
+          "caster": {
+            "name": "Target Name",
+            "target": "{{Pseudo-Character Partner}}"
+          },
           "projectileCountTotal": 4
         },
         {
           "name": "Shot Fired",
-          "caster": "Psuedo Partners",
+          "caster": {
+            "name": "Target Name",
+            "target": "{{Pseudo-Character Partner}}"
+          },
           "projectileCountTotal": 4,
           "projectileDMG": {
             "name": "ATK Scaling DMG",
-            "target": "Clara's Counter Target",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Clara's Counter Target}}"
+            },
             "AttackScaling": {
               "DamageType": "Physical",
               "Damage": {
@@ -1328,7 +1493,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -1363,7 +1531,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Clara's Counter Target",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Clara's Counter Target}}"
+              },
               "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
             }
           ]
@@ -1390,7 +1561,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Klara_Ability02_Part02",
           "isTrigger": true
         },
@@ -1406,7 +1580,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -1454,7 +1631,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Klara_Ability01_Part02",
           "isTrigger": true
         }
@@ -1486,7 +1666,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1522,8 +1705,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -1540,8 +1729,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -1577,7 +1772,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1609,8 +1807,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Klara_PassiveAbility01_InsertAbility",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Owner of this Modifier",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "showInActionOrder": true,
                   "abortFlags": [

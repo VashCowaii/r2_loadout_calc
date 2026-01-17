@@ -30,7 +30,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -63,13 +66,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Tribbie_SKL03_Bonus_Mark",
                     "invertCondition": true
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   }
                 ]
@@ -82,7 +91,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Tribbie_SKL03_Bonus_Mark"
                 }
               ]
@@ -109,12 +121,18 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Enemies(All)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
               "modifier": "Tribbie_SKL03_Bonus_Mark"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Enemies(All)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
               "modifier": "Tribbie_SKL03_Bonus_HighestHPMark"
             }
           ]
@@ -133,7 +151,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Attack Targets",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_Count"
                 },
                 {
@@ -173,67 +194,88 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": [
-                    {
-                      "name": "Target List",
-                      "target": "All Enemies(All)"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
-                        "modifier": "Tribbie_SKL03_Bonus_Mark",
-                        "justAddedOrActive": true
+                  "from": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All(with Unselectable)}}"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "Tribbie_SKL03_Bonus_Mark",
+                          "justAddedOrActive": true
+                        }
+                      },
+                      "Shuffle Targets",
+                      {
+                        "name": "Sort by Stat",
+                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                        "living": true,
+                        "sortByHighest": true
+                      },
+                      {
+                        "name": "Return Target",
+                        "value": 1
                       }
-                    },
-                    "Shuffle Targets",
-                    {
-                      "name": "Sort by Stat",
-                      "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "living": true,
-                      "sortByHighest": true
-                    },
-                    {
-                      "name": "Return Target",
-                      "value": 1
-                    }
-                  ],
+                    ]
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Tribbie_SKL03_Bonus_HighestHPMark"
                     },
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "PursuedDamage_PerformanceDelay",
-                      "target": "Ability Target List"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      }
                     },
                     {
                       "name": "Find New Target",
-                      "from": [
-                        {
-                          "name": "Target List",
-                          "target": "All Enemies(All)"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
-                            "modifier": "Tribbie_SKL03_Bonus_Mark",
-                            "justAddedOrActive": true
+                      "from": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All(with Unselectable)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Has Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "Tribbie_SKL03_Bonus_Mark",
+                              "justAddedOrActive": true
+                            }
                           }
-                        }
-                      ],
+                        ]
+                      },
                       "searchRandom": true,
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Tribbie_SKL03_Bonus_HighestHPMark",
                         "invertCondition": true
                       },
@@ -242,8 +284,14 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target",
-                            "target": "Use Prior Target(s) Defined",
-                            "target2": "Highest HP Target(Tribbie)"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Tribbie's Highest HP Target}}"
+                            }
                           },
                           "passed": [
                             {
@@ -288,7 +336,10 @@ const configAbility = {
                       "Event": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Quantum",
@@ -330,12 +381,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Battle Event",
                     "invertCondition": true
                   }
@@ -344,7 +401,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Damage Data",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_TempDamage",
                   "value": "Result_FinalDamageBase",
                   "context": "ContextCaster"
@@ -377,12 +437,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Battle Event",
                     "invertCondition": true
                   }
@@ -415,12 +481,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Battle Event",
                     "invertCondition": true
                   }
@@ -443,7 +515,10 @@ const configAbility = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Highest HP Target(Tribbie)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Tribbie's Highest HP Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
@@ -499,7 +574,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team(ALL) NO Memosprites",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+              },
               "modifier": "Tribbie_SKL03_PointB2_ListenHPChange"
             }
           ]
@@ -509,7 +587,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team(ALL) NO Memosprites",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+              },
               "modifier": "Tribbie_SKL03_PointB2_ListenHPChange"
             },
             {
@@ -529,22 +610,34 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team(ALL)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}"
+              },
               "conditions": {
                 "name": "Is Entity Type",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "type": "Character"
               },
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_HPConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
                 },
@@ -579,7 +672,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -607,7 +703,10 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -656,22 +755,34 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team(ALL) [Exclude battle mechanics and Owner of this Modifier]",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Modifier Holder}}"
+              },
               "conditions": {
                 "name": "Is Entity Type",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "type": "Character"
               },
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_HPConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
                 },
@@ -706,7 +817,10 @@ const configAbility = {
             },
             {
               "name": "Define Modifier-Specific Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
               "variableName": "MDF_PropertyValue",
               "value": {
@@ -748,22 +862,34 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(ALL)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
                   "conditions": {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Character"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_HPConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
                     },
@@ -798,7 +924,10 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
                   "variableName": "MDF_PropertyValue",
                   "value": {
@@ -840,22 +969,34 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(ALL)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
                   "conditions": {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Character"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_HPConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
                     },
@@ -890,7 +1031,10 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
                   "variableName": "MDF_PropertyValue",
                   "value": {
@@ -933,7 +1077,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Tribbie_SKL03_Bonus_Debuff[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
           "haloStatus": true,
           "valuePerStack": {
@@ -957,7 +1104,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Tribbie_SKL03_Bonus_Buff",
           "haloStatus": true,
           "valuePerStack": {
@@ -973,7 +1123,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_SKL03_Eidolon1Listener",
           "haloStatus": true,
           "conditions": {
@@ -983,7 +1136,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
           "haloStatus": true,
           "conditions": {
@@ -1003,7 +1159,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1059,7 +1218,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1084,7 +1246,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Allied Team(ALL) [Exclude Owner]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}-{{Caster}}"
+          },
           "modifier": "Tribbie_SKL02_Bonus_Buff[<span class=\"descriptionNumberColor\">Numinosity</span>]",
           "haloStatus": true,
           "includeBattleEvent": true,
@@ -1101,7 +1266,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Allied Team(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
           "modifier": "Tribbie_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
           "haloStatus": true,
           "conditions": {
@@ -1132,7 +1300,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
@@ -1152,7 +1323,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

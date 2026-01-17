@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Welt_Modifier"
     }
   ],
@@ -39,7 +42,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                   "duration": 1,
                   "baseChance": {

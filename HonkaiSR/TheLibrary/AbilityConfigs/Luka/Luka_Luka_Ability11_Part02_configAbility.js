@@ -11,7 +11,10 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Bleed"
           },
           {
@@ -23,7 +26,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luka_Eidolon1_Sub[<span class=\"descriptionNumberColor\">Fighting Endlessly</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -51,7 +57,10 @@ const configAbility = {
       "name": "Adjust Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "BulletCount",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": {
         "operator": "Constants[0] (2) || INVERT || RETURN",
         "displayLines": "-2",
@@ -164,7 +173,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
@@ -328,7 +340,10 @@ const configAbility = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
@@ -361,7 +376,10 @@ const configAbility = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
@@ -380,7 +398,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
@@ -450,7 +471,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Physical",
@@ -480,13 +504,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Flag",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "flagName": "STAT_DOT_Bleed"
       },
       "passed": [
         {
           "name": "Trigger Modifier Event",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT_Bleed",
           "value": {
@@ -524,7 +554,10 @@ const configAbility = {
           },
           {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Bleed"
           }
         ]
@@ -545,7 +578,10 @@ const configAbility = {
           "Event": [
             {
               "name": "Trigger Modifier Event",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT_Bleed",
               "value": {
@@ -561,7 +597,10 @@ const configAbility = {
         },
         {
           "name": "Trigger Modifier Event",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT_Bleed",
           "value": {
@@ -587,7 +626,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luka_ChangeAttack"
         }
       ]

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_Trace03"
     }
   ],
@@ -22,7 +25,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "DamageType": "Imaginary"
               },
               "passed": [

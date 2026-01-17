@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]"
     },
     {
@@ -38,12 +41,18 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Xueyi_Ability03_WeakType_BUFF"
         },
         {
           "name": "Heal",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.05) || RETURN",
             "displayLines": "0.05",
@@ -65,7 +74,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Xueyi_AbilityEidolon1_InserteDamageRatio",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -83,12 +95,18 @@ const configAbility = {
     {
       "name": "Use Custom Character Function",
       "functionName": "Bounce_SelectTarget",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "paramSequence": [
         "Select Random Target from List",
         {
           "name": "ATK Scaling DMG",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
@@ -117,12 +135,18 @@ const configAbility = {
     {
       "name": "Use Custom Character Function",
       "functionName": "Bounce_SelectTarget",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "paramSequence": [
         "Select Random Target from List",
         {
           "name": "ATK Scaling DMG",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
@@ -151,12 +175,18 @@ const configAbility = {
     {
       "name": "Use Custom Character Function",
       "functionName": "Bounce_SelectTarget",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "paramSequence": [
         "Select Random Target from List",
         {
           "name": "ATK Scaling DMG",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
@@ -192,7 +222,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Xueyi_Ability03_WeakType_BUFF"
         }
       ]
@@ -224,7 +257,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]",
           "stackLimit": {
             "operator": "Variables[0] (_Xueyi_Count) || RETURN",
@@ -255,7 +291,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]"
         }
       ]
@@ -269,7 +308,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Xueyi_AbilityEidolon1_InserteDamageRatio"
         }
       ]

@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23048_Main"
         }
       ],
@@ -116,15 +119,24 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Target Count",
-                        "target": "Skill Target List",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target List}}"
+                        },
                         "compareType": "=",
                         "value2": 1,
                         "livingTargets": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Skill Target List",
-                        "target": "Allied Team",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target List}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -132,7 +144,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Skill Target List",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target List}}"
+                      },
                       "modifier": "LC_23048_Sub[<span class=\"descriptionNumberColor\">Skill DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",

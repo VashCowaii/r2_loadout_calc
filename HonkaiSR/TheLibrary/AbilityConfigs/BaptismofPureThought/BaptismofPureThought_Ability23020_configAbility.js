@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23020_Main",
       "valuePerStack": {
         "_DebuffCount": 0,
@@ -66,7 +69,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue1) || RETURN",
@@ -97,7 +103,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Status Counter",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "_DebuffCount"
             },
             {
@@ -156,7 +165,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
                     "invertCondition": true
                   },
@@ -175,7 +187,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_23020_Sub[<span class=\"descriptionNumberColor\">Disputation</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",

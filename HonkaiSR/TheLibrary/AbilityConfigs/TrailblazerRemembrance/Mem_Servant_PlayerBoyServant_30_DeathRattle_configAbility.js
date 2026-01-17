@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Memosprite_PlayerBoyServant_30_DeathRattle"
     }
   ],
@@ -31,7 +34,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Action Advance/Delay",
-              "target": "Caster's Summoner",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}.[[getSummoner]]"
+              },
               "advanceType": "Set",
               "value": "(0 - 0.25)"
             }

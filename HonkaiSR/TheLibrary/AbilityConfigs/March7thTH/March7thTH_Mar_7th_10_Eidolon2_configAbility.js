@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Mar_7th_10_Eidolon2"
     }
   ],
@@ -23,16 +26,25 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)(ALL) [Exclude Owner]",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}} - {{Modifier Holder}}"
+              },
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
               },
               "ifTargetFound": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
                 }
               ]
@@ -61,24 +73,36 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Mar_7th_10_Eidolon2_CD[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -87,7 +111,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
@@ -99,8 +126,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Mar_7th_10_Eidolon2_Insert_SelectTarget",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -114,7 +147,10 @@ const configAbility = {
                   "noTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_Mar_7th_10_InsertCheck"
                     }
                   ]
@@ -133,7 +169,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                   },
                   {
@@ -151,7 +190,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target's Ability Targets}}"
+                    },
                     "team": "TeamDark"
                   }
                 ]
@@ -166,7 +208,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target's Ability Targets}}"
+                    },
                     "compareType": "=",
                     "value2": 1,
                     "livingTargets": true
@@ -174,14 +219,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target's Ability Targets}}"
+                      },
                       "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)(ALL)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                      },
                       "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
                     }
                   ]

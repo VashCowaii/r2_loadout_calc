@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21048_Main"
         }
       ],
@@ -54,12 +57,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "includeDyingTargets": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "Break"
                   },
                   "ifTargetFound": [
@@ -99,7 +108,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",

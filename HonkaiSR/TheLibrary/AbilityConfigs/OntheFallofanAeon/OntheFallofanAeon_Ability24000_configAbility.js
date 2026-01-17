@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_24000_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -50,14 +56,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.08) || Variables[1] (_Layer) || MUL || RETURN",
@@ -90,7 +102,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
               },
               "passed": [
@@ -98,7 +113,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                     "compareType": "<",
                     "value2": {
@@ -124,7 +142,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (4) || RETURN",
@@ -151,7 +172,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_24000_AttackAddedRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (4) || RETURN",
@@ -171,7 +195,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_24000_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",

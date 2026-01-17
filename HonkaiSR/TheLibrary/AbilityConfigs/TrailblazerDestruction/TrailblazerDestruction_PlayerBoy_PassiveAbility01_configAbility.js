@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Player_PassiveAbility"
     },
     {
@@ -26,7 +29,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_Eidolon4_Break_Check"
         }
       ]
@@ -40,7 +46,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_Eidolon2_Heal_Check"
         }
       ]
@@ -57,14 +66,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -96,14 +111,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -154,7 +175,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
@@ -185,7 +209,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
@@ -231,7 +258,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
@@ -262,7 +292,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
@@ -303,7 +336,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Target Receiving DMG",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target TAKING DMG}}"
+                },
                 "flagName": "Break"
               },
               "passed": [
@@ -339,7 +375,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Weakness",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "DamageType": "Physical"
                   },
                   {
@@ -389,7 +428,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (0.05) || RETURN",
                     "displayLines": "0.05",

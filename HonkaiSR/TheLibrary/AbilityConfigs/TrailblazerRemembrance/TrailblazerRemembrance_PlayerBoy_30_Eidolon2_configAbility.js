@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_PlayerBoy_30_Eidolon2"
     }
   ],
@@ -80,7 +83,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
               "counter": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -121,13 +127,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Use Prior Target(s) Defined",
-                    "target": "Memosprites [Exclude Caster's Memo]",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Memosprites}} - {{Caster}}.[[getMemosprite]]"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
@@ -141,7 +156,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (8) || RETURN",
                     "displayLines": "8",
@@ -154,13 +172,19 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "function": "Add"
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "adjustmentType": "+",
                   "variableName": "MDF_Count",
@@ -180,13 +204,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Use Prior Target(s) Defined",
-                    "target": "Memosprites [Exclude Caster's Memo]",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Memosprites}} - {{Caster}}.[[getMemosprite]]"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
@@ -200,7 +233,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (8) || RETURN",
                     "displayLines": "8",
@@ -213,13 +249,19 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "function": "Add"
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "adjustmentType": "+",
                   "variableName": "MDF_Count",

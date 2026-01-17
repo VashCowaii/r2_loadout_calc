@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21022_Main"
     }
   ],
@@ -25,12 +28,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_DOT_Electric"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_DOT_Poison"
                   }
                 ]
@@ -61,7 +70,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "LC_21022_Sub"
             }
           ]

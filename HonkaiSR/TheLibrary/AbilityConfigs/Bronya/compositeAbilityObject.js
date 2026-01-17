@@ -28,7 +28,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Bronya_Tree03"
         }
       ],
@@ -42,16 +45,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Team Members(In Context)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "All Untargetable"
-                    }
-                  ],
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
                   "modifier": "Bronya_Tree03_DamageUp",
                   "onlyRemoveOwnersInstance": true
                 }
@@ -62,7 +68,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "modifier": "Bronya_Tree03_DamageUp",
                   "valuePerStack": {
                     "MDF_AllDamageTypeAddedRatio": {
@@ -84,12 +93,18 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Teammate",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Bronya_Tree03_DamageUp",
                       "valuePerStack": {
                         "MDF_AllDamageTypeAddedRatio": {
@@ -120,7 +135,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Bronya_Tree02"
         }
       ],
@@ -134,7 +152,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "modifier": "Bronya_Tree02_DefenceUp[<span class=\"descriptionNumberColor\">Battlefield</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -164,12 +185,18 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Teammate",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Bronya_Tree02_DefenceUp[<span class=\"descriptionNumberColor\">Battlefield</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -208,7 +235,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bronya_Eidolon4_ATK_Flag"
         },
         {
@@ -230,7 +260,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -270,12 +303,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bronya_Eidolon4_ATK_Flag"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bronya_Eidolon4_Listen"
         }
       ],
@@ -318,7 +357,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Bronya_Eidolon4_ATK_Flag"
                 }
               ]
@@ -335,7 +377,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Current Action Holder Is",
-                          "target": "Owner of this Modifier"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          }
                         }
                       },
                       {
@@ -348,7 +393,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Bronya_Eidolon4_ATK_Flag"
                       }
                     ]
@@ -361,20 +409,29 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Variable",
-                            "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
                             "value1": "CurrentHP%",
                             "compareType": ">",
                             "value2": 0
                           },
                           {
                             "name": "Compare: Target Count",
-                            "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
                             "compareType": "=",
                             "value2": 1
                           },
                           {
                             "name": "Has Weakness",
-                            "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
                             "DamageType": "Wind"
                           }
                         ]
@@ -383,8 +440,14 @@ const compositeAbilityObject = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Bronya_Eidolon4_ATK",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target's Ability Targets}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "showInActionOrder": true,
                           "abortFlags": [
@@ -399,27 +462,42 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count",
-                            "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
                             "compareType": ">",
                             "value2": 1
                           },
                           "passed": [
                             {
                               "name": "Find New Target",
-                              "from": "All Enemies (AOE)",
+                              "from": {
+                                "name": "Target Name",
+                                "target": "{{Enemy Team All}}"
+                              },
                               "searchRandom": true,
                               "maxTargets": 1,
                               "conditions": {
                                 "name": "Has Weakness",
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "DamageType": "Wind"
                               },
                               "ifTargetFound": [
                                 {
                                   "name": "Inject Ability Use",
                                   "abilityName": "Bronya_Eidolon4_ATK",
-                                  "abilitySource": "Caster",
-                                  "abilityTarget": "Use Prior Target(s) Defined",
+                                  "abilitySource": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
+                                  "abilityTarget": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
                                   "priorityTag": "AvatarInsertAttackSelf",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
@@ -469,7 +547,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bronya_Maze_Modifier"
         }
       ],
@@ -484,7 +565,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -521,7 +605,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "Bronya_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -589,12 +676,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bronya_AttackPreshow"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bronya_AbilityPreshow"
         }
       ],
@@ -607,14 +700,23 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Current Visual Target(All)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
             "skillType": [
               "Skill"
             ],
             "conditions": {
               "name": "Is Part Of",
-              "of": "Owner of this Modifier",
-              "target": "Use Prior Target(s) Defined",
+              "of": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "mustBeAlive2": true,
               "invertCondition": true
             },
@@ -632,7 +734,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Basic ATK"
             ],
@@ -659,7 +764,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_CriticalDamageBase",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
         },
@@ -703,7 +811,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "All Team Members(In Context)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
           "modifier": "Bronya_Ultimate_PowerUp[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -735,7 +846,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -764,7 +878,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Bronya_Ability03_Part02"
         }
       ],
@@ -800,7 +917,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]"
               },
               "failed": [
@@ -825,7 +945,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
                       "duration": 1
                     }
@@ -837,7 +960,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Dispel Debuffs",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "dispelCount": 1,
           "dispelOrder": "LastAdded"
         },
@@ -862,7 +988,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Bronya_BPAbility_Eidolon2_Listen",
               "valuePerStack": {
                 "Bronya_SpeedUP_Ratio_01": {
@@ -886,7 +1015,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || Variables[1] (1) || ADD || RETURN",
@@ -912,7 +1044,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -937,7 +1072,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -968,7 +1106,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]"
               },
               "failed": [
@@ -993,7 +1134,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Bronya_Eidolon1_CoolDown[<span class=\"descriptionNumberColor\">Hone Your Strength</span>]",
                       "duration": 1
                     }
@@ -1005,7 +1149,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Dispel Debuffs",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "dispelCount": 1,
           "dispelOrder": "LastAdded"
         },
@@ -1030,7 +1177,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Bronya_BPAbility_Eidolon2_Listen",
               "valuePerStack": {
                 "Bronya_SpeedUP_Ratio_01": {
@@ -1054,7 +1204,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || Variables[1] (1) || ADD || RETURN",
@@ -1080,7 +1233,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Bronya_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -1106,12 +1262,18 @@ const compositeAbilityObject = {
         {
           "name": "Action Advance/Delay",
           "advanceType": "Set",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "value": 0
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1142,13 +1304,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           },
           "passed": [
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ability": "Bronya_Ability02_Self_Part02",
               "isTrigger": true
             }
@@ -1157,7 +1325,10 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ability": "Bronya_Ability02_Others_Part02",
               "isTrigger": true
             }
@@ -1181,7 +1352,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_Bronya_Critcal"
             }
           ]
@@ -1191,7 +1365,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -1227,7 +1404,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_Bronya_Critcal"
             }
           ]
@@ -1235,7 +1415,10 @@ const compositeAbilityObject = {
         {
           "name": "Use Custom Character Function",
           "functionName": "ReduceNextActionDelay",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variables": {
             "parameter[0]_NormalizedValue": {
               "operator": "Variables[0] (0.3) || RETURN",
@@ -1305,7 +1488,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Bronya_Ability01_Part02",
           "isTrigger": true
         }
@@ -1332,7 +1518,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DefenceAddedRatio) || RETURN",
@@ -1364,7 +1553,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AllDamageTypeAddedRatio) || RETURN",
@@ -1396,7 +1588,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (Bronya_SpeedUP_Ratio) || RETURN",
@@ -1425,7 +1620,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
@@ -1458,7 +1656,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackAddedRatio) || RETURN",
@@ -1471,7 +1672,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (Bronya_CriticalDamage) || RETURN",
@@ -1515,7 +1719,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Bronya_BPAbility_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": 1,
                   "valuePerStack": {
@@ -1540,12 +1747,18 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "conditions": {
               "name": "NOT",
               "condition": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Bronya_BPAbility_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
               }
             },

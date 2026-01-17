@@ -10,7 +10,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -36,7 +39,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -58,7 +64,10 @@ const configAbility = {
             },
             "Tags": null,
             "attackType": "Follow-up",
-            "hitOwner": "Single Target (Primary)"
+            "hitOwner": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           }
         }
       ]

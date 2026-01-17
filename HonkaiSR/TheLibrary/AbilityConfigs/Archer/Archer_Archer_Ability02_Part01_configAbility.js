@@ -24,7 +24,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Archer_BonusAbility02Ready",
         "invertCondition": true
       },
@@ -36,14 +39,20 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Archer_BonusAbility02Ready",
         "invertCondition": true
       }
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Archer_Ability02_Part02",
       "isTrigger": true
     },

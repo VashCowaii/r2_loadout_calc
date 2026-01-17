@@ -17,7 +17,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -83,7 +86,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "PlayerBoy_20_PointB3_Bonus_Preshow",
               "valuePerStack": {
                 "MDF_PropertyValue2": {
@@ -105,13 +111,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "modifier": "PlayerBoy_20_PointB3_Bonus_Preshow",
                   "valuePerStack": {
                     "MDF_PropertyValue2": {
@@ -135,13 +147,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Secondary Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target 2}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "advanceType": "Set",
                   "value": "MDF_PropertyValue"
                 }
@@ -168,11 +186,20 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Current Visual Target(All)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player's Aim Target List}}"
+        },
         "conditions": {
           "name": "Has Toughness Reduction Preview",
-          "caster": "Owner of this Modifier",
-          "target": "Use Prior Target(s) Defined"
+          "caster": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          }
         },
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
@@ -257,18 +284,30 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Owner of this Modifier",
-                    "target": "Current Visual Target(All)",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Break"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self"
                   }
                 ]
@@ -293,19 +332,31 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Owner of this Modifier",
-                    "target": "Current Visual Target(All)",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "mustBeAlive2": true,
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Break"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self"
                   }
                 ]
@@ -336,7 +387,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -351,13 +405,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "PlayerBoy_20_Passive_SpecialMark"
                 }
               ]
@@ -369,7 +429,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "PlayerBoy_20_Passive_SpecialMark"
             }
           ]
@@ -389,7 +452,10 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "DealSuperBreakDamage_DamagePerformance",
-              "target": "Ability Target List",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "variables": {
                 "value_0_DamagePercentage": {
                   "operator": "Variables[0] (MDF_SuperBreakDamagePercentage) || RETURN",
@@ -404,17 +470,26 @@ const configAbility = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "PursuedDamage_PerformanceDelay",
-                  "target": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "ReadTargetType",
-                      "target": "Owner of this Modifier"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
                     },
                     "DamageBreak": {
                       "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
@@ -457,13 +532,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Override Modifier Name",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifierName": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self",
               "modifierNameUpdate": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -522,7 +603,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "All Hostile Entities (AOE)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
                     "compareType": ">=",
                     "value2": 5,
                     "livingTargets": true
@@ -549,7 +633,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "All Hostile Entities (AOE)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE)}}"
+                        },
                         "compareType": "=",
                         "value2": 4,
                         "livingTargets": true
@@ -576,7 +663,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count",
-                            "target": "All Hostile Entities (AOE)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Hostile Entities(AOE)}}"
+                            },
                             "compareType": "=",
                             "value2": 3,
                             "livingTargets": true
@@ -603,7 +693,10 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Target Count",
-                                "target": "All Hostile Entities (AOE)",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Hostile Entities(AOE)}}"
+                                },
                                 "compareType": "=",
                                 "value2": 2,
                                 "livingTargets": true
@@ -653,7 +746,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "PlayerBoy_20_Ability03_ElementDamage",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
@@ -702,7 +798,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -749,7 +848,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "All Hostile Entities (AOE)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
                     "compareType": ">=",
                     "value2": 5,
                     "livingTargets": true
@@ -776,7 +878,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "All Hostile Entities (AOE)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE)}}"
+                        },
                         "compareType": "=",
                         "value2": 4,
                         "livingTargets": true
@@ -803,7 +908,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count",
-                            "target": "All Hostile Entities (AOE)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Hostile Entities(AOE)}}"
+                            },
                             "compareType": "=",
                             "value2": 3,
                             "livingTargets": true
@@ -830,7 +938,10 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Target Count",
-                                "target": "All Hostile Entities (AOE)",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Hostile Entities(AOE)}}"
+                                },
                                 "compareType": "=",
                                 "value2": 2,
                                 "livingTargets": true
@@ -880,7 +991,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "PlayerBoy_20_Ability03_ElementDamage",
               "valuePerStack": {
                 "MDF_SuperBreakDamagePercentage": {
@@ -932,7 +1046,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]"
             }
           ]
@@ -942,7 +1059,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "LifeTime",
               "variableName": "MDF_HarmonyEnergy",
               "modifierName": "PlayerBoy_20_AbilityP01_ListenRedShieldModifier",
@@ -980,7 +1100,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Teammates + Unselectable (Excluding Owner)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
           "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage[<span class=\"descriptionNumberColor\">Backup Dancer</span>]",
           "haloStatus": true,
           "valuePerStack": {
@@ -1045,7 +1168,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_20_AbilityP01_ListenBreakDamage_Self",
           "haloStatus": true,
           "duration": {
@@ -1118,7 +1244,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Allied Team(ALL) [Exclude battle mechanics]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
           "modifier": "PlayerBoy_20_Ability03_ElementDamage",
           "haloStatus": true,
           "valuePerStack": {
@@ -1137,7 +1266,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_AddBreakDamageRatio) || RETURN",
@@ -1165,7 +1297,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]"
             }
           ]
@@ -1186,7 +1321,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -1203,7 +1341,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]"
             }
           ]
@@ -1263,7 +1404,10 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "MDF_BreakDamageBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
             },
@@ -1282,7 +1426,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates + Unselectable (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
               "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]",
               "valuePerStack": {
                 "MDF_AddBreakDamageRatio": {
@@ -1311,7 +1458,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_BreakDamageAddedRatio) || RETURN",

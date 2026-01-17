@@ -33,7 +33,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_Maze_Modifier"
         }
       ],
@@ -60,20 +63,26 @@ const compositeAbilityObject = {
                   "actionTag": null,
                   "skillType": "ControlSkill02",
                   "forceAction": true,
-                  "castTarget": [
-                    {
-                      "name": "Target List",
-                      "target": "Allied Team"
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
-                        "modifier": "StageAbility_MazeStandard_EnterBattle_MarkTeamLeader"
+                  "castTarget": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "StageAbility_MazeStandard_EnterBattle_MarkTeamLeader"
+                        }
                       }
-                    }
-                  ],
+                    ]
+                  },
                   "afterInjection": [],
                   "runsAfterBattleEnd": true
                 }
@@ -94,7 +103,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_Eidolon6_AddDamageCarry"
         }
       ],
@@ -135,8 +147,14 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target",
-            "target": "Single Target (Primary)",
-            "target2": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "invertCondition": true
           }
         },
@@ -185,7 +203,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_PassiveAbility"
         },
         {
@@ -197,7 +218,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Cerydra_PointB1"
             }
           ]
@@ -211,7 +235,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Cerydra_PointB2_Self",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -228,7 +255,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_BP_PreShow"
         }
       ],
@@ -250,18 +280,33 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Caster",
-                        "target2": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Owner of this Modifier",
-                        "target2": "Current Visual Main-Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
                         "invertCondition": true
                       },
                       {
@@ -290,8 +335,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Owner of this Modifier",
-                    "target2": "Current Visual Main-Target"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Primary-Target}}"
+                    }
                   }
                 }
               ]
@@ -306,18 +357,33 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -337,7 +403,10 @@ const compositeAbilityObject = {
                           {
                             "name": "Trace Activated",
                             "conditionList": "Vidi",
-                            "target": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           {
                             "name": "Skill Type",
@@ -432,18 +501,33 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
@@ -497,7 +581,10 @@ const compositeAbilityObject = {
                               {
                                 "name": "Trace Activated",
                                 "conditionList": "Vidi",
-                                "target": "Caster"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                }
                               }
                             ]
                           },
@@ -558,7 +645,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "Cerydra_BP_PreShow_End"
                 }
               ]
@@ -570,13 +660,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Cerydra_BP_PreShow_End"
                     }
                   ]
@@ -601,7 +697,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Current Visual Main-Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
                         "team": "TeamLight"
                       }
                     ]
@@ -611,7 +710,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Current Visual Main-Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target"
                       }
                     },
@@ -619,7 +721,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Current Visual Main-Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                       },
                       "passed": [
@@ -627,8 +732,14 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target",
-                            "target": "Current Visual Main-Target",
-                            "target2": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player's Aim Primary-Target}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "invertCondition": true
                           },
                           "passed": [
@@ -677,7 +788,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Current Visual Main-Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                       },
                       "passed": [
@@ -849,7 +963,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Current Visual Main-Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
                         "team": "TeamLight",
                         "invertCondition": true
                       }
@@ -893,7 +1010,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "#CL_HaveBuff"
                 }
@@ -913,7 +1033,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Current Turn Is",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -937,7 +1060,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target"
                   },
                   "passed": [
@@ -990,10 +1116,16 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Compare: Target Count SUM",
-                            "target": "Allied Team(ALL)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player Team All(with Unselectable)}}"
+                            },
                             "conditions": {
                               "name": "Has Modifier",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Cerydra_Ability02_Target"
                             }
                           }
@@ -1052,7 +1184,10 @@ const compositeAbilityObject = {
                                   },
                                   {
                                     "name": "Has Modifier",
-                                    "target": "Cerydra's Promotion Target",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Cerydra's Promotion Target}}"
+                                    },
                                     "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                                     "invertCondition": true
                                   }
@@ -1084,14 +1219,20 @@ const compositeAbilityObject = {
                                       },
                                       {
                                         "name": "Has Modifier",
-                                        "target": "Cerydra's Promotion Target",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Cerydra's Promotion Target}}"
+                                        },
                                         "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                                         "invertCondition": true
                                       }
                                     ]
                                   },
                                   "abilityName": "Cerydra_Ability02_InsertEidolon1",
-                                  "abilityTarget": "Cerydra's Promotion Target",
+                                  "abilityTarget": {
+                                    "name": "Target Name",
+                                    "target": "{{Cerydra's Promotion Target}}"
+                                  },
                                   "priorityTag": "AvatarBuffOthers",
                                   "canHitNonTargets": true,
                                   "showInActionOrder": true,
@@ -1164,7 +1305,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Team Members(In Context)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
               "modifier": "Cerydra_BonusTargetHandler",
               "haloStatus": true
             }
@@ -1193,24 +1337,36 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Allied Team(ALL)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
           "includeDyingTargets": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Cerydra_Ability02_Target"
           },
           "noTargetFound": [
             {
               "name": "Find New Target",
-              "from": "First Character in Lineup (No Memosprites)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Far Left Player Entity(no Memosprite)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Cerydra_Ability02_Target",
                   "valuePerStack": {
                     "DV_PointAdded_Get": {
@@ -1227,18 +1383,27 @@ const compositeAbilityObject = {
               "noTargetFound": [
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(Skip Memosprites)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team(Exclude Memosprites)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Cerydra_Ability02_Target",
                       "valuePerStack": {
                         "DV_PointAdded_Get": {
@@ -1273,7 +1438,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -1325,7 +1493,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Cerydra_Ability03_Part02",
           "isTrigger": true
         },
@@ -1333,7 +1504,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target Count",
-            "target": "Cerydra Ultimate Target List",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Cerydra Ult Target List}}"
+            },
             "compareType": ">=",
             "value2": 2,
             "isClientOnly": true
@@ -1365,7 +1539,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster's Ability Target[?]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}} | {{Ability Target(ST)}}"
+              },
               "modifier": "Cerydra_PointB3[<span class=\"descriptionNumberColor\">Vici</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -1397,7 +1574,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Single Target (Primary)",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "value": {
                 "operator": "Variables[0] (2) || RETURN",
                 "displayLines": "2",
@@ -1413,7 +1593,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1422,7 +1605,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "modifier": "Cerydra_Ability02_Target",
             "invertCondition": true,
             "justAddedOrActive": true
@@ -1430,7 +1616,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Cerydra_Ability02_Target",
               "valuePerStack": {
                 "DV_PointAdded_Get": {
@@ -1466,7 +1655,10 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
@@ -1533,7 +1725,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Cerydra_Maze_Modifier"
           },
           "passed": [
@@ -1549,7 +1744,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Cerydra_Maze_Modifier"
             }
           ]
@@ -1588,7 +1786,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "modifier": "Cerydra_Ability02_Target",
             "invertCondition": true,
             "justAddedOrActive": true
@@ -1598,13 +1799,19 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Current Action Holder Is",
-                "target": "Single Target (Primary)"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                }
               }
             },
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ability": "Cerydra_Ability02_Others_Part02"
             }
           ],
@@ -1613,7 +1820,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
               },
               "passed": [
@@ -1637,15 +1847,24 @@ const compositeAbilityObject = {
                     "Deleted bullshit",
                     {
                       "name": "Trigger Ability",
-                      "from": "Caster",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "ability": "Cerydra_Ability02_Others_Part02"
                     },
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target",
-                        "target": "Single Target (Primary)",
-                        "target2": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target(ST)}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       }
                     }
@@ -1700,7 +1919,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Trigger Ability",
-                      "from": "Caster",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "ability": "Cerydra_Ability02_Others_Part02"
                     }
                   ]
@@ -1711,21 +1933,30 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   "passed": [
                     "Deleted bullshit",
                     {
                       "name": "Trigger Ability",
-                      "from": "Caster",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "ability": "Cerydra_Ability02_Others_Part02"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Trigger Ability",
-                      "from": "Caster",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "ability": "Cerydra_Ability02_Others_Part02"
                     }
                   ]
@@ -1749,7 +1980,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -1800,7 +2034,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Cerydra_Ability01_Part02",
           "isTrigger": true
         }
@@ -1871,13 +2108,19 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "PromotionRank_BaseAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "PromotionRank_AttackConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
                 },
@@ -1927,13 +2170,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Cerydra's Promotion Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Cerydra's Promotion Target}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Cerydra's Promotion Target",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Cerydra's Promotion Target}}"
+                      },
                       "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1950,7 +2199,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Cerydra's Promotion Target",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Cerydra's Promotion Target}}"
+                      },
                       "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1979,7 +2231,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Cerydra_Ability02_ListenSelf"
                 }
               ]
@@ -1998,25 +2253,37 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Eidolon Activated",
                     "eidolon": 1,
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]"
                     }
                   ]
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Standard_Windfury",
                   "onlyRemoveOwnersInstance": true
                 },
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "#CL_HaveBuff",
                   "value": 0
@@ -2064,7 +2331,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2080,19 +2350,28 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Eidolon Activated",
                     "eidolon": 1,
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "#CL_HaveBuff",
                   "value": 1
@@ -2109,7 +2388,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "_RemoveFlag",
                         "compareType": "=",
                         "value2": 0,
@@ -2117,7 +2399,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Modifier Was",
-                        "casterFilter": "Caster",
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Standard_Windfury"
                       }
                     ]
@@ -2146,12 +2431,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                     }
                   ]
@@ -2168,12 +2459,21 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Use Secondary Prior Target(s) Defined",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Modifier Was",
-                        "casterFilter": "Caster",
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Standard_Windfury"
                       }
                     ]
@@ -2181,13 +2481,22 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Reconstruct Modifier",
-                      "target": "Owner of this Modifier",
-                      "casterFilter": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "casterFilter": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Standard_Windfury",
                       "execute": [
                         {
                           "name": "Define Custom Variable with Modifier Values",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "scope": "ContextCaster",
                           "valueType": "Layer",
                           "variableName": "InsertActionCount",
@@ -2220,7 +2529,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Cerydra_Ability02_ListenSelf"
                 }
               ]
@@ -2230,7 +2542,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2243,7 +2558,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "#CL_HaveBuff",
                   "value": 0
@@ -2305,7 +2623,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                             "invertCondition": true
                           },
@@ -2332,7 +2653,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                           }
                         }
@@ -2388,12 +2712,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                 },
                 {
@@ -2419,15 +2749,24 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Reconstruct Modifier",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Standard_Windfury",
                   "execute": [
                     {
                       "name": "Define Custom Variable with Copy",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Standard_Windfury",
                       "variable": "Windfury_Flag",
-                      "target2": "Owner of this Modifier",
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variable2": "MDF_Windfury_Flag",
                       "scope": "ContextModifier"
                     },
@@ -2450,7 +2789,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_Windfury_Flag_Sum",
                     "compareType": "=",
                     "value2": 0,
@@ -2464,8 +2806,14 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": "Owner of this Modifier",
-                            "target": "Caster",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "mustBeAlive2": true
                           },
                           {
@@ -2478,7 +2826,10 @@ const compositeAbilityObject = {
                         {
                           "name": "Use Custom Character Function",
                           "functionName": "Cerydra_Template_SelfHandle",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "variables": {
                             "DV_AddPoint": {
                               "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
@@ -2538,13 +2889,19 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Cerydra_Ability02_ListenSelf",
               "includeBattleEvent": true
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_PointB2[<span class=\"descriptionNumberColor\">Vidi</span>]",
               "conditions": {
                 "name": "AND",
@@ -2558,7 +2915,10 @@ const compositeAbilityObject = {
                   {
                     "name": "Trace Activated",
                     "conditionList": "Vidi",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -2575,27 +2935,42 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_PointB3_RecoverEnergy",
               "conditions": {
                 "name": "Trace Activated",
                 "conditionList": "Vici",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               }
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_Ability02_UITop"
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 1,
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -2618,12 +2993,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_Ability02_Eidolon2_DamageAddedBonus[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 2,
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -2638,7 +3019,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Cerydra_Eidolon2_DamageAddedBonus_Self[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
               "conditions": {
                 "name": "AND",
@@ -2646,12 +3030,21 @@ const compositeAbilityObject = {
                   {
                     "name": "Eidolon Activated",
                     "eidolon": 2,
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Owner of this Modifier",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -2670,22 +3063,34 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_Pursued"
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_Ability02_AllDamageTypePenetrate[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 6,
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               }
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Cerydra_Eidolon6_AllDamageTypePenetrate[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
               "conditions": {
                 "name": "AND",
@@ -2693,12 +3098,21 @@ const compositeAbilityObject = {
                   {
                     "name": "Eidolon Activated",
                     "eidolon": 6,
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Owner of this Modifier",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -2717,7 +3131,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2752,7 +3169,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2803,7 +3223,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                       },
                       {
@@ -2836,7 +3259,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   "passed": [
@@ -2884,7 +3310,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2929,7 +3358,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (DV_AllDamageTypePenetrate) || RETURN",
@@ -2973,25 +3405,37 @@ const compositeAbilityObject = {
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "PursuedDamage_PerformanceDelay",
-                      "target": "Ability Target List"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      }
                     },
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Eidolon Activated",
                         "eidolon": 6,
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "Ability Target List",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Attack Targets of Modifier Holder}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "ifTargetFound": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Wind",
@@ -3031,13 +3475,19 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Find New Target",
-                          "from": "Ability Target List",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Attack Targets of Modifier Holder}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "ifTargetFound": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Wind",
@@ -3111,7 +3561,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (5) || RETURN",
                         "displayLines": "5",
@@ -3133,8 +3586,14 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Compare: Target",
-                            "target": "Cerydra's Promotion Target",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Cerydra's Promotion Target}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           }
                         ]
                       }
@@ -3160,7 +3619,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -3192,7 +3654,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -3319,7 +3784,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_PropertyValue2",
                     "compareType": ">",
                     "value2": {
@@ -3349,7 +3817,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
@@ -3436,13 +3907,19 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_CurrentAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_CurrentAttackConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
                 },
@@ -3480,13 +3957,19 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]"
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue2_Max": {
@@ -3512,7 +3995,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue2_Max": {
@@ -3540,7 +4026,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]"
                     }
                   ]
@@ -3571,12 +4060,18 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Cerydra's Promotion Target",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Cerydra's Promotion Target}}"
+              },
               "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Cerydra's Promotion Target",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Cerydra's Promotion Target}}"
+              },
               "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -3607,7 +4102,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Cerydra's Promotion Target",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Cerydra's Promotion Target}}"
+              },
               "modifier": "Standard_Windfury",
               "valuePerStack": {
                 "_ReplayAbility": 1
@@ -3623,14 +4121,23 @@ const compositeAbilityObject = {
             },
             {
               "name": "Reconstruct Modifier",
-              "target": "Cerydra's Promotion Target",
-              "casterFilter": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Cerydra's Promotion Target}}"
+              },
+              "casterFilter": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "counter": 1,
               "modifier": "Standard_Windfury",
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Cerydra's Promotion Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Cerydra's Promotion Target}}"
+                  },
                   "scope": "ContextCaster",
                   "valueType": "Layer",
                   "variableName": "InsertActionCount",
@@ -3646,7 +4153,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Dispel Debuffs",
-              "target": "Cerydra's Promotion Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Cerydra's Promotion Target}}"
+              },
               "toRemove": [
                 "STAT_CTRL"
               ]
@@ -3725,7 +4235,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                 "invertCondition": true
               },
@@ -3747,7 +4260,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "DV_CurrentPoint_Temp_SelfHandle",
                     "compareType": ">=",
                     "value2": {

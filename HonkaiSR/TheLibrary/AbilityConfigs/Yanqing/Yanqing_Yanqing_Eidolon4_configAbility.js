@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yanqing_Eidolon4"
     }
   ],
@@ -20,7 +23,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_IcePenetrate) || RETURN",
@@ -50,7 +56,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": ">=",
                 "value2": {
@@ -65,7 +74,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
                   "valuePerStack": {
                     "MDF_IcePenetrate": {
@@ -82,7 +94,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
                 }
               ]
@@ -96,7 +111,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": ">=",
                 "value2": {
@@ -111,7 +129,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]",
                   "valuePerStack": {
                     "MDF_IcePenetrate": {
@@ -128,7 +149,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Yanqing_Eidolon4_IcePenetrate[<span class=\"descriptionNumberColor\">Searing Sting</span>]"
                 }
               ]

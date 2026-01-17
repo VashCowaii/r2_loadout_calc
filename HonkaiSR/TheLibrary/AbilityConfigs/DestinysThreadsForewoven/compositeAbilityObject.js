@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21039_Main"
         }
       ],
@@ -88,7 +91,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_Damage) || RETURN",
@@ -116,7 +122,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_Target_Defence",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                 },
@@ -136,7 +145,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21039_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "valuePerStack": {
                     "_Layer": {
@@ -162,7 +174,10 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "MDF_Target_Defence",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                     },
@@ -182,7 +197,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21039_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "_Layer": {
@@ -208,7 +226,10 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "MDF_Target_Defence",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                     },
@@ -228,7 +249,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21039_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "_Layer": {
@@ -254,7 +278,10 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "MDF_Target_Defence",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                     },
@@ -274,7 +301,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21039_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "_Layer": {

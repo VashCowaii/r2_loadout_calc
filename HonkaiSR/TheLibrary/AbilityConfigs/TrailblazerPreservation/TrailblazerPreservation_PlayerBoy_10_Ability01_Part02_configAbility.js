@@ -6,18 +6,27 @@ const configAbility = {
   "parse": [
     {
       "name": "Change Character Transformation",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "phase": "Phase1"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterDefence",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -55,13 +64,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]"
       },
       "passed": [
         {
           "name": "Define Modifier Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifierName": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]",
           "function": "Add",
           "value": 1
@@ -70,12 +85,18 @@ const configAbility = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "MDF_Energy_Count",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": 1
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_Weapon_Effect"
         },
         {
@@ -119,7 +140,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_10_ChangeAttack"
             }
           ]
@@ -128,14 +152,20 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "MWPlayerBoy_10_WeaponCharge[<span class=\"descriptionNumberColor\">Magma Will</span>]"
         },
         {
           "name": "Adjust Variable Value",
           "adjustmentType": "Overwrite Value",
           "variableName": "MDF_Energy_Count",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": 1
         }
       ]
@@ -200,13 +230,19 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterDefence",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "All Team Members(In Context)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "modifier": "MWPlayerBoy_10_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",

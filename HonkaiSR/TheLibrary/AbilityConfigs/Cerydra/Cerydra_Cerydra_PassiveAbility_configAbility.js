@@ -36,7 +36,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Cerydra_PassiveAbility"
     },
     {
@@ -48,7 +51,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_PointB1"
         }
       ]
@@ -62,7 +68,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_PointB2_Self",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -79,7 +88,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Cerydra_BP_PreShow"
     }
   ],
@@ -101,18 +113,33 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Caster",
-                    "target2": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Owner of this Modifier",
-                    "target2": "Current Visual Main-Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Primary-Target}}"
+                    },
                     "invertCondition": true
                   },
                   {
@@ -141,8 +168,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Owner of this Modifier",
-                "target2": "Current Visual Main-Target"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Player's Aim Primary-Target}}"
+                }
               }
             }
           ]
@@ -157,18 +190,33 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -188,7 +236,10 @@ const configAbility = {
                       {
                         "name": "Trace Activated",
                         "conditionList": "Vidi",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Skill Type",
@@ -283,18 +334,33 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -348,7 +414,10 @@ const configAbility = {
                           {
                             "name": "Trace Activated",
                             "conditionList": "Vidi",
-                            "target": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           }
                         ]
                       },
@@ -409,7 +478,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "Cerydra_BP_PreShow_End"
             }
           ]
@@ -421,13 +493,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Cerydra_BP_PreShow_End"
                 }
               ]
@@ -452,7 +530,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Current Visual Main-Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Primary-Target}}"
+                    },
                     "team": "TeamLight"
                   }
                 ]
@@ -462,7 +543,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Current Visual Main-Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Primary-Target}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target"
                   }
                 },
@@ -470,7 +554,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Current Visual Main-Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Primary-Target}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                   },
                   "passed": [
@@ -478,8 +565,14 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target",
-                        "target": "Current Visual Main-Target",
-                        "target2": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Primary-Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       },
                       "passed": [
@@ -528,7 +621,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Current Visual Main-Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Primary-Target}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   "passed": [
@@ -700,7 +796,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Current Visual Main-Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Primary-Target}}"
+                    },
                     "team": "TeamLight",
                     "invertCondition": true
                   }
@@ -744,7 +843,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "#CL_HaveBuff"
             }
@@ -764,7 +866,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Current Turn Is",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
@@ -788,7 +893,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Cerydra_Ability02_Target"
               },
               "passed": [
@@ -841,10 +949,16 @@ const configAbility = {
                       },
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "Allied Team(ALL)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All(with Unselectable)}}"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Cerydra_Ability02_Target"
                         }
                       }
@@ -903,7 +1017,10 @@ const configAbility = {
                               },
                               {
                                 "name": "Has Modifier",
-                                "target": "Cerydra's Promotion Target",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Cerydra's Promotion Target}}"
+                                },
                                 "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                                 "invertCondition": true
                               }
@@ -935,14 +1052,20 @@ const configAbility = {
                                   },
                                   {
                                     "name": "Has Modifier",
-                                    "target": "Cerydra's Promotion Target",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Cerydra's Promotion Target}}"
+                                    },
                                     "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                                     "invertCondition": true
                                   }
                                 ]
                               },
                               "abilityName": "Cerydra_Ability02_InsertEidolon1",
-                              "abilityTarget": "Cerydra's Promotion Target",
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Cerydra's Promotion Target}}"
+                              },
                               "priorityTag": "AvatarBuffOthers",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -1015,7 +1138,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
           "modifier": "Cerydra_BonusTargetHandler",
           "haloStatus": true
         }

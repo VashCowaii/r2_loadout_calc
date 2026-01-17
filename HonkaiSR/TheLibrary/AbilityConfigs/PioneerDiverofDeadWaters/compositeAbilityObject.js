@@ -14,7 +14,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_117_Main"
         }
       ],
@@ -29,7 +32,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.04) || RETURN",
@@ -58,7 +64,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Target Receiving DMG",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
                     "value1": "StatusCount",
                     "compareType": ">=",
                     "value2": {
@@ -75,7 +84,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
                       },
                       "passed": [
@@ -109,7 +121,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Target Receiving DMG",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target TAKING DMG}}"
+                        },
                         "value1": "StatusCount",
                         "compareType": ">=",
                         "value2": {
@@ -126,7 +141,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]"
                           },
                           "passed": [
@@ -170,7 +188,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
@@ -182,7 +203,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_117_Sub[<span class=\"descriptionNumberColor\">Pioneer Diver of Dead Waters</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -230,7 +254,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_117_Main2"
         }
       ],
@@ -246,7 +273,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Target Receiving DMG",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
                     "value1": "StatusCount",
                     "compareType": ">=",
                     "value2": 1
@@ -277,7 +307,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_117_DamageUp",
                   "valuePerStack": {
                     "MDF_PropertyValue": {

@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Hanya_Modifier"
     }
   ],
@@ -45,7 +48,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
@@ -53,7 +59,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Ability Value",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                         "compareType": ">",
                         "value2": 0
@@ -96,7 +105,10 @@ const configAbility = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]",
                           "valuePerStack": {
                             "MDF_Lifetime": {
@@ -143,7 +155,10 @@ const configAbility = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_Self"
                         }
                       ]

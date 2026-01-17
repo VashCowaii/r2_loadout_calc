@@ -16,7 +16,10 @@ const configAbility = {
       "name": "Read Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "BPExChange",
-      "on": "Caster"
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      }
     },
     {
       "name": "IF",
@@ -27,19 +30,28 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Ability03PreShowModifier"
         }
       ]
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_PassiveModifier"
     },
     {
       "name": "Modify Skill-Point Extras",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "function": "Set",
       "value": 0,
       "silentChange": true
@@ -89,7 +101,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHengIL_Eidolon6"
         }
       ]
@@ -112,7 +127,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "modifierName": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
@@ -120,7 +138,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -153,7 +174,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "BPNeed",
               "value": {
                 "operator": "Variables[0] (EXSkill01) || RETURN",
@@ -182,14 +206,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHengIL_BPDisable"
                 }
               ],
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHengIL_BPDisable"
                 }
               ]
@@ -242,17 +272,26 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHengIL_BPCost_1"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHengIL_BPCost_2"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHengIL_BPCost_3"
                 },
                 {
@@ -290,7 +329,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (15) || RETURN",
                     "displayLines": "15",
@@ -321,8 +363,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "invertCondition": true
               }
             }
@@ -342,7 +390,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                   "duration": 1,
                   "stackLimit": {
@@ -386,7 +437,10 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHengIL_AllDamageTypeAddedRatio[<span class=\"descriptionNumberColor\">Righteous Heart</span>]",
                   "duration": 1,
                   "stackLimit": {
@@ -442,7 +496,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Ultimate"
         ],

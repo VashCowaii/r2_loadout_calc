@@ -6,21 +6,30 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
       "addStacksPerTrigger": -1,
       "silentAdd": true
     },
     {
       "name": "Dispel Debuffs",
-      "target": "Caster (Memosprite)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster's Memosprite}}"
+      },
       "toRemove": [
         "STAT_CTRL"
       ]
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",
@@ -52,7 +61,10 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Added Value",
-      "target": "Caster's Memosprite",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}.[[getMemosprite]]"
+      },
       "variableName": "CurEnergy",
       "context": "TargetEntity",
       "value": {

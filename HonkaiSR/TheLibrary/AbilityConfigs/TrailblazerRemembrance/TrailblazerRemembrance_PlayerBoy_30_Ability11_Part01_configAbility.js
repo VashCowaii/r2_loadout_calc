@@ -17,7 +17,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Define Custom Variable",
-      "target": "Caster's Memosprite",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}.[[getMemosprite]]"
+      },
       "scope": "TargetEntity",
       "variableName": "Skill11_Stance",
       "value": {
@@ -36,12 +39,18 @@ const configAbility = {
       "abilityList": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_30_Ability11_Part02"
         },
         {
           "name": "Trigger Ability",
-          "from": "Caster (Memosprite)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
           "ability": "Servant_PlayerBoyServant_30_Ability11_Together"
         }
       ]

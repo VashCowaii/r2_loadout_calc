@@ -27,7 +27,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Silwolf_Eidolon6_Bonus"
         }
       ],
@@ -41,7 +44,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Status Counter",
-                  "target": "Target Receiving DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target TAKING DMG}}"
+                  },
                   "variableName": "_DebuffCount"
                 },
                 {
@@ -113,7 +119,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Silwolf_Eidolon2_Bonus"
         }
       ],
@@ -133,8 +142,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   "passed": [
@@ -152,8 +167,14 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Trigger Ability",
-                      "from": "Caster",
-                      "inherentTarget": "Owner of this Modifier",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "inherentTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "ability": "Advanced_Silwolf_PassiveAbility_RandomBug"
                     }
                   ]
@@ -173,13 +194,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -207,7 +234,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)(ALL)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                  },
                   "modifier": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -222,7 +252,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_Silwolf_Eidolon2_Bonus_OnCharacterCreate"
                 }
               ],
@@ -234,7 +267,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Advanced_Silwolf_Eidolon2",
               "haloStatus": true
             }
@@ -250,7 +286,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Silwolf_Trace01_Bonus"
         }
       ],
@@ -276,8 +315,14 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
-                  "inherentTarget": "Use Prior Target(s) Defined",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "ability": "Advanced_Silwolf_PassiveAbility_RandomBug"
                 }
               ]
@@ -304,7 +349,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Silwolf_Modifier"
         }
       ],
@@ -335,7 +383,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "All Hostile Entities (AOE)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Quantum",
@@ -375,7 +426,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]"
           },
           "passed": [
@@ -383,7 +437,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
               },
               "passed": [
@@ -391,7 +448,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
                   },
                   "passed": [
@@ -405,7 +465,10 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -436,7 +499,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -467,7 +533,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -502,7 +571,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -539,13 +611,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -585,7 +663,10 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -616,7 +697,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -657,7 +741,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
               },
               "passed": [
@@ -665,13 +752,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -711,7 +804,10 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -742,7 +838,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -781,7 +880,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
                   },
                   "passed": [
@@ -794,7 +896,10 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -825,7 +930,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -868,7 +976,10 @@ const compositeAbilityObject = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -899,7 +1010,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -930,7 +1044,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Single Target (Primary)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target(ST)}}"
+                          },
                           "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -986,7 +1103,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Silwolf_Passive"
         },
         {
@@ -1034,7 +1154,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Silwolf_Tree03_StatusProbabilityShow"
             }
           ]
@@ -1048,7 +1171,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Silwolf_Eidolon1"
             }
           ]
@@ -1062,7 +1188,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Silwolf_Eidolon4"
             }
           ]
@@ -1101,11 +1230,17 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Ability Target List",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      },
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Status Counter",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "variableName": "_DebuffCountForRank04"
                         },
                         {
@@ -1160,7 +1295,10 @@ const compositeAbilityObject = {
                               "Event": [
                                 {
                                   "name": "ATK Scaling DMG",
-                                  "target": "Use Prior Target(s) Defined",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
                                   "canPhase": true,
                                   "AttackScaling": {
                                     "DamageType": "Quantum",
@@ -1208,12 +1346,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Ability Target List",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      },
                       "includeDyingTargets": true,
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Status Counter",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "variableName": "_DebuffCountForRank01_sub"
                         },
                         {
@@ -1263,7 +1407,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (7) || Variables[1] (_DebuffCountForRank01) || MUL || RETURN",
                         "displayLines": "(7 * _DebuffCountForRank01)",
@@ -1305,7 +1452,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (5) || RETURN",
                         "displayLines": "5",
@@ -1337,13 +1487,22 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Target Group(Attack List)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Ability Attack Targets}}"
+                  },
                   "maxTargets": 10,
                   "ifTargetFound": [
                     {
                       "name": "Trigger Ability",
-                      "from": "Caster",
-                      "inherentTarget": "Use Prior Target(s) Defined",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "inherentTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "ability": "Advanced_Silwolf_PassiveAbility_RandomBug"
                     }
                   ]
@@ -1373,7 +1532,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (20) || RETURN",
                         "displayLines": "20",
@@ -1400,7 +1562,10 @@ const compositeAbilityObject = {
                       "source": {
                         "name": "Damage Type Source",
                         "sourceType": "ReadTargetType",
-                        "target": "First Character in Lineup (No Memosprites)"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Far Left Player Entity(no Memosprite)}}"
+                        }
                       },
                       "caseEvents": [
                         {
@@ -1512,7 +1677,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Advanced_Silwolf_Ultimate_DefenceRatioDown[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -1544,7 +1712,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -1594,7 +1765,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Silwolf_Ability03_Part02",
           "isTrigger": true
         }
@@ -1617,7 +1791,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Advanced_Silwolf_BPAbility_AllDamageTypeResistanceDown[<span class=\"descriptionNumberColor\">All-Type RES Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -1648,7 +1825,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -1787,7 +1967,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Quantum",
@@ -1826,20 +2009,29 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Implant Weakness: Physical"
                     }
                   ],
                   "failed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Weakness Repeated",
                       "living": true
                     }
@@ -1860,20 +2052,29 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Implant Weakness: Fire"
                     }
                   ],
                   "failed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Weakness Repeated",
                       "living": true
                     }
@@ -1894,20 +2095,29 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Implant Weakness: Ice"
                     }
                   ],
                   "failed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Weakness Repeated",
                       "living": true
                     }
@@ -1928,20 +2138,29 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Implant Weakness: Lightning"
                     }
                   ],
                   "failed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Weakness Repeated",
                       "living": true
                     }
@@ -1962,20 +2181,29 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Implant Weakness: Wind"
                     }
                   ],
                   "failed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Weakness Repeated",
                       "living": true
                     }
@@ -1996,20 +2224,29 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Implant Weakness: Quantum"
                     }
                   ],
                   "failed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Weakness Repeated",
                       "living": true
                     }
@@ -2030,20 +2267,29 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Single Target (Primary)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
                     "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]"
                   },
                   "passed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Implant Weakness: Imaginary"
                     }
                   ],
                   "failed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "popUpText": "Weakness Repeated",
                       "living": true
                     }
@@ -2061,7 +2307,10 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Quantum",
@@ -2113,7 +2362,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Silwolf_Ability02_Part02",
           "isTrigger": true
         }
@@ -2128,7 +2380,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
@@ -2155,7 +2410,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -2183,7 +2441,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -2234,7 +2495,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Silwolf_Ability01_Part02",
           "isTrigger": true
         }
@@ -2261,7 +2525,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2316,13 +2583,19 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "_StatusProbability",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "_StatusProbabilityConvert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateConverted</span>&nbsp;"
                 },
@@ -2371,7 +2644,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]"
                     }
                   ],
@@ -2409,7 +2685,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Silwolf_Tree03_AttackUp[<span class=\"descriptionNumberColor\">Side Note</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -2444,7 +2723,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2479,7 +2761,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2513,7 +2798,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2551,7 +2839,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2589,7 +2880,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2627,7 +2921,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2728,7 +3025,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Implant Weaknesses",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "element": null,
                   "resReduction": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2769,7 +3069,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark",
                     "invertCondition": true
                   },
@@ -2832,7 +3135,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2874,7 +3180,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2916,7 +3225,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -2958,7 +3270,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3000,7 +3315,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3042,7 +3360,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3084,7 +3405,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3142,7 +3466,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3184,7 +3511,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3226,7 +3556,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3268,7 +3601,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3310,7 +3646,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3352,7 +3691,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3394,7 +3736,10 @@ const compositeAbilityObject = {
                           "execute": [
                             {
                               "name": "Implant Weaknesses",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "element": null,
                               "resReduction": {
                                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3458,7 +3803,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark",
                     "invertCondition": true
                   },
@@ -3486,7 +3834,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Advanced_Silwolf_Passive_Deathrattle_Sub",
                   "valuePerStack": {
                     "_WeakType": {
@@ -3548,7 +3899,10 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Override Modifier Name",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                       "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
                     }
@@ -3560,7 +3914,10 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Override Modifier Name",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                       "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
                     }
@@ -3572,7 +3929,10 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Override Modifier Name",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                       "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
                     }
@@ -3584,7 +3944,10 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Override Modifier Name",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                       "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
                     }
@@ -3596,7 +3959,10 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Override Modifier Name",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                       "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
                     }
@@ -3608,7 +3974,10 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Override Modifier Name",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                       "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
                     }
@@ -3620,7 +3989,10 @@ const compositeAbilityObject = {
                   "execute": [
                     {
                       "name": "Override Modifier Name",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                       "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
                     }
@@ -3637,55 +4009,73 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Find New Target",
-              "from": [
-                {
-                  "name": "Target List",
-                  "target": "All Enemies (AOE)"
-                },
-                {
-                  "name": "Sort by Life-State",
-                  "state": "Mask_AliveOnly"
-                },
-                {
-                  "name": "Sort by Monster Rank",
-                  "byHighest": true,
-                  "maxRank": "Elite"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Target is Unselectable",
-                        "target": "Use Prior Target(s) Defined",
-                        "invertCondition": true
-                      },
-                      {
-                        "name": "Living State",
-                        "state": "Bit_OnStage",
-                        "target": "Use Prior Target(s) Defined"
-                      },
-                      {
-                        "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
-                        "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                        "invertCondition": true
-                      }
-                    ]
+              "from": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  {
+                    "name": "Sort by Life-State",
+                    "state": "Mask_AliveOnly"
+                  },
+                  {
+                    "name": "Sort by Monster Rank",
+                    "byHighest": true,
+                    "maxRank": "Elite"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "AND",
+                      "conditionList": [
+                        {
+                          "name": "Target is Unselectable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Living State",
+                          "state": "Bit_OnStage",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        },
+                        {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                          "invertCondition": true
+                        }
+                      ]
+                    }
                   }
-                }
-              ],
+                ]
+              },
               "maxTargets": 1,
               "conditions": {
                 "name": "Living State",
                 "state": "Mask_AliveOnly",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",

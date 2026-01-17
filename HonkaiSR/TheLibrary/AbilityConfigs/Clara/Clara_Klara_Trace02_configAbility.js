@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Stack Target Resistance",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "statName": "STAT_CTRL",
       "value": {
         "operator": "Variables[0] (0.35) || RETURN",

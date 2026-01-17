@@ -39,7 +39,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.32) || Variables[1] (SkillTree_PointB3_BreakDamageAddedValue) || ADD || RETURN",
@@ -55,7 +58,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.32) || RETURN",
@@ -96,12 +102,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "RuanMei_ResetImprint"
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "DV_RuanMei_PassiveArea_Count",
                     "compareType": "=",
                     "value2": 1,
@@ -112,7 +124,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "RuanMei_ResetImprint"
                 }
               ]
@@ -126,7 +141,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "DV_RuanMei_PassiveArea_Count",
                 "compareType": "=",
                 "value2": 1
@@ -134,7 +152,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "DV_RuanMei_PassiveArea_Count",
                   "value": 0
                 },
@@ -148,7 +169,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "DV_NeedDettachEffect"
             }
@@ -161,7 +185,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "=",
                 "value2": 0
@@ -169,7 +196,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "RuanMei_PassiveArea_EnemyCD"
                 },
                 "Modifier Deletes Itself"
@@ -182,13 +212,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "DV_RuanMei_PassiveArea_Count",
               "value": 1
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "MDF_BreakAttackToDelay",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
             },
@@ -219,15 +255,24 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "RuanMei_TriggerImprintEffect",
-              "abilitySource": "Caster",
-              "abilityTarget": "Owner of this Modifier",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "priorityTag": "LevelPerformAvatar",
               "canHitNonTargets": true,
               "allowAbilityTriggers": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "RuanMei_PassiveArea_EnemyCD"
             },
             "Modifier Deletes Itself"
@@ -238,7 +283,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "RuanMei_PassiveArea_EnemyCD"
             }
           ]
@@ -249,8 +297,14 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "RuanMei_TriggerImprintEffect",
-              "abilitySource": "Caster",
-              "abilityTarget": "Owner of this Modifier",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "priorityTag": "LevelPerformAvatar",
               "canHitNonTargets": true,
               "allowAbilityTriggers": true
@@ -272,7 +326,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "DV_NeedDettachEffect",
                   "value": 0
@@ -315,7 +372,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (Ability03_P1_PenetrateRatio) || RETURN",
@@ -335,7 +395,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "RuanMei_Ability03_Area_Eidolon1_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "valuePerStack": {
                     "Ability03_P1_PenetrateRatio": {
@@ -360,7 +423,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "RuanMei_Ability03_Area_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "valuePerStack": {
                     "Ability03_P1_PenetrateRatio": {
@@ -390,37 +456,58 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "RuanMei_PassiveArea_PenetrateUP"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "RuanMei_Ability03_Area_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "RuanMei_Ability03_Area_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "RuanMei_Ability03_Area_Eidolon1_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "RuanMei_Ability03_Area_Eidolon1_Friend[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore"
             }
           ]
@@ -430,7 +517,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (Ability03_P1_PenetrateRatio) || RETURN",
@@ -450,7 +540,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -465,7 +558,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "RuanMei_Ability03_Area_Eidolon1_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -488,7 +584,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -503,7 +602,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "RuanMei_Ability03_Area_Eidolon1_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -518,7 +620,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "RuanMei_Ability03_Area_Caster[<span class=\"descriptionNumberColor\">Petals to Stream, Repose in Dream</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -542,37 +647,58 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target's Attack Targets}}"
+                  },
                   "searchRandom": true,
                   "ifTargetFound": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "RuanMei_PassiveArea_EnemyCD"
                       },
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "RuanMei_PassiveArea_Enemy[<span class=\"descriptionNumberColor\">Thanatoplum Rebloom</span>]"
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "RuanMei_PassiveArea_EnemyCD"
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "RuanMei_ResetImprint"
                         }
                       ]
@@ -591,7 +717,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Teammates + Unselectable (Excluding Owner)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
           "modifier": "RuanMei_PassiveArea_PenetrateUP",
           "aliveOnly": "True",
           "haloStatus": true,
@@ -608,7 +737,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "RuanMei_Ability03_Eidolon1_DefenceIgnore",
           "haloStatus": true,
           "conditions": {
@@ -638,7 +770,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "RuanMei_Eidolon4_PassiveStackProperty",
               "valuePerStack": {
                 "AbilityRank_Eidolon4_P1_BreakDamageAdded": 0
@@ -665,7 +800,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "RuanMei_Eidolon4_PassiveStackProperty",
               "valuePerStack": {
                 "AbilityRank_Eidolon4_P1_BreakDamageAdded": {
@@ -680,7 +818,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "RuanMei_Eidolon4_Passive_BreakDamageAddedUp[<span class=\"descriptionNumberColor\">Chatoyant Éclat</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -707,7 +848,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (SkillRank_Rank04_P1_BreakDamageAdded) || RETURN",
@@ -737,7 +881,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "flagName": "Break"
               },
               "passed": [
@@ -808,7 +955,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                 },
@@ -893,34 +1043,52 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "searchRandom": true,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "RuanMei_Ability02_DamageUp"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "RuanMei_Ability02_DamageUp"
                     }
                   ]
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "searchRandom": true,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
                       "valuePerStack": {
                         "Ability02_P1_DamageAddedRatio_Friend": {
@@ -947,7 +1115,10 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "SkillTree_PointB3_BreakDamageAddedValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                 },
@@ -1032,34 +1203,52 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "searchRandom": true,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "RuanMei_Ability02_DamageUp"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "RuanMei_Ability02_DamageUp"
                     }
                   ]
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "searchRandom": true,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "RuanMei_Ability02_Area_Friend[<span class=\"descriptionNumberColor\">Overtone</span>]",
                       "valuePerStack": {
                         "Ability02_P1_DamageAddedRatio_Friend": {
@@ -1099,7 +1288,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (Trace_PointB2_P1_SP) || RETURN",
                 "displayLines": "Trace_PointB2_P1_SP",
@@ -1127,7 +1319,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (SkillTree_PointB1_P1_BreakDamageAdded) || RETURN",

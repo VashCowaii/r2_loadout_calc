@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Xueyi_Ability03_AddAttackRatio"
     },
     {
@@ -23,7 +26,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Xueyi_AbilityEidolon4[<span class=\"descriptionNumberColor\">Break Effect Boost</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -48,7 +54,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Xueyi_Ability03_WeakType_BUFF"
     },
     {
@@ -62,7 +71,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "value1": "Current_Toughness_%",
             "compareType": ">=",
             "value2": {
@@ -78,7 +90,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Xueyi_Trace02",
               "valuePerStack": {
                 "MDF_Trace02_AllDamageTypeAddedRatio": {
@@ -97,7 +112,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Quantum",
@@ -125,7 +143,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Xueyi_Trace02"
     },
     {
@@ -140,12 +161,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Xueyi_Ability03_WeakType_BUFF"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Xueyi_Ability03_AddAttackRatio"
     },
     "Trigger: Skip Death Handling",

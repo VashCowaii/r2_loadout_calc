@@ -43,7 +43,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoy_Trace01"
         }
       ],
@@ -75,7 +78,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (15) || RETURN",
                         "displayLines": "15",
@@ -105,7 +111,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Player_AutoUseUltraAbility"
         }
       ],
@@ -134,7 +143,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Player_PassiveAbility"
         },
         {
@@ -146,7 +158,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Eidolon4_Break_Check"
             }
           ]
@@ -160,7 +175,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Eidolon2_Heal_Check"
             }
           ]
@@ -177,14 +195,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "multiplier": 1
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -216,14 +240,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "multiplier": 1
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -274,7 +304,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
@@ -305,7 +338,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
@@ -351,7 +387,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "PlayerWarrior_Passive_BreakAtkUp[<span class=\"descriptionNumberColor\">Perfect Pickoff</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
@@ -382,7 +421,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "PlayerWarrior_SkilTree02_BreakDefUp[<span class=\"descriptionNumberColor\">Tenacity</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Variables[1] (MDF_Max_Layer) || ADD || RETURN",
@@ -423,7 +465,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Target Receiving DMG",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
                     "flagName": "Break"
                   },
                   "passed": [
@@ -459,7 +504,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Weakness",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": "Physical"
                       },
                       {
@@ -509,7 +557,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Heal",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (0.05) || RETURN",
                         "displayLines": "0.05",
@@ -564,7 +615,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
             }
           ]
@@ -578,14 +632,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -618,14 +678,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -658,14 +724,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
             }
           ]
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerWarrior_Ultimate_Transform"
         },
         {
@@ -693,7 +765,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_Ability21_Part02",
           "isTrigger": true
         },
@@ -716,14 +791,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -756,14 +837,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Trace03_DamageAddedRatio"
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -809,7 +896,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_Ability02_Part02",
           "isTrigger": true
         },
@@ -832,14 +922,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -877,14 +973,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "PlayerBoy_Eidolon1_Check_Modifier"
             }
           ]
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerWarrior_Ultimate_Transform"
         },
         {
@@ -912,7 +1014,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_Ability11_Part02",
           "isTrigger": true
         },
@@ -928,7 +1033,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -979,7 +1087,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_Ability01_Part02",
           "isTrigger": true
         },
@@ -1010,13 +1121,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill02",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"
@@ -1064,7 +1181,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",
@@ -1083,7 +1203,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",

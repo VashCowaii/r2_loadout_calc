@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yukong_Point01_Bonus"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
               "valuePerStack": {
                 "MDF_ResistCD": {
@@ -50,7 +56,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Yukong_Point01_ResistCD",
               "duration": {
                 "operator": "Variables[0] (MDF_ResistCD) || RETURN",
@@ -63,7 +72,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]"
             }
           ]
@@ -93,7 +105,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]"
                     }
                   },
@@ -101,7 +116,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Yukong_Point01_ResistCD"
                     }
                   }
@@ -110,7 +128,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
                   "valuePerStack": {
                     "MDF_ResistCD": {
@@ -132,7 +153,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Yukong_Point01_Resist[<span class=\"descriptionNumberColor\">Debuff Block</span>]",
               "valuePerStack": {
                 "MDF_ResistCD": {

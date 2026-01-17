@@ -19,24 +19,36 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Allied Team(ALL)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Player Team All(with Unselectable)V2}}"
+      },
       "includeDyingTargets": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Has Modifier",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "modifier": "Cerydra_Ability02_Target"
       },
       "noTargetFound": [
         {
           "name": "Find New Target",
-          "from": "First Character in Lineup (No Memosprites)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Far Left Player Entity(no Memosprite)}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Cerydra_Ability02_Target",
               "valuePerStack": {
                 "DV_PointAdded_Get": {
@@ -53,18 +65,27 @@ const configAbility = {
           "noTargetFound": [
             {
               "name": "Find New Target",
-              "from": "Allied Team(Skip Memosprites)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team(Exclude Memosprites)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Living State",
                 "state": "Mask_AliveOnly",
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Cerydra_Ability02_Target",
                   "valuePerStack": {
                     "DV_PointAdded_Get": {
@@ -99,7 +120,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",

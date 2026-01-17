@@ -10,13 +10,19 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "Gepard_MaxHPValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {
       "name": "Set HP Value",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "setValue": {
         "operator": "Variables[0] (Gepard_MaxHPValue) || Variables[1] (0.5) || Variables[2] (0.5) || ADD || MUL || RETURN",
         "displayLines": "(Gepard_MaxHPValue * (0.5 + 0.5))",
@@ -39,12 +45,18 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Current Turn Is",
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Gepard_Eidolon6ActionDelay0",
               "duration": 1,
               "immediateEffect": true
@@ -54,7 +66,10 @@ const configAbility = {
             {
               "name": "Action Advance/Delay",
               "advanceType": "Set",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": 0
             }
           ]
@@ -70,13 +85,19 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_MaxSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (MDF_MaxSP) || RETURN",
             "displayLines": "MDF_MaxSP",
@@ -103,7 +124,10 @@ const configAbility = {
     },
     {
       "name": "Declare Custom Variable",
-      "target": "Owner of this Modifier",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Modifier Holder}}"
+      },
       "scope": "TargetEntity",
       "variableName": "_Gepard_00_PassiveSkill_InsertController"
     }

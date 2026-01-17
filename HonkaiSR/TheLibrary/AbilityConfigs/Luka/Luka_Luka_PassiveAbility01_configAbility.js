@@ -16,13 +16,19 @@ const configAbility = {
       "name": "Read Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "BulletCount",
-      "on": "Caster"
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      }
     },
     {
       "name": "Adjust Variable Value",
       "adjustmentType": "Overwrite Value",
       "variableName": "BulletCount",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": 1
     },
     {
@@ -86,7 +92,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Luka_Passive"
     },
     {
@@ -98,7 +107,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luka_Eidolon2"
         }
       ]

@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "March7th_Eidolon2_Shield_pre"
         }
       ],
@@ -50,7 +53,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Shield",
-                  "target": "Owner of this Modifier"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
                 },
                 {
                   "name": "Set Shield State/Value",
@@ -63,7 +69,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Create Shield",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
                     "displayLines": "MDF_ShieldValue",
@@ -99,25 +108,40 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "CasterDefence",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                     },
                     {
                       "name": "Find New Target",
-                      "from": "All Team Members(In Context)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Target Has Lowest/Highest Value",
-                        "target": "Use Prior Target(s) Defined",
-                        "partOf": "All Team Members(In Context)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "partOf": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members}}"
+                        },
                         "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
                         "minOrMax": "Min"
                       },
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "March7th_Eidolon2_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -169,7 +193,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Mar_7th_Modifier"
         }
       ],
@@ -200,7 +227,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Hostile Entities (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "conditions": {
@@ -210,13 +240,19 @@ const compositeAbilityObject = {
                           "STAT_CTRL"
                         ],
                         "compareType": "<=",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "compareValue": 0.8
                       },
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",
@@ -249,13 +285,19 @@ const compositeAbilityObject = {
                       "noTargetFound": [
                         {
                           "name": "Find New Target",
-                          "from": "All Hostile Entities (AOE)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
                               "duration": {
                                 "operator": "Variables[0] (1) || RETURN",
@@ -315,7 +357,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "CasterDefence",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
             },
@@ -349,7 +394,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -390,7 +438,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Modifier Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifierName": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]",
           "function": "Add"
         },
@@ -398,7 +449,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]"
           },
           "passed": [
@@ -431,12 +485,18 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Has Flag",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "flagName": "Shield"
               },
               "ifTargetFound": [
@@ -507,17 +567,26 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "March7th_Passive"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "March7th_ListenEnergyBar"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]"
         },
         {
@@ -661,7 +730,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "team": "TeamLight"
                           }
                         ]
@@ -669,11 +741,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "Allied Team",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Has Flag",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "flagName": "Shield"
                           },
                           "ifTargetFound": [
@@ -715,7 +793,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "team": "TeamLight"
                           }
                         ]
@@ -723,11 +804,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "Allied Team",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Has Flag",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "flagName": "Shield"
                           },
                           "ifTargetFound": [
@@ -772,7 +859,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "March7th_Passive_CanAttack[<span class=\"descriptionNumberColor\">Counter</span>]"
                 },
                 {
@@ -813,12 +903,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "Shield"
                       },
                       "ifTargetFound": [
@@ -909,12 +1005,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "Shield"
                       },
                       "ifTargetFound": [
@@ -977,7 +1079,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "modifier": "March7th_BPAbility_Shield_Counter"
                 }
               ]
@@ -989,12 +1094,18 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Teammate",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "March7th_BPAbility_Shield_Counter"
                     }
                   ]
@@ -1006,16 +1117,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Team Members(In Context)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "All Untargetable"
-                    }
-                  ],
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
                   "modifier": "March7th_BPAbility_Shield_Counter",
                   "onlyRemoveOwnersInstance": true
                 },
@@ -1085,18 +1199,27 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "conditions": {
             "name": "Has Flag",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "flagName": "STAT_CTRL_Frozen",
             "invertCondition": true
           },
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Mar_7th_FrozenFlag"
             }
           ]
@@ -1107,21 +1230,30 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 2,
               "conditions": {
                 "name": "NOT",
                 "condition": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_UltraTarget"
                 }
               },
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",
@@ -1147,7 +1279,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_UltraTarget"
                 }
               ]
@@ -1156,14 +1291,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 0.25,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "March7th_UltraTarget"
         },
         {
@@ -1172,21 +1313,30 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 2,
               "conditions": {
                 "name": "NOT",
                 "condition": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_UltraTarget"
                 }
               },
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",
@@ -1212,7 +1362,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_UltraTarget"
                 }
               ]
@@ -1221,14 +1374,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 0.25,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "March7th_UltraTarget"
         },
         {
@@ -1237,21 +1396,30 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 2,
               "conditions": {
                 "name": "NOT",
                 "condition": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_UltraTarget"
                 }
               },
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",
@@ -1277,7 +1445,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_UltraTarget"
                 }
               ]
@@ -1286,14 +1457,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 0.25,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "March7th_UltraTarget"
         },
         {
@@ -1302,21 +1479,30 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 2,
               "conditions": {
                 "name": "NOT",
                 "condition": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_UltraTarget"
                 }
               },
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",
@@ -1342,7 +1528,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_UltraTarget"
                 }
               ]
@@ -1352,14 +1541,20 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 0.25,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "March7th_UltraTarget"
         },
         {
@@ -1420,7 +1615,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Standard_CTRL_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -1481,7 +1679,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (Fix_Rank01_SPAdd) || RETURN",
             "displayLines": "Fix_Rank01_SPAdd",
@@ -1495,12 +1696,18 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_Ability03_ListenFrozen"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Mar_7th_FrozenFlag"
         },
         {
@@ -1539,7 +1746,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Mar_7th_Ability03_Part02",
           "isTrigger": true
         }
@@ -1562,7 +1772,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "CasterDefence",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
         },
@@ -1648,7 +1861,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Dispel Debuffs",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "dispelCount": 1,
               "dispelOrder": "LastAdded"
             }
@@ -1658,7 +1874,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "value1": "CurrentHP%",
             "compareType": ">=",
             "value2": {
@@ -1673,7 +1892,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "March7th_BPAbility_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || Variables[1] (_Tree02_LifeTimeAdd) || ADD || RETURN",
@@ -1731,7 +1953,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "March7th_BPAbility_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || Variables[1] (_Tree02_LifeTimeAdd) || ADD || RETURN",
@@ -1782,7 +2007,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1791,7 +2019,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           }
         },
         "Trigger: Ability End"
@@ -1817,7 +2048,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Mar_7th_Ability02_Part02",
           "isTrigger": true
         },
@@ -1825,7 +2059,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           },
           "passed": [
             "Deleted bullshit"
@@ -1848,7 +2085,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -1898,7 +2138,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Mar_7th_Ability01_Part02",
           "isTrigger": true
         }
@@ -1936,7 +2179,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Shield",
-                  "target": "Owner of this Modifier"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
                 },
                 {
                   "name": "Set Shield State/Value",
@@ -1958,7 +2204,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Heal",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
                         "displayLines": "MDF_HealPercentage",
@@ -2001,7 +2250,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Create Shield",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
                     "displayLines": "MDF_ShieldValue",
@@ -2022,7 +2274,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AggroUp) || RETURN",
@@ -2064,12 +2319,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "Shield"
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
@@ -2083,7 +2344,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "March7th_BPAbility_Shield_Mark"
                     }
                   ]
@@ -2104,8 +2368,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Mar_7th_PassiveAbility01_InsertAbility",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Owner of this Modifier",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2116,7 +2386,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "March7th_BPAbility_Shield_Mark",
                   "onlyRemoveOwnersInstance": true
                 }
@@ -2137,15 +2410,24 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL_Frozen"
                       },
                       "passed": [

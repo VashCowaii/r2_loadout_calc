@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": {
         "operator": "Variables[0] (5) || RETURN",
         "displayLines": "5",
@@ -19,7 +22,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -46,7 +52,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Blast (Adjacent)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -88,7 +97,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Heal",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.05) || RETURN",
             "displayLines": "0.05",

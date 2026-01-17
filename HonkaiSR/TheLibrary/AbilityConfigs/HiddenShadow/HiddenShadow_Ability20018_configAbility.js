@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_20018_Main"
     }
   ],
@@ -22,7 +25,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "Flag_20018",
                 "compareType": "=",
                 "value2": 1,
@@ -31,21 +37,30 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "Action Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Current Action Target List}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": {
                           "name": "Custom Damage Type",
                           "initialTypePreRead": "Physical",
                           "sourceType": "ReadTargetType",
-                          "readTarget": "Caster"
+                          "readTarget": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          }
                         },
                         "Damage": {
                           "operator": "Variables[0] (0.6) || RETURN",
@@ -84,7 +99,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Flag_20018",
                   "value": 1
@@ -93,7 +111,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Flag_20018"
                 }
@@ -106,7 +127,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "Flag_20018"
             },
@@ -140,7 +164,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_20018_Sub"
                 }
               ]

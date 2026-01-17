@@ -13,7 +13,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_317_Main"
         }
       ],
@@ -31,7 +34,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.12) || RETURN",
@@ -70,14 +76,23 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": "Caster",
-                        "target": "First Character in Lineup (No Memosprites)",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Far Left Player Entity(no Memosprite)}}"
+                        },
                         "mustBeAlive2": true
                       },
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "First Character in Lineup (No Memosprites)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Far Left Player Entity(no Memosprite)}}"
+                          },
                           "modifier": "Relic_317_Sub[<span class=\"descriptionNumberColor\">Lushaka, the Sunken Seas</span>]"
                         }
                       ]

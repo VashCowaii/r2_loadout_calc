@@ -35,7 +35,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Moze_ListenUnstageModifier"
     },
     {
@@ -83,7 +86,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_Eidolon1_PreChangeUltraToInsertModifier"
         }
       ]
@@ -97,14 +103,20 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_Eidolon1_AddSPModifier"
         }
       ]
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Moze_PassiveModifier"
     },
     {
@@ -133,17 +145,26 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Enemies (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Ability02_InShadowModifier"
             },
             {
               "name": "Disable Abilities",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityTypes": [
                 "Skill"
               ]
@@ -166,7 +187,10 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "conditions": {
@@ -175,13 +199,19 @@ const configAbility = {
                   {
                     "name": "Character ID",
                     "ID": 1223,
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "characterName": "Moze",
                     "invertCondition": true
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Character"
                   }
                 ]
@@ -214,7 +244,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_OnlyMozeOnStageModifier"
                 }
               ],
@@ -223,14 +256,20 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Monster_W3_Aventurine_Gambling",
                     "invertCondition": true
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ]
@@ -249,7 +288,10 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "conditions": {
@@ -258,13 +300,19 @@ const configAbility = {
                   {
                     "name": "Character ID",
                     "ID": 1223,
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "characterName": "Moze",
                     "invertCondition": true
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Character"
                   }
                 ]
@@ -297,7 +345,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_OnlyMozeOnStageModifier"
                 }
               ]
@@ -314,7 +365,10 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "conditions": {
@@ -323,13 +377,19 @@ const configAbility = {
                   {
                     "name": "Character ID",
                     "ID": 1223,
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "characterName": "Moze",
                     "invertCondition": true
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Character"
                   }
                 ]
@@ -362,7 +422,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_OnlyMozeOnStageModifier"
                 }
               ],
@@ -378,7 +441,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ]
@@ -404,7 +470,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_OnlyMozeOnStageModifier"
                 }
               ]
@@ -428,7 +497,10 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "conditions": {
@@ -437,13 +509,19 @@ const configAbility = {
                       {
                         "name": "Character ID",
                         "ID": 1223,
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "characterName": "Moze",
                         "invertCondition": true
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Character"
                       }
                     ]
@@ -481,7 +559,10 @@ const configAbility = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ]
@@ -500,13 +581,19 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "conditions": {
                 "name": "Character ID",
                 "ID": 1223,
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "characterName": "Moze",
                 "invertCondition": true
               },
@@ -538,7 +625,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_OnlyMozeOnStageModifier"
                 }
               ],
@@ -554,7 +644,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ]
@@ -573,13 +666,19 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "conditions": {
                 "name": "Character ID",
                 "ID": 1223,
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "characterName": "Moze",
                 "invertCondition": true
               },
@@ -611,7 +710,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_OnlyMozeOnStageModifier"
                 }
               ],
@@ -627,7 +729,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ]
@@ -665,19 +770,28 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Team Count",
-              "target": "Allied Team",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "variableName": "MDF_ActivePlayer",
               "conditions": {
                 "name": "AND",
                 "conditionList": [
                   {
                     "name": "Target is Unselectable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Is Entity a Battle Event/Summon",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -702,18 +816,27 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Ability02_InShadowModifier"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                 }
               ]
@@ -725,17 +848,26 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
                     "name": "Target is Unselectable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Is Entity a Battle Event/Summon",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -766,12 +898,18 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Enemies (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Moze_Ability02_InShadowModifier"
                     }
                   ]
@@ -792,7 +930,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "advanceType": "Advance",
                   "value": "-0.3"
                 }
@@ -811,20 +952,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -839,19 +989,28 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Enemies (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       "ifTargetFound": [
                         {
@@ -862,8 +1021,14 @@ const configAbility = {
                             "typeValue": 1
                           },
                           "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "Use Prior Target(s) Defined",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -893,13 +1058,19 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_BaseSpeed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_SpeedDelta",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;"
                 },
@@ -917,8 +1088,14 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Compare: Target",
-                            "target": "Current Turn Owner",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Turn Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           {
                             "name": "Compare: Variable",
@@ -946,7 +1123,10 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Action Advance/Delay",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "advanceType": "Advance",
                           "value": "-0.2"
                         }
@@ -968,20 +1148,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -996,19 +1185,28 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Enemies (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       "ifTargetFound": [
                         {
@@ -1019,8 +1217,14 @@ const configAbility = {
                             "typeValue": 1
                           },
                           "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "Use Prior Target(s) Defined",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -1043,7 +1247,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Ability02_InShadowModifier"
             }
           ]
@@ -1058,20 +1265,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -1086,19 +1302,28 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Enemies (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       "ifTargetFound": [
                         {
@@ -1109,8 +1334,14 @@ const configAbility = {
                             "typeValue": 1
                           },
                           "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "Use Prior Target(s) Defined",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -1141,7 +1372,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Attack-Type Extension",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "typeToExtend": "Ultimate",
               "isRemove": true
             }
@@ -1152,7 +1386,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Attack-Type Extension",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "typeToExtend": "Ultimate",
               "extendTypeTo": "Follow-up"
             }
@@ -1169,7 +1406,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Moze_Eidolon1_ChangeUltraToInsertModifier"
             }
           ]
@@ -1186,7 +1426,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_Eidolon1_ChangeUltraToInsertModifier"
                 }
               ]
@@ -1215,7 +1458,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (20) || RETURN",
                     "displayLines": "20",

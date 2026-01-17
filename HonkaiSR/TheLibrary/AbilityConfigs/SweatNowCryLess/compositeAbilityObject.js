@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21052_Main"
         }
       ],
@@ -44,7 +47,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.24) || RETURN",
@@ -77,13 +83,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Memosprite"
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use [SUMMONER OF] Prior Target(s) Defined",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSummoner]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -91,12 +106,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster (Memosprite)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Memosprite}}"
+                      },
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ]
@@ -113,13 +134,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Memosprite"
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use [SUMMONER OF] Prior Target(s) Defined",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSummoner]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -127,12 +157,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster (Memosprite)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Memosprite}}"
+                      },
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ]
@@ -146,7 +182,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster (Memosprite)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
                     "compareType": ">=",
                     "value2": 1,
                     "livingTargets": true
@@ -154,12 +193,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster (Memosprite)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Memosprite}}"
+                      },
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21052_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     }
                   ]

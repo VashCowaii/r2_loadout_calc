@@ -120,14 +120,20 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Harscyline_Ability03_Halopre"
         }
       ]
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Harscyline_PassiveRandomDOT"
     },
     {
@@ -139,7 +145,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Harscyline_PointB3"
         }
       ]
@@ -153,7 +162,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Harscyline_DOTDamageUpPre",
           "valuePerStack": {
             "MDF_DamageUpRatio": {
@@ -218,13 +230,19 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "SkillTree_PointB3_StatusProbabilityConvertValue",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateConverted</span>&nbsp;"
             },
@@ -319,7 +337,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
                 }
               ],
@@ -335,7 +356,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Harscyline_Ability03_HaloStatus"
                       }
                     ]
@@ -343,7 +367,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
                       "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -360,7 +387,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -401,22 +431,34 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Secondary Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
                     "name": "Is Entity a Battle Event/Summon",
-                    "target": "Use Secondary Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Harscyline_FirstHitFlag",
                     "invertCondition": true
                   }
@@ -429,7 +471,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_FirstHitFlag"
                 }
               ]
@@ -441,7 +486,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Enemies(All)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
               "modifier": "Harscyline_FirstHitFlag"
             }
           ]
@@ -468,7 +516,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Harscyline_Ability03_HaloStatus",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",

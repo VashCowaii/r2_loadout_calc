@@ -6,27 +6,39 @@ const configAbility = {
   "parse": [
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_BreakCheck_Before"
     },
     {
       "name": "IF",
       "conditions": {
         "name": "Has Flag",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "flagName": "Break"
       },
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_BreakCheck_Before"
         }
       ]
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
@@ -60,7 +72,10 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
           }
         ]
@@ -68,22 +83,34 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_PassiveCheck"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_PassiveCheck_01"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_PassiveCheck_02"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Physical",
@@ -115,7 +142,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
       },
       "passed": [
@@ -123,25 +153,37 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "Break"
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_BP_PassiveCheck_01"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_BP_PassiveCheck_02"
             }
           ],
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_BP_PassiveCheck_01",
               "baseChance": {
                 "operator": "Variables[0] (0.33) || RETURN",
@@ -154,7 +196,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_BP_PassiveCheck_02",
               "baseChance": {
                 "operator": "Variables[0] (0.33) || RETURN",
@@ -173,20 +218,29 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Flag",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "flagName": "Break"
       },
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_PassiveCheck"
         }
       ],
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_PassiveCheck",
           "baseChance": {
             "operator": "Variables[0] (0.33) || RETURN",
@@ -208,17 +262,26 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Has Modifier",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_BP_PassiveCheck"
             },
             {
               "name": "Has Modifier",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_BP_PassiveCheck_01"
             },
             {
               "name": "Has Modifier",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_BP_PassiveCheck_02"
             }
           ]
@@ -235,7 +298,10 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Sushang_BP_PassiveCheck_01"
           }
         ]
@@ -252,7 +318,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
               },
               "passed": [
@@ -269,7 +338,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_PointB2_DMGModifier",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -285,7 +357,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
@@ -304,7 +379,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_PointB2_DMGModifier"
         },
         {
@@ -318,13 +396,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
               },
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                   "duration": 1,
                   "valuePerStack": {
@@ -351,7 +435,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (10) || RETURN",
@@ -391,12 +478,18 @@ const configAbility = {
               "conditionList": [
                 {
                   "name": "Has Modifier",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Sushang_BP_PassiveCheck"
                 },
                 {
                   "name": "Has Modifier",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Sushang_BP_PassiveCheck_02"
                 }
               ]
@@ -410,7 +503,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_PassiveCheck_01"
     },
     {
@@ -420,7 +516,10 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Sushang_BP_PassiveCheck_02"
           }
         ]
@@ -437,7 +536,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
               },
               "passed": [
@@ -454,7 +556,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_PointB2_DMGModifier",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -470,7 +575,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
@@ -489,7 +597,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_PointB2_DMGModifier"
         },
         {
@@ -503,13 +614,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
               },
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                   "duration": 1,
                   "valuePerStack": {
@@ -536,7 +653,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (10) || RETURN",
@@ -573,7 +693,10 @@ const configAbility = {
             "name": "NOT",
             "condition": {
               "name": "Has Modifier",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_BP_PassiveCheck"
             }
           },
@@ -587,7 +710,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Sushang_BP_PassiveCheck"
       },
       "passed": [
@@ -602,7 +728,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]"
               },
               "passed": [
@@ -619,7 +748,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_PointB2_DMGModifier",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -635,7 +767,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
@@ -653,7 +788,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Sushang_BP_PointB2_DMGModifier"
         },
         {
@@ -667,13 +805,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]"
               },
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Sushang_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">Refine in Toil</span>]",
                   "duration": 1,
                   "valuePerStack": {
@@ -700,7 +844,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Sushang_PointB2_Bonus[<span class=\"descriptionNumberColor\">Riposte</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (10) || RETURN",
@@ -736,24 +883,36 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_PassiveCheck"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_PassiveCheck_01"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_PassiveCheck_02"
     },
     {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Sushang_BP_BreakCheck_Before"
       },
       "passed": [
@@ -775,17 +934,26 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_BP_BreakCheck_Before"
     },
     {
       "name": "Find New Target",
-      "from": "All Hostile Entities (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Has Flag",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "flagName": "Break"
       },
       "ifTargetFound": [
@@ -799,7 +967,10 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "ReduceActionDelay",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variables": {
                 "parameter[0]_NormalizedValue": {
                   "operator": "Variables[0] (0.15) || RETURN",

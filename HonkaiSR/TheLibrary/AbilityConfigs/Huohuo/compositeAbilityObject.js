@@ -24,13 +24,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "Allied Team(ALL) [Exclude battle mechanics]",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Huohuo_Passive"
           },
           "ifTargetFound": [
@@ -41,12 +47,18 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "Huohuo_Rank02_ReviveCount",
                     "compareType": ">",
                     "value2": 0
@@ -56,34 +68,52 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Added Value",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "Huohuo_Passive_HotCount",
                   "value": -1,
                   "max": 2
                 },
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                   "function": "Add",
                   "valueType": "Duration"
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "Huohuo_Rank02_ReviveCount",
                   "value": -1,
                   "max": 2
                 },
                 {
                   "name": "Dispel Debuffs",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "silent": true
                 },
                 {
                   "name": "Heal",
-                  "target": "Single Target (Primary)",
-                  "healer": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "healer": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (AADF_1) || RETURN",
                     "displayLines": "AADF_1",
@@ -101,12 +131,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "Huohuo_Rank02_ReviveCount",
                         "compareType": ">",
                         "value2": 0
@@ -116,16 +152,19 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": [
-                        {
-                          "name": "Target List",
-                          "target": "All Team Members(In Context)"
-                        },
-                        {
-                          "name": "Target List",
-                          "target": "All Untargetable"
-                        }
-                      ],
+                      "to": {
+                        "name": "Join Targets",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members}}"
+                          },
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Unselectable Targets}}"
+                          }
+                        ]
+                      },
                       "modifier": "Huohuo_Eidolon2"
                     }
                   ]
@@ -134,16 +173,19 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Team Members(In Context)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "All Untargetable"
-                    }
-                  ],
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
                   "modifier": "Huohuo_Eidolon2"
                 }
               ]
@@ -161,7 +203,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Huohuo_Trace02",
           "valuePerStack": {
             "MDF_Resistance": {
@@ -185,7 +230,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Resistance",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "STAT_CTRL",
                   "value": {
                     "operator": "Variables[0] (MDF_Resistance) || RETURN",
@@ -222,7 +270,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Huohuo_Modifier"
         }
       ],
@@ -240,7 +291,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -281,7 +335,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "Huohuo_Maze_FatigueRatio[<span class=\"descriptionNumberColor\">Horror-Struck</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -338,7 +395,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Huohuo_Passive"
         },
         {
@@ -366,7 +426,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Huohuo_Eidolon1PreShow"
             }
           ],
@@ -409,7 +472,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Huohuo_Eidolon2_ReviveCount[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
               "valuePerStack": {
                 "MDF_HealRatio": {
@@ -443,13 +509,19 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Allied Team",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
             "skillType": [
               "Skill"
             ],
             "conditions": {
               "name": "Has Modifier",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Huohuo_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "invertCondition": true
             },
@@ -488,7 +560,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Huohuo_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -532,7 +607,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -582,7 +660,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -656,7 +737,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -720,7 +804,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Update Energy",
-          "on": "All Teammates (One per Pairing of Memo/Owner)",
+          "on": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Memosprites and Self)}}"
+          },
           "valuePercent": {
             "operator": "Variables[0] (0.2) || RETURN",
             "displayLines": "0.2",
@@ -734,7 +821,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "All Teammates (Excluding Owner)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
           "modifier": "Huohuo_Ability03_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -757,7 +847,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -785,7 +878,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Huohuo_Ability03_Part02",
           "isTrigger": true
         },
@@ -809,7 +905,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Dispel Debuffs",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "dispelCount": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -822,12 +921,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Huohuo_DealHeal"
         },
         {
           "name": "Heal",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.21) || RETURN",
             "displayLines": "0.21",
@@ -848,7 +953,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Heal",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.168) || RETURN",
             "displayLines": "0.168",
@@ -869,24 +977,39 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Skill Target List",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Target List}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Compare: Target",
-            "target": "Use Prior Target(s) Defined",
-            "target2": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "invertCondition": true
           }
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Huohuo_DealHeal"
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -913,7 +1036,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Huohuo_Ability02_Part02",
           "isTrigger": true
         },
@@ -929,7 +1055,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -956,7 +1085,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -983,7 +1115,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -1010,7 +1145,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -1059,7 +1197,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Huohuo_Ability01_Part02",
           "isTrigger": true
         },
@@ -1092,7 +1233,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "CurrentHP",
                         "compareType": "<=",
                         "value2": 0
@@ -1108,7 +1252,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Copy",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variable": "Huohuo_Rank02_ReviveCount",
                       "target2": null,
                       "variable2": "MDF_ReviveCount"
@@ -1137,8 +1284,14 @@ const compositeAbilityObject = {
                         }
                       },
                       "abilityName": "Huohuo_Eidolon2_Insert",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "Owner of this Modifier",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "priorityTag": "AvatarReviveOthers",
                       "ownerState": "Mask_AliveOrLimbo",
                       "targetState": "Mask_AliveOrLimbo",
@@ -1196,7 +1349,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                           },
                           {
@@ -1210,7 +1366,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Team Members(In Context, with Untargetable, NO Memosprites)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
+                          },
                           "modifier": "Huohuo_Eidolon2",
                           "valuePerStack": {
                             "MDF_HealPercentage": {
@@ -1235,7 +1394,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "All Team Members(In Context, with Untargetable)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members with Unselectables}}"
+                          },
                           "modifier": "Huohuo_Eidolon2"
                         },
                         {
@@ -1276,7 +1438,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
@@ -1316,7 +1481,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with HP%",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "CurrentHPRatio"
                     },
                     {
@@ -1356,7 +1524,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1385,7 +1556,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackUP) || RETURN",
@@ -1436,7 +1610,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (1) || RETURN",
                         "displayLines": "1",
@@ -1460,7 +1637,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Dispel Debuffs",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "dispelCount": {
                         "operator": "Variables[0] (_DispelNum) || RETURN",
                         "displayLines": "_DispelNum",
@@ -1489,12 +1669,18 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Huohuo_DealHeal"
                 },
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (HPRatio) || RETURN",
                     "displayLines": "HPRatio",
@@ -1515,15 +1701,24 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Huohuo_DealHeal"
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(Living, sort by HP)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}.[[living]].[[sortByHPCurrent]]"
+                  },
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<=",
                     "value2": {
@@ -1545,7 +1740,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
@@ -1569,7 +1767,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Dispel Debuffs",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "dispelCount": {
                             "operator": "Variables[0] (_DispelNum) || RETURN",
                             "displayLines": "_DispelNum",
@@ -1598,12 +1799,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_DealHeal"
                     },
                     {
                       "name": "Heal",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (HPRatio) || RETURN",
                         "displayLines": "HPRatio",
@@ -1624,7 +1831,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_DealHeal"
                     }
                   ]
@@ -1650,7 +1860,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (1) || RETURN",
                             "displayLines": "1",
@@ -1674,7 +1887,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Dispel Debuffs",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "dispelCount": {
                             "operator": "Variables[0] (_DispelNum) || RETURN",
                             "displayLines": "_DispelNum",
@@ -1703,12 +1919,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_DealHeal"
                     },
                     {
                       "name": "Heal",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (HPRatio) || RETURN",
                         "displayLines": "HPRatio",
@@ -1729,15 +1951,24 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_DealHeal"
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team(Living, sort by HP)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}.[[living]].[[sortByHPCurrent]]"
+                      },
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": {
@@ -1759,7 +1990,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Update Energy",
-                              "on": "Caster",
+                              "on": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "value": {
                                 "operator": "Variables[0] (1) || RETURN",
                                 "displayLines": "1",
@@ -1783,7 +2017,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Dispel Debuffs",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "dispelCount": {
                                 "operator": "Variables[0] (_DispelNum) || RETURN",
                                 "displayLines": "_DispelNum",
@@ -1812,12 +2049,18 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Huohuo_DealHeal"
                         },
                         {
                           "name": "Heal",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "healPercent": {
                             "operator": "Variables[0] (HPRatio) || RETURN",
                             "displayLines": "HPRatio",
@@ -1838,7 +2081,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Huohuo_DealHeal"
                         }
                       ]
@@ -1870,7 +2116,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Huohuo_Eidolon2"
                 }
               ]
@@ -1880,7 +2129,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "LifeTime",
                   "variableName": "Huohuo_Passive_HotCount",
                   "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
@@ -1893,7 +2145,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "LifeTime",
                   "variableName": "Huohuo_Passive_HotCount",
                   "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
@@ -1946,7 +2201,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable, NO Memosprites)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]]"
+                      },
                       "modifier": "Huohuo_Eidolon2",
                       "valuePerStack": {
                         "MDF_HealPercentage": {
@@ -2040,7 +2298,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Huohuo_Passive_HealHP",
               "haloStatus": true,
               "valuePerStack": {
@@ -2072,7 +2333,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Huohuo_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "haloStatus": true,
               "conditions": {

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_24002_Main"
     }
   ],
@@ -29,7 +32,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Shield",
-              "target": "Owner of this Modifier"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
             },
             {
               "name": "Set Shield State/Value",
@@ -42,13 +48,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Create Shield",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (_MaxHP) || Variables[1] (MDF_ShieldRatio) || MUL || RETURN",
                 "displayLines": "(_MaxHP * MDF_ShieldRatio)",
@@ -82,7 +94,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "Shield"
               },
               "passed": [
@@ -112,7 +127,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "flagName": "Shield"
                     }
                   },
@@ -120,7 +138,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_24002_CD"
                     }
                   }
@@ -129,7 +150,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -148,7 +172,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_24002_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -179,7 +206,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_24002_CD",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",

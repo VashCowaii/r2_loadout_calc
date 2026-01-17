@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Huohuo_Trace02",
       "valuePerStack": {
         "MDF_Resistance": {
@@ -30,7 +33,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Resistance",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "STAT_CTRL",
               "value": {
                 "operator": "Variables[0] (MDF_Resistance) || RETURN",

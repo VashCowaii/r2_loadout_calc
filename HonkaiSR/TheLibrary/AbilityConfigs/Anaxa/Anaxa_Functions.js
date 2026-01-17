@@ -17,7 +17,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Weakness",
-            "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Function's Target List}}"
+            },
             "DamageType": "Physical",
             "weaknessFilter": "All"
           },
@@ -26,14 +29,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Physical",
                 "weaknessFilter": "AllDefault"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoPhysical"
                 }
@@ -41,7 +50,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoPhysical",
                   "value": 0.0009999999
@@ -52,7 +64,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextTaskTemplate",
               "variableName": "TDF_NoPhysical",
               "value": 1000
@@ -63,7 +78,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Weakness",
-            "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Function's Target List}}"
+            },
             "DamageType": "Wind",
             "weaknessFilter": "All"
           },
@@ -72,14 +90,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Wind",
                 "weaknessFilter": "AllDefault"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoWind"
                 }
@@ -87,7 +111,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoWind",
                   "value": 0.0009999999
@@ -98,7 +125,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextTaskTemplate",
               "variableName": "TDF_NoWind",
               "value": 1000
@@ -109,7 +139,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Weakness",
-            "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Function's Target List}}"
+            },
             "DamageType": "Fire",
             "weaknessFilter": "All"
           },
@@ -118,14 +151,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Fire",
                 "weaknessFilter": "AllDefault"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoFire"
                 }
@@ -133,7 +172,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoFire",
                   "value": 0.0009999999
@@ -144,7 +186,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextTaskTemplate",
               "variableName": "TDF_NoFire",
               "value": 1000
@@ -155,7 +200,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Weakness",
-            "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Function's Target List}}"
+            },
             "DamageType": "Thunder",
             "weaknessFilter": "All"
           },
@@ -164,14 +212,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Thunder",
                 "weaknessFilter": "AllDefault"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoThunder"
                 }
@@ -179,7 +233,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoThunder",
                   "value": 0.0009999999
@@ -190,7 +247,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextTaskTemplate",
               "variableName": "TDF_NoThunder",
               "value": 1000
@@ -201,7 +261,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Weakness",
-            "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Function's Target List}}"
+            },
             "DamageType": "Ice",
             "weaknessFilter": "All"
           },
@@ -210,14 +273,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Ice",
                 "weaknessFilter": "AllDefault"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoIce"
                 }
@@ -225,7 +294,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoIce",
                   "value": 0.0009999999
@@ -236,7 +308,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextTaskTemplate",
               "variableName": "TDF_NoIce",
               "value": 1000
@@ -247,7 +322,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Weakness",
-            "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Function's Target List}}"
+            },
             "DamageType": "Quantum",
             "weaknessFilter": "All"
           },
@@ -256,14 +334,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Quantum",
                 "weaknessFilter": "AllDefault"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoQuantum"
                 }
@@ -271,7 +355,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoQuantum",
                   "value": 0.0009999999
@@ -282,7 +369,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextTaskTemplate",
               "variableName": "TDF_NoQuantum",
               "value": 1000
@@ -293,7 +383,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Weakness",
-            "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Function's Target List}}"
+            },
             "DamageType": "Imaginary",
             "weaknessFilter": "All"
           },
@@ -302,14 +395,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Function's Target List}}"
+                },
                 "DamageType": "Imaginary",
                 "weaknessFilter": "AllDefault"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoImaginary"
                 }
@@ -317,7 +416,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "ContextTaskTemplate",
                   "variableName": "TDF_NoImaginary",
                   "value": 0.0009999999
@@ -328,7 +430,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "ContextTaskTemplate",
               "variableName": "TDF_NoImaginary",
               "value": 1000
@@ -535,7 +640,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Function's Target List}}"
+              },
               "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -548,7 +656,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Function's Target List}}"
+              },
               "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -561,7 +672,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Function's Target List}}"
+              },
               "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -574,7 +688,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Function's Target List}}"
+              },
               "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -587,7 +704,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Function's Target List}}"
+              },
               "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -600,7 +720,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Function's Target List}}"
+              },
               "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -613,7 +736,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use [FUNCTION'S LIST OF] Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Function's Target List}}"
+              },
               "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -634,7 +760,10 @@ const configAbility = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -662,7 +791,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Use Prior Target(s) Defined",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "modifier": "M_Anaxa_Ability02_HitMark"
         }
       ]

@@ -6,13 +6,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "Arlan_MaxHPValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {
       "name": "Set HP Value",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "setValue": {
         "operator": "Variables[0] (Arlan_MaxHPValue) || Variables[1] (0.25) || MUL || RETURN",
         "displayLines": "(Arlan_MaxHPValue * 0.25)",
@@ -30,7 +36,10 @@ const configAbility = {
     },
     {
       "name": "Declare Custom Variable",
-      "target": "Owner of this Modifier",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Modifier Holder}}"
+      },
       "scope": "TargetEntity",
       "variableName": "_Arlan_00_PassiveSkill03_InsertController"
     }

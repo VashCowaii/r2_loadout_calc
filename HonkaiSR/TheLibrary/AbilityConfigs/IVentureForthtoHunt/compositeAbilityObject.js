@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23031_Main"
         }
       ],
@@ -45,7 +48,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_23031_Sub[<span class=\"descriptionNumberColor\">Luminflux</span>]",
                   "addStacksPerTrigger": -1
                 }
@@ -82,7 +88,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "_Layer",
                   "multiplier": 1
@@ -123,12 +132,18 @@ const compositeAbilityObject = {
                     "attackTypes": [
                       "Follow-up"
                     ],
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_23031_Sub[<span class=\"descriptionNumberColor\">Luminflux</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",

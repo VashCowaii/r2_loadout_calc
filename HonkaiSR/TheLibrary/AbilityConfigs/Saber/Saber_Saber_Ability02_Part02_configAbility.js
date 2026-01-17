@@ -18,19 +18,28 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "S02_SP_R",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRateSUM</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "S02_MSP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "S02_CSP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
     },
@@ -70,7 +79,10 @@ const configAbility = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "DV_SurgePoint",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (3) || RETURN",
             "displayLines": "3",
@@ -89,7 +101,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (8) || RETURN",
@@ -129,7 +144,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (15) || RETURN",
@@ -180,7 +198,10 @@ const configAbility = {
               "name": "Adjust Variable Value",
               "adjustmentType": "Overwrite Value",
               "variableName": "DV_SurgePoint",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (DV_SurgePointMax) || RETURN",
                 "displayLines": "DV_SurgePointMax",
@@ -269,7 +290,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -302,7 +326,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -334,7 +361,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -367,7 +397,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -399,7 +432,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -432,7 +468,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -464,7 +503,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -497,7 +539,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -544,7 +589,10 @@ const configAbility = {
       "name": "Adjust Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "DV_SurgePoint",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": {
         "operator": "Constants[0] (0) || Variables[0] (DV_SurgePointUse) || SUB || RETURN",
         "displayLines": "(0 - DV_SurgePointUse)",
@@ -567,7 +615,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (8) || Variables[1] (Check_Surge_Use_Before) || Variables[2] (DV_SurgePoint) || SUB || MUL || RETURN",
             "displayLines": "(8 * (Check_Surge_Use_Before - DV_SurgePoint))",

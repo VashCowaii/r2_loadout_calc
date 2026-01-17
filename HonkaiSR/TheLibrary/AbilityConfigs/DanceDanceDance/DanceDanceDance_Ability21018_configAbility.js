@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21018_Main"
     }
   ],
@@ -27,7 +30,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "advanceType": "Advance",
                   "value": "-0.16"
                 }
@@ -41,7 +47,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Allied Team",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player Team All}}"
+        },
         "skillType": [
           "Ultimate"
         ],

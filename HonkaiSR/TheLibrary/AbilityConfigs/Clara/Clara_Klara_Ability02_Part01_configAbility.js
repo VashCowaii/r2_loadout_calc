@@ -16,7 +16,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Klara_Ability02_Part02",
       "isTrigger": true
     },

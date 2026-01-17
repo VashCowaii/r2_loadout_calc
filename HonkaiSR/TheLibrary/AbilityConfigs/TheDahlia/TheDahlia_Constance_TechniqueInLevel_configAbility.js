@@ -14,12 +14,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Constance_Modifier"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Constance_Modifier_SuperBreakTrigger"
     }
   ],
@@ -37,7 +43,10 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "DealSuperBreakDamage_DamagePerformance",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "variables": {
                 "value_0_DamagePercentage": {
                   "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
@@ -52,17 +61,26 @@ const configAbility = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "PursuedDamage_PerformanceDelay",
-                  "target": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "ReadTargetType",
-                      "target": "Owner of this Modifier"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
                     },
                     "DamageBreak": {
                       "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
@@ -99,13 +117,19 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "_M_Constance_TechniqueUsage_SuperBreakTriggerFlag"
                 },
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "DealSuperBreakDamage_DamagePerformance",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "variables": {
                     "value_0_DamagePercentage": {
                       "operator": "Variables[0] (MDF_DamagePercentage) || RETURN",
@@ -120,17 +144,26 @@ const configAbility = {
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "PursuedDamage_PerformanceDelay",
-                      "target": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "ReadTargetType",
-                          "target": "Owner of this Modifier"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          }
                         },
                         "DamageBreak": {
                           "operator": "Variables[0] (value_0_DamagePercentage) || RETURN",
@@ -167,16 +200,25 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Team Members(In Context, with Untargetable)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "_M_Constance_TechniqueUsage_SuperBreak"
               },
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "_M_Constance_TechniqueUsage_SuperBreakTriggerFlag",
                   "referenceModifier": "MReference_Empty"
                 }
@@ -208,7 +250,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -231,16 +276,25 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Team Members(In Context, with Untargetable)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_TriggerBattleCharacter"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "_M_Constance_TechniqueUsage_SuperBreak",
                       "valuePerStack": {
                         "MDF_DamagePercentage": {

@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Hanya_Modifier"
         }
       ],
@@ -61,7 +64,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Enemies (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
@@ -69,7 +75,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Ability Value",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                             "compareType": ">",
                             "value2": 0
@@ -112,7 +121,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]",
                               "valuePerStack": {
                                 "MDF_Lifetime": {
@@ -159,7 +171,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "WHanya_BpZhanYin_Self"
                             }
                           ]
@@ -193,13 +208,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable",
-          "target": "Owner of this Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "variableName": "ZhanYinCount",
           "value": 0
         },
         {
           "name": "Define Custom Variable",
-          "target": "Owner of this Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "variableName": "ZhanYinCount_01",
           "value": 0
         },
@@ -227,7 +248,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Hanya_AbilityPreShowModifier"
         },
         {
@@ -239,7 +263,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Hanya_Eidolon2_Pre"
             }
           ]
@@ -256,13 +283,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "MDF_Skill03_Speed",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "MDF_Skill03_Speed_Convert",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
                 },
@@ -287,13 +320,19 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Current Visual Target(All)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
             "skillType": [
               "Ultimate"
             ],
             "conditions": {
               "name": "Has Modifier",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "WHanya_Ability03Bonus[<span class=\"descriptionNumberColor\">Edict</span>]",
               "invertCondition": true
             },
@@ -313,13 +352,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_Skill03_Speed",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_Skill03_Speed_Convert",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;"
         },
@@ -374,7 +419,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "WHanya_Ability03Bonus[<span class=\"descriptionNumberColor\">Edict</span>]",
           "duration": {
             "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
@@ -420,7 +468,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Hanya_Eidolon1_Other",
               "duration": {
                 "operator": "Variables[0] (MDF_Skill03_LifeTime) || RETURN",
@@ -442,14 +493,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Hanya_Eidolon1"
             }
           ]
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -478,7 +535,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Hanya_Ability03_Part02",
           "isTrigger": true
         }
@@ -511,7 +571,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -540,7 +603,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Ability Value",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
             "compareType": ">",
             "value2": 0
@@ -588,7 +654,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]",
               "valuePerStack": {
                 "MDF_Lifetime": {
@@ -635,7 +704,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "WHanya_BpZhanYin_Self"
             }
           ]
@@ -662,7 +734,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Hanya_Ability02_Part02",
           "isTrigger": true
         },
@@ -678,7 +753,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -725,7 +803,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Hanya_Ability01_Part02",
           "isTrigger": true
         },
@@ -774,11 +855,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   "passed": [
@@ -828,11 +918,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   "passed": [
@@ -882,11 +981,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   "passed": [
@@ -936,11 +1044,20 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   "passed": [
@@ -972,7 +1089,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1008,7 +1128,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Hanya_Eidolon2[<span class=\"descriptionNumberColor\">Two Views</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -1039,7 +1162,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Skill"
             ],
@@ -1047,7 +1173,10 @@ const compositeAbilityObject = {
               "name": "NOT",
               "condition": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Hanya_Eidolon2[<span class=\"descriptionNumberColor\">Two Views</span>]"
               }
             },
@@ -1086,7 +1215,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1156,7 +1288,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                 },
                 {
@@ -1197,7 +1332,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Enemies (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                     },
                     {
@@ -1265,7 +1403,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Enemies (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                     },
                     {
@@ -1333,7 +1474,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageUp2) || RETURN",
@@ -1364,19 +1508,31 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies(All)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 10,
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "invertCondition": true
                   },
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                     }
                   ]
@@ -1388,12 +1544,18 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                 }
               ]
@@ -1403,22 +1565,34 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                 }
               ]
@@ -1436,14 +1610,23 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "Owner of this Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_Self"
                     }
                   ]
@@ -1481,7 +1664,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "WHanya_BPRecover",
                       "valuePerStack": {
                         "MDF_RecoverValue": {
@@ -1498,7 +1684,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_Self"
                 }
               ]
@@ -1516,7 +1705,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -1524,14 +1716,26 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": "Owner of this Modifier",
-                            "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
                             "mustBeAlive2": true
                           },
                           {
                             "name": "Is Part Of",
-                            "of": "Owner of this Modifier",
-                            "target": "Use [SKILL SUB-TARGETS OF] Prior Target(s) Defined",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Sub-Targets}}"
+                            },
                             "mustBeAlive2": true
                           }
                         ]
@@ -1565,7 +1769,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Hanya_Passive_AddDamage[<span class=\"descriptionNumberColor\">Sanction</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Lifetime) || RETURN",
@@ -1591,7 +1798,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Hanya_Passive_AddDamage[<span class=\"descriptionNumberColor\">Sanction</span>]",
                           "duration": {
                             "operator": "Variables[0] (MDF_Lifetime) || RETURN",
@@ -1628,7 +1838,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -1636,14 +1849,26 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": "Owner of this Modifier",
-                            "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
                             "mustBeAlive2": true
                           },
                           {
                             "name": "Is Part Of",
-                            "of": "Owner of this Modifier",
-                            "target": "Use [SKILL SUB-TARGETS OF] Prior Target(s) Defined",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Sub-Targets}}"
+                            },
                             "mustBeAlive2": true
                           }
                         ]
@@ -1686,7 +1911,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_AttackCount",
                         "compareType": "=",
                         "value2": 1,
@@ -1695,34 +1923,52 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                         },
                         {
@@ -1783,7 +2029,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "WHanya_BPRecover",
                           "valuePerStack": {
                             "MDF_RecoverValue": 1
@@ -1798,7 +2047,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Hanya_PointB1[<span class=\"descriptionNumberColor\">Scrivener</span>]",
                               "duration": {
                                 "operator": "Variables[0] (1) || RETURN",
@@ -1830,7 +2082,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Update Energy",
-                              "on": "Caster",
+                              "on": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "value": {
                                 "operator": "Variables[0] (2) || RETURN",
                                 "displayLines": "2",
@@ -1854,44 +2109,68 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                             },
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "WHanya_BpZhanYin_Self"
                             },
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                             },
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                             },
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                             },
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                             }
                           ],
                           "failed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                             }
                           ]
@@ -1909,32 +2188,50 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target is Unselectable",
-                    "target": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_Self"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                     }
                   ]
@@ -2008,7 +2305,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "advanceType": "Advance",
                       "value": "-0.15"
                     }
@@ -2061,7 +2361,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "advanceType": "Advance",
                       "value": "-0.15"
                     }
@@ -2086,7 +2389,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (Ability03_P1_ATKRatio) || RETURN",
@@ -2111,7 +2417,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (Ability03_P3_Speed) || Variables[1] (MDF_Skill03_Speed) || MUL || RETURN",

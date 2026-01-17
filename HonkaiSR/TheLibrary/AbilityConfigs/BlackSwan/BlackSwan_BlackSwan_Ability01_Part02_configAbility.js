@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
@@ -38,7 +41,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Is Part Of Team",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "team": "TeamDark"
       },
       "passed": [
@@ -60,7 +66,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Poison"
           },
           "passed": [
@@ -84,7 +93,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Bleed"
           },
           "passed": [
@@ -108,7 +120,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Burn"
           },
           "passed": [
@@ -132,7 +147,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Electric"
           },
           "passed": [
@@ -207,7 +225,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
           "baseChance": {
             "operator": "Variables[0] (Arg01) || RETURN",

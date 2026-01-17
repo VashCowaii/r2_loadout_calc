@@ -25,7 +25,10 @@ const configAbility = {
       "Event": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_PassiveCount_QingqueSelf",
           "valuePerStack": {
             "AbilityRank_Eidolon2_P1_SPAdd": {

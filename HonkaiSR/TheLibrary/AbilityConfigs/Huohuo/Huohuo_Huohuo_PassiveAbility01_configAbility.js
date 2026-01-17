@@ -15,7 +15,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Huohuo_Passive"
     },
     {
@@ -43,7 +46,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Huohuo_Eidolon1PreShow"
         }
       ],
@@ -86,7 +92,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Huohuo_Eidolon2_ReviveCount[<span class=\"descriptionNumberColor\">Sealed in Tail, Wraith Subdued</span>]",
           "valuePerStack": {
             "MDF_HealRatio": {
@@ -120,13 +129,19 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Allied Team",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player Team All}}"
+        },
         "skillType": [
           "Skill"
         ],
         "conditions": {
           "name": "Has Modifier",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "modifier": "Huohuo_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "invertCondition": true
         },
@@ -165,7 +180,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Huohuo_Eidolon6_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -209,7 +227,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -259,7 +280,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -333,7 +357,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
@@ -32,7 +35,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Quantum",
@@ -75,12 +81,18 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Current Turn Is",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Seele_Trace02_ModifyAction",
                   "valuePerStack": {
                     "MDF_DelayCost": {
@@ -97,7 +109,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "advanceType": "Advance",
                   "value": "-0.2"
                 }
@@ -119,7 +134,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Ability01PreShowModifier_AppliedRatio",
               "valuePerStack": {
                 "MDF_Ability01_Delay": {
@@ -158,7 +176,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Basic ATK"
         ],
@@ -185,7 +206,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Action Advance/Delay",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "advanceType": "Advance",
               "value": "-0.2"
             },
@@ -200,7 +224,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Basic ATK"
         ],

@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Enemies Still Alive",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "includeNonTargets": true
       },
       "passed": [
@@ -19,7 +22,10 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Himeko_Passive1Atk02_Ability",
           "isTrigger": true
         }

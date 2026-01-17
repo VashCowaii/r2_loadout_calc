@@ -17,17 +17,26 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_ListenFlag"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_Trace02"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackLimit": {
         "operator": "Variables[0] (10) || RETURN",
@@ -73,7 +82,10 @@ const configAbility = {
       "name": "Add Battle Event",
       "teamName": "Allied Team",
       "eventID": 11203,
-      "statSource": "Caster",
+      "statSource": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variables": {
         "BattleEvent_JingYuan_BaseSpeed": {
           "operator": "Variables[0] (60) || RETURN",
@@ -108,7 +120,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster's own Created Battle Event/Summon",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Self-Made Battle-Events}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCountShowText",
       "valuePerStack": {
         "ATKCount": {
@@ -123,12 +138,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_Ability02_PreShow"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_Ability03_PreShow"
     }
   ],
@@ -255,7 +276,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Caster's own Created Battle Event/Summon",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster's Self-Made Battle-Events}}"
+        },
         "skillType": [
           "Ultimate"
         ],
@@ -393,7 +417,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Caster's own Created Battle Event/Summon",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster's Self-Made Battle-Events}}"
+        },
         "skillType": [
           "Skill"
         ],
@@ -436,7 +463,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (15) || RETURN",
                     "displayLines": "15",

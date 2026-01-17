@@ -10,8 +10,14 @@ const configAbility = {
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
-      "inherentTarget": "Single Target (Primary)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "inherentTarget": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "ability": "Mar_7th_10_Eidolon2_Insert_Part02",
       "isTrigger": true
     },

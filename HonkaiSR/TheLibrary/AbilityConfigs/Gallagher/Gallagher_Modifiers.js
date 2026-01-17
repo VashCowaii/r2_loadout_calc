@@ -18,7 +18,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoingConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -76,7 +79,10 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "MDF_CurrentBreakDamageAddedRatio",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;"
             },
@@ -125,7 +131,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Gallagher_HealRatioAddedRatio",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -154,7 +163,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.15) || INVERT || RETURN",
@@ -185,13 +197,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill01",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Hide",
               "abilityName": "Basic ATK"
             }
@@ -202,13 +220,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill11",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Show",
               "abilityName": "Basic ATK"
             }
@@ -226,7 +250,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Gallagher_NormalAttckAlter_Enable"
                 }
               ]
@@ -255,7 +282,10 @@ const configAbility = {
                 "attackTypes": [
                   "Break DMG"
                 ],
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
@@ -296,7 +326,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -313,7 +346,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Gallagher_NormalAttckAlter_Enable"
                       },
                       {
@@ -325,12 +361,18 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "searchRandom": true,
                       "ifTargetFound": [
                         {
                           "name": "Heal",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "healFlat": {
                             "operator": "Variables[0] (640) || RETURN",
                             "displayLines": "640",
@@ -346,7 +388,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Heal",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "healFlat": {
                         "operator": "Variables[0] (640) || RETURN",
                         "displayLines": "640",
@@ -382,7 +427,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -415,7 +463,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

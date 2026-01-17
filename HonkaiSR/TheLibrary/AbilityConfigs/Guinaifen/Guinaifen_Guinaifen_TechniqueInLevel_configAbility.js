@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Guinaifen_TechniqueUsage_Modifier"
     }
   ],
@@ -75,7 +78,10 @@ const configAbility = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "All Hostile Entities (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "searchRandom": true,
                       "includeDyingTargets": true,
                       "maxTargets": 1,
@@ -84,13 +90,19 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "invertCondition": true,
                             "includeNonTargets": true
                           },
                           {
                             "name": "Compare: Variable",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "value1": "CurrentHP",
                             "compareType": ">",
                             "value2": 0
@@ -100,7 +112,10 @@ const configAbility = {
                       "ifTargetFound": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Fire",
@@ -176,7 +191,10 @@ const configAbility = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Guinaifen_Oil_Sub[<span class=\"descriptionNumberColor\">Firekiss</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",

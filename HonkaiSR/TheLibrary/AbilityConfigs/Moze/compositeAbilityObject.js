@@ -32,7 +32,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_TechniqueUsage"
         }
       ],
@@ -47,7 +50,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -93,7 +99,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Moze_TechniqueUsage_DamageUpModifier[<span class=\"descriptionNumberColor\">Bated Wings</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -133,7 +142,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_InInsert_Tag"
         },
         {
@@ -180,7 +192,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -222,14 +237,20 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
                 "invertCondition": true
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -260,14 +281,20 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Moze_Ability02_InShadowModifier",
             "invertCondition": true
           }
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_InInsert_Tag"
         }
       ],
@@ -279,20 +306,29 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "STAT_CTRL",
                 "invertCondition": true
               },
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "DisableAction",
                 "invertCondition": true
               },
               {
                 "name": "Living State",
                 "state": "Mask_AliveOnly",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               {
                 "name": "Compare: Variable",
@@ -307,19 +343,28 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Enemies Still Alive",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "includeNonTargets": true
               },
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "ifTargetFound": [
                     {
@@ -330,8 +375,14 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "Use Prior Target(s) Defined",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -360,7 +411,10 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -403,7 +457,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_InInsert_Tag"
         },
         {
@@ -450,7 +507,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -499,7 +559,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Thunder",
@@ -529,12 +592,18 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Ability02_InShadowModifier"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
             }
           ]
@@ -551,14 +620,20 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
                 "invertCondition": true
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -603,7 +678,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -622,13 +700,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Moze_Ability02_InShadowModifier"
           }
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_InInsert_Tag"
         },
         {
@@ -638,20 +722,29 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "STAT_CTRL",
                 "invertCondition": true
               },
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "DisableAction",
                 "invertCondition": true
               },
               {
                 "name": "Living State",
                 "state": "Mask_AliveOnly",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               {
                 "name": "Compare: Variable",
@@ -677,8 +770,14 @@ const compositeAbilityObject = {
                 "typeValue": 1
               },
               "abilityName": "Moze_Insert_Part01",
-              "abilitySource": "Caster",
-              "abilityTarget": "Single Target (Primary)",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "priorityTag": "AvatarInsertAttackSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
@@ -698,7 +797,10 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -770,7 +872,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_ListenUnstageModifier"
         },
         {
@@ -818,7 +923,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Eidolon1_PreChangeUltraToInsertModifier"
             }
           ]
@@ -832,14 +940,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Eidolon1_AddSPModifier"
             }
           ]
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Moze_PassiveModifier"
         },
         {
@@ -868,17 +982,26 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Ability02_InShadowModifier"
                 },
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Skill"
                   ]
@@ -901,7 +1024,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "conditions": {
@@ -910,13 +1036,19 @@ const compositeAbilityObject = {
                       {
                         "name": "Character ID",
                         "ID": 1223,
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "characterName": "Moze",
                         "invertCondition": true
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Character"
                       }
                     ]
@@ -949,7 +1081,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ],
@@ -958,14 +1093,20 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Monster_W3_Aventurine_Gambling",
                         "invertCondition": true
                       },
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Moze_OnlyMozeOnStageModifier"
                         }
                       ]
@@ -984,7 +1125,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "conditions": {
@@ -993,13 +1137,19 @@ const compositeAbilityObject = {
                       {
                         "name": "Character ID",
                         "ID": 1223,
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "characterName": "Moze",
                         "invertCondition": true
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Character"
                       }
                     ]
@@ -1032,7 +1182,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ]
@@ -1049,7 +1202,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "conditions": {
@@ -1058,13 +1214,19 @@ const compositeAbilityObject = {
                       {
                         "name": "Character ID",
                         "ID": 1223,
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "characterName": "Moze",
                         "invertCondition": true
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Character"
                       }
                     ]
@@ -1097,7 +1259,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ],
@@ -1113,7 +1278,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Moze_OnlyMozeOnStageModifier"
                         }
                       ]
@@ -1139,7 +1307,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ]
@@ -1163,7 +1334,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "searchRandom": true,
                       "includeDyingTargets": true,
                       "conditions": {
@@ -1172,13 +1346,19 @@ const compositeAbilityObject = {
                           {
                             "name": "Character ID",
                             "ID": 1223,
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "characterName": "Moze",
                             "invertCondition": true
                           },
                           {
                             "name": "Is Entity Type",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "type": "Character"
                           }
                         ]
@@ -1216,7 +1396,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Moze_OnlyMozeOnStageModifier"
                         }
                       ]
@@ -1235,13 +1418,19 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "conditions": {
                     "name": "Character ID",
                     "ID": 1223,
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "characterName": "Moze",
                     "invertCondition": true
                   },
@@ -1273,7 +1462,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ],
@@ -1289,7 +1481,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Moze_OnlyMozeOnStageModifier"
                         }
                       ]
@@ -1308,13 +1503,19 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "conditions": {
                     "name": "Character ID",
                     "ID": 1223,
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "characterName": "Moze",
                     "invertCondition": true
                   },
@@ -1346,7 +1547,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_OnlyMozeOnStageModifier"
                     }
                   ],
@@ -1362,7 +1566,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Moze_OnlyMozeOnStageModifier"
                         }
                       ]
@@ -1400,19 +1607,28 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Team Count",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "variableName": "MDF_ActivePlayer",
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
                       {
                         "name": "Target is Unselectable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Is Entity a Battle Event/Summon",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -1437,18 +1653,27 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Moze_Ability02_InShadowModifier"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                     }
                   ]
@@ -1460,17 +1685,26 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Target is Unselectable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Is Entity a Battle Event/Summon",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -1501,12 +1735,18 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "All Enemies (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
                           "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Moze_Ability02_InShadowModifier"
                         }
                       ]
@@ -1527,7 +1767,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "advanceType": "Advance",
                       "value": "-0.3"
                     }
@@ -1546,20 +1789,29 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -1574,19 +1826,28 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Enemies (AOE)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
                             "state": "Mask_AliveOnly",
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           "ifTargetFound": [
                             {
@@ -1597,8 +1858,14 @@ const compositeAbilityObject = {
                                 "typeValue": 1
                               },
                               "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "Use Prior Target(s) Defined",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -1628,13 +1895,19 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_BaseSpeed",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_SpeedDelta",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;"
                     },
@@ -1652,8 +1925,14 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Compare: Target",
-                                "target": "Current Turn Owner",
-                                "target2": "Caster"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Current Turn Owner}}"
+                                },
+                                "target2": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                }
                               },
                               {
                                 "name": "Compare: Variable",
@@ -1681,7 +1960,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Action Advance/Delay",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "advanceType": "Advance",
                               "value": "-0.2"
                             }
@@ -1703,20 +1985,29 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -1731,19 +2022,28 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Enemies (AOE)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
                             "state": "Mask_AliveOnly",
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           "ifTargetFound": [
                             {
@@ -1754,8 +2054,14 @@ const compositeAbilityObject = {
                                 "typeValue": 1
                               },
                               "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "Use Prior Target(s) Defined",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -1778,7 +2084,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Ability02_InShadowModifier"
                 }
               ]
@@ -1793,20 +2102,29 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -1821,19 +2139,28 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Enemies (AOE)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
                             "state": "Mask_AliveOnly",
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           "ifTargetFound": [
                             {
@@ -1844,8 +2171,14 @@ const compositeAbilityObject = {
                                 "typeValue": 1
                               },
                               "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "Use Prior Target(s) Defined",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -1876,7 +2209,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Attack-Type Extension",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "typeToExtend": "Ultimate",
                   "isRemove": true
                 }
@@ -1887,7 +2223,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Attack-Type Extension",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "typeToExtend": "Ultimate",
                   "extendTypeTo": "Follow-up"
                 }
@@ -1904,7 +2243,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_Eidolon1_ChangeUltraToInsertModifier"
                 }
               ]
@@ -1921,7 +2263,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_Eidolon1_ChangeUltraToInsertModifier"
                     }
                   ]
@@ -1950,7 +2295,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (20) || RETURN",
                         "displayLines": "20",
@@ -1987,7 +2335,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Ability03_DamageAddModifier[<span class=\"descriptionNumberColor\">Heathprowler</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -2012,7 +2363,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -2042,7 +2396,10 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Living State",
             "state": "Mask_AliveOnly",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           },
           "passed": [
             {
@@ -2053,8 +2410,14 @@ const compositeAbilityObject = {
                 "typeValue": 1
               },
               "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-              "abilitySource": "Caster",
-              "abilityTarget": "Single Target (Primary)",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "priorityTag": "AvatarInsertAttackSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
@@ -2068,13 +2431,19 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Find New Target",
-              "from": "All Enemies (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Living State",
                 "state": "Mask_AliveOnly",
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "ifTargetFound": [
                 {
@@ -2085,8 +2454,14 @@ const compositeAbilityObject = {
                     "typeValue": 1
                   },
                   "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Use Prior Target(s) Defined",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -2102,13 +2477,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "All Enemies (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
           }
         },
@@ -2126,7 +2507,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageAddRatio) || RETURN",
@@ -2158,7 +2542,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Attack-Type Extension",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "typeToExtend": "Ultimate",
                   "isRemove": true
                 }
@@ -2169,7 +2556,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Attack-Type Extension",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "typeToExtend": "Ultimate",
                   "extendTypeTo": "Follow-up"
                 }
@@ -2180,7 +2570,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_Moze_Ultimate_AddRegardAsAttackType"
                 }
               ]
@@ -2215,7 +2608,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Moze_Ability03_Part02",
           "isTrigger": true
         }
@@ -2232,7 +2628,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Moze_Ability02_InShadowModifier"
           }
         }
@@ -2247,12 +2646,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -2278,7 +2683,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -2304,7 +2712,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -2337,11 +2748,17 @@ const compositeAbilityObject = {
               {
                 "name": "Living State",
                 "state": "Mask_AliveOrRevivable",
-                "target": "Single Target (Primary)"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                }
               },
               {
                 "name": "Target is Unselectable",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "invertCondition": true
               }
             ]
@@ -2349,7 +2766,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Ability02_InShadowModifier"
             }
           ]
@@ -2359,7 +2779,10 @@ const compositeAbilityObject = {
           "conditions": {
             "name": "Living State",
             "state": "Mask_AliveOnly",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "invertCondition": true
           },
           "passed": [
@@ -2393,7 +2816,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Moze_Ability02_Part02",
           "isTrigger": true
         }
@@ -2411,7 +2837,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Thunder",
@@ -2461,7 +2890,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Moze_Ability01_Part02",
           "isTrigger": true
         }
@@ -2529,7 +2961,10 @@ const compositeAbilityObject = {
                 "Assign DEPARTED(Modifier: Standard_Departed)",
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Basic ATK",
                     "Skill"
@@ -2603,7 +3038,10 @@ const compositeAbilityObject = {
                     "attackTypes": [
                       "Follow-up"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
@@ -2651,14 +3089,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": ">",
                     "value2": 0
@@ -2666,7 +3110,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Moze_Ability02_InShadowModifier"
                     }
                   ]
@@ -2675,7 +3122,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Deathrattle",
                     "invertCondition": true
                   }
@@ -2699,7 +3149,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Moze_Ability02_InShadowModifier"
                     },
                     "Modifier Deletes Itself"
@@ -2768,7 +3221,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -2792,18 +3248,27 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "PursuedDamage_PerformanceDelay",
-                      "target": "Owner of this Modifier"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -2829,7 +3294,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -2846,7 +3314,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Moze_InInsert_Tag",
                         "invertCondition": true
                       },
@@ -3055,8 +3526,14 @@ const compositeAbilityObject = {
                                 "typeValue": 1
                               },
                               "abilityName": "Moze_Insert_Part01",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "Owner of this Modifier",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -3100,11 +3577,20 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       }
                     ]
@@ -3142,18 +3628,27 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Moze_Ability02_InShadowModifier"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                     }
                   ]
@@ -3187,8 +3682,14 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "Moze_Insert_Part01",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "Owner of this Modifier",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -3207,7 +3708,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Ability02_InShadowModifier"
                 },
                 "Modifier Deletes Itself"
@@ -3262,7 +3766,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Basic ATK"
                   ]

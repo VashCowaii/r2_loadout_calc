@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -32,7 +35,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -57,18 +63,27 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Single Target (Primary) + Blast (Adjacent)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{ST and Blast}}"
+      },
       "searchRandom": true,
       "includeDyingTargets": true,
       "conditions": {
         "name": "Has Flag",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "flagName": "STAT_DOT_Burn"
       },
       "ifTargetFound": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (5) || RETURN",
             "displayLines": "5",
@@ -93,7 +108,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Blast (Adjacent)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -140,7 +158,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Heal",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (0.05) || RETURN",
                 "displayLines": "0.05",
@@ -155,7 +176,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -205,7 +229,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
       "duration": {
         "operator": "Variables[0] (2) || Variables[1] (Rank_LifeTime) || ADD || RETURN",
@@ -238,7 +265,10 @@ const configAbility = {
     },
     {
       "name": "Update Ability Binding",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "abilityName": "Skill02",
       "skillSlot": "Skill",
       "enableSecondaryType": "ControlSkill02"
@@ -252,13 +282,19 @@ const configAbility = {
     },
     {
       "name": "Define Modifier Variable",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifierName": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
       "function": "Add"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Hook_Eidolon1_AddDamageRatio"
     },
     "Trigger: Ability End"

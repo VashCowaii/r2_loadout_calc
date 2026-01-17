@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23051_Main"
     }
   ],
@@ -23,7 +26,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count",
-                "target": "[MEMOSPRITE or SUMMON OF] Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getMemoAndSummon]]"
+                },
                 "compareType": ">",
                 "value2": 0
               },
@@ -59,7 +65,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -94,7 +103,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "LC_23051_Sub[<span class=\"descriptionNumberColor\">Redoubt</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -125,7 +137,10 @@ const configAbility = {
                 },
                 {
                   "name": "Heal",
-                  "target": "All Team Members(In Context)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (0.1) || RETURN",
                     "displayLines": "0.1",
@@ -137,12 +152,18 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Team Members(In Context, by HP)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}.[[sortByHPCurrent]]"
+                  },
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "Heal",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (0.1) || RETURN",
                         "displayLines": "0.1",

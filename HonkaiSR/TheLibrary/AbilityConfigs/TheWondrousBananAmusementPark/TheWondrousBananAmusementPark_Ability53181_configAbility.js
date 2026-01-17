@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_318_Main"
     }
   ],
@@ -20,7 +23,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.32) || RETURN",
@@ -107,21 +113,30 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count",
-                "target": "Caster's Associated Memosprites/Summons",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}.[[getMemoAndSummon]]"
+                },
                 "compareType": ">",
                 "value2": 0
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Relic_318_Sub[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]"
                 }
               ],
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Relic_318_Sub[<span class=\"descriptionNumberColor\">The Wondrous BananAmusement Park</span>]"
                 }
               ]

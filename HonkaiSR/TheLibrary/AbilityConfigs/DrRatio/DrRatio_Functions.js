@@ -15,12 +15,18 @@ const configAbility = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Dr_Ratio_Insert_Flag"
           },
           "ifTargetFound": [
@@ -32,8 +38,14 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
-              "abilitySource": "Caster",
-              "abilityTarget": "Use Prior Target(s) Defined",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "priorityTag": "AvatarInsertAttackSelf",
               "showInActionOrder": true,
               "abortFlags": [
@@ -46,7 +58,10 @@ const configAbility = {
           "noTargetFound": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
@@ -54,13 +69,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Target Exists",
-                    "target": "Use Prior Target(s) Defined[SUMMONER OF]",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Summoner of Parameter Target}}"
+                    },
                     "living": true
                   },
                   {
                     "name": "Living State",
                     "state": "Anyone",
-                    "target": "Use Prior Target(s) Defined[SUMMONER OF]",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Summoner of Parameter Target}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -74,8 +95,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Use Prior Target(s) Defined",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -88,7 +115,10 @@ const configAbility = {
               "noTargetFound": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
@@ -100,8 +130,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "Use Prior Target(s) Defined",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "showInActionOrder": true,
                       "abortFlags": [

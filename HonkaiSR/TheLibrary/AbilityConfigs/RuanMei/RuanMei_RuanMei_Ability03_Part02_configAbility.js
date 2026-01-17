@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "RuanMei_PassiveArea",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -39,7 +42,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "RuanMei_PassiveArea",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -64,7 +70,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -114,7 +123,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "RuanMei_PassiveArea",
                       "value": {
                         "operator": "Variables[0] (MDF_LifeTime) || RETURN",
@@ -162,7 +174,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "RuanMei_PassiveArea",
                       "value": {
                         "operator": "Variables[0] (MDF_LifeTime) || RETURN",

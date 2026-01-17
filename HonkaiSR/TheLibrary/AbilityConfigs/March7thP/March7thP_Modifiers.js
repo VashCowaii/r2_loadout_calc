@@ -29,7 +29,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Shield",
-              "target": "Owner of this Modifier"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
             },
             {
               "name": "Set Shield State/Value",
@@ -51,7 +54,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
                     "displayLines": "MDF_HealPercentage",
@@ -94,7 +100,10 @@ const configAbility = {
             },
             {
               "name": "Create Shield",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
                 "displayLines": "MDF_ShieldValue",
@@ -115,7 +124,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Aggro%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_AggroUp) || RETURN",
@@ -157,12 +169,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Shield"
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   {
@@ -176,7 +194,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "March7th_BPAbility_Shield_Mark"
                 }
               ]
@@ -197,8 +218,14 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Mar_7th_PassiveAbility01_InsertAbility",
-              "abilitySource": "Caster",
-              "abilityTarget": "Owner of this Modifier",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "priorityTag": "AvatarInsertAttackSelf",
               "showInActionOrder": true,
               "abortFlags": [
@@ -209,7 +236,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "March7th_BPAbility_Shield_Mark",
               "onlyRemoveOwnersInstance": true
             }
@@ -230,15 +260,24 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_CTRL_Frozen"
                   },
                   "passed": [

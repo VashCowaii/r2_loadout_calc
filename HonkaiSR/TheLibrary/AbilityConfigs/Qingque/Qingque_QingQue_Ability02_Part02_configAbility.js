@@ -62,7 +62,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackLimit": {
             "operator": "Variables[0] (4) || RETURN",
@@ -89,7 +92,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_BPAbility_DamageUp[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackLimit": {
             "operator": "Variables[0] (4) || RETURN",
@@ -136,7 +142,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Eidolon4_ATK[<span class=\"descriptionNumberColor\">Self-Sufficer</span>]"
             }
           ]
@@ -145,7 +154,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -163,7 +175,10 @@ const configAbility = {
       "Event": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_PassiveCount_QingqueSelf",
           "valuePerStack": {
             "AbilityRank_Eidolon2_P1_SPAdd": {
@@ -196,7 +211,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Ability11PreShowModifier"
             }
           ]
@@ -211,19 +229,28 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Tiao",
           "removeAllInstances": true
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Tong",
           "removeAllInstances": true
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Wan",
           "removeAllInstances": true
         },
@@ -249,7 +276,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -264,7 +294,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Hu_Flag_Tiao"
         }
       ],
@@ -287,7 +320,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Ability11PreShowModifier"
                 }
               ]
@@ -302,19 +338,28 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Tiao",
               "removeAllInstances": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Tong",
               "removeAllInstances": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Wan",
               "removeAllInstances": true
             },
@@ -340,7 +385,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -355,7 +403,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "QingQue_Passive_Hu_Flag_Wan"
             }
           ],
@@ -378,7 +429,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "QingQue_Ability11PreShowModifier"
                     }
                   ]
@@ -393,19 +447,28 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Tiao",
                   "removeAllInstances": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Tong",
                   "removeAllInstances": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Wan",
                   "removeAllInstances": true
                 },
@@ -431,7 +494,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Hu[<span class=\"descriptionNumberColor\">Hidden Hand</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -446,7 +512,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Hu_Flag_Tong"
                 }
               ],
@@ -455,7 +524,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target has Extra-Turn Queued",
-                    "target": "Allied Team"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player Team All}}"
+                    }
                   },
                   "passed": [
                     {

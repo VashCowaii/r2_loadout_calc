@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Moze_InInsert_Tag"
     },
     {
@@ -53,7 +56,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
@@ -95,14 +101,20 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
             "invertCondition": true
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Point01_CD[<span class=\"descriptionNumberColor\">Nightfeather</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -133,14 +145,20 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Moze_Ability02_InShadowModifier",
         "invertCondition": true
       }
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Moze_InInsert_Tag"
     }
   ],
@@ -152,20 +170,29 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Flag",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "flagName": "STAT_CTRL",
             "invertCondition": true
           },
           {
             "name": "Has Flag",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "flagName": "DisableAction",
             "invertCondition": true
           },
           {
             "name": "Living State",
             "state": "Mask_AliveOnly",
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           },
           {
             "name": "Compare: Variable",
@@ -180,19 +207,28 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Enemies Still Alive",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "includeNonTargets": true
           },
           "passed": [
             {
               "name": "Find New Target",
-              "from": "All Enemies (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Living State",
                 "state": "Mask_AliveOnly",
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "ifTargetFound": [
                 {
@@ -203,8 +239,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "Moze_Insert_Part01_Eidolon6Extra",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Use Prior Target(s) Defined",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -233,7 +275,10 @@ const configAbility = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {

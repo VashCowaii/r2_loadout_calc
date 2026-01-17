@@ -13,7 +13,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_127_Main"
         }
       ],
@@ -28,7 +31,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.15) || RETURN",
@@ -56,7 +62,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.24) || RETURN",
@@ -80,7 +89,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "Relic_127_Sub4[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
               "haloStatus": true
             }
@@ -92,7 +104,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster + Memosprite",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}} + {{Caster's Memosprite}}"
+              },
               "modifier": "Relic_127_Sub3[<span class=\"descriptionNumberColor\">World-Remaking Deliverer</span>]",
               "haloStatus": true
             }
@@ -125,7 +140,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "Caster (Memosprite)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Memosprite}}"
+                        },
                         "compareType": ">=",
                         "value2": 1,
                         "livingTargets": true
@@ -133,24 +151,36 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Relic_127_Sub1"
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Relic_127_Sub2"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Relic_127_Sub1"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Relic_127_Sub2"
                         }
                       ]

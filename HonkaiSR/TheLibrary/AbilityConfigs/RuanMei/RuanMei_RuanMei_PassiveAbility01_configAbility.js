@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "RuanMei_Passive"
     },
     {
@@ -42,7 +45,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "RuanMei_Tree02_RecoverSP",
           "valuePerStack": {
             "Trace_PointB2_P1_SP": {
@@ -72,7 +78,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.1) || RETURN",
@@ -100,7 +109,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "DV_Passive_Damage_MaxStance",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
               "warningType": "MaxToughness"
@@ -124,7 +136,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -163,19 +178,31 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Base Break Damage",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "_BreakBaseDamage"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "_BreakDamageAddedRatio",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                 },
@@ -217,7 +244,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "RuanMei_Passive_TriggerBreakDamage",
                   "valuePerStack": {
                     "MDF_BreakBaseDamage_set": {
@@ -261,7 +291,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "RuanMei_PassiveArea_PenetrateUP"
             }
           ]
@@ -273,7 +306,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "RuanMei_Ability02_Area"
               },
               "passed": [
@@ -336,7 +372,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
               "modifier": "RuanMei_Passive_SpeedUp[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]"
             },
             {
@@ -348,7 +387,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "RuanMei_BreakDamageAdded[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
                   "valuePerStack": {
                     "Trace_PointB1_P1_BreakDamageAdded": {
@@ -372,13 +414,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "RuanMei_Passive_SpeedUp[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]"
                 },
                 {
@@ -390,7 +438,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "RuanMei_BreakDamageAdded[<span class=\"descriptionNumberColor\">Inert Respiration</span>]",
                       "valuePerStack": {
                         "Trace_PointB1_P1_BreakDamageAdded": {
@@ -414,7 +465,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "RuanMei_AttackBreakEnemyAttackUp[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
                       "valuePerStack": {
                         "AbilityRank_Eidolon2_P1_AttackUpRatio": {
@@ -435,7 +489,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
@@ -448,14 +505,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "RuanMei_Eidolon4_PassiveListenBreak"
                     }
                   ]
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "RuanMei_Passive_ListenBeingBreakOrHit"
                 }
               ]
@@ -467,23 +530,35 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "RuanMei_Passive_SpeedUp[<span class=\"descriptionNumberColor\">Somatotypical Helix</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "RuanMei_Passive_TriggerBreakDamage"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "RuanMei_BreakDamageAdded[<span class=\"descriptionNumberColor\">Inert Respiration</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "RuanMei_AttackBreakEnemyAttackUp[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]"
             }
           ]
@@ -500,7 +575,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "RuanMei_AttackBreakEnemyAttackUp[<span class=\"descriptionNumberColor\">Reedside Promenade</span>]",
                   "valuePerStack": {
                     "AbilityRank_Eidolon2_P1_AttackUpRatio": {
@@ -524,12 +602,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "RuanMei_Eidolon4_PassiveStackProperty"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "RuanMei_Eidolon4_PassiveListenBreak"
                 }
               ]
@@ -543,7 +627,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "RuanMei_Tree03_BreakDamageAddedValueShow"
                 }
               ],
@@ -564,7 +651,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "All Enemies (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "modifier": "RuanMei_Passive_ListenBeingBreakOrHit"
             }
           ],

@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Herta_Trace02_Resistance",
           "valuePerStack": {
             "MDF_Resistance": {
@@ -48,7 +51,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Resistance",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "STAT_CTRL",
                   "value": {
                     "operator": "Variables[0] (MDF_Resistance) || RETURN",
@@ -85,7 +91,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Technique_Herta_Modifier"
         }
       ],
@@ -100,7 +109,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -137,7 +149,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Herta_TechniqueUsage_AttackRatioUp[<span class=\"descriptionNumberColor\">It Can Still Be Optimized</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -177,7 +192,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Herta_Passive_Flag"
         },
         {
@@ -203,7 +221,10 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Enemies Still Alive",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               }
             ]
           },
@@ -245,7 +266,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Herta_AbilityEidolon2_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",
@@ -277,7 +301,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Herta_AbilityEidolon4_DamageUp",
                   "valuePerStack": {
                     "AbilityRank_Eidolon4_P1_DamagePercentage": {
@@ -294,7 +321,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -325,19 +355,28 @@ const compositeAbilityObject = {
                 "name": "NOT",
                 "condition": {
                   "name": "Enemies Still Alive",
-                  "target": "Caster"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
                 }
               },
               "passed": [
                 "Trigger: Attack End",
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Herta_AbilityEidolon4_DamageUp"
                 },
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Herta_Count"
                 },
@@ -348,13 +387,19 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Herta_Count_ATK"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Herta_Passive_ATK"
                 }
               ],
@@ -376,23 +421,35 @@ const compositeAbilityObject = {
                     "Trigger: Attack End",
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Herta_AbilityEidolon4_DamageUp"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Herta_Passive_ATK"
                     },
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "Herta_Count_ATK"
                     },
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "Herta_Count"
                     },
@@ -404,7 +461,10 @@ const compositeAbilityObject = {
                     "Trigger: Skip Death Handling",
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "Herta_Count"
                     }
@@ -412,7 +472,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Herta_AbilityEidolon4_DamageUp"
                     }
                   ]
@@ -423,7 +486,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Herta_Passive_Flag"
         }
       ],
@@ -465,14 +531,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Count",
                   "multiplier": 1
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_CriticalChance) || Variables[1] (MDF_Count) || MUL || RETURN",
@@ -519,7 +591,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Herta_Passive"
         },
         {
@@ -558,7 +633,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -587,7 +665,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                     "compareType": "<=",
                     "value2": {
@@ -608,17 +689,29 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Use Secondary Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target 2}}"
+                            },
                             "team": "TeamLight"
                           },
                           {
                             "name": "Target Is Hostile",
-                            "target": "Use Prior Target(s) Defined",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           {
                             "name": "Compare: Variable",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "value1": "MAvatar_Herta_Passive_CoolDown",
                             "compareType": "=",
                             "value2": {
@@ -634,7 +727,10 @@ const compositeAbilityObject = {
                             "name": "NOT",
                             "condition": {
                               "name": "Has Flag",
-                              "target": "Caster",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "flagName": "STAT_CTRL"
                             }
                           }
@@ -645,17 +741,26 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Enemies Still Alive",
-                            "target": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "Herta_Passive_ATK"
                             },
                             {
                               "name": "Declare Custom Variable",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "scope": "TargetEntity",
                               "variableName": "MAvatar_Herta_Passive_CoolDown",
                               "value": 1
@@ -692,7 +797,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Declare Custom Variable",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "scope": "TargetEntity",
                           "variableName": "MAvatar_Herta_Passive_CoolDown",
                           "value": 1
@@ -708,7 +816,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Ability Value",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                         "compareType": ">",
                         "value2": {
@@ -726,7 +837,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "MAvatar_Herta_Passive_CoolDown"
                     }
@@ -754,7 +868,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Herta_Passive_ATK"
                 }
               ]
@@ -780,20 +897,29 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "ifTargetFound": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_CTRL_Frozen"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Herta_Trace03_AddDamageUp",
                       "valuePerStack": {
                         "MDF_AllDamageTakenRatio": {
@@ -814,7 +940,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -848,7 +977,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Herta_AbilityEidolon6_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -875,7 +1007,10 @@ const compositeAbilityObject = {
         "Trigger: Skip Death Handling",
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Herta_Trace03_AddDamageUp"
         },
         "Trigger: Ability End"
@@ -891,7 +1026,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
@@ -962,7 +1100,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Herta_Ability03_Part02",
           "isTrigger": true
         }
@@ -985,12 +1126,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Herta_Ability02_CheckHp"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -1017,7 +1164,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -1045,7 +1195,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Herta_Ability02_CheckHp"
         },
         "Trigger: Ability End"
@@ -1060,7 +1213,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -1068,7 +1224,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
@@ -1141,7 +1300,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Herta_Ability02_Part02",
           "isTrigger": true
         },
@@ -1164,7 +1326,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Herta_Ability01_CheckHp"
             }
           ]
@@ -1178,7 +1343,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -1213,7 +1381,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",
@@ -1237,7 +1408,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -1266,7 +1440,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Herta_Ability01_CheckHp"
         },
         {
@@ -1286,7 +1463,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
@@ -1294,7 +1474,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                     "compareType": "<=",
                     "value2": {
@@ -1341,7 +1524,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Herta_Ability01_Part02",
           "isTrigger": true
         },
@@ -1391,12 +1577,18 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Herta_Passive_Flag",
                         "invertCondition": true
                       }
@@ -1410,7 +1602,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Enemies Still Alive",
-                            "target": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           }
                         ]
                       },
@@ -1433,8 +1628,14 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Herta_PassiveAtkReady_Ability",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -1468,7 +1669,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "multiplier": 1

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Team Count",
-      "target": "All Enemies (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
       "variableName": "S11_Alive_Count",
       "livingTargets": true
     },
@@ -23,7 +26,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
             }
           ]
@@ -38,7 +44,10 @@ const configAbility = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "DV_SurgePoint",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -57,7 +66,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Trace03_Bonus_02[<span class=\"descriptionNumberColor\">Crown of the Star</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (8) || RETURN",
@@ -97,7 +109,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Saber_Eidolon2_Bonus[<span class=\"descriptionNumberColor\">The Lost Oath of the Round Table</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (15) || RETURN",
@@ -143,7 +158,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Enemies (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -190,7 +208,10 @@ const configAbility = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "All Enemies (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -214,7 +235,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "All Enemies (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -236,7 +260,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Enemies (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -270,7 +297,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Saber_Wind_Ability03_buff"
         }
       ]

@@ -15,17 +15,26 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Tiao"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Tong"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "QingQue_Passive_Wan"
         },
         {
@@ -86,7 +95,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Wan"
                         },
                         {
@@ -107,7 +119,10 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Tong"
                         },
                         {
@@ -157,7 +172,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Wan"
                         },
                         {
@@ -169,7 +187,10 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Tiao"
                         },
                         {
@@ -199,7 +220,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tong"
                             },
                             {
@@ -211,7 +235,10 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tiao"
                             },
                             {
@@ -238,7 +265,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Wan"
                 },
                 {
@@ -268,7 +298,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Tong"
                 },
                 {
@@ -298,7 +331,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "QingQue_Passive_Tiao"
                 },
                 {
@@ -362,7 +398,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Tiao"
                         },
                         {
@@ -392,7 +431,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Wan"
                         },
                         {
@@ -422,7 +464,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Tiao"
                         },
                         {
@@ -452,7 +497,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Wan"
                         },
                         {
@@ -493,7 +541,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tong"
                             },
                             {
@@ -523,7 +574,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Wan"
                             },
                             {
@@ -553,7 +607,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tong"
                             },
                             {
@@ -583,7 +640,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Wan"
                             },
                             {
@@ -624,7 +684,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -654,7 +717,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tiao"
                                 },
                                 {
@@ -684,7 +750,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -714,7 +783,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tiao"
                                 },
                                 {
@@ -775,7 +847,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Wan"
                                 },
                                 {
@@ -803,7 +878,10 @@ const configAbility = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tiao"
                                     },
                                     {
@@ -824,7 +902,10 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tong"
                                     },
                                     {
@@ -887,7 +968,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Wan"
                         },
                         {
@@ -897,7 +981,10 @@ const configAbility = {
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "QingQue_Passive_Tiao"
                         },
                         {
@@ -918,7 +1005,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Wan"
                             },
                             {
@@ -928,7 +1018,10 @@ const configAbility = {
                             },
                             {
                               "name": "Remove Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "QingQue_Passive_Tong"
                             },
                             {
@@ -949,7 +1042,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tiao"
                                 },
                                 {
@@ -959,7 +1055,10 @@ const configAbility = {
                                 },
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -1000,7 +1099,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Wan"
                                 },
                                 {
@@ -1012,7 +1114,10 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tiao"
                                 },
                                 {
@@ -1042,7 +1147,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -1054,7 +1162,10 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tiao"
                                 },
                                 {
@@ -1084,7 +1195,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Wan"
                                 },
                                 {
@@ -1096,7 +1210,10 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tong"
                                 },
                                 {
@@ -1146,7 +1263,10 @@ const configAbility = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Wan"
                                     },
                                     {
@@ -1158,7 +1278,10 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tong"
                                     },
                                     {
@@ -1190,7 +1313,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Wan"
                                 },
                                 {
@@ -1202,7 +1328,10 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Remove Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "QingQue_Passive_Tiao"
                                 },
                                 {
@@ -1252,7 +1381,10 @@ const configAbility = {
                                   "passed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tong"
                                     },
                                     {
@@ -1264,7 +1396,10 @@ const configAbility = {
                                   "failed": [
                                     {
                                       "name": "Remove Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "QingQue_Passive_Tiao"
                                     },
                                     {
@@ -1308,7 +1443,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {

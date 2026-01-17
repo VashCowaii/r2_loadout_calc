@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Find New Target",
-      "from": "All Hostile Entities (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Has Modifier",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "modifier": "Dr_Ratio_Insert_Flag"
       },
       "ifTargetFound": [
@@ -22,8 +28,14 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
-          "inherentTarget": "Use Prior Target(s) Defined",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "ability": "Dr_Ratio_PassiveAbility01_Insert_Part02",
           "isTrigger": true
         }
@@ -36,8 +48,14 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
-          "inherentTarget": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ability": "Dr_Ratio_PassiveAbility01_Insert_Part02",
           "isTrigger": true
         }
@@ -58,30 +76,45 @@ const configAbility = {
           },
           {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Dr_Ratio_Insert_Flag_Caster"
           },
           {
             "name": "Has Flag",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "flagName": "STAT_CTRL",
             "invertCondition": true
           },
           {
             "name": "Has Flag",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "flagName": "DisableAction",
             "invertCondition": true
           },
           {
             "name": "Enemies Still Alive",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "includeNonTargets": true
           },
           {
             "name": "Living State",
             "state": "Mask_AliveOnly",
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           },
           {
             "name": "Compare: Variable",

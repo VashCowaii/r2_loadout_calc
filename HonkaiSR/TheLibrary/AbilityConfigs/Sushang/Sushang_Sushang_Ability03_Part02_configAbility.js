@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Physical",
@@ -34,12 +37,18 @@ const configAbility = {
     {
       "name": "Action Advance/Delay",
       "advanceType": "Set",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": 0
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",

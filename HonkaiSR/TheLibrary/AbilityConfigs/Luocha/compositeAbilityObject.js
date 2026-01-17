@@ -25,7 +25,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Luocha_Trace03",
           "valuePerStack": {
             "MDF_Resistance": {
@@ -49,7 +52,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Resistance",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "STAT_CTRL",
                   "value": {
                     "operator": "Variables[0] (MDF_Resistance) || RETURN",
@@ -86,7 +92,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Technique_Luocha_Modifier"
         }
       ],
@@ -109,7 +118,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
                       "valuePerStack": {
                         "MDF_PassiveLayer": {
@@ -157,7 +169,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luocha_Passive01_HealHPArea",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -228,12 +243,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luocha_Passive01_InsertMark"
         }
       ],
@@ -251,7 +272,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -280,7 +304,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
@@ -307,7 +334,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Heal",
-                      "target": "[ALL TEAMMATES OF] Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
                         "displayLines": "MDF_PropertyValueSkillTreeB2",
@@ -344,7 +374,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                     "displayLines": "MDF_PropertyValue",
@@ -371,7 +404,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Heal",
-                      "target": "[ALL TEAMMATES OF] Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
                         "displayLines": "MDF_PropertyValueSkillTreeB2",
@@ -443,7 +479,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Luocha_Passive01_HealHPSelf[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
               "duration": {
                 "operator": "Variables[0] (MDF_LifeTime) || RETURN",
@@ -490,7 +529,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Teammates + Unselectable (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
               "modifier": "Luocha_Passive01_HealHP[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
               "haloStatus": true,
               "valuePerStack": {
@@ -530,7 +572,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Luocha_Eidolon1_ATKUp[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
               "haloStatus": true,
               "conditions": {
@@ -550,7 +595,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Luocha_Eidolon4_Fatigue[<span class=\"descriptionNumberColor\">Weaken</span>]",
               "haloStatus": true,
               "conditions": {
@@ -585,29 +633,35 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": [
-            {
-              "name": "Join Targets",
-              "TargetList": [
-                {
-                  "name": "Target List",
-                  "target": "All Teammates (Excluding Owner)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "Caster"
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
+                ]
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Is Entity a Battle Event/Summon",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "invertCondition": true
                 }
-              ]
-            },
-            {
-              "name": "Target Filter",
-              "conditions": {
-                "name": "Is Entity a Battle Event/Summon",
-                "target": "Use Prior Target(s) Defined",
-                "invertCondition": true
               }
-            }
-          ],
+            ]
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
@@ -615,36 +669,48 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Target Has Lowest/Highest Value",
-                "target": "Use Prior Target(s) Defined",
-                "partOf": [
-                  {
-                    "name": "Join Targets",
-                    "TargetList": [
-                      {
-                        "name": "Target List",
-                        "target": "All Teammates (Excluding Owner)"
-                      },
-                      {
-                        "name": "Target List",
-                        "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "partOf": {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Join Targets",
+                      "TargetList": [
+                        {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Target Filter",
+                      "conditions": {
+                        "name": "Is Entity a Battle Event/Summon",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
                       }
-                    ]
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Is Entity a Battle Event/Summon",
-                      "target": "Use Prior Target(s) Defined",
-                      "invertCondition": true
                     }
-                  }
-                ],
+                  ]
+                },
                 "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
                 "minOrMax": "Min"
               },
               {
                 "name": "Compare: Variable",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "CurrentHP",
                 "compareType": ">",
                 "value2": 0
@@ -656,7 +722,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
@@ -671,7 +740,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_Passive01_HealHPCD[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -684,19 +756,31 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Luocha_InsertAbility02_Mark"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_InsertAbility02_Retarget"
                 },
                 "Deleted bullshit",
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
-                  "inherentTarget": "Use Prior Target(s) Defined",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "ability": "Luocha_Ability02_Part02",
                   "isTrigger": true
                 }
@@ -704,12 +788,18 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Luocha_InsertAbility02_Mark"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_InsertAbility02_Retarget"
                 },
                 {
@@ -725,12 +815,18 @@ const compositeAbilityObject = {
       "onAbort": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Luocha_InsertAbility02_Mark"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luocha_InsertAbility02_Retarget"
         },
         {
@@ -745,12 +841,18 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "STAT_CTRL"
               },
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "DisableAction"
               }
             ]
@@ -760,18 +862,27 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Luocha_Passive01_InsertMark"
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_Passive01_InsertMark"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_Passive01_DisableActionInsertMark"
                 }
               ]
@@ -800,7 +911,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luocha_Passive01_QuickHealthHP",
           "valuePerStack": {
             "MDF_HPRatio": {
@@ -833,8 +947,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Luocha_Ability02_InsertAbility",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Owner of this Modifier",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "priorityTag": "AvatarHealOthers",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -851,7 +971,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_InsertAbility02_Retarget"
                 }
               ]
@@ -867,65 +990,83 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": [
-                    {
-                      "name": "Join Targets",
-                      "TargetList": [
-                        {
-                          "name": "Target List",
-                          "target": "All Teammates (Excluding Owner)"
-                        },
-                        {
-                          "name": "Target List",
-                          "target": "Caster"
+                  "from": {
+                    "name": "Target Sequence",
+                    "Sequence": [
+                      {
+                        "name": "Join Targets",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Target Filter",
+                        "conditions": {
+                          "name": "Is Entity a Battle Event/Summon",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "invertCondition": true
                         }
-                      ]
-                    },
-                    {
-                      "name": "Target Filter",
-                      "conditions": {
-                        "name": "Is Entity a Battle Event/Summon",
-                        "target": "Use Prior Target(s) Defined",
-                        "invertCondition": true
                       }
-                    }
-                  ],
+                    ]
+                  },
                   "maxTargets": 1,
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
                       {
                         "name": "Target Has Lowest/Highest Value",
-                        "target": "Use Prior Target(s) Defined",
-                        "partOf": [
-                          {
-                            "name": "Join Targets",
-                            "TargetList": [
-                              {
-                                "name": "Target List",
-                                "target": "All Teammates (Excluding Owner)"
-                              },
-                              {
-                                "name": "Target List",
-                                "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "partOf": {
+                          "name": "Target Sequence",
+                          "Sequence": [
+                            {
+                              "name": "Join Targets",
+                              "TargetList": [
+                                {
+                                  "name": "Target Name",
+                                  "target": "{{All Team Members(Exclude Self)}}"
+                                },
+                                {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Target Filter",
+                              "conditions": {
+                                "name": "Is Entity a Battle Event/Summon",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "invertCondition": true
                               }
-                            ]
-                          },
-                          {
-                            "name": "Target Filter",
-                            "conditions": {
-                              "name": "Is Entity a Battle Event/Summon",
-                              "target": "Use Prior Target(s) Defined",
-                              "invertCondition": true
                             }
-                          }
-                        ],
+                          ]
+                        },
                         "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
                         "minOrMax": "Min"
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "CurrentHP",
                         "compareType": ">",
                         "value2": 0
@@ -935,7 +1076,10 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Luocha_InsertAbility02_Mark"
                     }
                   ]
@@ -964,7 +1108,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Entity a Battle Event/Summon",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -976,7 +1123,10 @@ const compositeAbilityObject = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Luocha_Passive01_HealHPCD[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]"
                         }
                       },
@@ -988,12 +1138,18 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Has Flag",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "flagName": "STAT_CTRL"
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "flagName": "DisableAction"
                               }
                             ]
@@ -1001,29 +1157,35 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Find New Target",
-                              "from": [
-                                {
-                                  "name": "Join Targets",
-                                  "TargetList": [
-                                    {
-                                      "name": "Target List",
-                                      "target": "All Teammates (Excluding Owner)"
-                                    },
-                                    {
-                                      "name": "Target List",
-                                      "target": "Caster"
+                              "from": {
+                                "name": "Target Sequence",
+                                "Sequence": [
+                                  {
+                                    "name": "Join Targets",
+                                    "TargetList": [
+                                      {
+                                        "name": "Target Name",
+                                        "target": "{{All Team Members(Exclude Self)}}"
+                                      },
+                                      {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Target Filter",
+                                    "conditions": {
+                                      "name": "Is Entity a Battle Event/Summon",
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "invertCondition": true
                                     }
-                                  ]
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Is Entity a Battle Event/Summon",
-                                    "target": "Use Prior Target(s) Defined",
-                                    "invertCondition": true
                                   }
-                                }
-                              ],
+                                ]
+                              },
                               "searchRandom": true,
                               "maxTargets": 1,
                               "conditions": {
@@ -1031,43 +1193,58 @@ const compositeAbilityObject = {
                                 "conditionList": [
                                   {
                                     "name": "Target Has Lowest/Highest Value",
-                                    "target": "Use Prior Target(s) Defined",
-                                    "partOf": [
-                                      {
-                                        "name": "Join Targets",
-                                        "TargetList": [
-                                          {
-                                            "name": "Target List",
-                                            "target": "All Teammates (Excluding Owner)"
-                                          },
-                                          {
-                                            "name": "Target List",
-                                            "target": "Caster"
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "partOf": {
+                                      "name": "Target Sequence",
+                                      "Sequence": [
+                                        {
+                                          "name": "Join Targets",
+                                          "TargetList": [
+                                            {
+                                              "name": "Target Name",
+                                              "target": "{{All Team Members(Exclude Self)}}"
+                                            },
+                                            {
+                                              "name": "Target Name",
+                                              "target": "{{Caster}}"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "name": "Target Filter",
+                                          "conditions": {
+                                            "name": "Is Entity a Battle Event/Summon",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Parameter Target}}"
+                                            },
+                                            "invertCondition": true
                                           }
-                                        ]
-                                      },
-                                      {
-                                        "name": "Target Filter",
-                                        "conditions": {
-                                          "name": "Is Entity a Battle Event/Summon",
-                                          "target": "Use Prior Target(s) Defined",
-                                          "invertCondition": true
                                         }
-                                      }
-                                    ],
+                                      ]
+                                    },
                                     "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
                                     "minOrMax": "Min"
                                   },
                                   {
                                     "name": "Compare: Variable",
-                                    "target": "Use Prior Target(s) Defined",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
                                     "value1": "CurrentHP",
                                     "compareType": ">",
                                     "value2": 0
                                   },
                                   {
                                     "name": "Is Entity a Battle Event/Summon",
-                                    "target": "Use Prior Target(s) Defined",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
                                     "invertCondition": true
                                   }
                                 ]
@@ -1077,7 +1254,10 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Compare: Variable",
-                                    "target": "Use Prior Target(s) Defined",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
                                     "value1": "CurrentHP%",
                                     "compareType": "<=",
                                     "value2": {
@@ -1092,7 +1272,10 @@ const compositeAbilityObject = {
                                   "passed": [
                                     {
                                       "name": "Add Events/Bonuses",
-                                      "to": "Caster",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "modifier": "Luocha_InsertAbility02_Retarget"
                                     }
                                   ]
@@ -1117,12 +1300,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction"
                       }
                     ]
@@ -1130,12 +1319,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "modifier": "Luocha_InsertAbility02_Mark"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "modifier": "Luocha_InsertAbility02_Retarget"
                     },
                     {
@@ -1147,18 +1342,27 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Luocha_Passive01_InsertMark"
                       },
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Luocha_Passive01_InsertMark"
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Luocha_Passive01_DisableActionInsertMark"
                         }
                       ]
@@ -1204,7 +1408,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "Luocha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -1231,7 +1438,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Dispel Debuffs",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "typeOverride": "Buff",
           "dispelCount": {
             "operator": "Variables[0] (1) || RETURN",
@@ -1248,13 +1458,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Luocha_Passive01_HealHPArea"
           },
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
               "valuePerStack": {
                 "MDF_PassiveLayer": {
@@ -1271,7 +1487,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -1326,7 +1545,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Luocha_Ability03_Part02",
           "isTrigger": true
         }
@@ -1356,7 +1578,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Dispel Debuffs",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "dispelCount": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1380,7 +1605,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<",
                 "value2": 0.5
@@ -1388,7 +1616,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_Ability02_AddHealRatio",
                   "valuePerStack": {
                     "MDF_AddHealRatio": {
@@ -1405,7 +1636,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "modifier": "Luocha_Ability02_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -1440,7 +1674,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Heal",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.6) || RETURN",
             "displayLines": "0.6",
@@ -1460,7 +1697,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1469,20 +1709,29 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           }
         },
         {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Luocha_Passive01_HealHPArea"
           },
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
               "valuePerStack": {
                 "MDF_PassiveLayer": {
@@ -1538,8 +1787,14 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
-          "inherentTarget": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ability": "Luocha_Ability02_Part02",
           "isTrigger": true
         }
@@ -1554,7 +1809,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -1581,7 +1839,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -1608,7 +1869,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -1657,7 +1921,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Luocha_Ability01_Part02",
           "isTrigger": true
         }
@@ -1684,7 +1951,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
@@ -1719,7 +1989,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -1753,7 +2026,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_Passive01_DisableActionInsertMark"
                 },
                 {
@@ -1764,7 +2040,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Luocha_Passive01_InsertAbility",
-                  "abilitySource": "Caster",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "priorityTag": "AvatarBuffSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -1798,7 +2077,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
@@ -1866,7 +2148,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Luocha_Passive01_InsertMark"
                     }
                   ],
@@ -1932,7 +2217,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Shield",
-                  "target": "Owner of this Modifier"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
                 },
                 {
                   "name": "Set Shield State/Value",
@@ -1945,7 +2233,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Create Shield",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
                     "displayLines": "MDF_ShieldValue",
@@ -2018,8 +2309,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -2029,12 +2326,18 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "STAT_CTRL"
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "DisableAction"
                           }
                         ]
@@ -2042,7 +2345,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Luocha_Passive01_InsertMark"
                         }
                       ]

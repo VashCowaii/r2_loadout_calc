@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Himeko_Ability03_Modifier"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -48,13 +54,19 @@ const configAbility = {
           "Event": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Fire",
@@ -80,7 +92,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Himeko_Ability03_Modifier"
     },
     "Trigger: Skip Death Handling",
@@ -97,7 +112,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Energy",
-              "on": "Owner of this Modifier",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -115,7 +133,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Energy",
-              "on": "Owner of this Modifier",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",

@@ -56,7 +56,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Archer_PassiveAbility"
     },
     {
@@ -68,7 +71,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Archer_Eidolon4_Ability03AddUltraDamage",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -92,7 +98,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Archer_Eidolon6_Ability02IgnoreDef",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -210,8 +219,14 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Owner of this Modifier",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -236,14 +251,20 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "All Enemies (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "searchRandom": true,
               "ifTargetFound": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Archer_InsertTag"
                   },
                   "passed": [
@@ -275,20 +296,29 @@ const configAbility = {
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -306,24 +336,36 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Target Exists",
-                        "target": "Current Action Owner",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
                         "living": true
                       },
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "Ability Target List + Action Target List",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Attack Targets of Modifier Holder}} + {{Current Action Target List}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
                             "state": "Mask_AliveOnly",
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Archer_InsertTag"
                             }
                           ]
@@ -332,18 +374,27 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Find New Target",
-                          "from": "Ability Target List",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Attack Targets of Modifier Holder}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Living State",
                             "state": "Mask_AliveOnly",
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Archer_InsertTag"
                             }
                           ]
@@ -354,12 +405,18 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Archer_InsertTag",
                     "justAddedOrActive": true
                   },
@@ -376,7 +433,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Archer_Insert_Target"
                     },
                     {
@@ -387,8 +447,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Archer_Insert_Part01",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -416,7 +482,10 @@ const configAbility = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "All Enemies (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
@@ -427,7 +496,10 @@ const configAbility = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Archer_Insert_Target"
                         },
                         {
@@ -438,8 +510,14 @@ const configAbility = {
                             "typeValue": 1
                           },
                           "abilityName": "Archer_Insert_Part01",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -481,13 +559,19 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Target Count",
-                        "target": "[SKILL TARGET LIST OF] Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Targets of Modifier Holder}}"
+                        },
                         "compareType": "=",
                         "value2": 1
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "[SKILL TARGET LIST OF] Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Targets of Modifier Holder}}"
+                        },
                         "team": "TeamDark"
                       }
                     ]
@@ -495,7 +579,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "[SKILL TARGET LIST OF] Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Targets of Modifier Holder}}"
+                      },
                       "modifier": "Archer_InsertTag"
                     }
                   ]
@@ -514,20 +601,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -545,7 +641,10 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
@@ -556,7 +655,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Archer_Insert_Target"
                     },
                     {
@@ -567,8 +669,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Archer_Insert_Part01",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -594,20 +702,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -625,7 +742,10 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
@@ -636,7 +756,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Archer_Insert_Target"
                     },
                     {
@@ -647,8 +770,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Archer_Insert_Part01",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -674,20 +803,29 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOnly",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -705,7 +843,10 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
@@ -722,8 +863,14 @@ const configAbility = {
                         "typeValue": 1
                       },
                       "abilityName": "Archer_Insert_Part01",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -780,7 +927,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team (Excluding Caster)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}} -{{Caster}}"
+              },
               "modifier": "Archer_AttackListner"
             },
             {
@@ -810,13 +960,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -824,7 +983,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Archer_AttackListner"
                 }
               ]

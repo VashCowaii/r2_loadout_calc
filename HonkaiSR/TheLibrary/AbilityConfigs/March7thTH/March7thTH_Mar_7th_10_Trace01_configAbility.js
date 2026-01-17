@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Mar_7th_10_Trace01"
     }
   ],
@@ -29,7 +32,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "advanceType": "Set",
                   "value": "(0 - 0.25)"
                 }

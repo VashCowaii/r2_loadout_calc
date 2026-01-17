@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Servant_Standard_PassiveModifier"
     }
   ],
@@ -25,13 +28,22 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Related Summoned Entity",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "passed": [
                 {
                   "name": "Force Entity Death",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "ignoreHPLossTriggers": true,
                   "ignoreDeathTriggers": true,
                   "abortInsertedAbilities": true

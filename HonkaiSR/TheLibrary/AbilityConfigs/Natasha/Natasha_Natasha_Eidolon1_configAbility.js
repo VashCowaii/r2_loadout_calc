@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Natasha_Eidolon1_Check"
     }
   ],
@@ -22,7 +25,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
@@ -38,8 +44,14 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Natasha_Eidolon1_InsertAbility_Part01",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Caster",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "priorityTag": "AvatarHealSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,

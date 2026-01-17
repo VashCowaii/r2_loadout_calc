@@ -15,12 +15,18 @@ const configAbility = {
       "parse": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Cerydra's Promotion Target",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Cerydra's Promotion Target}}"
+          },
           "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Cerydra's Promotion Target",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Cerydra's Promotion Target}}"
+          },
           "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -51,7 +57,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Cerydra's Promotion Target",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Cerydra's Promotion Target}}"
+          },
           "modifier": "Standard_Windfury",
           "valuePerStack": {
             "_ReplayAbility": 1
@@ -67,14 +76,23 @@ const configAbility = {
         },
         {
           "name": "Reconstruct Modifier",
-          "target": "Cerydra's Promotion Target",
-          "casterFilter": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Cerydra's Promotion Target}}"
+          },
+          "casterFilter": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "counter": 1,
           "modifier": "Standard_Windfury",
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Cerydra's Promotion Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Cerydra's Promotion Target}}"
+              },
               "scope": "ContextCaster",
               "valueType": "Layer",
               "variableName": "InsertActionCount",
@@ -90,7 +108,10 @@ const configAbility = {
         },
         {
           "name": "Dispel Debuffs",
-          "target": "Cerydra's Promotion Target",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Cerydra's Promotion Target}}"
+          },
           "toRemove": [
             "STAT_CTRL"
           ]
@@ -169,7 +190,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
             "invertCondition": true
           },
@@ -191,7 +215,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "DV_CurrentPoint_Temp_SelfHandle",
                 "compareType": ">=",
                 "value2": {

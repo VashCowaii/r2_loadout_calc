@@ -11,7 +11,10 @@ const configAbility = {
       "name": "Adjust Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "BPExChange",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": -3
     },
     {
@@ -47,14 +50,20 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]"
         }
       ],
       "failed": [
         {
           "name": "Define Modifier Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
           "value": {
             "operator": "Variables[0] (BPExChange) || RETURN",
@@ -96,7 +105,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -139,7 +151,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -182,7 +197,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -225,7 +243,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "duration": {
         "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
@@ -265,7 +286,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -294,7 +318,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -333,7 +360,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "duration": {
         "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
@@ -373,7 +403,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -402,7 +435,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -441,7 +477,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "duration": {
         "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
@@ -481,7 +520,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -510,7 +552,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -549,7 +594,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_Ability02_CriticalDamage[<span class=\"descriptionNumberColor\">Outroar</span>]",
       "duration": {
         "operator": "Variables[0] (SkillRank_Rank04_LifeTime) || RETURN",
@@ -589,7 +637,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",
@@ -619,7 +670,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",
@@ -660,17 +714,26 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_BPCost_1"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_BPCost_2"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHengIL_BPCost_3"
     },
     {

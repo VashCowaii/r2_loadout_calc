@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "MDF_CriticalDamageBase",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
     },
@@ -50,7 +53,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "All Team Members(In Context)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "modifier": "Bronya_Ultimate_PowerUp[<span class=\"descriptionNumberColor\">The Belobog March</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
@@ -82,7 +88,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Technique_Klara_Modifier"
     }
   ],
@@ -45,7 +48,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Klara_TechniqueUsage_AggroUP[<span class=\"descriptionNumberColor\">A Small Price for Victory</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",

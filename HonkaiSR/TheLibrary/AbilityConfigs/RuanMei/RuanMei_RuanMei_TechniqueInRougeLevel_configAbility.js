@@ -7,7 +7,10 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "RuanMei_Maze_Modifier_BeforeStanceBreak"
     }
   ],
@@ -45,18 +48,27 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Base Break Damage",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "BreakBaseDamage"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MaxStance",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;",
                   "warningType": "MaxToughness"
@@ -79,7 +91,10 @@ const configAbility = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "BreakDamageAddedRatio",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
                 },
@@ -101,7 +116,10 @@ const configAbility = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",
@@ -157,7 +175,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Hostile Entities (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "modifier": "RuanMei_Maze_Modifier_StanceBreakAdd"
             },
             "Modifier Deletes Itself"
@@ -175,7 +196,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "RuanMei_Maze_Modifier_StanceBreakAdd_EnterBattleRemove"
             }
           ]
@@ -219,7 +243,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "RuanMei_Maze_Modifier_StanceBreakAdd",
                   "valuePerStack": {
                     "MDF_StanceBreakAdded": {
@@ -248,18 +275,27 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifierName": "StageAbility_MazeStandard_EnterBattle_IgnoreWeakness_Modifier",
                       "adjustmentType": "+",
                       "variableName": "Stance_Added_Ratio",

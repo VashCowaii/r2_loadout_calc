@@ -17,7 +17,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Archer_BonusAbility02Ready"
             },
             {
@@ -27,7 +30,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Archer_BPAbility_AddDamagePercentage[<span class=\"descriptionNumberColor\">Circuit Connection</span>]"
             },
             {
@@ -117,7 +123,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Archer_BonusAbility02Ready"
                 },
                 {
@@ -135,7 +144,10 @@ const configAbility = {
                       "skillType": "ControlSkill02",
                       "canInjectUltimates": true,
                       "followSameTagAsAction": true,
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
@@ -166,7 +178,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_Flag_HaveOtherAction",
                         "compareType": "=",
                         "value2": 0
@@ -176,7 +191,10 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Next Extra Turn Is",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "actionType": "Normal"
                           },
                           {
@@ -250,7 +268,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "skillSlot": "Basic ATK",
               "enableSecondaryType": "ControlSkill04"
             }
@@ -261,14 +282,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Disable Abilities",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityTypes": [
                 "Basic ATK"
               ]
             },
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill21",
               "skillSlot": "Skill",
               "enableSecondaryType": "ControlSkill04"
@@ -366,7 +393,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Implant Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "element": "Quantum",
               "resReduction": {
                 "operator": "Variables[0] (MDF_PropertyValue) || INVERT || RETURN",

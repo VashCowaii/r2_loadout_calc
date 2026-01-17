@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Heal",
-      "target": "Caster (Memosprite)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster's Memosprite}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.6) || RETURN",
         "displayLines": "0.6",
@@ -20,7 +23,10 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Added Value",
-      "target": "Caster's Memosprite",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}.[[getMemosprite]]"
+      },
       "variableName": "CurEnergy",
       "context": "TargetEntity",
       "value": {
@@ -36,7 +42,10 @@ const configAbility = {
     },
     {
       "name": "Clear DMG Numbers(UI)",
-      "target": "Caster (Memosprite)"
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster's Memosprite}}"
+      }
     },
     "Trigger: Ability End"
   ],

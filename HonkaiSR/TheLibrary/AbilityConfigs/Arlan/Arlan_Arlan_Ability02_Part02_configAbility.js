@@ -7,7 +7,10 @@ const configAbility = {
     {
       "name": "Consume",
       "consumeFrom": "MaxHP",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "consumePercent": {
         "operator": "Variables[0] (0.15) || RETURN",
         "displayLines": "0.15",
@@ -27,7 +30,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Dispel Debuffs",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "dispelCount": 1,
           "dispelOrder": "LastAdded"
         }
@@ -35,7 +41,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Thunder",

@@ -17,7 +17,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Luocha_Passive01_QuickHealthHP",
       "valuePerStack": {
         "MDF_HPRatio": {
@@ -50,8 +53,14 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Luocha_Ability02_InsertAbility",
-              "abilitySource": "Caster",
-              "abilityTarget": "Owner of this Modifier",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "priorityTag": "AvatarHealOthers",
               "canHitNonTargets": true,
               "showInActionOrder": true,
@@ -68,7 +77,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Luocha_InsertAbility02_Retarget"
             }
           ]
@@ -84,65 +96,83 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": [
-                {
-                  "name": "Join Targets",
-                  "TargetList": [
-                    {
-                      "name": "Target List",
-                      "target": "All Teammates (Excluding Owner)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "Caster"
+              "from": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Is Entity a Battle Event/Summon",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "invertCondition": true
                     }
-                  ]
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Is Entity a Battle Event/Summon",
-                    "target": "Use Prior Target(s) Defined",
-                    "invertCondition": true
                   }
-                }
-              ],
+                ]
+              },
               "maxTargets": 1,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
                   {
                     "name": "Target Has Lowest/Highest Value",
-                    "target": "Use Prior Target(s) Defined",
-                    "partOf": [
-                      {
-                        "name": "Join Targets",
-                        "TargetList": [
-                          {
-                            "name": "Target List",
-                            "target": "All Teammates (Excluding Owner)"
-                          },
-                          {
-                            "name": "Target List",
-                            "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "partOf": {
+                      "name": "Target Sequence",
+                      "Sequence": [
+                        {
+                          "name": "Join Targets",
+                          "TargetList": [
+                            {
+                              "name": "Target Name",
+                              "target": "{{All Team Members(Exclude Self)}}"
+                            },
+                            {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Target Filter",
+                          "conditions": {
+                            "name": "Is Entity a Battle Event/Summon",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "invertCondition": true
                           }
-                        ]
-                      },
-                      {
-                        "name": "Target Filter",
-                        "conditions": {
-                          "name": "Is Entity a Battle Event/Summon",
-                          "target": "Use Prior Target(s) Defined",
-                          "invertCondition": true
                         }
-                      }
-                    ],
+                      ]
+                    },
                     "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
                     "minOrMax": "Min"
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": ">",
                     "value2": 0
@@ -152,7 +182,10 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Luocha_InsertAbility02_Mark"
                 }
               ]
@@ -181,7 +214,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Entity a Battle Event/Summon",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -193,7 +229,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Luocha_Passive01_HealHPCD[<span class=\"descriptionNumberColor\">Prayer of Abyss Flower</span>]"
                     }
                   },
@@ -205,12 +244,18 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "STAT_CTRL"
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "DisableAction"
                           }
                         ]
@@ -218,29 +263,35 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Find New Target",
-                          "from": [
-                            {
-                              "name": "Join Targets",
-                              "TargetList": [
-                                {
-                                  "name": "Target List",
-                                  "target": "All Teammates (Excluding Owner)"
-                                },
-                                {
-                                  "name": "Target List",
-                                  "target": "Caster"
+                          "from": {
+                            "name": "Target Sequence",
+                            "Sequence": [
+                              {
+                                "name": "Join Targets",
+                                "TargetList": [
+                                  {
+                                    "name": "Target Name",
+                                    "target": "{{All Team Members(Exclude Self)}}"
+                                  },
+                                  {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Is Entity a Battle Event/Summon",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "invertCondition": true
                                 }
-                              ]
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Is Entity a Battle Event/Summon",
-                                "target": "Use Prior Target(s) Defined",
-                                "invertCondition": true
                               }
-                            }
-                          ],
+                            ]
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "conditions": {
@@ -248,43 +299,58 @@ const configAbility = {
                             "conditionList": [
                               {
                                 "name": "Target Has Lowest/Highest Value",
-                                "target": "Use Prior Target(s) Defined",
-                                "partOf": [
-                                  {
-                                    "name": "Join Targets",
-                                    "TargetList": [
-                                      {
-                                        "name": "Target List",
-                                        "target": "All Teammates (Excluding Owner)"
-                                      },
-                                      {
-                                        "name": "Target List",
-                                        "target": "Caster"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "partOf": {
+                                  "name": "Target Sequence",
+                                  "Sequence": [
+                                    {
+                                      "name": "Join Targets",
+                                      "TargetList": [
+                                        {
+                                          "name": "Target Name",
+                                          "target": "{{All Team Members(Exclude Self)}}"
+                                        },
+                                        {
+                                          "name": "Target Name",
+                                          "target": "{{Caster}}"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "name": "Target Filter",
+                                      "conditions": {
+                                        "name": "Is Entity a Battle Event/Summon",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Parameter Target}}"
+                                        },
+                                        "invertCondition": true
                                       }
-                                    ]
-                                  },
-                                  {
-                                    "name": "Target Filter",
-                                    "conditions": {
-                                      "name": "Is Entity a Battle Event/Summon",
-                                      "target": "Use Prior Target(s) Defined",
-                                      "invertCondition": true
                                     }
-                                  }
-                                ],
+                                  ]
+                                },
                                 "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
                                 "minOrMax": "Min"
                               },
                               {
                                 "name": "Compare: Variable",
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "value1": "CurrentHP",
                                 "compareType": ">",
                                 "value2": 0
                               },
                               {
                                 "name": "Is Entity a Battle Event/Summon",
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "invertCondition": true
                               }
                             ]
@@ -294,7 +360,10 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Variable",
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "value1": "CurrentHP%",
                                 "compareType": "<=",
                                 "value2": {
@@ -309,7 +378,10 @@ const configAbility = {
                               "passed": [
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Caster",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "modifier": "Luocha_InsertAbility02_Retarget"
                                 }
                               ]
@@ -334,12 +406,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction"
                   }
                 ]
@@ -347,12 +425,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Luocha_InsertAbility02_Mark"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Luocha_InsertAbility02_Retarget"
                 },
                 {
@@ -364,18 +448,27 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Luocha_Passive01_InsertMark"
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Luocha_Passive01_InsertMark"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Luocha_Passive01_DisableActionInsertMark"
                     }
                   ]

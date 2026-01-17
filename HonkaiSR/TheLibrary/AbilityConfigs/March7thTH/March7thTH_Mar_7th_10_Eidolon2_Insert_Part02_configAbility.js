@@ -6,28 +6,43 @@ const configAbility = {
   "parse": [
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Mar_7th_10_InsertCheck"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)(ALL)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+      },
       "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "variableName": "_target_stance_before_attack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Mar_7th_10_Eidolon2_CD[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
@@ -54,7 +69,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": {
         "operator": "Constants[0] (0.4) || Variables[0] (5) || MUL || RETURN",
         "displayLines": "(0.4 * 5)",
@@ -69,7 +87,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",
@@ -97,7 +118,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": {
         "operator": "Constants[0] (0.6) || Variables[0] (5) || MUL || RETURN",
         "displayLines": "(0.6 * 5)",

@@ -59,7 +59,10 @@ const configAbility = {
             "Assign DEPARTED(Modifier: Standard_Departed)",
             {
               "name": "Disable Abilities",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityTypes": [
                 "Basic ATK",
                 "Skill"
@@ -133,7 +136,10 @@ const configAbility = {
                 "attackTypes": [
                   "Follow-up"
                 ],
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
@@ -181,14 +187,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]"
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP",
                 "compareType": ">",
                 "value2": 0
@@ -196,7 +208,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Ability02_InShadowModifier"
                 }
               ]
@@ -205,7 +220,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "Deathrattle",
                 "invertCondition": true
               }
@@ -229,7 +247,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Ability02_InShadowModifier"
                 },
                 "Modifier Deletes Itself"
@@ -298,7 +319,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Moze_Eidolon1_DeBonus[<span class=\"descriptionNumberColor\">Vengewise</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -322,18 +346,27 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "PursuedDamage_PerformanceDelay",
-                  "target": "Owner of this Modifier"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Thunder",
@@ -359,7 +392,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -376,7 +412,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Moze_InInsert_Tag",
                     "invertCondition": true
                   },
@@ -585,8 +624,14 @@ const configAbility = {
                             "typeValue": 1
                           },
                           "abilityName": "Moze_Insert_Part01",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "Owner of this Modifier",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -630,11 +675,20 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   }
                 ]
@@ -672,18 +726,27 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Moze_Ability02_InShadowModifier"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Moze_Ability02_ShadowTargetModifier[<span class=\"descriptionNumberColor\">Prey</span>]"
                 }
               ]
@@ -717,8 +780,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "Moze_Insert_Part01",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Owner of this Modifier",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -737,7 +806,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Moze_Ability02_InShadowModifier"
             },
             "Modifier Deletes Itself"
@@ -792,7 +864,10 @@ const configAbility = {
             },
             {
               "name": "Disable Abilities",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityTypes": [
                 "Basic ATK"
               ]

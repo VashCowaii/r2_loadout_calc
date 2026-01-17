@@ -6,13 +6,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "MDF_Lynx_MaxHpValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "MDF_Lynx_MaxHpConvert",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
     },
@@ -33,21 +39,30 @@ const configAbility = {
                 "path": [
                   "Destruction"
                 ],
-                "target": "Single Target (Primary)"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                }
               },
               {
                 "name": "Target is Pathstrider",
                 "path": [
                   "Preservation"
                 ],
-                "target": "Single Target (Primary)"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                }
               }
             ]
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -111,7 +126,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Lynx_HPAddedRatio02[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -178,21 +196,30 @@ const configAbility = {
                 "path": [
                   "Destruction"
                 ],
-                "target": "Single Target (Primary)"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                }
               },
               {
                 "name": "Target is Pathstrider",
                 "path": [
                   "Preservation"
                 ],
-                "target": "Single Target (Primary)"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                }
               }
             ]
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -246,7 +273,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Lynx_HPAddedRatio01[<span class=\"descriptionNumberColor\">Survival Response</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -302,7 +332,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Lynx_Eidolon2_Resist[<span class=\"descriptionNumberColor\">Debuff RES</span>]"
         }
       ]
@@ -316,7 +349,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Lynx_Eidolon4_AddAttackRatio[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -343,7 +379,10 @@ const configAbility = {
     },
     {
       "name": "Heal",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.12) || RETURN",
         "displayLines": "0.12",
@@ -371,7 +410,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -421,7 +463,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Lynx_HOT_HealByMaxHp[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -470,7 +515,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -479,18 +527,30 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Current Action Holder Is",
-        "target": "Single Target (Primary)"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        }
       }
     },
     {
       "name": "Find New Target",
-      "from": "Skill Target List",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Target List}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Compare: Target",
-        "target": "Use Prior Target(s) Defined",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },

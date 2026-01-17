@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_20022_Main"
     }
   ],
@@ -21,14 +24,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.08) || Variables[1] (_Layer) || MUL || RETURN",
@@ -59,7 +68,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (4) || RETURN",
@@ -72,7 +84,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster (Memosprite)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (4) || RETURN",
@@ -90,12 +105,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster (Memosprite)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "modifier": "LC_20022_Sub2[<span class=\"descriptionNumberColor\">Commemoration</span>]"
             }
           ]
@@ -116,13 +137,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Memosprite"
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use [SUMMONER OF] Prior Target(s) Defined",
-                    "target": "Caster",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}.[[getSummoner]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -130,7 +160,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_20022_Sub1"
                 }
               ]

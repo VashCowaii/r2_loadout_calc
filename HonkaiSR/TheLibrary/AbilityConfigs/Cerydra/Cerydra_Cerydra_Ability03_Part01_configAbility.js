@@ -18,7 +18,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Cerydra_Ability03_Part02",
       "isTrigger": true
     },
@@ -26,7 +29,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target Count",
-        "target": "Cerydra Ultimate Target List",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Cerydra Ult Target List}}"
+        },
         "compareType": ">=",
         "value2": 2,
         "isClientOnly": true

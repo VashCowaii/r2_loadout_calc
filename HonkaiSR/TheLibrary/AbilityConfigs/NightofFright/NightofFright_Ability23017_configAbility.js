@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23017_Main"
     }
   ],
@@ -21,14 +24,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
@@ -61,13 +70,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_23017_Sub[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -122,7 +137,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   }
                 ]
@@ -130,20 +148,32 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Team Members(In Context)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Target Has Lowest/Highest Value",
-                    "target": "Use Prior Target(s) Defined",
-                    "partOf": "All Team Members(In Context)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "partOf": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members}}"
+                    },
                     "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
                     "minOrMax": "Min"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Heal",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (0.1) || RETURN",
                         "displayLines": "0.1",

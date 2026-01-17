@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
@@ -32,7 +35,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -61,14 +67,23 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Flag",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "flagName": "STAT_DOT_Burn"
       },
       "passed": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
-          "inherentTarget": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ability": "Hook_PassiveAbility01_2",
           "isTrigger": true
         }
@@ -86,7 +101,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]"
     },
     {
@@ -98,7 +116,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Hook_Eidolon1_AddDamageRatio",
           "valuePerStack": {
             "MDF_AddRatio": {
@@ -122,7 +143,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (5) || RETURN",
             "displayLines": "5",
@@ -135,7 +159,10 @@ const configAbility = {
         },
         {
           "name": "Action Advance/Delay",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "advanceType": "Advance",
           "value": "-0.2"
         }

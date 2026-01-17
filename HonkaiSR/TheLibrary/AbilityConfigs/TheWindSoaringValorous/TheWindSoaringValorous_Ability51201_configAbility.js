@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_120_Main"
     }
   ],
@@ -66,7 +69,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_120_Sub[<span class=\"descriptionNumberColor\">The Wind-Soaring Valorous</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",

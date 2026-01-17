@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Guinaifen_Trace03"
         }
       ],
@@ -38,7 +41,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Guinaifen_Trace02"
         }
       ],
@@ -60,7 +66,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Guinaifen_TechniqueUsage_Modifier"
         }
       ],
@@ -121,7 +130,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Find New Target",
-                          "from": "All Hostile Entities (AOE)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "searchRandom": true,
                           "includeDyingTargets": true,
                           "maxTargets": 1,
@@ -130,13 +142,19 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Enemies Still Alive",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "invertCondition": true,
                                 "includeNonTargets": true
                               },
                               {
                                 "name": "Compare: Variable",
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "value1": "CurrentHP",
                                 "compareType": ">",
                                 "value2": 0
@@ -146,7 +164,10 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Fire",
@@ -222,7 +243,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Guinaifen_Oil_Sub[<span class=\"descriptionNumberColor\">Firekiss</span>]",
                               "duration": {
                                 "operator": "Variables[0] (3) || RETURN",
@@ -291,7 +315,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "GuiNaiFen_PassiveAbility01_Modifier",
           "valuePerStack": {
             "MDF_Chance": {
@@ -339,7 +366,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -365,7 +395,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Trigger Modifier Event",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "variableName": "DOT_TriggerRatio",
           "eventType": "DOT_Burn",
           "value": {
@@ -403,7 +436,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Guinaifen_Ability03_Part02",
           "isTrigger": true
         }
@@ -436,7 +472,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary) + Blast (Adjacent)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{ST and Blast}}"
+                  },
                   "modifier": "Guinaifen_Eidolon1_StatusResistance[<span class=\"descriptionNumberColor\">Slurping Noodles During Handstand</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -469,7 +508,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Find New Target",
-              "from": "Single Target (Primary) + Blast (Adjacent)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{ST and Blast}}"
+              },
               "searchRandom": true,
               "maxTargets": 3,
               "ifTargetFound": [
@@ -484,7 +526,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "STAT_DOT_Burn"
                       }
                     ]
@@ -492,7 +537,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -527,7 +575,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -563,7 +614,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -589,7 +643,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -638,7 +695,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Guinaifen_Ability02_Part02",
           "isTrigger": true
         }
@@ -653,7 +713,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -701,7 +764,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Guinaifen_Ability01_Part02",
           "isTrigger": true
         }
@@ -738,24 +804,39 @@ const compositeAbilityObject = {
                         "attackTypes": [
                           "DOT"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Is Damage Type/Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "list": [
                           "Fire"
                         ]
                       },
                       {
                         "name": "Is Joint-Attack",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined(REAL SOURCE OF)",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Source Owner}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -763,7 +844,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (SpAdded) || RETURN",
                         "displayLines": "SpAdded",
@@ -789,7 +873,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -825,7 +912,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_DOT_Burn"
                   },
                   "passed": [
@@ -865,7 +955,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "advanceType": "Advance",
                       "value": "-0.25"
                     }
@@ -888,7 +981,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "multiplier": 1
@@ -908,7 +1004,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -992,7 +1091,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Guinaifen_Oil_Sub[<span class=\"descriptionNumberColor\">Firekiss</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -1060,7 +1162,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "Guinaifen_Oil"
                 },
                 {
@@ -1072,7 +1177,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Enemies (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "modifier": "Guinaifen_Eidolon4",
                       "valuePerStack": {
                         "SpAdded": {
@@ -1119,7 +1227,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "flagName": "STAT_DOT_Burn"
                           }
                         ]
@@ -1127,7 +1238,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -1162,7 +1276,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",

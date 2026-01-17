@@ -8,14 +8,20 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Enemies Still Alive",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "includeNonTargets": true
       },
       "passed": [
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "DanHeng_PassiveAbility01_Enhance_Part02",
           "isTrigger": true
         }

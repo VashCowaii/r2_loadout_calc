@@ -68,14 +68,23 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOrRevivable",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -96,12 +105,18 @@ const configAbility = {
           "parse": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Target Exists",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "living": true
               },
               "ifTargetFound": [
@@ -113,8 +128,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "Mar_7th_10_Eidolon2_Insert_SelectTarget",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -160,7 +181,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Disable Abilities",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityTypes": [
                 "Skill"
               ]
@@ -178,7 +202,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "skillType": [
           "Skill",
           "Basic ATK"
@@ -203,7 +230,10 @@ const configAbility = {
             },
             {
               "name": "Is Part Of Team",
-              "target": "Allied Team Skill Lock Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team Ability Target Lock}}"
+              },
               "team": "TeamDark"
             }
           ]
@@ -216,7 +246,10 @@ const configAbility = {
       "removalDependencies": {
         "name": "Removal Dependency",
         "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
-        "casterFilter": "Caster"
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
       }
     },
     {
@@ -228,7 +261,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "skillType": [
           "Ultimate"
         ],
@@ -260,7 +296,10 @@ const configAbility = {
       "removalDependencies": {
         "name": "Removal Dependency",
         "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
-        "casterFilter": "Caster"
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
       }
     },
     {
@@ -286,7 +325,10 @@ const configAbility = {
       "removalDependencies": {
         "name": "Removal Dependency",
         "dependancyName": "Mar_7th_10_Enhance",
-        "casterFilter": "Caster"
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
       }
     },
     {
@@ -298,7 +340,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_Mar_7th_10_ForbidBP"
             },
             {
@@ -308,13 +353,19 @@ const configAbility = {
             },
             {
               "name": "Update Ability Binding",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityName": "Skill01",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Hide",
               "abilityName": "Basic ATK"
             },
@@ -329,7 +380,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Mar_7th_10_Enhance_Visual"
             }
           ]
@@ -339,7 +393,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -352,13 +409,19 @@ const configAbility = {
             },
             {
               "name": "Update Ability Binding",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityName": "Skill11",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Show",
               "abilityName": "Basic ATK"
             },
@@ -368,7 +431,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_Mar_7th_10_ForbidBP"
             }
           ]
@@ -394,7 +460,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -426,7 +495,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -450,7 +522,10 @@ const configAbility = {
       "removalDependencies": {
         "name": "Removal Dependency",
         "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
-        "casterFilter": "Caster"
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
       }
     },
     {
@@ -470,19 +545,31 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Teammates + Unselectable (Excluding Owner)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "invertCondition": true
               },
               "ifTargetFound": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               ]
@@ -497,12 +584,18 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Mar_7th_10_Ability02_HaveMaster"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]"
             }
           ]
@@ -512,17 +605,26 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_Mar_7th_10_MasterUltraEnergyPreshow"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_Mar_7th_10_MasterAttackEnergyPreshow"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Mar_7th_10_Ability02_HaveMaster"
             },
             {
@@ -534,7 +636,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
@@ -559,7 +664,10 @@ const configAbility = {
                   "The Hunt",
                   "Remembrance"
                 ],
-                "target": "Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "passed": [
                 {
@@ -587,7 +695,10 @@ const configAbility = {
                       "Preservation",
                       "Abundance"
                     ],
-                    "target": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {

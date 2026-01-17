@@ -20,13 +20,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Current Action Holder Is",
-        "target": "Single Target (Primary)"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        }
       },
       "passed": [
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Sparkle_Ability02_Self_Part02",
           "isTrigger": true
         }
@@ -35,7 +41,10 @@ const configAbility = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Sparkle_Ability02_Others_Part02",
           "isTrigger": true
         }

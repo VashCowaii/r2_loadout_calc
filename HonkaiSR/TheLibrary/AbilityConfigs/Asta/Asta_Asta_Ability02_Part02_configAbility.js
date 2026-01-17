@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -39,7 +42,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Declare Custom Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "scope": "ContextCaster",
           "variableName": "Bounce_Count",
           "value": 5
@@ -48,7 +54,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Declare Custom Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "scope": "ContextCaster",
           "variableName": "Bounce_Count",
           "value": 4
@@ -69,11 +78,17 @@ const configAbility = {
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "paramSequence": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",

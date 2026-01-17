@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21023_Main"
     }
   ],
@@ -22,7 +25,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.08) || RETURN",
@@ -59,11 +65,17 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Team Members(In Context)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "searchRandom": true,
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "<",
                     "value2": 1
@@ -71,7 +83,10 @@ const configAbility = {
                   "ifTargetFound": [
                     {
                       "name": "Heal",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "healPercent": {
                         "operator": "Variables[0] (0.3) || RETURN",
                         "displayLines": "0.3",
@@ -86,7 +101,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "modifier": "LC_21023_Sub[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
                   "duration": {
                     "operator": "Variables[0] (5) || RETURN",

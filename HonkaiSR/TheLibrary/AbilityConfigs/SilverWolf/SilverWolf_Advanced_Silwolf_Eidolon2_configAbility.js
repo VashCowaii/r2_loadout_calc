@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Silwolf_Eidolon2_Bonus"
     }
   ],
@@ -26,8 +29,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
@@ -45,8 +54,14 @@ const configAbility = {
                 },
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
-                  "inherentTarget": "Owner of this Modifier",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "ability": "Advanced_Silwolf_PassiveAbility_RandomBug"
                 }
               ]
@@ -66,13 +81,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -100,7 +121,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Advanced_Silwolf_Eidolon2_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -115,7 +139,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_Silwolf_Eidolon2_Bonus_OnCharacterCreate"
             }
           ],
@@ -127,7 +154,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Advanced_Silwolf_Eidolon2",
           "haloStatus": true
         }

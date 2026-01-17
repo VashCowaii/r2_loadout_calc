@@ -41,7 +41,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_BlackSwan_Maze_Flag"
     },
     {
@@ -94,10 +97,16 @@ const configAbility = {
         },
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "M_BlackSwan_Maze_StopAddDot",
             "invertCondition": true
           },
@@ -148,7 +157,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
                 "operator": "Variables[0] (_current_chance) || RETURN",
@@ -271,12 +283,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "M_BlackSwan_Maze_StopAddDot"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_BlackSwan_Maze_Flag"
     }
   ],

@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Variable",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "value1": "CurrentHP%",
         "compareType": "<=",
         "value2": {
@@ -23,7 +26,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "BlockDamage_Count[<span class=\"descriptionNumberColor\">Repel</span>]"
         }
       ]

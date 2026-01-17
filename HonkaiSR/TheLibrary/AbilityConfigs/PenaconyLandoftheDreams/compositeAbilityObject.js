@@ -13,7 +13,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_312_Main"
         }
       ],
@@ -31,7 +34,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.1) || RETURN",
@@ -57,7 +63,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
@@ -65,7 +74,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Physical"
@@ -76,7 +88,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Physical"
@@ -85,7 +100,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -96,7 +114,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -107,7 +128,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Fire"
@@ -116,7 +140,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -127,7 +154,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Ice"
@@ -138,7 +168,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Ice"
@@ -147,7 +180,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -158,7 +194,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Wind"
@@ -169,7 +208,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Wind"
@@ -178,7 +220,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -189,7 +234,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Thunder"
@@ -200,7 +248,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Thunder"
@@ -209,7 +260,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -220,7 +274,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -231,7 +288,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Quantum"
@@ -240,7 +300,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -251,7 +314,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Imaginary"
@@ -262,7 +328,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Imaginary"
@@ -271,7 +340,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -298,7 +370,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Physical"
@@ -307,11 +382,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Teammates (Excluding Owner)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
                           "searchRandom": true,
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Physical"
@@ -320,7 +401,10 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -331,7 +415,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -340,11 +427,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Teammates (Excluding Owner)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
                           "searchRandom": true,
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Fire"
@@ -353,7 +446,10 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -364,7 +460,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Ice"
@@ -373,11 +472,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Teammates (Excluding Owner)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
                           "searchRandom": true,
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Ice"
@@ -386,7 +491,10 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -397,7 +505,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Wind"
@@ -406,11 +517,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Teammates (Excluding Owner)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
                           "searchRandom": true,
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Wind"
@@ -419,7 +536,10 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -430,7 +550,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Thunder"
@@ -439,11 +562,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Teammates (Excluding Owner)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
                           "searchRandom": true,
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Thunder"
@@ -452,7 +581,10 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -463,7 +595,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -472,11 +607,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Teammates (Excluding Owner)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
                           "searchRandom": true,
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Quantum"
@@ -485,7 +626,10 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]
@@ -496,7 +640,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Imaginary"
@@ -505,11 +652,17 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Teammates (Excluding Owner)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
                           "searchRandom": true,
                           "conditions": {
                             "name": "Has Element",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Imaginary"
@@ -518,7 +671,10 @@ const compositeAbilityObject = {
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Relic_312_Sub"
                             }
                           ]

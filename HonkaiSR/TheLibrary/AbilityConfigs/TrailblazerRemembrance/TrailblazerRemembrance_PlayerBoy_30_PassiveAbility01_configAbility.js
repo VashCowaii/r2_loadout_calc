@@ -14,12 +14,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "PlayerBoy_30_Passive"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_PlayerBoy_30_CreateServantPreshow",
       "valuePerStack": {
         "ServantID": {
@@ -44,7 +50,10 @@ const configAbility = {
           "conditions": {
             "name": "Character ID",
             "ID": 8007,
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "characterName": "Trailblazer - Remembrance[M]"
           },
           "passed": [
@@ -73,7 +82,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count",
-                "target": "Caster (Memosprite)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                },
                 "compareType": "<=",
                 "value2": 0,
                 "livingTargets": true
@@ -81,7 +93,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill02",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"
@@ -101,13 +116,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "PlayerBoy_30_Halo_ListenSPChange"
                 }
               ]
@@ -135,7 +156,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -156,7 +180,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "PlayerBoy_30_Halo_ListenSPChange"
             }
           ],
@@ -192,7 +219,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "scope": "ContextModifier",
                       "variableName": "_chargeEnergy",
                       "value": {
@@ -208,7 +238,10 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
-                      "target": "Caster's Memosprite",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getMemosprite]]"
+                      },
                       "variableName": "CurEnergy",
                       "context": "TargetEntity",
                       "value": {
@@ -222,7 +255,10 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "TeamAddSP",
                       "value": {
                         "operator": "Constants[0] (0) || Variables[0] (_chargeEnergy) || Variables[1] (10) || MUL || SUB || RETURN",

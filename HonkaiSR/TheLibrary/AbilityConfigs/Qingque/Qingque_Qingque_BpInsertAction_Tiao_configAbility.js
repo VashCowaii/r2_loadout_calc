@@ -9,7 +9,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "QingQue_Passive_Hu_Flag_Yu"
       },
       "passed": [

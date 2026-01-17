@@ -38,7 +38,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "ShowSpecialMarkOnCreate",
                     "compareType": ">=",
                     "value2": 1,
@@ -46,11 +49,20 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   {
@@ -58,15 +70,24 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "AND",
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Current Action Owner",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
                             "team": "TeamLight"
                           },
                           {
@@ -114,7 +135,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
               },
               "passed": [
@@ -122,11 +146,20 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   "passed": [
@@ -134,8 +167,14 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
@@ -170,17 +209,32 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
@@ -230,7 +284,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">FireVulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (TOPAZ_OBJECT_UNUSED_1) || RETURN",
@@ -276,7 +333,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Numby",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "modifier": "BE_ExtraSpeedModifier"
             }
           ]
@@ -320,7 +380,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.25) || RETURN",
@@ -340,7 +403,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.1) || RETURN",
@@ -412,25 +478,40 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Enemies(All)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "maxTargets": 10,
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "invertCondition": true
               },
               "ifTargetFound": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_BETargetTagActive"
                 }
               ]
@@ -449,7 +530,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Topaz_BETargetTagActive",
               "valuePerStack": {
                 "ShowSpecialMarkOnCreate": {
@@ -469,7 +553,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "ShowSpecialMarkOnCreate",
                     "compareType": ">=",
                     "value2": 1,
@@ -477,11 +564,20 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     },
                     "invertCondition": true
                   },
@@ -490,15 +586,24 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "AND",
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Current Action Owner",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
                             "team": "TeamLight"
                           },
                           {
@@ -519,7 +624,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_isShowSpecialMark",
                     "compareType": "<=",
                     "value2": 0,
@@ -546,7 +654,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]"
             },
             {
@@ -561,7 +672,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "_isShowSpecialMark",
                 "compareType": ">=",
                 "value2": 1,
@@ -590,7 +704,10 @@ const configAbility = {
                 "attackTypes": [
                   "Follow-up"
                 ],
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
@@ -644,7 +761,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]"
                 }
               ]
@@ -666,12 +786,21 @@ const configAbility = {
                       "Skill",
                       "Ultimate"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Battle Events/Summon)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -679,7 +808,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Topaz_BETargetTagHitFlag"
                 }
               ]
@@ -691,21 +823,33 @@ const configAbility = {
                 "attackTypes": [
                   "Follow-up"
                 ],
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Topaz_BETargetTagInsertHitFlag"
                     }
                   ]
@@ -721,7 +865,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
                         "compareType": "<",
                         "value2": {
@@ -751,7 +898,10 @@ const configAbility = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue1_InsertCriticalDamageAddRatio": {
@@ -787,7 +937,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "_isShowSpecialMark",
                 "compareType": ">=",
                 "value2": 1,
@@ -813,7 +966,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "_isShowSpecialMark",
                 "compareType": ">=",
                 "value2": 1,
@@ -839,7 +995,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
               },
               "passed": [
@@ -847,11 +1006,20 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   "passed": [
@@ -864,8 +1032,14 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
@@ -892,19 +1066,34 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Current Action Owner",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       "passed": [
@@ -961,15 +1150,24 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "AND",
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -988,7 +1186,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_isShowSpecialMark",
                     "compareType": "<=",
                     "value2": 0,

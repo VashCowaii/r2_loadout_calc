@@ -34,12 +34,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Bronya_AttackPreshow"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Bronya_AbilityPreshow"
     }
   ],
@@ -52,14 +58,23 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Current Visual Target(All)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player's Aim Target List}}"
+        },
         "skillType": [
           "Skill"
         ],
         "conditions": {
           "name": "Is Part Of",
-          "of": "Owner of this Modifier",
-          "target": "Use Prior Target(s) Defined",
+          "of": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "mustBeAlive2": true,
           "invertCondition": true
         },
@@ -77,7 +92,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Basic ATK"
         ],

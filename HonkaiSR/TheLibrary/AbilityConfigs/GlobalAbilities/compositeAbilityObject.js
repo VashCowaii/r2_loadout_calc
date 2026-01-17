@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Force Entity Death",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ignoreHPLossTriggers": true,
           "ignoreDeathTriggers": true
         }
@@ -39,12 +42,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "GlobalAbility_Castorice_Main"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Allied Team(ALL) [Exclude battle mechanics]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
           "modifier": "GlobalAbility_Castorice_Listen"
         },
         {
@@ -59,39 +68,60 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
           }
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Allied Team(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}"
+          },
           "modifier": "GlobalAbility_Castorice_Listen"
         },
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
           },
           "ifTargetFound": [
             {
               "name": "Set HP Value",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "setValue": 1
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "GlobalAbility_Castorice_DeathTime[<span class=\"descriptionNumberColor\">Mooncocoon</span>]",
               "duration": 2
             }
@@ -99,7 +129,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Allied Team(ALL) [Exclude battle mechanics]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
           "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
         }
       ],
@@ -114,7 +147,10 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "GlobalAbility_Castorice_Main"
         }
       ],
@@ -129,7 +165,10 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Level Entity",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
           "modifier": "GlobalAbility_Castorice_CreateBattleEvent"
         }
       ],
@@ -143,7 +182,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHengIL_SpecialPassiveModifier"
         }
       ],
@@ -158,7 +200,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Skill"
                   ]
@@ -202,7 +247,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Ultimate"
                   ]
@@ -232,7 +280,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHengIL_SpecialModifier_DisableAbility",
                           "immediateEffect": true
                         }
@@ -256,7 +307,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHengIL_SpecialModifier_DisableAbility",
                           "immediateEffect": true
                         }
@@ -280,7 +334,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "DanHengIL_SpecialModifier_DisableAbility",
                           "immediateEffect": true
                         }
@@ -312,7 +369,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Servant_Standard_PassiveModifier"
         }
       ],
@@ -331,13 +391,22 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Related Summoned Entity",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Force Entity Death",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "ignoreHPLossTriggers": true,
                       "ignoreDeathTriggers": true,
                       "abortInsertedAbilities": true
@@ -360,7 +429,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Summoner_Standard_PassiveModifier"
         }
       ],
@@ -383,13 +455,19 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Target Exists",
-                        "target": "Caster's Memosprite",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}.[[getMemosprite]]"
+                        },
                         "living": true
                       },
                       "passed": [
                         {
                           "name": "Dispel Debuffs",
-                          "target": "Caster's Memosprite",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}.[[getMemosprite]]"
+                          },
                           "toRemove": [
                             "STAT_CTRL",
                             "DisableAction"
@@ -408,13 +486,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Caster's Memosprite",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getMemosprite]]"
+                    },
                     "living": true
                   },
                   "passed": [
                     {
                       "name": "Dispel Debuffs",
-                      "target": "Caster's Memosprite",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getMemosprite]]"
+                      },
                       "toRemove": [
                         "STAT_CTRL",
                         "DisableAction"
@@ -438,7 +522,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Local_SPAdd",
           "valuePerStack": {
             "MDF_AddValue": 10
@@ -446,12 +533,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "TriggerStanceCountDown_Test"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Standard_TriggerDeparted"
         }
       ],
@@ -508,7 +601,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Force Entity Death",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "ignoreDeathTriggers": true,
                       "canRevive": true
                     }
@@ -552,8 +648,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Secondary Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     "Modifier Deletes Itself"
@@ -587,7 +689,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": "<=",
                     "value2": 0
@@ -595,7 +700,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Mark for Future Revive",
-                      "target": "Owner of this Modifier"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
                     },
                     {
                       "name": "Inject Ability Use",
@@ -605,7 +713,10 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "GlobalAbility_Castorice_Insert",
-                      "abilitySource": "Caster",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "priorityTag": "AvatarReviveOthers",
                       "ownerState": "Mask_AliveOrLimbo",
                       "canHitNonTargets": true,
@@ -624,12 +735,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "GlobalAbility_Castorice_CD"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
                     }
                   ]
@@ -660,7 +777,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(ALL) NO Memosprites",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+                  },
                   "modifier": "GlobalAbility_Castorice_Listen",
                   "valuePerStack": {
                     "MDF_HealPercentage": {
@@ -685,23 +805,35 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Memosprite",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "GlobalAbility_Castorice_Listen"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "GlobalAbility_Castorice_CD",
                         "invertCondition": true
                       }
@@ -710,7 +842,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team(ALL) [Exclude battle mechanics, NO Memosprites]",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
+                      },
                       "modifier": "GlobalAbility_Castorice_Listen",
                       "valuePerStack": {
                         "MDF_HealPercentage": {
@@ -772,7 +907,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add to Team Target Grouping",
-                  "target": "Owner of this Modifier"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
                 }
               ]
             },
@@ -782,7 +920,10 @@ const compositeAbilityObject = {
                 "Mark Entity as Non-Target(Unselectable)",
                 {
                   "name": "Remove from Team Target Grouping",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "stayInTeam": true
                 }
               ]
@@ -791,7 +932,10 @@ const compositeAbilityObject = {
           "removalDependencies": {
             "name": "Removal Dependency",
             "dependancyName": "Standard_Departed",
-            "casterFilter": "Caster"
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         },
         {
@@ -807,7 +951,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Modifier Behavior Flag(s)",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagNames": []
                 }
               ]
@@ -838,7 +985,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Standard_Departed_Sub",
                   "onlyRemoveOwnersInstance": true
                 }
@@ -849,7 +999,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Standard_Departed_Sub"
                 }
               ]
@@ -877,25 +1030,40 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Monster_Beast02_Attack_Sign"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "ParamModifier"
                     }
                   ]
@@ -906,7 +1074,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Owner of this Modifier (with Battle Events/Summon)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[addBattleEvents]]"
+              },
               "modifier": "Standard_Departed_Sub",
               "aliveOnly": "False",
               "haloStatus": true,
@@ -923,7 +1094,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Standard_Departed"
                 }
               ]
@@ -933,7 +1107,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Standard_Departed"
                 }
               ]
@@ -960,7 +1137,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "TargetCurrentToughness",
                         "compareType": ">=",
                         "value2": 1
@@ -972,7 +1152,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Physical"
@@ -990,7 +1173,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Ice"
@@ -1008,7 +1194,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -1026,7 +1215,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Wind"
@@ -1044,7 +1236,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Thunder"
@@ -1062,7 +1257,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Imaginary"
@@ -1080,7 +1278,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -1126,7 +1327,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Physical"
@@ -1144,7 +1348,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Ice"
@@ -1162,7 +1369,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Fire"
@@ -1180,7 +1390,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Wind"
@@ -1198,7 +1411,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Thunder"
@@ -1216,7 +1432,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Imaginary"
@@ -1234,7 +1453,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Quantum"
@@ -1270,7 +1492,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "TargetCurrentToughness",
                         "compareType": ">=",
                         "value2": 1
@@ -1282,7 +1507,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Physical"
@@ -1300,7 +1528,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Ice"
@@ -1318,7 +1549,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -1336,7 +1570,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Wind"
@@ -1354,7 +1591,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Thunder"
@@ -1372,7 +1612,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Imaginary"
@@ -1390,7 +1633,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -1415,7 +1661,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Physical"
@@ -1433,7 +1682,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Ice"
@@ -1451,7 +1703,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Fire"
@@ -1469,7 +1724,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Wind"
@@ -1487,7 +1745,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Thunder"
@@ -1505,7 +1766,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Imaginary"
@@ -1523,7 +1787,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Quantum"
@@ -1553,7 +1820,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_AddValue) || RETURN",
                     "displayLines": "MDF_AddValue",
@@ -1592,20 +1862,29 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Find New Target",
-              "from": "Allied Team",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "conditions": {
                 "name": "OR",
                 "conditionList": [
                   {
                     "name": "Character ID",
                     "ID": 1407,
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "characterName": "Castorice"
                   },
                   {
                     "name": "Character ID",
                     "ID": 1408,
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "characterName": "Phainon"
                   }
                 ]
@@ -1613,7 +1892,10 @@ const compositeAbilityObject = {
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "ClearAvatarArea_ByAbility"
                 }
               ]

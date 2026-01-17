@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21051_Main"
     }
   ],
@@ -64,7 +67,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21051_Sub[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -77,7 +83,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster (Memosprite)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
                   "modifier": "LC_21051_Sub[<span class=\"descriptionNumberColor\">Basic ATK DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",

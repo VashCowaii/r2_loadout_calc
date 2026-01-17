@@ -6,14 +6,20 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterCurrentHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
     },
     {
       "name": "Consume",
       "consumeFrom": "MaxHP",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "consumePercent": {
         "operator": "Variables[0] (0.3) || RETURN",
         "displayLines": "0.3",
@@ -27,7 +33,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Ren_Attack_Transfer[<span class=\"descriptionNumberColor\">Hellscape</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
@@ -40,7 +49,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Ren_Attack[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "valuePerStack": {
         "MDF_PropertyValue": {

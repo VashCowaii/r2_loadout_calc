@@ -24,24 +24,36 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "AbilityPreShowModifier"
         }
       ]
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "AbilityPreShowModifier2"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHeng_CheckSelfBeingTarget"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
     },
     {
@@ -93,7 +105,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
@@ -101,7 +116,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
@@ -109,28 +127,49 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Is Part Of",
-                      "of": "Use Prior Target(s) Defined",
-                      "target": "Caster",
+                      "of": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "mustBeAlive2": true
                     }
                   },
                   {
                     "name": "Is Teammate",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "OR",
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use [SKILL SUB-TARGETS OF] Prior Target(s) Defined",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Sub-Targets}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -140,7 +179,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                   "valuePerStack": {
                     "DanHeng_PassivePene": {
@@ -162,7 +204,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 }
               ]
@@ -181,7 +226,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
@@ -189,7 +237,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
@@ -197,19 +248,34 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Is Part Of",
-                      "of": "Use Prior Target(s) Defined",
-                      "target": "Caster",
+                      "of": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "mustBeAlive2": true
                     }
                   },
                   {
                     "name": "Is Teammate",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use [LIST OF] Prior Target(s) Defined",
-                    "target": "Caster",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target List}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -217,7 +283,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                   "valuePerStack": {
                     "DanHeng_PassivePene": {
@@ -239,7 +308,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 }
               ]
@@ -258,7 +330,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_BeginTargetEnhanceCD[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
@@ -266,7 +341,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Modifier",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                     }
                   },
@@ -274,19 +352,34 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Is Part Of",
-                      "of": "Use Prior Target(s) Defined",
-                      "target": "Caster",
+                      "of": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "mustBeAlive2": true
                     }
                   },
                   {
                     "name": "Is Teammate",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use [LIST OF] Prior Target(s) Defined",
-                    "target": "Caster",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target List}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -294,7 +387,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHeng_Passive_SelfBeingTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]",
                   "valuePerStack": {
                     "DanHeng_PassivePene": {
@@ -316,7 +412,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHeng_Passive_BeginTargetEnhance[<span class=\"descriptionNumberColor\">Superiority of Reach</span>]"
                 }
               ]
@@ -342,7 +441,10 @@ const configAbility = {
           "name": "NOT",
           "condition": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "DanHeng_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]"
           }
         },
@@ -360,12 +462,18 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "conditions": {
           "name": "NOT",
           "condition": {
             "name": "Has Modifier",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "modifier": "DanHeng_PointB2_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
           }
         },

@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Dispel Debuffs",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "dispelCount": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -26,7 +29,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "MWGallagher_Ability02_StatusResModifier[<span class=\"descriptionNumberColor\">Effect RES Boost</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -51,7 +57,10 @@ const configAbility = {
     },
     {
       "name": "Heal",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "healFlat": {
         "operator": "Variables[0] (1600) || RETURN",
         "displayLines": "1600",
@@ -66,7 +75,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Current Action Holder Is",
-        "target": "Single Target (Primary)"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        }
       }
     },
     "Trigger: Ability End"

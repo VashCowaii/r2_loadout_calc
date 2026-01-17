@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21046_Main"
         }
       ],
@@ -44,7 +47,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.16) || RETURN",
@@ -72,8 +78,14 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Matching Path",
-                  "target": "Allied Team(No Memosprite)",
-                  "matchToPathFrom": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}.[[removeMemosprite]]"
+                  },
+                  "matchToPathFrom": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "SameTypeCount"
                 },
                 {
@@ -87,7 +99,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_21046_Bonus[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
                     }
                   ]
@@ -105,7 +120,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(No Memosprite)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}.[[removeMemosprite]]"
+                  },
                   "modifier": "LC_21046_Sub"
                 }
               ],

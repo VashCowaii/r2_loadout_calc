@@ -8,7 +8,10 @@ const configAbility = {
       "name": "Adjust Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "Jingliu_MoonFlag",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": {
         "operator": "Variables[0] (1) || RETURN",
         "displayLines": "1",
@@ -46,7 +49,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -83,7 +89,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Owner of this Modifier",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "value": {
             "operator": "Variables[0] (15) || RETURN",
             "displayLines": "15",

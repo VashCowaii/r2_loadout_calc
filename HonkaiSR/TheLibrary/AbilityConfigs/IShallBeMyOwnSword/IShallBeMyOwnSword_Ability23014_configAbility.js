@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23014_Main"
     }
   ],
@@ -68,7 +71,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "multiplier": 1
@@ -144,7 +150,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_23014_Sub[<span class=\"descriptionNumberColor\">Eclipse</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -164,7 +173,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "LC_23014_Sub[<span class=\"descriptionNumberColor\">Eclipse</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -188,7 +200,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
               "modifier": "LC_23014_Listen"
             }
           ]
@@ -200,12 +215,18 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Teammate",
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_23014_Listen"
                 }
               ]

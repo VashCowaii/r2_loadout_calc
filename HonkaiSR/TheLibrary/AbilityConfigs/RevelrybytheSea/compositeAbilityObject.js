@@ -13,7 +13,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_322_Main"
         }
       ],
@@ -65,7 +68,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
@@ -80,7 +86,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -99,7 +108,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Ability Value",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
@@ -114,7 +126,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -153,7 +168,10 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
@@ -180,7 +198,10 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -208,7 +229,10 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_322_Sub[<span class=\"descriptionNumberColor\">Revelry by the Sea</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {

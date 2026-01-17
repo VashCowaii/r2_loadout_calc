@@ -78,7 +78,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_BE_CriticalChance"
     },
     {
@@ -87,7 +90,10 @@ const configAbility = {
       "Event": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -119,7 +125,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Fire",
@@ -160,7 +169,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (5) || RETURN",
             "displayLines": "5",
@@ -182,7 +194,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (10) || RETURN",
             "displayLines": "10",
@@ -199,13 +214,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Topaz_Bonus"
       },
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (60) || RETURN",
             "displayLines": "60",
@@ -218,7 +239,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_Bonus"
         }
       ]
@@ -253,7 +277,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Numby",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "modifier": "Topaz_BE_UltraEnhance_ShowText",
           "valuePerStack": {
             "ATKCount": {
@@ -275,14 +302,20 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Numby",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "modifier": "Topaz_BE_UltraEnhance_ShowText"
         }
       ]
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_BE_CriticalChance"
     }
   ],

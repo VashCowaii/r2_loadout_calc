@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21040_Main"
         }
       ],
@@ -45,7 +48,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.2) || RETURN",
@@ -83,7 +89,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "conditions": {
@@ -94,7 +103,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Fire"
@@ -102,7 +114,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Weakness",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": "Fire"
                           }
                         ]
@@ -112,7 +127,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Thunder"
@@ -120,7 +138,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Weakness",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": "Thunder"
                           }
                         ]
@@ -130,7 +151,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Physical"
@@ -138,7 +162,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Weakness",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": "Physical"
                           }
                         ]
@@ -148,7 +175,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Wind"
@@ -156,7 +186,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Weakness",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": "Wind"
                           }
                         ]
@@ -166,7 +199,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Quantum"
@@ -174,7 +210,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Weakness",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": "Quantum"
                           }
                         ]
@@ -184,7 +223,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Ice"
@@ -192,7 +234,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Weakness",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": "Ice"
                           }
                         ]
@@ -202,7 +247,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Element",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "DamageType": {
                               "name": "Damage Type Source",
                               "sourceType": "Imaginary"
@@ -210,7 +258,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Weakness",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": "Imaginary"
                           }
                         ]
@@ -252,7 +303,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "LC_21040_Sub[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
                               "duration": {
                                 "operator": "Variables[0] (2) || RETURN",

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Heal",
-      "target": "All Team Members(In Context)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.135) || RETURN",
         "displayLines": "0.135",
@@ -27,20 +30,29 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Allied Team",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Player Team All}}"
+      },
       "searchRandom": true,
       "ifTargetFound": [
         {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]"
           },
           "passed": [
             {
               "name": "Define Modifier Variable",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifierName": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
               "function": "Add",
               "value": 1,
@@ -134,7 +146,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Bailu_Heal_Mark[<span class=\"descriptionNumberColor\">Invigoration</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -197,7 +212,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]",
                       "valuePerStack": {
                         "MDF_DamageResistance": {
@@ -227,7 +245,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bailu_Eidolon2[<span class=\"descriptionNumberColor\">Sylphic Slumber</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -252,20 +273,32 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
     },
     {
       "name": "Find New Target",
-      "from": "Skill Target List",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Target List}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Compare: Target",
-        "target": "Use Prior Target(s) Defined",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },

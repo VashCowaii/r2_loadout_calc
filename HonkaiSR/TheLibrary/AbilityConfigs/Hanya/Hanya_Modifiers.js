@@ -39,11 +39,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count SUM",
-                "target": "Current Visual Target(All)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Player's Aim Target List}}"
+                },
                 "conditions": {
                   "name": "Compare: Target",
-                  "target": "Owner of this Modifier",
-                  "target2": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 }
               },
               "passed": [
@@ -93,11 +102,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count SUM",
-                "target": "Current Visual Target(All)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Player's Aim Target List}}"
+                },
                 "conditions": {
                   "name": "Compare: Target",
-                  "target": "Owner of this Modifier",
-                  "target2": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 }
               },
               "passed": [
@@ -147,11 +165,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count SUM",
-                "target": "Current Visual Target(All)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Player's Aim Target List}}"
+                },
                 "conditions": {
                   "name": "Compare: Target",
-                  "target": "Owner of this Modifier",
-                  "target2": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 }
               },
               "passed": [
@@ -201,11 +228,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count SUM",
-                "target": "Current Visual Target(All)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Player's Aim Target List}}"
+                },
                 "conditions": {
                   "name": "Compare: Target",
-                  "target": "Owner of this Modifier",
-                  "target2": "Use Prior Target(s) Defined"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  }
                 }
               },
               "passed": [
@@ -237,7 +273,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -273,7 +312,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Hanya_Eidolon2[<span class=\"descriptionNumberColor\">Two Views</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -304,7 +346,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Skill"
         ],
@@ -312,7 +357,10 @@ const configAbility = {
           "name": "NOT",
           "condition": {
             "name": "Has Modifier",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "modifier": "Hanya_Eidolon2[<span class=\"descriptionNumberColor\">Two Views</span>]"
           }
         },
@@ -351,7 +399,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -421,7 +472,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Enemies (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
             },
             {
@@ -462,7 +516,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                 },
                 {
@@ -530,7 +587,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                 },
                 {
@@ -598,7 +658,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_DamageUp2) || RETURN",
@@ -629,19 +692,31 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Enemies(All)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All(with Unselectable)}}"
+              },
               "searchRandom": true,
               "maxTargets": 10,
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "invertCondition": true
               },
               "ifTargetFound": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                 }
               ]
@@ -653,12 +728,18 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
             }
           ]
@@ -668,22 +749,34 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
             }
           ]
@@ -701,14 +794,23 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Owner of this Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_Self"
                 }
               ]
@@ -746,7 +848,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "WHanya_BPRecover",
                   "valuePerStack": {
                     "MDF_RecoverValue": {
@@ -763,7 +868,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "WHanya_BpZhanYin_Self"
             }
           ]
@@ -781,7 +889,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
@@ -789,14 +900,26 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Use [SKILL SUB-TARGETS OF] Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Sub-Targets}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -830,7 +953,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Hanya_Passive_AddDamage[<span class=\"descriptionNumberColor\">Sanction</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Lifetime) || RETURN",
@@ -856,7 +982,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Hanya_Passive_AddDamage[<span class=\"descriptionNumberColor\">Sanction</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Lifetime) || RETURN",
@@ -893,7 +1022,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
@@ -901,14 +1033,26 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Use [SKILL SUB-TARGETS OF] Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Sub-Targets}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -951,7 +1095,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_AttackCount",
                     "compareType": "=",
                     "value2": 1,
@@ -960,34 +1107,52 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                     },
                     {
@@ -1048,7 +1213,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "WHanya_BPRecover",
                       "valuePerStack": {
                         "MDF_RecoverValue": 1
@@ -1063,7 +1231,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Hanya_PointB1[<span class=\"descriptionNumberColor\">Scrivener</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",
@@ -1095,7 +1266,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -1119,44 +1293,68 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin[<span class=\"descriptionNumberColor\">Burden</span>]"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_Self"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                         },
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                         }
                       ]
@@ -1174,32 +1372,50 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Target is Unselectable",
-                "target": "Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_Self"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen2"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen3"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "WHanya_BpZhanYin_SpecialMark_Listen4"
                 }
               ]
@@ -1273,7 +1489,10 @@ const configAbility = {
                 },
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "advanceType": "Advance",
                   "value": "-0.15"
                 }
@@ -1326,7 +1545,10 @@ const configAbility = {
                 },
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "advanceType": "Advance",
                   "value": "-0.15"
                 }
@@ -1351,7 +1573,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (Ability03_P1_ATKRatio) || RETURN",
@@ -1376,7 +1601,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (Ability03_P3_Speed) || Variables[1] (MDF_Skill03_Speed) || MUL || RETURN",

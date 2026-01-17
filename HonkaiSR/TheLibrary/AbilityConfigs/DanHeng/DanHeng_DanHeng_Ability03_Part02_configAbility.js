@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_Eidolon4_Trigger"
         }
       ]
@@ -22,13 +25,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Flag",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "flagName": "STAT_SpeedDown"
       },
       "passed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -57,7 +66,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -93,7 +105,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "DanHeng_Eidolon4_Trigger"
         }
       ]
@@ -112,7 +127,10 @@ const configAbility = {
             {
               "name": "Action Advance/Delay",
               "advanceType": "Set",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": 0
             }
           ]
@@ -123,7 +141,10 @@ const configAbility = {
             {
               "name": "Action Advance/Delay",
               "advanceType": "Set",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": 0
             }
           ]

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21032_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRate</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.06) || RETURN",
@@ -50,7 +56,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -79,7 +88,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.1) || RETURN",
@@ -107,16 +119,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
@@ -129,12 +144,18 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21032_Sub1"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21032_Sub2"
                 }
               ]
@@ -147,7 +168,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Team Members(In Context)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
               "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
             }
           ]
@@ -159,13 +183,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                 }
               ]
@@ -183,16 +213,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
@@ -205,12 +238,18 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21032_Sub1"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21032_Sub3"
                 }
               ]
@@ -223,7 +262,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Team Members(In Context)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
               "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
             }
           ]
@@ -235,13 +277,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
                 }
               ]
@@ -261,16 +309,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
@@ -283,12 +334,18 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21032_Sub2"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21032_Sub3"
                 }
               ]
@@ -301,7 +358,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Team Members(In Context)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
               "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
             }
           ]
@@ -313,13 +373,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]"
                 }
               ]
@@ -339,46 +405,55 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21032_Bonus1[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21032_Bonus2[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21032_Bonus3[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]",
               "onlyRemoveOwnersInstance": true
             }
@@ -406,17 +481,26 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21032_Sub1"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21032_Sub2"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21032_Sub3"
                     }
                   ]

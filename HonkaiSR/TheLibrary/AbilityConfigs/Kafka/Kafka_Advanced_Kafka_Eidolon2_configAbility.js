@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Kafka_Eidolon2"
     }
   ],
@@ -20,16 +23,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]"
             }
           ]
@@ -39,7 +45,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -59,7 +68,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "Kafka_Eidolon2_Sub[<span class=\"descriptionNumberColor\">Fortississimo</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {

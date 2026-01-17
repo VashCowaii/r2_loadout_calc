@@ -18,7 +18,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Sparkle_Ability03_Part02"
     }
   ],

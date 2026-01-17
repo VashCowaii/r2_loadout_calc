@@ -13,14 +13,20 @@ const configAbility = {
       "passed": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Yukong_Ability03_AddFlower"
         }
       ]
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Yukong's Flower Target",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Yukong's Flower Target}}"
+      },
       "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
       "valuePerStack": {
         "MDF_RealAttack": {
@@ -51,7 +57,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",
@@ -80,7 +89,10 @@ const configAbility = {
     "Trigger: Skip Death Handling",
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Team Members(In Context, with Untargetable)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{All Team Members with Unselectables}}"
+      },
       "modifier": "Yukong_Eidolon2_BonusCD"
     },
     "Trigger: Ability End"

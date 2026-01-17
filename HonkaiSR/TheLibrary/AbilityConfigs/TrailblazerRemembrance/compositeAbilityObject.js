@@ -44,7 +44,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoy_30_Eidolon4"
         }
       ],
@@ -60,7 +63,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Caster's Memosprite",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getMemosprite]]"
+                    },
                     "living": true
                   },
                   "passed": [
@@ -71,13 +77,22 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": "Use Prior Target(s) Defined",
-                            "target": "All Team Members(In Context, with Untargetable + Memosprite/Summon)",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{All Team Members with Unselectables}}.[[addMemoAndSummon]]"
+                            },
                             "mustBeAlive2": true
                           },
                           {
                             "name": "Compare: Ability Value",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
                             "compareType": "<=",
                             "value2": 0
@@ -87,7 +102,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable with Added Value",
-                          "target": "Caster's Memosprite",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}.[[getMemosprite]]"
+                          },
                           "variableName": "CurEnergy",
                           "context": "TargetEntity",
                           "value": {
@@ -121,7 +139,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoy_30_Eidolon2"
         }
       ],
@@ -195,7 +216,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                   "counter": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -236,13 +260,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined",
-                        "target": "Memosprites [Exclude Caster's Memo]",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Memosprites}} - {{Caster}}.[[getMemosprite]]"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -256,7 +289,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -269,13 +305,19 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                       "function": "Add"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                       "adjustmentType": "+",
                       "variableName": "MDF_Count",
@@ -295,13 +337,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined",
-                        "target": "Memosprites [Exclude Caster's Memo]",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Memosprites}} - {{Caster}}.[[getMemosprite]]"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -315,7 +366,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -328,13 +382,19 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                       "function": "Add"
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "PlayerBoy_30_Eidolon2_Count[<span class=\"descriptionNumberColor\">Gleaner of the Past</span>]",
                       "adjustmentType": "+",
                       "variableName": "MDF_Count",
@@ -358,12 +418,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoy_30_Trace01"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoy_30_Trace01_ListenFirstSummon"
         }
       ],
@@ -383,20 +449,32 @@ const compositeAbilityObject = {
                       {
                         "name": "Character ID",
                         "ID": "ServantID",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "characterName": null
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster's Memosprite"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}.[[getMemosprite]]"
+                        }
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Added Value",
-                      "target": "Caster's Memosprite",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getMemosprite]]"
+                      },
                       "variableName": "CurEnergy",
                       "context": "TargetEntity",
                       "value": {
@@ -437,7 +515,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "advanceType": "Set",
                       "value": "(0 - 0.3)"
                     }
@@ -468,12 +549,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_30_Maze"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_30_Maze_Damage"
         }
       ],
@@ -493,7 +580,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "All Hostile Entities (AOE)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "AttackScaling": {
                         "DamageType": "Ice",
                         "Damage": {
@@ -534,7 +624,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "All Hostile Entities (AOE)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "advanceType": "Delay",
                       "value": "0.5"
                     }
@@ -565,12 +658,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_30_Passive"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoy_30_CreateServantPreshow",
           "valuePerStack": {
             "ServantID": {
@@ -595,7 +694,10 @@ const compositeAbilityObject = {
               "conditions": {
                 "name": "Character ID",
                 "ID": 8007,
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "characterName": "Trailblazer - Remembrance[M]"
               },
               "passed": [
@@ -624,7 +726,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster (Memosprite)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
                     "compareType": "<=",
                     "value2": 0,
                     "livingTargets": true
@@ -632,7 +737,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Ability Binding",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "abilityName": "Skill02",
                       "skillSlot": "Skill",
                       "enableSecondaryType": "ControlSkill02"
@@ -652,13 +760,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "PlayerBoy_30_Halo_ListenSPChange"
                     }
                   ]
@@ -686,7 +800,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -707,7 +824,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "PlayerBoy_30_Halo_ListenSPChange"
                 }
               ],
@@ -743,7 +863,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Declare Custom Variable",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "scope": "ContextModifier",
                           "variableName": "_chargeEnergy",
                           "value": {
@@ -759,7 +882,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
-                          "target": "Caster's Memosprite",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}.[[getMemosprite]]"
+                          },
                           "variableName": "CurEnergy",
                           "context": "TargetEntity",
                           "value": {
@@ -773,7 +899,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "variableName": "TeamAddSP",
                           "value": {
                             "operator": "Constants[0] (0) || Variables[0] (_chargeEnergy) || Variables[1] (10) || MUL || SUB || RETURN",
@@ -807,7 +936,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Added Value",
-          "target": "Caster's Memosprite",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
           "variableName": "CurEnergy",
           "context": "TargetEntity",
           "value": {
@@ -823,7 +955,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -843,7 +978,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable",
-          "target": "Caster's Memosprite",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
           "scope": "TargetEntity",
           "variableName": "Ultra_Stance",
           "value": {
@@ -857,7 +995,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Trigger Ability",
-          "from": "Caster's Memosprite",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
           "ability": "Servant_PlayerBoyServant_30_Ability03_Part02",
           "isTrigger": true
         },
@@ -886,7 +1027,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_30_Ability03_Part02",
           "isTrigger": true
         }
@@ -909,7 +1053,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Heal",
-          "target": "Caster (Memosprite)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.6) || RETURN",
             "displayLines": "0.6",
@@ -923,7 +1070,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Added Value",
-          "target": "Caster's Memosprite",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
           "variableName": "CurEnergy",
           "context": "TargetEntity",
           "value": {
@@ -939,7 +1089,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Clear DMG Numbers(UI)",
-          "target": "Caster (Memosprite)"
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          }
         },
         "Trigger: Ability End"
       ],
@@ -962,7 +1115,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_30_Ability21_Part02",
           "isTrigger": true
         },
@@ -982,7 +1138,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -991,13 +1150,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Target Exists",
-            "target": "BattleEvent60021",
+            "target": {
+              "name": "Target Name",
+              "target": "{{BattleEvent60021}}"
+            },
             "living": true
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "BattleEvent60021",
+              "to": {
+                "name": "Target Name",
+                "target": "{{BattleEvent60021}}"
+              },
               "modifier": "MissionBattleEvent60021_TriggerBEAbility"
             }
           ]
@@ -1024,7 +1189,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_30_Ability02_Part02",
           "isTrigger": true
         },
@@ -1040,21 +1208,30 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
           "addStacksPerTrigger": -1,
           "silentAdd": true
         },
         {
           "name": "Dispel Debuffs",
-          "target": "Caster (Memosprite)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
           "toRemove": [
             "STAT_CTRL"
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -1086,7 +1263,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Added Value",
-          "target": "Caster's Memosprite",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
           "variableName": "CurEnergy",
           "context": "TargetEntity",
           "value": {
@@ -1122,7 +1302,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
-          "target": "Caster's Memosprite",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getMemosprite]]"
+          },
           "scope": "TargetEntity",
           "variableName": "Skill11_Stance",
           "value": {
@@ -1141,12 +1324,18 @@ const compositeAbilityObject = {
           "abilityList": [
             {
               "name": "Trigger Ability",
-              "from": "Caster",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ability": "PlayerBoy_30_Ability11_Part02"
             },
             {
               "name": "Trigger Ability",
-              "from": "Caster (Memosprite)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "ability": "Servant_PlayerBoyServant_30_Ability11_Together"
             }
           ]
@@ -1166,7 +1355,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -1216,7 +1408,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "PlayerBoy_30_Ability01_Part02",
           "isTrigger": true
         }
@@ -1242,13 +1437,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Basic ATK"
                 }
@@ -1259,13 +1460,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityName": "Skill11",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Show",
                   "abilityName": "Basic ATK"
                 }
@@ -1275,7 +1482,10 @@ const compositeAbilityObject = {
           "removalDependencies": {
             "name": "Removal Dependency",
             "dependancyName": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
-            "casterFilter": "Caster"
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         },
         {
@@ -1290,7 +1500,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": null,
                     "compareType": "<=",
                     "value2": 0,
@@ -1304,7 +1517,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "Caster (Memosprite)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Memosprite}}"
+                        },
                         "compareType": ">",
                         "value2": 0,
                         "livingTargets": true
@@ -1312,14 +1528,20 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "PlayerBoy_30_UltraState_Sub"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "PlayerBoy_30_UltraState_Sub"
                         }
                       ]
@@ -1335,7 +1557,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster (Memosprite)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
                     "compareType": ">",
                     "value2": 0,
                     "livingTargets": true
@@ -1343,14 +1568,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState_Sub"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState_Sub"
                     }
                   ]
@@ -1364,7 +1595,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster (Memosprite)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
                     "compareType": ">",
                     "value2": 0,
                     "livingTargets": true
@@ -1372,14 +1606,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState_Sub"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState_Sub"
                     }
                   ]
@@ -1393,13 +1633,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "Charm"
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState_Sub"
                     }
                   ]
@@ -1416,13 +1662,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "Charm",
                         "invertCondition": true
                       },
                       {
                         "name": "Compare: Target Count",
-                        "target": "Caster (Memosprite)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Memosprite}}"
+                        },
                         "compareType": ">",
                         "value2": 0,
                         "livingTargets": true
@@ -1432,7 +1684,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState_Sub"
                     }
                   ]
@@ -1466,7 +1721,10 @@ const compositeAbilityObject = {
             ],
             "conditions": {
               "name": "Compare: Target Count",
-              "target": "Caster (Memosprite)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "compareType": "<=",
               "value2": 0,
               "livingTargets": true
@@ -1491,7 +1749,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_spDelta",
                     "compareType": ">",
                     "value2": 0
@@ -1501,7 +1762,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "Caster (Memosprite)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster's Memosprite}}"
+                        },
                         "compareType": ">=",
                         "value2": 1,
                         "livingTargets": true
@@ -1521,7 +1785,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Define Custom Variable with Added Value",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "variableName": "_tmpTeamAddSP",
                           "context": "ContextModifier",
                           "value": {
@@ -1583,7 +1850,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count",
-                "target": "Caster (Memosprite)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                },
                 "compareType": "<=",
                 "value2": 0,
                 "livingTargets": true
@@ -1625,7 +1895,10 @@ const compositeAbilityObject = {
                   "afterSummon": [
                     {
                       "name": "Update Ability Binding",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "abilityName": "Skill21",
                       "skillSlot": "Skill",
                       "enableSecondaryType": "ControlSkill02"
@@ -1655,7 +1928,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Memosprite_PlayerBoyServant_30_DeathRattle"
         }
       ],
@@ -1672,7 +1948,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Caster's Summoner",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}.[[getSummoner]]"
+                  },
                   "advanceType": "Set",
                   "value": "(0 - 0.25)"
                 }
@@ -1700,7 +1979,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Memosprite_PlayerBoyServant_30_BattleCry"
         }
       ],
@@ -1714,7 +1996,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Added Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CurEnergy",
                   "value": {
                     "operator": "Variables[0] (0.5) || Constants[0] (100) || MUL || RETURN",
@@ -1753,17 +2038,26 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Memosprite_PlayerBoyServant_30_Passive"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Memosprite_PlayerBoyServant_30_Passive_Performance"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
           "counter": {
             "operator": "Variables[0] (CurEnergy) || RETURN",
@@ -1787,7 +2081,10 @@ const compositeAbilityObject = {
               "CurEnergy"
             ]
           },
-          "target": "Caster's Summoner",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getSummoner]]"
+          },
           "maximum": {
             "operator": "Variables[0] (MDF_Max) || RETURN",
             "displayLines": "MDF_Max",
@@ -1801,7 +2098,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Force Target-Lock on Target",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "enable": true
         },
         {
@@ -1813,7 +2113,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Memosprite_PlayerBoyServant_30_Eidolon1",
               "referenceModifier": "MReference_Empty"
             }
@@ -1832,7 +2135,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Break",
                     "invertCondition": true
                   },
@@ -1864,18 +2170,30 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster's Summoner"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getSummoner]]"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Hostile Entities (AOE)(ALL)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "M_PlayerBoyServant_30_BreakFlag"
                         }
                       }
@@ -1895,7 +2213,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "M_PlayerBoyServant_30_BreakFlag"
                 }
               ]
@@ -1910,12 +2231,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "DisableAction"
                       }
                     ],
@@ -1934,12 +2261,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "DisableAction"
                       }
                     ]
@@ -1961,7 +2294,10 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": 0,
-                  "target": "Caster's Summoner",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}.[[getSummoner]]"
+                  },
                   "maximum": {
                     "operator": "Variables[0] (MDF_Max) || RETURN",
                     "displayLines": "MDF_Max",
@@ -2038,11 +2374,17 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Current Turn Is",
-                                "target": "Caster"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                }
                               },
                               {
                                 "name": "Has Modifier",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "modifier": "M_PlayerBoyServant_30_EnableAbility",
                                 "invertCondition": true
                               }
@@ -2059,19 +2401,28 @@ const compositeAbilityObject = {
                         {
                           "name": "Action Advance/Delay",
                           "advanceType": "Set",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": 0
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "M_PlayerBoyServant_30_EnableAbility"
                         }
                       ]
                     },
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "value": {
                         "operator": "Variables[0] (CurEnergy) || RETURN",
@@ -2092,7 +2443,10 @@ const compositeAbilityObject = {
                           "CurEnergy"
                         ]
                       },
-                      "target": "Caster's Summoner"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getSummoner]]"
+                      }
                     }
                   ]
                 }
@@ -2109,7 +2463,10 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "modifier": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
                       "valuePerStack": {
                         "MDF_PropertyConvert": {
@@ -2140,7 +2497,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
               "haloStatus": true,
               "valuePerStack": {
@@ -2174,13 +2534,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster's Summoner",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}.[[getSummoner]]"
+          },
           "ability": "PlayerBoy_30_Ability03_Part02_Charge",
           "isTrigger": true
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -2222,7 +2588,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_PlayerBoyServant_30_Eidolon6"
             }
           ]
@@ -2287,21 +2656,33 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoyServant_30_EnableAbility"
         },
         {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target",
-            "target": "Single Target (Primary)",
-            "target2": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "invertCondition": true
           },
           "passed": [
             {
               "name": "Action Advance/Delay",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "advanceType": "Set",
               "value": "(0 - 1)"
             }
@@ -2309,7 +2690,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -2380,7 +2764,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -2390,7 +2777,10 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoy_30_BE_Ability02_Preshow"
         }
       ],
@@ -2403,7 +2793,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Current Visual Target(All)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
             "skillType": [
               "Memosprite"
             ],
@@ -2412,13 +2805,22 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Has Modifier",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_PlayerBoyServant_30_EnableAbility"
                 },
                 {
                   "name": "Is Part Of",
-                  "of": "Owner of this Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "of": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "mustBeAlive2": true,
                   "invertCondition": true
                 }
@@ -2463,14 +2865,23 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target",
-            "target": "Single Target (Primary)",
-            "target2": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "invertCondition": true
           }
         },
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Servant_PlayerBoyServant_30_Ability11_Part02",
           "isTrigger": true
         },
@@ -2479,8 +2890,14 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target",
-            "target": "Single Target (Primary)",
-            "target2": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         }
       ],
@@ -2538,7 +2955,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -2583,7 +3003,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Added Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "CurEnergy",
               "value": {
                 "operator": "Variables[0] (0.05) || Constants[0] (100) || MUL || RETURN",
@@ -2624,11 +3047,17 @@ const compositeAbilityObject = {
             {
               "name": "Use Custom Character Function",
               "functionName": "Bounce_SelectTarget",
-              "target": "Target Group",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target Group}}"
+              },
               "paramSequence": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",
@@ -2659,7 +3088,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Target Group",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target Group}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -2708,7 +3140,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Servant_PlayerBoyServant_30_Ability01_Part02",
           "isTrigger": true
         },
@@ -2716,7 +3151,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "flagName": "Charm"
           },
           "passed": [
@@ -2754,7 +3192,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Is_Copy",
                     "compareType": "<=",
                     "value2": 0
@@ -2762,12 +3203,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "[MEMOSPRITE(if Summoner) OR SUMMONER(if Memo) OF] Owner of this Modifier",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+                      },
                       "includeDyingTargets": true,
                       "ifTargetFound": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
                         }
                       ]
@@ -2776,7 +3223,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "[MEMOSPRITE(if Summoner) OR SUMMONER(if Memo) OF] Owner of this Modifier",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+                  },
                   "includeDyingTargets": true,
                   "maxTargets": 1,
                   "conditions": {
@@ -2788,12 +3238,18 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                         "invertCondition": true
                       }
@@ -2802,7 +3258,10 @@ const compositeAbilityObject = {
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
                       "referenceModifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                       "valuePerStack": {
@@ -2881,7 +3340,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "_originalDamage",
                       "value": "Result_FinalDamageBase",
                       "context": "ContextModifier"
@@ -2890,7 +3352,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "_originalDamage",
                         "compareType": ">",
                         "value2": 0,
@@ -2899,7 +3364,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": {
@@ -2920,7 +3388,10 @@ const compositeAbilityObject = {
                             "Tags": null,
                             "attackType": "True DMG"
                           },
-                          "overrideDamageOwner": "Owner of this Modifier",
+                          "overrideDamageOwner": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "isConvertedDMG": true,
                           "dealAfterOriginialHit": true
                         }
@@ -2940,12 +3411,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
                       }
                     ]
@@ -2953,14 +3430,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
                     }
                   ]
                 },
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
                   "modifierNameUpdate": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                 },
@@ -2977,7 +3460,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -3010,8 +3496,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined",
-                        "target": "[MEMOSPRITE(if Summoner) OR SUMMONER(if Memo) OF] Owner of this Modifier",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -3019,7 +3511,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
                     }
                   ]
@@ -3062,7 +3557,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "[MEMOSPRITE(if Summoner) OR SUMMONER(if Memo) OF] Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+              },
               "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
               "refModifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
               "aliveOnly": "False",
@@ -3079,11 +3577,17 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Target Exists",
-                        "target": "[MEMOSPRITE OF] Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                        }
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "[MEMOSPRITE OF] Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                        },
                         "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       }
                     ],
@@ -3094,11 +3598,17 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Target Exists",
-                        "target": "[SUMMONER OF] Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getSummoner]]"
+                        }
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "[SUMMONER OF] Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getSummoner]]"
+                        },
                         "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                       }
                     ],
@@ -3179,7 +3689,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "_propertyBase",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
                 },
@@ -3199,7 +3712,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -3239,8 +3755,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Owner of this Modifier",
-                        "target2": "Current Action Owner"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        }
                       }
                     ]
                   }
@@ -3252,24 +3774,36 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Memosprite"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Basic ATK"
                 },
                 {
                   "name": "Force Auto-Battle on Target",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "enable": true
                 },
                 {
                   "name": "Force Target-Lock on Target",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "enable": true
                 }
               ]
@@ -3282,23 +3816,35 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityName": "Skill11",
                   "skillSlot": "Memosprite"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Show",
                   "abilityName": "Basic ATK"
                 },
                 {
                   "name": "Force Auto-Battle on Target",
-                  "target": "Owner of this Modifier"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
                 },
                 {
                   "name": "Force Target-Lock on Target",
-                  "target": "Owner of this Modifier"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
                 }
               ]
             },
@@ -3362,7 +3908,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_maxSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
@@ -3386,7 +3935,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Added Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_DamagePercentage",
                   "context": "ContextModifier",
                   "value": {
@@ -3414,7 +3966,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Ability Value",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
                     "compareType": "<=",
                     "value2": 0
@@ -3422,7 +3977,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Added Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "MDF_DamagePercentage",
                       "context": "ContextModifier",
                       "value": {

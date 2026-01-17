@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_121_Main"
     }
   ],
@@ -21,14 +24,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.18) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -80,7 +89,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Target Count",
-                        "target": "Skill Target List",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target List}}"
+                        },
                         "compareType": "=",
                         "value2": 1,
                         "livingTargets": true
@@ -90,7 +102,10 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Compare: Target Count",
-                            "target": "Skill Sub-Target List",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Ability Sub-Targets}}"
+                            },
                             "compareType": "=",
                             "value2": 0,
                             "livingTargets": true
@@ -98,15 +113,24 @@ const configAbility = {
                           {
                             "name": "Character ID",
                             "ID": 1313,
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "characterName": "Sunday"
                           }
                         ]
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Skill Target List",
-                        "target": "Allied Team",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target List}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -117,13 +141,19 @@ const configAbility = {
                       "conditions": {
                         "name": "Character ID",
                         "ID": 1313,
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "characterName": "Sunday"
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Skill Target List + Memosprites",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target List}} + {{Ability Target List}}.[[getMemosprite]]"
+                          },
                           "modifier": "Relic_121_Sub[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -146,7 +176,10 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Skill Target List",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target List}}"
+                          },
                           "modifier": "Relic_121_Sub[<span class=\"descriptionNumberColor\">Sacerdos' Relived Ordeal</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yukong_Point02_Bonus"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageImaginary</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_Ratio) || RETURN",
@@ -45,7 +51,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Team Members(In Context)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
               "modifier": "Yukong_Point02_ImaginaryAddedRatio",
               "valuePerStack": {
                 "MDF_Ratio": {
@@ -67,12 +76,18 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Teammate",
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Yukong_Point02_ImaginaryAddedRatio",
                   "valuePerStack": {
                     "MDF_Ratio": {
@@ -94,7 +109,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Yukong_Point02_ImaginaryAddedRatio",
               "onlyRemoveOwnersInstance": true
             }

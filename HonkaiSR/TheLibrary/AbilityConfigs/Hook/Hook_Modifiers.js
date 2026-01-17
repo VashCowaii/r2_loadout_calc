@@ -18,14 +18,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill02",
               "skillSlot": "Skill",
               "enableSecondaryType": "ControlSkill02"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Hide",
               "abilityName": "Skill"
             }
@@ -36,14 +42,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill21",
               "skillSlot": "Skill",
               "enableSecondaryType": "ControlSkill02"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Show",
               "abilityName": "Skill"
             }

@@ -11,17 +11,26 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Numby",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Numby}}"
+      },
       "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
       "valuePerStack": {
         "MDF_PropertyValue1_DamageAdd": {
@@ -55,21 +64,33 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       }
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
     },
     {
       "name": "Trigger Ability",
-      "from": "Numby",
-      "inherentTarget": "Single Target (Primary)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Numby}}"
+      },
+      "inherentTarget": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "ability": "Topaz_BE_FirstAttack",
       "isTrigger": true
     },
@@ -87,7 +108,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
       },
       "passed": [
@@ -165,7 +189,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_BE_CriticalChance"
         },
         {
@@ -174,7 +201,10 @@ const configAbility = {
           "Event": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -206,7 +236,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -247,7 +280,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -264,13 +300,19 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Topaz_Bonus"
           },
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (60) || RETURN",
                 "displayLines": "60",
@@ -283,7 +325,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_Bonus"
             }
           ]
@@ -318,7 +363,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Numby",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "modifier": "Topaz_BE_UltraEnhance_ShowText",
               "valuePerStack": {
                 "ATKCount": {
@@ -340,14 +388,20 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Numby",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "modifier": "Topaz_BE_UltraEnhance_ShowText"
             }
           ]
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_BE_CriticalChance"
         }
       ],
@@ -358,7 +412,10 @@ const configAbility = {
           "Event": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -398,13 +455,19 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Topaz_Bonus"
           },
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (60) || RETURN",
                 "displayLines": "60",
@@ -417,7 +480,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_Bonus"
             }
           ]
@@ -429,7 +495,10 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_Ability02_SpecialMarkAdder"
     }
   ],
@@ -469,17 +538,32 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "Current Visual Target(All)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Player's Aim Target List}}"
+                    },
                     "conditions": {
                       "name": "Compare: Target",
-                      "target": "Owner of this Modifier",
-                      "target2": "Use Prior Target(s) Defined"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "target2": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
                     }
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Current Action Owner",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -512,7 +596,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Topaz_BETargetTagActive_BP",
           "aliveOnly": "True",
           "haloStatus": true
@@ -528,7 +615,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Attack-Type Extension",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "typeToExtend": "Skill",
               "isRemove": true
             }
@@ -539,7 +629,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Attack-Type Extension",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "typeToExtend": "Skill",
               "extendTypeTo": "Follow-up"
             }
@@ -550,7 +643,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
             }
           ]
