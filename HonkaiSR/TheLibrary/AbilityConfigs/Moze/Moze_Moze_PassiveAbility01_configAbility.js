@@ -260,7 +260,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "Monster_W3_Aventurine_Gambling",
+                    "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -460,7 +460,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_W3_Aventurine_Gambling"
+                "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]"
               },
               "passed": [
                 {
@@ -487,7 +487,7 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Was",
-                "modifier": "Monster_W3_Aventurine_Gambling"
+                "modifier": "Monster_W3_Aventurine_Gambling[<span class=\"descriptionNumberColor\">Gamble</span>]"
               },
               "passed": [
                 {

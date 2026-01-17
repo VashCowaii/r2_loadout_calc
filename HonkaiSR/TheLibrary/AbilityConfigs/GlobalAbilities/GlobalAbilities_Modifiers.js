@@ -496,7 +496,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_Beast02_Attack_Sign"
+                  "modifier": "Monster_Beast02_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -504,7 +504,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign"
+                  "modifier": "Monster_W2_Beast02_RLElite_Attack_Sign[<span class=\"descriptionNumberColor\">Monitor</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
