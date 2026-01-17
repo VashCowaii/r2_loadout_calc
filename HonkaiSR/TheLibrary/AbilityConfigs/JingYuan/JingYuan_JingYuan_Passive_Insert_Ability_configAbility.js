@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]"
       },
       "passed": [
@@ -25,7 +28,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]"
       },
       "passed": [
@@ -76,7 +82,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "JingYuan_CriticalDamageUp",
               "duration": 1,
               "valuePerStack": {
@@ -108,11 +117,17 @@ const configAbility = {
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "paramSequence": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Thunder",
@@ -147,7 +162,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Targets Adjacent to Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Thunder",
@@ -172,7 +190,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Targets Adjacent to Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Thunder",
@@ -203,7 +224,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -225,7 +249,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -277,11 +304,17 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "Bounce_SelectTarget",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "paramSequence": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Thunder",
@@ -317,7 +350,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Targets Adjacent to Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -343,7 +379,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Targets Adjacent to Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -375,7 +414,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -397,7 +439,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -432,12 +477,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]"
     },
     {
@@ -449,7 +500,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_Eidolon2_DamageAddedRatio[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -474,12 +528,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_CriticalDamageUp"
     },
     {
@@ -511,7 +571,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackLimit": {
         "operator": "Variables[0] (10) || RETURN",
@@ -576,7 +639,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster's own Created Battle Event/Summon",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Self-Made Battle-Events}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCountShowText",
       "valuePerStack": {
         "ATKCount": {
@@ -591,7 +657,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster's own Created Battle Event/Summon",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Self-Made Battle-Events}}"
+      },
       "modifier": "JingYuan_BattleEvent_SpeedUp"
     }
   ],

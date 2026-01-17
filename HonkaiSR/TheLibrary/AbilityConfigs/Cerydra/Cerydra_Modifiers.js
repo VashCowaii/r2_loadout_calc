@@ -62,13 +62,19 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "PromotionRank_BaseAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "PromotionRank_AttackConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
             },
@@ -118,13 +124,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Cerydra's Promotion Target",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Cerydra's Promotion Target}}"
+                },
                 "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Cerydra's Promotion Target",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Cerydra's Promotion Target}}"
+                  },
                   "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -141,7 +153,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Cerydra's Promotion Target",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Cerydra's Promotion Target}}"
+                  },
                   "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -170,7 +185,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Cerydra_Ability02_ListenSelf"
             }
           ]
@@ -189,25 +207,37 @@ const configAbility = {
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 1,
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]"
                 }
               ]
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Standard_Windfury",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "#CL_HaveBuff",
               "value": 0
@@ -255,7 +285,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -271,19 +304,28 @@ const configAbility = {
               "conditions": {
                 "name": "Eidolon Activated",
                 "eidolon": 1,
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]"
                 }
               ]
             },
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "#CL_HaveBuff",
               "value": 1
@@ -300,7 +342,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_RemoveFlag",
                     "compareType": "=",
                     "value2": 0,
@@ -308,7 +353,10 @@ const configAbility = {
                   },
                   {
                     "name": "Modifier Was",
-                    "casterFilter": "Caster",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Standard_Windfury"
                   }
                 ]
@@ -337,12 +385,18 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
                 }
               ]
@@ -359,12 +413,21 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Secondary Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Modifier Was",
-                    "casterFilter": "Caster",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Standard_Windfury"
                   }
                 ]
@@ -372,13 +435,22 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Reconstruct Modifier",
-                  "target": "Owner of this Modifier",
-                  "casterFilter": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "casterFilter": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Standard_Windfury",
                   "execute": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "ContextCaster",
                       "valueType": "Layer",
                       "variableName": "InsertActionCount",
@@ -411,7 +483,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Cerydra_Ability02_ListenSelf"
             }
           ]
@@ -421,7 +496,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -434,7 +512,10 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "TargetEntity",
               "variableName": "#CL_HaveBuff",
               "value": 0
@@ -496,7 +577,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]",
                         "invertCondition": true
                       },
@@ -523,7 +607,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                       }
                     }
@@ -579,12 +666,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
             },
             {
@@ -610,15 +703,24 @@ const configAbility = {
             },
             {
               "name": "Reconstruct Modifier",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Standard_Windfury",
               "execute": [
                 {
                   "name": "Define Custom Variable with Copy",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Standard_Windfury",
                   "variable": "Windfury_Flag",
-                  "target2": "Owner of this Modifier",
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variable2": "MDF_Windfury_Flag",
                   "scope": "ContextModifier"
                 },
@@ -641,7 +743,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "MDF_Windfury_Flag_Sum",
                 "compareType": "=",
                 "value2": 0,
@@ -655,8 +760,14 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Owner of this Modifier",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
@@ -669,7 +780,10 @@ const configAbility = {
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "Cerydra_Template_SelfHandle",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variables": {
                         "DV_AddPoint": {
                           "operator": "Variables[0] (DV_PointAdded_Get) || RETURN",
@@ -729,13 +843,19 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_Ability02_ListenSelf",
           "includeBattleEvent": true
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Cerydra_PointB2[<span class=\"descriptionNumberColor\">Vidi</span>]",
           "conditions": {
             "name": "AND",
@@ -749,7 +869,10 @@ const configAbility = {
               {
                 "name": "Trace Activated",
                 "conditionList": "Vidi",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               }
             ]
           },
@@ -766,27 +889,42 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Cerydra_PointB3_RecoverEnergy",
           "conditions": {
             "name": "Trace Activated",
             "conditionList": "Vici",
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Cerydra_Ability02_UITop"
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Cerydra_Eidolon1[<span class=\"descriptionNumberColor\">Seize the Crowns of All</span>]",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 1,
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -809,12 +947,18 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Cerydra_Ability02_Eidolon2_DamageAddedBonus[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 2,
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -829,7 +973,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_Eidolon2_DamageAddedBonus_Self[<span class=\"descriptionNumberColor\">Forge the Dreams of Many</span>]",
           "conditions": {
             "name": "AND",
@@ -837,12 +984,21 @@ const configAbility = {
               {
                 "name": "Eidolon Activated",
                 "eidolon": 2,
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               {
                 "name": "Compare: Target",
-                "target": "Owner of this Modifier",
-                "target2": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "invertCondition": true
               }
             ]
@@ -861,22 +1017,34 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Cerydra_Pursued"
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Cerydra_Ability02_AllDamageTypePenetrate[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
           "conditions": {
             "name": "Eidolon Activated",
             "eidolon": 6,
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_Eidolon6_AllDamageTypePenetrate[<span class=\"descriptionNumberColor\">A Journey Set Starward</span>]",
           "conditions": {
             "name": "AND",
@@ -884,12 +1052,21 @@ const configAbility = {
               {
                 "name": "Eidolon Activated",
                 "eidolon": 6,
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               {
                 "name": "Compare: Target",
-                "target": "Owner of this Modifier",
-                "target2": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "invertCondition": true
               }
             ]
@@ -908,7 +1085,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -943,7 +1123,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -994,7 +1177,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
                   },
                   {
@@ -1027,7 +1213,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
               },
               "passed": [
@@ -1075,7 +1264,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1120,7 +1312,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (DV_AllDamageTypePenetrate) || RETURN",
@@ -1164,25 +1359,37 @@ const configAbility = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "PursuedDamage_PerformanceDelay",
-                  "target": "Ability Target List"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  }
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Eidolon Activated",
                     "eidolon": 6,
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Ability Target List",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Wind",
@@ -1222,13 +1429,19 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Find New Target",
-                      "from": "Ability Target List",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Wind",
@@ -1302,7 +1515,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -1324,8 +1540,14 @@ const configAbility = {
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Cerydra's Promotion Target",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Cerydra's Promotion Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   }
@@ -1351,7 +1573,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1383,7 +1608,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1510,7 +1738,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "MDF_PropertyValue2",
                 "compareType": ">",
                 "value2": {
@@ -1540,7 +1771,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue2) || RETURN",
@@ -1627,13 +1861,19 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_CurrentAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_CurrentAttackConvert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
             },
@@ -1671,13 +1911,19 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue2_Max": {
@@ -1703,7 +1949,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue2_Max": {
@@ -1731,7 +1980,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Cerydra_PointB1_CriticalDamageAddedRatio_Sub[<span class=\"descriptionNumberColor\">Veni</span>]"
                 }
               ]

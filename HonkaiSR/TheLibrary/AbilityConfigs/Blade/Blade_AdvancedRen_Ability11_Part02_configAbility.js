@@ -6,14 +6,20 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterCurrentHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
     },
     {
       "name": "Consume",
       "consumeFrom": "MaxHP",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "consumePercent": {
         "operator": "Variables[0] (0.1) || RETURN",
         "displayLines": "0.1",
@@ -80,7 +86,10 @@ const configAbility = {
       "passed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -112,7 +121,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -194,7 +206,10 @@ const configAbility = {
       "passed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -224,7 +239,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -251,7 +269,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -278,7 +299,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {

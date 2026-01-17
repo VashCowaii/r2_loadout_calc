@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_BlackSwan_P01_ListenAddPoison"
     },
     {
@@ -39,7 +42,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_BlackSwan_Eidolon4_Listener"
         }
       ]
@@ -102,7 +108,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Target Exists",
-                "target": "Use Secondary Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target 2}}"
+                }
               },
               "passed": [
                 {
@@ -112,38 +121,56 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
                         "name": "NOT",
                         "condition": {
                           "name": "Is Part Of Team",
-                          "target": "Use Secondary Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target 2}}"
+                          },
                           "team": "TeamDark"
                         }
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                         "justAddedOrActive": true,
                         "includePreDeath": true
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP",
                         "invertCondition": true,
                         "justAddedOrActive": true,
-                        "casterFilter": "Caster"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (8) || RETURN",
                         "displayLines": "8",
@@ -177,7 +204,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
             }
           ],
@@ -198,7 +228,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark"
             }
           ]
@@ -208,7 +241,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
             }
           ],
@@ -227,12 +263,21 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Owner of this Modifier",
-                        "target2": "Current Turn Owner"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Current Turn Owner}}"
+                        }
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark",
                         "justAddedOrActive": true
                       }
@@ -243,14 +288,20 @@ const configAbility = {
                     "attackTypes": [
                       "DOT"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   }
                 ]
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_P01_AddDOTFlag"
                 }
               ]
@@ -270,13 +321,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy"
                 }
               ]
@@ -341,14 +398,20 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "M_BlackSwan_ForbidEffectFlag",
                     "justAddedOrActive": true
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
@@ -430,7 +493,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",

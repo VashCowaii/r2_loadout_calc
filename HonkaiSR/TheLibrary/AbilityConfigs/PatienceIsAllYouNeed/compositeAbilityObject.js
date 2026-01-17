@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23006_Main"
         }
       ],
@@ -61,7 +64,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -84,7 +90,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -125,14 +134,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "_Layer",
                   "multiplier": 1
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
@@ -165,13 +180,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "LC_23006_DOT[<span class=\"descriptionNumberColor\">Erode</span>]"
                   },
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_23006_DOT[<span class=\"descriptionNumberColor\">Erode</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -202,7 +223,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_23006_SpeedAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",

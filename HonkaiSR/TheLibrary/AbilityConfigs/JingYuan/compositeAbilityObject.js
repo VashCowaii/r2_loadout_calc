@@ -27,7 +27,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_SpeedUp"
         }
       ],
@@ -43,7 +46,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]"
           },
           "passed": [
@@ -60,7 +66,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]"
           },
           "passed": [
@@ -111,7 +120,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "JingYuan_CriticalDamageUp",
                   "duration": 1,
                   "valuePerStack": {
@@ -143,11 +155,17 @@ const compositeAbilityObject = {
             {
               "name": "Use Custom Character Function",
               "functionName": "Bounce_SelectTarget",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "paramSequence": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Thunder",
@@ -182,7 +200,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Targets Adjacent to Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -207,7 +228,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Targets Adjacent to Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -238,7 +262,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -260,7 +287,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -312,11 +342,17 @@ const compositeAbilityObject = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "Bounce_SelectTarget",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "paramSequence": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -352,7 +388,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Targets Adjacent to Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Thunder",
@@ -378,7 +417,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Targets Adjacent to Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Thunder",
@@ -410,7 +452,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (2) || RETURN",
                             "displayLines": "2",
@@ -432,7 +477,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
                           "stackLimit": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -467,12 +515,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_UltraATKCount[<span class=\"descriptionNumberColor\">Lightbringer</span>]"
         },
         {
@@ -484,7 +538,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "JingYuan_Eidolon2_DamageAddedRatio[<span class=\"descriptionNumberColor\">Dharma Corpora</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -509,12 +566,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "JingYuan_Eidolon6_AllDamageTypeTakenRatio"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_CriticalDamageUp"
         },
         {
@@ -546,7 +609,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
             "operator": "Variables[0] (10) || RETURN",
@@ -611,7 +677,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster's own Created Battle Event/Summon",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Self-Made Battle-Events}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCountShowText",
           "valuePerStack": {
             "ATKCount": {
@@ -626,7 +695,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster's own Created Battle Event/Summon",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Self-Made Battle-Events}}"
+          },
           "modifier": "JingYuan_BattleEvent_SpeedUp"
         }
       ],
@@ -645,7 +717,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "JingYuan_Passive_Insert_Ability",
           "isTrigger": true
         }
@@ -661,17 +736,26 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_BaseSpeed"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_ForceKill"
         }
       ],
@@ -687,13 +771,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "JingYuan_ListenFlag"
                   },
                   "passed": [
                     {
                       "name": "Force Entity Death",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "ignoreHPLossTriggers": true,
                       "ignoreDeathTriggers": true
                     },
@@ -719,7 +809,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (BattleEvent_JingYuan_00_BaseSpeed) || RETURN",
@@ -754,7 +847,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_JingYuan_Modifier"
         }
       ],
@@ -785,7 +881,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (10) || RETURN",
@@ -870,7 +969,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's own Created Battle Event/Summon",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Self-Made Battle-Events}}"
+                      },
                       "modifier": "JingYuan_BattleEvent_ATKCountShowText",
                       "valuePerStack": {
                         "ATKCount": {
@@ -885,7 +987,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster's own Created Battle Event/Summon",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Self-Made Battle-Events}}"
+                      },
                       "modifier": "JingYuan_BattleEvent_SpeedUp",
                       "stackLimit": {
                         "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
@@ -945,17 +1050,26 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_ListenFlag"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_Trace02"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
             "operator": "Variables[0] (10) || RETURN",
@@ -1001,7 +1115,10 @@ const compositeAbilityObject = {
           "name": "Add Battle Event",
           "teamName": "Allied Team",
           "eventID": 11203,
-          "statSource": "Caster",
+          "statSource": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variables": {
             "BattleEvent_JingYuan_BaseSpeed": {
               "operator": "Variables[0] (60) || RETURN",
@@ -1036,7 +1153,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster's own Created Battle Event/Summon",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Self-Made Battle-Events}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCountShowText",
           "valuePerStack": {
             "ATKCount": {
@@ -1051,12 +1171,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_Ability02_PreShow"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_Ability03_PreShow"
         }
       ],
@@ -1183,7 +1309,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Caster's own Created Battle Event/Summon",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Self-Made Battle-Events}}"
+            },
             "skillType": [
               "Ultimate"
             ],
@@ -1321,7 +1450,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Caster's own Created Battle Event/Summon",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Self-Made Battle-Events}}"
+            },
             "skillType": [
               "Skill"
             ],
@@ -1364,7 +1496,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (15) || RETURN",
                         "displayLines": "15",
@@ -1400,7 +1535,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -1428,7 +1566,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
             "operator": "Variables[0] (10) || RETURN",
@@ -1520,7 +1661,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster's own Created Battle Event/Summon",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Self-Made Battle-Events}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCountShowText",
           "valuePerStack": {
             "ATKCount": {
@@ -1535,7 +1679,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster's own Created Battle Event/Summon",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Self-Made Battle-Events}}"
+          },
           "modifier": "JingYuan_BattleEvent_SpeedUp",
           "stackLimit": {
             "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
@@ -1590,7 +1737,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "JingYuan_Ability03_Part02",
           "isTrigger": true
         }
@@ -1613,7 +1763,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
           "stackLimit": {
             "operator": "Variables[0] (10) || RETURN",
@@ -1698,7 +1851,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster's own Created Battle Event/Summon",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Self-Made Battle-Events}}"
+          },
           "modifier": "JingYuan_BattleEvent_ATKCountShowText",
           "valuePerStack": {
             "ATKCount": {
@@ -1713,7 +1869,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster's own Created Battle Event/Summon",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Self-Made Battle-Events}}"
+          },
           "modifier": "JingYuan_BattleEvent_SpeedUp",
           "stackLimit": {
             "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
@@ -1745,7 +1904,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -1772,7 +1934,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "ifTargetFound": [
@@ -1786,7 +1951,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1812,7 +1980,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1838,7 +2009,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1868,14 +2042,20 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 0.3,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
         },
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "ifTargetFound": [
@@ -1889,7 +2069,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1915,7 +2098,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1941,7 +2127,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1972,7 +2161,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 0.3,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1986,7 +2178,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "JingYuan_Tree03_CriticalChanceUp[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -2032,7 +2227,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "JingYuan_Ability02_Part02",
           "isTrigger": true
         }
@@ -2047,7 +2245,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Thunder",
             "Damage": {
@@ -2074,7 +2275,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -2124,7 +2328,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "JingYuan_Ability01_Part02",
           "isTrigger": true
         }
@@ -2151,7 +2358,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2184,7 +2394,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2216,7 +2429,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "modifierName": "JingYuan_Eidolon6_AllDamageTypeTakenRatio",
@@ -2224,7 +2440,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -2304,7 +2523,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "modifierName": "JingYuan_BattleEvent_SpeedUp",
@@ -2312,7 +2534,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -2345,8 +2570,14 @@ const compositeAbilityObject = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "JingYuan_Passive_Insert",
-                  "abilitySource": "Caster [of Battle Event]",
-                  "abilityTarget": "All Enemies (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Battle Event's Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "abortFlags": [

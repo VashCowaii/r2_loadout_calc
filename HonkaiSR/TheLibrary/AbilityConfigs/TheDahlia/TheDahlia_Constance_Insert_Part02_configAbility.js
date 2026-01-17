@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Constance_Eidolon4_Property[<span class=\"descriptionNumberColor\">Pity Its Heart Gnawed by Worms</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -38,12 +41,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Constance_InsertCD[<span class=\"descriptionNumberColor\">Who's Afraid of Constance?</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "_M_Constance_InsertCheck"
     },
     {
@@ -57,7 +66,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
             "invertCondition": true
           },
@@ -69,7 +81,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
               "counter": {
                 "operator": "Variables[0] (2) || Constants[0] (1) || SUB || RETURN",
@@ -86,7 +101,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Define Modifier Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifierName": "Constance_Tree02_CD[<span class=\"descriptionNumberColor\">Lament, Lost Soul</span>]",
               "function": "Add"
             }
@@ -160,7 +178,10 @@ const configAbility = {
         {
           "name": "Use Custom Character Function",
           "functionName": "ReduceNextActionDelay",
-          "target": "Dahlia's Dance Partners",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Dahlia's Dance Partners}}"
+          },
           "variables": {
             "parameter[0]_NormalizedValue": {
               "operator": "Variables[0] (0.2) || RETURN",
@@ -188,7 +209,10 @@ const configAbility = {
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "paramSequence": [
             {
               "name": "IF",
@@ -208,12 +232,18 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "_M_Constance_Insert_StanceRecorded"
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
@@ -245,13 +275,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "_M_Constance_Insert_StanceRecorded"
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Copy",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "_M_Constance_Insert_StanceRecorded",
                   "variable": "MDF_TotalStanceDamage",
                   "target2": null,
@@ -261,7 +297,10 @@ const configAbility = {
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "DealSuperBreakDamage",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variables": {
                     "value_0_DamagePercentage": {
                       "operator": "Variables[0] (2) || RETURN",
@@ -283,7 +322,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "_M_Constance_Insert_StanceRecorded"
                 }
               ]
@@ -313,17 +355,26 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Break"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_ForceSuperBreakDamage"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_ForceSuperBreakDamage"
                   }
                 ]
@@ -378,7 +429,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

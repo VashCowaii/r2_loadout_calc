@@ -25,12 +25,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction"
                   }
                 ]
@@ -43,7 +49,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": "<=",
                     "value2": 0
@@ -64,8 +73,14 @@ const configAbility = {
                     }
                   },
                   "abilityName": "Bailu_InsertAbility_Revive",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Owner of this Modifier",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "priorityTag": "AvatarReviveOthers",
                   "targetState": "Mask_AliveOrLimbo",
                   "canHitNonTargets": true,
@@ -96,7 +111,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "multiplier": 1
@@ -116,7 +134,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_AttackUpRatio) || RETURN",
@@ -144,7 +165,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Bailu_Eidolon4_AttackUp[<span class=\"descriptionNumberColor\">Evil Excision</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -190,7 +214,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HealingOutgoing</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -222,7 +249,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_DamageResistance) || RETURN",
@@ -255,7 +285,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_HPIncrease) || RETURN",
@@ -283,7 +316,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Healing",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "Overflowheal",
               "healProperty": "Result_OverflowHealAmount"
             },
@@ -298,7 +334,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_LifeTime) || RETURN",
@@ -337,7 +376,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Healing",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "Overflowheal",
               "healProperty": "Result_OverflowHealAmount"
             },
@@ -352,7 +394,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Bailu_PointB1_HPIncrease[<span class=\"descriptionNumberColor\">Qihuang Analects</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -382,7 +427,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Bailu_PointB1_Sub",
               "valuePerStack": {
                 "MDF_LifeTime": {
@@ -426,14 +474,20 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP%",
                     "compareType": "=",
                     "value2": 1
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_AddSP",
                     "compareType": ">",
                     "value2": 0,
@@ -444,7 +498,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_AddSP) || RETURN",
                     "displayLines": "MDF_AddSP",
@@ -459,7 +516,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Bailu_PointB3[<span class=\"descriptionNumberColor\">Aquatic Benediction</span>]"
             }
           ]
@@ -489,7 +549,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP",
                 "compareType": ">",
                 "value2": 0
@@ -497,7 +560,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF__HealPercentage2) || RETURN",
                     "displayLines": "MDF__HealPercentage2",
@@ -569,7 +635,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "CurrentHP",
                     "compareType": "<=",
                     "value2": 0
@@ -582,8 +651,14 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": "Owner of this Modifier",
-                            "target": "Caster",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "mustBeAlive2": true
                           }
                         ]
@@ -593,7 +668,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "value1": "CurrentHP",
                             "compareType": "<=",
                             "value2": 0
@@ -606,12 +684,18 @@ const configAbility = {
                                 "conditionList": [
                                   {
                                     "name": "Has Flag",
-                                    "target": "Caster",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
+                                    },
                                     "flagName": "STAT_CTRL"
                                   },
                                   {
                                     "name": "Has Flag",
-                                    "target": "Caster",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
+                                    },
                                     "flagName": "DisableAction"
                                   }
                                 ]
@@ -619,7 +703,10 @@ const configAbility = {
                               "failed": [
                                 {
                                   "name": "Add Events/Bonuses",
-                                  "to": "Owner of this Modifier",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "modifier": "Bailu_Revive_Mark"
                                 }
                               ]

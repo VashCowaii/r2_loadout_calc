@@ -16,7 +16,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Herta_Passive"
     },
     {
@@ -55,7 +58,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "MDF_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
@@ -84,7 +90,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Ability Value",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                 "compareType": "<=",
                 "value2": {
@@ -105,17 +114,29 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Secondary Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Target Is Hostile",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "MAvatar_Herta_Passive_CoolDown",
                         "compareType": "=",
                         "value2": {
@@ -131,7 +152,10 @@ const configAbility = {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Flag",
-                          "target": "Caster",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "flagName": "STAT_CTRL"
                         }
                       }
@@ -142,17 +166,26 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Herta_Passive_ATK"
                         },
                         {
                           "name": "Declare Custom Variable",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "scope": "TargetEntity",
                           "variableName": "MAvatar_Herta_Passive_CoolDown",
                           "value": 1
@@ -189,7 +222,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "MAvatar_Herta_Passive_CoolDown",
                       "value": 1
@@ -205,7 +241,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Ability Value",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                     "compareType": ">",
                     "value2": {
@@ -223,7 +262,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "MAvatar_Herta_Passive_CoolDown"
                 }
@@ -251,7 +293,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Herta_Passive_ATK"
             }
           ]

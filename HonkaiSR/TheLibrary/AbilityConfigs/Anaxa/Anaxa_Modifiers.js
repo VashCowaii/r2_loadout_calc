@@ -66,18 +66,27 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "M_Anaxa_StartFreeBP"
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_Anaxa_StartFreeBP"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_Anaxa_PrepareFreeBP",
                   "addStacksPerTrigger": -1
                 }
@@ -98,7 +107,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_Anaxa_StartFreeBP"
                 },
                 {
@@ -175,14 +187,23 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOrRevivable",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -203,12 +224,18 @@ const configAbility = {
           "parse": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Target Exists",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "living": true
               },
               "ifTargetFound": [
@@ -225,7 +252,10 @@ const configAbility = {
                   "Event": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_Anaxa_PrepareFreeBP",
                       "addStacksPerTrigger": 1
                     },
@@ -234,17 +264,26 @@ const configAbility = {
                       "actionTag": "Anaxa_Passive",
                       "skillType": "ControlSkill02",
                       "forceAction": true,
-                      "castTarget": "Use Prior Target(s) Defined",
+                      "castTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "afterInjection": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "M_Anaxa_PrepareFreeBP",
                           "addStacksPerTrigger": -1
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "M_Anaxa_InsertActionCheck",
                           "addStacksPerTrigger": 1
                         }
@@ -279,7 +318,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "MDF_HaveCTRLResistance",
                 "compareType": "=",
                 "value2": 0
@@ -289,7 +331,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "living": true
                   },
                   "passed": [
@@ -297,7 +342,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL_Frozen_Effect",
                         "invertCondition": true
                       }
@@ -315,7 +363,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "MDF_HaveCTRLResistance",
                 "compareType": "=",
                 "value2": 0
@@ -335,7 +386,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Flag Resistance",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_HaveCTRLResistance",
               "context": "ContextModifier",
               "flagName": "STAT_CTRL"
@@ -347,14 +401,20 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_HaveCTRLResistance",
                     "compareType": "=",
                     "value2": 0
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "Endurance",
                     "invertCondition": true
                   }
@@ -367,7 +427,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Flags to Modifier",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": [
                     "DisableAction",
                     "STAT_CTRL",
@@ -375,13 +438,19 @@ const configAbility = {
                     "FixedPerformTime"
                   ],
                   "modifierName": "Anaxa_UltraDebuff[<span class=\"descriptionNumberColor\">Sublimation</span>]",
-                  "casterFilter": "Caster"
+                  "casterFilter": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
                 }
               ]
             },
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Physical"
@@ -389,7 +458,10 @@ const configAbility = {
             },
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Fire"
@@ -397,7 +469,10 @@ const configAbility = {
             },
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Thunder"
@@ -405,7 +480,10 @@ const configAbility = {
             },
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Ice"
@@ -413,7 +491,10 @@ const configAbility = {
             },
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Wind"
@@ -421,7 +502,10 @@ const configAbility = {
             },
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Quantum"
@@ -429,7 +513,10 @@ const configAbility = {
             },
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Imaginary"

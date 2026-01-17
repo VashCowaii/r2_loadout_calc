@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21012_Main"
         }
       ],
@@ -44,12 +47,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_CasterRatio"
                 },
                 {
                   "name": "Define Custom Variable with HP%",
-                  "target": "Target Receiving DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target TAKING DMG}}"
+                  },
                   "variableName": "_TargetRatio"
                 },
                 {

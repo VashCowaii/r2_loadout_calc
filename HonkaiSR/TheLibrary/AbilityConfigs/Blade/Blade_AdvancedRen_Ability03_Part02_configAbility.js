@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Variable",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "value1": "CurrentHP%",
         "compareType": ">=",
         "value2": 0.5
@@ -16,7 +19,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with HP%",
-          "target": "Owner of this Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "variableName": "DamageExtra_HPRatio"
         }
       ],
@@ -30,13 +36,19 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "CasterCurrentHP",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
     },
     {
       "name": "Set HP Value",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "clearNegativeHP": true,
       "setValue": {
         "operator": "Variables[0] (CasterMaxHP) || Constants[0] (0.5) || MUL || RETURN",
@@ -104,7 +116,10 @@ const configAbility = {
       "passed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -135,7 +150,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -165,7 +183,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
@@ -243,7 +264,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -274,7 +298,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_Ability03_Listen[<span class=\"descriptionNumberColor\">Death Sentence</span>]"
         }
       ]

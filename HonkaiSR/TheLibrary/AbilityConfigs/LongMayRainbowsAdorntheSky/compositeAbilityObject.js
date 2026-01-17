@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23042_Main"
         }
       ],
@@ -45,17 +48,26 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Copy",
-                  "target": "[SUMMONER OF] Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getSummoner]]"
+                  },
                   "modifier": "LC_23042_Main",
                   "variable": "_LoseHPTotal",
-                  "target2": "Owner of this Modifier",
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variable2": "_LoseHPTotal2"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_LoseHPTotal2",
                     "compareType": ">",
                     "value2": 0
@@ -63,12 +75,18 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Ability Target List",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      },
                       "AttackScaling": {
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "ReadTargetType",
-                          "target": "Caster"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          }
                         },
                         "Damage": {
                           "operator": "Variables[0] (_LoseHPTotal2) || Variables[1] (MDF_DamageRatio) || MUL || RETURN",
@@ -88,7 +106,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "target": "Owner of this Modifier (Summoner)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Summoner of Modifier Holder}}"
+                  },
                   "modifierName": "LC_23042_Main",
                   "variableName": "_LoseHPTotal",
                   "value": 0
@@ -107,7 +128,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Enemies (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "modifier": "LC_23042_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Tolerant</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_LifeTime) || RETURN",
@@ -145,14 +169,23 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "Caster (Memosprite)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster (Memosprite)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Memosprite}}"
+                      },
                       "modifier": "LC_23042_Sub",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -199,24 +232,36 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "_CurrentHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
                       "name": "Consume",
                       "consumeFrom": "CurrentHP",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "consumePercent": {
                         "operator": "Variables[0] (0.01) || RETURN",
                         "displayLines": "0.01",
@@ -318,7 +363,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

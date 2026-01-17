@@ -6,13 +6,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Declare Custom Variable",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "scope": "TargetEntity",
       "variableName": "DV_CastSkill01Count"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23033_Main"
     }
   ],
@@ -27,7 +33,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Action Advance/Delay",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "advanceType": "Advance",
               "value": "-0.5"
             },
@@ -42,7 +51,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Basic ATK"
         ],
@@ -134,7 +146,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "advanceType": "Advance",
                       "value": "-0.5"
                     },
@@ -142,7 +157,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Current Turn Is",
-                        "target": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       "passed": [
                         {
@@ -187,7 +205,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_23033_Sub[<span class=\"descriptionNumberColor\">Raiton</span>]"
                 }
               ]
@@ -208,7 +229,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Owner of this Modifier",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (30) || RETURN",
                     "displayLines": "30",
@@ -221,7 +245,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "PreShowModifier_Fixed_23033"
                 }
               ]

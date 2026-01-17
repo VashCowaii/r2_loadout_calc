@@ -67,7 +67,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "PlayerBoy_10_WeaponCharge_Free[<span class=\"descriptionNumberColor\">War-Flaming Lance</span>]"
               },
               "failed": [
@@ -130,7 +133,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Shield",
-              "target": "Owner of this Modifier"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
             },
             {
               "name": "Set Shield State/Value",
@@ -143,7 +149,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Create Shield",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (MWAvatar_PlayerBoy_10_Shield_Value01) || RETURN",
                 "displayLines": "MWAvatar_PlayerBoy_10_Shield_Value01",
@@ -177,7 +186,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MAvatar_PlayerBoy_10_DamageResistance_Team_Value01) || RETURN",
@@ -210,7 +222,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Change Character Transformation",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "phase": "Phase1"
             }
           ]
@@ -223,7 +238,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Change Character Transformation",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "phase": "Phase1"
             }
           ]
@@ -233,7 +251,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MWAvatar_PlayerBoy_10_DamageResistance_Value01) || RETURN",
@@ -259,13 +280,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "AvatarBreak"
               },
               "passed": [
                 {
                   "name": "Change Character Transformation",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "phase": "Phase1"
                 }
               ]
@@ -310,13 +337,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill01",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Hide",
               "abilityName": "Basic ATK"
             }
@@ -327,13 +360,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill11",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Show",
               "abilityName": "Basic ATK"
             }
@@ -363,14 +402,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_DefenceAddedRatio) || Variables[1] (MDF_Layer) || MUL || RETURN",

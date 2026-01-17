@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Natasha_Eidolon1_InsertAbility_Part02",
       "isTrigger": true
     },

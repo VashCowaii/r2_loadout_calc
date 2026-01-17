@@ -62,8 +62,14 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Xueyi_PassiveAtk_Insert01",
-              "abilitySource": "Caster",
-              "abilityTarget": "All Hostile Entities (AOE)",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "priorityTag": "AvatarInsertAttackSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
@@ -91,13 +97,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -112,8 +124,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "Xueyi_PassiveAtk_Insert01",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -150,7 +168,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "ContextModifier",
               "variableName": "MDF_Tree03Layer",
               "multiplier": 1
@@ -172,7 +193,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -230,7 +254,10 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "MDF_CurrentBreakDamageAddedRatio",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
             },
@@ -279,7 +306,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Xueyi_AllDamageTypeAddedRatio",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -340,7 +370,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Xueyi_BP_Passive02"
                 },
                 {
@@ -624,7 +657,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]"
                           },
                           "passed": [
@@ -679,7 +715,10 @@ const configAbility = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
                               "counter": {
                                 "operator": "Variables[0] (PointB3_DifferencePassive01_Count) || RETURN",
@@ -694,7 +733,10 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Caster",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "modifier": "Xueyi_Passive_Trace03[<span class=\"descriptionNumberColor\">Perspicacious Mainframe</span>]",
                               "counter": {
                                 "operator": "Variables[0] (PointB3_DifferencePassive01_Count) || RETURN",
@@ -715,7 +757,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]"
                   },
                   "passed": [
@@ -813,7 +858,10 @@ const configAbility = {
                   "Event": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Xueyi_BP_Passive01[<span class=\"descriptionNumberColor\">Karma</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (_Xueyi_Count) || RETURN",
@@ -886,7 +934,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_SkillRank04_BreakDamageAttackRatio) || RETURN",
@@ -951,7 +1002,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_Skill03_StancePreCalc) || RETURN",
@@ -980,8 +1034,14 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Toughness Reduction Est",
-              "target": "Caster",
-              "targetDefender": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "targetDefender": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "dmgType": "Quantum",
               "attackType": "Ultimate",
               "toughnessValue": {
@@ -1133,8 +1193,14 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Compare: Variable",
@@ -1183,7 +1249,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Xueyi_Passive_AddCount"
                     }
                   ],
@@ -1237,14 +1306,26 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 ]

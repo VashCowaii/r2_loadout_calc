@@ -30,7 +30,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23052_Main",
       "valuePerStack": {
         "MDF_ExtraRatio": {
@@ -55,7 +58,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_DamageRatio) || RETURN",
@@ -83,7 +89,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_CritDmg) || RETURN",
@@ -147,7 +156,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Enemies(ALL) (AOE) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}.[[removeBattleEvents]]"
+                  },
                   "modifier": "LC_23052_Halo2[<span class=\"descriptionNumberColor\">Blank</span>]"
                 }
               ]
@@ -161,7 +173,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Enemies(ALL) (AOE) [Exclude battle mechanics]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}.[[removeBattleEvents]]"
+          },
           "modifier": "LC_23052_Halo2[<span class=\"descriptionNumberColor\">Blank</span>]",
           "haloStatus": true
         }
@@ -213,7 +228,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
                   "modifier": "LC_23052_Halo[<span class=\"descriptionNumberColor\">Verse</span>]"
                 }
               ]
@@ -227,7 +245,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Allied Team(ALL) [Exclude battle mechanics]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+          },
           "modifier": "LC_23052_Halo[<span class=\"descriptionNumberColor\">Verse</span>]",
           "haloStatus": true
         }
@@ -244,21 +265,33 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "[MEMOSPRITE OF] Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                }
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target's Ability Targets}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "[MEMOSPRITE OF] Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                      },
                       "modifier": "LC_23052_Sub[<span class=\"descriptionNumberColor\">Verse</span>]"
                     }
                   ],
@@ -270,12 +303,18 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
                             "team": "TeamLight"
                           },
                           {
                             "name": "Compare: Target Count",
-                            "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target's Ability Targets}}"
+                            },
                             "compareType": "=",
                             "value2": 1
                           }
@@ -284,7 +323,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "[MEMOSPRITE OF] Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                          },
                           "modifier": "LC_23052_Sub2[<span class=\"descriptionNumberColor\">Blank</span>]"
                         }
                       ]

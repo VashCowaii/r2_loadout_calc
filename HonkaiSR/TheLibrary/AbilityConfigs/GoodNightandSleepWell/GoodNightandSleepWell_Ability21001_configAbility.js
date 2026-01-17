@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21001_Main"
     }
   ],
@@ -23,7 +26,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Status Counter",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "_DebuffCount"
             },
             {
@@ -79,7 +85,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_21001_DamageUp_Debuff",
               "valuePerStack": {
                 "MDF_PropertyValue": {

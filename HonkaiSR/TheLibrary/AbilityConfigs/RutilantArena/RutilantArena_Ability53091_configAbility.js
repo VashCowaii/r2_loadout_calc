@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_309_Main"
     }
   ],
@@ -55,7 +58,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Ability Value",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
@@ -70,7 +76,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_309_Sub"
                 }
               ]
@@ -97,7 +106,10 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_309_Sub",
                   "onlyRemoveOwnersInstance": true
                 }
@@ -105,7 +117,10 @@ const configAbility = {
               "whenLeavingRange": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_309_Sub"
                 }
               ]

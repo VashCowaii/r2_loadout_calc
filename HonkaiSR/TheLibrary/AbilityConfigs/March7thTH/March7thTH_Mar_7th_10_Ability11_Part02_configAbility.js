@@ -30,7 +30,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -137,7 +140,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -194,7 +200,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Mar_7th_10_Ability03_Enhance_Normal[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]"
     },
     "Trigger: Ability End"
@@ -202,7 +211,10 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Mar_7th_10_Ability11_Preshow"
     }
   ],
@@ -218,7 +230,10 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "_target_stance_before_attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
         },
@@ -229,10 +244,16 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Compare: Target Count SUM",
-                "target": "All Teammates + Unselectable (Excluding Owner)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                },
                 "conditions": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               },
@@ -248,7 +269,10 @@ const configAbility = {
                   "Abundance",
                   "Remembrance"
                 ],
-                "target": "March 7th's Shifu"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Marth 7th's Shifu}}"
+                }
               }
             ]
           },
@@ -263,7 +287,10 @@ const configAbility = {
                   "The Hunt",
                   "Remembrance"
                 ],
-                "target": "March 7th's Shifu"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Marth 7th's Shifu}}"
+                }
               }
             }
           ]
@@ -279,7 +306,10 @@ const configAbility = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Imaginary",
@@ -307,7 +337,10 @@ const configAbility = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Imaginary",
@@ -348,7 +381,10 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "_target_stance_before_attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
         },
@@ -359,10 +395,16 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Compare: Target Count SUM",
-                "target": "All Teammates + Unselectable (Excluding Owner)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                },
                 "conditions": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               },
@@ -378,7 +420,10 @@ const configAbility = {
                   "Abundance",
                   "Remembrance"
                 ],
-                "target": "March 7th's Shifu"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Marth 7th's Shifu}}"
+                }
               }
             ]
           },
@@ -393,14 +438,20 @@ const configAbility = {
                   "The Hunt",
                   "Remembrance"
                 ],
-                "target": "March 7th's Shifu"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Marth 7th's Shifu}}"
+                }
               }
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -439,7 +490,10 @@ const configAbility = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "_target_stance_before_attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
         },
@@ -450,10 +504,16 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Compare: Target Count SUM",
-                "target": "All Teammates + Unselectable (Excluding Owner)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                },
                 "conditions": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               },
@@ -469,7 +529,10 @@ const configAbility = {
                   "Abundance",
                   "Remembrance"
                 ],
-                "target": "March 7th's Shifu"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Marth 7th's Shifu}}"
+                }
               }
             ]
           },
@@ -484,14 +547,20 @@ const configAbility = {
                   "The Hunt",
                   "Remembrance"
                 ],
-                "target": "March 7th's Shifu"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Marth 7th's Shifu}}"
+                }
               }
             }
           ]
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -539,7 +608,10 @@ const configAbility = {
         "skillType": "Basic ATK",
         "conditions": {
           "name": "Has Modifier",
-          "target": "Owner of this Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "modifier": "Mar_7th_10_Enhance"
         },
         "multiplier": {

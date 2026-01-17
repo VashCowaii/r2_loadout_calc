@@ -10,7 +10,10 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable",
-      "target": "Caster's Memosprite",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}.[[getMemosprite]]"
+      },
       "scope": "TargetEntity",
       "variableName": "Ultra_Stance",
       "value": {
@@ -24,7 +27,10 @@ const configAbility = {
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster's Memosprite",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}.[[getMemosprite]]"
+      },
       "ability": "Servant_PlayerBoyServant_30_Ability03_Part02",
       "isTrigger": true
     },

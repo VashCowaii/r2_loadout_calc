@@ -18,7 +18,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "AdvancedRen_Ability02_Part02",
       "isTrigger": true
     },

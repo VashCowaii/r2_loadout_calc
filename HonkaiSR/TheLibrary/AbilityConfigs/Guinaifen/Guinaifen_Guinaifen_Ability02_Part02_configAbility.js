@@ -16,7 +16,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary) + Blast (Adjacent)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{ST and Blast}}"
+              },
               "modifier": "Guinaifen_Eidolon1_StatusResistance[<span class=\"descriptionNumberColor\">Slurping Noodles During Handstand</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -49,7 +52,10 @@ const configAbility = {
         },
         {
           "name": "Find New Target",
-          "from": "Single Target (Primary) + Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
           "searchRandom": true,
           "maxTargets": 3,
           "ifTargetFound": [
@@ -64,7 +70,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_DOT_Burn"
                   }
                 ]
@@ -72,7 +81,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -107,7 +119,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -143,7 +158,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -169,7 +187,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23029_Main"
     }
   ],
@@ -21,13 +24,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_23029_Sub[<span class=\"descriptionNumberColor\">Unarmored</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (RatioPlus) || RETURN",
@@ -56,7 +65,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.1) || RETURN",
@@ -84,14 +96,23 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "maxTargets": 5,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "LC_23029_Sub2[<span class=\"descriptionNumberColor\">Cornered</span>]",
                 "invertCondition": true,
-                "casterFilter": "Owner of this Modifier"
+                "casterFilter": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "ifTargetFound": [
                 {
@@ -116,7 +137,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_23029_Sub[<span class=\"descriptionNumberColor\">Unarmored</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -141,14 +165,23 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "maxTargets": 5,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "LC_23029_Sub2[<span class=\"descriptionNumberColor\">Cornered</span>]",
                 "invertCondition": true,
-                "casterFilter": "Owner of this Modifier"
+                "casterFilter": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "ifTargetFound": [
                 {
@@ -158,23 +191,38 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "LC_23029_Sub[<span class=\"descriptionNumberColor\">Unarmored</span>]",
                         "justAddedOrActive": true,
-                        "casterFilter": "Owner of this Modifier"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "STAT_DOT",
-                        "casterFilter": "Owner of this Modifier"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_23029_Sub2[<span class=\"descriptionNumberColor\">Cornered</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",

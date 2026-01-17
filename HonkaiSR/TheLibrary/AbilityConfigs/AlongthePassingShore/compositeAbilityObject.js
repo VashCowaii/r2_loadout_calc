@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23024_Main"
         }
       ],
@@ -64,14 +67,23 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "LC_23024_Sub02",
-                    "casterFilter": "Owner of this Modifier"
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_23024_Sub[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
                       "duration": 1,
                       "valuePerStack": {
@@ -95,7 +107,10 @@ const compositeAbilityObject = {
                       "success": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "LC_23024_Sub02"
                         }
                       ]
@@ -111,10 +126,16 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "LC_23024_Sub[<span class=\"descriptionNumberColor\">Mirage Fizzle</span>]",
                     "justAddedOrActive": true,
-                    "casterFilter": "Owner of this Modifier"
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {
@@ -159,7 +180,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)(ALL)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                  },
                   "modifier": "LC_23024_Sub02"
                 }
               ]

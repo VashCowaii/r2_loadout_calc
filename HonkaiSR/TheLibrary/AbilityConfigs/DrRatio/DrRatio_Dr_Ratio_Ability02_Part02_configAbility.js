@@ -16,17 +16,26 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Dr_Ratio_Insert_Flag_Caster"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Enemies(All)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All(with Unselectable)}}"
+      },
       "modifier": "Dr_Ratio_Insert_Flag"
     },
     {
       "name": "Define Custom Variable with Status Counter",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "variableName": "_DebuffCount"
     },
     {
@@ -82,7 +91,10 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Single Target (Primary)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "ifTargetFound": [
@@ -102,7 +114,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Dr_Ratio_Insert_Flag"
             }
           ]
@@ -228,7 +243,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
@@ -263,7 +281,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (6) || RETURN",
@@ -328,13 +349,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Dr_Ratio_Insert_Flag_Caster"
       }
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",
@@ -368,7 +395,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Dr_Ratio_Slow[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -403,7 +433,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Dr_Ratio_Insert_Flag_Caster"
       },
       "passed": [
@@ -431,7 +464,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",

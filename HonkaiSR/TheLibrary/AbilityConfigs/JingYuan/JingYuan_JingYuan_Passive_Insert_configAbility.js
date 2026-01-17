@@ -11,7 +11,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "JingYuan_Passive_Insert_Ability",
       "isTrigger": true
     }

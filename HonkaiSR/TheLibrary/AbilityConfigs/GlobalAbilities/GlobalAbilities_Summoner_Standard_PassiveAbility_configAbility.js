@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Summoner_Standard_PassiveModifier"
     }
   ],
@@ -29,13 +32,19 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Caster's Memosprite",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getMemosprite]]"
+                    },
                     "living": true
                   },
                   "passed": [
                     {
                       "name": "Dispel Debuffs",
-                      "target": "Caster's Memosprite",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getMemosprite]]"
+                      },
                       "toRemove": [
                         "STAT_CTRL",
                         "DisableAction"
@@ -54,13 +63,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Target Exists",
-                "target": "Caster's Memosprite",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}.[[getMemosprite]]"
+                },
                 "living": true
               },
               "passed": [
                 {
                   "name": "Dispel Debuffs",
-                  "target": "Caster's Memosprite",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}.[[getMemosprite]]"
+                  },
                   "toRemove": [
                     "STAT_CTRL",
                     "DisableAction"

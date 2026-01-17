@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yukong_Passive_Bonus[<span class=\"descriptionNumberColor\">Seven Layers, One Arrow</span>]",
       "valuePerStack": {
         "MDF_AddDamagePercentage": {
@@ -53,12 +56,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yukong_FlowerListen"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Owner of this Modifier",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Modifier Holder}}"
+      },
       "modifier": "Yukong_ServantFlowerListen"
     }
   ],
@@ -74,7 +83,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity Type",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "type": "Memosprite"
               },
               "passed": [
@@ -82,13 +94,19 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Yukong_Flower_ATK[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Yukong_Flower",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
@@ -124,13 +142,19 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Yukong_Flower",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
@@ -162,7 +186,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Yukong's Flower Target",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Yukong's Flower Target}}"
+                      },
                       "modifier": "Yukong_Flower_ATK_Crit[<span class=\"descriptionNumberColor\">Roaring Bowstrings</span>]",
                       "valuePerStack": {
                         "MDF_RealAttack": {

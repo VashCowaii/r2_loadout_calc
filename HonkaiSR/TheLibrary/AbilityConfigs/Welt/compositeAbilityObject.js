@@ -24,7 +24,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Welt_Tree03"
         }
       ],
@@ -40,7 +43,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Target Receiving DMG",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
                     "modifier": "StanceBreakState"
                   },
                   "passed": [
@@ -72,7 +78,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Ultimate_ExtraSP",
           "valuePerStack": {
             "MDF_AddValue": {
@@ -104,7 +113,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Welt_Modifier"
         }
       ],
@@ -129,7 +141,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                       "duration": 1,
                       "baseChance": {
@@ -187,17 +202,26 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Welt_Passive01Modifier"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "AbilityPreShowModifier"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "AbilityPreShowModifier2"
         },
         {
@@ -227,13 +251,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Target Receiving DMG",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target TAKING DMG}}"
+                    },
                     "flagName": "STAT_SpeedDown"
                   },
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Target Receiving DMG",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target TAKING DMG}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Imaginary",
@@ -259,7 +289,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (3) || RETURN",
                             "displayLines": "3",
@@ -288,21 +321,30 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": [
-              {
-                "name": "Target List",
-                "target": "All Hostile Entities (AOE)"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
-                  "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
-                  "casterFilter": "Caster"
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  }
                 }
-              }
-            ],
+              ]
+            },
             "skillType": [
               "Ultimate"
             ],
@@ -327,24 +369,33 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": [
-              {
-                "name": "Target List",
-                "target": "All Hostile Entities (AOE)"
-              },
-              {
-                "name": "Target Filter",
-                "conditions": {
-                  "name": "NOT",
-                  "condition": {
-                    "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
-                    "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
-                    "casterFilter": "Caster"
+            "target": {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "NOT",
+                    "condition": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                      "casterFilter": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      }
+                    }
                   }
                 }
-              }
-            ],
+              ]
+            },
             "skillType": [
               "Ultimate"
             ],
@@ -378,7 +429,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Hostile Entities (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "modifier": "Welt_Trace01_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Vulnerability</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -411,7 +465,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
@@ -437,7 +494,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -465,7 +525,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
           "duration": 1,
           "baseChance": {
@@ -505,7 +568,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
             },
             {
@@ -547,7 +613,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Welt_Ability03_Part02",
           "isTrigger": true
         }
@@ -570,12 +639,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Welt_Ability02_ListenModifier"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
@@ -602,19 +677,28 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
           },
           "passed": [
             {
               "name": "Define Modifier Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifierName": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
               "function": "Add"
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -636,12 +720,18 @@ const compositeAbilityObject = {
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "paramSequence": [
             "Select Random Target from List",
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -669,12 +759,18 @@ const compositeAbilityObject = {
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "paramSequence": [
             "Select Random Target from List",
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Imaginary",
@@ -710,12 +806,18 @@ const compositeAbilityObject = {
             {
               "name": "Use Custom Character Function",
               "functionName": "Bounce_SelectTarget",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "paramSequence": [
                 "Select Random Target from List",
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Imaginary",
@@ -749,7 +851,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Welt_Ability02_ListenModifier"
         },
         "Trigger: Ability End"
@@ -771,7 +876,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Target Receiving DMG",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target TAKING DMG}}"
+                      },
                       "modifier": "Welt_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -805,7 +913,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Target Receiving DMG",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target TAKING DMG}}"
+                      },
                       "modifier": "Welt_BPAbility_SpeedDown[<span class=\"descriptionNumberColor\">Slow</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -863,7 +974,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Welt_Ability02_Part02",
           "isTrigger": true
         }
@@ -880,19 +994,28 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]"
           },
           "passed": [
             {
               "name": "Define Modifier Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifierName": "Welt_Eidolon1_Enhance[<span class=\"descriptionNumberColor\">Legacy of Honor</span>]",
               "function": "Add"
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -913,7 +1036,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -961,7 +1087,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Welt_Ability01_Part02",
           "isTrigger": true
         }
@@ -988,7 +1117,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -1024,7 +1156,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",

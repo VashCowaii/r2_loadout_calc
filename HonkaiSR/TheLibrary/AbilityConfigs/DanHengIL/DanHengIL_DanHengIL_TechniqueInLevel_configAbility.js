@@ -14,12 +14,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_DanHengIL_Modifier"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_DanHengILDamage_Modifier"
     }
   ],
@@ -50,7 +56,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Imaginary",
@@ -106,7 +115,10 @@ const configAbility = {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Add to Value (Default)",
                   "variableName": "BPExChange",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (1) || RETURN",
                     "displayLines": "1",
@@ -118,7 +130,10 @@ const configAbility = {
                 },
                 {
                   "name": "Modify Skill-Point Extras",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "function": "Set",
                   "value": {
                     "operator": "Variables[0] (BPExChange) || RETURN",
@@ -154,7 +169,10 @@ const configAbility = {
                 },
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
                   "value": {
                     "operator": "Variables[0] (BPExChange) || RETURN",
@@ -167,7 +185,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "DanHengIL_BPCostChange[<span class=\"descriptionNumberColor\">Squama Sacrosancta</span>]",
                   "counter": {
                     "operator": "Variables[0] (1) || RETURN",

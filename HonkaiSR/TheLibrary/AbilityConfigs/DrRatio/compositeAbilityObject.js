@@ -34,7 +34,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Dr_Ratio_Modifier"
         }
       ],
@@ -52,7 +55,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -93,7 +99,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "Dr_Ratio_Maze_SpeedDown[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -213,7 +222,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies(All)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
                 },
                 {
@@ -246,7 +258,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -268,12 +283,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Enemies(All)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
           "modifier": "Dr_Ratio_Insert_Flag"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Dr_Ratio_Insert_Flag_Caster"
         },
         {
@@ -285,7 +306,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Define Custom Variable with Status Counter",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "variableName": "_DebuffCount"
             }
           ]
@@ -299,7 +323,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (15) || RETURN",
                 "displayLines": "15",
@@ -314,7 +341,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
@@ -388,7 +418,10 @@ const compositeAbilityObject = {
               "Event": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Imaginary",
@@ -417,12 +450,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Dr_Ratio_InsertAbility"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Dr_Ratio_Eidolon6_AllDamageTypeAddedRatio"
         },
         {
@@ -441,12 +480,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Dr_Ratio_Insert_Flag"
           },
           "ifTargetFound": [
@@ -457,8 +502,14 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Use Prior Target(s) Defined",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "ability": "Dr_Ratio_PassiveAbility01_Insert_Part02",
               "isTrigger": true
             }
@@ -471,8 +522,14 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Single Target (Primary)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "ability": "Dr_Ratio_PassiveAbility01_Insert_Part02",
               "isTrigger": true
             }
@@ -493,30 +550,45 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Dr_Ratio_Insert_Flag_Caster"
               },
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "STAT_CTRL",
                 "invertCondition": true
               },
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "DisableAction",
                 "invertCondition": true
               },
               {
                 "name": "Enemies Still Alive",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "includeNonTargets": true
               },
               {
                 "name": "Living State",
                 "state": "Mask_AliveOnly",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               {
                 "name": "Compare: Variable",
@@ -617,7 +689,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Dr_Ratio_PassiveInsertListen"
         },
         {
@@ -629,7 +704,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Dr_Ratio_PointB3_Modifier",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -678,7 +756,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Dr_Ratio_Eidolon1"
             }
           ]
@@ -694,7 +775,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
@@ -753,14 +837,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Status Counter",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_SpecialMark_DebuffNumber"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_SpecialMark_DebuffNumber",
                     "compareType": ">=",
                     "value2": 3,
@@ -794,7 +884,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_SpecialMark_DebuffChance",
                         "compareType": ">=",
                         "value2": 100,
@@ -832,14 +925,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Status Counter",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "MDF_SpecialMark_DebuffNumber"
                     },
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_SpecialMark_DebuffNumber",
                         "compareType": ">=",
                         "value2": 3,
@@ -873,7 +972,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "MDF_SpecialMark_DebuffChance",
                             "compareType": ">=",
                             "value2": 100,
@@ -905,14 +1007,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Status Counter",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "MDF_SpecialMark_DebuffNumber"
                     },
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MDF_SpecialMark_DebuffNumber",
                         "compareType": ">=",
                         "value2": 3,
@@ -946,7 +1054,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "MDF_SpecialMark_DebuffChance",
                             "compareType": ">=",
                             "value2": 100,
@@ -981,7 +1092,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_SpecialMark_DebuffChance",
                     "compareType": ">=",
                     "value2": 100,
@@ -995,13 +1109,22 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Target is Unselectable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "invertCondition": true
                           },
                           {
                             "name": "Compare: Target",
-                            "target": "Current Action Owner",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           }
                         ]
                       },
@@ -1010,11 +1133,20 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count SUM",
-                            "target": "Current Visual Target(All)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player's Aim Target List}}"
+                            },
                             "conditions": {
                               "name": "Compare: Target",
-                              "target": "Owner of this Modifier",
-                              "target2": "Use Prior Target(s) Defined"
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
                             }
                           },
                           "passed": [
@@ -1070,13 +1202,22 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Target is Unselectable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "invertCondition": true
                           },
                           {
                             "name": "Compare: Target",
-                            "target": "Current Action Owner",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           }
                         ]
                       },
@@ -1085,11 +1226,20 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count SUM",
-                            "target": "Current Visual Target(All)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player's Aim Target List}}"
+                            },
                             "conditions": {
                               "name": "Compare: Target",
-                              "target": "Owner of this Modifier",
-                              "target2": "Use Prior Target(s) Defined"
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
                             }
                           },
                           "passed": [
@@ -1156,13 +1306,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Dr_Ratio_Passive_SpecialMark",
                       "valuePerStack": {
                         "MDF_DebuffChance": {
@@ -1197,7 +1353,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -1213,7 +1372,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Dr_Ratio_Insert_Flag_Caster"
                       },
                       "passed": [
@@ -1221,7 +1383,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "STAT_CTRL"
                           },
                           "failed": [
@@ -1242,7 +1407,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "Dr_Ratio_Passive_SpecialMark",
                   "valuePerStack": {
                     "MDF_DebuffChance": {
@@ -1285,12 +1453,18 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "Dr_Ratio_Insert_Flag_Caster"
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           }
@@ -1326,12 +1500,18 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "Dr_Ratio_Insert_Flag_Caster"
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           }
@@ -1372,17 +1552,26 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Dr_Ratio_Insert_Flag_Caster"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Enemies(All)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
           "modifier": "Dr_Ratio_Insert_Flag"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Enemies(All)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
           "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
         },
         {
@@ -1394,7 +1583,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
               "valuePerStack": {
                 "MDF_Ability03_InsertMaxCount": {
@@ -1412,7 +1604,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
               "valuePerStack": {
                 "MDF_Ability03_InsertMaxCount": {
@@ -1429,7 +1624,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -1480,7 +1678,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Dr_Ratio_Ability03_Part02",
           "isTrigger": true
         }
@@ -1513,17 +1714,26 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Dr_Ratio_Insert_Flag_Caster"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Enemies(All)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
           "modifier": "Dr_Ratio_Insert_Flag"
         },
         {
           "name": "Define Custom Variable with Status Counter",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "_DebuffCount"
         },
         {
@@ -1579,7 +1789,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "ifTargetFound": [
@@ -1599,7 +1812,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "modifier": "Dr_Ratio_Insert_Flag"
                 }
               ]
@@ -1725,7 +1941,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (6) || Variables[1] (4) || ADD || RETURN",
@@ -1760,7 +1979,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (6) || RETURN",
@@ -1825,13 +2047,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Dr_Ratio_Insert_Flag_Caster"
           }
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -1865,7 +2093,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "Dr_Ratio_Slow[<span class=\"descriptionNumberColor\">Effect RES Reduction</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -1900,7 +2131,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Dr_Ratio_Insert_Flag_Caster"
           },
           "passed": [
@@ -1928,7 +2162,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -1978,7 +2215,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Dr_Ratio_Ability02_Part02",
           "isTrigger": true
         }
@@ -2003,17 +2243,26 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Dr_Ratio_Insert_Flag_Caster"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Enemies(All)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All(with Unselectable)}}"
+          },
           "modifier": "Dr_Ratio_Insert_Flag"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -2061,7 +2310,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Dr_Ratio_Ability01_Part02",
           "isTrigger": true
         }
@@ -2087,7 +2339,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Dr_Ratio_InsertAbility"
                 }
               ]
@@ -2100,7 +2355,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Dr_Ratio_InsertAbility"
                 }
               ]
@@ -2158,7 +2416,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Status Counter",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "MDF_DebuffNumber"
                 },
                 {
@@ -2179,7 +2440,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "ContextModifier",
                       "variableName": "MDF_PropertyValueChange",
                       "value": {
@@ -2210,7 +2474,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "scope": "ContextModifier",
                           "variableName": "MDF_PropertyValueChange",
                           "value": {
@@ -2226,7 +2493,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "scope": "ContextModifier",
                           "variableName": "MDF_PropertyValueChange",
                           "value": {
@@ -2245,7 +2515,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Define Custom Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "ContextModifier",
                       "variableName": "MDF_PropertyValueChange",
                       "value": 0
@@ -2269,14 +2542,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValueChange",
                   "value": 0
                 },
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "variableName": "MDF_DebuffNumber",
                   "value": 0
@@ -2288,14 +2567,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "variableName": "MDF_PropertyValueChange",
                   "value": 0
                 },
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "variableName": "MDF_DebuffNumber",
                   "value": 0
@@ -2319,7 +2604,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Dr_Ratio_InsertAbility"
                 }
               ]
@@ -2386,7 +2674,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Dr_Ratio_Insert_Flag_Caster",
                       "valuePerStack": {
                         "MDF_Ability03_Insert_Flag": 1,
@@ -2402,7 +2693,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Dr_Ratio_Insert_Flag_Caster",
                       "valuePerStack": {
                         "MDF_Ability03_Insert_Flag": 0,
@@ -2431,7 +2725,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Dr_Ratio_Insert_Flag_Caster"
                   },
                   "passed": [
@@ -2470,14 +2767,20 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "popUpText": "CRIT Rate and CRIT DMG Boost"
                     }
                   ]
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "modifierName": "Dr_Ratio_Ability03_PointB1_Bonus[<span class=\"descriptionNumberColor\">Summation</span>]",
@@ -2485,7 +2788,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue01) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -2499,7 +2805,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue02) || Variables[1] (MDF_Layer) || MUL || RETURN",
@@ -2542,20 +2851,32 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies(All)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "maxTargets": 10,
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "invertCondition": true
                   },
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
                     }
                   ]
@@ -2701,19 +3022,28 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "NOT",
                         "condition": {
                           "name": "Current Action Holder Is",
-                          "target": "Caster"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          }
                         }
                       },
                       {
                         "name": "Is Entity a Battle Event/Summon",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "invertCondition": true
                       },
                       {
@@ -2724,7 +3054,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       }
@@ -2735,7 +3068,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Dr_Ratio_Insert_Flag_Caster",
                         "invertCondition": true
                       },
@@ -2749,7 +3085,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "Dr_Ratio_Insert_Flag",
                               "valuePerStack": {
                                 "MDF_Insert_Flag": 1,
@@ -2760,7 +3099,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "Dr_Ratio_Insert_Flag",
                               "valuePerStack": {
                                 "MDF_Insert_Flag": 1,
@@ -2785,12 +3127,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Dr_Ratio_Insert_Flag_Caster"
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       }
                     ]
@@ -2800,13 +3148,19 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL"
                       },
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Dr_Ratio_Ability03_InsertAbility"
                         }
                       ]
@@ -2830,8 +3184,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -2869,19 +3229,31 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Target is Unselectable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -2891,8 +3263,14 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": "Current Visual Target(All)",
-                        "target": "Owner of this Modifier",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "mustBeAlive2": true
                       },
                       "passed": [
@@ -2962,12 +3340,18 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Dr_Ratio_Insert_Flag"
               },
               "ifTargetFound": [
@@ -2979,8 +3363,14 @@ const compositeAbilityObject = {
                     "typeValue": 1
                   },
                   "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Use Prior Target(s) Defined",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "showInActionOrder": true,
                   "abortFlags": [
@@ -2993,7 +3383,10 @@ const compositeAbilityObject = {
               "noTargetFound": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
@@ -3001,13 +3394,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Target Exists",
-                        "target": "Use Prior Target(s) Defined[SUMMONER OF]",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Summoner of Parameter Target}}"
+                        },
                         "living": true
                       },
                       {
                         "name": "Living State",
                         "state": "Anyone",
-                        "target": "Use Prior Target(s) Defined[SUMMONER OF]",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Summoner of Parameter Target}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -3021,8 +3420,14 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "Use Prior Target(s) Defined",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -3035,7 +3440,10 @@ const compositeAbilityObject = {
                   "noTargetFound": [
                     {
                       "name": "Find New Target",
-                      "from": "All Hostile Entities (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
@@ -3047,8 +3455,14 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Dr_Ratio_PassiveAbility01_Insert_Part01",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "Use Prior Target(s) Defined",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "showInActionOrder": true,
                           "abortFlags": [

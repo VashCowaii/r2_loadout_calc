@@ -63,7 +63,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -96,12 +99,21 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "AdvancedJingliu_Attack_Transfer"
                   }
                 ]
@@ -109,11 +121,17 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Teammates (Excluding Owner)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
@@ -124,7 +142,10 @@ const configAbility = {
                         "Skill",
                         "Ultimate"
                       ],
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "previewType": null,
                       "previewValue": {
                         "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.05) || MUL || RETURN",
@@ -155,7 +176,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_CriticalRatio) || RETURN",
@@ -214,7 +238,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -249,8 +276,14 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Advanced_Jingliu_PassiveAtkReady_Part01",
-              "abilitySource": "Caster",
-              "abilityTarget": "Caster",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "priorityTag": "AvatarBuffSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
@@ -262,13 +295,19 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "MDF_MaxHP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Passive2"
             }
           ]
@@ -348,68 +387,101 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Advanced_Jingliu_MoonMad[<span class=\"descriptionNumberColor\">Moonlight</span>]"
             },
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill02",
               "skillSlot": "Skill",
               "enableSecondaryType": "ControlSkill02"
             },
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill01",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Hide",
               "abilityName": "Skill"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]"
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "Charm"
               },
               "passed": [
                 {
                   "name": "Change Character Transformation",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "phase": "Phase3"
                 }
               ],
               "failed": [
                 {
                   "name": "Change Character Transformation",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "phase": "Phase1"
                 }
               ]
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Trace_B2_SpeedUp"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]"
             }
           ]
@@ -422,21 +494,30 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "abilityName": "Skill21",
               "skillSlot": "Skill",
               "enableSecondaryType": "ControlSkill02"
             },
             {
               "name": "Disable Abilities",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityTypes": [
                 "Basic ATK"
               ]
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Show",
               "abilityName": "Skill"
             },
@@ -449,7 +530,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
                   "valuePerStack": {
                     "MDF_IcePenetrate": {
@@ -466,7 +550,10 @@ const configAbility = {
             },
             {
               "name": "Change Character Transformation",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "phase": "Phase2"
             },
             {
@@ -478,7 +565,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -503,7 +593,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
               "valuePerStack": {
                 "MDF_CriticalRatio": {
@@ -523,23 +616,35 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Teammates (Excluding Owner)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
               "conditions": {
                 "name": "Is Entity a Battle Event/Summon",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "invertCondition": true
               },
               "ifTargetFound": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "variableName": "TargetMaxHp",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Consume",
                   "consumeFrom": "MaxHP",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "consumePercent": {
                     "operator": "Variables[0] (SkillP01_P2_HpConsumption) || RETURN",
                     "displayLines": "SkillP01_P2_HpConsumption",
@@ -561,13 +666,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "Charm"
               },
               "passed": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill21",
                   "skillSlot": "Skill"
                 }
@@ -582,27 +693,39 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "Charm",
                 "invertCondition": true
               },
               "passed": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill21",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"
                 },
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Basic ATK"
                   ]
@@ -627,7 +750,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_IcePenetrate) || RETURN",
@@ -670,7 +796,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "AdvancedJingliu_Attack_Transfer"
                   }
                 ]
@@ -709,7 +838,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -752,7 +884,10 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "skillOwner": "Caster",
+                    "skillOwner": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "value1": "QueuedUltimates",
                     "compareType": "=",
                     "value2": 0
@@ -764,7 +899,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "AdvancedJingliu_Attack_Transfer"
                   },
                   "passed": [
@@ -795,12 +933,18 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "AdvancedJingliu_Attack_Transfer"
                 },
                 "Modifier Deletes Itself"
@@ -824,7 +968,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "AdvancedJingliu_Attack_Transfer"
                   },
                   "passed": [
@@ -855,12 +1002,18 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "AdvancedJingliu_Attack_Transfer"
                 },
                 "Modifier Deletes Itself"
@@ -884,7 +1037,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "AdvancedJingliu_Attack_Transfer"
                   },
                   "passed": [
@@ -915,12 +1071,18 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "AdvancedJingliu_Attack_Transfer"
                 },
                 "Modifier Deletes Itself"
@@ -944,7 +1106,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "UnOperable"
                   }
                 ]
@@ -954,7 +1119,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "AdvancedJingliu_Attack_Transfer"
                   },
                   "passed": [
@@ -985,12 +1153,18 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "AdvancedJingliu_Attack_Transfer"
                 },
                 "Modifier Deletes Itself"
@@ -1032,18 +1206,27 @@ const configAbility = {
                   },
                   {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -1052,7 +1235,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
@@ -1066,7 +1252,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                         "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -1085,7 +1274,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -1108,7 +1300,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Allied Team",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "scope": "TargetEntity",
               "variableName": "LoseHPTrigger"
             }
@@ -1124,19 +1319,28 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "LoseHPTrigger"
                 },
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "BeingAttack"
                 }
@@ -1154,13 +1358,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Battle Event",
                     "invertCondition": true
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
@@ -1176,7 +1386,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "LoseHPTrigger",
                     "compareType": "=",
                     "value2": 1,
@@ -1201,7 +1414,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "BeingAttack",
                         "compareType": "=",
                         "value2": 1
@@ -1209,7 +1425,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Define Custom Variable",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "variableName": "LoseHPTrigger",
                           "value": 1
                         }
@@ -1248,7 +1467,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "AdvancedJingliu_Attack_Transfer"
                           },
                           "passed": [
@@ -1256,7 +1478,10 @@ const configAbility = {
                               "name": "Adjust Variable Value",
                               "adjustmentType": "Add to Value (Default)",
                               "variableName": "Jingliu_FullMoonFlag",
-                              "on": "Caster",
+                              "on": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "value": 1
                             },
                             {
@@ -1280,7 +1505,10 @@ const configAbility = {
                                   "name": "Adjust Variable Value",
                                   "adjustmentType": "Overwrite Value",
                                   "variableName": "Jingliu_FullMoonFlag",
-                                  "on": "Caster",
+                                  "on": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "value": {
                                     "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
                                     "displayLines": "Jingliu_FullMoonFlagMax",
@@ -1321,7 +1549,10 @@ const configAbility = {
                               "name": "Adjust Variable Value",
                               "adjustmentType": "Add to Value (Default)",
                               "variableName": "Jingliu_MoonFlag",
-                              "on": "Caster",
+                              "on": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "value": 1
                             },
                             {
@@ -1353,7 +1584,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Advanced_Jingliu_LoseHPCount[<span class=\"descriptionNumberColor\">Crescent Transmigration</span>]",
                       "valuePerStack": {
                         "Jingliu_LoseHPCount": {
@@ -1372,13 +1606,19 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "AdvancedJingliu_Attack_Transfer"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Advanced_Jingliu_MoonMad[<span class=\"descriptionNumberColor\">Moonlight</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (5) || RETURN",
@@ -1403,13 +1643,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "BeingAttack",
                   "value": 1
@@ -1423,13 +1669,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Allied Team",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "scope": "TargetEntity",
               "variableName": "LoseHPTrigger"
             },
             {
               "name": "Declare Custom Variable",
-              "target": "Allied Team",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "scope": "TargetEntity",
               "variableName": "BeingAttack"
             }
@@ -1458,18 +1710,27 @@ const configAbility = {
                   },
                   {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -1478,7 +1739,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
@@ -1492,7 +1756,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                         "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -1511,7 +1778,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -1534,13 +1804,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Declare Custom Variable",
-              "target": "Allied Team",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "scope": "TargetEntity",
               "variableName": "LoseHPTrigger"
             },
             {
               "name": "Declare Custom Variable",
-              "target": "Allied Team",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "scope": "TargetEntity",
               "variableName": "BeingAttack"
             }
@@ -1570,18 +1846,27 @@ const configAbility = {
                   },
                   {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -1590,7 +1875,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
@@ -1604,7 +1892,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                         "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -1623,7 +1914,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -1648,13 +1942,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "AdvancedJingliu_Attack_Transfer"
               },
               "passed": [
                 {
                   "name": "Change Character Transformation",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "phase": "Phase2"
                 }
               ]
@@ -1687,13 +1987,19 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
@@ -1712,7 +2018,10 @@ const configAbility = {
                       },
                       {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       }
                     ]
@@ -1720,7 +2029,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
@@ -1734,7 +2046,10 @@ const configAbility = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                             "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -1753,7 +2068,10 @@ const configAbility = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -1796,13 +2114,19 @@ const configAbility = {
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -1811,7 +2135,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
@@ -1825,7 +2152,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                         "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -1844,7 +2174,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -1885,18 +2218,27 @@ const configAbility = {
                   },
                   {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "DisableAction",
                     "invertCondition": true
                   }
@@ -1905,7 +2247,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_ATK"
                 },
                 {
@@ -1919,7 +2264,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                         "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -1938,7 +2286,10 @@ const configAbility = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_FullMoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                         "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -1971,14 +2322,20 @@ const configAbility = {
               "whenEnteringRange": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Transfer_PreShow"
                 }
               ],
               "whenLeavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Transfer_PreShow"
                 }
               ]
@@ -2006,7 +2363,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "AdvancedJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -2025,7 +2385,10 @@ const configAbility = {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Overwrite Value",
                   "variableName": "Jingliu_MoonFlag",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
                     "displayLines": "Jingliu_MoonFlagMax",
@@ -2068,7 +2431,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "AdvancedJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -2102,7 +2468,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "skillType": [
           "Skill",
           "Ultimate"

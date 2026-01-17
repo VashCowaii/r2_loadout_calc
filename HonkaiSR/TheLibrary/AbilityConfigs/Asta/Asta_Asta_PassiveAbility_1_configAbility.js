@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Asta_Passive",
       "valuePerStack": {
         "MDF_CostLayer": {
@@ -53,12 +56,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Asta_Eidolon2Flag"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Asta_AbilityPreShowModifier"
     },
     {
@@ -86,13 +95,19 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Allied Team",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player Team All}}"
+        },
         "skillType": [
           "Ultimate"
         ],
         "conditions": {
           "name": "Has Modifier",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "modifier": "Asta_Ultimate_SpeedUP[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
           "invertCondition": true
         },
@@ -113,7 +128,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Asta_Eidolon2Flag"
               },
               "failed": [
@@ -182,14 +200,20 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Asta_Passive_SPRatioUp[<span class=\"descriptionNumberColor\">Energy Regeneration Rate Boost</span>]"
                         }
                       ]
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
@@ -238,7 +262,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "value": 0
                     },
@@ -260,7 +287,10 @@ const configAbility = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]"
                     }
                   ]
@@ -274,7 +304,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "ifTargetFound": [
@@ -282,7 +315,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "DamageType": "Fire"
                   },
                   "passed": [
@@ -332,7 +368,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
@@ -425,7 +464,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Asta_Passive_Charge[<span class=\"descriptionNumberColor\">Charging</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23047_Main"
     }
   ],
@@ -24,7 +27,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_SpeedUpRatio) || RETURN",
@@ -61,7 +67,10 @@ const configAbility = {
                 "attackTypes": [
                   "DOT"
                 ],
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
@@ -92,17 +101,29 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "Use Prior Target(s) Defined",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_23047_Sub3[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_SpeedUpLifeTimeTemp) || RETURN",
@@ -162,15 +183,24 @@ const configAbility = {
           "parse": [
             {
               "name": "Define Custom Variable with Status Counter",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_CurrentDeBuffCount",
-              "casterFilter": "Caster"
+              "casterFilter": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "MDF_CurrentDeBuffCount",
                 "compareType": ">",
                 "value2": {
@@ -236,26 +266,38 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   {
                     "name": "Compare: Target",
-                    "target": [
-                      {
-                        "name": "Target List",
-                        "target": "Use Secondary Prior Target(s) Defined"
-                      },
-                      "Get Source Owner"
-                    ],
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Sequence",
+                      "Sequence": [
+                        {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        },
+                        "Get Source Owner"
+                      ]
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_23047_Sub2[<span class=\"descriptionNumberColor\">Enthrallment</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",

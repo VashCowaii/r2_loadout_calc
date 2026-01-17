@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Variable",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "value1": "CurrentHP",
         "compareType": "<=",
         "value2": 0
@@ -16,7 +19,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Modifier Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifierName": "Bailu_ReviveEvent",
           "function": "Add"
         },
@@ -27,12 +33,18 @@ const configAbility = {
         },
         {
           "name": "Dispel Debuffs",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "silent": true
         },
         {
           "name": "Heal",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.18) || RETURN",
             "displayLines": "0.18",
@@ -55,7 +67,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Bailu_ReviveEvent"
           },
           "passed": [
@@ -134,7 +149,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Bailu_Revive_Mark"
         }
       ]

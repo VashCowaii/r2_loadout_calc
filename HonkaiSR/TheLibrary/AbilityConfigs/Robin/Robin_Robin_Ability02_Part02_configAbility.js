@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (5) || RETURN",
             "displayLines": "5",
@@ -28,13 +31,22 @@ const configAbility = {
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
-      "inherentTarget": "Single Target (Primary)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "inherentTarget": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "ability": "Robin_Ability02_FriendAttack"
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

@@ -17,12 +17,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Himeko_Passive1_Modifier"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
       "stackLimit": {
         "operator": "Variables[0] (3) || RETURN",
@@ -74,7 +80,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_Pursuit_Layer",
               "value": 0
             },
@@ -108,7 +117,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Pursuit_Layer",
               "multiplier": 1
@@ -117,7 +129,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "MDF_Pursuit_Layer",
                 "compareType": "=",
                 "value2": {
@@ -202,7 +217,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]"
             }
           ]
@@ -231,7 +249,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
@@ -266,18 +287,27 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "includeNonTargets": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "DisableAction",
                             "invertCondition": true
                           }
@@ -287,8 +317,14 @@ const configAbility = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Himeko_Passive1Atk_Ability",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -310,12 +346,18 @@ const configAbility = {
                             "conditionList": [
                               {
                                 "name": "Has Flag",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "flagName": "STAT_CTRL"
                               },
                               {
                                 "name": "Has Flag",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "flagName": "DisableAction"
                               }
                             ]
@@ -368,13 +410,19 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -403,15 +451,24 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "passed": [
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Himeko_Passive1Atk_Ability",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -470,18 +527,27 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "includeNonTargets": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "DisableAction",
                             "invertCondition": true
                           }
@@ -491,8 +557,14 @@ const configAbility = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Himeko_Passive1Atk_Ability",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -529,14 +601,20 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Monster Rank",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "compareType": ">=",
                 "value2": 3
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -568,7 +646,10 @@ const configAbility = {
                       },
                       {
                         "name": "Current Action Holder Is",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Skill Type",
@@ -579,7 +660,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -604,7 +688,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Himeko_Passive_Pursuit[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -632,7 +719,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
@@ -651,7 +741,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "flagName": "STAT_CTRL"
                     }
                   },
@@ -659,7 +752,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "flagName": "DisableAction"
                     }
                   }
@@ -686,15 +782,24 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "passed": [
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Himeko_Passive1Atk_Ability",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -757,18 +862,27 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "includeNonTargets": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "DisableAction",
                             "invertCondition": true
                           }
@@ -778,8 +892,14 @@ const configAbility = {
                         {
                           "name": "Inject Ability Use",
                           "abilityName": "Himeko_Passive1Atk_Ability",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,

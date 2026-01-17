@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21011_Main"
     }
   ],
@@ -24,7 +27,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageImaginary</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -52,7 +58,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageQuantum</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -80,7 +89,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageWind</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -108,7 +120,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageLightning</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -136,7 +151,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageIce</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -164,7 +182,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -192,7 +213,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamagePhysical</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.12) || RETURN",
@@ -218,7 +242,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -226,7 +253,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Physical"
@@ -235,7 +265,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21011_Physical"
                     }
                   ]
@@ -244,7 +277,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Fire"
@@ -253,7 +289,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21011_Fire"
                     }
                   ]
@@ -262,7 +301,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Ice"
@@ -271,7 +313,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21011_Ice"
                     }
                   ]
@@ -280,7 +325,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Wind"
@@ -289,7 +337,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21011_Wind"
                     }
                   ]
@@ -298,7 +349,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Thunder"
@@ -307,7 +361,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21011_Thunder"
                     }
                   ]
@@ -316,7 +373,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Quantum"
@@ -325,7 +385,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21011_Quantum"
                     }
                   ]
@@ -334,7 +397,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Imaginary"
@@ -343,7 +409,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_21011_Imaginary"
                     }
                   ]
@@ -368,7 +437,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Physical"
@@ -377,7 +449,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "LC_21011_Physical"
                     }
                   ]
@@ -386,7 +461,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Fire"
@@ -395,7 +473,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "LC_21011_Fire"
                     }
                   ]
@@ -404,7 +485,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Ice"
@@ -413,7 +497,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "LC_21011_Ice"
                     }
                   ]
@@ -422,7 +509,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Wind"
@@ -431,7 +521,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "LC_21011_Wind"
                     }
                   ]
@@ -440,7 +533,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Thunder"
@@ -449,7 +545,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "LC_21011_Thunder"
                     }
                   ]
@@ -458,7 +557,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Quantum"
@@ -467,7 +569,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "LC_21011_Quantum"
                     }
                   ]
@@ -476,7 +581,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Element",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Imaginary"
@@ -485,7 +593,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "LC_21011_Imaginary"
                     }
                   ]

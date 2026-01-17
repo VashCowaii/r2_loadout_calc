@@ -14,12 +14,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "PlayerBoy_30_Maze"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "PlayerBoy_30_Maze_Damage"
     }
   ],
@@ -39,7 +45,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -80,7 +89,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "advanceType": "Delay",
                   "value": "0.5"
                 }

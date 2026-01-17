@@ -18,7 +18,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
@@ -53,7 +56,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -87,7 +93,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Luocha_Passive01_DisableActionInsertMark"
             },
             {
@@ -98,7 +107,10 @@ const configAbility = {
             {
               "name": "Inject Ability Use",
               "abilityName": "Luocha_Passive01_InsertAbility",
-              "abilitySource": "Caster",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "priorityTag": "AvatarBuffSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,
@@ -132,7 +144,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "STAT_CTRL",
                     "invertCondition": true
                   },
@@ -200,7 +215,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Luocha_Passive01_InsertMark"
                 }
               ],
@@ -266,7 +284,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Shield",
-              "target": "Owner of this Modifier"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
             },
             {
               "name": "Set Shield State/Value",
@@ -279,7 +300,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Create Shield",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
                 "displayLines": "MDF_ShieldValue",
@@ -352,8 +376,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
@@ -363,12 +393,18 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction"
                       }
                     ]
@@ -376,7 +412,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Luocha_Passive01_InsertMark"
                     }
                   ]

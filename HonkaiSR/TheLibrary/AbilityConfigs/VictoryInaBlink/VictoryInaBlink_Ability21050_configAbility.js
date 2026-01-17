@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21050_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.08) || RETURN",
@@ -51,14 +57,23 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "[SKILL TARGET OF] Owner of this Modifier",
-                "target": "All Team Members(In Context)",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getAbilityTarget]]"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "modifier": "LC_21050_Sub2[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",
@@ -89,13 +104,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Memosprite"
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use [SUMMONER OF] Prior Target(s) Defined",
-                    "target": "Caster",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}.[[getSummoner]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -103,7 +127,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster (Memosprite)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
                   "modifier": "LC_21050_Sub1"
                 }
               ]

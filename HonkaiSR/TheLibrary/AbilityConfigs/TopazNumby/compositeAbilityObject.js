@@ -47,7 +47,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Topaz_BE_HitEffect"
           },
           "passed": [
@@ -58,7 +61,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_BE_HitEffect"
             }
           ],
@@ -186,7 +192,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_BE_CriticalChance"
         },
         {
@@ -195,7 +204,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -227,7 +239,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -268,7 +283,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -290,7 +308,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (10) || RETURN",
                 "displayLines": "10",
@@ -307,13 +328,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Topaz_Bonus"
           },
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (60) || RETURN",
                 "displayLines": "60",
@@ -326,7 +353,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_Bonus"
             }
           ]
@@ -361,7 +391,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Numby",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "modifier": "Topaz_BE_UltraEnhance_ShowText",
               "valuePerStack": {
                 "ATKCount": {
@@ -383,14 +416,20 @@ const compositeAbilityObject = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Numby",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "modifier": "Topaz_BE_UltraEnhance_ShowText"
             }
           ]
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_BE_CriticalChance"
         }
       ],
@@ -408,7 +447,10 @@ const compositeAbilityObject = {
           "Event": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -453,7 +495,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -470,13 +515,19 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Topaz_Bonus"
           },
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (60) || RETURN",
                 "displayLines": "60",
@@ -489,7 +540,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_Bonus"
             }
           ]
@@ -507,7 +561,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster [of Battle Event]",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Battle Event's Caster}}"
+            },
             "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           },
           "passed": [
@@ -521,14 +578,23 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster [of Battle Event]",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Battle Event's Caster}}"
+            },
             "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           },
           "passed": [
             {
               "name": "Trigger Ability",
-              "from": "Caster [of Battle Event]",
-              "inherentTarget": "Single Target (Primary)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "ability": "Topaz_BE_UltraAttackDamage",
               "isTrigger": true
             }
@@ -536,8 +602,14 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Trigger Ability",
-              "from": "Caster [of Battle Event]",
-              "inherentTarget": "Single Target (Primary)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "ability": "Topaz_BE_NormalAttackDamage",
               "isTrigger": true
             }
@@ -552,12 +624,18 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Has Flag",
-                "target": "Caster [of Battle Event]",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Battle Event's Caster}}"
+                },
                 "flagName": "STAT_CTRL"
               },
               {
                 "name": "Has Flag",
-                "target": "Caster [of Battle Event]",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Battle Event's Caster}}"
+                },
                 "flagName": "STAT_CTRL_Frozen"
               }
             ]
@@ -576,14 +654,20 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster [of Battle Event]",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Battle Event's Caster}}"
+            },
             "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           },
           "passed": [
             "Deleted bullshit",
             {
               "name": "Define Custom Variable",
-              "target": "Caster [of Battle Event]",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
               "scope": "ContextCaster",
               "variableName": "_damageStart",
               "value": 1
@@ -593,7 +677,10 @@ const compositeAbilityObject = {
             "Deleted bullshit",
             {
               "name": "Define Custom Variable",
-              "target": "Caster [of Battle Event]",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
               "scope": "ContextCaster",
               "variableName": "_damageStart",
               "value": 1
@@ -627,7 +714,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Force Entity Death",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ignoreHPLossTriggers": true,
           "ignoreDeathTriggers": true
         }
@@ -643,7 +733,10 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_BETag"
         },
         {
@@ -680,13 +773,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Topaz_BE_ReduceDelay"
                   },
                   "passed": [
                     {
                       "name": "Trigger Ability",
-                      "from": "Caster [of Battle Event]",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Battle Event's Caster}}"
+                      },
                       "ability": "Topaz_Eidolon4_ReduceDelay"
                     }
                   ]
@@ -695,17 +794,26 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Enemies (AOE)(Living)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}.[[living]]"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     }
                   },
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Topaz_BE_FindNoTargetFlag"
                     }
                   ]
@@ -714,10 +822,16 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Enemies (AOE)(Living)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}.[[living]]"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     }
                   },
@@ -725,21 +839,30 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Topaz_BE_LaterAttack",
-                      "abilitySource": "Caster",
-                      "abilityTarget": [
-                        {
-                          "name": "Target List",
-                          "target": "All Enemies (AOE)(Living)"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
-                            "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}.[[living]]"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Has Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
+                            }
                           }
-                        }
-                      ],
+                        ]
+                      },
                       "priorityTag": "LevelPerformAvatar",
                       "canHitNonTargets": true,
                       "allowAbilityTriggers": false
@@ -761,7 +884,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Topaz_Passive"
                   }
                 }
@@ -774,7 +900,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Topaz_Passive"
                   }
                 }
@@ -793,12 +922,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster [of Battle Event]",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Battle Event's Caster}}"
+                        },
                         "flagName": "STAT_CTRL"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster [of Battle Event]",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Battle Event's Caster}}"
+                        },
                         "flagName": "STAT_CTRL_Frozen"
                       }
                     ]
@@ -813,7 +948,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Topaz_Passive"
                   }
                 }
@@ -841,7 +979,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Technique_Topaz_Modifier"
         }
       ],
@@ -869,7 +1010,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Topaz_Bonus"
                     }
                   ]
@@ -902,27 +1046,42 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_Passive"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_Passive_Sub_ListenAction"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_BPAbility_ModifyBEAction"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_Ultimate_Normal_ModifyBEAction"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_Ultimate_BPAbility_ModifyBEAction"
         },
         {
@@ -934,7 +1093,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_Normal_ModifyBEAction"
             }
           ]
@@ -983,7 +1145,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Numby",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "modifier": "Topaz_BE_BaseSpeed"
         },
         {
@@ -995,7 +1160,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_PointB2Effect"
             }
           ]
@@ -1009,7 +1177,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Numby",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "modifier": "Topaz_BE_ReduceDelay"
             }
           ]
@@ -1049,16 +1220,28 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Enemies (AOE)(Living)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}.[[living]]"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         },
                         "invertCondition": true
@@ -1068,7 +1251,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Topaz_BE_FindNoTargetFlag"
                     }
                   ]
@@ -1085,16 +1271,28 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Enemies (AOE)(Living)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}.[[living]]"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         },
                         "invertCondition": true
@@ -1104,7 +1302,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
                     }
                   ]
@@ -1121,16 +1322,28 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Enemies (AOE)(Living)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}.[[living]]"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         },
                         "invertCondition": true
@@ -1140,7 +1353,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
                     }
                   ]
@@ -1157,16 +1373,28 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Enemies (AOE)(Living)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}.[[living]]"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                         },
                         "invertCondition": true
@@ -1176,7 +1404,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Topaz_BE_FindNoTargetFlag"
                     }
                   ]
@@ -1199,7 +1430,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Trigger Ability",
-                  "from": "Numby",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "ability": "Topaz_BE_Hit"
                 }
               ]
@@ -1211,13 +1445,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_Ultimate_Listen_ModifyBEAction"
                     }
                   ]
@@ -1229,7 +1469,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Numby",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "modifier": "Topaz_BE_HitEffect"
                 }
               ]
@@ -1239,7 +1482,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates (Excluding Owner)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
                   "modifier": "Topaz_Ultimate_Listen_ModifyBEAction"
                 }
               ],
@@ -1257,18 +1503,27 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BE_FindNoTargetFlag"
                     },
                     {
                       "name": "Find New Target",
-                      "from": "All Enemies (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue1_DamageAdd": {
@@ -1312,18 +1567,27 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
                     },
                     {
                       "name": "Find New Target",
-                      "from": "All Enemies (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue1_DamageAdd": {
@@ -1367,14 +1631,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTagHitFlag"
                     },
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                       },
                       "passed": [
@@ -1382,13 +1652,19 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Current Turn Is",
-                            "target": "Numby",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Numby}}"
+                            },
                             "invertCondition": true
                           },
                           "passed": [
                             {
                               "name": "Action Advance/Delay",
-                              "target": "Numby",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Numby}}"
+                              },
                               "advanceType": "Advance",
                               "value": "-0.5"
                             }
@@ -1407,20 +1683,29 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTagInsertHitFlag"
                     },
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Current Turn Is",
-                        "target": "Numby",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Numby}}"
+                        },
                         "invertCondition": true
                       },
                       "passed": [
                         {
                           "name": "Action Advance/Delay",
-                          "target": "Numby",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Numby}}"
+                          },
                           "advanceType": "Advance",
                           "value": "-0.5"
                         }
@@ -1437,8 +1722,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 }
               ]
@@ -1458,7 +1749,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Weakness",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "DamageType": "Fire"
                   },
                   "passed": [
@@ -1495,7 +1789,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (80) || RETURN",
@@ -1523,7 +1820,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Numby",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Numby}}"
+            },
             "skillType": [
               "Basic ATK",
               "Skill",
@@ -1534,21 +1834,33 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Compare: Target Count SUM",
-                  "target": "Current Visual Target(All)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player's Aim Target List}}"
+                  },
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                   }
                 },
                 {
                   "name": "Has Modifier",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                 },
                 {
                   "name": "Current Turn Is",
-                  "target": "Numby",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "invertCondition": true
                 }
               ]
@@ -1574,7 +1886,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Numby",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Numby}}"
+            },
             "skillType": [
               "Skill"
             ],
@@ -1583,12 +1898,18 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Has Modifier",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                 },
                 {
                   "name": "Current Turn Is",
-                  "target": "Numby",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "invertCondition": true
                 }
               ]
@@ -1614,7 +1935,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Numby",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Numby}}"
+            },
             "skillType": [
               "Basic ATK"
             ],
@@ -1623,17 +1947,26 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Has Modifier",
-                  "target": "Allied Team Skill Lock Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team Ability Target Lock}}"
+                  },
                   "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 },
                 {
                   "name": "Has Modifier",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                 },
                 {
                   "name": "Current Turn Is",
-                  "target": "Numby",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "invertCondition": true
                 }
               ]
@@ -1659,13 +1992,19 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Numby",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Numby}}"
+            },
             "skillType": [
               "Skill"
             ],
             "conditions": {
               "name": "Current Turn Is",
-              "target": "Numby",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "invertCondition": true
             },
             "delayAdvancePreview": {
@@ -1689,7 +2028,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Numby",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Numby}}"
+            },
             "skillType": [
               "Basic ATK"
             ],
@@ -1698,12 +2040,18 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Has Modifier",
-                  "target": "Allied Team Skill Lock Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team Ability Target Lock}}"
+                  },
                   "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                 },
                 {
                   "name": "Current Turn Is",
-                  "target": "Numby",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "invertCondition": true
                 }
               ]
@@ -1731,29 +2079,44 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Numby",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "modifier": "Topaz_BE_UltraEnhance_Text"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Numby",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "modifier": "Topaz_BE_UltraEnhance_Text"
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
         },
         {
           "name": "Trigger Ability",
-          "from": "Numby",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "ability": "Topaz_BE_RefreshEnhance"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
           "counter": {
             "operator": "Variables[0] (MaxEnhance) || RETURN",
@@ -1825,7 +2188,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Numby",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "modifier": "Topaz_BE_UltraEnhance_ShowText",
           "valuePerStack": {
             "ATKCount": {
@@ -1887,7 +2253,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Topaz_Ability03_Part02",
           "isTrigger": true
         }
@@ -1915,17 +2284,26 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Numby",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
           "valuePerStack": {
             "MDF_PropertyValue1_DamageAdd": {
@@ -1959,21 +2337,33 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           }
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
         },
         {
           "name": "Trigger Ability",
-          "from": "Numby",
-          "inherentTarget": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ability": "Topaz_BE_FirstAttack",
           "isTrigger": true
         },
@@ -1991,7 +2381,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           },
           "passed": [
@@ -2069,7 +2462,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_BE_CriticalChance"
             },
             {
@@ -2078,7 +2474,10 @@ const compositeAbilityObject = {
               "Event": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Fire",
@@ -2110,7 +2509,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -2151,7 +2553,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (10) || RETURN",
                     "displayLines": "10",
@@ -2168,13 +2573,19 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Topaz_Bonus"
               },
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (60) || RETURN",
                     "displayLines": "60",
@@ -2187,7 +2598,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Topaz_Bonus"
                 }
               ]
@@ -2222,7 +2636,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Numby",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "modifier": "Topaz_BE_UltraEnhance_ShowText",
                   "valuePerStack": {
                     "ATKCount": {
@@ -2244,14 +2661,20 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Numby",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "modifier": "Topaz_BE_UltraEnhance_ShowText"
                 }
               ]
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_BE_CriticalChance"
             }
           ],
@@ -2262,7 +2685,10 @@ const compositeAbilityObject = {
               "Event": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Fire",
@@ -2302,13 +2728,19 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Topaz_Bonus"
               },
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (60) || RETURN",
                     "displayLines": "60",
@@ -2321,7 +2753,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Topaz_Bonus"
                 }
               ]
@@ -2333,7 +2768,10 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_Ability02_SpecialMarkAdder"
         }
       ],
@@ -2373,17 +2811,32 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
@@ -2416,7 +2869,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Topaz_BETargetTagActive_BP",
               "aliveOnly": "True",
               "haloStatus": true
@@ -2432,7 +2888,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Attack-Type Extension",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "typeToExtend": "Skill",
                   "isRemove": true
                 }
@@ -2443,7 +2902,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Attack-Type Extension",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "typeToExtend": "Skill",
                   "extendTypeTo": "Follow-up"
                 }
@@ -2454,7 +2916,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_Topaz_BPAbility_AddRegardAsAttackType"
                 }
               ]
@@ -2487,7 +2952,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Topaz_Ability02_Part02",
           "isTrigger": true
         },
@@ -2495,7 +2963,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
           }
         }
@@ -2517,7 +2988,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
             }
           ]
@@ -2527,7 +3001,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -2566,7 +3043,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Attack-Type Extension",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "typeToExtend": "Basic ATK",
                   "isRemove": true
                 }
@@ -2577,7 +3057,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Attack-Type Extension",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "typeToExtend": "Basic ATK",
                   "extendTypeTo": "Follow-up"
                 }
@@ -2588,7 +3071,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
                 }
               ]
@@ -2619,7 +3105,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Topaz_Ability01_Part02",
           "isTrigger": true
         }
@@ -2634,7 +3123,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Action Advance/Delay",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "advanceType": "Set",
           "value": "(0 - 0.2)"
         }
@@ -2681,7 +3173,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "ShowSpecialMarkOnCreate",
                         "compareType": ">=",
                         "value2": 1,
@@ -2689,11 +3184,20 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       {
@@ -2701,15 +3205,24 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Target",
-                            "target": "Current Action Owner",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           {
                             "name": "AND",
                             "conditionList": [
                               {
                                 "name": "Is Part Of Team",
-                                "target": "Current Action Owner",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Current Action Owner}}"
+                                },
                                 "team": "TeamLight"
                               },
                               {
@@ -2757,7 +3270,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                   },
                   "passed": [
@@ -2765,11 +3281,20 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       "passed": [
@@ -2777,8 +3302,14 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target",
-                            "target": "Current Action Owner",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           "passed": [
                             {
@@ -2813,17 +3344,32 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Target Count SUM",
-                            "target": "Current Visual Target(All)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player's Aim Target List}}"
+                            },
                             "conditions": {
                               "name": "Compare: Target",
-                              "target": "Owner of this Modifier",
-                              "target2": "Use Prior Target(s) Defined"
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
                             }
                           },
                           {
                             "name": "Compare: Target",
-                            "target": "Current Action Owner",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           }
                         ]
                       },
@@ -2873,7 +3419,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">FireVulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (TOPAZ_OBJECT_UNUSED_1) || RETURN",
@@ -2919,7 +3468,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Numby",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Numby}}"
+                  },
                   "modifier": "BE_ExtraSpeedModifier"
                 }
               ]
@@ -2963,7 +3515,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.25) || RETURN",
@@ -2983,7 +3538,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (0.1) || RETURN",
@@ -3055,25 +3613,40 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies(All)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "maxTargets": 10,
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "invertCondition": true
                   },
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTagActive"
                     }
                   ]
@@ -3092,7 +3665,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Topaz_BETargetTagActive",
                   "valuePerStack": {
                     "ShowSpecialMarkOnCreate": {
@@ -3112,7 +3688,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "ShowSpecialMarkOnCreate",
                         "compareType": ">=",
                         "value2": 1,
@@ -3120,11 +3699,20 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         },
                         "invertCondition": true
                       },
@@ -3133,15 +3721,24 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Target",
-                            "target": "Current Action Owner",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           {
                             "name": "AND",
                             "conditionList": [
                               {
                                 "name": "Is Part Of Team",
-                                "target": "Current Action Owner",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Current Action Owner}}"
+                                },
                                 "team": "TeamLight"
                               },
                               {
@@ -3162,7 +3759,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "_isShowSpecialMark",
                         "compareType": "<=",
                         "value2": 0,
@@ -3189,7 +3789,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]"
                 },
                 {
@@ -3204,7 +3807,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_isShowSpecialMark",
                     "compareType": ">=",
                     "value2": 1,
@@ -3233,7 +3839,10 @@ const compositeAbilityObject = {
                     "attackTypes": [
                       "Follow-up"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
@@ -3287,7 +3896,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]"
                     }
                   ]
@@ -3309,12 +3921,21 @@ const compositeAbilityObject = {
                           "Skill",
                           "Ultimate"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Battle Events/Summon)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -3322,7 +3943,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Topaz_BETargetTagHitFlag"
                     }
                   ]
@@ -3334,21 +3958,33 @@ const compositeAbilityObject = {
                     "attackTypes": [
                       "Follow-up"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Topaz_BETargetTagInsertHitFlag"
                         }
                       ]
@@ -3364,7 +4000,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "MDF_PropertyValue4_InsertCriticalDamageAddLayer",
                             "compareType": "<",
                             "value2": {
@@ -3394,7 +4033,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Owner of this Modifier",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "modifier": "Topaz_BETargetTag_CriticalDamageUp[<span class=\"descriptionNumberColor\">Debtor</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue1_InsertCriticalDamageAddRatio": {
@@ -3430,7 +4072,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_isShowSpecialMark",
                     "compareType": ">=",
                     "value2": 1,
@@ -3456,7 +4101,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_isShowSpecialMark",
                     "compareType": ">=",
                     "value2": 1,
@@ -3482,7 +4130,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                   },
                   "passed": [
@@ -3490,11 +4141,20 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       "passed": [
@@ -3507,8 +4167,14 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target",
-                            "target": "Current Action Owner",
-                            "target2": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           "passed": [
                             {
@@ -3535,19 +4201,34 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target",
-                        "target": "Current Action Owner",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Target Count SUM",
-                            "target": "Current Visual Target(All)",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Player's Aim Target List}}"
+                            },
                             "conditions": {
                               "name": "Compare: Target",
-                              "target": "Owner of this Modifier",
-                              "target2": "Use Prior Target(s) Defined"
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
                             }
                           },
                           "passed": [
@@ -3604,15 +4285,24 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "AND",
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "team": "TeamLight"
                           },
                           {
@@ -3631,7 +4321,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "_isShowSpecialMark",
                         "compareType": "<=",
                         "value2": 0,

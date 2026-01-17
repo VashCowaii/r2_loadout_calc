@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -32,7 +35,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Blast (Adjacent)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
@@ -81,7 +87,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Poison"
           },
           "passed": [
@@ -105,7 +114,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Bleed"
           },
           "passed": [
@@ -129,7 +141,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Burn"
           },
           "passed": [
@@ -153,7 +168,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Electric"
           },
           "passed": [
@@ -177,7 +195,10 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Blast (Adjacent)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "searchRandom": true,
       "maxTargets": 2,
       "ifTargetFound": [
@@ -227,7 +248,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Use Prior Target(s) Defined",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
           "baseChance": {
             "operator": "Variables[0] (1) || RETURN",
@@ -309,7 +333,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",
@@ -340,13 +367,19 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Blast (Adjacent)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Targets Adjacent(Blast)}}"
+      },
       "searchRandom": true,
       "maxTargets": 2,
       "ifTargetFound": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Use Prior Target(s) Defined",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -430,7 +463,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
           "baseChance": {
             "operator": "Variables[0] (Arg01) || RETURN",
@@ -525,7 +561,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",

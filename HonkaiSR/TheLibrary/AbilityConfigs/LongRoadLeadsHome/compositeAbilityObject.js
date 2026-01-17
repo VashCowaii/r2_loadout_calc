@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23035_Main"
         }
       ],
@@ -48,7 +51,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_23035_BreakDebuff",
                   "baseChance": {
                     "operator": "Variables[0] (LC_23035_Chance) || RETURN",
@@ -82,7 +88,10 @@ const compositeAbilityObject = {
                   "success": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_23035_Sub[<span class=\"descriptionNumberColor\">Charring</span>]",
                       "duration": {
                         "operator": "Variables[0] (LC_23035_LifeTime) || RETURN",
@@ -160,7 +169,10 @@ const compositeAbilityObject = {
                     "attackTypes": [
                       "Break DMG"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
@@ -182,7 +194,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "MDF_Layer",
                   "modifierName": "LC_23035_BreakDebuff",
@@ -225,7 +240,10 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Living State",
                         "state": "Mask_AliveOrRevivable",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       },
                       "passed": [
@@ -234,7 +252,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Define Custom Variable with Modifier Values",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "scope": "ContextModifier",
                           "valueType": "Layer",
                           "variableName": "Layer_Count",
@@ -242,7 +263,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "LC_23035_BreakDebuff",
                           "addStacksPerTrigger": {
                             "operator": "Constants[0] (1) || Variables[0] (Layer_Count) || SUB || RETURN",
@@ -281,22 +305,34 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "LC_23035_BreakDebuff",
                         "invertCondition": true,
-                        "casterFilter": "Caster"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_23035_BreakDebuff",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
@@ -321,13 +357,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Enemies(All)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Enemy Team All(with Unselectable)}}"
+                      },
                       "modifier": "LC_23035_ListenBreak",
                       "valuePerStack": {
                         "LC_23035_MaxLayer": {
@@ -373,18 +415,30 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies(All)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "LC_23035_BreakDebuff",
                     "invertCondition": true,
-                    "casterFilter": "Caster"
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "LC_23035_BreakDebuff",
                       "stackLimit": {
                         "operator": "Variables[0] (2) || Constants[0] (1) || ADD || RETURN",
@@ -406,7 +460,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Enemies(All)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "modifier": "LC_23035_ListenBreak",
                   "valuePerStack": {
                     "LC_23035_MaxLayer": {

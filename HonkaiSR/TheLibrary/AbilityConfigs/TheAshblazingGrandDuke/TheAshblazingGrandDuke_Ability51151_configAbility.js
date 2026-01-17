@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_115_Main"
     }
   ],
@@ -21,14 +24,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_Layer) || Variables[1] (0.06) || MUL || RETURN",
@@ -75,7 +84,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
                   },
                   "passed": [
@@ -83,7 +95,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                         "compareType": "=",
                         "value2": {
@@ -99,7 +114,10 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -134,7 +152,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -185,13 +206,19 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "valueType": "Layer",
                       "variableName": "Old_Layer",
                       "modifierName": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]",
@@ -211,7 +238,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Relic_115_Sub[<span class=\"descriptionNumberColor\">The Ashblazing Grand Duke</span>]"
                 }
               ]

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_117_Main2"
     }
   ],
@@ -22,7 +25,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Target Receiving DMG",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target TAKING DMG}}"
+                },
                 "value1": "StatusCount",
                 "compareType": ">=",
                 "value2": 1
@@ -53,7 +59,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Relic_117_DamageUp",
               "valuePerStack": {
                 "MDF_PropertyValue": {

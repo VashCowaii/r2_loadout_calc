@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "GlobalAbility_Castorice_Main"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Allied Team(ALL) [Exclude battle mechanics]",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+      },
       "modifier": "GlobalAbility_Castorice_Listen"
     },
     {
@@ -26,39 +32,60 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Allied Team",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Player Team All}}"
+      },
       "searchRandom": true,
       "includeDyingTargets": true,
       "conditions": {
         "name": "Has Modifier",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
       }
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Allied Team(ALL)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Player Team All(with Unselectable)V2}}"
+      },
       "modifier": "GlobalAbility_Castorice_Listen"
     },
     {
       "name": "Find New Target",
-      "from": "Allied Team",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Player Team All}}"
+      },
       "searchRandom": true,
       "includeDyingTargets": true,
       "conditions": {
         "name": "Has Modifier",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
       },
       "ifTargetFound": [
         {
           "name": "Set HP Value",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "setValue": 1
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Use Prior Target(s) Defined",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "modifier": "GlobalAbility_Castorice_DeathTime[<span class=\"descriptionNumberColor\">Mooncocoon</span>]",
           "duration": 2
         }
@@ -66,7 +93,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Allied Team(ALL) [Exclude battle mechanics]",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+      },
       "modifier": "GlobalAbility_Castorice_LimboWakeUpMark"
     }
   ],

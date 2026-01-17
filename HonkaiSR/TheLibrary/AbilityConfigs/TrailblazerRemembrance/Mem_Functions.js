@@ -34,7 +34,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "_maxSP",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
             },
@@ -58,7 +61,10 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Added Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_DamagePercentage",
               "context": "ContextModifier",
               "value": {
@@ -86,7 +92,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Ability Value",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
                 "compareType": "<=",
                 "value2": 0
@@ -94,7 +103,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Added Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_DamagePercentage",
                   "context": "ContextModifier",
                   "value": {

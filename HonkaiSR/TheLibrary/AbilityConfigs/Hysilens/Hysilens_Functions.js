@@ -42,7 +42,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
             "invertCondition": true
           },
@@ -65,7 +68,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
             "invertCondition": true
           },
@@ -88,7 +94,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
             "invertCondition": true
           },
@@ -111,7 +120,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
             "invertCondition": true
           },
@@ -184,7 +196,10 @@ const configAbility = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "ifTargetFound": [
             {
               "name": "Use Custom Character Function",
@@ -236,7 +251,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -275,7 +293,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Tear2[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -316,7 +337,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -364,7 +388,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -395,7 +422,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Electric2[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -428,7 +458,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -468,7 +501,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -499,7 +535,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Burn2[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -532,7 +571,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -572,7 +614,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -603,7 +648,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Poison2[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -636,7 +684,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -727,7 +778,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -766,7 +820,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Tear2[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -807,7 +864,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -855,7 +915,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -886,7 +949,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Electric2[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -919,7 +985,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -959,7 +1028,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -990,7 +1062,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Burn2[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -1023,7 +1098,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -1063,7 +1141,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -1094,7 +1175,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Poison2[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -1127,7 +1211,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",

@@ -20,10 +20,16 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Compare: Target Count SUM",
-                "target": "All Teammates + Unselectable (Excluding Owner)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                },
                 "conditions": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 }
               },
@@ -39,7 +45,10 @@ const configAbility = {
                   "Abundance",
                   "Remembrance"
                 ],
-                "target": "March 7th's Shifu"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Marth 7th's Shifu}}"
+                }
               }
             ]
           },
@@ -54,7 +63,10 @@ const configAbility = {
                   "The Hunt",
                   "Remembrance"
                 ],
-                "target": "March 7th's Shifu"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Marth 7th's Shifu}}"
+                }
               },
               "passed": [
                 {
@@ -68,13 +80,19 @@ const configAbility = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "ReadTargetType",
-                      "target": "March 7th's Shifu"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Marth 7th's Shifu}}"
+                      }
                     },
                     "Damage": {
                       "operator": "Variables[0] (0.2) || RETURN",
@@ -114,7 +132,10 @@ const configAbility = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "EnergyBar_CurEnergy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (parameter[0]_AddValue) || RETURN",
             "displayLines": "parameter[0]_AddValue",
@@ -149,7 +170,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Current Turn Is",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
@@ -162,12 +186,18 @@ const configAbility = {
             {
               "name": "Action Advance/Delay",
               "advanceType": "Set",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": 0
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Mar_7th_10_Enhance",
               "valuePerStack": {
                 "MDF_PropertyRatio": {
@@ -184,7 +214,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Mar_7th_10_Enhance"
             }
           ]

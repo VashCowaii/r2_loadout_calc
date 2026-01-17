@@ -17,7 +17,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Mar_7th_10_Passive"
     },
     {
@@ -36,13 +39,19 @@ const configAbility = {
       "name": "Read Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "EnergyBar_CurEnergy",
-      "on": "Caster"
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      }
     },
     {
       "name": "Adjust Variable Value",
       "adjustmentType": "Overwrite Value",
       "variableName": "EnergyBar_CurEnergy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": 0
     },
     {
@@ -84,7 +93,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Mar_7th_10_Energy[<span class=\"descriptionNumberColor\">Charge</span>]",
       "counter": {
         "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
@@ -155,7 +167,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Mar_7th_10_Enhance"
                   },
                   {
@@ -177,11 +192,17 @@ const configAbility = {
                   },
                   "conditionActive": {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   },
                   "abilityName": "Mar_7th_10_Ready_Special",
-                  "abilitySource": "Caster",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "priorityTag": "PROG_AvatarLowest",
                   "canHitNonTargets": true,
                   "abortFlags": [
@@ -205,13 +226,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Current Turn Is",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "Turn Owner is in Action",
                   {
@@ -228,7 +258,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Mar_7th_10_Enhance"
                   },
                   "passed": [
@@ -241,11 +274,17 @@ const configAbility = {
                       },
                       "conditionActive": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "abilityName": "Mar_7th_10_Ready_Special",
-                      "abilitySource": "Caster",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "priorityTag": "PROG_AvatarLowest",
                       "canHitNonTargets": true,
                       "abortFlags": [
@@ -307,13 +346,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Current Turn Is",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "Turn Owner is in Action",
                   {
@@ -330,7 +378,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Mar_7th_10_Enhance"
                   },
                   "passed": [
@@ -343,11 +394,17 @@ const configAbility = {
                       },
                       "conditionActive": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "abilityName": "Mar_7th_10_Ready_Special",
-                      "abilitySource": "Caster",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "priorityTag": "PROG_AvatarLowest",
                       "canHitNonTargets": true,
                       "abortFlags": [
@@ -377,7 +434,10 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Mar_7th_10_Energy[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "value": {
                     "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
@@ -403,7 +463,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Mar_7th_10_Enhance"
                   },
                   "passed": [
@@ -447,7 +510,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Mar_7th_10_Enhance",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {

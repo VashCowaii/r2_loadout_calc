@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23040_Main"
         }
       ],
@@ -89,7 +92,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster (Memosprite)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "modifier": "LC_23040_Sub[<span class=\"descriptionNumberColor\">Death Flower</span>]",
               "aliveOnly": "False",
               "haloStatus": true,
@@ -120,13 +126,25 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Owner of this Modifier",
-                        "target2": "Current Turn Owner"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Current Turn Owner}}"
+                        }
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "[MEMOSPRITE OF] Owner of this Modifier",
-                        "target2": "Current Turn Owner"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Current Turn Owner}}"
+                        }
                       }
                     ]
                   },
@@ -150,13 +168,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Memosprite"
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use [SUMMONER OF] Prior Target(s) Defined",
-                        "target2": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSummoner]]"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -169,7 +196,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "advanceType": "Advance",
                       "value": "-0.12"
                     },
@@ -204,13 +234,25 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Compare: Target",
-                                "target": "Owner of this Modifier",
-                                "target2": "Use Prior Target(s) Defined"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "target2": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                }
                               },
                               {
                                 "name": "Compare: Target",
-                                "target": "[MEMOSPRITE OF] Owner of this Modifier",
-                                "target2": "Use Prior Target(s) Defined"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                                },
+                                "target2": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                }
                               }
                             ]
                           },
@@ -219,19 +261,34 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Compare: Target",
-                                "target": "Owner of this Modifier",
-                                "target2": "Current Turn Owner"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
+                                "target2": {
+                                  "name": "Target Name",
+                                  "target": "{{Current Turn Owner}}"
+                                }
                               },
                               {
                                 "name": "Compare: Target",
-                                "target": "[MEMOSPRITE OF] Owner of this Modifier",
-                                "target2": "Current Turn Owner"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                                },
+                                "target2": {
+                                  "name": "Target Name",
+                                  "target": "{{Current Turn Owner}}"
+                                }
                               }
                             ]
                           },
                           {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "Ability23040_CD",
                             "compareType": "=",
                             "value2": 0
@@ -241,7 +298,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "LC_23040_Main02[<span class=\"descriptionNumberColor\">Death Flower</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",

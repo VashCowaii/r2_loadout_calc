@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23050_Main",
           "valuePerStack": {
             "MDF_BreakRatioIncrease": {
@@ -84,7 +87,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_23050_Sub[<span class=\"descriptionNumberColor\">Immolation</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -99,17 +105,26 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates + Unselectable (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                      },
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "STAT_TriggerBattleCharacter"
                       },
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "LC_23050_Sub[<span class=\"descriptionNumberColor\">Immolation</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -126,7 +141,10 @@ const compositeAbilityObject = {
                       "noTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Teammates + Unselectable (Excluding Owner) [Sort by Break Effect][Reverse][1]",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[sortByBreakEffect]].[[reverse]].[[index0]]"
+                          },
                           "modifier": "LC_23050_Sub[<span class=\"descriptionNumberColor\">Immolation</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -153,7 +171,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "LC_23050_SubTriggerControl"
                   },
                   "failed": [
@@ -171,7 +192,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_23050_SubTriggerControl"
                     }
                   ]
@@ -194,7 +218,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakMulti</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

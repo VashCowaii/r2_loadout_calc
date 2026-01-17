@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Constance_Trace03"
     }
   ],
@@ -18,20 +21,29 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Owner of this Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
         "conditions": {
           "name": "AND",
           "conditionList": [
             {
               "name": "Has Weakness Preview",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "DamageType": "AllType",
               "weaknessFilter": "All",
               "anyMatchingTarget": true
             },
             {
               "name": "Has Modifier",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Tree03_Property[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
               "invertCondition": true
             }
@@ -66,14 +78,20 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Has Weakness Preview",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "DamageType": "AllType",
               "weaknessFilter": "All",
               "anyMatchingTarget": true
             },
             {
               "name": "Has Element",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "DamageType": {
                 "name": "Damage Type Source",
                 "sourceType": "Fire"
@@ -81,7 +99,10 @@ const configAbility = {
             },
             {
               "name": "Is Entity Type",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "type": "Character"
             }
           ]
@@ -101,7 +122,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -141,7 +165,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Entity Type",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "type": "Battle Event",
                     "invertCondition": true
                   },
@@ -159,7 +186,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -167,7 +197,10 @@ const configAbility = {
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "type": "Character"
                       }
                     ]
@@ -175,14 +208,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Constance_PointB3_AddWeaknessMark",
                       "referenceModifier": "MReference_Empty",
                       "casterAssign": "CasterSelf"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Constance_PointB3_SPAddMark",
                       "referenceModifier": "MReference_Empty"
                     }
@@ -205,35 +244,53 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity Type",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "type": "Battle Event"
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "[CREATOR OF] Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getCreator]]"
+                  },
                   "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "[CREATOR OF] Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getCreator]]"
+                  },
                   "modifier": "Constance_PointB3_SPAddMark"
                 }
               ]
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_PointB3_SPAddMark"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Constance_PointB3_AddWeaknessMark"
             }
           ]
@@ -243,20 +300,32 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "includeDyingTargets": true,
               "conditions": {
                 "name": "AND",
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Constance_PointB3_AddWeaknessMark",
-                    "casterFilter": "Owner of this Modifier"
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Fire"
@@ -264,7 +333,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "type": "Character"
                   }
                 ]
@@ -282,7 +354,10 @@ const configAbility = {
                       20
                     ]
                   },
-                  "attacker": "Owner of this Modifier",
+                  "attacker": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "ignoreAttackerBonuses": true,
                   "canDelay": true,
                   "livingState": "Mask_AliveOrLimbo",
@@ -290,7 +365,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Constance_PointB3_AddWeaknessMark"
                 }
               ]
@@ -302,12 +380,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Constance_PointB3_SPAddMark"
                   },
                   {
                     "name": "Has Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "DamageType": {
                       "name": "Damage Type Source",
                       "sourceType": "Fire"
@@ -315,7 +399,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "type": "Character"
                   }
                 ]
@@ -323,19 +410,28 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_maxSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_curSP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_maxAddSP",
                   "value": {
                     "operator": "Variables[0] (MAX) || Constants[0] (0) || Variables[1] (_maxSP) || Variables[2] (0.5) || MUL || Variables[3] (_curSP) || SUB || PARAM_2 || FUNCTION || RETURN",
@@ -355,7 +451,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_maxAddSP",
                     "compareType": ">=",
                     "value2": {
@@ -371,7 +470,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Owner of this Modifier",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "valuePercent": {
                         "operator": "Variables[0] (0.1) || RETURN",
                         "displayLines": "0.1",
@@ -386,7 +488,10 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Update Energy",
-                      "on": "Owner of this Modifier",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (_maxAddSP) || RETURN",
                         "displayLines": "_maxAddSP",
@@ -401,7 +506,10 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Constance_PointB3_SPAddMark"
                 }
               ]
@@ -413,43 +521,64 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Constance_PointB3_AddWeaknessMark",
               "removeToBeAdded": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_PointB3_SPAddMark"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable + Battle Events)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+              },
               "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity Type",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "type": "Battle Event"
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "[CREATOR OF] Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getCreator]]"
+                  },
                   "modifier": "Constance_PointB3_SPAddMark"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "[CREATOR OF] Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getCreator]]"
+                  },
                   "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
                 }
               ]
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
             }
           ]
@@ -459,37 +588,55 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_PointB3_SPAddMark"
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Is Entity Type",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "type": "Battle Event"
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "[CREATOR OF] Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getCreator]]"
+                  },
                   "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "[CREATOR OF] Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getCreator]]"
+                  },
                   "modifier": "Constance_PointB3_SPAddMark"
                 }
               ]
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Constance_PointB3_AddWeaknessMark"
             }
           ]
@@ -499,7 +646,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "_M_Constance_Tree03_AddWeaknessListener_DuringAttack"
             }
           ],
@@ -510,12 +660,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Constance_PointB3_AddWeaknessMark"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_PointB3_SPAddMark"
             }
           ]
@@ -530,7 +686,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Entity Type",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "type": "Battle Event",
                     "invertCondition": true
                   },
@@ -543,7 +702,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Constance_Tree03_Property[<span class=\"descriptionNumberColor\">Outgrow the Old, Espouse the New</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -578,21 +740,30 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable + Battle Events)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+          },
           "modifier": "_M_Constance_Tree03_AddWeaknessListener",
           "haloStatus": true,
           "includeBattleEvent": true
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable + Battle Events)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+          },
           "modifier": "_M_Constance_Tree03_StancePreShow",
           "haloStatus": true,
           "includeBattleEvent": true
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "_M_Constance_Tree03_SpdPreShow",
           "haloStatus": true,
           "includeBattleEvent": true

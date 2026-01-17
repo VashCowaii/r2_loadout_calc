@@ -20,7 +20,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Enemies (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
@@ -60,12 +63,18 @@ const configAbility = {
       "Event": [
         {
           "name": "Find New Target",
-          "from": "All Enemies (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "value1": "CurrentHP",
             "compareType": ">",
             "value2": 0
@@ -73,7 +82,10 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
@@ -102,14 +114,20 @@ const configAbility = {
           "noTargetFound": [
             {
               "name": "Find New Target",
-              "from": "All Enemies (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "maxTargets": 1,
               "ifTargetFound": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
@@ -142,12 +160,18 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "All Enemies (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Compare: Variable",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "value1": "CurrentHP",
         "compareType": ">",
         "value2": 0
@@ -155,7 +179,10 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Use Prior Target(s) Defined",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -185,14 +212,20 @@ const configAbility = {
       "noTargetFound": [
         {
           "name": "Find New Target",
-          "from": "All Enemies (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "maxTargets": 1,
           "ifTargetFound": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Wind",
@@ -225,7 +258,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Saber_Wind_Ability03_buff"
     },
     "Trigger: Skip Death Handling",

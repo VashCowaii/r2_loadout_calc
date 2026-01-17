@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Yanqing_Tree01",
       "valuePerStack": {
         "MDF_DamageRatio": {
@@ -32,13 +35,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Skill Point Entity",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Skill Point User}}"
+                },
                 "DamageType": "Ice"
               },
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Skill Point Entity",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Skill Point User}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",

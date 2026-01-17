@@ -16,17 +16,26 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Dr_Ratio_Insert_Flag_Caster"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Enemies(All)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All(with Unselectable)}}"
+      },
       "modifier": "Dr_Ratio_Insert_Flag"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Enemies(All)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All(with Unselectable)}}"
+      },
       "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]"
     },
     {
@@ -38,7 +47,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
           "valuePerStack": {
             "MDF_Ability03_InsertMaxCount": {
@@ -56,7 +68,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Dr_Ratio_Ability03_TheFool[<span class=\"descriptionNumberColor\">Wiseman's Folly</span>]",
           "valuePerStack": {
             "MDF_Ability03_InsertMaxCount": {
@@ -73,7 +88,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",

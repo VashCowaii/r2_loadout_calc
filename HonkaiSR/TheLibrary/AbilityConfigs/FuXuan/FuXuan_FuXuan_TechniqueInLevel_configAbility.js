@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_FuXuan_Modifier"
     }
   ],
@@ -45,7 +48,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "FuXuan_ListenLifeTime[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -68,7 +74,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Teammates + Unselectable (Excluding Owner)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                  },
                   "modifier": "FuXuan_HitDamageSplit[<span class=\"descriptionNumberColor\">Matrix of Prescience</span>]",
                   "valuePerStack": {
                     "MDF_SplitPercentage": {
@@ -106,7 +115,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "modifier": "FuXuan_Tree02[<span class=\"descriptionNumberColor\">Liuren, the Sexagenary</span>]"
                     }
                   ]

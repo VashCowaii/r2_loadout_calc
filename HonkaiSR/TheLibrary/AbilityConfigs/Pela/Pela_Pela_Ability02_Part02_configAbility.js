@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Dispel Debuffs",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "typeOverride": "Buff",
       "dispelCount": {
         "operator": "Variables[0] (1) || RETURN",
@@ -28,7 +31,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Pela_AbilityEidolon4_IceResistanceDown[<span class=\"descriptionNumberColor\">Ice RES Reduction</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -61,7 +67,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",
@@ -104,7 +113,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Pela_Trace03_DamageAddedRatio[<span class=\"descriptionNumberColor\">Wipe Out</span>]",
               "valuePerStack": {
                 "MDF_Pela_Trace03_DamageAddedRatio": {
@@ -139,7 +151,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Pela_AbilityEidolon2_AddSpeedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",

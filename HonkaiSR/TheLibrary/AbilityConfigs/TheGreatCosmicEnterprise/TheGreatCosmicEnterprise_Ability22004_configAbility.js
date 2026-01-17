@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_22004_Main"
     }
   ],
@@ -20,8 +23,14 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Weakness Count",
-              "target": "Use Prior Target(s) Defined",
-              "target2": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "target2": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variable": "_WeakCount",
               "context": "ContextModifier",
               "weaknessFilter": "All"
@@ -30,7 +39,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "_WeakCount",
                 "compareType": ">",
                 "value2": 7,

@@ -19,12 +19,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sparkle_PassiveAbility_Listen"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Sparkle_AbilityPreshow"
     },
     {
@@ -121,12 +127,18 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Memosprite"
                   }
                 ]
@@ -134,7 +146,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(No Memosprite)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}.[[removeMemosprite]]"
+                  },
                   "searchRandom": true,
                   "maxTargets": 4,
                   "conditions": {
@@ -142,7 +157,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -150,7 +168,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Sparkle_PointB3_Mark",
                         "invertCondition": true
                       }
@@ -174,7 +195,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Sparkle_PointB3_Mark"
                     }
                   ]
@@ -190,7 +214,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -224,7 +251,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Allied Team",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
                           "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -258,7 +288,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Allied Team",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Player Team All}}"
+                              },
                               "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
@@ -323,7 +356,10 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   }
                 ]
@@ -331,7 +367,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "Sparkle_PassiveAbility_AllDamageAddedRatio02[<span class=\"descriptionNumberColor\">Red Herring</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",
@@ -403,7 +442,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(No Memosprite)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}.[[removeMemosprite]]"
+                  },
                   "searchRandom": true,
                   "maxTargets": 4,
                   "conditions": {
@@ -411,7 +453,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -419,7 +464,10 @@ const configAbility = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Sparkle_PointB3_Mark",
                         "invertCondition": true
                       }
@@ -443,7 +491,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Sparkle_PointB3_Mark"
                     }
                   ]
@@ -459,7 +510,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -493,7 +547,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Allied Team",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
                           "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -527,7 +584,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Allied Team",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Player Team All}}"
+                              },
                               "modifier": "Sparkle_Tree03[<span class=\"descriptionNumberColor\">Nocturne</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
@@ -571,14 +631,23 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Current Visual Target(All)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player's Aim Target List}}"
+        },
         "skillType": [
           "Skill"
         ],
         "conditions": {
           "name": "Is Part Of",
-          "of": "Owner of this Modifier",
-          "target": "Use Prior Target(s) Defined",
+          "of": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "mustBeAlive2": true,
           "invertCondition": true
         },

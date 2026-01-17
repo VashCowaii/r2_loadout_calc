@@ -10,7 +10,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -19,13 +22,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Target Exists",
-        "target": "BattleEvent60021",
+        "target": {
+          "name": "Target Name",
+          "target": "{{BattleEvent60021}}"
+        },
         "living": true
       },
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "BattleEvent60021",
+          "to": {
+            "name": "Target Name",
+            "target": "{{BattleEvent60021}}"
+          },
           "modifier": "MissionBattleEvent60021_TriggerBEAbility"
         }
       ]

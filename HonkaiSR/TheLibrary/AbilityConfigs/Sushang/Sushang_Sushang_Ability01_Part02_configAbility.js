@@ -11,7 +11,10 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Sushang_UltraBonus[<span class=\"descriptionNumberColor\">Dawn Herald</span>]"
           }
         ]
@@ -19,7 +22,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Physical",
@@ -50,12 +56,18 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Find New Target",
-      "from": "All Hostile Entities (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Has Flag",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "flagName": "Break"
       },
       "ifTargetFound": [
@@ -69,7 +81,10 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "ReduceActionDelay",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variables": {
                 "parameter[0]_NormalizedValue": {
                   "operator": "Variables[0] (0.15) || RETURN",

@@ -18,7 +18,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_Trace03"
         }
       ]
@@ -65,7 +68,10 @@ const configAbility = {
       "Event": [
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -95,7 +101,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
@@ -124,7 +133,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Heal",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.25) || RETURN",
         "displayLines": "0.25",
@@ -144,7 +156,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (15) || RETURN",
             "displayLines": "15",
@@ -159,7 +174,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Ren_Qi[<span class=\"descriptionNumberColor\">Charge</span>]"
     },
     {
@@ -187,7 +205,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Ren_Trace03"
         }
       ]

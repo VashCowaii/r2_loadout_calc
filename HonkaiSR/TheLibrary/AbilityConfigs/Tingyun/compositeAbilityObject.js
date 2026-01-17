@@ -22,7 +22,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tingyun_Tree03"
         }
       ],
@@ -36,7 +39,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -71,7 +77,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "TingYun_ByIsTingYun"
         },
         {
@@ -83,7 +92,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Ability02PreShowModifier"
             }
           ]
@@ -106,7 +118,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Skill"
             ],
@@ -114,7 +129,10 @@ const compositeAbilityObject = {
               "name": "NOT",
               "condition": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]"
               }
             },
@@ -134,7 +152,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "UI Display Event (On Entity)",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "popUpText": "Energy Regeneration"
         },
         {
@@ -146,7 +167,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Single Target (Primary)",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "value": {
                 "operator": "Variables[0] (50) || Variables[1] (10) || ADD || RETURN",
                 "displayLines": "(50 + 10)",
@@ -163,7 +187,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Update Energy",
-              "on": "Single Target (Primary)",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "value": {
                 "operator": "Variables[0] (50) || RETURN",
                 "displayLines": "50",
@@ -179,7 +206,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "TingYun_Ability03DamageUp[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -203,7 +233,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -221,7 +254,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",
@@ -266,7 +302,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "TingYun_Ability03_Part02",
           "isTrigger": true
         }
@@ -299,7 +338,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
               "duration": 1,
               "valuePerStack": {
@@ -317,13 +359,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "MDF_Target_CurrentAttack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "MDF_Tingyun_Attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
         },
@@ -399,16 +447,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": [
-            {
-              "name": "Target List",
-              "target": "All Team Members(In Context)"
-            },
-            {
-              "name": "Target List",
-              "target": "All Untargetable"
-            }
-          ],
+          "to": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
+              {
+                "name": "Target Name",
+                "target": "{{All Unselectable Targets}}"
+              }
+            ]
+          },
           "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
         },
         {
@@ -425,7 +476,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -459,7 +513,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -493,58 +550,70 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": [
-            {
-              "name": "Target List",
-              "target": "All Team Members(In Context)"
-            },
-            {
-              "name": "Target List",
-              "target": "All Untargetable"
-            }
-          ],
+          "to": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
+              {
+                "name": "Target Name",
+                "target": "{{All Unselectable Targets}}"
+              }
+            ]
+          },
           "modifier": "TingYun_Passive_LeiLing"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": [
-            {
-              "name": "Target List",
-              "target": "All Team Members(In Context)"
-            },
-            {
-              "name": "Target List",
-              "target": "All Untargetable"
-            }
-          ],
+          "to": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
+              {
+                "name": "Target Name",
+                "target": "{{All Unselectable Targets}}"
+              }
+            ]
+          },
           "modifier": "TingYun_Passive_LeiLing_Eidolon1"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": [
-            {
-              "name": "Target List",
-              "target": "All Team Members(In Context)"
-            },
-            {
-              "name": "Target List",
-              "target": "All Untargetable"
-            }
-          ],
+          "to": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
+              {
+                "name": "Target Name",
+                "target": "{{All Unselectable Targets}}"
+              }
+            ]
+          },
           "modifier": "TingYun_Passive_LeiLing_Eidolon2"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": [
-            {
-              "name": "Target List",
-              "target": "All Team Members(In Context)"
-            },
-            {
-              "name": "Target List",
-              "target": "All Untargetable"
-            }
-          ],
+          "to": {
+            "name": "Join Targets",
+            "TargetList": [
+              {
+                "name": "Target Name",
+                "target": "{{All Team Members}}"
+              },
+              {
+                "name": "Target Name",
+                "target": "{{All Unselectable Targets}}"
+              }
+            ]
+          },
           "modifier": "TingYun_Passive_LeiLing_Eidolon4"
         },
         {
@@ -556,7 +625,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "TingYun_Passive_LeiLing_Eidolon4",
               "valuePerStack": {
                 "MDF_Passive_DamagePercentage": {
@@ -621,7 +693,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "modifier": "TingYun_Passive_LeiLing_Eidolon2",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
@@ -678,7 +753,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "TingYun_Passive_LeiLing_Eidolon1",
                       "valuePerStack": {
                         "MDF_Passive_DamagePercentage": {
@@ -720,7 +798,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "TingYun_Passive_LeiLing",
                       "valuePerStack": {
                         "MDF_Passive_DamagePercentage": {
@@ -773,7 +854,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -801,7 +885,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "TingYun_Ability02_Part02",
           "isTrigger": true
         },
@@ -809,7 +896,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           },
           "passed": [
             "Deleted bullshit"
@@ -829,12 +919,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tingyun_Ability01_Trace_B2"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -861,7 +957,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Thunder",
@@ -889,7 +988,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tingyun_Ability01_Trace_B2"
         },
         "Trigger: Ability End"
@@ -948,7 +1050,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "TingYun_Ability01_Part02",
           "isTrigger": true
         }
@@ -983,7 +1088,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (Tingyun_SpeedUP_Ratio) || RETURN",
@@ -1020,7 +1128,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_Rank01_SpeedUp_01) || RETURN",
@@ -1056,18 +1167,27 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "valueType": "LifeTime",
                       "variableName": "TingYun_EnergyBarLayer",
                       "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
@@ -1132,23 +1252,35 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark"
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
                       },
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Modifier Values",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "valueType": "LifeTime",
                           "variableName": "TingYun_EnergyBarLayer",
                           "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
@@ -1208,18 +1340,27 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "valueType": "LifeTime",
                       "variableName": "TingYun_EnergyBarLayer",
                       "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
@@ -1277,18 +1418,27 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "valueType": "LifeTime",
                       "variableName": "TingYun_EnergyBarLayer",
                       "modifierName": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
@@ -1357,7 +1507,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
                 }
               ]
@@ -1367,7 +1520,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Tingyun_Eidolon2_CD"
                 }
               ]
@@ -1377,7 +1533,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
@@ -1397,13 +1556,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Tingyun_Eidolon2_CD"
                   },
                   "failed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
                         "displayLines": "MDF_Rank02_SPAdd",
@@ -1416,7 +1581,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Tingyun_Eidolon2_CD"
                     }
                   ]
@@ -1428,13 +1596,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -1461,20 +1635,29 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "TingYun_PassiveFlag"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "TingYun_PassiveATK_Flag"
                   },
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Action Target List",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Current Action Target List}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -1493,7 +1676,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "TingYun_PassiveATK_Flag"
                     }
                   ]
@@ -1514,7 +1700,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Current Action Owner",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
                         "modifier": "TingYun_ByIsTingYun"
                       }
                     ]
@@ -1522,7 +1711,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "TingYun_PassiveATK_Flag"
                     }
                   ]
@@ -1541,7 +1733,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": 1,
                       "valuePerStack": {
@@ -1582,7 +1777,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
                 }
               ]
@@ -1592,7 +1790,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Tingyun_Eidolon2_CD"
                 }
               ]
@@ -1602,7 +1803,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
@@ -1622,13 +1826,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Tingyun_Eidolon2_CD"
                   },
                   "failed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (MDF_Rank02_SPAdd) || RETURN",
                         "displayLines": "MDF_Rank02_SPAdd",
@@ -1641,7 +1851,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Tingyun_Eidolon2_CD"
                     }
                   ]
@@ -1653,13 +1866,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -1685,20 +1904,29 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "TingYun_PassiveFlag"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "TingYun_PassiveATK_Flag"
                   },
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Action Target List",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Current Action Target List}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -1717,7 +1945,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "TingYun_PassiveATK_Flag"
                     }
                   ]
@@ -1738,7 +1969,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Current Action Owner",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
                         "modifier": "TingYun_ByIsTingYun"
                       }
                     ]
@@ -1746,7 +1980,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "TingYun_PassiveATK_Flag"
                     }
                   ]
@@ -1765,7 +2002,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": 1,
                       "valuePerStack": {
@@ -1805,7 +2045,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
                 }
               ]
@@ -1815,7 +2058,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
@@ -1833,13 +2079,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -1865,20 +2117,29 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "TingYun_PassiveFlag"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "TingYun_PassiveATK_Flag"
                   },
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Action Target List",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Current Action Target List}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -1897,7 +2158,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "TingYun_PassiveATK_Flag"
                     }
                   ]
@@ -1918,7 +2182,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Current Action Owner",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
                         "modifier": "TingYun_ByIsTingYun"
                       }
                     ]
@@ -1926,7 +2193,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "TingYun_PassiveATK_Flag"
                     }
                   ]
@@ -1945,7 +2215,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "duration": 1,
                       "valuePerStack": {
@@ -1984,7 +2257,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
                 }
               ]
@@ -1994,7 +2270,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_AttackDelta) || RETURN",
@@ -2012,13 +2291,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -2044,20 +2329,29 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "TingYun_PassiveFlag"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "TingYun_PassiveATK_Flag"
                   },
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Action Target List",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Current Action Target List}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Thunder",
@@ -2076,7 +2370,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "TingYun_PassiveATK_Flag"
                     }
                   ]
@@ -2097,7 +2394,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Current Action Owner",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Action Owner}}"
+                        },
                         "modifier": "TingYun_ByIsTingYun"
                       }
                     ]
@@ -2105,7 +2405,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "TingYun_PassiveATK_Flag"
                     }
                   ]
@@ -2126,7 +2429,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Ultimate"
             ],
@@ -2134,7 +2440,10 @@ const compositeAbilityObject = {
               "name": "NOT",
               "condition": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Tingyun_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
               }
             },
@@ -2153,22 +2462,34 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "TingYun_Passive_LeiLing"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "TingYun_Passive_LeiLing_Eidolon1"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "TingYun_Passive_LeiLing_Eidolon2"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "TingYun_Passive_LeiLing_Eidolon4"
                 },
                 {
@@ -2193,7 +2514,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Tingyun_Eidolon1_Ability03PreShowModifier"
                 }
               ]
@@ -2216,7 +2540,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Tingyun_Eidolon1_Ability03PreShowModifier"
                     }
                   ]
@@ -2241,7 +2568,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "MWTingYun_BPAbility_AttackDelta_LifeTimeChangeMark",
                           "referenceModifier": "MReference_Empty"
                         }

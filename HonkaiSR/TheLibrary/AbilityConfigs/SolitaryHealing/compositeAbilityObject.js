@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_24003_Main"
         }
       ],
@@ -45,7 +48,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageDOT</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.24) || RETURN",
@@ -78,33 +84,51 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
                         "name": "Target Exists",
-                        "target": "Use Secondary Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        }
                       },
                       {
                         "name": "NOT",
                         "condition": {
                           "name": "Is Part Of Team",
-                          "target": "Use Secondary Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target 2}}"
+                          },
                           "team": "TeamDark"
                         }
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "STAT_DOT",
-                        "casterFilter": "Owner of this Modifier"
+                        "casterFilter": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (4) || RETURN",
                         "displayLines": "4",
@@ -131,7 +155,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_24003_DotDamageAddedRatio[<span class=\"descriptionNumberColor\">DoT Boost</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",

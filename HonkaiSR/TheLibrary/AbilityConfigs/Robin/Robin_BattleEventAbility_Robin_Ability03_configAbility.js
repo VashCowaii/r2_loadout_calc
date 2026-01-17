@@ -7,18 +7,30 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Robin_PassiveAbility01_BattleEvent"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Robin_PassiveAbility01_BattleEvent_BaseSpeed"
     },
     {
       "name": "Block Advance/Delay Effects",
-      "on": "Caster",
-      "whitelist": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "whitelist": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "whitelistTag": "Mask_TurnBasedAdvance"
     }
   ],
@@ -32,7 +44,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (BattleEvent_Geji_BaseSpeed) || RETURN",

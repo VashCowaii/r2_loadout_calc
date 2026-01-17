@@ -17,7 +17,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "PlayerBoy_20_Ability02_Part02",
       "isTrigger": true
     }

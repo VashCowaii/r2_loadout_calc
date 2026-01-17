@@ -23,7 +23,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "modifier": "Cerydra_Ability02_Target",
         "invertCondition": true,
         "justAddedOrActive": true
@@ -33,13 +36,19 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Current Action Holder Is",
-            "target": "Single Target (Primary)"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            }
           }
         },
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Cerydra_Ability02_Others_Part02"
         }
       ],
@@ -48,7 +57,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
           },
           "passed": [
@@ -72,15 +84,24 @@ const configAbility = {
                 "Deleted bullshit",
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "ability": "Cerydra_Ability02_Others_Part02"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Single Target (Primary)",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target(ST)}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   }
                 }
@@ -135,7 +156,10 @@ const configAbility = {
                 },
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "ability": "Cerydra_Ability02_Others_Part02"
                 }
               ]
@@ -146,21 +170,30 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Cerydra_Ability02_Target_Lv2[<span class=\"descriptionNumberColor\">Peerage</span>]"
               },
               "passed": [
                 "Deleted bullshit",
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "ability": "Cerydra_Ability02_Others_Part02"
                 }
               ],
               "failed": [
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "ability": "Cerydra_Ability02_Others_Part02"
                 }
               ]

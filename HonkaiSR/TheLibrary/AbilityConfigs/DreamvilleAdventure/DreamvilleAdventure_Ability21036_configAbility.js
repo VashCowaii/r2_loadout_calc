@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21036_Main"
     }
   ],
@@ -128,46 +131,55 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "Allied Team"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "Allied Team"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "Allied Team"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]",
               "onlyRemoveOwnersInstance": true
             }
@@ -178,17 +190,26 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]"
             },
             {
@@ -200,7 +221,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "LC_21036_Sub_Normal[<span class=\"descriptionNumberColor\">Childishness</span>]"
                 }
               ]
@@ -214,7 +238,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "LC_21036_Sub_Ability[<span class=\"descriptionNumberColor\">Childishness</span>]"
                 }
               ]
@@ -228,7 +255,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "LC_21036_Sub_Ultra[<span class=\"descriptionNumberColor\">Childishness</span>]"
                 }
               ]

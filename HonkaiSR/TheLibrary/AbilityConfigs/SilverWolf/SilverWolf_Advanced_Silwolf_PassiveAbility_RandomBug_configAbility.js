@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]"
       },
       "passed": [
@@ -16,7 +19,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
           },
           "passed": [
@@ -24,7 +30,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
               },
               "passed": [
@@ -38,7 +47,10 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -69,7 +81,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -100,7 +115,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -135,7 +153,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -172,13 +193,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -218,7 +245,10 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -249,7 +279,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -290,7 +323,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]"
           },
           "passed": [
@@ -298,13 +334,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                   "duration": {
                     "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -344,7 +386,10 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -375,7 +420,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -414,7 +462,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]"
               },
               "passed": [
@@ -427,7 +478,10 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -458,7 +512,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -501,7 +558,10 @@ const configAbility = {
                   "execute": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug1[<span class=\"descriptionNumberColor\">Type-1 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -532,7 +592,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug2[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",
@@ -563,7 +626,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Single Target (Primary)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "modifier": "Advanced_Silwolf_Normal_Bug3[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
                       "duration": {
                         "operator": "Variables[0] (MDF_Silwolf_00_AddModifier_LifeTime) || RETURN",

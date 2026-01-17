@@ -27,26 +27,38 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "_SP_R",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyRegenRateSUM</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "_MaxSP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "_C_SP",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
         },
         {
           "name": "Update UI Preview",
           "show": "Show",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "previewType": "Energy Gain",
           "previewValue": {
             "operator": "Variables[0] (8) || Variables[1] (DV_SurgePointShow) || MUL || Constants[0] (30) || Variables[2] (_SP_R) || MUL || ADD || RETURN",
@@ -100,7 +112,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
                   }
                 ]
@@ -115,8 +130,14 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Caster",
-                    "target2": "Current Turn Owner"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Current Turn Owner}}"
+                    }
                   },
                   "passed": [
                     {
@@ -129,17 +150,26 @@ const configAbility = {
                 {
                   "name": "Action Advance/Delay",
                   "advanceType": "Set",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": 0
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Ability03_CD[<span class=\"descriptionNumberColor\">Mana Burst</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Saber_Ability03_CD_02"
                 }
               ]
@@ -159,7 +189,10 @@ const configAbility = {
               },
               {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Saber_Wind_Ability03_buff"
               },
               {
@@ -185,7 +218,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Update Ability Enhance Button",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "display": "Hide",
               "abilityName": "Skill"
             }
@@ -193,7 +229,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Update Ability Enhance Button",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "display": "Show",
               "abilityName": "Skill"
             }

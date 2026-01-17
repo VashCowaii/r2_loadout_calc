@@ -14,7 +14,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21029_Main"
         }
       ],
@@ -30,7 +33,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Flag_21029",
                     "compareType": "=",
                     "value2": 1,
@@ -39,20 +45,29 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Ability Target List",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Attack Targets of Modifier Holder}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": {
                               "name": "Custom Damage Type",
                               "initialTypePreRead": "Physical",
                               "sourceType": "ReadTargetType",
-                              "readTarget": "Caster"
+                              "readTarget": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              }
                             },
                             "Damage": {
                               "operator": "Variables[0] (0.48) || RETURN",
@@ -95,7 +110,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "Flag_21029",
                       "value": 1
@@ -104,7 +122,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "Flag_21029"
                     }
@@ -117,7 +138,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Flag_21029"
                 }

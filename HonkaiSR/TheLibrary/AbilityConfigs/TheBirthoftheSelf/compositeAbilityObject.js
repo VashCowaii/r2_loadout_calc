@@ -14,7 +14,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21006_Main"
         }
       ],
@@ -39,7 +42,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Target Receiving DMG",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target TAKING DMG}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": "<=",
                         "value2": {

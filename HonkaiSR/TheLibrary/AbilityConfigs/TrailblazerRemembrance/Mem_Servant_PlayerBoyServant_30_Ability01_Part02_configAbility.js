@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Added Value",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "CurEnergy",
           "value": {
             "operator": "Variables[0] (0.05) || Constants[0] (100) || MUL || RETURN",
@@ -54,11 +57,17 @@ const configAbility = {
         {
           "name": "Use Custom Character Function",
           "functionName": "Bounce_SelectTarget",
-          "target": "Target Group",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target Group}}"
+          },
           "paramSequence": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -89,7 +98,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Target Group",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target Group}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",

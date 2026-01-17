@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Thunder",
@@ -34,7 +37,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackLimit": {
         "operator": "Variables[0] (10) || RETURN",
@@ -126,7 +132,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster's own Created Battle Event/Summon",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Self-Made Battle-Events}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCountShowText",
       "valuePerStack": {
         "ATKCount": {
@@ -141,7 +150,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster's own Created Battle Event/Summon",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Self-Made Battle-Events}}"
+      },
       "modifier": "JingYuan_BattleEvent_SpeedUp",
       "stackLimit": {
         "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",

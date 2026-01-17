@@ -36,7 +36,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_Eidolon4"
         }
       ],
@@ -50,7 +53,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -77,7 +83,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_Eidolon2"
         }
       ],
@@ -94,16 +103,25 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)(ALL) [Exclude Owner]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE, with Unselectables)}} - {{Modifier Holder}}"
+                  },
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
                     }
                   ]
@@ -132,24 +150,36 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Mar_7th_10_Eidolon2_CD[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -158,7 +188,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Hostile Entities (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
@@ -170,8 +203,14 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Mar_7th_10_Eidolon2_Insert_SelectTarget",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -185,7 +224,10 @@ const compositeAbilityObject = {
                       "noTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "M_Mar_7th_10_InsertCheck"
                         }
                       ]
@@ -204,7 +246,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                       },
                       {
@@ -222,7 +267,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "team": "TeamDark"
                       }
                     ]
@@ -237,7 +285,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "compareType": "=",
                         "value2": 1,
                         "livingTargets": true
@@ -245,14 +296,20 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target's Ability Targets}}"
+                          },
                           "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)(ALL)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                          },
                           "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
                         }
                       ]
@@ -285,7 +342,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_Trace03"
         }
       ],
@@ -300,7 +360,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -329,7 +392,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -366,7 +432,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Mar_7th_10_Enhance"
                       }
                     ]
@@ -404,23 +473,35 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Teammates + Unselectable (Excluding Owner)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                         }
                       },
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "March 7th's Shifu",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Marth 7th's Shifu}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Mar_7th_10_PointB3_Kill_Property[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
                               "duration": {
                                 "operator": "Variables[0] (2) || RETURN",
@@ -443,7 +524,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "Mar_7th_10_PointB3_Break_Property[<span class=\"descriptionNumberColor\">Tide Tamer</span>]",
                               "duration": {
                                 "operator": "Variables[0] (2) || RETURN",
@@ -486,7 +570,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_Trace02"
         }
       ],
@@ -506,22 +593,40 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target Count SUM",
-                        "target": "All Teammates + Unselectable (Excluding Owner)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                        },
                         "conditions": {
                           "name": "Has Modifier",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                         }
                       },
                       {
                         "name": "Is Weak to Attacker",
-                        "weakTo": "March 7th's Shifu",
-                        "target": "Use Prior Target(s) Defined"
+                        "weakTo": {
+                          "name": "Target Name",
+                          "target": "{{Marth 7th's Shifu}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Is Weak to Attacker",
-                        "weakTo": "Caster",
-                        "target": "Use Prior Target(s) Defined",
+                        "weakTo": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -529,7 +634,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Flags to Modifier",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "flagName": [
                         "ForceStanceDamage"
                       ],
@@ -554,7 +662,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Flags from Modifier",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": [
                     "ForceStanceDamage"
                   ],
@@ -581,10 +692,16 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Teammates + Unselectable (Excluding Owner)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     },
                     "invertCondition": true
@@ -606,7 +723,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_Trace01"
         }
       ],
@@ -629,7 +749,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "advanceType": "Set",
                       "value": "(0 - 0.25)"
                     }
@@ -653,7 +776,10 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_TechniqueEnergy"
         }
       ],
@@ -715,7 +841,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_TechniqueInLevel"
         }
       ],
@@ -738,7 +867,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (30) || RETURN",
                         "displayLines": "30",
@@ -798,7 +930,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_Passive"
         },
         {
@@ -817,13 +952,19 @@ const compositeAbilityObject = {
           "name": "Read Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "EnergyBar_CurEnergy",
-          "on": "Caster"
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
         },
         {
           "name": "Adjust Variable Value",
           "adjustmentType": "Overwrite Value",
           "variableName": "EnergyBar_CurEnergy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": 0
         },
         {
@@ -865,7 +1006,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_Energy[<span class=\"descriptionNumberColor\">Charge</span>]",
           "counter": {
             "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
@@ -936,7 +1080,10 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Mar_7th_10_Enhance"
                       },
                       {
@@ -958,11 +1105,17 @@ const compositeAbilityObject = {
                       },
                       "conditionActive": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       "abilityName": "Mar_7th_10_Ready_Special",
-                      "abilitySource": "Caster",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "priorityTag": "PROG_AvatarLowest",
                       "canHitNonTargets": true,
                       "abortFlags": [
@@ -986,13 +1139,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Current Turn Is",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "Turn Owner is in Action",
                       {
@@ -1009,7 +1171,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Mar_7th_10_Enhance"
                       },
                       "passed": [
@@ -1022,11 +1187,17 @@ const compositeAbilityObject = {
                           },
                           "conditionActive": {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "includeNonTargets": true
                           },
                           "abilityName": "Mar_7th_10_Ready_Special",
-                          "abilitySource": "Caster",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "priorityTag": "PROG_AvatarLowest",
                           "canHitNonTargets": true,
                           "abortFlags": [
@@ -1088,13 +1259,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Current Turn Is",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "Turn Owner is in Action",
                       {
@@ -1111,7 +1291,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Mar_7th_10_Enhance"
                       },
                       "passed": [
@@ -1124,11 +1307,17 @@ const compositeAbilityObject = {
                           },
                           "conditionActive": {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "includeNonTargets": true
                           },
                           "abilityName": "Mar_7th_10_Ready_Special",
-                          "abilitySource": "Caster",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "priorityTag": "PROG_AvatarLowest",
                           "canHitNonTargets": true,
                           "abortFlags": [
@@ -1158,7 +1347,10 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Define Modifier Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "Mar_7th_10_Energy[<span class=\"descriptionNumberColor\">Charge</span>]",
                       "value": {
                         "operator": "Variables[0] (EnergyBar_CurEnergy) || RETURN",
@@ -1184,7 +1376,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Mar_7th_10_Enhance"
                       },
                       "passed": [
@@ -1228,7 +1423,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Mar_7th_10_Enhance",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -1259,7 +1457,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -1286,7 +1487,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_Ability03_Enhance_Normal[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]",
           "valuePerStack": {
             "MDF_Value": {
@@ -1407,7 +1611,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Mar_7th_10_Enhance"
                   }
                 }
@@ -1427,7 +1634,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "Mar_7th_10_Enhance"
                       },
                       {
@@ -1511,7 +1721,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Mar_7th_10_Ability03_Part02",
           "isTrigger": true
         }
@@ -1554,19 +1767,28 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_Mar_7th_10_AchievementFlag"
             }
           ]
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Mar_7th_10_Ability02_Master_SpeedUp[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
           "valuePerStack": {
             "MDF_PropertyRatio": {
@@ -1581,7 +1803,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1591,17 +1816,26 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_AbilityPreShowModifier_Self"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_AbilityPreShowModifier_Target"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_SpecialMark_Adder"
         }
       ],
@@ -1645,19 +1879,34 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Current Turn Owner",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Turn Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       "passed": [
@@ -1731,19 +1980,34 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Current Turn Owner",
-                    "target2": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Turn Owner}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count SUM",
-                        "target": "Current Visual Target(All)",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player's Aim Target List}}"
+                        },
                         "conditions": {
                           "name": "Compare: Target",
-                          "target": "Owner of this Modifier",
-                          "target2": "Use Prior Target(s) Defined"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "target2": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
                         }
                       },
                       "passed": [
@@ -1789,8 +2053,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "All Teammates + Unselectable (Excluding Owner)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   "passed": [
@@ -1804,12 +2074,18 @@ const compositeAbilityObject = {
                           "The Hunt",
                           "Remembrance"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "M_Mar_7th_10_SpecialMark_1"
                         }
                       ],
@@ -1824,12 +2100,18 @@ const compositeAbilityObject = {
                               "Preservation",
                               "Abundance"
                             ],
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "M_Mar_7th_10_SpecialMark_2"
                             }
                           ]
@@ -1845,7 +2127,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Teammates + Unselectable (Excluding Owner)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                  },
                   "searchRandom": true,
                   "ifTargetFound": [
                     {
@@ -1858,12 +2143,18 @@ const compositeAbilityObject = {
                           "The Hunt",
                           "Remembrance"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "M_Mar_7th_10_SpecialMark_1"
                         }
                       ],
@@ -1878,12 +2169,18 @@ const compositeAbilityObject = {
                               "Preservation",
                               "Abundance"
                             ],
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           "passed": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "M_Mar_7th_10_SpecialMark_2"
                             }
                           ]
@@ -1907,13 +2204,19 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Current Visual Target(All)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player's Aim Target List}}"
+            },
             "skillType": [
               "Skill"
             ],
             "conditions": {
               "name": "Has Modifier",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Mar_7th_10_Ability02_Master_SpeedUp[<span class=\"descriptionNumberColor\">Master, It's Tea Time!</span>]",
               "invertCondition": true
             },
@@ -1931,7 +2234,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "skillType": [
               "Skill"
             ],
@@ -1940,7 +2246,10 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
                   "invertCondition": true
                 },
@@ -1984,7 +2293,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Mar_7th_10_Ability02_Part02",
           "isTrigger": true
         },
@@ -2024,7 +2336,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "valuePercent": 1,
               "ofAbilitySplit": true,
               "isFixed": "* ERR"
@@ -2131,7 +2446,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "valuePercent": 1,
               "ofAbilitySplit": true,
               "isFixed": "* ERR"
@@ -2188,7 +2506,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_Ability03_Enhance_Normal[<span class=\"descriptionNumberColor\">March 7th, the Apex Heroine</span>]"
         },
         "Trigger: Ability End"
@@ -2196,7 +2517,10 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_Ability11_Preshow"
         }
       ],
@@ -2212,7 +2536,10 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "variableName": "_target_stance_before_attack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
             },
@@ -2223,10 +2550,16 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Teammates + Unselectable (Excluding Owner)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   },
@@ -2242,7 +2575,10 @@ const compositeAbilityObject = {
                       "Abundance",
                       "Remembrance"
                     ],
-                    "target": "March 7th's Shifu"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    }
                   }
                 ]
               },
@@ -2257,7 +2593,10 @@ const compositeAbilityObject = {
                       "The Hunt",
                       "Remembrance"
                     ],
-                    "target": "March 7th's Shifu"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    }
                   }
                 }
               ]
@@ -2273,7 +2612,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Imaginary",
@@ -2301,7 +2643,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Imaginary",
@@ -2342,7 +2687,10 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "variableName": "_target_stance_before_attack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
             },
@@ -2353,10 +2701,16 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Teammates + Unselectable (Excluding Owner)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   },
@@ -2372,7 +2726,10 @@ const compositeAbilityObject = {
                       "Abundance",
                       "Remembrance"
                     ],
-                    "target": "March 7th's Shifu"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    }
                   }
                 ]
               },
@@ -2387,14 +2744,20 @@ const compositeAbilityObject = {
                       "The Hunt",
                       "Remembrance"
                     ],
-                    "target": "March 7th's Shifu"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    }
                   }
                 }
               ]
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Imaginary",
@@ -2433,7 +2796,10 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "variableName": "_target_stance_before_attack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
             },
@@ -2444,10 +2810,16 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Teammates + Unselectable (Excluding Owner)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   },
@@ -2463,7 +2835,10 @@ const compositeAbilityObject = {
                       "Abundance",
                       "Remembrance"
                     ],
-                    "target": "March 7th's Shifu"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    }
                   }
                 ]
               },
@@ -2478,14 +2853,20 @@ const compositeAbilityObject = {
                       "The Hunt",
                       "Remembrance"
                     ],
-                    "target": "March 7th's Shifu"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    }
                   }
                 }
               ]
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Imaginary",
@@ -2533,7 +2914,10 @@ const compositeAbilityObject = {
             "skillType": "Basic ATK",
             "conditions": {
               "name": "Has Modifier",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Mar_7th_10_Enhance"
             },
             "multiplier": {
@@ -2625,7 +3009,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Mar_7th_10_Ability11_Part02",
           "isTrigger": true
         },
@@ -2665,28 +3052,43 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_InsertCheck"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
         },
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "_target_stance_before_attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Mar_7th_10_Eidolon2_CD[<span class=\"descriptionNumberColor\">Blade Dances on Waves' Fight</span>]"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
@@ -2713,7 +3115,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Constants[0] (0.4) || Variables[0] (5) || MUL || RETURN",
             "displayLines": "(0.4 * 5)",
@@ -2728,7 +3133,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -2756,7 +3164,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Constants[0] (0.6) || Variables[0] (5) || MUL || RETURN",
             "displayLines": "(0.6 * 5)",
@@ -2806,8 +3217,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Trigger Ability",
-          "from": "Caster",
-          "inherentTarget": "Single Target (Primary)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "ability": "Mar_7th_10_Eidolon2_Insert_Part02",
           "isTrigger": true
         },
@@ -2823,7 +3240,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
@@ -2831,12 +3251,18 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Target Exists",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "living": true
               },
               {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
               }
             ]
@@ -2844,8 +3270,14 @@ const compositeAbilityObject = {
           "ifTargetFound": [
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Use Prior Target(s) Defined",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "ability": "Mar_7th_10_Eidolon2_Insert_Part01",
               "isTrigger": true
             }
@@ -2853,19 +3285,31 @@ const compositeAbilityObject = {
           "noTargetFound": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "conditions": {
                 "name": "Target Exists",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "living": true
               },
               "ifTargetFound": [
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
-                  "inherentTarget": "Use Prior Target(s) Defined",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "ability": "Mar_7th_10_Eidolon2_Insert_Part01",
                   "isTrigger": true
                 }
@@ -2873,7 +3317,10 @@ const compositeAbilityObject = {
               "noTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_Mar_7th_10_InsertCheck"
                 }
               ]
@@ -2884,7 +3331,10 @@ const compositeAbilityObject = {
       "onAbort": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_InsertCheck"
         }
       ],
@@ -2898,13 +3348,19 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Define Custom Variable with Stat",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "variableName": "_target_stance_before_attack",
           "value": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
@@ -2931,7 +3387,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Imaginary",
@@ -2984,7 +3443,10 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Mar_7th_10_Ability01_Preshow"
         }
       ],
@@ -3002,7 +3464,10 @@ const compositeAbilityObject = {
             "skillType": "Basic ATK",
             "conditions": {
               "name": "Has Modifier",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Mar_7th_10_Enhance",
               "invertCondition": true
             },
@@ -3039,7 +3504,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Mar_7th_10_Ability01_Part02",
           "isTrigger": true
         },
@@ -3117,14 +3585,23 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOrRevivable",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       }
                     ]
                   },
@@ -3145,12 +3622,18 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "living": true
                   },
                   "ifTargetFound": [
@@ -3162,8 +3645,14 @@ const compositeAbilityObject = {
                         "typeValue": 1
                       },
                       "abilityName": "Mar_7th_10_Eidolon2_Insert_SelectTarget",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -3209,7 +3698,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Skill"
                   ]
@@ -3227,7 +3719,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "skillType": [
               "Skill",
               "Basic ATK"
@@ -3252,7 +3747,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Part Of Team",
-                  "target": "Allied Team Skill Lock Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team Ability Target Lock}}"
+                  },
                   "team": "TeamDark"
                 }
               ]
@@ -3265,7 +3763,10 @@ const compositeAbilityObject = {
           "removalDependencies": {
             "name": "Removal Dependency",
             "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
-            "casterFilter": "Caster"
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         },
         {
@@ -3277,7 +3778,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "skillType": [
               "Ultimate"
             ],
@@ -3309,7 +3813,10 @@ const compositeAbilityObject = {
           "removalDependencies": {
             "name": "Removal Dependency",
             "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
-            "casterFilter": "Caster"
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         },
         {
@@ -3335,7 +3842,10 @@ const compositeAbilityObject = {
           "removalDependencies": {
             "name": "Removal Dependency",
             "dependancyName": "Mar_7th_10_Enhance",
-            "casterFilter": "Caster"
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         },
         {
@@ -3347,7 +3857,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_Mar_7th_10_ForbidBP"
                 },
                 {
@@ -3357,13 +3870,19 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Basic ATK"
                 },
@@ -3378,7 +3897,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Mar_7th_10_Enhance_Visual"
                 }
               ]
@@ -3388,7 +3910,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -3401,13 +3926,19 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityName": "Skill11",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Show",
                   "abilityName": "Basic ATK"
                 },
@@ -3417,7 +3948,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_Mar_7th_10_ForbidBP"
                 }
               ]
@@ -3443,7 +3977,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -3475,7 +4012,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -3499,7 +4039,10 @@ const compositeAbilityObject = {
           "removalDependencies": {
             "name": "Removal Dependency",
             "dependancyName": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]",
-            "casterFilter": "Caster"
+            "casterFilter": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         },
         {
@@ -3519,19 +4062,31 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Teammates + Unselectable (Excluding Owner)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                  },
                   "searchRandom": true,
                   "includeDyingTargets": true,
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "invertCondition": true
                   },
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   ]
@@ -3546,12 +4101,18 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Mar_7th_10_Ability02_HaveMaster"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]"
                 }
               ]
@@ -3561,17 +4122,26 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_Mar_7th_10_MasterUltraEnergyPreshow"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_Mar_7th_10_MasterAttackEnergyPreshow"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Mar_7th_10_Ability02_HaveMaster"
                 },
                 {
@@ -3583,7 +4153,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Mar_7th_10_Eidolon1_SpeedUp[<span class=\"descriptionNumberColor\">My Sword Stirs Starlight</span>]",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -3608,7 +4181,10 @@ const compositeAbilityObject = {
                       "The Hunt",
                       "Remembrance"
                     ],
-                    "target": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {
@@ -3636,7 +4212,10 @@ const compositeAbilityObject = {
                           "Preservation",
                           "Abundance"
                         ],
-                        "target": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       "passed": [
                         {
@@ -3796,10 +4375,16 @@ const compositeAbilityObject = {
                 "conditionList": [
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Teammates + Unselectable (Excluding Owner)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   },
@@ -3815,7 +4400,10 @@ const compositeAbilityObject = {
                       "Abundance",
                       "Remembrance"
                     ],
-                    "target": "March 7th's Shifu"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    }
                   }
                 ]
               },
@@ -3830,7 +4418,10 @@ const compositeAbilityObject = {
                       "The Hunt",
                       "Remembrance"
                     ],
-                    "target": "March 7th's Shifu"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    }
                   },
                   "passed": [
                     {
@@ -3844,13 +4435,19 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Single Target (Primary)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target(ST)}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "ReadTargetType",
-                          "target": "March 7th's Shifu"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Marth 7th's Shifu}}"
+                          }
                         },
                         "Damage": {
                           "operator": "Variables[0] (0.2) || RETURN",
@@ -3890,7 +4487,10 @@ const compositeAbilityObject = {
               "name": "Adjust Variable Value",
               "adjustmentType": "Add to Value (Default)",
               "variableName": "EnergyBar_CurEnergy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (parameter[0]_AddValue) || RETURN",
                 "displayLines": "parameter[0]_AddValue",
@@ -3925,7 +4525,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Current Turn Is",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
@@ -3938,12 +4541,18 @@ const compositeAbilityObject = {
                 {
                   "name": "Action Advance/Delay",
                   "advanceType": "Set",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": 0
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Mar_7th_10_Enhance",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
@@ -3960,7 +4569,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Mar_7th_10_Enhance"
                 }
               ]

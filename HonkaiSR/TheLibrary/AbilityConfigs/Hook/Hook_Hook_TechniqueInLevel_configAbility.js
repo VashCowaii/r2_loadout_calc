@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Hook_Modifier"
     }
   ],
@@ -45,13 +48,19 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Fire",
@@ -73,14 +82,23 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "flagName": "STAT_DOT_Burn"
                       },
                       "passed": [
                         {
                           "name": "Trigger Ability",
-                          "from": "Caster",
-                          "inherentTarget": "Use Prior Target(s) Defined",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "inherentTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "ability": "Hook_PassiveAbility01_2",
                           "isTrigger": true
                         }
@@ -93,7 +111,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (3) || RETURN",

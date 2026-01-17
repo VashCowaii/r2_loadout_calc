@@ -6,13 +6,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster's Summoner",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}.[[getSummoner]]"
+      },
       "ability": "PlayerBoy_30_Ability03_Part02_Charge",
       "isTrigger": true
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Ice",
@@ -54,7 +60,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_PlayerBoyServant_30_Eidolon6"
         }
       ]

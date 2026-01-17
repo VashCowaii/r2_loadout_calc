@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Constance_Ultimate_Weakness[<span class=\"descriptionNumberColor\">Wilt</span>]",
       "duration": {
         "operator": "Variables[0] (4) || RETURN",
@@ -31,12 +34,18 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Enemies Still Alive",
-        "target": "Caster"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
       },
       "passed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)(Living)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}.[[living]]"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -65,7 +74,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",

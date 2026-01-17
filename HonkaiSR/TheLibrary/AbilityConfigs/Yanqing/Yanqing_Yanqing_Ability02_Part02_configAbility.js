@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Yanqing_BonusTargetMark"
     },
     {
       "name": "Shot Fired",
-      "caster": "Caster"
+      "caster": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      }
     },
     {
       "name": "Looped Event",
@@ -19,7 +25,10 @@ const configAbility = {
       "Event": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -48,7 +57,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {

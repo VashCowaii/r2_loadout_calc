@@ -68,14 +68,23 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Living State",
                     "state": "Mask_AliveOrRevivable",
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   }
                 ]
               },
@@ -98,7 +107,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Enemies Still Alive",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
@@ -109,8 +121,14 @@ const configAbility = {
                     "typeValue": 1
                   },
                   "abilityName": "Constance_Insert_SelectTarget",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -139,7 +157,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Constance_Aura[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]"
               },
               "passed": [
@@ -193,7 +214,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Imaginary"
@@ -213,7 +237,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Quantum"
@@ -233,7 +260,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Wind"
@@ -253,7 +283,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Thunder"
@@ -273,7 +306,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Ice"
@@ -293,7 +329,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Fire"
@@ -313,7 +352,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Modify Weaknesses",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "action": "Attach",
               "valueList": [
                 "Physical"
@@ -337,7 +379,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyRatio) || SUB || RETURN",
@@ -382,49 +427,73 @@ const configAbility = {
           "parse": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Ultimate_Weakness_Sub_Physical",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Ultimate_Weakness_Sub_Fire",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Ultimate_Weakness_Sub_Ice",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Ultimate_Weakness_Sub_Thunder",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Ultimate_Weakness_Sub_Wind",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Ultimate_Weakness_Sub_Quantum",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Constance_Ultimate_Weakness_Sub_Imaginary",
               "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Find New Target",
-              "from": "Dahlia's Dance Partners",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Dahlia's Dance Partners}}"
+              },
               "includeDyingTargets": true,
               "ifTargetFound": [
                 {
@@ -432,7 +501,10 @@ const configAbility = {
                   "source": {
                     "name": "Damage Type Source",
                     "sourceType": "ReadTargetType",
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "caseEvents": [
                     {
@@ -441,7 +513,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Constance_Ultimate_Weakness_Sub_Physical",
                           "silentAdd": true
                         }
@@ -453,7 +528,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Constance_Ultimate_Weakness_Sub_Fire",
                           "silentAdd": true
                         }
@@ -465,7 +543,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Constance_Ultimate_Weakness_Sub_Ice",
                           "silentAdd": true
                         }
@@ -477,7 +558,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Constance_Ultimate_Weakness_Sub_Thunder",
                           "silentAdd": true
                         }
@@ -489,7 +573,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Constance_Ultimate_Weakness_Sub_Wind",
                           "silentAdd": true
                         }
@@ -501,7 +588,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Constance_Ultimate_Weakness_Sub_Quantum",
                           "silentAdd": true
                         }
@@ -513,7 +603,10 @@ const configAbility = {
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Constance_Ultimate_Weakness_Sub_Imaginary",
                           "silentAdd": true
                         }
@@ -596,7 +689,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -633,7 +729,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MDF_Aura_Lifetime",
                     "compareType": "<=",
                     "value2": 1,
@@ -655,14 +754,20 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Constance_Aura_OnEnemy[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
           "aliveOnly": "False",
           "haloStatus": true
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Teammates + Unselectable (Excluding Owner)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
           "modifier": "Constance_Aura_OnTeam[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
           "refModifier": "MReference_StanceBreakAddedRatio",
           "aliveOnly": "False",

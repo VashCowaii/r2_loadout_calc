@@ -27,7 +27,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.2) || RETURN",
@@ -52,7 +55,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "All Teammates (Excluding Owner)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{All Team Members(Exclude Self)}}"
+        },
         "skillType": [
           "Ultimate"
         ],
@@ -110,7 +116,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability02_Aura"
             }
           ]
@@ -133,7 +142,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.5) || RETURN",
@@ -170,7 +182,10 @@ const configAbility = {
             {
               "name": "Action Advance/Delay",
               "advanceType": "Set",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": 0
             },
             "Modifier Deletes Itself"
@@ -189,11 +204,17 @@ const configAbility = {
             {
               "name": "Use Custom Character Function",
               "functionName": "PursuedDamage_PerformanceDelay",
-              "target": "Ability Target List"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              }
             },
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "searchRandom": true,
               "maxTargets": 1,
               "ifTargetFound": [
@@ -229,7 +250,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Robin_AbilityEidolon6_ExtraRatioForShow[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]"
                         }
                       ]
@@ -238,7 +262,10 @@ const configAbility = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
@@ -273,7 +300,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (Ability03_AtkUpValue) || RETURN",
@@ -312,12 +342,18 @@ const configAbility = {
             },
             {
               "name": "Change Character Transformation",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "phase": "Phase1"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03Area_sub_disableAction"
             }
           ]
@@ -345,12 +381,18 @@ const configAbility = {
             },
             {
               "name": "Change Character Transformation",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "phase": "Phase2"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03Area_sub_disableAction"
             }
           ]
@@ -362,19 +404,28 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Modifier Has Flag",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "flagName": "STAT_ForceControl"
               },
               "passed": [
                 {
                   "name": "Force Entity Death",
-                  "target": "Robin's Countdown Battle-Event",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Robin's Countdown Battle Event}}"
+                  },
                   "ignoreHPLossTriggers": true,
                   "ignoreDeathTriggers": true
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Robin_Ability03Area"
                 }
               ]
@@ -393,7 +444,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.5) || RETURN",
@@ -434,7 +488,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Dispel Debuffs",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "dispelCount": 99,
               "toRemove": [
                 "STAT_CTRL"
@@ -483,7 +540,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.16) || RETURN",
@@ -513,7 +573,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.24) || RETURN",
@@ -542,12 +605,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03Area_sub"
             },
             {
@@ -641,18 +710,27 @@ const configAbility = {
           "execute": [
             {
               "name": "Force Entity Death",
-              "target": "Robin's Countdown Battle-Event",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Robin's Countdown Battle Event}}"
+              },
               "ignoreHPLossTriggers": true,
               "ignoreDeathTriggers": true
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03Area_sub"
             },
             "Modifier Deletes Itself"
@@ -669,12 +747,18 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03Area_sub"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
               "modifier": "Robin_Ability03_BonusAction"
             },
             {
@@ -686,7 +770,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "modifier": "Robin_AbilityEidolon4_DispelControl"
                 }
               ]
@@ -714,13 +801,19 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "Skill03_BaseAttack",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
             },
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "Skill03_BaseAttack_Convert",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
             },
@@ -802,7 +895,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
               "valuePerStack": {
                 "BaseAttack_Total": {
@@ -822,12 +918,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03Area_sub"
             },
             {
@@ -843,7 +945,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Teammates + Unselectable (Excluding Owner)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
           "modifier": "Robin_Ability03_AtkUp_FriendForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
           "haloStatus": true,
           "valuePerStack": {
@@ -859,7 +964,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Robin_Ability03_AtkUp",
           "haloStatus": true,
           "valuePerStack": {
@@ -875,7 +983,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Robin_Ability03_PursuedDmg",
           "haloStatus": true,
           "valuePerStack": {
@@ -891,7 +1002,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Robin_Trace02_InsertDmgUp[<span class=\"descriptionNumberColor\">Impromptu Flourish</span>]",
           "haloStatus": true,
           "conditions": {
@@ -911,7 +1025,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Robin_AbilityEidolon1_Bonus[<span class=\"descriptionNumberColor\">Land of Smiles</span>]",
           "haloStatus": true,
           "conditions": {
@@ -921,7 +1038,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Robin_AbilityEidolon2_Bonus[<span class=\"descriptionNumberColor\">Afternoon Tea For Two</span>]",
           "haloStatus": true,
           "conditions": {
@@ -931,7 +1051,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Robin_AbilityEidolon4_ResistAll[<span class=\"descriptionNumberColor\">Raindrop Key</span>]",
           "haloStatus": true,
           "conditions": {
@@ -941,7 +1064,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Robin_AbilityEidolon6_ExtraRatioForShow[<span class=\"descriptionNumberColor\">Moonless Midnight</span>]",
           "haloStatus": true,
           "conditions": {
@@ -970,13 +1096,19 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Robin_Ability02_DmgUp",
           "haloStatus": true
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Teammates + Unselectable (Excluding Owner)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
           "modifier": "Robin_Ability02_DmgUpFriendListener[<span class=\"descriptionNumberColor\">Aria</span>]",
           "haloStatus": true
         }
@@ -999,7 +1131,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
                     "displayLines": "(2 + 1)",
@@ -1015,7 +1150,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -1030,7 +1168,10 @@ const configAbility = {
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Passive_PassiveCharge"
             }
           ]
@@ -1053,17 +1194,26 @@ const configAbility = {
             {
               "name": "Action Advance/Delay",
               "advanceType": "Set",
-              "target": "Caster [of Battle Event]",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
               "value": 0
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster [of Battle Event]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Battle Event's Caster}}"
+              },
               "modifier": "Robin_Ability03Area"
             },
             {
               "name": "Force Entity Death",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "ignoreHPLossTriggers": true,
               "ignoreDeathTriggers": true
             }
@@ -1083,7 +1233,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_CurrentActionCount",
               "multiplier": 1
@@ -1092,7 +1245,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "Robin_Passive_PassiveCharge",
                 "compareType": "=",
                 "value2": {
@@ -1108,7 +1264,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Robin_PassiveAbility01_setSp"
                 }
               ]
@@ -1177,19 +1336,28 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Robin_Ability03Area"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "Skill03_BaseAttack",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "Skill03_BaseAttack_Convert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
                     },
@@ -1271,7 +1439,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
                       "valuePerStack": {
                         "BaseAttack_Total": {
@@ -1286,7 +1457,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Teammates + Unselectable (Excluding Owner)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                      },
                       "modifier": "Robin_Ability03_AtkUp_FriendForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
                       "valuePerStack": {
                         "BaseAttack_Total": {
@@ -1301,7 +1475,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "modifier": "Robin_Ability03_AtkUp",
                       "valuePerStack": {
                         "Ability03_AtkUpValue": {
@@ -1339,19 +1516,28 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Robin_Ability03Area"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "Skill03_BaseAttack",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "Skill03_BaseAttack_Convert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;"
                     },
@@ -1433,7 +1619,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Robin_Ability03_AtkUp_CasterForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
                       "valuePerStack": {
                         "BaseAttack_Total": {
@@ -1448,7 +1637,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Teammates + Unselectable (Excluding Owner)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                      },
                       "modifier": "Robin_Ability03_AtkUp_FriendForShow[<span class=\"descriptionNumberColor\">Concerto</span>]",
                       "valuePerStack": {
                         "BaseAttack_Total": {
@@ -1463,7 +1655,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context, with Untargetable)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members with Unselectables}}"
+                      },
                       "modifier": "Robin_Ability03_AtkUp",
                       "valuePerStack": {
                         "Ability03_AtkUpValue": {
@@ -1502,12 +1697,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_PassiveAbility_UltraPreshow"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
             }
           ]
@@ -1519,7 +1720,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]"
               },
               "passed": [
@@ -1582,12 +1786,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_PassiveAbility_UltraPreshow"
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Allied Team",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All}}"
+              },
               "modifier": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
             },
             {
@@ -1604,14 +1814,23 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Allied Team",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
                 }
               ]
@@ -1623,12 +1842,18 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_PassiveAbility_UltraPreshow"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+              },
               "modifier": "Robin_PassiveAbility_CritDmgUp[<span class=\"descriptionNumberColor\">Tonal Resonance</span>]"
             }
           ]
@@ -1640,14 +1865,23 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Allied Team(ALL) [Exclude battle mechanics]",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Robin_Passive_PassiveCharge",
                   "stackLimit": {
                     "operator": "Variables[0] (MDF_CurrentActionCount) || RETURN",
@@ -1686,7 +1920,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "advanceType": "Set",
                   "value": "(0 - 0.25)"
                 }
@@ -1694,7 +1931,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Robin_Ability03AreaRefresh"
             }
           ],

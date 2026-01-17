@@ -10,7 +10,10 @@ const configAbility = {
         "name": "NOT",
         "condition": {
           "name": "Has Modifier",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Yukong_Passive_BonusCD"
         }
       },
@@ -32,14 +35,20 @@ const configAbility = {
         "name": "NOT",
         "condition": {
           "name": "Has Modifier",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Yukong_Passive_BonusCD"
         }
       },
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Yukong_Passive_BonusCD",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -90,7 +99,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yukong_Ability01_Preshow"
     }
   ],
@@ -104,7 +116,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -141,7 +156,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -177,7 +195,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -213,7 +234,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
@@ -259,7 +283,10 @@ const configAbility = {
         "skillType": "Basic ATK",
         "conditions": {
           "name": "Has Modifier",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Yukong_Passive_BonusCD",
           "invertCondition": true
         },

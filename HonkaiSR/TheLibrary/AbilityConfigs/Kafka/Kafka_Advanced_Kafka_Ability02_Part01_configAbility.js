@@ -16,17 +16,26 @@ const configAbility = {
   "parse": [
     {
       "name": "Find New Target",
-      "from": "Single Target (Primary) + Blast (Adjacent)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{ST and Blast}}"
+      },
       "maxTargets": 1,
       "conditions": {
         "name": "Has Flag",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "flagName": "STAT_DOT"
       }
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Advanced_Kafka_Ability02_Part02",
       "isTrigger": true
     },

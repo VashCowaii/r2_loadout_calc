@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Bronya_Eidolon4_ATK_Flag"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Bronya_Eidolon4_Listen"
     }
   ],
@@ -54,7 +60,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Bronya_Eidolon4_ATK_Flag"
             }
           ]
@@ -71,7 +80,10 @@ const configAbility = {
                     "name": "NOT",
                     "condition": {
                       "name": "Current Action Holder Is",
-                      "target": "Owner of this Modifier"
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      }
                     }
                   },
                   {
@@ -84,7 +96,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Bronya_Eidolon4_ATK_Flag"
                   }
                 ]
@@ -97,20 +112,29 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": ">",
                         "value2": 0
                       },
                       {
                         "name": "Compare: Target Count",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "compareType": "=",
                         "value2": 1
                       },
                       {
                         "name": "Has Weakness",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "DamageType": "Wind"
                       }
                     ]
@@ -119,8 +143,14 @@ const configAbility = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "Bronya_Eidolon4_ATK",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target's Ability Targets}}"
+                      },
                       "priorityTag": "AvatarInsertAttackSelf",
                       "showInActionOrder": true,
                       "abortFlags": [
@@ -135,27 +165,42 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Target Count",
-                        "target": "Use [SKILL TARGETS OF] Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target's Ability Targets}}"
+                        },
                         "compareType": ">",
                         "value2": 1
                       },
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "All Enemies (AOE)",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 1,
                           "conditions": {
                             "name": "Has Weakness",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "DamageType": "Wind"
                           },
                           "ifTargetFound": [
                             {
                               "name": "Inject Ability Use",
                               "abilityName": "Bronya_Eidolon4_ATK",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "Use Prior Target(s) Defined",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,

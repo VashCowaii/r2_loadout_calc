@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Yanqing_Eidolon1",
       "valuePerStack": {
         "MDF_DamageRatio": {
@@ -36,13 +39,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Ability Target List",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Attack Targets of Modifier Holder}}"
+                },
                 "flagName": "STAT_CTRL_Frozen"
               },
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Ability Target List",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Ice",

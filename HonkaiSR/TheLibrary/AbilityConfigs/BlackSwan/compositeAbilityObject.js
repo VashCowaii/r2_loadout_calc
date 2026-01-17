@@ -28,7 +28,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "BlackSwan_Eidolon6"
         }
       ],
@@ -64,8 +67,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Teammates + Unselectable (Excluding Owner) [INCLUDE battle events]",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
@@ -85,7 +94,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_Eidolon6_AddDOTFlag"
                     }
                   ]
@@ -115,13 +127,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "BlackSwan_Eidolon6_SubOnEnemy"
                     }
                   ]
@@ -140,7 +158,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "M_BlackSwan_Eidolon6_AddDOTFlag"
                     },
                     {
@@ -189,7 +210,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
@@ -285,7 +309,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "BlackSwan_Eidolon2"
         }
       ],
@@ -301,7 +328,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Use Secondary Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    }
                   },
                   "passed": [
                     {
@@ -311,14 +341,20 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "team": "TeamDark"
                           },
                           {
                             "name": "NOT",
                             "condition": {
                               "name": "Is Part Of Team",
-                              "target": "Use Secondary Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target 2}}"
+                              },
                               "team": "TeamDark"
                             }
                           },
@@ -327,19 +363,28 @@ const compositeAbilityObject = {
                             "conditionList": [
                               {
                                 "name": "Has Modifier",
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "modifier": "M_BlackSwan_DOTFlag",
                                 "justAddedOrActive": true
                               },
                               {
                                 "name": "Has Modifier",
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "modifier": "M_BlackSwan_P01_AddDOTFlag",
                                 "justAddedOrActive": true
                               },
                               {
                                 "name": "Has Modifier",
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "modifier": "M_BlackSwan_Tree02_AddDOTFlag",
                                 "justAddedOrActive": true
                               }
@@ -350,7 +395,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Find New Target",
-                          "from": "Use [ADJACENT TARGETS OF] Prior Target(s) Defined",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Targets Adjacent to Parameter Target}}"
+                          },
                           "searchRandom": true,
                           "maxTargets": 2,
                           "ifTargetFound": [
@@ -399,7 +447,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                               "baseChance": {
                                 "operator": "Variables[0] (1) || RETURN",
@@ -499,7 +550,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "BlackSwan_Eidolon1"
         }
       ],
@@ -517,7 +571,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -550,7 +607,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -583,7 +643,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -616,7 +679,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -654,12 +720,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     ]
@@ -667,7 +739,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -682,7 +757,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -697,7 +775,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -712,7 +793,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -731,13 +815,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT_Poison"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -756,13 +846,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT_Bleed"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -781,13 +877,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT_Burn"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -806,13 +908,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT_Electric"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -834,22 +942,34 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -861,7 +981,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT_Poison"
                   },
                   "passed": [
@@ -869,7 +992,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                         "invertCondition": true
                       },
@@ -888,7 +1014,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -905,7 +1034,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
@@ -914,7 +1046,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT_Bleed"
                   },
                   "passed": [
@@ -922,7 +1057,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                         "invertCondition": true
                       },
@@ -941,7 +1079,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -958,7 +1099,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
@@ -967,7 +1111,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT_Burn"
                   },
                   "passed": [
@@ -975,7 +1122,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                         "invertCondition": true
                       },
@@ -994,7 +1144,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1011,7 +1164,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
@@ -1020,7 +1176,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_DOT_Electric"
                   },
                   "passed": [
@@ -1028,7 +1187,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                         "invertCondition": true
                       },
@@ -1047,7 +1209,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1064,7 +1229,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
@@ -1085,7 +1253,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
                       }
                     ]
@@ -1093,7 +1264,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1108,7 +1282,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1123,7 +1300,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1138,7 +1318,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1164,14 +1347,20 @@ const compositeAbilityObject = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "flagName": "STAT_DOT_Poison"
                     }
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
@@ -1182,14 +1371,20 @@ const compositeAbilityObject = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "flagName": "STAT_DOT_Bleed"
                     }
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
@@ -1200,14 +1395,20 @@ const compositeAbilityObject = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "flagName": "STAT_DOT_Burn"
                     }
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
@@ -1218,14 +1419,20 @@ const compositeAbilityObject = {
                     "name": "NOT",
                     "condition": {
                       "name": "Has Flag",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "flagName": "STAT_DOT_Electric"
                     }
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                     }
                   ]
@@ -1246,7 +1453,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     ]
@@ -1254,7 +1464,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1269,7 +1482,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1284,7 +1500,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1299,7 +1518,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1323,7 +1545,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1347,7 +1572,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1371,7 +1599,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1395,7 +1626,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1425,13 +1659,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "BlackSwan_Eidolon1_SubOnEnemy",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -1453,7 +1693,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_SubOnEnemy",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -1483,7 +1726,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_BlackSwan_Trace03"
         }
       ],
@@ -1528,7 +1774,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -1555,13 +1804,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CasterStatusProbability",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "M_BlackSwan_Trace03_Sub",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
@@ -1591,13 +1846,19 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "variableName": "CasterStatusProbability",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_BlackSwan_Trace03_Sub",
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
@@ -1629,7 +1890,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_BlackSwan_Trace02"
         }
       ],
@@ -1688,14 +1952,20 @@ const compositeAbilityObject = {
                         "attackTypes": [
                           "DOT"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_Tree02_AddDOTFlag"
                     }
                   ]
@@ -1709,8 +1979,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   "passed": [
@@ -1743,14 +2019,26 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "All Hostile Entities (AOE)(ALL)",
-                        "target": "Use [LIST OF] Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target List}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -1798,7 +2086,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
@@ -1848,7 +2139,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
@@ -1943,13 +2237,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy",
                       "valuePerStack": {
                         "_maxLimit": {
@@ -1980,7 +2280,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Hostile Entities (AOE)(ALL)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 99,
                       "ifTargetFound": [
@@ -2030,7 +2333,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
                             "operator": "Variables[0] (0.65) || RETURN",
@@ -2112,7 +2418,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_BlackSwan_Trace02_AddDotOnCreate"
                     }
                   ]
@@ -2176,7 +2485,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "baseChance": {
                         "operator": "Variables[0] (0.65) || RETURN",
@@ -2256,7 +2568,10 @@ const compositeAbilityObject = {
                       "success": [
                         {
                           "name": "Define Modifier-Specific Variable",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifierName": "M_BlackSwan_Tree02_ListenAddPoison_SubOnEnemy",
                           "adjustmentType": "+",
                           "variableName": "_count",
@@ -2266,7 +2581,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_Tree02_AddDOTFlag"
                     }
                   ]
@@ -2322,7 +2640,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_BlackSwan_Maze_Flag"
         },
         {
@@ -2375,10 +2696,16 @@ const compositeAbilityObject = {
             },
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "M_BlackSwan_Maze_StopAddDot",
                 "invertCondition": true
               },
@@ -2429,7 +2756,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "baseChance": {
                     "operator": "Variables[0] (_current_chance) || RETURN",
@@ -2552,12 +2882,18 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "M_BlackSwan_Maze_StopAddDot"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_BlackSwan_Maze_Flag"
         }
       ],
@@ -2590,7 +2926,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_BlackSwan_Modifier"
         }
       ],
@@ -2616,7 +2955,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "MazeSkill_Triggered",
                         "compareType": "<",
                         "value2": 1,
@@ -2624,7 +2966,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       }
                     ]
@@ -2633,8 +2978,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Inject Ability Use",
                       "abilityName": "BlackSwan_TechniqueInLevel_Insert",
-                      "abilitySource": "Caster",
-                      "abilityTarget": "All Hostile Entities (AOE)",
+                      "abilitySource": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "abilityTarget": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "priorityTag": "AvatarBuffSelf",
                       "canHitNonTargets": true,
                       "showInActionOrder": true,
@@ -2667,7 +3018,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_BlackSwan_P01_ListenAddPoison"
         },
         {
@@ -2692,7 +3046,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_BlackSwan_Eidolon4_Listener"
             }
           ]
@@ -2755,7 +3112,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Use Secondary Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target 2}}"
+                    }
                   },
                   "passed": [
                     {
@@ -2765,38 +3125,56 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of Team",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "team": "TeamDark"
                           },
                           {
                             "name": "NOT",
                             "condition": {
                               "name": "Is Part Of Team",
-                              "target": "Use Secondary Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target 2}}"
+                              },
                               "team": "TeamDark"
                             }
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                             "justAddedOrActive": true,
                             "includePreDeath": true
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP",
                             "invertCondition": true,
                             "justAddedOrActive": true,
-                            "casterFilter": "Caster"
+                            "casterFilter": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           }
                         ]
                       },
                       "passed": [
                         {
                           "name": "Update Energy",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (8) || RETURN",
                             "displayLines": "8",
@@ -2830,7 +3208,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
                 }
               ],
@@ -2851,7 +3232,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_ListenPhase1Mark"
                 }
               ]
@@ -2861,7 +3245,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark"
                 }
               ],
@@ -2880,12 +3267,21 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Compare: Target",
-                            "target": "Owner of this Modifier",
-                            "target2": "Current Turn Owner"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "target2": {
+                              "name": "Target Name",
+                              "target": "{{Current Turn Owner}}"
+                            }
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark",
                             "justAddedOrActive": true
                           }
@@ -2896,14 +3292,20 @@ const compositeAbilityObject = {
                         "attackTypes": [
                           "DOT"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       }
                     ]
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_P01_AddDOTFlag"
                     }
                   ]
@@ -2923,13 +3325,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "M_BlackSwan_P01_ListenAddPoison_SubOnEnemy"
                     }
                   ]
@@ -2994,14 +3402,20 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "M_BlackSwan_ForbidEffectFlag",
                         "justAddedOrActive": true
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
                             "operator": "Variables[0] (0.65) || RETURN",
@@ -3083,7 +3497,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                           "baseChance": {
                             "operator": "Variables[0] (0.65) || RETURN",
@@ -3186,7 +3603,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
           "counter": {
             "operator": "Variables[0] (1) || RETURN",
@@ -3249,7 +3669,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -3299,7 +3722,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "BlackSwan_Ability03_Part02",
           "isTrigger": true
         }
@@ -3322,7 +3748,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -3348,7 +3777,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Wind",
@@ -3397,7 +3829,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "flagName": "STAT_DOT_Poison"
               },
               "passed": [
@@ -3421,7 +3856,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "flagName": "STAT_DOT_Bleed"
               },
               "passed": [
@@ -3445,7 +3883,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "flagName": "STAT_DOT_Burn"
               },
               "passed": [
@@ -3469,7 +3910,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "flagName": "STAT_DOT_Electric"
               },
               "passed": [
@@ -3493,7 +3937,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "searchRandom": true,
           "maxTargets": 2,
           "ifTargetFound": [
@@ -3543,7 +3990,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -3625,7 +4075,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -3656,13 +4109,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "searchRandom": true,
           "maxTargets": 2,
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "BlackSwan_DefenceDown[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -3746,7 +4205,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
                 "operator": "Variables[0] (Arg01) || RETURN",
@@ -3841,7 +4303,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -3886,7 +4351,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "BlackSwan_Ability02_Part02",
           "isTrigger": true
         },
@@ -3902,7 +4370,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
@@ -3934,7 +4405,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Is Part Of Team",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "team": "TeamDark"
           },
           "passed": [
@@ -3956,7 +4430,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "flagName": "STAT_DOT_Poison"
               },
               "passed": [
@@ -3980,7 +4457,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "flagName": "STAT_DOT_Bleed"
               },
               "passed": [
@@ -4004,7 +4484,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "flagName": "STAT_DOT_Burn"
               },
               "passed": [
@@ -4028,7 +4511,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "flagName": "STAT_DOT_Electric"
               },
               "passed": [
@@ -4103,7 +4589,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
               "baseChance": {
                 "operator": "Variables[0] (Arg01) || RETURN",
@@ -4204,7 +4693,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "BlackSwan_Ability01_Part02",
           "isTrigger": true
         },
@@ -4267,7 +4759,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   }
                 }
@@ -4290,7 +4785,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (Rank04_SPAdded) || RETURN",
                     "displayLines": "Rank04_SPAdded",
@@ -4303,7 +4801,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP"
                 },
                 "Modifier Deletes Itself"
@@ -4329,7 +4830,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Flags from Modifier",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": [
                     "STAT_DOT_Burn",
                     "STAT_DOT_Bleed",
@@ -4346,7 +4850,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Current Turn Is",
-                    "target": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {
@@ -4375,7 +4882,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                       "value": {
                         "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDown) || SUB || RETURN",
@@ -4394,12 +4904,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP"
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_DOT_Eidolon4_AddSP",
                       "valuePerStack": {
                         "Eidolon4_SPAdded": {
@@ -4416,13 +4932,19 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_Count",
                   "multiplier": 1
                 },
                 {
                   "name": "Add Flags to Modifier",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": [
                     "STAT_DOT_Burn",
                     "STAT_DOT_Bleed",
@@ -4462,7 +4984,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                     "invertCondition": true
                   },
@@ -4482,13 +5007,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                         "invertCondition": true
                       },
                       {
                         "name": "Target Exists",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "living": true
                       }
                     ]
@@ -4516,7 +5047,10 @@ const compositeAbilityObject = {
                     "attackTypes": [
                       "DOT"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   "passed": [
                     {
@@ -4551,7 +5085,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_P01_AddDOTFlag"
                 }
               ]
@@ -4561,7 +5098,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "valueType": "Layer",
                   "variableName": "Dot_Layer_Count",
@@ -4574,12 +5114,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Target Exists",
-                        "target": "Snapshot Entity's Real Owner",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Snapshot Target's Source Owner}}"
+                        },
                         "living": true
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Cast_By_Level",
                         "compareType": ">=",
                         "value2": 1,
@@ -4590,14 +5136,20 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_ForbidEffectFlag"
                     },
                     {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Dot_Layer_Count",
                         "compareType": "<",
                         "value2": {
@@ -4615,7 +5167,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
@@ -4625,7 +5180,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Body-Types",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "types": [
                               "LittleMonster",
                               "MiddleMonster"
@@ -4636,7 +5194,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Body-Types",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "types": [
                                   "LargeMonster"
                                 ]
@@ -4648,7 +5209,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "Dot_Layer_Count",
                             "compareType": "<",
                             "value2": {
@@ -4666,7 +5230,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
@@ -4676,7 +5243,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
@@ -4688,7 +5258,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Dot_Layer_Count",
                         "compareType": ">=",
                         "value2": {
@@ -4704,7 +5277,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "M_BlackSwan_DOT_DefenceIgnore",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -4719,7 +5295,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                          },
                           "modifier": "M_BlackSwan_DOT_DefenceIgnore",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -4738,7 +5317,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Dot_Layer_Count",
                         "compareType": ">=",
                         "value2": {
@@ -4756,13 +5338,19 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           },
                           "passed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
@@ -4784,7 +5372,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
@@ -4808,7 +5399,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
@@ -4818,7 +5412,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "Dot_Layer_Count",
                             "compareType": ">=",
                             "value2": {
@@ -4836,13 +5433,19 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               },
                               "passed": [
                                 {
                                   "name": "ATK Scaling DMG",
-                                  "target": "Owner of this Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
@@ -4864,7 +5467,10 @@ const compositeAbilityObject = {
                               "failed": [
                                 {
                                   "name": "ATK Scaling DMG",
-                                  "target": "Owner of this Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
@@ -4888,7 +5494,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
@@ -4898,13 +5507,19 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               },
                               "passed": [
                                 {
                                   "name": "ATK Scaling DMG",
-                                  "target": "Owner of this Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
@@ -4926,7 +5541,10 @@ const compositeAbilityObject = {
                               "failed": [
                                 {
                                   "name": "ATK Scaling DMG",
-                                  "target": "Owner of this Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
                                   "AttackScaling": {
                                     "DamageType": "Wind",
                                     "Damage": {
@@ -4950,7 +5568,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
@@ -4962,7 +5583,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Dot_Layer_Count",
                         "compareType": ">=",
                         "value2": {
@@ -4980,13 +5604,19 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           },
                           "passed": [
                             {
                               "name": "Remove Flags from Modifier",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "flagName": [
                                 "STAT_DOT_Poison",
                                 "STAT_DOT_Burn",
@@ -4997,7 +5627,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                              },
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
@@ -5015,7 +5648,10 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Add Flags to Modifier",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "flagName": [
                                 "STAT_DOT_Poison",
                                 "STAT_DOT_Burn",
@@ -5028,7 +5664,10 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                              },
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
@@ -5048,19 +5687,28 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Find New Target",
-                          "from": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                          },
                           "maxTargets": 2,
                           "ifTargetFound": [
                             {
                               "name": "Add Events/Bonuses",
-                              "to": "Use Prior Target(s) Defined",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "modifier": "M_BlackSwan_P01_AddDOTFlag"
                             },
                             {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Variable",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "value1": "Dot_Layer_Count",
                                 "compareType": ">=",
                                 "value2": {
@@ -5078,7 +5726,10 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Has Modifier",
-                                    "target": "Owner of this Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Modifier Holder}}"
+                                    },
                                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                                   }
                                 }
@@ -5088,7 +5739,10 @@ const compositeAbilityObject = {
                                   "name": "IF",
                                   "conditions": {
                                     "name": "Has Modifier",
-                                    "target": "Owner of this Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Modifier Holder}}"
+                                    },
                                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                                   }
                                 }
@@ -5100,29 +5754,44 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_DOT_DefenceIgnore"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                      },
                       "modifier": "M_BlackSwan_DOT_DefenceIgnore"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_ForbidEffectFlag"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_ForbidEffectFlag"
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
@@ -5144,13 +5813,19 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_ForbidEffectFlag"
                     }
                   ]
@@ -5162,12 +5837,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                         "compareType": ">=",
                         "value2": 1
@@ -5177,7 +5858,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "_enhance_count",
                       "modifierName": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                       "multiplier": 1
@@ -5215,12 +5899,18 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_ForbidEffectFlag"
                     },
                     {
                       "name": "Define Custom Variable with Modifier Values",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "scope": "ContextModifier",
                       "valueType": "Layer",
                       "variableName": "Dot_Layer_Count",
@@ -5228,7 +5918,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                       "addStacksPerTrigger": {
                         "operator": "Constants[0] (1) || Variables[0] (ExtraLayer_DamagePercentage) || SUB || RETURN",
@@ -5244,12 +5937,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "popUpText": "Reset Arcana Stacks"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_ForbidEffectFlag"
                     }
                   ]
@@ -5262,7 +5961,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "valueType": "MaxLayer",
                   "variableName": "MDF_MaxLayer",
@@ -5270,25 +5972,37 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Flags to Modifier",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": [
                     "STAT_DOT_Poison"
                   ],
                   "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
-                  "casterFilter": "Caster"
+                  "casterFilter": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                     "justAddedOrActive": true
                   },
                   "passed": [
                     {
                       "name": "Add Flags to Modifier",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "flagName": [
                         "STAT_DOT_Burn",
                         "STAT_DOT_Bleed",
@@ -5300,7 +6014,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_DOTFlag"
                 },
                 {
@@ -5310,14 +6027,20 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "M_BlackSwan_ForbidEffectFlag",
                         "invertCondition": true,
                         "justAddedOrActive": true
                       },
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Cast_By_Level",
                         "compareType": "<=",
                         "value2": 0,
@@ -5330,7 +6053,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       "passed": [
@@ -5338,7 +6064,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": null,
                             "compareType": ">=",
                             "value2": {
@@ -5356,7 +6085,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Variable",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "value1": null,
                                 "compareType": ">=",
                                 "value2": {
@@ -5378,7 +6110,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": null,
                             "compareType": ">=",
                             "value2": {
@@ -5396,7 +6131,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Variable",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "value1": null,
                                 "compareType": ">=",
                                 "value2": {
@@ -5423,7 +6161,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "valueType": "Layer",
                   "variableName": "Dot_Layer_Count",
@@ -5433,13 +6174,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   },
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {
@@ -5462,7 +6209,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "AttackScaling": {
                         "DamageType": "Wind",
                         "Damage": {

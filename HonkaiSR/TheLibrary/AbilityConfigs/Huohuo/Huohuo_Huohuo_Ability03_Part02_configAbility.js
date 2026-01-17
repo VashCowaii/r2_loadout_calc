@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Update Energy",
-      "on": "All Teammates (One per Pairing of Memo/Owner)",
+      "on": {
+        "name": "Target Name",
+        "target": "{{All Team Members(Exclude Memosprites and Self)}}"
+      },
       "valuePercent": {
         "operator": "Variables[0] (0.2) || RETURN",
         "displayLines": "0.2",
@@ -20,7 +23,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "All Teammates (Excluding Owner)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{All Team Members(Exclude Self)}}"
+      },
       "modifier": "Huohuo_Ability03_AttackUP[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
@@ -43,7 +49,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

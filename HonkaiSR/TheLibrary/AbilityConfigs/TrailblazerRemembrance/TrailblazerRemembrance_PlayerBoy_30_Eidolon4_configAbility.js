@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_PlayerBoy_30_Eidolon4"
     }
   ],
@@ -22,7 +25,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Target Exists",
-                "target": "Caster's Memosprite",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}.[[getMemosprite]]"
+                },
                 "living": true
               },
               "passed": [
@@ -33,13 +39,22 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "Use Prior Target(s) Defined",
-                        "target": "All Team Members(In Context, with Untargetable + Memosprite/Summon)",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addMemoAndSummon]]"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Compare: Ability Value",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
                         "compareType": "<=",
                         "value2": 0
@@ -49,7 +64,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Added Value",
-                      "target": "Caster's Memosprite",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}.[[getMemosprite]]"
+                      },
                       "variableName": "CurEnergy",
                       "context": "TargetEntity",
                       "value": {

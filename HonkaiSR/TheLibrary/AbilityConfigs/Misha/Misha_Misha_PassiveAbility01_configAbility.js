@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Misha_Passive_Sub_EnergyBar"
     },
     {
@@ -48,7 +51,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
       "counter": {
         "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",
@@ -143,7 +149,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
               "counter": {
                 "operator": "Variables[0] (BasicAttack) || RETURN",
@@ -185,8 +194,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Caster's Entire Team [Exclude Battle Events/Summon]",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getTeamMembers]].[[removeBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -225,7 +240,10 @@ const configAbility = {
                   "Event": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (2) || RETURN",
                         "displayLines": "2",
@@ -278,7 +296,10 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Misha_EnergyCount[<span class=\"descriptionNumberColor\">G—Gonna Be Late!</span>]",
                   "value": {
                     "operator": "Variables[0] (EnergyBar_ExtraUltraAttack) || Variables[1] (EnergyBar_BasicUltraAttack) || ADD || RETURN",

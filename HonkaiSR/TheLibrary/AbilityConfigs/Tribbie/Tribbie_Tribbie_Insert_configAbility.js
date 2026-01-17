@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_Eidolon6_Bonus_Active",
           "valuePerStack": {
             "MDF_PropertyValue": {
@@ -34,7 +37,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Quantum",
@@ -75,7 +81,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_Eidolon6_Bonus_Active"
         }
       ]
@@ -89,7 +98,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_PointB1_DamageUpModifier[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -119,20 +131,29 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Has Flag",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "flagName": "STAT_CTRL",
             "invertCondition": true
           },
           {
             "name": "Has Flag",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "flagName": "DisableAction",
             "invertCondition": true
           },
           {
             "name": "Living State",
             "state": "Mask_AliveOnly",
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           },
           {
             "name": "Compare: Variable",
@@ -147,7 +168,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Enemies Still Alive",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "includeNonTargets": true
           },
           "passed": [
@@ -159,8 +183,14 @@ const configAbility = {
                 "typeValue": 1
               },
               "abilityName": "Tribbie_Insert",
-              "abilitySource": "Caster",
-              "abilityTarget": "All Hostile Entities (AOE)",
+              "abilitySource": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "abilityTarget": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "priorityTag": "AvatarInsertAttackSelf",
               "canHitNonTargets": true,
               "showInActionOrder": true,

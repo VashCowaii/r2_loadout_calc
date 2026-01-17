@@ -14,17 +14,26 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Welt_Passive01Modifier"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "AbilityPreShowModifier"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "AbilityPreShowModifier2"
     },
     {
@@ -54,13 +63,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Target Receiving DMG",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target TAKING DMG}}"
+                },
                 "flagName": "STAT_SpeedDown"
               },
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Target Receiving DMG",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target TAKING DMG}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Imaginary",
@@ -86,7 +101,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (3) || RETURN",
                         "displayLines": "3",
@@ -115,21 +133,30 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": [
-          {
-            "name": "Target List",
-            "target": "All Hostile Entities (AOE)"
-          },
-          {
-            "name": "Target Filter",
-            "conditions": {
-              "name": "Has Modifier",
-              "target": "Use Prior Target(s) Defined",
-              "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
-              "casterFilter": "Caster"
+        "target": {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                "casterFilter": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              }
             }
-          }
-        ],
+          ]
+        },
         "skillType": [
           "Ultimate"
         ],
@@ -154,24 +181,33 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": [
-          {
-            "name": "Target List",
-            "target": "All Hostile Entities (AOE)"
-          },
-          {
-            "name": "Target Filter",
-            "conditions": {
-              "name": "NOT",
-              "condition": {
-                "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
-                "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
-                "casterFilter": "Caster"
+        "target": {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "Standard_Confine[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                  "casterFilter": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  }
+                }
               }
             }
-          }
-        ],
+          ]
+        },
         "skillType": [
           "Ultimate"
         ],

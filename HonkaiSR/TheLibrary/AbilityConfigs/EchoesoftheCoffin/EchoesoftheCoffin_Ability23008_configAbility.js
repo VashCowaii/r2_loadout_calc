@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23008_Main"
     }
   ],
@@ -24,7 +27,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_SpeedDeltaAdd) || RETURN",
@@ -52,7 +58,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "Ability Target List",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Attack Targets of Modifier Holder}}"
+              },
               "searchRandom": true,
               "includeDyingTargets": true,
               "maxTargets": {
@@ -82,7 +91,10 @@ const configAbility = {
             },
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (MDF_EnemyCount) || Variables[1] (3) || MUL || RETURN",
                 "displayLines": "(MDF_EnemyCount * 3)",
@@ -113,7 +125,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "modifier": "LC_23008_SpeedDeltaAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "duration": 1,
                   "valuePerStack": {
@@ -137,23 +152,29 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": [
-          {
-            "name": "Target List",
-            "target": "Allied Team"
-          },
-          {
-            "name": "Target Filter",
-            "conditions": {
-              "name": "NOT",
-              "condition": {
-                "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
-                "modifier": "LC_23008_SpeedDeltaAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+        "target": {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "NOT",
+                "condition": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "LC_23008_SpeedDeltaAddedRatio[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
+                }
               }
             }
-          }
-        ],
+          ]
+        },
         "skillType": [
           "Ultimate"
         ],

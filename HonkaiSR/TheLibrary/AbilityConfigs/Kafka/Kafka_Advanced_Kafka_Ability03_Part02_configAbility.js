@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Advanced_Kafka_PassiveDotDamage_Eidolon1[<span class=\"descriptionNumberColor\">DoT Vulnerability</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -46,7 +49,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Thunder",
@@ -145,7 +151,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "All Hostile Entities (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "modifier": "Standard_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
       "duration": {
         "operator": "Variables[0] (Skill03_P3_LifeTime) || RETURN",
@@ -177,7 +186,10 @@ const configAbility = {
     },
     {
       "name": "Trigger Modifier Event",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "variableName": "DOT_TriggerRatio",
       "eventType": "DOT",
       "value": {
@@ -199,7 +211,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Define Custom Variable with Added Value",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variableName": "_InsertCount",
           "value": 1,
           "max": {

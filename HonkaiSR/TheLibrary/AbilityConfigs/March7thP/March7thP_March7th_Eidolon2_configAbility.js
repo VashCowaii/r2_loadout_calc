@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "March7th_Eidolon2_Shield_pre"
     }
   ],
@@ -32,7 +35,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Shield",
-              "target": "Owner of this Modifier"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
             },
             {
               "name": "Set Shield State/Value",
@@ -45,7 +51,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Create Shield",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (MDF_ShieldValue) || RETURN",
                 "displayLines": "MDF_ShieldValue",
@@ -81,25 +90,40 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "CasterDefence",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;"
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Team Members(In Context)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
                   "maxTargets": 1,
                   "conditions": {
                     "name": "Target Has Lowest/Highest Value",
-                    "target": "Use Prior Target(s) Defined",
-                    "partOf": "All Team Members(In Context)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "partOf": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members}}"
+                    },
                     "compareValue": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;",
                     "minOrMax": "Min"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "March7th_Eidolon2_Shield[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",

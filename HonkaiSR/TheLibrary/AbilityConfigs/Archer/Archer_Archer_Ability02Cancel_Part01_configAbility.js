@@ -15,7 +15,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Archer_Ability02Cancel_Part02",
       "isTrigger": true
     }

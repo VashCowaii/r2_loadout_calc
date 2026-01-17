@@ -234,5 +234,13 @@ let allowedCharacterList = [
   {
     "fullName": "GlobalAbilities",
     "trimName": "GlobalAbilities"
+  },
+  {
+    "fullName": "Global Target Names",
+    "trimName": "GlobalTargetN"
+  },
+  {
+    "fullName": "Global Target Operators",
+    "trimName": "GlobalTargetO"
   }
 ]

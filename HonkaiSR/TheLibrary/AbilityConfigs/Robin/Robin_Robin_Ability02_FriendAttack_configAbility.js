@@ -6,17 +6,26 @@ const configAbility = {
   "parse": [
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Robin_Ability02_Aura"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Robin_Ability02_DmgUpCasterListener[<span class=\"descriptionNumberColor\">Aria</span>]",
       "duration": {
         "operator": "Variables[0] (3) || RETURN",

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_21010_Main"
     }
   ],
@@ -21,14 +24,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || Variables[1] (_Layer) || MUL || RETURN",
@@ -65,22 +74,34 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Target Receiving DMG",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target TAKING DMG}}"
+                },
                 "modifier": "LC_21010_Target",
-                "casterFilter": "Caster"
+                "casterFilter": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               "failed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "valueType": "Layer",
                       "variableName": "MDF_Layer",
                       "modifierName": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
@@ -98,31 +119,46 @@ const configAbility = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "LC_21010_Target",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Target Receiving DMG",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target TAKING DMG}}"
+                      },
                       "modifier": "LC_21010_Target"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "LC_21010_Target",
                       "onlyRemoveOwnersInstance": true
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Target Receiving DMG",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Ability Target TAKING DMG}}"
+                      },
                       "modifier": "LC_21010_Target"
                     }
                   ]
@@ -138,7 +174,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
               },
               "passed": [
@@ -161,7 +200,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "stackLimit": {
                         "operator": "Variables[0] (5) || RETURN",
@@ -188,7 +230,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_21010_DamageAddedRatio[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (5) || RETURN",

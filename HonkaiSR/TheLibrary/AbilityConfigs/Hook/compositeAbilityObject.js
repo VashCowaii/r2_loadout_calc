@@ -28,7 +28,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Hook_Eidolon6"
         }
       ],
@@ -44,7 +47,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_DOT_Burn"
                   },
                   "passed": [
@@ -76,7 +82,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Stack Target Resistance",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "statName": "STAT_CTRL",
           "value": {
             "operator": "Variables[0] (0.35) || RETURN",
@@ -98,7 +107,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Hook_Trace01"
         }
       ],
@@ -127,7 +139,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Hook_Modifier"
         }
       ],
@@ -158,13 +173,19 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Hostile Entities (AOE)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Fire",
@@ -186,14 +207,23 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Flag",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "flagName": "STAT_DOT_Burn"
                           },
                           "passed": [
                             {
                               "name": "Trigger Ability",
-                              "from": "Caster",
-                              "inherentTarget": "Use Prior Target(s) Defined",
+                              "from": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "inherentTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "ability": "Hook_PassiveAbility01_2",
                               "isTrigger": true
                             }
@@ -206,7 +236,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -255,7 +288,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (5) || RETURN",
             "displayLines": "5",
@@ -268,7 +304,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -295,7 +334,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Blast (Adjacent)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -337,7 +379,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Heal",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (0.05) || RETURN",
                 "displayLines": "0.05",
@@ -377,7 +422,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Ability01PreShowModifier"
             }
           ]
@@ -399,7 +447,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Ultimate"
             ],
@@ -426,7 +477,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Fire",
             "Damage": {
@@ -452,7 +506,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -481,14 +538,23 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Burn"
           },
           "passed": [
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Single Target (Primary)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "ability": "Hook_PassiveAbility01_2",
               "isTrigger": true
             }
@@ -506,7 +572,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]"
         },
         {
@@ -518,7 +587,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Hook_Eidolon1_AddDamageRatio",
               "valuePerStack": {
                 "MDF_AddRatio": {
@@ -542,7 +614,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -555,7 +630,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Action Advance/Delay",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "advanceType": "Advance",
               "value": "-0.2"
             }
@@ -621,7 +699,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Hook_Ability03_Part02",
           "isTrigger": true
         }
@@ -644,7 +725,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -670,7 +754,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -695,18 +782,27 @@ const compositeAbilityObject = {
         },
         {
           "name": "Find New Target",
-          "from": "Single Target (Primary) + Blast (Adjacent)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{ST and Blast}}"
+          },
           "searchRandom": true,
           "includeDyingTargets": true,
           "conditions": {
             "name": "Has Flag",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "flagName": "STAT_DOT_Burn"
           },
           "ifTargetFound": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (5) || RETURN",
                 "displayLines": "5",
@@ -731,7 +827,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Blast (Adjacent)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || Variables[1] (1) || ADD || RETURN",
@@ -778,7 +877,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Heal",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (0.05) || RETURN",
                     "displayLines": "0.05",
@@ -793,7 +895,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Fire",
@@ -843,7 +948,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (Rank_LifeTime) || ADD || RETURN",
@@ -876,7 +984,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Ability Binding",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "abilityName": "Skill02",
           "skillSlot": "Skill",
           "enableSecondaryType": "ControlSkill02"
@@ -890,13 +1001,19 @@ const compositeAbilityObject = {
         },
         {
           "name": "Define Modifier Variable",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifierName": "Hook_BPAbilityAlter_Enable[<span class=\"descriptionNumberColor\">Enhanced Skill</span>]",
           "function": "Add"
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Hook_Eidolon1_AddDamageRatio"
         },
         "Trigger: Ability End"
@@ -922,7 +1039,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Hook_Ability21_Part02",
           "isTrigger": true
         }
@@ -937,7 +1057,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -965,14 +1088,23 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Burn"
           },
           "passed": [
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Single Target (Primary)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "ability": "Hook_PassiveAbility01_2",
               "isTrigger": true
             }
@@ -1011,7 +1143,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Standard_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
           "duration": {
             "operator": "Variables[0] (2) || Variables[1] (Rank_LifeTime) || ADD || RETURN",
@@ -1065,7 +1200,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Hook_Ability02_Part02",
           "isTrigger": true
         }
@@ -1080,7 +1218,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -1108,14 +1249,23 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Flag",
-            "target": "Single Target (Primary)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
             "flagName": "STAT_DOT_Burn"
           },
           "passed": [
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Single Target (Primary)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "ability": "Hook_PassiveAbility01_2",
               "isTrigger": true
             }
@@ -1147,7 +1297,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Hook_Ability01_Part02",
           "isTrigger": true
         }
@@ -1174,14 +1327,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill02",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Skill"
                 }
@@ -1192,14 +1351,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill21",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Show",
                   "abilityName": "Skill"
                 }

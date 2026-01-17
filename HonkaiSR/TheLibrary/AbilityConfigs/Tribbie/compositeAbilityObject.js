@@ -30,7 +30,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Tribbie_Eidolon6_Bonus_Active",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -51,7 +54,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -92,7 +98,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Tribbie_Eidolon6_Bonus_Active"
             }
           ]
@@ -106,7 +115,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Tribbie_PointB1_DamageUpModifier[<span class=\"descriptionNumberColor\">Lamb Outside the Wall...</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",
@@ -136,20 +148,29 @@ const compositeAbilityObject = {
             "conditionList": [
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "STAT_CTRL",
                 "invertCondition": true
               },
               {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "DisableAction",
                 "invertCondition": true
               },
               {
                 "name": "Living State",
                 "state": "Mask_AliveOnly",
-                "target": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               },
               {
                 "name": "Compare: Variable",
@@ -164,7 +185,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Enemies Still Alive",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "includeNonTargets": true
               },
               "passed": [
@@ -176,8 +200,14 @@ const compositeAbilityObject = {
                     "typeValue": 1
                   },
                   "abilityName": "Tribbie_Insert",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "priorityTag": "AvatarInsertAttackSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -215,7 +245,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_Maze_Modifier"
         }
       ],
@@ -238,7 +271,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -318,7 +354,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Tribbie_PointB3_AddSpModifier"
             }
           ]
@@ -368,7 +407,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Tribbie_Eidolon6_Bonus[<span class=\"descriptionNumberColor\">Morrow of Star Shine</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -385,7 +427,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_Passive_Listen"
         },
         {
@@ -425,7 +470,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]"
                   },
                   "passed": [
@@ -496,20 +544,32 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "DisableAction",
                             "invertCondition": true
                           },
                           {
                             "name": "Is Part Of",
-                            "of": "Caster",
-                            "target": "Use Prior Target(s) Defined",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "mustBeAlive2": true,
                             "invertCondition": true
                           }
@@ -528,20 +588,32 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "flagName": "DisableAction",
                             "invertCondition": true
                           },
                           {
                             "name": "Is Part Of",
-                            "of": "Caster",
-                            "target": "Use Prior Target(s) Defined",
+                            "of": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "mustBeAlive2": true
                           }
                         ]
@@ -556,7 +628,10 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                           },
                           {
@@ -568,8 +643,14 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Is Part Of",
-                                "of": "Caster",
-                                "target": "Use Prior Target(s) Defined",
+                                "of": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "mustBeAlive2": true
                               }
                             ]
@@ -579,7 +660,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                         },
                         {
@@ -591,7 +675,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Enemies Still Alive",
-                            "target": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           "passed": [
                             {
@@ -602,8 +689,14 @@ const compositeAbilityObject = {
                                 "typeValue": 1
                               },
                               "abilityName": "Tribbie_Insert",
-                              "abilitySource": "Caster",
-                              "abilityTarget": "All Hostile Entities (AOE)",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
                               "priorityTag": "AvatarInsertAttackSelf",
                               "canHitNonTargets": true,
                               "showInActionOrder": true,
@@ -635,7 +728,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Allied Team(ALL) [Exclude Owner and battle mechanics, NO Memosprites]",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]] - {{Caster}}"
+                      },
                       "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
                     }
                   ]
@@ -652,20 +748,29 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -680,7 +785,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
@@ -691,8 +799,14 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Tribbie_Insert",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -718,20 +832,29 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -746,7 +869,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
@@ -757,8 +883,14 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Tribbie_Insert",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -784,20 +916,29 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       },
                       {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -812,7 +953,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Enemies Still Alive",
-                        "target": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       "passed": [
                         {
@@ -823,8 +967,14 @@ const compositeAbilityObject = {
                             "typeValue": 1
                           },
                           "abilityName": "Tribbie_Insert",
-                          "abilitySource": "Caster",
-                          "abilityTarget": "All Hostile Entities (AOE)",
+                          "abilitySource": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "priorityTag": "AvatarInsertAttackSelf",
                           "canHitNonTargets": true,
                           "showInActionOrder": true,
@@ -853,12 +1003,18 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Attack Targets",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_AttackCount"
                 },
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_AttackCount) || Variables[1] (MDF_PropertyValue) || MUL || RETURN",
                     "displayLines": "(MDF_AttackCount * MDF_PropertyValue)",
@@ -892,7 +1048,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (30) || RETURN",
                         "displayLines": "30",
@@ -914,7 +1073,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL, exclude Owner) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Caster}}"
+              },
               "modifier": "Tribbie_PointB3_AddSpAura",
               "haloStatus": true,
               "valuePerStack": {
@@ -940,12 +1102,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Allied Team(ALL) [Exclude Owner and battle mechanics, NO Memosprites]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]] - {{Caster}}"
+          },
           "modifier": "Tribbie_CanTriggerInsertTag[<span class=\"descriptionNumberColor\">Busy as Tribbie</span>]"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_SKL03_Bonus[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",
@@ -984,7 +1152,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Quantum",
@@ -1034,7 +1205,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Tribbie_Ability03_Part02",
           "isTrigger": true
         },
@@ -1058,7 +1232,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "Allied Team TARGETS (Left to Right",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All(Left to Right)}}"
+          },
           "ifTargetFound": [
             {
               "name": "IF",
@@ -1139,7 +1316,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tribbie_SKL02_Bonus[<span class=\"descriptionNumberColor\">Numinosity</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -1186,7 +1366,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Update Energy",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
@@ -1219,7 +1402,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Tribbie_Ability02_Part02",
           "isTrigger": true
         }
@@ -1237,7 +1423,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Quantum",
@@ -1264,7 +1453,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Quantum",
@@ -1313,7 +1505,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Tribbie_Ability01_Part02",
           "isTrigger": true
         },
@@ -1353,7 +1548,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1386,13 +1584,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Tribbie_SKL03_Bonus_Mark",
                         "invertCondition": true
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       }
                     ]
@@ -1405,7 +1609,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Tribbie_SKL03_Bonus_Mark"
                     }
                   ]
@@ -1432,12 +1639,18 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies(All)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "modifier": "Tribbie_SKL03_Bonus_Mark"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies(All)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "modifier": "Tribbie_SKL03_Bonus_HighestHPMark"
                 }
               ]
@@ -1456,7 +1669,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Attack Targets",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "MDF_Count"
                     },
                     {
@@ -1496,67 +1712,88 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": [
-                        {
-                          "name": "Target List",
-                          "target": "All Enemies(All)"
-                        },
-                        {
-                          "name": "Target Filter",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
-                            "modifier": "Tribbie_SKL03_Bonus_Mark",
-                            "justAddedOrActive": true
+                      "from": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All(with Unselectable)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Has Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "Tribbie_SKL03_Bonus_Mark",
+                              "justAddedOrActive": true
+                            }
+                          },
+                          "Shuffle Targets",
+                          {
+                            "name": "Sort by Stat",
+                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "living": true,
+                            "sortByHighest": true
+                          },
+                          {
+                            "name": "Return Target",
+                            "value": 1
                           }
-                        },
-                        "Shuffle Targets",
-                        {
-                          "name": "Sort by Stat",
-                          "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "living": true,
-                          "sortByHighest": true
-                        },
-                        {
-                          "name": "Return Target",
-                          "value": 1
-                        }
-                      ],
+                        ]
+                      },
                       "searchRandom": true,
                       "includeDyingTargets": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Tribbie_SKL03_Bonus_HighestHPMark"
                         },
                         {
                           "name": "Use Custom Character Function",
                           "functionName": "PursuedDamage_PerformanceDelay",
-                          "target": "Ability Target List"
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Attack Targets of Modifier Holder}}"
+                          }
                         },
                         {
                           "name": "Find New Target",
-                          "from": [
-                            {
-                              "name": "Target List",
-                              "target": "All Enemies(All)"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Has Modifier",
-                                "target": "Use Prior Target(s) Defined",
-                                "modifier": "Tribbie_SKL03_Bonus_Mark",
-                                "justAddedOrActive": true
+                          "from": {
+                            "name": "Target Sequence",
+                            "Sequence": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{Enemy Team All(with Unselectable)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Has Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "modifier": "Tribbie_SKL03_Bonus_Mark",
+                                  "justAddedOrActive": true
+                                }
                               }
-                            }
-                          ],
+                            ]
+                          },
                           "searchRandom": true,
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "modifier": "Tribbie_SKL03_Bonus_HighestHPMark",
                             "invertCondition": true
                           },
@@ -1565,8 +1802,14 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Compare: Target",
-                                "target": "Use Prior Target(s) Defined",
-                                "target2": "Highest HP Target(Tribbie)"
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "target2": {
+                                  "name": "Target Name",
+                                  "target": "{{Tribbie's Highest HP Target}}"
+                                }
                               },
                               "passed": [
                                 {
@@ -1611,7 +1854,10 @@ const compositeAbilityObject = {
                           "Event": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Quantum",
@@ -1653,12 +1899,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Battle Event",
                         "invertCondition": true
                       }
@@ -1667,7 +1919,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Damage Data",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_TempDamage",
                       "value": "Result_FinalDamageBase",
                       "context": "ContextCaster"
@@ -1700,12 +1955,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Battle Event",
                         "invertCondition": true
                       }
@@ -1738,12 +1999,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Battle Event",
                         "invertCondition": true
                       }
@@ -1766,7 +2033,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Highest HP Target(Tribbie)",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Tribbie's Highest HP Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
@@ -1822,7 +2092,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team(ALL) NO Memosprites",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+                  },
                   "modifier": "Tribbie_SKL03_PointB2_ListenHPChange"
                 }
               ]
@@ -1832,7 +2105,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Allied Team(ALL) NO Memosprites",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+                  },
                   "modifier": "Tribbie_SKL03_PointB2_ListenHPChange"
                 },
                 {
@@ -1852,22 +2128,34 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(ALL)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
                   "conditions": {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Character"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_HPConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
                     },
@@ -1902,7 +2190,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1930,7 +2221,10 @@ const compositeAbilityObject = {
                   "whenValueChanges": [
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;",
                       "value": {
                         "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1979,22 +2273,34 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Allied Team(ALL) [Exclude battle mechanics and Owner of this Modifier]",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]  - {{Modifier Holder}}"
+                  },
                   "conditions": {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Character"
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_MaxHP",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "MDF_HPConvert",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
                     },
@@ -2029,7 +2335,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Modifier-Specific Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
                   "variableName": "MDF_PropertyValue",
                   "value": {
@@ -2071,22 +2380,34 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team(ALL)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}"
+                      },
                       "conditions": {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Character"
                       },
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "variableName": "MDF_MaxHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                         },
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "variableName": "MDF_HPConvert",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
                         },
@@ -2121,7 +2442,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
                       "variableName": "MDF_PropertyValue",
                       "value": {
@@ -2163,22 +2487,34 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "Allied Team(ALL)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}"
+                      },
                       "conditions": {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Character"
                       },
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "variableName": "MDF_MaxHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                         },
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "variableName": "MDF_HPConvert",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPConverted</span>&nbsp;"
                         },
@@ -2213,7 +2549,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Define Modifier-Specific Variable",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifierName": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
                       "variableName": "MDF_PropertyValue",
                       "value": {
@@ -2256,7 +2595,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Tribbie_SKL03_Bonus_Debuff[<span class=\"descriptionNumberColor\">Guess Who Lives Here</span>]",
               "haloStatus": true,
               "valuePerStack": {
@@ -2280,7 +2622,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Tribbie_SKL03_Bonus_Buff",
               "haloStatus": true,
               "valuePerStack": {
@@ -2296,7 +2641,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Tribbie_SKL03_Eidolon1Listener",
               "haloStatus": true,
               "conditions": {
@@ -2306,7 +2654,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Tribbie_SKL03_PointB2[<span class=\"descriptionNumberColor\">Glass Ball with Wings!</span>]",
               "haloStatus": true,
               "conditions": {
@@ -2326,7 +2677,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2382,7 +2736,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2407,7 +2764,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL) [Exclude Owner]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}-{{Caster}}"
+              },
               "modifier": "Tribbie_SKL02_Bonus_Buff[<span class=\"descriptionNumberColor\">Numinosity</span>]",
               "haloStatus": true,
               "includeBattleEvent": true,
@@ -2424,7 +2784,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}"
+              },
               "modifier": "Tribbie_Eidolon4_Bonus[<span class=\"descriptionNumberColor\">Peace of Empathy Bond</span>]",
               "haloStatus": true,
               "conditions": {
@@ -2455,7 +2818,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "_Layer",
                   "multiplier": 1
@@ -2475,7 +2841,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",

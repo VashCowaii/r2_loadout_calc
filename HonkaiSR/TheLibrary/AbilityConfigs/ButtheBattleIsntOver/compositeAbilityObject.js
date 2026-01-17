@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23003_Main"
         }
       ],
@@ -99,7 +102,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.3) || RETURN",
@@ -136,15 +142,24 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Skill Target List",
-                        "target": "All Team Members(In Context)",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target List}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "NOT",
                         "condition": {
                           "name": "Has Modifier",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "LC_23003_TriggerCD[<span class=\"descriptionNumberColor\">Heir</span>]"
                         }
                       }
@@ -158,7 +173,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "LC_23003_TriggerCD[<span class=\"descriptionNumberColor\">Heir</span>]"
                     }
                   ]
@@ -172,19 +190,34 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "conditions": {
                         "name": "Target is Next Turn",
-                        "target": "Use Prior Target(s) Defined",
-                        "partOf": "All Teammates (Excluding Owner)",
-                        "exclude": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "partOf": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "exclude": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "LC_23003_Sub[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",

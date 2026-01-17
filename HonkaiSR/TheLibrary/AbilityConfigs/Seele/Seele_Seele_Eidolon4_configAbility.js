@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Seele_Eidolon4",
       "valuePerStack": {
         "MDF_AddSP": {
@@ -30,7 +33,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (MDF_AddSP) || RETURN",
                 "displayLines": "MDF_AddSP",

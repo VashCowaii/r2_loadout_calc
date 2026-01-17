@@ -6,29 +6,44 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Numby",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Numby}}"
+      },
       "modifier": "Topaz_BE_UltraEnhance_Text"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Numby",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Numby}}"
+      },
       "modifier": "Topaz_BE_UltraEnhance_Text"
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
     },
     {
       "name": "Trigger Ability",
-      "from": "Numby",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Numby}}"
+      },
       "ability": "Topaz_BE_RefreshEnhance"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]",
       "counter": {
         "operator": "Variables[0] (MaxEnhance) || RETURN",
@@ -100,7 +115,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Numby",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Numby}}"
+      },
       "modifier": "Topaz_BE_UltraEnhance_ShowText",
       "valuePerStack": {
         "ATKCount": {

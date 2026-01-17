@@ -23,7 +23,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Jingliu_Eidolon1_CriticalDamage[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
           "duration": {
             "operator": "Variables[0] (1) || RETURN",
@@ -51,7 +54,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -85,7 +91,10 @@ const configAbility = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -111,7 +120,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -132,7 +144,10 @@ const configAbility = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -165,7 +180,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -199,7 +217,10 @@ const configAbility = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -225,7 +246,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -246,7 +270,10 @@ const configAbility = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -279,7 +306,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -313,7 +343,10 @@ const configAbility = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -339,7 +372,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -360,7 +396,10 @@ const configAbility = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -393,7 +432,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -427,7 +469,10 @@ const configAbility = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -453,7 +498,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -474,7 +522,10 @@ const configAbility = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -504,7 +555,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Jingliu_Frozen_Perform"
     },
     {
@@ -518,7 +572,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Blast (Adjacent)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ability Targets Adjacent(Blast)}}"
+            },
             "value1": "TeamCharacterCount",
             "compareType": ">",
             "value2": 0
@@ -526,7 +583,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Blast (Adjacent)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "modifier": "Jingliu_Frozen_Perform"
             }
           ]
@@ -535,19 +595,28 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Blast (Adjacent)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "modifier": "Jingliu_Frozen_Perform"
         }
       ]
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "All Enemies (AOE)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
       "modifier": "Jingliu_Frozen_Perform"
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "AttackScaling": {
         "DamageType": "Ice",
         "Damage": {
@@ -581,7 +650,10 @@ const configAbility = {
       "passed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -607,7 +679,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -628,7 +703,10 @@ const configAbility = {
       "failed": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Blast (Adjacent)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -659,7 +737,10 @@ const configAbility = {
       "name": "Adjust Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "Jingliu_FullMoonFlag",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": {
         "operator": "Variables[0] (1) || INVERT || RETURN",
         "displayLines": "-1",
@@ -694,7 +775,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Jingliu_Eidolon2[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]"
     },
     {
@@ -706,7 +790,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Owner of this Modifier",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
           "value": {
             "operator": "Variables[0] (8) || RETURN",
             "displayLines": "8",
@@ -746,7 +833,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Target Exists",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "living": true
               },
               "passed": [
@@ -754,7 +844,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_CTRL_Frozen_Effect",
                     "invertCondition": true
                   }
@@ -770,7 +863,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_CTRL_Frozen",
                 "invertCondition": true
               }

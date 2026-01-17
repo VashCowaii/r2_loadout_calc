@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_PlayerBoy_30_Trace01"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_PlayerBoy_30_Trace01_ListenFirstSummon"
     }
   ],
@@ -31,20 +37,32 @@ const configAbility = {
                   {
                     "name": "Character ID",
                     "ID": "ServantID",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "characterName": null
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Caster's Memosprite"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getMemosprite]]"
+                    }
                   }
                 ]
               },
               "passed": [
                 {
                   "name": "Define Custom Variable with Added Value",
-                  "target": "Caster's Memosprite",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}.[[getMemosprite]]"
+                  },
                   "variableName": "CurEnergy",
                   "context": "TargetEntity",
                   "value": {
@@ -85,7 +103,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Action Advance/Delay",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "advanceType": "Set",
                   "value": "(0 - 0.3)"
                 }

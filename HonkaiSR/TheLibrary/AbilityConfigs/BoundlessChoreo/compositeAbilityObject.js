@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21044_Main"
         }
       ],
@@ -49,12 +52,18 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Has Flag",
-                        "target": "Target Receiving DMG",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target TAKING DMG}}"
+                        },
                         "flagName": "STAT_SpeedDown"
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Target Receiving DMG",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target TAKING DMG}}"
+                        },
                         "flagName": "STAT_DefenceDown"
                       }
                     ]

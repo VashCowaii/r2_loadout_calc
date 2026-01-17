@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_123_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -51,7 +57,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "Relic_123_Sub3[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]"
               },
               "failed": [
@@ -69,7 +78,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "Relic_123_Sub3[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -92,7 +104,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "[SUMMONER OF] Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[getSummoner]]"
+              },
               "modifier": "Relic_123_Sub3[<span class=\"descriptionNumberColor\">Hero of Triumphant Song</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -126,7 +141,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.06) || RETURN",
@@ -155,13 +173,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Memosprite"
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use [SUMMONER OF] Prior Target(s) Defined",
-                    "target": "Caster",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}.[[getSummoner]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -169,7 +196,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Relic_123_Sub1"
                 }
               ]
@@ -186,13 +216,22 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Entity Type",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "type": "Memosprite"
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use [SUMMONER OF] Prior Target(s) Defined",
-                    "target": "Caster",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}.[[getSummoner]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -200,12 +239,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Relic_123_Sub1"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster (Memosprite)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
                   "modifier": "Relic_123_Sub2"
                 }
               ]
@@ -219,7 +264,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count",
-                "target": "Caster (Memosprite)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                },
                 "compareType": ">=",
                 "value2": 1,
                 "livingTargets": true
@@ -227,12 +275,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Relic_123_Sub1"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster (Memosprite)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Memosprite}}"
+                  },
                   "modifier": "Relic_123_Sub2"
                 }
               ]

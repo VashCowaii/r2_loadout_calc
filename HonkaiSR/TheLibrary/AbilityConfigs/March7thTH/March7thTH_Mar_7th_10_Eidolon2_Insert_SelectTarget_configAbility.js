@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Find New Target",
-      "from": "All Hostile Entities (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
@@ -14,12 +17,18 @@ const configAbility = {
         "conditionList": [
           {
             "name": "Target Exists",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "living": true
           },
           {
             "name": "Has Modifier",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "modifier": "M_Mar_7th_10_Eidolon2_Mark_Main"
           }
         ]
@@ -27,8 +36,14 @@ const configAbility = {
       "ifTargetFound": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
-          "inherentTarget": "Use Prior Target(s) Defined",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
           "ability": "Mar_7th_10_Eidolon2_Insert_Part01",
           "isTrigger": true
         }
@@ -36,19 +51,31 @@ const configAbility = {
       "noTargetFound": [
         {
           "name": "Find New Target",
-          "from": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "conditions": {
             "name": "Target Exists",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "living": true
           },
           "ifTargetFound": [
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Use Prior Target(s) Defined",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "ability": "Mar_7th_10_Eidolon2_Insert_Part01",
               "isTrigger": true
             }
@@ -56,7 +83,10 @@ const configAbility = {
           "noTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "M_Mar_7th_10_InsertCheck"
             }
           ]
@@ -67,7 +97,10 @@ const configAbility = {
   "onAbort": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Mar_7th_10_InsertCheck"
     }
   ],

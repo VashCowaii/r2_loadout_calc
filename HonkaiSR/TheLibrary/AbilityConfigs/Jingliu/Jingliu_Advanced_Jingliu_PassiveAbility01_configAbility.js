@@ -16,20 +16,29 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Jingliu_LoseHPPreShow"
     },
     {
       "name": "Read Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "Jingliu_MoonFlag",
-      "on": "Caster"
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      }
     },
     {
       "name": "Read Variable Value",
       "adjustmentType": "Add to Value (Default)",
       "variableName": "Jingliu_FullMoonFlag",
-      "on": "Caster"
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      }
     },
     {
       "name": "IF",
@@ -72,7 +81,10 @@ const configAbility = {
       "name": "Adjust Variable Value",
       "adjustmentType": "Overwrite Value",
       "variableName": "Jingliu_MoonFlag",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "value": 0
     },
     {
@@ -112,7 +124,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Jingliu_Passive"
     }
   ],

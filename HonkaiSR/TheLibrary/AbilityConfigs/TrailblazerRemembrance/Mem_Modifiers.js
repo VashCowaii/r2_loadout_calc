@@ -23,7 +23,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "Is_Copy",
                 "compareType": "<=",
                 "value2": 0
@@ -31,12 +34,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "[MEMOSPRITE(if Summoner) OR SUMMONER(if Memo) OF] Owner of this Modifier",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+                  },
                   "includeDyingTargets": true,
                   "ifTargetFound": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
                     }
                   ]
@@ -45,7 +54,10 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "[MEMOSPRITE(if Summoner) OR SUMMONER(if Memo) OF] Owner of this Modifier",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+              },
               "includeDyingTargets": true,
               "maxTargets": 1,
               "conditions": {
@@ -57,12 +69,18 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                     "invertCondition": true
                   }
@@ -71,7 +89,10 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
                   "referenceModifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
                   "valuePerStack": {
@@ -150,7 +171,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Damage Data",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_originalDamage",
                   "value": "Result_FinalDamageBase",
                   "context": "ContextModifier"
@@ -159,7 +183,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "_originalDamage",
                     "compareType": ">",
                     "value2": 0,
@@ -168,7 +195,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": {
@@ -189,7 +219,10 @@ const configAbility = {
                         "Tags": null,
                         "attackType": "True DMG"
                       },
-                      "overrideDamageOwner": "Owner of this Modifier",
+                      "overrideDamageOwner": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "isConvertedDMG": true,
                       "dealAfterOriginialHit": true
                     }
@@ -209,12 +242,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
                   }
                 ]
@@ -222,14 +261,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
                 }
               ]
             },
             {
               "name": "Override Modifier Name",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifierName": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
               "modifierNameUpdate": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
             },
@@ -246,7 +291,10 @@ const configAbility = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -279,8 +327,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use Prior Target(s) Defined",
-                    "target": "[MEMOSPRITE(if Summoner) OR SUMMONER(if Memo) OF] Owner of this Modifier",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -288,7 +342,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy"
                 }
               ]
@@ -331,7 +388,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "[MEMOSPRITE(if Summoner) OR SUMMONER(if Memo) OF] Owner of this Modifier",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
+          },
           "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus_Eidolon1Copy",
           "refModifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]",
           "aliveOnly": "False",
@@ -348,11 +408,17 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Target Exists",
-                    "target": "[MEMOSPRITE OF] Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                    }
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "[MEMOSPRITE OF] Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                    },
                     "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   }
                 ],
@@ -363,11 +429,17 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Target Exists",
-                    "target": "[SUMMONER OF] Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getSummoner]]"
+                    }
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "[SUMMONER OF] Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}.[[getSummoner]]"
+                    },
                     "modifier": "Memosprite_PlayerBoyServant_30_UltraBonus[<span class=\"descriptionNumberColor\">Mem's Support</span>]"
                   }
                 ],
@@ -448,7 +520,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "_propertyBase",
               "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
             },
@@ -468,7 +543,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageConverted</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -508,8 +586,14 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Target",
-                    "target": "Owner of this Modifier",
-                    "target2": "Current Action Owner"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    }
                   }
                 ]
               }
@@ -521,24 +605,36 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityName": "Skill01",
               "skillSlot": "Memosprite"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Hide",
               "abilityName": "Basic ATK"
             },
             {
               "name": "Force Auto-Battle on Target",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "enable": true
             },
             {
               "name": "Force Target-Lock on Target",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "enable": true
             }
           ]
@@ -551,23 +647,35 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityName": "Skill11",
               "skillSlot": "Memosprite"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Show",
               "abilityName": "Basic ATK"
             },
             {
               "name": "Force Auto-Battle on Target",
-              "target": "Owner of this Modifier"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
             },
             {
               "name": "Force Target-Lock on Target",
-              "target": "Owner of this Modifier"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              }
             }
           ]
         },

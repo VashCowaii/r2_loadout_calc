@@ -17,7 +17,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Target Count",
-            "target": "Caster (Memosprite)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster's Memosprite}}"
+            },
             "compareType": "<=",
             "value2": 0,
             "livingTargets": true
@@ -59,7 +62,10 @@ const configAbility = {
               "afterSummon": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill21",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"

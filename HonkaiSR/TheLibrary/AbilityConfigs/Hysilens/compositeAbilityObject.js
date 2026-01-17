@@ -31,7 +31,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "StageAbility_Maze_Harscyline_Modifier"
         }
       ],
@@ -204,14 +207,20 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Harscyline_Ability03_Halopre"
             }
           ]
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Harscyline_PassiveRandomDOT"
         },
         {
@@ -223,7 +232,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Harscyline_PointB3"
             }
           ]
@@ -237,7 +249,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Harscyline_DOTDamageUpPre",
               "valuePerStack": {
                 "MDF_DamageUpRatio": {
@@ -302,13 +317,19 @@ const compositeAbilityObject = {
               "parse": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "SkillTree_PointB3_StatusProbabilityPlusConvertValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "SkillTree_PointB3_StatusProbabilityConvertValue",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateConverted</span>&nbsp;"
                 },
@@ -403,7 +424,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
                       "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
                     }
                   ],
@@ -419,7 +443,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "Harscyline_Ability03_HaloStatus"
                           }
                         ]
@@ -427,7 +454,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Allied Team(ALL) [Exclude battle mechanics]",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                          },
                           "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
@@ -444,7 +474,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
                           "valuePerStack": {
                             "MDF_PropertyRatio": {
@@ -485,22 +518,34 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Secondary Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
                         "name": "Is Entity a Battle Event/Summon",
-                        "target": "Use Secondary Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        },
                         "invertCondition": true
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamDark"
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "modifier": "Harscyline_FirstHitFlag",
                         "invertCondition": true
                       }
@@ -513,7 +558,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_FirstHitFlag"
                     }
                   ]
@@ -525,7 +573,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "All Enemies(All)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All(with Unselectable)}}"
+                  },
                   "modifier": "Harscyline_FirstHitFlag"
                 }
               ]
@@ -552,7 +603,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Harscyline_Ability03_HaloStatus",
                       "duration": {
                         "operator": "Variables[0] (3) || RETURN",
@@ -624,12 +678,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Harscyline_Ability03_Flag"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Harscyline_Ability03_HaloStatus",
           "duration": {
             "operator": "Variables[0] (Skill03_HaloLifeTime) || RETURN",
@@ -684,7 +744,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -719,7 +782,10 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Has Flag",
-                "target": "All Hostile Entities (AOE)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
                 "flagName": "STAT_DOT"
               }
             ]
@@ -727,7 +793,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Trigger Modifier Event",
-              "target": "All Hostile Entities (AOE)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "variableName": "DOT_TriggerRatio",
               "eventType": "DOT",
               "value": {
@@ -744,7 +813,10 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Harscyline_Ability03_Flag"
         },
         "Trigger: Skip Death Handling",
@@ -772,7 +844,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Harscyline_Ability03_Part02",
           "isTrigger": true
         }
@@ -795,7 +870,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "All Hostile Entities (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "modifier": "Harscyline_AllDamageTypeTakenRatio[<span class=\"descriptionNumberColor\">Overtone Hum: Chorus After Dark Tides</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -826,7 +904,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -874,7 +955,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Harscyline_Ability02_Part02",
           "isTrigger": true
         }
@@ -889,7 +973,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -916,7 +1003,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
@@ -964,7 +1054,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Harscyline_Ability01_Part02",
           "isTrigger": true
         },
@@ -1002,12 +1095,21 @@ const compositeAbilityObject = {
                         "attackTypes": [
                           "DOT"
                         ],
-                        "target": "Use Prior Target(s) Defined"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Battle Events/Summon)",
-                        "target": "Use [REAL SUMMONER OF] Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSourceCreator]]"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -1044,7 +1146,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Harscyline_Eidolon1_DamageUp",
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
@@ -1086,14 +1191,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "Modifier_Poison_PoisonLayer",
                   "multiplier": 1
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
@@ -1117,14 +1228,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "Modifier_Poison_PoisonLayer",
                   "multiplier": 1
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
@@ -1181,7 +1298,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
@@ -1217,7 +1337,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "_Layer",
                   "multiplier": 1
@@ -1229,7 +1352,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
@@ -1299,7 +1425,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1323,7 +1452,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "_Layer",
                   "multiplier": 1
@@ -1335,7 +1467,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1381,13 +1516,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Prior Snapshot Entity",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
                   "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
@@ -1446,13 +1587,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Prior Snapshot Entity",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
                   "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
@@ -1506,7 +1653,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
@@ -1529,13 +1679,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Prior Snapshot Entity",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
                   "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
@@ -1589,7 +1745,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
@@ -1637,14 +1796,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "Modifier_Poison_PoisonLayer",
                   "multiplier": 1
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
@@ -1668,14 +1833,20 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "Modifier_Poison_PoisonLayer",
                   "multiplier": 1
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
@@ -1732,7 +1903,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
@@ -1768,7 +1942,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "_Layer",
                   "multiplier": 1
@@ -1780,7 +1957,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
@@ -1850,7 +2030,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1874,7 +2057,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "_Layer",
                   "multiplier": 1
@@ -1886,7 +2072,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
@@ -1932,13 +2121,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Prior Snapshot Entity",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
                   "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
@@ -1997,13 +2192,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Prior Snapshot Entity",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
                   "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
@@ -2057,7 +2258,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
@@ -2081,7 +2285,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "valueType": "Layer",
                   "variableName": "_Layer",
                   "multiplier": 1
@@ -2093,13 +2300,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "MDF_TargetMaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Prior Snapshot Entity",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Snapshot Stat Source}}"
+                  },
                   "variableName": "MDF_CasterAttack",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
                 },
@@ -2153,7 +2366,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Physical",
                     "Damage": {
@@ -2238,7 +2454,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
@@ -2261,7 +2480,10 @@ const compositeAbilityObject = {
                       "conditions": {
                         "name": "Living State",
                         "state": "Mask_AliveOnly",
-                        "target": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       }
                     }
                   ]
@@ -2279,13 +2501,22 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Harscyline_TriggerDotFlag"
                     },
                     {
@@ -2316,8 +2547,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Owner of this Modifier"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
                       },
                       {
                         "name": "Compare: Variable",
@@ -2373,7 +2610,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
@@ -2398,7 +2638,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
@@ -2456,20 +2699,29 @@ const compositeAbilityObject = {
                             "attackTypes": [
                               "DOT"
                             ],
-                            "target": "Use Prior Target(s) Defined"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
                           },
                           {
                             "name": "AND",
                             "conditionList": [
                               {
                                 "name": "Has Modifier",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "modifier": "Memosprite_CyreneServant_AmazingBonus_Harscyline[<span class=\"descriptionNumberColor\">Ode to Ocean</span>]"
                               },
                               {
                                 "name": "Character ID",
                                 "ID": 1415,
-                                "target": "Use Prior Target(s) Defined",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
                                 "characterName": "Cyrene"
                               }
                             ]
@@ -2486,13 +2738,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "Harscyline_Ability03_Flag",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "Harscyline_TriggerDotFlag",
                             "invertCondition": true
                           },
@@ -2523,7 +2781,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Harscyline_TriggerDotFlag"
                         }
                       ],
@@ -2565,7 +2826,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Entity a Battle Event/Summon",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "invertCondition": true
                       }
                     ]
@@ -2606,7 +2870,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "Harscyline_Ability03_Flag",
                         "invertCondition": true
                       }
@@ -2638,7 +2905,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
@@ -2670,15 +2940,24 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target",
-                    "target": "Use Prior Target(s) Defined",
-                    "target2": "Owner of this Modifier"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
                   },
                   "passed": [
                     {
@@ -2700,7 +2979,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
@@ -2710,14 +2992,26 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "All Hostile Entities (AOE)(ALL)",
-                        "target": "Use [LIST OF] Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target List}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -2747,7 +3041,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
@@ -2772,14 +3069,26 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                        "target": "Use Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "mustBeAlive2": true
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "All Hostile Entities (AOE)(ALL)",
-                        "target": "Use [LIST OF] Prior Target(s) Defined",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target List}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -2787,7 +3096,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "Harscyline_TriggerDotFlag"
                     },
                     {
@@ -2814,7 +3126,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
@@ -2839,7 +3154,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Harscyline_TriggerDotFlag"
                 },
                 {
@@ -2869,7 +3187,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -2905,7 +3226,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_DefenceDownRatio) || SUB || RETURN",
@@ -2920,7 +3244,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_AttackDownRatio) || SUB || RETURN",
@@ -2938,12 +3265,18 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "Eidolon Activated",
                     "eidolon": 4,
-                    "target": "Caster"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
                   },
                   "passed": [
                     {
                       "name": "Stack Target Stat Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAll</span>&nbsp;",
                       "value": {
                         "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDownRatio) || SUB || RETURN",
@@ -2979,7 +3312,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -3032,7 +3368,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Allied Team(ALL, exclude Owner) [Exclude battle mechanics]",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster}}"
+                  },
                   "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]"
                 },
                 {
@@ -3137,7 +3476,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Harscyline_Maze_Flag"
                   },
                   "failed": [
@@ -3150,7 +3492,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Harscyline_Maze_Flag"
                     }
                   ]
@@ -3169,7 +3514,10 @@ const compositeAbilityObject = {
           "subModList": [
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Harscyline_PassiveDot_Trigger",
               "haloStatus": true,
               "valuePerStack": {
@@ -3193,7 +3541,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Harscyline_PassiveDot_Part1Listen",
               "haloStatus": true,
               "valuePerStack": {
@@ -3217,7 +3568,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "All Hostile Entities (AOE)(ALL)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+              },
               "modifier": "Harscyline_HaloDebuff[<span class=\"descriptionNumberColor\">Maelstrom Rhapsody</span>]",
               "haloStatus": true,
               "valuePerStack": {
@@ -3265,7 +3619,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "Add Sub-Events/Bonuses",
-              "to": "Allied Team(ALL, exclude Owner) [Exclude battle mechanics]",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Caster}}"
+              },
               "modifier": "Harscyline_PointB3_DamageAdded[<span class=\"descriptionNumberColor\">The Fiddle of Pearls</span>]",
               "haloStatus": true,
               "conditions": {
@@ -3347,7 +3704,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                 "invertCondition": true
               },
@@ -3370,7 +3730,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                 "invertCondition": true
               },
@@ -3393,7 +3756,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                 "invertCondition": true
               },
@@ -3416,7 +3782,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                 "invertCondition": true
               },
@@ -3489,7 +3858,10 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "ifTargetFound": [
                 {
                   "name": "Use Custom Character Function",
@@ -3541,7 +3913,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3580,7 +3955,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Tear2[<span class=\"descriptionNumberColor\">Bleed</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3621,7 +3999,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3669,7 +4050,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3700,7 +4084,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Electric2[<span class=\"descriptionNumberColor\">Shock</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3733,7 +4120,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3773,7 +4163,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3804,7 +4197,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Burn2[<span class=\"descriptionNumberColor\">Burn</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3837,7 +4233,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3877,7 +4276,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3908,7 +4310,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Poison2[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -3941,7 +4346,10 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                           "duration": {
                             "operator": "Variables[0] (2) || RETURN",
@@ -4032,7 +4440,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4071,7 +4482,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Tear2[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4112,7 +4526,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Tear[<span class=\"descriptionNumberColor\">Bleed</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4160,7 +4577,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4191,7 +4611,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Electric2[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4224,7 +4647,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Electric[<span class=\"descriptionNumberColor\">Shock</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4264,7 +4690,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4295,7 +4724,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Burn2[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4328,7 +4760,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Burn[<span class=\"descriptionNumberColor\">Burn</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4368,7 +4803,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4399,7 +4837,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Poison2[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",
@@ -4432,7 +4873,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Harscyline_DOT_Poison[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",

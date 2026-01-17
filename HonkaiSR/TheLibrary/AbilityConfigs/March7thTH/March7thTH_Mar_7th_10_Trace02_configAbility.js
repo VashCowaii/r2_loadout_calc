@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Mar_7th_10_Trace02"
     }
   ],
@@ -26,22 +29,40 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Teammates + Unselectable (Excluding Owner)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                     }
                   },
                   {
                     "name": "Is Weak to Attacker",
-                    "weakTo": "March 7th's Shifu",
-                    "target": "Use Prior Target(s) Defined"
+                    "weakTo": {
+                      "name": "Target Name",
+                      "target": "{{Marth 7th's Shifu}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "Is Weak to Attacker",
-                    "weakTo": "Caster",
-                    "target": "Use Prior Target(s) Defined",
+                    "weakTo": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "invertCondition": true
                   }
                 ]
@@ -49,7 +70,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Flags to Modifier",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": [
                     "ForceStanceDamage"
                   ],
@@ -74,7 +98,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Flags from Modifier",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "flagName": [
                 "ForceStanceDamage"
               ],
@@ -101,10 +128,16 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count SUM",
-                "target": "All Teammates + Unselectable (Excluding Owner)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+                },
                 "conditions": {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Mar_7th_10_Ability02_Master[<span class=\"descriptionNumberColor\">Shifu</span>]"
                 },
                 "invertCondition": true

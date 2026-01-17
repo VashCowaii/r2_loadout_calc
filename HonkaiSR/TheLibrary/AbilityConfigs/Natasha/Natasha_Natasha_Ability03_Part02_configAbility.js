@@ -13,11 +13,17 @@ const configAbility = {
       "passed": [
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "searchRandom": true,
           "conditions": {
             "name": "Compare: Variable",
-            "target": "Use Prior Target(s) Defined",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
             "value1": "CurrentHP%",
             "compareType": "<=",
             "value2": {
@@ -32,7 +38,10 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Natasha_Eidolon2_HOT_HPByMaxHP[<span class=\"descriptionNumberColor\">Healing Over Time</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -68,7 +77,10 @@ const configAbility = {
     },
     {
       "name": "Heal",
-      "target": "All Team Members(In Context)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{All Team Members}}"
+      },
       "healPercent": {
         "operator": "Variables[0] (0.138) || RETURN",
         "displayLines": "0.138",
@@ -89,20 +101,32 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
     },
     {
       "name": "Find New Target",
-      "from": "Skill Target List",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Target List}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Compare: Target",
-        "target": "Use Prior Target(s) Defined",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },
@@ -122,7 +146,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "CurrentHP",
                 "compareType": ">",
                 "value2": 0
@@ -130,7 +157,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Heal",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
                     "displayLines": "MDF_ShowValue1",

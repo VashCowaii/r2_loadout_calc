@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Ren_TechniqueUsage_AOE"
     }
   ],
@@ -50,7 +53,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "CurrentHP%",
                         "compareType": ">",
                         "value2": 0.5
@@ -72,7 +78,10 @@ const configAbility = {
                 {
                   "name": "Consume",
                   "consumeFrom": "MaxHP",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "consumePercent": {
                     "operator": "Variables[0] (0.2) || RETURN",
                     "displayLines": "0.2",
@@ -86,7 +95,10 @@ const configAbility = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Wind",

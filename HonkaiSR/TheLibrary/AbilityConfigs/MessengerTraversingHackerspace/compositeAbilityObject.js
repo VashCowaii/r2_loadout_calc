@@ -13,12 +13,18 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_114_Main"
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_114_AbilityPreShowModifier"
         }
       ],
@@ -32,7 +38,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Allied Team",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
             "skillType": [
               "Ultimate"
             ],
@@ -41,13 +50,19 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Has Modifier",
-                  "target": "Use Prior Target(s) Defined",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Relic_114_Sub[<span class=\"descriptionNumberColor\">Messenger Traversing Hackerspace</span>]",
                   "invertCondition": true
                 },
                 {
                   "name": "Is Part Of Team",
-                  "target": "Skill Indicator Target List",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Indicator Target List}}"
+                  },
                   "team": "TeamLight"
                 }
               ]
@@ -71,7 +86,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.12) || RETURN",
@@ -108,14 +126,23 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": "Skill Target List",
-                        "target": "Allied Team",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target List}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Player Team All}}"
+                        },
                         "mustBeAlive2": true
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Allied Team",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
                           "modifier": "Relic_114_Sub[<span class=\"descriptionNumberColor\">Messenger Traversing Hackerspace</span>]",
                           "duration": {
                             "operator": "Variables[0] (1) || RETURN",

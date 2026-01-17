@@ -18,7 +18,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Archer_Ability03_Part02",
       "isTrigger": true
     },
@@ -26,7 +29,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Monster Rank",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "compareType": ">=",
         "value2": 5
       }

@@ -8,7 +8,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Current Action Holder Is",
-        "target": "Single Target (Primary)"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        }
       },
       "passed": [
         "Deleted bullshit"
@@ -19,7 +22,10 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "MDF_Sparkle_CritDmgValue",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
     },
@@ -50,7 +56,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Sparkle_Ability02_CritDmgAddedRatio01[<span class=\"descriptionNumberColor\">Dreamdiver</span>]",
       "duration": {
         "operator": "Variables[0] (1) || RETURN",
@@ -83,15 +92,24 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Is Part Of",
-        "of": "Single Target (Primary)",
-        "target": "Caster",
+        "of": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "mustBeAlive2": true,
         "invertCondition": true
       },
       "passed": [
         {
           "name": "Action Advance/Delay",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "advanceType": "Advance",
           "value": "-0.5"
         }

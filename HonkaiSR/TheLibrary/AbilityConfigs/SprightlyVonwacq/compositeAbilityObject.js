@@ -13,7 +13,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_308_Main"
         }
       ],
@@ -38,7 +41,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Ability Value",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
@@ -53,7 +59,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Action Advance/Delay",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "advanceType": "Advance",
                           "value": "-0.4"
                         }

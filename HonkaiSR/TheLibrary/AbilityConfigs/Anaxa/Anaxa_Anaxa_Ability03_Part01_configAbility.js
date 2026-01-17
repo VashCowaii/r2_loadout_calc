@@ -18,7 +18,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Anaxa_Ability03_Part02",
       "isTrigger": true
     },
@@ -26,7 +29,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target Count",
-        "target": "Anaxa Ultimate Targets",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Anaxa's Ult Target List}}"
+        },
         "compareType": ">=",
         "value2": 3,
         "isClientOnly": true
@@ -36,7 +42,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Is Entity a Part/Body Extension",
-            "target": "Anaxa Ultimate Targets (3 MAX)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}.[[index2]]"
+            },
             "invertCondition": true
           }
         }
@@ -46,7 +55,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target Count",
-        "target": "Anaxa Ultimate Targets",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Anaxa's Ult Target List}}"
+        },
         "compareType": ">=",
         "value2": 2,
         "isClientOnly": true
@@ -56,7 +68,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Is Entity a Part/Body Extension",
-            "target": "Anaxa Ultimate Targets (2 MAX)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}.[[index1]]"
+            },
             "invertCondition": true
           }
         }
@@ -66,7 +81,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target Count",
-        "target": "Anaxa Ultimate Targets",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Anaxa's Ult Target List}}"
+        },
         "compareType": ">=",
         "value2": 4,
         "isClientOnly": true
@@ -76,7 +94,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Is Entity a Part/Body Extension",
-            "target": "Anaxa Ultimate Targets (4 MAX)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}.[[index3]]"
+            },
             "invertCondition": true
           }
         }
@@ -86,7 +107,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target Count",
-        "target": "Anaxa Ultimate Targets",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Anaxa's Ult Target List}}"
+        },
         "compareType": ">=",
         "value2": 1,
         "isClientOnly": true
@@ -96,7 +120,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Is Entity a Part/Body Extension",
-            "target": "Anaxa Ultimate Targets (1 MAX)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}.[[index0]]"
+            },
             "invertCondition": true
           }
         }
@@ -106,7 +133,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target Count",
-        "target": "Anaxa Ultimate Targets",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Anaxa's Ult Target List}}"
+        },
         "compareType": ">=",
         "value2": 5,
         "isClientOnly": true
@@ -116,7 +146,10 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Is Entity a Part/Body Extension",
-            "target": "Anaxa Ultimate Targets (5 MAX)",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Anaxa's Ult Target List}}.[[index4]]"
+            },
             "invertCondition": true
           }
         }

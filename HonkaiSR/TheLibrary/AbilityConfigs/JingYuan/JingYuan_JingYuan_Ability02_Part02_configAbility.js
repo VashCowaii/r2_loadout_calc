@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCount[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
       "stackLimit": {
         "operator": "Variables[0] (10) || RETURN",
@@ -91,7 +94,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster's own Created Battle Event/Summon",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Self-Made Battle-Events}}"
+      },
       "modifier": "JingYuan_BattleEvent_ATKCountShowText",
       "valuePerStack": {
         "ATKCount": {
@@ -106,7 +112,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster's own Created Battle Event/Summon",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Self-Made Battle-Events}}"
+      },
       "modifier": "JingYuan_BattleEvent_SpeedUp",
       "stackLimit": {
         "operator": "Variables[0] (10) || Variables[1] (3) || SUB || RETURN",
@@ -138,7 +147,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "AttackScaling": {
         "DamageType": "Thunder",
         "Damage": {
@@ -165,7 +177,10 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "All Hostile Entities (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "searchRandom": true,
       "includeDyingTargets": true,
       "ifTargetFound": [
@@ -179,7 +194,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -205,7 +223,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -231,7 +252,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -261,14 +285,20 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 0.3,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
     },
     {
       "name": "Find New Target",
-      "from": "All Hostile Entities (AOE)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "searchRandom": true,
       "includeDyingTargets": true,
       "ifTargetFound": [
@@ -282,7 +312,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -308,7 +341,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -334,7 +370,10 @@ const configAbility = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "AttackScaling": {
                 "DamageType": "Thunder",
                 "Damage": {
@@ -365,7 +404,10 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 0.3,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -379,7 +421,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "JingYuan_Tree03_CriticalChanceUp[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
           "duration": {
             "operator": "Variables[0] (2) || RETURN",

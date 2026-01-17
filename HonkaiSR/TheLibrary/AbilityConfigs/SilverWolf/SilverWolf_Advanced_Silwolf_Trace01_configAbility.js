@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Silwolf_Trace01_Bonus"
     }
   ],
@@ -32,8 +35,14 @@ const configAbility = {
             },
             {
               "name": "Trigger Ability",
-              "from": "Caster",
-              "inherentTarget": "Use Prior Target(s) Defined",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "inherentTarget": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "ability": "Advanced_Silwolf_PassiveAbility_RandomBug"
             }
           ]

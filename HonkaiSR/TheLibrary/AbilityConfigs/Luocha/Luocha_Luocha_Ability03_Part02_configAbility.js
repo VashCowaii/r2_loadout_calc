@@ -27,7 +27,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Hostile Entities (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "modifier": "Luocha_Eidolon6_AllDamageTypeResistance[<span class=\"descriptionNumberColor\">Reunion With the Dust</span>]",
               "duration": {
                 "operator": "Variables[0] (2) || RETURN",
@@ -54,7 +57,10 @@ const configAbility = {
     },
     {
       "name": "Dispel Debuffs",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "typeOverride": "Buff",
       "dispelCount": {
         "operator": "Variables[0] (1) || RETURN",
@@ -71,13 +77,19 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Luocha_Passive01_HealHPArea"
       },
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]",
           "valuePerStack": {
             "MDF_PassiveLayer": {
@@ -94,7 +106,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Imaginary",

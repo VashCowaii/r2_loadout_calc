@@ -15,7 +15,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_BlackSwan_Modifier"
     }
   ],
@@ -41,7 +44,10 @@ const configAbility = {
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "MazeSkill_Triggered",
                     "compareType": "<",
                     "value2": 1,
@@ -49,7 +55,10 @@ const configAbility = {
                   },
                   {
                     "name": "Enemies Still Alive",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "includeNonTargets": true
                   }
                 ]
@@ -58,8 +67,14 @@ const configAbility = {
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "BlackSwan_TechniqueInLevel_Insert",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "All Hostile Entities (AOE)",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "priorityTag": "AvatarBuffSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,

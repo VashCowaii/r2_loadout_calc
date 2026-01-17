@@ -6,26 +6,41 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Team Count",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "variableName": "Skill02_TargetNumber",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
       }
     },
     {
       "name": "Shot Fired",
-      "caster": "Psuedo Partners",
+      "caster": {
+        "name": "Target Name",
+        "target": "{{Pseudo-Character Partner}}"
+      },
       "projectileCountTotal": 4
     },
     {
       "name": "Shot Fired",
-      "caster": "Psuedo Partners",
+      "caster": {
+        "name": "Target Name",
+        "target": "{{Pseudo-Character Partner}}"
+      },
       "projectileCountTotal": 4,
       "projectileDMG": {
         "name": "ATK Scaling DMG",
-        "target": "Clara's Counter Target",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Clara's Counter Target}}"
+        },
         "AttackScaling": {
           "DamageType": "Physical",
           "Damage": {
@@ -46,7 +61,10 @@ const configAbility = {
     },
     {
       "name": "ATK Scaling DMG",
-      "target": "All Hostile Entities (AOE)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Physical",
@@ -81,7 +99,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Clara's Counter Target",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Clara's Counter Target}}"
+          },
           "modifier": "Klara_BPAbility_Revenge[<span class=\"descriptionNumberColor\">Mark of Counter</span>]"
         }
       ]

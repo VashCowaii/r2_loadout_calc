@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_118_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (0.3) || RETURN",
@@ -58,14 +64,23 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": "Skill Target List",
-                    "target": "All Team Members(In Context)",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Ability Target List}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members}}"
+                    },
                     "mustBeAlive2": true
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "Relic_118_Sub[<span class=\"descriptionNumberColor\">Watchmaker, Master of Dream Machinations</span>]",
                       "duration": {
                         "operator": "Variables[0] (2) || RETURN",

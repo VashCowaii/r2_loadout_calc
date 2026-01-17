@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Relic_321_Main"
     }
   ],
@@ -21,7 +24,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -59,7 +65,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -78,7 +87,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -97,7 +109,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -116,7 +131,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
@@ -164,7 +182,10 @@ const configAbility = {
         },
         {
           "name": "Define Custom Variable with Team Count",
-          "target": "Allied Team",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "variableName": "_TeamCount",
           "livingTargets": true
         },
@@ -207,7 +228,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -223,7 +247,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster (Memosprite)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -250,12 +277,18 @@ const configAbility = {
           "passed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster (Memosprite)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]"
             }
           ]
@@ -298,7 +331,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -314,7 +350,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster (Memosprite)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
               "modifier": "Relic_321_Sub[<span class=\"descriptionNumberColor\">Arcadia of Woven Dreams</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {

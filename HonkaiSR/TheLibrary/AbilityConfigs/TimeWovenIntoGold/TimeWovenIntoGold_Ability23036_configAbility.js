@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23036_Main"
     }
   ],
@@ -61,7 +64,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_23036_CriticalDamage",
               "valuePerStack": {
                 "_CritDamageRatio": {
@@ -178,7 +184,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "LC_23036_CriticalDamage",
               "valuePerStack": {
                 "_CritDamageRatio": {
@@ -195,7 +204,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "_Layer",
                 "compareType": "=",
                 "value2": {
@@ -234,7 +246,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "[MEMOSPRITE OF] Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}.[[getMemosprite]]"
+              },
               "modifier": "LC_23036_Effect_Servant[<span class=\"descriptionNumberColor\">Brocade</span>]",
               "valuePerStack": {
                 "_CritDamageRatioTotal": {
@@ -273,7 +288,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster (Memosprite)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
           "modifier": "LC_23036_Effect_Servant[<span class=\"descriptionNumberColor\">Brocade</span>]",
           "haloStatus": true,
           "valuePerStack": {
@@ -315,7 +333,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (_CritDamageRatio) || RETURN",
@@ -347,8 +368,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": "Caster + Memosprite",
-                "target": "Use Prior Target(s) Defined",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Caster}} + {{Caster's Memosprite}}"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "mustBeAlive2": true
               },
               "passed": [
@@ -356,14 +383,20 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "LC_23036_Effect[<span class=\"descriptionNumberColor\">Brocade</span>]",
                     "invertCondition": true
                   },
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster + Memosprite",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}} + {{Caster's Memosprite}}"
+                      },
                       "modifier": "LC_23036_CriticalDamage",
                       "valuePerStack": {
                         "_CritDamageRatio": {
@@ -380,7 +413,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "LC_23036_Effect[<span class=\"descriptionNumberColor\">Brocade</span>]",
                   "stackLimit": {
                     "operator": "Variables[0] (AbilityEquip_P2_MaxLayer) || RETURN",
@@ -418,7 +454,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster + Memosprite",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} + {{Caster's Memosprite}}"
+          },
           "modifier": "LC_23036_CriticalDamage",
           "haloStatus": true
         }
@@ -433,7 +472,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "LC_23036_Listen",
               "valuePerStack": {
                 "AbilityEquip_P2_MaxLayer": {

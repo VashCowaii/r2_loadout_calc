@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Anaxa_Modifier"
     }
   ],
@@ -33,7 +36,10 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Level Entity",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
                     "modifier": "StageAbility_MazeStandard_EnterBattle_Monster_Modifier",
                     "invertCondition": true
                   },
@@ -51,10 +57,16 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Team Members(In Context, with Untargetable)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "flagName": "STAT_TriggerBattleCharacter"
                   },
                   "ifTargetFound": [
@@ -62,7 +74,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Physical"
@@ -71,7 +86,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "modifier": "Standard_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -88,7 +106,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Fire"
@@ -97,7 +118,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "modifier": "Standard_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -114,7 +138,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Ice"
@@ -123,7 +150,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "modifier": "Standard_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -140,7 +170,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Thunder"
@@ -149,7 +182,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "modifier": "Standard_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -166,7 +202,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Wind"
@@ -175,7 +214,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "modifier": "Standard_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -192,7 +234,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Quantum"
@@ -201,7 +246,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "modifier": "Standard_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -218,7 +266,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Element",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "DamageType": {
                           "name": "Damage Type Source",
                           "sourceType": "Imaginary"
@@ -227,7 +278,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Hostile Entities (AOE)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          },
                           "modifier": "Standard_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",

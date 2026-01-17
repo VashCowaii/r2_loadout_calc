@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "UI Display Event (On Entity)",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "popUpText": "Energy Regeneration"
     },
     {
@@ -18,7 +21,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Single Target (Primary)",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "value": {
             "operator": "Variables[0] (50) || Variables[1] (10) || ADD || RETURN",
             "displayLines": "(50 + 10)",
@@ -35,7 +41,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Update Energy",
-          "on": "Single Target (Primary)",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "value": {
             "operator": "Variables[0] (50) || RETURN",
             "displayLines": "50",
@@ -51,7 +60,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "TingYun_Ability03DamageUp[<span class=\"descriptionNumberColor\">Amidst the Rejoicing Clouds</span>]",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
@@ -75,7 +87,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -93,7 +108,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_DamageAddedRatio) || RETURN",

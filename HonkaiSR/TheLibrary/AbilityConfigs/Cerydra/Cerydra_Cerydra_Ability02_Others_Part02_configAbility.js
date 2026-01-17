@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster's Ability Target[?]",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}} | {{Ability Target(ST)}}"
+          },
           "modifier": "Cerydra_PointB3[<span class=\"descriptionNumberColor\">Vici</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -45,7 +48,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Update Energy",
-          "on": "Single Target (Primary)",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "value": {
             "operator": "Variables[0] (2) || RETURN",
             "displayLines": "2",
@@ -61,7 +67,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -70,7 +79,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Single Target (Primary)",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
         "modifier": "Cerydra_Ability02_Target",
         "invertCondition": true,
         "justAddedOrActive": true
@@ -78,7 +90,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Cerydra_Ability02_Target",
           "valuePerStack": {
             "DV_PointAdded_Get": {
@@ -114,7 +129,10 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Has Modifier",
-                "target": "Single Target (Primary)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Target(ST)}}"
+                },
                 "modifier": "Cerydra_Ability02_Target_Lv1[<span class=\"descriptionNumberColor\">Military Merit</span>]"
               },
               {
@@ -181,7 +199,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "modifier": "Cerydra_Maze_Modifier"
       },
       "passed": [
@@ -197,7 +218,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Cerydra_Maze_Modifier"
         }
       ]

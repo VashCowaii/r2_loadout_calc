@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Added Value",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "YuKong_Flower_Count",
       "context": "TargetEntity",
       "value": -1,
@@ -54,7 +57,10 @@ const configAbility = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Yukong_Flower"
         }
       ],

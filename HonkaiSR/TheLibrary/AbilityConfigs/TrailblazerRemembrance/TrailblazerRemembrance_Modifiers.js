@@ -17,13 +17,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityName": "Skill01",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Hide",
               "abilityName": "Basic ATK"
             }
@@ -34,13 +40,19 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Ability Binding",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityName": "Skill11",
               "skillSlot": "Basic ATK"
             },
             {
               "name": "Update Ability Enhance Button",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "display": "Show",
               "abilityName": "Basic ATK"
             }
@@ -50,7 +62,10 @@ const configAbility = {
       "removalDependencies": {
         "name": "Removal Dependency",
         "dependancyName": "PlayerBoy_30_UltraState[<span class=\"descriptionNumberColor\">Epic</span>]",
-        "casterFilter": "Caster"
+        "casterFilter": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
       }
     },
     {
@@ -65,7 +80,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": null,
                 "compareType": "<=",
                 "value2": 0,
@@ -79,7 +97,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster (Memosprite)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
                     "compareType": ">",
                     "value2": 0,
                     "livingTargets": true
@@ -87,14 +108,20 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState_Sub"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "PlayerBoy_30_UltraState_Sub"
                     }
                   ]
@@ -110,7 +137,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count",
-                "target": "Caster (Memosprite)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                },
                 "compareType": ">",
                 "value2": 0,
                 "livingTargets": true
@@ -118,14 +148,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_30_UltraState_Sub"
                 }
               ],
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_30_UltraState_Sub"
                 }
               ]
@@ -139,7 +175,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target Count",
-                "target": "Caster (Memosprite)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster's Memosprite}}"
+                },
                 "compareType": ">",
                 "value2": 0,
                 "livingTargets": true
@@ -147,14 +186,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_30_UltraState_Sub"
                 }
               ],
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_30_UltraState_Sub"
                 }
               ]
@@ -168,13 +213,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Caster",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
                 "flagName": "Charm"
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_30_UltraState_Sub"
                 }
               ]
@@ -191,13 +242,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "Charm",
                     "invertCondition": true
                   },
                   {
                     "name": "Compare: Target Count",
-                    "target": "Caster (Memosprite)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
                     "compareType": ">",
                     "value2": 0,
                     "livingTargets": true
@@ -207,7 +264,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "PlayerBoy_30_UltraState_Sub"
                 }
               ]
@@ -241,7 +301,10 @@ const configAbility = {
         ],
         "conditions": {
           "name": "Compare: Target Count",
-          "target": "Caster (Memosprite)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster's Memosprite}}"
+          },
           "compareType": "<=",
           "value2": 0,
           "livingTargets": true
@@ -266,7 +329,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": "_spDelta",
                 "compareType": ">",
                 "value2": 0
@@ -276,7 +342,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster (Memosprite)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
                     "compareType": ">=",
                     "value2": 1,
                     "livingTargets": true
@@ -296,7 +365,10 @@ const configAbility = {
                     },
                     {
                       "name": "Define Custom Variable with Added Value",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "variableName": "_tmpTeamAddSP",
                       "context": "ContextModifier",
                       "value": {

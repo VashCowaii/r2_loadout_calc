@@ -6,13 +6,19 @@ const configAbility = {
   "parse": [
     {
       "name": "Find New Target",
-      "from": "Allied Team(ALL) [Exclude battle mechanics]",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+      },
       "searchRandom": true,
       "includeDyingTargets": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Has Modifier",
-        "target": "Use Prior Target(s) Defined",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
         "modifier": "Huohuo_Passive"
       },
       "ifTargetFound": [
@@ -23,12 +29,18 @@ const configAbility = {
             "conditionList": [
               {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
               },
               {
                 "name": "Compare: Variable",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "value1": "Huohuo_Rank02_ReviveCount",
                 "compareType": ">",
                 "value2": 0
@@ -38,34 +50,52 @@ const configAbility = {
           "passed": [
             {
               "name": "Define Custom Variable with Added Value",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "Huohuo_Passive_HotCount",
               "value": -1,
               "max": 2
             },
             {
               "name": "Define Modifier Variable",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifierName": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]",
               "function": "Add",
               "valueType": "Duration"
             },
             {
               "name": "Define Custom Variable with Added Value",
-              "target": "Use Prior Target(s) Defined",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "variableName": "Huohuo_Rank02_ReviveCount",
               "value": -1,
               "max": 2
             },
             {
               "name": "Dispel Debuffs",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "silent": true
             },
             {
               "name": "Heal",
-              "target": "Single Target (Primary)",
-              "healer": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "healer": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (AADF_1) || RETURN",
                 "displayLines": "AADF_1",
@@ -83,12 +113,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "modifier": "Huohuo_Passive_HealMark[<span class=\"descriptionNumberColor\">Divine Provision</span>]"
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "value1": "Huohuo_Rank02_ReviveCount",
                     "compareType": ">",
                     "value2": 0
@@ -98,16 +134,19 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": [
-                    {
-                      "name": "Target List",
-                      "target": "All Team Members(In Context)"
-                    },
-                    {
-                      "name": "Target List",
-                      "target": "All Untargetable"
-                    }
-                  ],
+                  "to": {
+                    "name": "Join Targets",
+                    "TargetList": [
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
+                      {
+                        "name": "Target Name",
+                        "target": "{{All Unselectable Targets}}"
+                      }
+                    ]
+                  },
                   "modifier": "Huohuo_Eidolon2"
                 }
               ]
@@ -116,16 +155,19 @@ const configAbility = {
           "failed": [
             {
               "name": "Remove Events/Bonuses",
-              "to": [
-                {
-                  "name": "Target List",
-                  "target": "All Team Members(In Context)"
-                },
-                {
-                  "name": "Target List",
-                  "target": "All Untargetable"
-                }
-              ],
+              "to": {
+                "name": "Join Targets",
+                "TargetList": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Team Members}}"
+                  },
+                  {
+                    "name": "Target Name",
+                    "target": "{{All Unselectable Targets}}"
+                  }
+                ]
+              },
               "modifier": "Huohuo_Eidolon2"
             }
           ]

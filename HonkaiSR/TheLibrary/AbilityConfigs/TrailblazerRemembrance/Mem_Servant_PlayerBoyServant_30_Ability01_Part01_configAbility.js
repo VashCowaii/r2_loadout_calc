@@ -17,7 +17,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Servant_PlayerBoyServant_30_Ability01_Part02",
       "isTrigger": true
     },
@@ -25,7 +28,10 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Has Flag",
-        "target": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "flagName": "Charm"
       },
       "passed": [

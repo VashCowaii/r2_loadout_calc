@@ -29,24 +29,39 @@ const configAbility = {
                     "attackTypes": [
                       "DOT"
                     ],
-                    "target": "Use Prior Target(s) Defined"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   },
                   {
                     "name": "Is Damage Type/Element",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "list": [
                       "Lightning"
                     ]
                   },
                   {
                     "name": "Is Joint-Attack",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "invertCondition": true
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use Prior Target(s) Defined(REAL SOURCE OF)",
-                    "target": "Caster",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target's Source Owner}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]
@@ -54,7 +69,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (2) || RETURN",
                     "displayLines": "2",
@@ -82,13 +100,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Enemies (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "modifier": "Advanced_Kafka_Eidolon4_Sub"
                 }
               ]
@@ -118,7 +142,10 @@ const configAbility = {
                 "attackTypes": [
                   "DOT"
                 ],
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
@@ -157,17 +184,26 @@ const configAbility = {
           "execute": [
             {
               "name": "Find New Target",
-              "from": "All Hostile Entities (AOE)(ALL) [Exclude Owner]",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE, with Unselectables)}} - {{Modifier Holder}}"
+              },
               "maxTargets": 99,
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Advanced_Kafka_Friend_Mark_Main"
               },
               "ifTargetFound": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Advanced_Kafka_Friend_Mark_Main"
                 }
               ]
@@ -184,14 +220,26 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "Use Prior Target(s) Defined",
-                    "target": "Caster's Entire Team [Exclude Owner]",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}.[[getTeamMembers]] - {{Caster}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Is Part Of",
-                    "of": "Use [LIST OF] Prior Target(s) Defined",
-                    "target": "All Hostile Entities (AOE)(ALL)",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target List}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                    },
                     "mustBeAlive2": true
                   }
                 ]

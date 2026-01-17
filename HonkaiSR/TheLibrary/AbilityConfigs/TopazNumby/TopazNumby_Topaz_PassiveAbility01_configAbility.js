@@ -17,27 +17,42 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_Passive"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_Passive_Sub_ListenAction"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_BPAbility_ModifyBEAction"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_Ultimate_Normal_ModifyBEAction"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Topaz_Ultimate_BPAbility_ModifyBEAction"
     },
     {
@@ -49,7 +64,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_Normal_ModifyBEAction"
         }
       ]
@@ -98,7 +116,10 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Numby",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Numby}}"
+      },
       "modifier": "Topaz_BE_BaseSpeed"
     },
     {
@@ -110,7 +131,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Topaz_PointB2Effect"
         }
       ]
@@ -124,7 +148,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Numby",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "modifier": "Topaz_BE_ReduceDelay"
         }
       ]
@@ -164,16 +191,28 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Enemies (AOE)(Living)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}.[[living]]"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     "invertCondition": true
@@ -183,7 +222,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Topaz_BE_FindNoTargetFlag"
                 }
               ]
@@ -200,16 +242,28 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Enemies (AOE)(Living)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}.[[living]]"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     "invertCondition": true
@@ -219,7 +273,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
                 }
               ]
@@ -236,16 +293,28 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Enemies (AOE)(Living)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}.[[living]]"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     "invertCondition": true
@@ -255,7 +324,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
                 }
               ]
@@ -272,16 +344,28 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Part Of",
-                    "of": "All Team Members(In Context, with Untargetable + Battle Events)",
-                    "target": "Use Prior Target(s) Defined",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members with Unselectables}}.[[addBattleEvents]]"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "mustBeAlive2": true
                   },
                   {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Enemies (AOE)(Living)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}.[[living]]"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
                     },
                     "invertCondition": true
@@ -291,7 +375,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Topaz_BE_FindNoTargetFlag"
                 }
               ]
@@ -314,7 +401,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Trigger Ability",
-              "from": "Numby",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "ability": "Topaz_BE_Hit"
             }
           ]
@@ -326,13 +416,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamLight"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_Ultimate_Listen_ModifyBEAction"
                 }
               ]
@@ -344,7 +440,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Numby",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "modifier": "Topaz_BE_HitEffect"
             }
           ]
@@ -354,7 +453,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Teammates (Excluding Owner)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
               "modifier": "Topaz_Ultimate_Listen_ModifyBEAction"
             }
           ],
@@ -372,18 +474,27 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_BE_FindNoTargetFlag"
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue1_DamageAdd": {
@@ -427,18 +538,27 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_BE_FindNoTargetFlagOnUltraOrExtraTurn"
                 },
                 {
                   "name": "Find New Target",
-                  "from": "All Enemies (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
                   "searchRandom": true,
                   "maxTargets": 1,
                   "ifTargetFound": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Use Prior Target(s) Defined",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue1_DamageAdd": {
@@ -482,14 +602,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_BETargetTagHitFlag"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
                   },
                   "passed": [
@@ -497,13 +623,19 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Current Turn Is",
-                        "target": "Numby",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Numby}}"
+                        },
                         "invertCondition": true
                       },
                       "passed": [
                         {
                           "name": "Action Advance/Delay",
-                          "target": "Numby",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Numby}}"
+                          },
                           "advanceType": "Advance",
                           "value": "-0.5"
                         }
@@ -522,20 +654,29 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "Topaz_BETargetTagInsertHitFlag"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Current Turn Is",
-                    "target": "Numby",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Numby}}"
+                    },
                     "invertCondition": true
                   },
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
-                      "target": "Numby",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Numby}}"
+                      },
                       "advanceType": "Advance",
                       "value": "-0.5"
                     }
@@ -552,8 +693,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
               }
             }
           ]
@@ -573,7 +720,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Weakness",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "DamageType": "Fire"
               },
               "passed": [
@@ -610,7 +760,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (80) || RETURN",
@@ -638,7 +791,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Numby",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Numby}}"
+        },
         "skillType": [
           "Basic ATK",
           "Skill",
@@ -649,21 +805,33 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Compare: Target Count SUM",
-              "target": "Current Visual Target(All)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player's Aim Target List}}"
+              },
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
               }
             },
             {
               "name": "Has Modifier",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
             },
             {
               "name": "Current Turn Is",
-              "target": "Numby",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "invertCondition": true
             }
           ]
@@ -689,7 +857,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Numby",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Numby}}"
+        },
         "skillType": [
           "Skill"
         ],
@@ -698,12 +869,18 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Has Modifier",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
             },
             {
               "name": "Current Turn Is",
-              "target": "Numby",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "invertCondition": true
             }
           ]
@@ -729,7 +906,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Numby",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Numby}}"
+        },
         "skillType": [
           "Basic ATK"
         ],
@@ -738,17 +918,26 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Has Modifier",
-              "target": "Allied Team Skill Lock Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team Ability Target Lock}}"
+              },
               "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
             },
             {
               "name": "Has Modifier",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Topaz_UltraEnhance[<span class=\"descriptionNumberColor\">Windfall Bonanza!</span>]"
             },
             {
               "name": "Current Turn Is",
-              "target": "Numby",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "invertCondition": true
             }
           ]
@@ -774,13 +963,19 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Numby",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Numby}}"
+        },
         "skillType": [
           "Skill"
         ],
         "conditions": {
           "name": "Current Turn Is",
-          "target": "Numby",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Numby}}"
+          },
           "invertCondition": true
         },
         "delayAdvancePreview": {
@@ -804,7 +999,10 @@ const configAbility = {
       "previewValue": {
         "name": "Modifier: UI Preview",
         "show": "Hide",
-        "target": "Numby",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Numby}}"
+        },
         "skillType": [
           "Basic ATK"
         ],
@@ -813,12 +1011,18 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Has Modifier",
-              "target": "Allied Team Skill Lock Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team Ability Target Lock}}"
+              },
               "modifier": "Topaz_BETargetTag[<span class=\"descriptionNumberColor\">Proof of Debt</span>]"
             },
             {
               "name": "Current Turn Is",
-              "target": "Numby",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Numby}}"
+              },
               "invertCondition": true
             }
           ]

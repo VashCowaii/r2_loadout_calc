@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Define Custom Variable with Added Value",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "YuKong_Flower_Count",
       "context": "TargetEntity",
       "value": {
@@ -62,13 +65,19 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "Yukong_Ability02_FlowerFlag"
           },
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Yukong_Flower",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
@@ -101,7 +110,10 @@ const configAbility = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Team Members(In Context, with Untargetable)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{All Team Members with Unselectables}}"
+              },
               "modifier": "Yukong_Flower",
               "valuePerStack": {
                 "MDF_AttackAddedRatio": {
@@ -137,7 +149,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Yukong_Flower",
           "valuePerStack": {
             "MDF_AttackAddedRatio": {

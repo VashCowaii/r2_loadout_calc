@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Tingyun_Trace_B1_SpeedUp[<span class=\"descriptionNumberColor\">Nourished Joviality</span>]",
           "duration": 1,
           "valuePerStack": {
@@ -31,13 +34,19 @@ const configAbility = {
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Single Target (Primary)",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "variableName": "MDF_Target_CurrentAttack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;"
     },
     {
       "name": "Define Custom Variable with Stat",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "variableName": "MDF_Tingyun_Attack",
       "value": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;"
     },
@@ -113,16 +122,19 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": [
-        {
-          "name": "Target List",
-          "target": "All Team Members(In Context)"
-        },
-        {
-          "name": "Target List",
-          "target": "All Untargetable"
-        }
-      ],
+      "to": {
+        "name": "Join Targets",
+        "TargetList": [
+          {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets}}"
+          }
+        ]
+      },
       "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]"
     },
     {
@@ -139,7 +151,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -173,7 +188,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "MWTingYun_BPAbility_AttackDelta[<span class=\"descriptionNumberColor\">Benediction</span>]",
           "duration": {
             "operator": "Variables[0] (3) || RETURN",
@@ -207,58 +225,70 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": [
-        {
-          "name": "Target List",
-          "target": "All Team Members(In Context)"
-        },
-        {
-          "name": "Target List",
-          "target": "All Untargetable"
-        }
-      ],
+      "to": {
+        "name": "Join Targets",
+        "TargetList": [
+          {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets}}"
+          }
+        ]
+      },
       "modifier": "TingYun_Passive_LeiLing"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": [
-        {
-          "name": "Target List",
-          "target": "All Team Members(In Context)"
-        },
-        {
-          "name": "Target List",
-          "target": "All Untargetable"
-        }
-      ],
+      "to": {
+        "name": "Join Targets",
+        "TargetList": [
+          {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets}}"
+          }
+        ]
+      },
       "modifier": "TingYun_Passive_LeiLing_Eidolon1"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": [
-        {
-          "name": "Target List",
-          "target": "All Team Members(In Context)"
-        },
-        {
-          "name": "Target List",
-          "target": "All Untargetable"
-        }
-      ],
+      "to": {
+        "name": "Join Targets",
+        "TargetList": [
+          {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets}}"
+          }
+        ]
+      },
       "modifier": "TingYun_Passive_LeiLing_Eidolon2"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": [
-        {
-          "name": "Target List",
-          "target": "All Team Members(In Context)"
-        },
-        {
-          "name": "Target List",
-          "target": "All Untargetable"
-        }
-      ],
+      "to": {
+        "name": "Join Targets",
+        "TargetList": [
+          {
+            "name": "Target Name",
+            "target": "{{All Team Members}}"
+          },
+          {
+            "name": "Target Name",
+            "target": "{{All Unselectable Targets}}"
+          }
+        ]
+      },
       "modifier": "TingYun_Passive_LeiLing_Eidolon4"
     },
     {
@@ -270,7 +300,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "TingYun_Passive_LeiLing_Eidolon4",
           "valuePerStack": {
             "MDF_Passive_DamagePercentage": {
@@ -335,7 +368,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Single Target (Primary)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "modifier": "TingYun_Passive_LeiLing_Eidolon2",
               "valuePerStack": {
                 "MDF_Passive_DamagePercentage": {
@@ -392,7 +428,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "modifier": "TingYun_Passive_LeiLing_Eidolon1",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
@@ -434,7 +473,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Single Target (Primary)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "modifier": "TingYun_Passive_LeiLing",
                   "valuePerStack": {
                     "MDF_Passive_DamagePercentage": {
@@ -487,7 +529,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"

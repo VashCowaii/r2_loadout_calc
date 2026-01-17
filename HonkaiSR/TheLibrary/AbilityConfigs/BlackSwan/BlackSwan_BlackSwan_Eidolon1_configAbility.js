@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "BlackSwan_Eidolon1"
     }
   ],
@@ -24,7 +27,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -57,7 +63,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFireBonus</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -90,7 +99,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistancePhysicalBonus</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -123,7 +135,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
               "value": {
                 "operator": "Constants[0] (0) || Variables[0] (MDF_PropertyValue) || SUB || RETURN",
@@ -161,12 +176,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   }
                 ]
@@ -174,7 +195,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -189,7 +213,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -204,7 +231,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -219,7 +249,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -238,13 +271,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_DOT_Poison"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -263,13 +302,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_DOT_Bleed"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -288,13 +333,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_DOT_Burn"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -313,13 +364,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_DOT_Electric"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -341,22 +398,34 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
             }
           ]
@@ -368,7 +437,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_DOT_Poison"
               },
               "passed": [
@@ -376,7 +448,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                     "invertCondition": true
                   },
@@ -395,7 +470,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -412,7 +490,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -421,7 +502,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_DOT_Bleed"
               },
               "passed": [
@@ -429,7 +513,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                     "invertCondition": true
                   },
@@ -448,7 +535,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -465,7 +555,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -474,7 +567,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_DOT_Burn"
               },
               "passed": [
@@ -482,7 +578,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                     "invertCondition": true
                   },
@@ -501,7 +600,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -518,7 +620,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -527,7 +632,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "STAT_DOT_Electric"
               },
               "passed": [
@@ -535,7 +643,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                     "invertCondition": true
                   },
@@ -554,7 +665,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -571,7 +685,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -592,7 +709,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]"
                   }
                 ]
@@ -600,7 +720,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -615,7 +738,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -630,7 +756,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -645,7 +774,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -671,14 +803,20 @@ const configAbility = {
                 "name": "NOT",
                 "condition": {
                   "name": "Has Flag",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": "STAT_DOT_Poison"
                 }
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -689,14 +827,20 @@ const configAbility = {
                 "name": "NOT",
                 "condition": {
                   "name": "Has Flag",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": "STAT_DOT_Bleed"
                 }
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -707,14 +851,20 @@ const configAbility = {
                 "name": "NOT",
                 "condition": {
                   "name": "Has Flag",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": "STAT_DOT_Burn"
                 }
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -725,14 +875,20 @@ const configAbility = {
                 "name": "NOT",
                 "condition": {
                   "name": "Has Flag",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": "STAT_DOT_Electric"
                 }
               },
               "passed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]"
                 }
               ]
@@ -753,7 +909,10 @@ const configAbility = {
                   },
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   }
                 ]
@@ -761,7 +920,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -776,7 +938,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -791,7 +956,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -806,7 +974,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -830,7 +1001,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_WindResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -854,7 +1028,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_PhysicalResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -878,7 +1055,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_FireResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -902,7 +1082,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_ThunderResistanceDown[<span class=\"descriptionNumberColor\">Seven Pillars of Wisdom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -932,13 +1115,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of Team",
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "team": "TeamDark"
               },
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "BlackSwan_Eidolon1_SubOnEnemy",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -960,7 +1149,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "All Hostile Entities (AOE)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Hostile Entities(AOE)}}"
+              },
               "modifier": "BlackSwan_Eidolon1_SubOnEnemy",
               "valuePerStack": {
                 "MDF_PropertyValue": {

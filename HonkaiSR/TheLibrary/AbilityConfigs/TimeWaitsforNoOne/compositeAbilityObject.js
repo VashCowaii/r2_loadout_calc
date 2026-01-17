@@ -35,7 +35,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_23013_Main"
         }
       ],
@@ -53,7 +56,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_HealAmount"
                 },
                 {
@@ -92,7 +98,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "LC_23013_Sub"
                 }
               ]
@@ -113,7 +122,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -127,20 +139,29 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "Use [ATTACK TARGETS OF] Prior Target(s) Defined",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target's Attack Targets}}"
+                      },
                       "searchRandom": true,
                       "maxTargets": 1,
                       "ifTargetFound": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": {
                               "name": "Custom Damage Type",
                               "initialTypePreRead": "Physical",
                               "sourceType": "ReadTargetType",
-                              "readTarget": "Caster"
+                              "readTarget": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              }
                             },
                             "Damage": {
                               "operator": "Variables[0] (_TotalAmount) || Variables[1] (0.36) || MUL || RETURN",
@@ -179,7 +200,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Use Prior Target(s) Defined",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "modifier": "LC_23013_Sub"
                 }
               ]

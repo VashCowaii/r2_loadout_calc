@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Technique_Jingliu_Modifier"
     }
   ],
@@ -48,7 +51,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Target Exists",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "living": true
               },
               "passed": [
@@ -56,7 +62,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_CTRL_Frozen_Effect",
                     "invertCondition": true
                   }
@@ -70,7 +79,10 @@ const configAbility = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -91,7 +103,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "value1": null,
                 "compareType": "=",
                 "value2": 1,
@@ -100,7 +115,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "UI Display Event (On Entity)",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "popUpText": "Frozen"
                 }
               ]
@@ -124,7 +142,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Disable Abilities",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "abilityTypes": [
                 "Ultimate"
               ],
@@ -151,7 +172,10 @@ const configAbility = {
               "name": "Adjust Variable Value",
               "adjustmentType": "Add to Value (Default)",
               "variableName": "Jingliu_MoonFlag",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (MDF_MazeMoonFlag) || RETURN",
                 "displayLines": "MDF_MazeMoonFlag",
@@ -203,7 +227,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "Technique_Jingliu_Modifier_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
                   "duration": {
                     "operator": "Variables[0] (1) || RETURN",
@@ -245,7 +272,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (15) || RETURN",
                     "displayLines": "15",
@@ -258,7 +288,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_TechniqueUsage",
                   "valuePerStack": {
                     "MDF_MazeMoonFlag": {

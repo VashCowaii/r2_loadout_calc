@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bailu_Eidolon4"
         }
       ]
@@ -24,7 +27,10 @@ const configAbility = {
       "execute": [
         {
           "name": "Heal",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "healPercent": {
             "operator": "Variables[0] (0.117) || RETURN",
             "displayLines": "0.117",
@@ -45,7 +51,10 @@ const configAbility = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Standard_AbilityTarget"
         }
       ]
@@ -76,7 +85,10 @@ const configAbility = {
     },
     {
       "name": "Find New Target",
-      "from": "Allied Team",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Player Team All}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "ifTargetFound": [
@@ -116,7 +128,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Heal",
-              "target": "Projectile Target Hit",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Projectile's Target}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
                 "displayLines": "MDF_HealPercentage",
@@ -137,7 +152,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Projectile Target Hit",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Projectile's Target}}"
+              },
               "modifier": "Standard_AbilityTarget"
             }
           ]
@@ -159,7 +177,10 @@ const configAbility = {
       "Event": [
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "searchRandom": true,
           "maxTargets": 1,
           "ifTargetFound": [
@@ -199,7 +220,10 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Heal",
-                  "target": "Projectile Target Hit",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Projectile's Target}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF_HealPercentage) || RETURN",
                     "displayLines": "MDF_HealPercentage",
@@ -220,7 +244,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Projectile Target Hit",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Projectile's Target}}"
+                  },
                   "modifier": "Standard_AbilityTarget"
                 }
               ]
@@ -231,7 +258,10 @@ const configAbility = {
     },
     {
       "name": "Update Energy",
-      "on": "Caster",
+      "on": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
@@ -245,20 +275,32 @@ const configAbility = {
       "passed": [
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Bailu_Eidolon4"
         }
       ]
     },
     {
       "name": "Find New Target",
-      "from": "Skill Target List",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Ability Target List}}"
+      },
       "searchRandom": true,
       "maxTargets": 1,
       "conditions": {
         "name": "Compare: Target",
-        "target": "Use Prior Target(s) Defined",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },

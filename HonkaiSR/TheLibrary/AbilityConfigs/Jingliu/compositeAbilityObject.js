@@ -41,7 +41,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Technique_Jingliu_Modifier"
         }
       ],
@@ -75,7 +78,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "living": true
                   },
                   "passed": [
@@ -83,7 +89,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL_Frozen_Effect",
                         "invertCondition": true
                       }
@@ -97,7 +106,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -118,7 +130,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": null,
                     "compareType": "=",
                     "value2": 1,
@@ -127,7 +142,10 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "UI Display Event (On Entity)",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "popUpText": "Frozen"
                     }
                   ]
@@ -151,7 +169,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Ultimate"
                   ],
@@ -178,7 +199,10 @@ const compositeAbilityObject = {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Add to Value (Default)",
                   "variableName": "Jingliu_MoonFlag",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (MDF_MazeMoonFlag) || RETURN",
                     "displayLines": "MDF_MazeMoonFlag",
@@ -230,7 +254,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Hostile Entities (AOE)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
                       "modifier": "Technique_Jingliu_Modifier_Frozen[<span class=\"descriptionNumberColor\">Frozen</span>]",
                       "duration": {
                         "operator": "Variables[0] (1) || RETURN",
@@ -272,7 +299,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (15) || RETURN",
                         "displayLines": "15",
@@ -285,7 +315,10 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_TechniqueUsage",
                       "valuePerStack": {
                         "MDF_MazeMoonFlag": {
@@ -334,7 +367,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Eidolon1_CriticalDamage[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -362,7 +398,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -396,7 +435,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Blast (Adjacent)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -422,7 +464,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -443,7 +488,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Blast (Adjacent)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -476,7 +524,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -510,7 +561,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Blast (Adjacent)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -536,7 +590,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -557,7 +614,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Blast (Adjacent)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -590,7 +650,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -624,7 +687,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Blast (Adjacent)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -650,7 +716,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -671,7 +740,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Blast (Adjacent)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -704,7 +776,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -738,7 +813,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Blast (Adjacent)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -764,7 +842,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Single Target (Primary)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -785,7 +866,10 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Blast (Adjacent)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Ice",
                     "Damage": {
@@ -815,7 +899,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Single Target (Primary)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "modifier": "Jingliu_Frozen_Perform"
         },
         {
@@ -829,7 +916,10 @@ const compositeAbilityObject = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "target": "Blast (Adjacent)",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ability Targets Adjacent(Blast)}}"
+                },
                 "value1": "TeamCharacterCount",
                 "compareType": ">",
                 "value2": 0
@@ -837,7 +927,10 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Blast (Adjacent)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Ability Targets Adjacent(Blast)}}"
+                  },
                   "modifier": "Jingliu_Frozen_Perform"
                 }
               ]
@@ -846,19 +939,28 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Blast (Adjacent)",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "modifier": "Jingliu_Frozen_Perform"
             }
           ]
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "All Enemies (AOE)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
           "modifier": "Jingliu_Frozen_Perform"
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
@@ -892,7 +994,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -918,7 +1023,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -939,7 +1047,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
@@ -970,7 +1081,10 @@ const compositeAbilityObject = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "Jingliu_FullMoonFlag",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (1) || INVERT || RETURN",
             "displayLines": "-1",
@@ -1005,7 +1119,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Remove Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Jingliu_Eidolon2[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]"
         },
         {
@@ -1017,7 +1134,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Owner of this Modifier",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (8) || RETURN",
                 "displayLines": "8",
@@ -1057,7 +1177,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Target Exists",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "living": true
                   },
                   "passed": [
@@ -1065,7 +1188,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "STAT_CTRL_Frozen_Effect",
                         "invertCondition": true
                       }
@@ -1081,7 +1207,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_CTRL_Frozen",
                     "invertCondition": true
                   }
@@ -1108,7 +1237,10 @@ const compositeAbilityObject = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Overwrite Value",
           "variableName": "Jingliu_MoonFlag",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": 0
         },
         "Deleted bullshit",
@@ -1137,7 +1269,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "AdvancedJingliu_Attack_Transfer",
           "valuePerStack": {
             "AbilityP01_P1_HpConsumption": {
@@ -1161,7 +1296,10 @@ const compositeAbilityObject = {
         {
           "name": "Use Custom Character Function",
           "functionName": "ReduceActionDelay",
-          "target": "Caster",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "variables": {
             "parameter[0]_NormalizedValue": {
               "operator": "Variables[0] (1) || RETURN",
@@ -1194,20 +1332,29 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Jingliu_LoseHPPreShow"
         },
         {
           "name": "Read Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "Jingliu_MoonFlag",
-          "on": "Caster"
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
         },
         {
           "name": "Read Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "Jingliu_FullMoonFlag",
-          "on": "Caster"
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
         },
         {
           "name": "IF",
@@ -1250,7 +1397,10 @@ const compositeAbilityObject = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Overwrite Value",
           "variableName": "Jingliu_MoonFlag",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": 0
         },
         {
@@ -1290,7 +1440,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Jingliu_Passive"
         }
       ],
@@ -1311,7 +1464,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Eidolon1_CriticalDamage[<span class=\"descriptionNumberColor\">Moon Crashes Tianguan Gate</span>]",
               "duration": {
                 "operator": "Variables[0] (1) || RETURN",
@@ -1336,7 +1492,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -1370,7 +1529,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -1396,7 +1558,10 @@ const compositeAbilityObject = {
             },
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -1417,7 +1582,10 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Blast (Adjacent)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Targets Adjacent(Blast)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -1448,7 +1616,10 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
-            "target": "Caster",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
             "modifier": "AdvancedJingliu_Attack_Transfer"
           },
           "passed": [
@@ -1456,7 +1627,10 @@ const compositeAbilityObject = {
               "name": "Adjust Variable Value",
               "adjustmentType": "Add to Value (Default)",
               "variableName": "Jingliu_FullMoonFlag",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1487,7 +1661,10 @@ const compositeAbilityObject = {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Overwrite Value",
                   "variableName": "Jingliu_FullMoonFlag",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
                     "displayLines": "Jingliu_FullMoonFlagMax",
@@ -1528,7 +1705,10 @@ const compositeAbilityObject = {
               "name": "Adjust Variable Value",
               "adjustmentType": "Add to Value (Default)",
               "variableName": "Jingliu_MoonFlag",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (1) || RETURN",
                 "displayLines": "1",
@@ -1573,7 +1753,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Advanced_Jingliu_Eidolon2[<span class=\"descriptionNumberColor\">Crescent Shadows Qixing Dipper</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -1612,7 +1795,10 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Jingliu_Ability03_Part02",
           "isTrigger": true
         }
@@ -1637,7 +1823,10 @@ const compositeAbilityObject = {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
           "variableName": "Jingliu_MoonFlag",
-          "on": "Caster",
+          "on": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "value": {
             "operator": "Variables[0] (1) || RETURN",
             "displayLines": "1",
@@ -1675,7 +1864,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "ATK Scaling DMG",
-              "target": "Single Target (Primary)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Ice",
@@ -1712,7 +1904,10 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Update Energy",
-              "on": "Owner of this Modifier",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "value": {
                 "operator": "Variables[0] (15) || RETURN",
                 "displayLines": "15",
@@ -1747,7 +1942,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Jingliu_Ability02_Part02",
           "isTrigger": true
         },
@@ -1763,7 +1961,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -1791,7 +1992,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -1840,7 +2044,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "ability": "Advanced_Jingliu_Ability01_Part02",
           "isTrigger": true
         },
@@ -1913,7 +2120,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -1946,12 +2156,21 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Compare: Target",
-                        "target": "Use Prior Target(s) Defined",
-                        "target2": "Caster"
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        }
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "AdvancedJingliu_Attack_Transfer"
                       }
                     ]
@@ -1959,11 +2178,17 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Find New Target",
-                      "from": "All Teammates (Excluding Owner)",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
+                      },
                       "ifTargetFound": [
                         {
                           "name": "Define Custom Variable with Stat",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "variableName": "MDF_MaxHP",
                           "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                         },
@@ -1974,7 +2199,10 @@ const compositeAbilityObject = {
                             "Skill",
                             "Ultimate"
                           ],
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "previewType": null,
                           "previewValue": {
                             "operator": "Variables[0] (MDF_MaxHP) || Variables[1] (0.05) || MUL || RETURN",
@@ -2005,7 +2233,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_CriticalRatio) || RETURN",
@@ -2064,7 +2295,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2099,8 +2333,14 @@ const compositeAbilityObject = {
                     "typeValue": 1
                   },
                   "abilityName": "Advanced_Jingliu_PassiveAtkReady_Part01",
-                  "abilitySource": "Caster",
-                  "abilityTarget": "Caster",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "priorityTag": "AvatarBuffSelf",
                   "canHitNonTargets": true,
                   "showInActionOrder": true,
@@ -2112,13 +2352,19 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Define Custom Variable with Stat",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "variableName": "MDF_MaxHP",
                   "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive2"
                 }
               ]
@@ -2198,68 +2444,101 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "Advanced_Jingliu_MoonMad[<span class=\"descriptionNumberColor\">Moonlight</span>]"
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill02",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"
                 },
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill01",
                   "skillSlot": "Basic ATK"
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Hide",
                   "abilityName": "Skill"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "Charm"
                   },
                   "passed": [
                     {
                       "name": "Change Character Transformation",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "phase": "Phase3"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Change Character Transformation",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "phase": "Phase1"
                     }
                   ]
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Trace_B2_SpeedUp"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]"
                 }
               ]
@@ -2272,21 +2551,30 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Update Ability Binding",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "abilityName": "Skill21",
                   "skillSlot": "Skill",
                   "enableSecondaryType": "ControlSkill02"
                 },
                 {
                   "name": "Disable Abilities",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "abilityTypes": [
                     "Basic ATK"
                   ]
                 },
                 {
                   "name": "Update Ability Enhance Button",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "display": "Show",
                   "abilityName": "Skill"
                 },
@@ -2299,7 +2587,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Eidolon6[<span class=\"descriptionNumberColor\">Eclipse Hollows Corporeal Husk</span>]",
                       "valuePerStack": {
                         "MDF_IcePenetrate": {
@@ -2316,7 +2607,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Change Character Transformation",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "phase": "Phase2"
                 },
                 {
@@ -2328,7 +2622,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Trace_B1_Resist[<span class=\"descriptionNumberColor\">Deathrealm</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -2353,7 +2650,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Advanced_Jingliu_Passive_CriticalUp[<span class=\"descriptionNumberColor\">Spectral Transmigration</span>]",
                   "valuePerStack": {
                     "MDF_CriticalRatio": {
@@ -2373,23 +2673,35 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Find New Target",
-                  "from": "All Teammates (Excluding Owner)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
                   "conditions": {
                     "name": "Is Entity a Battle Event/Summon",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "invertCondition": true
                   },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Stat",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "TargetMaxHp",
                       "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     },
                     {
                       "name": "Consume",
                       "consumeFrom": "MaxHP",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "consumePercent": {
                         "operator": "Variables[0] (SkillP01_P2_HpConsumption) || RETURN",
                         "displayLines": "SkillP01_P2_HpConsumption",
@@ -2411,13 +2723,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "Charm"
                   },
                   "passed": [
                     {
                       "name": "Update Ability Binding",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "abilityName": "Skill21",
                       "skillSlot": "Skill"
                     }
@@ -2432,27 +2750,39 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Flag",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "flagName": "Charm",
                     "invertCondition": true
                   },
                   "passed": [
                     {
                       "name": "Update Ability Binding",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "abilityName": "Skill01",
                       "skillSlot": "Basic ATK"
                     },
                     {
                       "name": "Update Ability Binding",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "abilityName": "Skill21",
                       "skillSlot": "Skill",
                       "enableSecondaryType": "ControlSkill02"
                     },
                     {
                       "name": "Disable Abilities",
-                      "target": "Owner of this Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "abilityTypes": [
                         "Basic ATK"
                       ]
@@ -2477,7 +2807,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceIcePEN</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_IcePenetrate) || RETURN",
@@ -2520,7 +2853,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "AdvancedJingliu_Attack_Transfer"
                       }
                     ]
@@ -2559,7 +2895,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -2602,7 +2941,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Compare: Variable",
-                        "skillOwner": "Caster",
+                        "skillOwner": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "value1": "QueuedUltimates",
                         "compareType": "=",
                         "value2": 0
@@ -2614,7 +2956,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "AdvancedJingliu_Attack_Transfer"
                       },
                       "passed": [
@@ -2645,12 +2990,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "AdvancedJingliu_Attack_Transfer"
                     },
                     "Modifier Deletes Itself"
@@ -2674,7 +3025,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "AdvancedJingliu_Attack_Transfer"
                       },
                       "passed": [
@@ -2705,12 +3059,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "AdvancedJingliu_Attack_Transfer"
                     },
                     "Modifier Deletes Itself"
@@ -2734,7 +3094,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "AdvancedJingliu_Attack_Transfer"
                       },
                       "passed": [
@@ -2765,12 +3128,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "AdvancedJingliu_Attack_Transfer"
                     },
                     "Modifier Deletes Itself"
@@ -2794,7 +3163,10 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "flagName": "UnOperable"
                       }
                     ]
@@ -2804,7 +3176,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "AdvancedJingliu_Attack_Transfer"
                       },
                       "passed": [
@@ -2835,12 +3210,18 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "AdvancedJingliu_Attack_Transfer"
                     },
                     "Modifier Deletes Itself"
@@ -2882,18 +3263,27 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -2902,7 +3292,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
@@ -2916,7 +3309,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                             "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -2935,7 +3331,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -2958,7 +3357,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "LoseHPTrigger"
                 }
@@ -2974,19 +3376,28 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Allied Team",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "LoseHPTrigger"
                     },
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Allied Team",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "BeingAttack"
                     }
@@ -3004,13 +3415,19 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Battle Event",
                         "invertCondition": true
                       },
                       {
                         "name": "Is Part Of Team",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "team": "TeamLight"
                       },
                       {
@@ -3026,7 +3443,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "value1": "LoseHPTrigger",
                         "compareType": "=",
                         "value2": 1,
@@ -3051,7 +3471,10 @@ const compositeAbilityObject = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Use Prior Target(s) Defined",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
                             "value1": "BeingAttack",
                             "compareType": "=",
                             "value2": 1
@@ -3059,7 +3482,10 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Define Custom Variable",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "variableName": "LoseHPTrigger",
                               "value": 1
                             }
@@ -3098,7 +3524,10 @@ const compositeAbilityObject = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Caster",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
                                 "modifier": "AdvancedJingliu_Attack_Transfer"
                               },
                               "passed": [
@@ -3106,7 +3535,10 @@ const compositeAbilityObject = {
                                   "name": "Adjust Variable Value",
                                   "adjustmentType": "Add to Value (Default)",
                                   "variableName": "Jingliu_FullMoonFlag",
-                                  "on": "Caster",
+                                  "on": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "value": 1
                                 },
                                 {
@@ -3130,7 +3562,10 @@ const compositeAbilityObject = {
                                       "name": "Adjust Variable Value",
                                       "adjustmentType": "Overwrite Value",
                                       "variableName": "Jingliu_FullMoonFlag",
-                                      "on": "Caster",
+                                      "on": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster}}"
+                                      },
                                       "value": {
                                         "operator": "Variables[0] (Jingliu_FullMoonFlagMax) || RETURN",
                                         "displayLines": "Jingliu_FullMoonFlagMax",
@@ -3171,7 +3606,10 @@ const compositeAbilityObject = {
                                   "name": "Adjust Variable Value",
                                   "adjustmentType": "Add to Value (Default)",
                                   "variableName": "Jingliu_MoonFlag",
-                                  "on": "Caster",
+                                  "on": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster}}"
+                                  },
                                   "value": 1
                                 },
                                 {
@@ -3203,7 +3641,10 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Advanced_Jingliu_LoseHPCount[<span class=\"descriptionNumberColor\">Crescent Transmigration</span>]",
                           "valuePerStack": {
                             "Jingliu_LoseHPCount": {
@@ -3222,13 +3663,19 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "modifier": "AdvancedJingliu_Attack_Transfer"
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Owner of this Modifier",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "modifier": "Advanced_Jingliu_MoonMad[<span class=\"descriptionNumberColor\">Moonlight</span>]",
                           "stackLimit": {
                             "operator": "Variables[0] (5) || RETURN",
@@ -3253,13 +3700,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "passed": [
                     {
                       "name": "Declare Custom Variable",
-                      "target": "Allied Team",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
                       "scope": "TargetEntity",
                       "variableName": "BeingAttack",
                       "value": 1
@@ -3273,13 +3726,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "LoseHPTrigger"
                 },
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "BeingAttack"
                 }
@@ -3308,18 +3767,27 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -3328,7 +3796,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
@@ -3342,7 +3813,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                             "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -3361,7 +3835,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -3384,13 +3861,19 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "LoseHPTrigger"
                 },
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Allied Team",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "BeingAttack"
                 }
@@ -3420,18 +3903,27 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -3440,7 +3932,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
@@ -3454,7 +3949,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                             "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -3473,7 +3971,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -3498,13 +3999,19 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Caster",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
                     "modifier": "AdvancedJingliu_Attack_Transfer"
                   },
                   "passed": [
                     {
                       "name": "Change Character Transformation",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "phase": "Phase2"
                     }
                   ]
@@ -3537,13 +4044,19 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "STAT_CTRL",
                             "invertCondition": true
                           },
                           {
                             "name": "Has Flag",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "flagName": "DisableAction",
                             "invertCondition": true
                           },
@@ -3562,7 +4075,10 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Enemies Still Alive",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "includeNonTargets": true
                           }
                         ]
@@ -3570,7 +4086,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "Advanced_Jingliu_Passive_ATK"
                         },
                         {
@@ -3584,7 +4103,10 @@ const compositeAbilityObject = {
                               "name": "Adjust Variable Value",
                               "adjustmentType": "Overwrite Value",
                               "variableName": "Jingliu_FullMoonFlag",
-                              "on": "Caster",
+                              "on": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "value": {
                                 "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                                 "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -3603,7 +4125,10 @@ const compositeAbilityObject = {
                               "name": "Adjust Variable Value",
                               "adjustmentType": "Overwrite Value",
                               "variableName": "Jingliu_FullMoonFlag",
-                              "on": "Caster",
+                              "on": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
                               "value": {
                                 "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                                 "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -3646,13 +4171,19 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -3661,7 +4192,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
@@ -3675,7 +4209,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                             "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -3694,7 +4231,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -3735,18 +4275,27 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Enemies Still Alive",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "includeNonTargets": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "STAT_CTRL",
                         "invertCondition": true
                       },
                       {
                         "name": "Has Flag",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "flagName": "DisableAction",
                         "invertCondition": true
                       }
@@ -3755,7 +4304,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Passive_ATK"
                     },
                     {
@@ -3769,7 +4321,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || Variables[1] (2) || ADD || RETURN",
                             "displayLines": "((Jingliu_MoonFlag + 1) + 2)",
@@ -3788,7 +4343,10 @@ const compositeAbilityObject = {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Overwrite Value",
                           "variableName": "Jingliu_FullMoonFlag",
-                          "on": "Caster",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "value": {
                             "operator": "Variables[0] (Jingliu_MoonFlag) || Constants[0] (1) || ADD || RETURN",
                             "displayLines": "(Jingliu_MoonFlag + 1)",
@@ -3821,14 +4379,20 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Transfer_PreShow"
                     }
                   ],
                   "whenLeavingRange": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "Advanced_Jingliu_Transfer_PreShow"
                     }
                   ]
@@ -3856,7 +4420,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "AdvancedJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -3875,7 +4442,10 @@ const compositeAbilityObject = {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Overwrite Value",
                       "variableName": "Jingliu_MoonFlag",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (Jingliu_MoonFlagMax) || RETURN",
                         "displayLines": "Jingliu_MoonFlagMax",
@@ -3918,7 +4488,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "AdvancedJingliu_PointB3[<span class=\"descriptionNumberColor\">Frost Wraith</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
@@ -3952,7 +4525,10 @@ const compositeAbilityObject = {
           "previewValue": {
             "name": "Modifier: UI Preview",
             "show": "Hide",
-            "target": "Owner of this Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Modifier Holder}}"
+            },
             "skillType": [
               "Skill",
               "Ultimate"

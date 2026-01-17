@@ -30,7 +30,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "LC_21057_Main"
         }
       ],
@@ -44,7 +47,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.24) || RETURN",
@@ -73,13 +79,22 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Entity Type",
-                        "target": "Use Prior Target(s) Defined",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
                         "type": "Memosprite"
                       },
                       {
                         "name": "Is Part Of",
-                        "of": "Use [SUMMONER OF] Prior Target(s) Defined",
-                        "target": "Caster",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}.[[getSummoner]]"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "mustBeAlive2": true
                       }
                     ]
@@ -87,7 +102,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster (Memosprite)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Memosprite}}"
+                      },
                       "modifier": "LC_21057_Sub"
                     }
                   ]
@@ -101,7 +119,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count",
-                    "target": "Caster (Memosprite)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Memosprite}}"
+                    },
                     "compareType": ">=",
                     "value2": 1,
                     "livingTargets": true
@@ -109,7 +130,10 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster (Memosprite)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Memosprite}}"
+                      },
                       "modifier": "LC_21057_Sub"
                     }
                   ]

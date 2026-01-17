@@ -23,12 +23,18 @@ const configAbility = {
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Gallagher_PreTechniqueUsage"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Gallagher_TechniqueUsage"
     }
   ],
@@ -59,7 +65,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "All Hostile Entities (AOE)",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "searchRandom": true,
                   "ifTargetFound": [
                     {
@@ -73,7 +82,10 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Use Prior Target(s) Defined",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Fire",
@@ -118,7 +130,10 @@ const configAbility = {
                           "passed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Fire",
@@ -154,7 +169,10 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Fire",
@@ -219,7 +237,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Hostile Entities (AOE)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "modifier": "MWGallagher_Ability03_DeBonusModifier[<span class=\"descriptionNumberColor\">Besotted</span>]",
                   "duration": {
                     "operator": "Variables[0] (2) || RETURN",

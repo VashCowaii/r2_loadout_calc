@@ -15,20 +15,29 @@ const configAbility = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": "Allied Team",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
           "conditions": {
             "name": "OR",
             "conditionList": [
               {
                 "name": "Character ID",
                 "ID": 1407,
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "characterName": "Castorice"
               },
               {
                 "name": "Character ID",
                 "ID": 1408,
-                "target": "Use Prior Target(s) Defined",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
                 "characterName": "Phainon"
               }
             ]
@@ -36,7 +45,10 @@ const configAbility = {
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "ClearAvatarArea_ByAbility"
             }
           ]

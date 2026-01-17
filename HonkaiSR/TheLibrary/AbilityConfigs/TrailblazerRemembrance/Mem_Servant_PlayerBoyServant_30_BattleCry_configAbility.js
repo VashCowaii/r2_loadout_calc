@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Memosprite_PlayerBoyServant_30_BattleCry"
     }
   ],
@@ -28,7 +31,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Added Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "variableName": "CurEnergy",
               "value": {
                 "operator": "Variables[0] (0.5) || Constants[0] (100) || MUL || RETURN",

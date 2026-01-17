@@ -11,8 +11,14 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Trigger Ability",
-      "from": "Caster",
-      "inherentTarget": "Single Target (Primary)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "inherentTarget": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "ability": "Constance_Insert_Part02",
       "isTrigger": true
     }

@@ -21,7 +21,10 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Luocha_Passive01_HealHPArea",
       "duration": {
         "operator": "Variables[0] (2) || RETURN",
@@ -92,12 +95,18 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Luocha_Passive01Modifier[<span class=\"descriptionNumberColor\">Abyss Flower</span>]"
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Luocha_Passive01_InsertMark"
     }
   ],
@@ -115,7 +124,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">Weaken%</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyRatio) || RETURN",
@@ -144,7 +156,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Heal",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                 "displayLines": "MDF_PropertyValue",
@@ -171,7 +186,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Heal",
-                  "target": "[ALL TEAMMATES OF] Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
                     "displayLines": "MDF_PropertyValueSkillTreeB2",
@@ -208,7 +226,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Heal",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "healPercent": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
                 "displayLines": "MDF_PropertyValue",
@@ -235,7 +256,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Heal",
-                  "target": "[ALL TEAMMATES OF] Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder's Team Members(Exclude Self)}}"
+                  },
                   "healPercent": {
                     "operator": "Variables[0] (MDF_PropertyValueSkillTreeB2) || RETURN",
                     "displayLines": "MDF_PropertyValueSkillTreeB2",
@@ -307,7 +331,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Luocha_Passive01_HealHPSelf[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "duration": {
             "operator": "Variables[0] (MDF_LifeTime) || RETURN",
@@ -354,7 +381,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Teammates + Unselectable (Excluding Owner)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
+          },
           "modifier": "Luocha_Passive01_HealHP[<span class=\"descriptionNumberColor\">Cycle of Life</span>]",
           "haloStatus": true,
           "valuePerStack": {
@@ -394,7 +424,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Luocha_Eidolon1_ATKUp[<span class=\"descriptionNumberColor\">Ablution of the Quick</span>]",
           "haloStatus": true,
           "conditions": {
@@ -414,7 +447,10 @@ const configAbility = {
         },
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Hostile Entities (AOE)(ALL)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+          },
           "modifier": "Luocha_Eidolon4_Fatigue[<span class=\"descriptionNumberColor\">Weaken</span>]",
           "haloStatus": true,
           "conditions": {

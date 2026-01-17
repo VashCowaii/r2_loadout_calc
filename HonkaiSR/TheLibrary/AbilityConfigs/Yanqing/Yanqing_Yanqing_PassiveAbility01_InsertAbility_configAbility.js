@@ -10,14 +10,23 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Single Target (Primary)",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "modifier": "Yanqing_BonusTargetMark"
     },
     "Deleted bullshit",
     {
       "name": "Trigger Ability",
-      "from": "Caster",
-      "inherentTarget": "Single Target (Primary)",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "inherentTarget": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
       "ability": "Yanqing_PassiveAbility01_InsertAbilityPhase02",
       "isTrigger": true
     }

@@ -16,17 +16,26 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Memosprite_PlayerBoyServant_30_Passive"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Memosprite_PlayerBoyServant_30_Passive_Performance"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
       "counter": {
         "operator": "Variables[0] (CurEnergy) || RETURN",
@@ -50,7 +59,10 @@ const configAbility = {
           "CurEnergy"
         ]
       },
-      "target": "Caster's Summoner",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}.[[getSummoner]]"
+      },
       "maximum": {
         "operator": "Variables[0] (MDF_Max) || RETURN",
         "displayLines": "MDF_Max",
@@ -64,7 +76,10 @@ const configAbility = {
     },
     {
       "name": "Force Target-Lock on Target",
-      "target": "Caster",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "enable": true
     },
     {
@@ -76,7 +91,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Memosprite_PlayerBoyServant_30_Eidolon1",
           "referenceModifier": "MReference_Empty"
         }
@@ -95,7 +113,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Flag",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "flagName": "Break",
                 "invertCondition": true
               },
@@ -127,18 +148,30 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Target",
-                "target": "Use Prior Target(s) Defined",
-                "target2": "Caster's Summoner"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "target2": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}.[[getSummoner]]"
+                }
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Target Count SUM",
-                    "target": "All Hostile Entities (AOE)(ALL)",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE, with Unselectables)}}"
+                    },
                     "conditions": {
                       "name": "Has Modifier",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "modifier": "M_PlayerBoyServant_30_BreakFlag"
                     }
                   }
@@ -158,7 +191,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "M_PlayerBoyServant_30_BreakFlag"
             }
           ]
@@ -173,12 +209,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_CTRL"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "DisableAction"
                   }
                 ],
@@ -197,12 +239,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "STAT_CTRL"
                   },
                   {
                     "name": "Has Flag",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "flagName": "DisableAction"
                   }
                 ]
@@ -224,7 +272,10 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": 0,
-              "target": "Caster's Summoner",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}.[[getSummoner]]"
+              },
               "maximum": {
                 "operator": "Variables[0] (MDF_Max) || RETURN",
                 "displayLines": "MDF_Max",
@@ -301,11 +352,17 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Current Turn Is",
-                            "target": "Caster"
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            }
                           },
                           {
                             "name": "Has Modifier",
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "modifier": "M_PlayerBoyServant_30_EnableAbility",
                             "invertCondition": true
                           }
@@ -322,19 +379,28 @@ const configAbility = {
                     {
                       "name": "Action Advance/Delay",
                       "advanceType": "Set",
-                      "target": "Caster",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": 0
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Caster",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "modifier": "M_PlayerBoyServant_30_EnableAbility"
                     }
                   ]
                 },
                 {
                   "name": "Define Modifier Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifierName": "PlayerBoy_30_TeamSP[<span class=\"descriptionNumberColor\">Charge</span>]",
                   "value": {
                     "operator": "Variables[0] (CurEnergy) || RETURN",
@@ -355,7 +421,10 @@ const configAbility = {
                       "CurEnergy"
                     ]
                   },
-                  "target": "Caster's Summoner"
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}.[[getSummoner]]"
+                  }
                 }
               ]
             }
@@ -372,7 +441,10 @@ const configAbility = {
               "whenValueChanges": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "All Team Members(In Context, with Untargetable)",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members with Unselectables}}"
+                  },
                   "modifier": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
                   "valuePerStack": {
                     "MDF_PropertyConvert": {
@@ -403,7 +475,10 @@ const configAbility = {
       "subModList": [
         {
           "name": "Add Sub-Events/Bonuses",
-          "to": "All Team Members(In Context, with Untargetable)",
+          "to": {
+            "name": "Target Name",
+            "target": "{{All Team Members with Unselectables}}"
+          },
           "modifier": "Memosprite_PlayerBoyServant_30_CritDmgUp[<span class=\"descriptionNumberColor\">Friends! Together!</span>]",
           "haloStatus": true,
           "valuePerStack": {

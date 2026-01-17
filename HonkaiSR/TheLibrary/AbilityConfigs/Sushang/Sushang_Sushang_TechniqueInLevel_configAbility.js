@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "StageAbility_Maze_Sushang_Modifier"
     }
   ],
@@ -45,7 +48,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "All Hostile Entities (AOE)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Hostile Entities(AOE)}}"
+                  },
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",

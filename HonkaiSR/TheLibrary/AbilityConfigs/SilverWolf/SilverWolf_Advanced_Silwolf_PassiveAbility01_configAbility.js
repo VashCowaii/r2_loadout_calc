@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Advanced_Silwolf_Passive"
     },
     {
@@ -62,7 +65,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Silwolf_Tree03_StatusProbabilityShow"
         }
       ]
@@ -76,7 +82,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Silwolf_Eidolon1"
         }
       ]
@@ -90,7 +99,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Advanced_Silwolf_Eidolon4"
         }
       ]
@@ -129,11 +141,17 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Status Counter",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "_DebuffCountForRank04"
                     },
                     {
@@ -188,7 +206,10 @@ const configAbility = {
                           "Event": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Use Prior Target(s) Defined",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Quantum",
@@ -236,12 +257,18 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Find New Target",
-                  "from": "Ability Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Attack Targets of Modifier Holder}}"
+                  },
                   "includeDyingTargets": true,
                   "ifTargetFound": [
                     {
                       "name": "Define Custom Variable with Status Counter",
-                      "target": "Use Prior Target(s) Defined",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "variableName": "_DebuffCountForRank01_sub"
                     },
                     {
@@ -291,7 +318,10 @@ const configAbility = {
                 },
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (7) || Variables[1] (_DebuffCountForRank01) || MUL || RETURN",
                     "displayLines": "(7 * _DebuffCountForRank01)",
@@ -333,7 +363,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (5) || RETURN",
                     "displayLines": "5",
@@ -365,13 +398,22 @@ const configAbility = {
             },
             {
               "name": "Find New Target",
-              "from": "Target Group(Attack List)",
+              "from": {
+                "name": "Target Name",
+                "target": "{{Ability Attack Targets}}"
+              },
               "maxTargets": 10,
               "ifTargetFound": [
                 {
                   "name": "Trigger Ability",
-                  "from": "Caster",
-                  "inherentTarget": "Use Prior Target(s) Defined",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "inherentTarget": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "ability": "Advanced_Silwolf_PassiveAbility_RandomBug"
                 }
               ]
@@ -401,7 +443,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Energy",
-                  "on": "Caster",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "value": {
                     "operator": "Variables[0] (20) || RETURN",
                     "displayLines": "20",
@@ -428,7 +473,10 @@ const configAbility = {
                   "source": {
                     "name": "Damage Type Source",
                     "sourceType": "ReadTargetType",
-                    "target": "First Character in Lineup (No Memosprites)"
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Far Left Player Entity(no Memosprite)}}"
+                    }
                   },
                   "caseEvents": [
                     {

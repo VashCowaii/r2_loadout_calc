@@ -53,7 +53,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
               }
             }
@@ -76,7 +79,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Update Energy",
-              "on": "Caster",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "value": {
                 "operator": "Variables[0] (Rank04_SPAdded) || RETURN",
                 "displayLines": "Rank04_SPAdded",
@@ -89,7 +95,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP"
             },
             "Modifier Deletes Itself"
@@ -115,7 +124,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Flags from Modifier",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "flagName": [
                 "STAT_DOT_Burn",
                 "STAT_DOT_Bleed",
@@ -132,7 +144,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Current Turn Is",
-                "target": "Owner of this Modifier"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
               },
               "passed": [
                 {
@@ -161,7 +176,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
                     "operator": "Constants[0] (0) || Variables[0] (MDF_ResistanceDown) || SUB || RETURN",
@@ -180,12 +198,18 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_DOT_Eidolon4_HaveAddedSP"
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_DOT_Eidolon4_AddSP",
                   "valuePerStack": {
                     "Eidolon4_SPAdded": {
@@ -202,13 +226,19 @@ const configAbility = {
             },
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "variableName": "MDF_Count",
               "multiplier": 1
             },
             {
               "name": "Add Flags to Modifier",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "flagName": [
                 "STAT_DOT_Burn",
                 "STAT_DOT_Bleed",
@@ -248,7 +278,10 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                 "invertCondition": true
               },
@@ -268,13 +301,19 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                     "invertCondition": true
                   },
                   {
                     "name": "Target Exists",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "living": true
                   }
                 ]
@@ -302,7 +341,10 @@ const configAbility = {
                 "attackTypes": [
                   "DOT"
                 ],
-                "target": "Use Prior Target(s) Defined"
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
               },
               "passed": [
                 {
@@ -337,7 +379,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_BlackSwan_P01_AddDOTFlag"
             }
           ]
@@ -347,7 +392,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "ContextModifier",
               "valueType": "Layer",
               "variableName": "Dot_Layer_Count",
@@ -360,12 +408,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Target Exists",
-                    "target": "Snapshot Entity's Real Owner",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Snapshot Target's Source Owner}}"
+                    },
                     "living": true
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Cast_By_Level",
                     "compareType": ">=",
                     "value2": 1,
@@ -376,14 +430,20 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_ForbidEffectFlag"
                 },
                 {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Dot_Layer_Count",
                     "compareType": "<",
                     "value2": {
@@ -401,7 +461,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     }
@@ -411,7 +474,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Body-Types",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "types": [
                           "LittleMonster",
                           "MiddleMonster"
@@ -422,7 +488,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Body-Types",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "types": [
                               "LargeMonster"
                             ]
@@ -434,7 +503,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Dot_Layer_Count",
                         "compareType": "<",
                         "value2": {
@@ -452,7 +524,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
@@ -462,7 +537,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
@@ -474,7 +552,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Dot_Layer_Count",
                     "compareType": ">=",
                     "value2": {
@@ -490,7 +571,10 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
                       "modifier": "M_BlackSwan_DOT_DefenceIgnore",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -505,7 +589,10 @@ const configAbility = {
                     },
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                      },
                       "modifier": "M_BlackSwan_DOT_DefenceIgnore",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
@@ -524,7 +611,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Dot_Layer_Count",
                     "compareType": ">=",
                     "value2": {
@@ -542,13 +632,19 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       "passed": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
@@ -570,7 +666,10 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
@@ -594,7 +693,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       }
                     }
@@ -604,7 +706,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "Dot_Layer_Count",
                         "compareType": ">=",
                         "value2": {
@@ -622,13 +727,19 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           },
                           "passed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
@@ -650,7 +761,10 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
@@ -674,7 +788,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
@@ -684,13 +801,19 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           },
                           "passed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
@@ -712,7 +835,10 @@ const configAbility = {
                           "failed": [
                             {
                               "name": "ATK Scaling DMG",
-                              "target": "Owner of this Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
@@ -736,7 +862,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Has Modifier",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                           }
                         }
@@ -748,7 +877,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Dot_Layer_Count",
                     "compareType": ">=",
                     "value2": {
@@ -766,13 +898,19 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Has Modifier",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                       },
                       "passed": [
                         {
                           "name": "Remove Flags from Modifier",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "flagName": [
                             "STAT_DOT_Poison",
                             "STAT_DOT_Burn",
@@ -783,7 +921,10 @@ const configAbility = {
                         },
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                          },
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
@@ -801,7 +942,10 @@ const configAbility = {
                         },
                         {
                           "name": "Add Flags to Modifier",
-                          "target": "Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
                           "flagName": [
                             "STAT_DOT_Poison",
                             "STAT_DOT_Burn",
@@ -814,7 +958,10 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "ATK Scaling DMG",
-                          "target": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                          },
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
@@ -834,19 +981,28 @@ const configAbility = {
                     },
                     {
                       "name": "Find New Target",
-                      "from": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                      },
                       "maxTargets": 2,
                       "ifTargetFound": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "M_BlackSwan_P01_AddDOTFlag"
                         },
                         {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": "Dot_Layer_Count",
                             "compareType": ">=",
                             "value2": {
@@ -864,7 +1020,10 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
@@ -874,7 +1033,10 @@ const configAbility = {
                               "name": "IF",
                               "conditions": {
                                 "name": "Has Modifier",
-                                "target": "Owner of this Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Modifier Holder}}"
+                                },
                                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                               }
                             }
@@ -886,29 +1048,44 @@ const configAbility = {
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_DOT_DefenceIgnore"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "[ADJACENT TARGETS OF] Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Targets Adjacent to Modifier Holder(v2)}}"
+                  },
                   "modifier": "M_BlackSwan_DOT_DefenceIgnore"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_ForbidEffectFlag"
                 }
               ],
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_ForbidEffectFlag"
                 },
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
@@ -930,13 +1107,19 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   }
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_ForbidEffectFlag"
                 }
               ]
@@ -948,12 +1131,18 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                     "compareType": ">=",
                     "value2": 1
@@ -963,7 +1152,10 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "variableName": "_enhance_count",
                   "modifierName": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                   "multiplier": 1
@@ -1001,12 +1193,18 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_ForbidEffectFlag"
                 },
                 {
                   "name": "Define Custom Variable with Modifier Values",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "scope": "ContextModifier",
                   "valueType": "Layer",
                   "variableName": "Dot_Layer_Count",
@@ -1014,7 +1212,10 @@ const configAbility = {
                 },
                 {
                   "name": "Add Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
                   "addStacksPerTrigger": {
                     "operator": "Constants[0] (1) || Variables[0] (ExtraLayer_DamagePercentage) || SUB || RETURN",
@@ -1030,12 +1231,18 @@ const configAbility = {
                 },
                 {
                   "name": "UI Display Event (On Entity)",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "popUpText": "Reset Arcana Stacks"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Owner of this Modifier",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifier": "M_BlackSwan_ForbidEffectFlag"
                 }
               ]
@@ -1048,7 +1255,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "ContextModifier",
               "valueType": "MaxLayer",
               "variableName": "MDF_MaxLayer",
@@ -1056,25 +1266,37 @@ const configAbility = {
             },
             {
               "name": "Add Flags to Modifier",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "flagName": [
                 "STAT_DOT_Poison"
               ],
               "modifierName": "BlackSwan_DOT[<span class=\"descriptionNumberColor\">Arcana</span>]",
-              "casterFilter": "Caster"
+              "casterFilter": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
             },
             {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]",
                 "justAddedOrActive": true
               },
               "passed": [
                 {
                   "name": "Add Flags to Modifier",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "flagName": [
                     "STAT_DOT_Burn",
                     "STAT_DOT_Bleed",
@@ -1086,7 +1308,10 @@ const configAbility = {
             },
             {
               "name": "Add Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_BlackSwan_DOTFlag"
             },
             {
@@ -1096,14 +1321,20 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "M_BlackSwan_ForbidEffectFlag",
                     "invertCondition": true,
                     "justAddedOrActive": true
                   },
                   {
                     "name": "Compare: Variable",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "value1": "Cast_By_Level",
                     "compareType": "<=",
                     "value2": 0,
@@ -1116,7 +1347,10 @@ const configAbility = {
                   "name": "IF",
                   "conditions": {
                     "name": "Has Modifier",
-                    "target": "Owner of this Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
                     "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
                   },
                   "passed": [
@@ -1124,7 +1358,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": null,
                         "compareType": ">=",
                         "value2": {
@@ -1142,7 +1379,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": null,
                             "compareType": ">=",
                             "value2": {
@@ -1164,7 +1404,10 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": null,
                         "compareType": ">=",
                         "value2": {
@@ -1182,7 +1425,10 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Compare: Variable",
-                            "target": "Owner of this Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
                             "value1": null,
                             "compareType": ">=",
                             "value2": {
@@ -1209,7 +1455,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "scope": "ContextModifier",
               "valueType": "Layer",
               "variableName": "Dot_Layer_Count",
@@ -1219,13 +1468,19 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Has Modifier",
-                "target": "Owner of this Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
                 "modifier": "BlackSwan_DOT_Enhance[<span class=\"descriptionNumberColor\">Epiphany</span>]"
               },
               "passed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {
@@ -1248,7 +1503,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "ATK Scaling DMG",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "AttackScaling": {
                     "DamageType": "Wind",
                     "Damage": {

@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "M_Pela_Tree01"
     }
   ],
@@ -20,7 +23,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Status Counter",
-              "target": "Target Receiving DMG",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target TAKING DMG}}"
+              },
               "variableName": "DebuffNumber"
             },
             {

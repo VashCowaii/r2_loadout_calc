@@ -30,7 +30,10 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Physical[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]"
                 }
@@ -42,7 +45,10 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Fire[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]"
                 }
@@ -54,7 +60,10 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Ice[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]"
                 }
@@ -66,7 +75,10 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Thunder[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]"
                 }
@@ -78,7 +90,10 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Wind[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]"
                 }
@@ -90,7 +105,10 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Quantum[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]"
                 }
@@ -102,7 +120,10 @@ const configAbility = {
               "execute": [
                 {
                   "name": "Override Modifier Name",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "modifierName": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
                   "modifierNameUpdate": "Advanced_Silwolf_BPAbility_WeakType_Imaginary[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]"
                 }
@@ -119,55 +140,73 @@ const configAbility = {
       "parse": [
         {
           "name": "Find New Target",
-          "from": [
-            {
-              "name": "Target List",
-              "target": "All Enemies (AOE)"
-            },
-            {
-              "name": "Sort by Life-State",
-              "state": "Mask_AliveOnly"
-            },
-            {
-              "name": "Sort by Monster Rank",
-              "byHighest": true,
-              "maxRank": "Elite"
-            },
-            {
-              "name": "Target Filter",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Target is Unselectable",
-                    "target": "Use Prior Target(s) Defined",
-                    "invertCondition": true
-                  },
-                  {
-                    "name": "Living State",
-                    "state": "Bit_OnStage",
-                    "target": "Use Prior Target(s) Defined"
-                  },
-                  {
-                    "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
-                    "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
-                    "invertCondition": true
-                  }
-                ]
+          "from": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{Enemy Team All}}"
+              },
+              {
+                "name": "Sort by Life-State",
+                "state": "Mask_AliveOnly"
+              },
+              {
+                "name": "Sort by Monster Rank",
+                "byHighest": true,
+                "maxRank": "Elite"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "AND",
+                  "conditionList": [
+                    {
+                      "name": "Target is Unselectable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "invertCondition": true
+                    },
+                    {
+                      "name": "Living State",
+                      "state": "Bit_OnStage",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      }
+                    },
+                    {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
+                      "invertCondition": true
+                    }
+                  ]
+                }
               }
-            }
-          ],
+            ]
+          },
           "maxTargets": 1,
           "conditions": {
             "name": "Living State",
             "state": "Mask_AliveOnly",
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           },
           "ifTargetFound": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Use Prior Target(s) Defined",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
               "modifier": "Advanced_Silwolf_BPAbility_WeakType[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
               "duration": {
                 "operator": "Variables[0] (3) || RETURN",

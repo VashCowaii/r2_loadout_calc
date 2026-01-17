@@ -20,14 +20,23 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target",
-        "target": "Single Target (Primary)",
-        "target2": "Caster",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
         "invertCondition": true
       }
     },
     {
       "name": "Trigger Ability",
-      "from": "Caster",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "ability": "Servant_PlayerBoyServant_30_Ability11_Part02",
       "isTrigger": true
     },
@@ -36,8 +45,14 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Target",
-        "target": "Single Target (Primary)",
-        "target2": "Caster"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
       }
     }
   ],

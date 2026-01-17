@@ -8,13 +8,22 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Enemies Still Alive",
-        "target": "Caster"
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        }
       },
       "passed": [
         {
           "name": "Trigger Ability",
-          "from": "Caster",
-          "inherentTarget": "All Hostile Entities (AOE)",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "ability": "Constance_Insert_Part01",
           "isTrigger": true
         }
@@ -22,7 +31,10 @@ const configAbility = {
       "failed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "_M_Constance_InsertCheck"
         }
       ]
@@ -31,7 +43,10 @@ const configAbility = {
   "onAbort": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "_M_Constance_InsertCheck"
     }
   ],

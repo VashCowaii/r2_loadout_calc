@@ -13,7 +13,10 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "Relic_302_Main"
         }
       ],
@@ -31,7 +34,10 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Stack Target Stat Value",
-                  "target": "Owner of this Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
                   "value": {
                     "operator": "Variables[0] (0.08) || RETURN",
@@ -57,7 +63,10 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamLight"
                   },
                   "passed": [
@@ -65,7 +74,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Ability Value",
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
@@ -80,7 +92,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Use Prior Target(s) Defined",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "modifier": "Relic_302_Sub"
                         }
                       ]
@@ -105,7 +120,10 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Ability Value",
-                        "target": "Owner of this Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
@@ -120,7 +138,10 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "All Team Members(In Context)",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members}}"
+                          },
                           "modifier": "Relic_302_Sub"
                         }
                       ]
@@ -150,16 +171,19 @@ const compositeAbilityObject = {
                   "whenEnteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
-                      "to": [
-                        {
-                          "name": "Target List",
-                          "target": "Allied Team"
-                        },
-                        {
-                          "name": "Target List",
-                          "target": "All Untargetable"
-                        }
-                      ],
+                      "to": {
+                        "name": "Join Targets",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Player Team All}}"
+                          },
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Unselectable Targets}}"
+                          }
+                        ]
+                      },
                       "modifier": "Relic_302_Sub",
                       "onlyRemoveOwnersInstance": true
                     }
@@ -167,7 +191,10 @@ const compositeAbilityObject = {
                   "whenLeavingRange": [
                     {
                       "name": "Add Events/Bonuses",
-                      "to": "All Team Members(In Context)",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members}}"
+                      },
                       "modifier": "Relic_302_Sub"
                     }
                   ]

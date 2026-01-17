@@ -6,12 +6,18 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23034_Main"
     },
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "LC_23034_Sub2[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
     }
   ],
@@ -36,7 +42,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "_Layer",
               "multiplier": 1
@@ -56,7 +65,10 @@ const configAbility = {
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_PropertyValue) || RETURN",
@@ -106,11 +118,17 @@ const configAbility = {
                 },
                 {
                   "name": "Find New Target",
-                  "from": "Skill Target List",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target List}}"
+                  },
                   "searchRandom": true,
                   "conditions": {
                     "name": "Is Part Of Team",
-                    "target": "Use Prior Target(s) Defined",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
                     "team": "TeamDark"
                   },
                   "ifTargetFound": [
@@ -128,7 +146,10 @@ const configAbility = {
                     "conditionList": [
                       {
                         "name": "Compare: Target Count",
-                        "target": "Skill Target List",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ability Target List}}"
+                        },
                         "compareType": "=",
                         "value2": 1,
                         "livingTargets": true
@@ -144,7 +165,10 @@ const configAbility = {
                         "conditionList": [
                           {
                             "name": "Compare: Target Count",
-                            "target": "Skill Sub-Target List",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Ability Sub-Targets}}"
+                            },
                             "compareType": "=",
                             "value2": 0,
                             "livingTargets": true
@@ -152,7 +176,10 @@ const configAbility = {
                           {
                             "name": "Character ID",
                             "ID": 1313,
-                            "target": "Caster",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
                             "characterName": "Sunday"
                           }
                         ]
@@ -165,13 +192,19 @@ const configAbility = {
                       "conditions": {
                         "name": "Character ID",
                         "ID": 1313,
-                        "target": "Caster",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
                         "characterName": "Sunday"
                       },
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Skill Target List + Memosprites",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target List}} + {{Ability Target List}}.[[getMemosprite]]"
+                          },
                           "modifier": "LC_23034_Sub[<span class=\"descriptionNumberColor\">Hymn</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -194,7 +227,10 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Skill Target List",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Ability Target List}}"
+                          },
                           "modifier": "LC_23034_Sub[<span class=\"descriptionNumberColor\">Hymn</span>]",
                           "duration": {
                             "operator": "Variables[0] (3) || RETURN",
@@ -217,7 +253,10 @@ const configAbility = {
                     },
                     {
                       "name": "Update Energy",
-                      "on": "Caster",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
                       "value": {
                         "operator": "Variables[0] (6) || RETURN",
                         "displayLines": "6",
@@ -290,14 +329,20 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Remove Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "LC_23034_Sub2[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
                         }
                       ],
                       "failed": [
                         {
                           "name": "Add Events/Bonuses",
-                          "to": "Caster",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
                           "modifier": "LC_23034_Sub2[<span class=\"descriptionNumberColor\">Departing Anew</span>]"
                         }
                       ]

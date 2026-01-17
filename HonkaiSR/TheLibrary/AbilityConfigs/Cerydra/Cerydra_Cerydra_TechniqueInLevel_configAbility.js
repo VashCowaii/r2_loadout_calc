@@ -14,7 +14,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Cerydra_Maze_Modifier"
     }
   ],
@@ -41,20 +44,26 @@ const configAbility = {
               "actionTag": null,
               "skillType": "ControlSkill02",
               "forceAction": true,
-              "castTarget": [
-                {
-                  "name": "Target List",
-                  "target": "Allied Team"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": "Use Prior Target(s) Defined",
-                    "modifier": "StageAbility_MazeStandard_EnterBattle_MarkTeamLeader"
+              "castTarget": {
+                "name": "Target Sequence",
+                "Sequence": [
+                  {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  {
+                    "name": "Target Filter",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "StageAbility_MazeStandard_EnterBattle_MarkTeamLeader"
+                    }
                   }
-                }
-              ],
+                ]
+              },
               "afterInjection": [],
               "runsAfterBattleEnd": true
             }

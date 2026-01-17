@@ -13,7 +13,10 @@ const configAbility = {
       "passed": [
         {
           "name": "Add Events/Bonuses",
-          "to": "Caster",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
         }
       ]
@@ -23,7 +26,10 @@ const configAbility = {
       "execute": [
         {
           "name": "ATK Scaling DMG",
-          "target": "Single Target (Primary)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Fire",
@@ -62,7 +68,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Attack-Type Extension",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "typeToExtend": "Basic ATK",
               "isRemove": true
             }
@@ -73,7 +82,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Attack-Type Extension",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "typeToExtend": "Basic ATK",
               "extendTypeTo": "Follow-up"
             }
@@ -84,7 +96,10 @@ const configAbility = {
           "execute": [
             {
               "name": "Remove Events/Bonuses",
-              "to": "Owner of this Modifier",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "modifier": "M_Topaz_Normal_AddRegardAsAttackType"
             }
           ]

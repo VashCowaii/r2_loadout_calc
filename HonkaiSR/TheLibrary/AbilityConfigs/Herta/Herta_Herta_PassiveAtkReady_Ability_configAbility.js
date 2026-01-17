@@ -6,7 +6,10 @@ const configAbility = {
   "parse": [
     {
       "name": "Add Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Herta_Passive_Flag"
     },
     {
@@ -32,7 +35,10 @@ const configAbility = {
           },
           {
             "name": "Enemies Still Alive",
-            "target": "Caster"
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
           }
         ]
       },
@@ -74,7 +80,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Herta_AbilityEidolon2_CriticalChance[<span class=\"descriptionNumberColor\">CRIT Rate Boost</span>]",
               "stackLimit": {
                 "operator": "Variables[0] (5) || RETURN",
@@ -106,7 +115,10 @@ const configAbility = {
           "passed": [
             {
               "name": "Add Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Herta_AbilityEidolon4_DamageUp",
               "valuePerStack": {
                 "AbilityRank_Eidolon4_P1_DamagePercentage": {
@@ -123,7 +135,10 @@ const configAbility = {
         },
         {
           "name": "ATK Scaling DMG",
-          "target": "All Hostile Entities (AOE)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Hostile Entities(AOE)}}"
+          },
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Ice",
@@ -154,19 +169,28 @@ const configAbility = {
             "name": "NOT",
             "condition": {
               "name": "Enemies Still Alive",
-              "target": "Caster"
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              }
             }
           },
           "passed": [
             "Trigger: Attack End",
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Herta_AbilityEidolon4_DamageUp"
             },
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "TargetEntity",
               "variableName": "Herta_Count"
             },
@@ -177,13 +201,19 @@ const configAbility = {
             },
             {
               "name": "Declare Custom Variable",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "scope": "TargetEntity",
               "variableName": "Herta_Count_ATK"
             },
             {
               "name": "Remove Events/Bonuses",
-              "to": "Caster",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "modifier": "Herta_Passive_ATK"
             }
           ],
@@ -205,23 +235,35 @@ const configAbility = {
                 "Trigger: Attack End",
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Herta_AbilityEidolon4_DamageUp"
                 },
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Herta_Passive_ATK"
                 },
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Herta_Count_ATK"
                 },
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Herta_Count"
                 },
@@ -233,7 +275,10 @@ const configAbility = {
                 "Trigger: Skip Death Handling",
                 {
                   "name": "Declare Custom Variable",
-                  "target": "Caster",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "scope": "TargetEntity",
                   "variableName": "Herta_Count"
                 }
@@ -241,7 +286,10 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Remove Events/Bonuses",
-                  "to": "Caster",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
                   "modifier": "Herta_AbilityEidolon4_DamageUp"
                 }
               ]
@@ -252,7 +300,10 @@ const configAbility = {
     },
     {
       "name": "Remove Events/Bonuses",
-      "to": "Caster",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "Herta_Passive_Flag"
     }
   ],
@@ -294,14 +345,20 @@ const configAbility = {
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
-              "target": "Owner of this Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
               "valueType": "Layer",
               "variableName": "MDF_Count",
               "multiplier": 1
             },
             {
               "name": "Stack Target Stat Value",
-              "target": "Caster",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "value": {
                 "operator": "Variables[0] (MDF_CriticalChance) || Variables[1] (MDF_Count) || MUL || RETURN",
