@@ -229,7 +229,57 @@
 }
 
 
+.mainSelectionHeaderRow {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    padding: 3px;
+    /* text-decoration: none; */
+    /* border-top: 1px solid #434343; */
+    font-size: 19px;
+    width: auto;
+    height: auto;
+    /* padding: 4px; */
+    /* height: 100%; */
+    box-sizing: border-box;
+    white-space: nowrap;
+    /* border: 1px solid #434343; */
+    border-top-right-radius: 10px;
+    /* background-color: #1e1e1e; */
+    margin: 2px;
+    text-decoration: none;
+    color: white;
 
+    position: absolute;
+    bottom: 19%;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    display: flex;
+
+
+
+    /* position: absolute; */
+    /* background-color: rgba(0, 0, 0, 0.562); */
+    /* font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 2%;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    flex-direction: column; */
+    /* background: linear-gradient(200deg, #0d393b,transparent,transparent,#ffffff21); */
+    /* background-color: rgba(0, 0, 0, 0.562); */
+    /* backdrop-filter: blur(8px); */
+}
+.cardBoxGameModeIcon {
+    height: 20px;
+    width: auto;
+}
 
 .mainSelectionHeader {
     width: 100%;
@@ -254,10 +304,13 @@
     text-decoration: none;
     color: white;
 
-    position: absolute;
-    bottom: 19%;
+    /* position: absolute;
+    bottom: 19%; */
     padding-left: 5px;
     padding-right: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
 
 
@@ -302,6 +355,10 @@
 
 .cardBoxIconTextVersion {
     bottom: 20%;
+}
+
+.mainSelectionHeaderRow {
+    bottom: 10%;
 }
 
 
