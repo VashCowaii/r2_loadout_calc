@@ -170,7 +170,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -522,7 +525,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -874,7 +880,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -1226,7 +1235,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -1665,9 +1677,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -1685,7 +1697,8 @@ let mocSchedule = [
               "name": "Stellar Aegis",
               "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "params": [
-                0.25
+                0.05,
+                0.03
               ]
             }
           ],
@@ -1767,7 +1780,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -1776,7 +1790,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -1984,9 +1999,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -2004,7 +2019,8 @@ let mocSchedule = [
               "name": "Stellar Aegis",
               "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "params": [
-                0.25
+                0.05,
+                0.03
               ]
             }
           ],
@@ -2086,7 +2102,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -2095,7 +2112,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -2303,9 +2321,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -2323,7 +2341,8 @@ let mocSchedule = [
               "name": "Stellar Aegis",
               "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "params": [
-                0.25
+                0.05,
+                0.03
               ]
             }
           ],
@@ -2408,7 +2427,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -2417,7 +2437,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -2625,9 +2646,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -2645,7 +2666,8 @@ let mocSchedule = [
               "name": "Stellar Aegis",
               "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "params": [
-                0.25
+                0.05,
+                0.03
               ]
             }
           ],
@@ -2730,7 +2752,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -2739,7 +2762,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -3055,7 +3079,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -3159,9 +3184,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -3175,14 +3200,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -3414,7 +3441,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -3518,9 +3546,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -3534,14 +3562,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -3773,7 +3803,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -3877,9 +3908,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -3893,14 +3924,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -4132,7 +4165,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -4236,9 +4270,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -4252,14 +4286,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -4620,9 +4656,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -4993,9 +5029,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -5366,9 +5402,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -5742,9 +5778,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -6203,7 +6239,7 @@ let mocSchedule = [
               "name": "Till Death",
               "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional #1[i]%.",
               "params": [
-                0.6
+                0.15
               ]
             }
           ],
@@ -6282,8 +6318,7 @@ let mocSchedule = [
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
@@ -6291,8 +6326,7 @@ let mocSchedule = [
               "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
@@ -6544,7 +6578,7 @@ let mocSchedule = [
               "name": "Till Death",
               "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional #1[i]%.",
               "params": [
-                0.6
+                0.15
               ]
             }
           ],
@@ -6623,8 +6657,7 @@ let mocSchedule = [
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
@@ -6632,8 +6665,7 @@ let mocSchedule = [
               "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
@@ -6885,7 +6917,7 @@ let mocSchedule = [
               "name": "Till Death",
               "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional #1[i]%.",
               "params": [
-                0.6
+                0.15
               ]
             }
           ],
@@ -6964,8 +6996,7 @@ let mocSchedule = [
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
@@ -6973,8 +7004,7 @@ let mocSchedule = [
               "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
@@ -7226,7 +7256,7 @@ let mocSchedule = [
               "name": "Till Death",
               "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional #1[i]%.",
               "params": [
-                0.6
+                0.15
               ]
             }
           ],
@@ -7305,8 +7335,7 @@ let mocSchedule = [
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
@@ -7314,8 +7343,7 @@ let mocSchedule = [
               "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
@@ -7722,9 +7750,12 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "The Boss Mirage cannot be attacked directly. When all three parts of the Boss Mirage are in Feigned Death simultaneously, the Boss Mirage enters Weakness Break state and can be attacked. During this state, its actions are additionally delayed, and the DMG it receives increases by #1[i]%.",
               "params": [
+                1,
+                1.5,
+                0.5,
                 0.6,
-                1.25,
-                1
+                1,
+                15
               ],
               "extraEffects": [
                 131
@@ -8031,9 +8062,12 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "The Boss Mirage cannot be attacked directly. When all three parts of the Boss Mirage are in Feigned Death simultaneously, the Boss Mirage enters Weakness Break state and can be attacked. During this state, its actions are additionally delayed, and the DMG it receives increases by #1[i]%.",
               "params": [
+                1,
+                1.5,
+                0.5,
                 0.6,
-                1.25,
-                1
+                1,
+                15
               ],
               "extraEffects": [
                 131
@@ -8340,9 +8374,12 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "The Boss Mirage cannot be attacked directly. When all three parts of the Boss Mirage are in Feigned Death simultaneously, the Boss Mirage enters Weakness Break state and can be attacked. During this state, its actions are additionally delayed, and the DMG it receives increases by #1[i]%.",
               "params": [
+                1,
+                1.5,
+                0.5,
                 0.6,
-                1.25,
-                1
+                1,
+                15
               ],
               "extraEffects": [
                 131
@@ -8649,9 +8686,12 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "The Boss Mirage cannot be attacked directly. When all three parts of the Boss Mirage are in Feigned Death simultaneously, the Boss Mirage enters Weakness Break state and can be attacked. During this state, its actions are additionally delayed, and the DMG it receives increases by #1[i]%.",
               "params": [
+                1,
+                1.5,
+                0.5,
                 0.6,
-                1.25,
-                1
+                1,
+                15
               ],
               "extraEffects": [
                 131
@@ -9006,9 +9046,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -9116,7 +9156,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -9407,9 +9450,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -9517,7 +9560,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -9808,9 +9854,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -9921,7 +9967,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -10212,9 +10261,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -10325,7 +10374,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -10688,7 +10740,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -10809,7 +10862,7 @@ let mocSchedule = [
               "name": "Till Death",
               "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional #1[i]%.",
               "params": [
-                0.6
+                0.15
               ]
             }
           ],
@@ -11035,7 +11088,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -11156,7 +11210,7 @@ let mocSchedule = [
               "name": "Till Death",
               "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional #1[i]%.",
               "params": [
-                0.6
+                0.15
               ]
             }
           ],
@@ -11382,7 +11436,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -11503,7 +11558,7 @@ let mocSchedule = [
               "name": "Till Death",
               "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional #1[i]%.",
               "params": [
-                0.6
+                0.15
               ]
             }
           ],
@@ -11729,7 +11784,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -11850,7 +11906,7 @@ let mocSchedule = [
               "name": "Till Death",
               "desc": "After Boss Mirage enters \"Going Solo,\" reduces its DMG taken by an additional #1[i]%.",
               "params": [
-                0.6
+                0.15
               ]
             }
           ],
@@ -12160,7 +12216,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -12244,7 +12303,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -12253,7 +12313,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -12463,7 +12524,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -12547,7 +12611,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -12556,7 +12621,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -12766,7 +12832,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -12850,7 +12919,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -12859,7 +12929,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -13069,7 +13140,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -13153,7 +13227,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -13162,7 +13237,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -13480,7 +13556,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -13584,9 +13661,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -13600,14 +13677,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -13839,7 +13918,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -13943,9 +14023,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -13959,14 +14039,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -14198,7 +14280,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -14302,9 +14385,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -14318,14 +14401,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -14557,7 +14642,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -14661,9 +14747,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -14677,14 +14763,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -15031,9 +15119,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -15141,7 +15229,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -15150,7 +15239,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -15390,9 +15480,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -15500,7 +15590,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -15509,7 +15600,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -15749,9 +15841,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -15862,7 +15954,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -15871,7 +15964,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -16111,9 +16205,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -16224,7 +16318,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ]
             },
             {
@@ -16233,7 +16328,8 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                1
               ],
               "extraEffects": [
                 162
@@ -16550,7 +16646,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -16922,7 +17021,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -17294,7 +17396,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -17672,7 +17777,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -18143,7 +18251,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -18225,9 +18336,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -18241,14 +18352,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -18480,7 +18593,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -18562,9 +18678,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -18578,14 +18694,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -18817,7 +18935,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -18899,9 +19020,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -18915,14 +19036,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -19154,7 +19277,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -19236,9 +19362,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -19252,14 +19378,16 @@ let mocSchedule = [
               "name": "Withered Tree's Revival",
               "desc": "In Phase I, when Boss Mirage changes form, the summons will restore #2[i]% HP.",
               "params": [
-                0.3
+                0.2,
+                0.25
               ]
             },
             {
               "name": "Hollowflower Blaze",
               "desc": "In Phase II, the summons' Max HP increases by #1[i]%.",
               "params": [
-                0.35
+                0.2,
+                0.25
               ]
             }
           ],
@@ -19589,7 +19717,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -19706,9 +19837,12 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "The Boss Mirage cannot be attacked directly. When all three parts of the Boss Mirage are in Feigned Death simultaneously, the Boss Mirage enters Weakness Break state and can be attacked. During this state, its actions are additionally delayed, and the DMG it receives increases by #1[i]%.",
               "params": [
+                1,
+                1.5,
+                0.5,
                 0.6,
-                1.25,
-                1
+                1,
+                15
               ],
               "extraEffects": [
                 131
@@ -19942,7 +20076,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -20059,9 +20196,12 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "The Boss Mirage cannot be attacked directly. When all three parts of the Boss Mirage are in Feigned Death simultaneously, the Boss Mirage enters Weakness Break state and can be attacked. During this state, its actions are additionally delayed, and the DMG it receives increases by #1[i]%.",
               "params": [
+                1,
+                1.5,
+                0.5,
                 0.6,
-                1.25,
-                1
+                1,
+                15
               ],
               "extraEffects": [
                 131
@@ -20295,7 +20435,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -20412,9 +20555,12 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "The Boss Mirage cannot be attacked directly. When all three parts of the Boss Mirage are in Feigned Death simultaneously, the Boss Mirage enters Weakness Break state and can be attacked. During this state, its actions are additionally delayed, and the DMG it receives increases by #1[i]%.",
               "params": [
+                1,
+                1.5,
+                0.5,
                 0.6,
-                1.25,
-                1
+                1,
+                15
               ],
               "extraEffects": [
                 131
@@ -20648,7 +20794,10 @@ let mocSchedule = [
               "params": [
                 0.5,
                 1,
-                1.5
+                1.5,
+                0,
+                0,
+                0
               ]
             },
             {
@@ -20765,9 +20914,12 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "The Boss Mirage cannot be attacked directly. When all three parts of the Boss Mirage are in Feigned Death simultaneously, the Boss Mirage enters Weakness Break state and can be attacked. During this state, its actions are additionally delayed, and the DMG it receives increases by #1[i]%.",
               "params": [
+                1,
+                1.5,
+                0.5,
                 0.6,
-                1.25,
-                1
+                1,
+                15
               ],
               "extraEffects": [
                 131
@@ -21124,9 +21276,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -21232,9 +21384,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -21252,7 +21404,8 @@ let mocSchedule = [
               "name": "Stellar Aegis",
               "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "params": [
-                0.25
+                0.05,
+                0.03
               ]
             }
           ],
@@ -21508,9 +21661,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -21616,9 +21769,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -21636,7 +21789,8 @@ let mocSchedule = [
               "name": "Stellar Aegis",
               "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "params": [
-                0.25
+                0.05,
+                0.03
               ]
             }
           ],
@@ -21892,9 +22046,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -22003,9 +22157,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -22023,7 +22177,8 @@ let mocSchedule = [
               "name": "Stellar Aegis",
               "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "params": [
-                0.25
+                0.05,
+                0.03
               ]
             }
           ],
@@ -22282,9 +22437,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -22393,9 +22548,9 @@ let mocSchedule = [
               "name": "Steadfast Safeguard",
               "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
@@ -22413,7 +22568,8 @@ let mocSchedule = [
               "name": "Stellar Aegis",
               "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "params": [
-                0.25
+                0.05,
+                0.03
               ]
             }
           ],
