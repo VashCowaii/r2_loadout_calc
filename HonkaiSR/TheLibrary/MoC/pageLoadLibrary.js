@@ -776,7 +776,7 @@ const endgameModeDisplay = {
                         entryString += `<div class="rotationsSectionRowHolder1Overview">
                             <div class="actionDetailBody">
                                 <div class="actionDetailBody2Description">
-                                    ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc)}
+                                    ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc ?? "")}
                                 </div>
                             </div>
                         `
