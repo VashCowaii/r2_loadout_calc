@@ -1,4 +1,4 @@
-.enemyLinkerText {
+.enemyLinkerText, .actionDetailBody2DescriptionStratDesc {
     font-family: "Montserrat-Light";
 }
 
@@ -49,6 +49,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+.mocTitleRowMain {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 
 
@@ -129,7 +140,7 @@
     border-radius: 3px;
     overflow: hidden;
     flex-direction: column;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 }
 .enemyLinkerText {
     white-space: normal;
@@ -171,9 +182,10 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     background-color: rgba(0, 0, 0, 0.562);
     border-top-right-radius: 30px;
+    padding-bottom: 2px;
     /* max-height: 500px;
     overflow-y: auto; */
 }
@@ -182,7 +194,42 @@
 .superimpositionButton {
     width: 20%;
     color: #e1e1e4;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
+}
+.pureFictionBannerImage {
+    /* width: 100%; */
+    height: 150%;
+    /* z-index: 0; */
+    position: absolute;
+}
+.superimpositionButtonActivityButton {
+    /* width: 30px; */
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+    color: #e1e1e4;
+    /* backdrop-filter: blur(5px); */
+    background-color: rgba(0, 0, 0, 0.562);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.superimpositionButtonActivityButton:hover {
+    opacity: 0.5;
+}
+.superimpositionHolderboxActivityButtons {
+    width: fit-content;
+    /* background-color: #e1e1e4; */
+    color: black;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 2px solid #e1e1e4; */
+    overflow: hidden;
 }
 .superimpositionButton + .superimpositionButton {
     border-left: 1px solid #e1e1e4;
@@ -298,6 +345,25 @@
     font-size: 14px;
     backdrop-filter: blur(5px);
 }
+.enemyWaveEnemyPFCount {
+    /* width: 100%; */
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    padding-right: 8px;
+    padding-left: 3px;
+    font-size: 14px;
+    backdrop-filter: blur(5px);
+    border-bottom-right-radius: 10px;
+
+    background-color: rgb(225, 225, 228);
+    color: black;
+}
 
 .enemyWaveEnemyDisplayBoxIDLinker {
     width: 100%;
@@ -312,6 +378,7 @@
     z-index: 5;
     display: none;
     flex-direction: column;
+    overflow: hidden;
 
 }
 .enemyWaveEnemyDisplayBox:hover .enemyWaveEnemyDisplayBoxIDLinker {
@@ -361,6 +428,90 @@
     /* border: 1px solid green; */
 }
 
+
+.rotationsSectionRowHolder1OverviewStratDescBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    /* margin-top: 3px; */
+    margin-bottom: 3px;
+    overflow: hidden;
+    padding-left: 15px;
+    /* color: #18fcc7ce; */
+
+    /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
+    /* background: linear-gradient(340deg, transparent,transparent,transparent,#ffffff21); */
+}
+.actionDetailBody2DescriptionStratDesc {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    /* color: #18fcc7ce; */
+    color: rgb(218, 218, 218);
+    box-sizing: border-box;
+    background-color: transparent;
+}
+.eidolonRowNameStratCounterTitle {
+    font-size: 15px;
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+    color: #C5AF84;
+}
+.eidolonRowNameStratName {
+    font-size: 20px;
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.eidolonRowNameStrategy {
+    font-size: 16px;
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding-left: 5px;
+    box-sizing: border-box;
+    color: #E69737;
+}
+.apocBossTipsBox {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    border-top-right-radius: 10px;
+    padding: 2px;
+    padding-left: 0px;
+    backdrop-filter: blur(5px);
+    /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
+    background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
+
+    background: linear-gradient(200deg, #0d393b,transparent,#ffffff21);
+    border: 1px solid #acacaca9;
+    /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
+}
 .enemyWaveEnemyDisplayBox {
     width: 19%;
     box-sizing: border-box;
@@ -373,7 +524,7 @@
     /* border: 1px solid red; */
     border-top-right-radius: 10px;
     padding: 2px;
-
+    backdrop-filter: blur(5px);
     /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
     background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
 
@@ -401,6 +552,58 @@
     padding-bottom: 2px;
     font-size: 14px;
     border-top-right-radius: 15px;
+}
+.actionDetailBody3DescriptionExtra {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: #808080;
+    box-sizing: border-box;
+}
+.actionDetailBody3DescriptionGrit {
+    width: auto;
+    max-width: 95%;
+    white-space: normal;
+    text-align: left;
+    margin-top: 5px;
+    /* display: flex; */
+    /* justify-content: left; */
+    /* align-items: center; */
+    /* color: #838383; */
+    color: #18fcc7ce;
+    box-sizing: border-box;
+    /* backdrop-filter: blur(8px); */
+    /* background-color: rgba(0, 0, 0, 0.726); */
+    padding-left: 4px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    font-size: 14px;
+    border-top-right-radius: 15px;
+}
+
+
+
+.rotationsSectionRowHolder2Overview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: hidden;
+
+    /* background-color: rgba(0, 0, 0, 0.466); */
+    /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
+    background: linear-gradient(340deg, transparent,transparent,transparent,#0d393b7a);
+
+
+    /* backdrop-filter: blur(8px); */
+    background-color: rgba(0, 0, 0, 0.726);
+    /* background-color: rgb(0, 0, 0); */
 }
 
 
@@ -577,6 +780,11 @@
     height: 20px;
     width: auto;
 }
+.cardBoxGameModeStratIcon {
+    height: 20px;
+    width: auto;
+    margin-right: 3px;
+}
 
 .mainSelectionHeader {
     width: 100%;
@@ -634,11 +842,20 @@
 }
 
 
+.enemyWaveSummaryHolder {
+    min-height: 200px;
+}
+
+
 
 
 
 @media (max-width: 768px) {
 
+    .superimpositionButtonActivityButton  {
+        height: auto;
+        min-height: 40px;
+    }
     .cardBoxIconTextVersion {
         white-space: normal;
         font-size: 30px;
@@ -660,6 +877,7 @@
         width: 100%;
         flex-wrap: wrap;
         flex-direction: row;
+        min-height: auto;
     }
     .enemyWaveEnemyDisplayBox {
         width: 45%;
