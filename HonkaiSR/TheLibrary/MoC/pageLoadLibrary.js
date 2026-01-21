@@ -41,6 +41,18 @@ let currentFloor = null;
 
 const endgameModeDisplay = {
     pageloadEntry() {
+
+        if (stageTypers === "anom") {
+
+            mocSchedule.reverse();
+            const newActiveRange = mocSchedule[mocSchedule.length-1];
+            currentActiveCycle = newActiveRange.id;
+            currentFloor = 4;
+            endgameModeDisplay.setEndgameDisplay(newActiveRange.id,newActiveRange);
+
+            return 
+        }
+
         mocSchedule.sort((a, b) => {
             const aDate = parseLocalDate(a.start);
             const bDate = parseLocalDate(b.start);
@@ -125,7 +137,7 @@ const endgameModeDisplay = {
             }
 
             let pfBannerString = "";
-            readSelection("mainGridRow").style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/HonkaiSR/${directEntry.image || "mocBG/AbyssSenceBgl_Red_00.png"}') center / cover no-repeat`;
+            readSelection("mainGridRow").style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/HonkaiSR/${directEntry.image || "mocBG/AbyssSenceBgl_Red_00.png"}') center top / cover`;
             // if (stageTypers != "pf") {
             //     readSelection("mainGridRow").style.background = `url('/HonkaiSR/${directEntry.image || "mocBG/AbyssSenceBgl_Red_00.png"}') center / cover no-repeat`;
             // }
@@ -145,11 +157,16 @@ const endgameModeDisplay = {
 
             readSelection("cardBoxIconTextVersion").innerHTML = directEntry.realName;
 
+
+            // patchName
+            const startStringer = stageTypers === "anom" ? "Patch: " + directEntry.patchName : directEntry.start + " - " + directEntry.end;
+
             readSelection("versionUpdateValue").innerHTML = `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(-1)">&#9664;</div>`
-            + directEntry.start + " - " + directEntry.end + `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(1)">&#9654;</div>`;
+            + startStringer + `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(1)">&#9654;</div>`;
 
 
             const currentFloors = directEntry.floorData;
+            // console.log(directEntry)
             let floorCounts = Object.keys(currentFloors);
             let floorMin = +floorCounts[0];
             let floorMax = +floorCounts[floorCounts.length-1];
@@ -185,7 +202,7 @@ const endgameModeDisplay = {
             }
 
 
-            if (directEntry.buffList2?.length || directEntry.buffList1?.length) {
+            if (directEntry.buffList2?.length || directEntry.buffList1?.length || directEntry.kingBuffList?.length) {
                 readSelection("PFDescriptionBox").style.display = "block";
 
                 // desc
@@ -275,11 +292,58 @@ const endgameModeDisplay = {
                 }
 
 
+                let king1Stringer = "";
+                let selector1KingStringer = "";
+                
+                if (directEntry.kingBuffList && directEntry.kingBuffList.length && (currentFloor === 4 || currentFloor === 5)) {
+                    selector1KingStringer += `<div class="superimpositionHolderboxActivityButtons">`;
+                    let selectorCounter1 = 0;
+                    for (let buffEntry of directEntry.kingBuffList) {
+
+                        const setLength = directEntry.kingBuffList.length;
+                        selectorCounter1++;
+                        selector1KingStringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter1 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
+                        id="activityBuffDisplay3Button${selectorCounter1}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter1},3,${setLength})">${buffEntry.name}</div>`
+
+                        king1Stringer += `<div class="rotationsSectionRowHolder2Overview" id="activityBuffDisplay3Box${selectorCounter1}" style="display: ${selectorCounter1 === setLength ? "flex" : "none"}">
+                                    <div class="eidolonRowBoxHolder">
+                                        
+                                        <div class="rightDescriptionBoxEidolons smallFont">
+                                            <div class="eidolonRowNameTrigger">${buffEntry.name}</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="overviewSkillDataBox">
+                                        <div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
+                                            <div class="traceToughnessTitleBoxToughnessRow">
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+
+                                    <div class="actionDetailBody">
+                                        <div class="actionDetailBody2Description">
+                                            ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="actionDetailBody">
+                                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${buffEntry.params}]</div>
+                                    </div>
+                                
+                                </div>`;
+                    }
+                    selector1KingStringer += `</div>`;
+                }
+
+
                 // if (list1Stringer) {
                 //     list1Stringer = `<div class="statFiltersRowHeaderSides">Player Buff Options</div>` + list1Stringer;
                 // }
 
-                readSelection("PFDescriptionBox").innerHTML = selector2Stringer + list2Stringer + selector1Stringer + list1Stringer;
+                readSelection("PFDescriptionBox").innerHTML = selector2Stringer + list2Stringer + selector1Stringer + list1Stringer + selector1KingStringer + king1Stringer;
             }
             else if (readSelection("PFDescriptionBox")) {readSelection("PFDescriptionBox").style.display = "none";}
 
@@ -300,7 +364,18 @@ const endgameModeDisplay = {
                 if (+floorName === currentFloor) {
                     bgString = `background-color: rgb(225, 225, 228); color: black;`;
                 }
-                floorStringer += `<div class="superimpositionButton clickable" id="superimpositionButton1" onclick="endgameModeDisplay.setEndgameDisplay(0,null,${floorName})" style="${bgString}">${floorName}</div>`
+                else if (+floorName === 5 && stageTypers === "anom") {
+                    bgString = `background-color: #52001F; color: rgb(225, 225, 228);`
+                }
+
+                let knightsPrefix = stageTypers === "anom" && +floorName <= 3 ? "Knight " : "";
+
+                let overrideString = "";
+
+                if (stageTypers === "anom" && +floorName === 4) {overrideString = "King"}
+                if (stageTypers === "anom" && +floorName === 5) {overrideString = "Plight"}
+
+                floorStringer += `<div class="superimpositionButton clickable" id="superimpositionButton1" onclick="endgameModeDisplay.setEndgameDisplay(0,null,${floorName})" style="${bgString}">${knightsPrefix + (overrideString || floorName)}</div>`
             }
             readSelection("superimpositionHolderbox").innerHTML = floorStringer;
             
@@ -331,7 +406,7 @@ const endgameModeDisplay = {
                         let wholeWaveString = "";
 
                         const isObject = typeof waveEntry === "object" && !Array.isArray(waveEntry);
-                        const isPF = stageTypers === "pf";
+                        const isPF = stageTypers === "pf" || stageTypers === "anom";
 
                         
                         
@@ -388,7 +463,70 @@ const endgameModeDisplay = {
                             // </div>
 
                             // <span class="enemyLinkerText">Take me to:</span>
-                            wholeWaveString += `<div class="enemyWaveEnemyDisplayBox">
+
+                            let finalHPRows = `<div class="imageRowStatisticBox3">
+                                    <div class="imageRowStatisticStatBox">${Math.floor(enemyEntry.hpBase).toLocaleString()}${enemyEntry.hpBars && enemyEntry.hpBars>1 ? ` x${enemyEntry.hpBars}` : ""}</div>
+                                </div>`;
+
+                            let finalToughnessRows = `<div class="imageRowStatisticBox1">
+                                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"></div>
+                                    <div class="imageRowStatisticStatBox">${enemyEntry.toughnessBase}${!Array.isArray(enemyEntry.toughnessBase) && enemyEntry.toughnessBars && enemyEntry.toughnessBars>1 ? ` x${enemyEntry.toughnessBars}` : ""}</div>
+                                </div>`
+
+
+                            let isHPArray = false;
+                            if (Array.isArray(enemyEntry.hpBase)) {
+                                isHPArray = true;
+                                finalHPRows = `<div class="imageRowStatisticBox1">
+                                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconMaxHP.png" class="imageRowStatisticImage"></div>
+                                    <div class="imageRowStatisticStatBox">HP/Phase</div>
+                                </div>`;
+
+                                let hpCounter = 0;
+                                for (let hpValue of enemyEntry.hpBase) {
+                                    hpCounter++;
+                                    finalHPRows += `<div class="imageRowStatisticBox3PhaseData">
+                                        <span>${hpCounter}:</span>
+                                        <div class="imageRowStatisticStatBox">${Math.floor(hpValue).toLocaleString()}</div>
+                                    </div>`
+                                }
+
+
+                                // finalHPRows += "</div>";
+                            }
+
+                            let isToughnessArray = false;
+                            if (Array.isArray(enemyEntry.toughnessBase)) {
+                                isToughnessArray = true;
+                                finalToughnessRows = `<div class="imageRowStatisticBox1">
+                                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"></div>
+                                    <div class="imageRowStatisticStatBox">T/Phase</div>
+                                </div>`;
+
+                                let hpCounter = 0;
+                                for (let hpValue of enemyEntry.toughnessBase) {
+                                    hpCounter++;
+                                    finalToughnessRows += `<div class="imageRowStatisticBox3PhaseData">
+                                        <span>${hpCounter}:</span>
+                                        <div class="imageRowStatisticStatBox">${hpValue}${Array.isArray(enemyEntry.toughnessBars) ? ` x${enemyEntry.toughnessBars[hpCounter-1]}` : ` x${enemyEntry.toughnessBars}`}</div>
+                                    </div>`
+                                }
+
+
+                                // finalHPRows += "</div>";
+                            }
+
+
+
+                            const isBigFucker = isToughnessArray && isHPArray;
+                            
+
+                            
+
+
+
+
+                            wholeWaveString += `<div class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}">
     
                                 <img src="/HonkaiSR/${enemyImage}" class="enemyWaveEnemyIcon">
                                 <div class="enemyWaveEnemyLevel">${enemyLevel}</div>
@@ -420,16 +558,21 @@ const endgameModeDisplay = {
                                     <div class="imageRowStatisticStatBox">${Math.floor(enemyEntry.speedBase).toLocaleString()}</div>
                                 </div>
     
-                                <div class="imageRowStatisticBox1">
-                                    <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconBreakUp.png" class="imageRowStatisticImage"></div>
-                                    <div class="imageRowStatisticStatBox">${enemyEntry.toughnessBase}${enemyEntry.toughnessBars && enemyEntry.toughnessBars>1 ? ` x${enemyEntry.toughnessBars}` : ""}</div>
-                                </div>
+                                ${!isBigFucker ? finalToughnessRows : ""}
     
                                 
                                 
-                                <div class="imageRowStatisticBox3">
-                                    <div class="imageRowStatisticStatBox">${Math.floor(enemyEntry.hpBase).toLocaleString()}${enemyEntry.hpBars && enemyEntry.hpBars>1 ? ` x${enemyEntry.hpBars}` : ""}</div>
-                                </div>
+                                ${!isBigFucker ? finalHPRows : ""}
+
+                                ${isBigFucker ? `<div class="bigFuckerBoxRow">
+                                        <div class="bigFuckerBox">
+                                            ${finalToughnessRows}
+                                        </div>
+                                        <div class="bigFuckerBox">
+                                            ${finalHPRows}
+                                        </div>
+
+                                    </div>` : ""}
                                 
                             </div>`
                             // wholeWaveString += `<div class="enemyWaveEnemyDisplayBox">
@@ -1490,7 +1633,212 @@ const endgameModeDisplay = {
 
 
 
-                // const difficultyList = guideObject.difficultyList;
+                
+
+                return overviewString;
+            }
+            
+
+            let side1String = getSideString(side1,1);
+            let side2String = getSideString(side2,2);
+            
+            let guide1String = boss1Guide ? getGuideString(boss1Guide,1) : "";
+            let guide2String = boss2Guide ? getGuideString(boss2Guide,2) : "";
+            // boss1Guide
+
+
+
+            readSelection("mocEachSide1").innerHTML = side1String + guide1String;
+            readSelection("mocEachSide2").innerHTML = side2String + guide2String;
+
+
+
+            if (stageTypers === "anom") {
+                // readSelection("mocEachSide2").innerHTML = "";
+
+
+
+                const tagList = currentStage.tagList;
+                // selectorCounter = 1;
+                let listStringer = "";
+                for (let traceEntry of tagList) {
+                    
+                    // console.log(traceEntry)
+                    // selectorCounter++;
+                    const currentTraceRef = traceEntry;
+                    // if (!currentTraceRef.desc && !currentTraceRef.skillRef) {continue}
+        
+                    // const traceIcon = currentTraceRef.icon;
+                    const currentTraceRefSkill = currentTraceRef.skillRef;
+                    const skillSlot = currentTraceRefSkill?.skillSlot;
+        
+        
+                    const skillLevel = userTriggers.levelFloors[skillSlot];
+        
+                    let entryString = "";
+        
+        
+        
+                    entryString += `
+                    <div class="rotationsSectionRowHolder2Overview">
+                    <div class="eidolonRowBoxHolder">
+                        
+                        <div class="rightDescriptionBoxEidolons smallFont">
+                            <div class="eidolonRowName">
+                                ${skillSlot ?? currentTraceRef.name}
+                            </div>
+                            
+                    `;
+                    // ${entry.desc}
+        
+        
+        
+        
+                    // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
+                    entryString += `<div class="rotationsSectionRowHolder1Overview">
+                        <div class="actionDetailBody">
+                            <div class="actionDetailBody2Description">
+                                ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc ?? "")}
+                            </div>
+                        </div>
+                    `
+    
+                    if (currentTraceRef.params?.length) {
+    
+                        let paramString = "";
+                        let paramCounter = 0;
+                        for (let paramEntry of currentTraceRef.params) {
+                            paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                            paramCounter++;
+                        }
+    
+                        entryString += `
+                            <div class="actionDetailBody">
+                                <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                            </div>
+                        `
+                    }
+    
+                    if (currentTraceRef.extraEffects && Object.keys(currentTraceRef.extraEffects).length) {
+    
+                        let paramString = "";
+                        let paramCounter = 0;
+                        for (let paramEntry in currentTraceRef.extraEffects) {
+                            const currentValue = currentTraceRef.extraEffects[paramEntry];
+                            const numChecker = typeof currentValue === "number";
+                            const currentEffect = numChecker ? modifiersExtraEffects[currentValue] : currentValue;
+                            
+                            // if (typeof currentEffect === "number") {
+                            //     modifiersExtraEffects
+                            // }
+                            // else {
+    
+                                paramString += `<div class="rotationsSectionRowHolder3Overview">
+                                    <div class="actionDetailBody">
+                                        <div class="rotationConditionOperatorHeaderInlineParamsExtraEffectHeader">${numChecker ? modifiersExtraEffects[currentValue].name : paramEntry}</div>
+                                    </div>
+                                    <div class="actionDetailBody">
+                                        <div class="actionDetailBody3DescriptionExtra">
+                                            ${pagePopulation.cleanDescription(currentEffect.params ?? [],currentEffect.desc)}
+                                        </div>
+                                    </div>
+                                </div>`;
+                            // }
+    
+                            // paramString += `${paramEntry}${paramCounter != currentTraceRef.params.length-1 ? ", " : ""}`;
+                            // paramCounter++;
+                        }
+    
+                        // entryString += `
+                        //     <div class="actionDetailBody">
+                        //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${paramString}]</div>
+                        //     </div>
+                        // `
+                        entryString += paramString;
+                    } 
+    
+                    entryString += `</div>`;
+        
+        
+        
+                    entryString += `</div>
+                    </div>
+                    </div>`;
+
+
+
+                    listStringer += entryString;
+                    // <div class="eidolonRowBoxHolder">
+                            
+                    //         <div class="rightDescriptionBoxEidolons smallFont">
+                    //             <div class="eidolonRowNameTrigger">${buffEntry.name}</div>
+                    //         </div>
+                    //     </div>
+                        
+
+                    //     <div class="actionDetailBody">
+                    //         <div class="actionDetailBody2Description">
+                    //             ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
+                    //         </div>
+                    //     </div>
+                        
+                    //     <div class="actionDetailBody">
+                    //         <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${buffEntry.params}]</div>
+                    //     </div>
+        
+                    
+                    
+                }
+                listStringer = `<div class="rotationsSectionRowHolder2Overview" style="display: flex">
+                    ${listStringer}
+                
+                </div>`;
+                // overviewString += listStringer;
+
+
+                // overviewString += selectorStringer;
+                readSelection("mocEachSide2").innerHTML = listStringer;
+
+                // tagList
+
+
+
+                // readSelection("mocEachSide2").style.display = "none";
+            }
+
+
+        }
+        else {
+            for (let i=0;i<mocSchedule.length;i++) {
+                const currentEntry = mocSchedule[i];
+
+                if (currentEntry.id === currentActiveCycle) {
+
+                    const correctIndex = Math.max(0,Math.min(mocSchedule.length-1, i + adjustment));
+                    const correctEntry = mocSchedule[correctIndex];
+
+                    currentActiveCycle = correctEntry.id;
+
+                    endgameModeDisplay.setEndgameDisplay(null,correctEntry);
+
+                    break;
+                }
+            }
+        }
+
+
+        
+
+    },
+}
+
+
+
+endgameModeDisplay.pageloadEntry();
+
+
+
+// const difficultyList = guideObject.difficultyList;
                 // selectorCounter = 3;
                 // listStringer = "";
                 // for (let traceEntry of difficultyList) {
@@ -1834,71 +2182,3 @@ const endgameModeDisplay = {
     
                 //     returnString += allWavesString;
                 // }
-
-                return overviewString;
-            }
-            
-
-            let side1String = getSideString(side1,1);
-            let side2String = getSideString(side2,2);
-            
-            let guide1String = boss1Guide ? getGuideString(boss1Guide,1) : "";
-            let guide2String = boss2Guide ? getGuideString(boss2Guide,2) : "";
-            // boss1Guide
-
-
-
-            readSelection("mocEachSide1").innerHTML = side1String + guide1String;
-            readSelection("mocEachSide2").innerHTML = side2String + guide2String;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-        else {
-            for (let i=0;i<mocSchedule.length;i++) {
-                const currentEntry = mocSchedule[i];
-
-                if (currentEntry.id === currentActiveCycle) {
-
-                    const correctIndex = Math.max(0,Math.min(mocSchedule.length-1, i + adjustment));
-                    const correctEntry = mocSchedule[correctIndex];
-
-                    currentActiveCycle = correctEntry.id;
-
-                    endgameModeDisplay.setEndgameDisplay(null,correctEntry);
-
-                    break;
-                }
-            }
-        }
-
-
-        
-
-    },
-}
-
-
-
-endgameModeDisplay.pageloadEntry();

@@ -1651,7 +1651,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -1973,7 +1976,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -2295,7 +2301,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -2620,7 +2629,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 160,
+                      "toughnessBase": [
+                        160,
+                        160
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -2963,7 +2975,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 338.30289,
                       "defBase": 800.00004,
-                      "hpBase": 235360.596672,
+                      "hpBase": [
+                        235360.596672,
+                        235360.596672,
+                        235360.596672
+                      ],
                       "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
@@ -3325,7 +3341,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 435.804984,
                       "defBase": 899.99994,
-                      "hpBase": 1130727.27168,
+                      "hpBase": [
+                        1130727.27168,
+                        1130727.27168,
+                        1130727.27168
+                      ],
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
@@ -3687,7 +3707,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 552.320784,
                       "defBase": 1000.00005,
-                      "hpBase": 3523846.36416,
+                      "hpBase": [
+                        3523846.36416,
+                        3523846.36416,
+                        3523846.36416
+                      ],
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -4049,7 +4073,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
-                      "hpBase": 8447127.56352,
+                      "hpBase": [
+                        8447127.56352,
+                        8447127.56352,
+                        8447127.56352
+                      ],
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -6177,7 +6205,10 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 304.472601,
                       "defBase": 800.00004,
-                      "hpBase": 471947.029785,
+                      "hpBase": [
+                        471947.029785,
+                        471947.029785
+                      ],
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
@@ -6516,7 +6547,10 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 435.804984,
                       "defBase": 899.99994,
-                      "hpBase": 1700507.810925,
+                      "hpBase": [
+                        1700507.810925,
+                        1700507.810925
+                      ],
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
@@ -6855,7 +6889,10 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 552.320784,
                       "defBase": 1000.00005,
-                      "hpBase": 4769581.11399,
+                      "hpBase": [
+                        4769581.11399,
+                        4769581.11399
+                      ],
                       "speedBase": 172.8,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -7194,7 +7231,10 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
-                      "hpBase": 8469125.29155,
+                      "hpBase": [
+                        8469125.29155,
+                        8469125.29155
+                      ],
                       "speedBase": 190.08,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -10622,7 +10662,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 304.472601,
                       "defBase": 800.00004,
-                      "hpBase": 196133.83056,
+                      "hpBase": [
+                        196133.83056,
+                        196133.83056,
+                        196133.83056
+                      ],
                       "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
@@ -10970,7 +11014,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 435.804984,
                       "defBase": 899.99994,
-                      "hpBase": 706704.5448,
+                      "hpBase": [
+                        706704.5448,
+                        706704.5448,
+                        706704.5448
+                      ],
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
@@ -11318,7 +11366,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 552.320784,
                       "defBase": 1000.00005,
-                      "hpBase": 1982163.57984,
+                      "hpBase": [
+                        1982163.57984,
+                        1982163.57984,
+                        1982163.57984
+                      ],
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -11666,7 +11718,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
-                      "hpBase": 4223563.78176,
+                      "hpBase": [
+                        4223563.78176,
+                        4223563.78176,
+                        4223563.78176
+                      ],
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -12188,7 +12244,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -12496,7 +12555,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -12804,7 +12866,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -13112,7 +13177,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 160,
+                      "toughnessBase": [
+                        160,
+                        160
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -13440,7 +13508,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 304.472601,
                       "defBase": 800.00004,
-                      "hpBase": 196133.83056,
+                      "hpBase": [
+                        196133.83056,
+                        196133.83056,
+                        196133.83056
+                      ],
                       "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
@@ -13802,7 +13874,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 435.804984,
                       "defBase": 899.99994,
-                      "hpBase": 706704.5448,
+                      "hpBase": [
+                        706704.5448,
+                        706704.5448,
+                        706704.5448
+                      ],
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
@@ -14164,7 +14240,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 552.320784,
                       "defBase": 1000.00005,
-                      "hpBase": 1982163.57984,
+                      "hpBase": [
+                        1982163.57984,
+                        1982163.57984,
+                        1982163.57984
+                      ],
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -14526,7 +14606,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
-                      "hpBase": 3519636.4848,
+                      "hpBase": [
+                        3519636.4848,
+                        3519636.4848,
+                        3519636.4848
+                      ],
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -15093,7 +15177,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -15454,7 +15541,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -15815,7 +15905,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 130,
+                      "toughnessBase": [
+                        130,
+                        130
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -16179,7 +16272,10 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
-                      "toughnessBase": 160,
+                      "toughnessBase": [
+                        160,
+                        160
+                      ],
                       "weaknessList": [],
                       "resistances": {},
                       "resistancesDebuff": {
@@ -16604,7 +16700,18 @@ let mocSchedule = [
                       "effectRES": 0.34,
                       "ehr": 0.08,
                       "delay": 1,
-                      "toughnessBars": 10,
+                      "toughnessBars": [
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10
+                      ],
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
                       "toughnessBase": 80,
@@ -16979,7 +17086,18 @@ let mocSchedule = [
                       "effectRES": 0.38,
                       "ehr": 0.16,
                       "delay": 1,
-                      "toughnessBars": 10,
+                      "toughnessBars": [
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10
+                      ],
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
                       "toughnessBase": 80,
@@ -17354,7 +17472,18 @@ let mocSchedule = [
                       "effectRES": 0.4,
                       "ehr": 0.24,
                       "delay": 1,
-                      "toughnessBars": 10,
+                      "toughnessBars": [
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10
+                      ],
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
                       "toughnessBase": 80,
@@ -17735,7 +17864,18 @@ let mocSchedule = [
                       "effectRES": 0.4,
                       "ehr": 0.32,
                       "delay": 1,
-                      "toughnessBars": 10,
+                      "toughnessBars": [
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10,
+                        10
+                      ],
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
                       "toughnessBase": 80,
