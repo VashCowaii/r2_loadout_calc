@@ -21,14 +21,19 @@
     background-color: #0d0c0c;
     background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
     background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     overflow: hidden;
     position: relative;
 
 
-    padding-top: 10px;
+    padding-top: 00px;
     padding-bottom: 10px;
+    min-height: 850px;
+    height: 100%;
+    /* background-size: 1000px auto;
+    background-position: center top; */
+
     /* height: 800px; */
 }
 
@@ -54,6 +59,8 @@
 .mocTitleRowMain {
     width: 100%;
     height: 200px;
+    min-height: 200px;
+    max-height: 200px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -103,11 +110,21 @@
 
 .toggleArrowBox {
     font-size: 25px;
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-top: -5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+    /* margin-top: -5px; */
     cursor: pointer;
     box-sizing: border-box;
+    height: 20px;
+    max-height: 20px;
+
+    border-radius: 5px;
+
+    background-color: rgb(225, 225, 228);
+    color: black;
 }
 
 .mainBodyCardBox {
@@ -157,12 +174,15 @@
     backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.562);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding-left: 4px;
     padding-right: 4px;
     margin-top: 5px;
     border-radius: 10px;
+    height: auto;
+    min-width: 300px;
+    /* height: 30px; */
 }
 
 
@@ -268,7 +288,7 @@
     font-size: 16px;
 }
 
-.imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBox3,.imageRowStatisticBoxMain,.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
+.imageRowStatisticBox1,.imageRowStatisticBox2,.imageRowStatisticBox3,.imageRowStatisticBox3PhaseData,.imageRowStatisticBoxMain,.imageRowStatisticBox1DETAILS,.imageRowStatisticBox2DETAILS {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -282,6 +302,14 @@
     justify-content: right;
     padding: 0px;
     width: 100%;
+    max-width: none;
+    text-align: center;
+}
+.imageRowStatisticBox3PhaseData {
+    justify-content: space-between;
+    padding: 0px;
+    width: 100%;
+    padding-left: 2px;
     max-width: none;
     text-align: center;
 }
@@ -381,7 +409,7 @@
     overflow: hidden;
 
 }
-.enemyWaveEnemyDisplayBox:hover .enemyWaveEnemyDisplayBoxIDLinker {
+.enemyWaveEnemyDisplayBox:hover .enemyWaveEnemyDisplayBoxIDLinker, .enemyWaveEnemyDisplayBoxWideEnemy:hover .enemyWaveEnemyDisplayBoxIDLinker {
     display: flex;
 }
 .characterDisplayElementWeaknessIcon {
@@ -533,6 +561,50 @@
     /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
 }
 
+
+.bigFuckerBoxRow {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 2px solid #ffffff21;
+}
+.bigFuckerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.bigFuckerBox + .bigFuckerBox {
+    border-left: 2px solid #ffffff21;
+}
+.enemyWaveEnemyDisplayBoxWideEnemy {
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    border-top-right-radius: 10px;
+    padding: 2px;
+    backdrop-filter: blur(5px);
+    /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
+    background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
+
+    background: linear-gradient(200deg, #0d393b,transparent,#ffffff21);
+    border: 1px solid #acacaca9;
+    /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
+}
+
 .actionDetailBody3Description {
     width: auto;
     max-width: 95%;
@@ -562,6 +634,7 @@
 }
 .actionDetailBody3DescriptionGrit {
     width: auto;
+    width: 100%;
     max-width: 95%;
     white-space: normal;
     text-align: left;
@@ -881,6 +954,9 @@
     }
     .enemyWaveEnemyDisplayBox {
         width: 45%;
+    }
+    .enemyWaveEnemyDisplayBoxWideEnemy {
+        width: 100%;
     }
     .superimpositionHolderbox {
         flex-wrap: wrap;

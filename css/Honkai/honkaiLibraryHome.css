@@ -256,6 +256,9 @@
     padding-right: 5px;
 
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
 
 
@@ -358,7 +361,8 @@
 }
 
 .mainSelectionHeaderRow {
-    bottom: 10%;
+    bottom: 0%;
+
 }
 
 
