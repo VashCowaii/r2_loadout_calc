@@ -4330,22 +4330,27 @@ const userTriggers = {
 
 
         let weaknessIconString = "";
-        for (let weaknessEntry of newCharRef.weak) {
-            weaknessIconString += `<img src="/HonkaiSR/icon/element/${weaknessEntry}.png" class="characterDisplayElementWeaknessIcon">`
+        if (newCharRef.weak?.length) {
+            for (let weaknessEntry of newCharRef.weak) {
+                weaknessIconString += `<img src="/HonkaiSR/icon/element/${weaknessEntry}.png" class="characterDisplayElementWeaknessIcon">`
+            }
         }
 
         let resIconString = "";
 
-        if (newCharRef.res) {
+        if (newCharRef.res?.length) {
             resIconString += `<div class="enemyResBoxHolderRow">`
+
+            for (let weaknessEntry in newCharRef.res) {
+                resIconString += `<div class="enemyResBoxHolder">
+                    <img src="/HonkaiSR/icon/element/${weaknessEntry}.png" class="characterDisplayElementWeaknessIcon">
+                    <div>${+(newCharRef.res[weaknessEntry] * 100).toFixed(7)}%</div>
+                </div>`
+            }
+            // if (resIconString) {resIconString += `</div>`}
+            resIconString += `</div>`;
         }
-        for (let weaknessEntry in newCharRef.res) {
-            resIconString += `<div class="enemyResBoxHolder">
-                <img src="/HonkaiSR/icon/element/${weaknessEntry}.png" class="characterDisplayElementWeaknessIcon">
-                <div>${+(newCharRef.res[weaknessEntry] * 100).toFixed(7)}%</div>
-            </div>`
-        }
-        if (resIconString) {resIconString += `</div>`}
+        
 
         const isPhasedHP = newCharRef.phhp?.length;
         let phaseDoesNotMatterHP = true;
@@ -4371,7 +4376,7 @@ const userTriggers = {
             let lastKnownValue = null;
 
             for (let phasedEntry of newCharRef.phs) {
-                console.log(phasedEntry)
+                // console.log(phasedEntry)
                 if (!lastKnownValue) {
                     lastKnownValue = phasedEntry;
                     continue;
