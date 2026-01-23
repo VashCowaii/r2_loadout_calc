@@ -1,0 +1,180 @@
+let enemyData = {
+  "name": "Trot Tri",
+  "image": 8002053,
+  "bar": 1,
+  "stArray": [
+    18,
+    315,
+    334.8,
+    83,
+    null,
+    0.2,
+    null,
+    0.5,
+    90,
+    null,
+    1
+  ],
+  "options": {
+    "8002053": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2451,
+        2452,
+        2453
+      ],
+      "enemyTag": [
+        "Monster_Minion04"
+      ]
+    },
+    "800205301": {
+      "name": "Trotter",
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.666667,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2451,
+        2452,
+        2453
+      ],
+      "enemyTag": [
+        "Monster_Minion04"
+      ]
+    },
+    "800205302": {
+      "name": "Giant Trotter",
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        10,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2451,
+        2452,
+        2453
+      ],
+      "enemyTag": [
+        "Monster_Minion04"
+      ]
+    },
+    "800205303": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.8,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2451,
+        2452,
+        2453
+      ],
+      "enemyTag": [
+        "Monster_Minion04"
+      ]
+    },
+    "800205304": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.8,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2451,
+        2452,
+        2453
+      ],
+      "enemyTag": [
+        "Monster_Minion04"
+      ]
+    }
+  }
+}

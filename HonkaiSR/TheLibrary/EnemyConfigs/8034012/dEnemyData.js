@@ -1,0 +1,335 @@
+let enemyData = {
+  "name": "Daring Diceroller",
+  "image": 8034012,
+  "bar": 2,
+  "stArray": [
+    18,
+    210,
+    8137.5,
+    120,
+    null,
+    0.2,
+    0.3,
+    1,
+    570,
+    null,
+    1
+  ],
+  "options": {
+    "8034012": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Thunder",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.4,
+        "Quantum": 0.4,
+        "Imaginary": 0.4
+      },
+      "resMod": {
+        "STAT_CTRL": 0.75
+      },
+      "abilities": [
+        2968,
+        2969,
+        2970,
+        2971,
+        2972,
+        2973,
+        2974,
+        2975,
+        2976,
+        2977,
+        2978,
+        2979,
+        2980,
+        2981,
+        2982,
+        2983,
+        2984,
+        2985,
+        2986,
+        2987,
+        2988,
+        2989
+      ],
+      "summons": [
+        {
+          "name": "\"All or Nothing\"",
+          "over": 8032033,
+          "base": 8032033
+        },
+        {
+          "name": "\"All or Nothing: Double Fortune\"",
+          "over": 8032034,
+          "base": 8032034
+        }
+      ]
+    },
+    "803401201": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        -60
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Thunder",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.4,
+        "Quantum": 0.4,
+        "Imaginary": 0.4
+      },
+      "resMod": {
+        "STAT_CTRL": 0.75
+      },
+      "abilities": [
+        2968,
+        2969,
+        2970,
+        2971,
+        2972,
+        2973,
+        2974,
+        2975,
+        2976,
+        2977,
+        2978,
+        2979,
+        2980,
+        2981,
+        2982,
+        2983,
+        2984,
+        2985,
+        2986,
+        2987,
+        2988,
+        2989
+      ],
+      "summons": [
+        {
+          "name": "\"All or Nothing\"",
+          "over": 803203301,
+          "base": 8032033
+        },
+        {
+          "name": "\"All or Nothing: Double Fortune\"",
+          "over": 803203401,
+          "base": 8032034
+        }
+      ]
+    },
+    "803401202": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        -60
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Thunder",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.4,
+        "Quantum": 0.4,
+        "Imaginary": 0.4
+      },
+      "resMod": {
+        "STAT_CTRL": 0.75
+      },
+      "abilities": [
+        2968,
+        2969,
+        2970,
+        2971,
+        2972,
+        2973,
+        2974,
+        2975,
+        2976,
+        2977,
+        2978,
+        2979,
+        2980,
+        2981,
+        2982,
+        2983,
+        2984,
+        2985,
+        2986,
+        2987,
+        2988,
+        2989
+      ],
+      "summons": [
+        {
+          "name": "\"All or Nothing\"",
+          "over": 803203302,
+          "base": 8032033
+        },
+        {
+          "name": "\"All or Nothing: Double Fortune\"",
+          "over": 803203402,
+          "base": 8032034
+        }
+      ]
+    },
+    "803401203": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        -60
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Thunder",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.4,
+        "Quantum": 0.4,
+        "Imaginary": 0.4
+      },
+      "resMod": {
+        "STAT_CTRL": 0.75
+      },
+      "abilities": [
+        2968,
+        2969,
+        2970,
+        2971,
+        2972,
+        2973,
+        2974,
+        2975,
+        2976,
+        2977,
+        2978,
+        2979,
+        2980,
+        2981,
+        2982,
+        2983,
+        2984,
+        2985,
+        2986,
+        2987,
+        2988,
+        2989
+      ],
+      "summons": [
+        {
+          "name": "\"All or Nothing\"",
+          "over": 803203303,
+          "base": 8032033
+        },
+        {
+          "name": "\"All or Nothing: Double Fortune\"",
+          "over": 803203403,
+          "base": 8032034
+        }
+      ]
+    },
+    "803401204": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Thunder",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.4,
+        "Quantum": 0.4,
+        "Imaginary": 0.4
+      },
+      "resMod": {
+        "STAT_CTRL": 0.75
+      },
+      "abilities": [
+        2968,
+        2969,
+        2970,
+        2971,
+        2972,
+        2973,
+        2974,
+        2975,
+        2976,
+        2977,
+        2978,
+        2979,
+        2980,
+        2981,
+        2982,
+        2983,
+        2984,
+        2985,
+        2986,
+        2987,
+        2988,
+        2989
+      ],
+      "summons": [
+        {
+          "name": "\"All or Nothing\"",
+          "over": 803203304,
+          "base": 8032033
+        },
+        {
+          "name": "\"All or Nothing: Double Fortune\"",
+          "over": 803203404,
+          "base": 8032034
+        }
+      ]
+    }
+  }
+}

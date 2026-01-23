@@ -1,0 +1,50 @@
+let enemyData = {
+  "name": "Furiae Archer",
+  "image": 4012032,
+  "bar": 1,
+  "stArray": [
+    18,
+    210,
+    465,
+    110,
+    null,
+    0.2,
+    0.1,
+    1,
+    300,
+    null,
+    1
+  ],
+  "options": {
+    "4012032": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Ice",
+        "Thunder",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        1644
+      ],
+      "enemyTag": [
+        "MonsterType_W4_Shooter_00"
+      ]
+    }
+  }
+}

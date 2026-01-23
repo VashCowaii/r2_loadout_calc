@@ -387,6 +387,14 @@ const endgameModeDisplay = {
                 for (let sideEntry of arraytoParse) {
                     let enemyLevel = sideEntry.enemyLevel;
 
+
+                    let newScaleElite = sideEntry.scalarElite;
+                    let newScaleHard = sideEntry.scalarHard;
+
+
+                    
+
+
                     let buffOverride = sideEntry.buffOverride;
                     if (buffOverride && !overrideMainBuffDescUsed) {
                         // ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
@@ -412,6 +420,11 @@ const endgameModeDisplay = {
                         
 
                         const entryToIterate = isPF ? waveEntry.enemies : waveEntry;
+
+                        const potentialElite = waveEntry.scaleElite;
+                        const potentialParams = waveEntry.params;
+
+                        
 
                         const counterObjectPF = {};
 
@@ -522,11 +535,21 @@ const endgameModeDisplay = {
                             
 
                             
+                            // newScaleHard,newScaleElite,enemyLevel,potentialElite
+                            console.log(potentialElite,newScaleElite)
+                            const seralize = {
+                                ov: enemyEntry.id,
+                                scH: newScaleHard,
+                                scHL: enemyLevel,
+                                scE: potentialElite ?? newScaleElite,
+                                wave: potentialParams?.length ? potentialParams.join(",") : [0,0].join(",")
+                            };
+                            const serialized = new URLSearchParams(seralize);
 
 
 
-
-                            wholeWaveString += `<div class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}">
+                            // onclick="endgameModeDisplay.linkToEnemy()"
+                            wholeWaveString += `<a class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}" href="/HonkaiSR/TheLibrary/EnemyConfigs/${enemyEntry.image}/?${serialized}" target="_blank">
     
                                 <img src="/HonkaiSR/${enemyImage}" class="enemyWaveEnemyIcon">
                                 <div class="enemyWaveEnemyLevel">${enemyLevel}</div>
@@ -534,7 +557,7 @@ const endgameModeDisplay = {
                                 ${isPF && counterObjectPF[enemyEntry.id]>1 ? `<div class="enemyWaveEnemyPFCount">x${counterObjectPF[enemyEntry.id]}</div>` : ""}
                                 
     
-                                <div class="enemyWaveEnemyDisplayBoxIDLinker clickable" onclick="endgameModeDisplay.linkToEnemy()">
+                                <div class="enemyWaveEnemyDisplayBoxIDLinker clickable" >
                                     
                                     <span class="enemyLinkerText">${enemyEntry.name}</span>
                                     
@@ -564,7 +587,7 @@ const endgameModeDisplay = {
                                 
                                 ${!isBigFucker ? finalHPRows : ""}
 
-                                ${isBigFucker ? `<div class="bigFuckerBoxRow">
+                                ${isBigFucker ? `<div class="bigFuckerBoxRow bigFuckerBoxRowMobileAnom">
                                         <div class="bigFuckerBox">
                                             ${finalToughnessRows}
                                         </div>
@@ -574,7 +597,7 @@ const endgameModeDisplay = {
 
                                     </div>` : ""}
                                 
-                            </div>`
+                            </a>`
                             // wholeWaveString += `<div class="enemyWaveEnemyDisplayBox">
     
                             //     <div class="enemyWaveEnemyIconAndLevelBox">
