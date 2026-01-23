@@ -8,7 +8,7 @@
 .traceContentBodyBoxRotations,.buffToughnessHealthValueDisplay,.turnOrderDisplayPreviewActionExpandRow,.analyticsResultRowDMG,.queryBarGainText,.characterDisplayEnemyLineupBarHeader,.filtersQuarterDescription,.filtersTagName,.filterTagsContainer,
 .filtersQuarterDescriptionDarkRow,.importCharacterBoxHeader,.characterSearchButtonOptimize,.comboDebugWindow,.statsRowName,.traceContentBodyBoxRotationsWarning,.rowSummaryDMGNameAndPercentACTIONBAR,.rowSummaryDMGNameAndPercentACTIONBARGained,
 .rowSummaryDMGNameAndPercentACTIONBARSpent,.statFiltersRowContainerSubstatsTrashRow,.imageRowStatisticNameBoxDMGDetails,.rotationConditionOperatorHeaderInlineParams,.eidolonRowNameTrigger,.traceToughnessTitleBoxToughnessRow,
-.traitLevelDisplay,.imageRowStatisticStatBoxDETAILS {
+.traitLevelDisplay,.imageRowStatisticStatBoxDETAILS,.characterDisplayPathNameBoxExtraEnemies,.enemyLinkerText {
     font-family: "Montserrat-Light";
 }
 
@@ -303,8 +303,30 @@ div {
     padding-right: 2px;
     color: white;
 }
+.eventCharacterFileInfoBoxEnemies {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 2px;
+    padding-right: 2px;
+    color: white;
+}
+.enemyMainStatsBoxScalarOverview {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .selectorWidthRestriction {
     width: 100%;
+}
+.selectorWidthRestrictionEnemies {
+    width: 100%;
+    max-width: 300px;
 }
 .characterDisplayPathAndNameBox {
     width: 100%;
@@ -372,6 +394,10 @@ div {
 .imageRowStatisticBox1,.imageRowStatisticBox1DETAILS {
     background-color: #c0c1d60D;
 }
+.imageRowStatisticBoxEnemyAdjustmentRow {
+    justify-content: space-between;
+    padding: 5px;
+}
 
 .imageRowStatisticNameBoxDETAILS,.imageRowStatisticStatBoxDETAILS {
     width: 100%;
@@ -405,6 +431,23 @@ div {
     align-items: center;
     padding-right: 2px;
     font-size: 14px;
+}
+.imageRowStatisticStatBoxEnemyPhased {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+}
+.imageRowStatisticStatBoxPhased {
+    /* width: 30%; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* padding-right: 2px; */
+    margin: 3px;
+    font-size: 25px;
 }
 
 
@@ -545,6 +588,7 @@ div {
     align-items: center;
     text-align: left;
     padding-left: 3px;
+    padding-right: 3px;
     padding-top: 3px;
     padding-bottom: 3px;
     box-sizing: border-box;
@@ -561,7 +605,7 @@ div {
 
     /* background-color: rgba(255, 255, 255, 0.082); */
 }
-.rotationConditionOperatorHeaderCondition {
+.rotationConditionOperatorHeaderCondition,.rotationConditionOperatorHeaderConditionEnemy {
     /* width: 100%; */
     width: fit-content;
     font-size: 18px;
@@ -574,6 +618,9 @@ div {
     margin-right: 3px;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.212);
+}
+.rotationConditionOperatorHeaderConditionEnemy {
+    font-size: 24px;
 }
 .rotationConditionOperatorHeaderConditionTriggerRow {
     /* width: 100%; */
@@ -633,6 +680,12 @@ div {
     justify-content: left;
     align-items: center;
     text-align: left;
+}
+.crossThroughText {
+    text-decoration: line-through;
+}
+.crossThroughTextFaded {
+    color: rgb(107, 107, 107);
 }
 .rotationConditionOperatorHeaderInlineParamsExtraEffectHeader {
     /* width: 100%; */
@@ -887,6 +940,8 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-items: stretch;
+
     box-sizing: border-box;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 10px;
@@ -903,6 +958,7 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-items: stretch;
     box-sizing: border-box;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 10px;
@@ -914,7 +970,7 @@ div {
     background: linear-gradient(340deg, transparent,transparent,transparent,#0d393b7a);
 }
 
-.rotationsSectionRowHolder3, .rotationsSectionRowHolder3Overview {
+.rotationsSectionRowHolder3, .rotationsSectionRowHolder3Overview,.enemySummaryDataBoxMain {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -930,6 +986,33 @@ div {
     /* background: linear-gradient(190deg, #0d393b7a,transparent,transparent,#ffffff21); */
     background: linear-gradient(340deg, transparent,transparent,transparent,#0000007a);
 }
+
+
+.enemyWaveEnemyDisplayBoxWideEnemy {
+    width: 40%;
+    max-width: 200px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    border-top-right-radius: 10px;
+    padding: 2px;
+    backdrop-filter: blur(5px);
+    margin: 10px;
+    /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
+    background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
+
+    background: linear-gradient(200deg, #0d393b,transparent,#ffffff21);
+    border: 1px solid #acacaca9;
+    /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
+}
+
+
+
 .rotationsSectionRowHolder2Overview, .rotationsSectionRowHolder1Overview {
     padding: 5px;
 }
@@ -1203,14 +1286,39 @@ div {
     /* font-size: 55px; */
     padding-left: 10px;
 }
-.libraryCharacterDataHeaderCharNameInner {
+.libraryCharacterDataHeaderCharNameInner,.libraryCharacterDataHeaderCharNameInnerEnemies {
     width: 100%;
     display: flex;
     justify-content: left;
     align-items: center;
     box-sizing: border-box;
     font-size: 55px;
+
+    white-space: normal;
     /* padding-left: 10px; */
+}
+.libraryCharacterDataHeaderCharNameInnerEnemies {
+    font-size: 45px;
+}
+.noParamsPassedWarningBox {
+    width: 90%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: lightcoral;
+    font-size: 14px;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+.enemyMainStatsBox {
+    width: 100%;
+    max-width: 250px;
+    box-sizing: border-box;
+    border: 1px solid #acacaca9;
+    border-top-right-radius: 15px;
+
+    background: linear-gradient(340deg, transparent,transparent,transparent,#0d393b7a);
 }
 
 .characterDisplayElementBox {
@@ -1299,6 +1407,11 @@ div {
     margin-left: 5px;
     box-sizing: border-box;
 }
+.characterDisplayPathNameBoxExtraEnemies {
+    font-size: 20px;
+    /* margin-left: 5px; */
+    box-sizing: border-box;
+}
 .characterDisplayPathImageBox {
     height: 100%;
     display: flex;
@@ -1311,6 +1424,113 @@ div {
     height: auto;
     box-sizing: border-box;
 }
+
+
+
+
+.enemyConfigSummonRow {
+    width: 100%;
+    margin: 10px;
+    /* margin-left: 15px; */
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+
+
+    background-color: rgba(0, 0, 0, 0.219);
+
+}
+.enemyWaveEnemyDisplayBox {
+    width: 10%;
+    min-width: 120px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid red; */
+    border-top-right-radius: 10px;
+    padding: 2px;
+    backdrop-filter: blur(5px);
+    /* min-height: 200px; */
+    /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
+    background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21);
+
+    background: linear-gradient(200deg, #0d393b,transparent,#ffffff21);
+    border: 1px solid #acacaca9;
+    text-decoration: none;
+    /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
+}
+.enemyWaveEnemyDisplayBox:hover {
+    opacity: 0.5;
+}
+.enemyWaveSummaryHolder {
+    min-height: 200px;
+}
+.enemyWaveSummaryHolder {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+
+.enemyWaveSummaryHolderEnemy {
+    min-height: 200px;
+}
+.enemyWaveSummaryHolderEnemy {
+    width: 100%;
+    min-width: 100%;
+    /* min-width: 500px; */
+    justify-content: space-evenly;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+
+.enemyWaveEnemyIcon {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
+    margin-bottom: -50px;
+}
+.enemyLinkerText {
+    white-space: normal;
+}
+.enemyWaveEnemyDisplayBoxIDLinker {
+    width: 100%;
+    height: 100%;
+    /* color: transparent; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* backdrop-filter: blur(5px); */
+    /* background-color: rgba(0, 0, 0, 0.219); */
+    /* position: absolute; */
+    /* z-index: 5; */
+    /* display: none; */
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+
+}
+/* .enemyWaveEnemyDisplayBoxIDLinker {
+    display: flex;
+} */
 
 
 
@@ -1466,13 +1686,16 @@ div {
     /* border: 1px solid #434343; */
     box-sizing: border-box;
 }
-.characterMainCenterDisplay {
+.characterMainCenterDisplay,.characterMainCenterDisplayEnemies {
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     flex-direction: column;
     /* overflow: hidden; */
+}
+.characterMainCenterDisplayEnemies {
+    padding: 10px;
 }
 
 .centerDisplayHolderBox {
@@ -1524,10 +1747,12 @@ div {
 .expandedMiddle {
     width: 70%;
     height: 725px;
+    box-sizing: border-box;
 }
 .expandedMiddleNoQuarters {
     width: 100%;
     height: 725px;
+    box-sizing: border-box;
 }
 
 .expandedQuarters {
@@ -1583,6 +1808,20 @@ div {
     align-items: center;
     overflow: hidden;
 }
+.abilitySelectorFloaterBoxEnemies {
+    width: 100%;
+    /* max-width: 300px; */
+    box-sizing: border-box;
+    /* border: 2px solid #434343; */
+    /* border-radius: 10px; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 .abilitySelectorFloaterBoxName {
     width: 100%;
@@ -1590,6 +1829,15 @@ div {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+}
+.abilitySelectorFloaterBoxNameEnemies {
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 
@@ -1776,6 +2024,17 @@ div {
     /* overflow-y: scroll; */
     box-sizing: border-box;
 }
+.skillsMainBoxHolderEnemies {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* overflow-y: scroll; */
+    box-sizing: border-box;
+}
 .overviewSkillDataBox { 
     width: 100%;
 
@@ -1801,6 +2060,22 @@ div {
     /* flex-direction: column; */
     justify-content: center;
     align-items: flex-start;
+    /* margin: 2px; */
+    /* max-width: 400px; */
+    box-sizing: border-box;
+}
+.eidolonRowBoxHolderEnemy { 
+    width: 100%;
+
+    /* height: 50%;
+    max-height: 50%;
+    min-height: 50%; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: left;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
     /* margin: 2px; */
     /* max-width: 400px; */
     box-sizing: border-box;
@@ -1848,6 +2123,18 @@ div {
     margin-bottom: 2px;
     box-sizing: border-box;
 }
+.eidolonRowIconHolderEnemy {
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+}
 .eidolonRowIcon {
     width: 55px;
     display: flex;
@@ -1868,6 +2155,33 @@ div {
 .eidolonRowIcon:hover {
     opacity: 0.5;
 }
+.eidolonRowIconEnemy {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    /* border: 2px solid #e1e1e4; */
+    /* border-radius: 50%; */
+    box-sizing: border-box;
+
+    background: radial-gradient(
+      circle at center,
+      #473824 0%,
+      #473824 10%,
+      transparent 80%
+    );
+}
+.eidolonRowIconEnemyAlert {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    /* border: 2px solid #e1e1e4; */
+    /* border-radius: 50%; */
+    box-sizing: border-box;
+}
 .rightDescriptionBoxEidolons {
     width: 100%;
     white-space: normal;
@@ -1879,6 +2193,20 @@ div {
     padding-left: 5px;
     box-sizing: border-box;
     padding-right: 5px;
+}
+.rightDescriptionBoxEidolonsEnemy {
+    width: 100%;
+    white-space: normal;
+    text-align: left;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* padding-left: 5px; */
+    box-sizing: border-box;
+    /* padding-right: 5px; */
+    margin-left: 5px;
+    margin-right: 5px;
 }
 .eidolonRankRowHolder {
     width: 100%;
@@ -2012,18 +2340,24 @@ div {
     align-items: center;
 }
 
-.imageRowStatisticImageBox {
+.imageRowStatisticImageBox,.imageRowStatisticImageBoxEnemyAdjustment {
     width: 10%;
     max-width: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.imageRowStatisticImage,.imageRowStatisticImageMain,.imageRowStatisticImageStatMenu {
+.imageRowStatisticImageBoxEnemyAdjustment {
+    padding: 5px;
+}
+.imageRowStatisticImage,.imageRowStatisticImageMain,.imageRowStatisticImageStatMenu,.imageRowStatisticImagePhased {
     width: 100%;
     height: auto;
     object-fit: contain;
     scale: 1.2;
+}
+.imageRowStatisticImagePhased {
+    width: 140%;
 }
 .imageRowStatisticImageStatMenu {
     width: 20px;
@@ -2041,6 +2375,94 @@ div {
     padding-left: 2px;
     font-size: 16px;
 }
+
+.enemyMainBoxOverview {
+    width: 100%;
+    min-width: 300px;
+    max-width: 300px;
+    /* margin: 5px;
+    padding: 5px; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.enemyMainBoxOverviewColumn {
+    width: 100%;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+.bigFuckerBoxRow {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 2px solid #ffffff21;
+}
+.bigFuckerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50%;
+    min-width: 200px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.bigFuckerBox + .bigFuckerBox {
+    border-left: 2px solid #ffffff21;
+}
+.imageRowStatisticBox3PhaseData {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    /* padding-left: 10px; */
+    box-sizing: border-box;
+    padding-left: 5px;
+    
+    justify-content: space-between;
+    padding: 0px;
+    width: 100%;
+    padding-left: 2px;
+    max-width: none;
+    text-align: center;
+}
+.imageRowStatisticBox3PhaseDataEnemy {
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 25px;
+    /* padding-left: 10px; */
+    box-sizing: border-box;
+    /* padding-left: 5px; */
+    
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+    /* padding-left: 2px; */
+    max-width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
 
 
 
@@ -2074,6 +2496,77 @@ div {
     overflow-y: auto;
 }
 
+.characterDisplayElementWeaknessIconHolderBoxBattleSettings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* width: 100%; */
+    width: auto;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.219);
+    /* width: 120px;
+    max-width: 120px; */
+    /* position:absolute;
+    right: 0;
+    bottom: 50%; */
+    /* transform: translateY(50%); */
+    /* border: 1px solid green; */
+}
+
+.characterDisplayElementWeaknessIconHolderEnemies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    /* width: 100%; */
+    width: auto;
+    border-radius: 10px;
+    margin: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 5px;
+    /* backdrop-filter: blur(5px); */
+    /* background-color: rgba(0, 0, 0, 0.219); */
+    /* width: 120px;
+    max-width: 120px; */
+    /* position:absolute;
+    right: 0;
+    bottom: 50%; */
+    /* transform: translateY(50%); */
+    /* border: 1px solid green; */
+}
+.characterDisplayElementWeaknessIcon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    padding: 2px;
+    backdrop-filter: none;
+    /* backdrop-filter: blur(5px); */
+    background-color: transparent;
+}
+.enemyResBoxHolder {
+    /* width: 100%; */
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.enemyResBoxHolderRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: row;
+    margin: 5px;
+}
+
 
 
 
@@ -2081,13 +2574,85 @@ div {
 
 
 @media (max-width: 768px) {
+
+    .bigFuckerBoxRow {
+        flex-direction: column;
+        /* width: 100%; */
+        /* justify-content: center;
+        align-items: flex-start; */
+    }
+    .bigFuckerBoxRowMobileAnom {
+        flex-direction: row;
+    }
+    .bigFuckerBox {
+        width: 100%;
+        /* min-width: 45%; */
+    }
+
+    .enemyWaveSummaryHolderEnemy {
+        align-items: center;
+        justify-content: center;
+        min-width: unset;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* .rotationsSectionRowHolder2Overview,.rotationsSectionRowHolder1Overview {
+        max-width: 100%;
+    } */
+    /* .characterMainCenterDisplayEnemies {
+        width: 100%;
+    } */
+    .enemyWaveEnemyDisplayBoxWideEnemy,.enemyMainBoxOverview,.enemyMainStatsBox {
+        width: 100%;
+        max-width: unset;
+    }
+    .enemyWaveEnemyDisplayBoxWideEnemy {
+        max-width: 90%;
+    }
+    .enemyMainBoxOverviewColumn,.characterMainCenterDisplayOverviewHolderBox {
+        height: auto;
+        max-height: unset;
+        max-width: 100%;
+    }
+    .enemyMainBoxOverviewColumn {
+        margin: 0px;
+
+    }
+    .characterMainCenterDisplayOverviewHolderBox {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .skillsMainBoxHolderEnemies {
+        flex-direction: column;
+        height: auto;
+        max-height: unset;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 5px;
+
+        /* justify-content: center;
+        align-items: flex-start; */
+
+    }
+    .enemyMainStatsBoxScalarOverview {
+        width: 100%;
+        flex-direction: column;
+    }
+    .enemyWaveEnemyDisplayBox {
+        width: 49%;
+    }
+
     .characterMainCenterDisplay {
         height: auto;
     }
     .expandedDataHolderHolderBox {
         flex-direction: column;
+        height: auto;
+        min-height: unset;
     }
-    .expandedMiddle,.expandedQuarters {
+    .expandedMiddle,.expandedQuarters,.expandedMiddleNoQuarters {
         width: 100%;
         height: auto;
     }

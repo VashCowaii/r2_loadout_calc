@@ -1,0 +1,53 @@
+let enemyData = {
+  "name": "Trotter of Abundance",
+  "image": 8002070,
+  "bar": 1,
+  "stArray": [
+    18,
+    315,
+    558,
+    83,
+    null,
+    0.2,
+    null,
+    0.5,
+    90,
+    null,
+    1
+  ],
+  "options": {
+    "8002070": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Thunder",
+        "Quantum"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2484,
+        2485,
+        2486,
+        2487
+      ],
+      "enemyTag": [
+        "Monster_Minion04"
+      ]
+    }
+  }
+}
