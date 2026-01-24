@@ -124,8 +124,7 @@
                 <div class="menuSwitcherBarTopBox scrollHolderHorizontal">
                   <!-- <div class="characterSelectionsOverview scrollHolderHorizontalBody"> -->
                   <div class="menuSwitcherBarTopBox scrollHolderHorizontalBody" id="menuSwitcherBarTopBox">
-                    <!-- <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton1" onclick="userTriggers.updateMainMenuDisplayed(1)" style="color: white; opacity: 0.75;">Event-Reader</div> -->
-                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton1" onclick="alert(`Enemy event-readers are a 7th circle of hell that I will step into, just not for a bit.\n\nForgive me for including the button for it early.\n\nAlso note that even when I do start adding them it's not gonna be all at once. Like characters it will be over time.`)" style="color: white; opacity: 0.75;">Event-Reader</div>
+                    <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton1" onclick="userTriggers.updateMainMenuDisplayed(1)" style="color: white; opacity: 0.75;">Event-Reader</div>
                     <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton2" onclick="userTriggers.updateMainMenuDisplayed(2)" style="color: rgb(255, 219, 145); opacity: 1; background-color: rgba(255, 255, 255, 0.1);">Enemy</div>
                     <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton3" onclick="userTriggers.updateMainMenuDisplayed(3)" style="color: white; opacity: 0.75;">Abilities</div>
                     <!-- <div class="menuSwitcherButtonTop clickable" id="mainMenuTypeButton4" onclick="userTriggers.updateMainMenuDisplayed(4)" style="color: white; opacity: 0.75;">asdf</div> -->
@@ -138,10 +137,7 @@
 
           </div>
 
-          <div class="mainBodyRowOrColumn" id="mainBodyRowOrColumn">
-            <div class="eventReaderControlsBox" id="eventReaderControlsBox"></div>
-            <div class="eventBodyMainBox" id="eventBodyMainBox"></div>
-          </div>
+          
 
           <div class="eventCharacterFileInfoBoxEnemies">
 
@@ -193,7 +189,10 @@
 
           <div class="noParamsPassedWarningBox" id="noParamsPassedWarningBox"></div>
 
-
+          <div class="mainBodyRowOrColumn" id="mainBodyRowOrColumn">
+            <div class="eventReaderControlsBox" id="eventReaderControlsBox"></div>
+            <div class="eventBodyMainBox" id="eventBodyMainBox"></div>
+          </div>
 
 
           <div class="expandedDataHolderHolderBox" id="teamBoxMainHolderBox">
@@ -372,6 +371,8 @@
 <script src="/HonkaiSR/TheLibrary/dScaleInfinite.js"></script>
 <script src="dEnemyData.js"></script>
 
+<script src="compositeAbilityObject.js"></script>
+<script src="/HonkaiSR/TheLibrary/painAndSuffering.js"></script>
 <script src="/HonkaiSR/TheLibrary/EnemyConfigs/newTester.js"></script>
 
 <script src="/MainJS/buildTime.js"></script>

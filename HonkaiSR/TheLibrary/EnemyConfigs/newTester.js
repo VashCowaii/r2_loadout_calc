@@ -428,44 +428,12 @@ else {
 
 
 const megaParsingFuckery = {
-    checkKnownKeys(keySet,objectToCheck,functionName) {
-        if (keySet.size) {
-            let unknownKeys = [];
-            for (let entry in objectToCheck) {
-                if (!keySet.has(entry)) {unknownKeys.push(entry)}
-            }
-
-            if (unknownKeys.length) {
-                const errorMessage = `Unknown key found in ${functionName}: ${unknownKeys}`;
-                alert(errorMessage);
-                throw new Error(errorMessage);
-            }
-        }
-    },
-    renewFileSelected() {
-        const newValue = readSelection("fileSelectionSelector").value;
-
-        megaParsingFuckery.pageLoad(newValue);
-    },
-    updateSuperimposition(superimposition) {
-        currentLCSuperimposition = superimposition;
-
-
-        // for (let i=1;i<=5;i++) {
-        //     readSelection(`superimpositionButton${i}`).style.backgroundColor = "transparent";
-        //     readSelection(`superimpositionButton${i}`).style.color = "#e1e1e4";
-        // }
-        // readSelection(`superimpositionButton${superimposition}`).style.backgroundColor = "#e1e1e4";
-        // readSelection(`superimpositionButton${superimposition}`).style.color = "black";
-
-        megaParsingFuckery.renewFileSelected();
-    },
     changeEnemyVariant() {
         enemyVariantSelected = readSelection("fileSelectionSelectorEnemyOptions").value;
         userTriggers.updateCharacterUI();
     },
     pageLoad(loadFile) {
-        const bodyBox = readSelection("eventBodyMainBox");
+        // const bodyBox = readSelection("eventBodyMainBox");
         // const isLightcone = compositeAbilityObject.isLightcone;
         // const isRelic = compositeAbilityObject.isRelic;
 
@@ -479,8 +447,6 @@ const megaParsingFuckery = {
         let optionsStringer = "";
         enemyVariantSelected ??= enemyData.image;
 
-        // readSelection("characterDisplayPathName").innerHTML = `//${enemyData.image}/${enemyVariantSelected}`;
-
         for (let enemyOption in enemyOptions) {
             const currentEnemyOption = enemyOptions[enemyOption];
             const optionName = currentEnemyOption.name;
@@ -489,421 +455,349 @@ const megaParsingFuckery = {
         }
         readSelection("fileSelectionSelectorEnemyOptions").innerHTML = optionsStringer;
 
+        // let initialCounter = 1;
+        readSelection("libraryCharacterHeaderPreview").src = `/HonkaiSR/${enemyImages[enemyData.image]}`;
 
 
-        // globalIsLightcone = isLightcone;
-        // globalIsRelic = isRelic;
-
-        // loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
-        // let configAbility = compositeAbilityObject.abilityObject[loadFile];
-
-        // if (!configAbility) {
-        //     loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
-        //     // console.log(loadFile)
-        //     configAbility = compositeAbilityObject.abilityObject[loadFile];
-        //     // compositeAbilityObject.trimSummonName
-
-        // }
-
-        let initialCounter = 1;
-        // let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
-        // let eventBodyStringOnAdd = megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
-        // let eventBodyStringOnAbort = megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
-        // let eventBodyStringFunctions = megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter);
-        
-
-        // let referenceBodyString = configAbility.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
-        // currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
-
-        // let referenceGlobalString = configAbility.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
-        // let referenceGlobalFunctionString = configAbility.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
-        
-        
-
-        // "fileName": "Saber_Skill02",
-        // "abilityType": "Skill",
-        // "energy": 30,
-        // "toughnessList": [
-        //     20,
-        //     0,
-        //     10
-        // ],
-        // parse: []
-        // references: []
-        // desc: currentLCEntry.desc,
-        // params: currentLCEntry.params,
-        // const isGlobalNoImage = compositeAbilityObject.fullCharacterName.toLowerCase().includes("global")
-        // || compositeAbilityObject.fullCharacterName.toLowerCase().includes("enemyabilities");
-
-        // globalIsNoImage = isGlobalNoImage;
-
-        // console.log(compositeAbilityObject.fullCharacterName,characterRef.preview)
-        // const characterRef = characters[compositeAbilityObject.fullCharacterName];
-        // const lightconeRef = lightcones[compositeAbilityObject.fullCharacterName];
-        // const relicSetRef = relicSets[compositeAbilityObject.fullCharacterName];
-        // console.log(compositeAbilityObject.fullCharacterName,characterRef,characters)
-
-        // const startingKeys = [
-        //     // {leftHand: "File", keyValue: "fileName"},
-        //     {leftHand: "Ability", keyValue: "abilityType"},
-        //     {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
-        //     {leftHand: "Energy", keyValue: "energy"},
-            
-            
-        //     // {leftHand: "Toughness", keyValue: "toughnessList"},
-        // ];
-
-        // if (!isGlobalNoImage) {
-            // console.log(readSelection("libraryCharacterHeaderPreview"))
-            readSelection("libraryCharacterHeaderPreview").src = `/HonkaiSR/${enemyImages[enemyData.image]}`;
-        // }
 
 
-        // ${!isGlobalNoImage ? `<div class="customMenuResultRowIcon">
-        //     <img src="/HonkaiSR/${isRelic ? relicSetRef.icon : (isLightcone ? lightconeRef.preview : characterRef.preview)}" class="${isRelic ? "eventCharacterFileIconRelic" : "eventCharacterFileIcon"}" style="border: 2px solid #d2ae73;">
-        // </div>` : ""}
 
 
-        // let startingString = `
-            
-            
-        //     <div class="eventCharacterFileInfoBox">
 
-        //     <div class="abilitySelectorFloaterBox">
-        //         <div class="abilitySelectorFloaterBoxName">Ability Selection</div>
-        //         <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">
-        //     </div>
-        //     `;
+
+
+        if (compositeAbilityObject) {
+            const bodyBox = readSelection("eventBodyMainBox");
+            const isLightcone = compositeAbilityObject.isLightcone;
+            const isRelic = compositeAbilityObject.isRelic;
+
+            globalIsLightcone = isLightcone;
+            globalIsRelic = isRelic;
+
+            loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
+            let configAbility = compositeAbilityObject.abilityObject[loadFile];
+
+            if (!configAbility && compositeAbilityObject.abilityList.length) {
+                loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
+                // console.log(loadFile)
+                configAbility = compositeAbilityObject.abilityObject[loadFile];
+                // compositeAbilityObject.trimSummonName
+
+            }
+
+            const abilitiesHaveLength = compositeAbilityObject.abilityList.length;
+
+            let initialCounter = 1;
+            let eventBodyString = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter) : "";
+            let eventBodyStringOnAdd = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter) : "";
+            let eventBodyStringOnAbort = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter) : "";
+            let eventBodyStringFunctions = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter) : "";
             
 
-        // let optionsString = "";
-
-        // for (let fileEntry of compositeAbilityObject.abilityList) {
-        //     optionsString += `<option value="${fileEntry}" ${fileEntry === loadFile ? "selected" : ""}>${fileEntry}</option>`
-        // }
-        // optionsString += "</select></div>"
-        // startingString += optionsString;
-
-
-
-        // let rowAlternating = 1;
-        // startingString += `<div class="${globalIsLightcone || globalIsRelic ? "energyAndToughnessRowHolderItems" : "energyAndToughnessRowHolder"}">`;
-        // if (!isLightcone) {
-
-
-        //     const propertyDisplayTemplates = {
-        //         energy(keyValue,configAbility) {
-        //             return `<div class="imageRowStatisticBoxWithIcon">
-        //                 <img src="/HonkaiSR/icon/property/IconEnergyRecovery.png" class="characterDisplayLogStatIcon"></img>
-        //                 <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
-        //             </div>`;
-        //         },
-        //         skillTrigger(keyValue,configAbility) {
-        //             return `<div class="imageRowStatisticBoxWithIcon">
-        //                 <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}${configAbility.abilityType ? `[${configAbility.abilityType}]` : ""}</div>
-        //             </div>`;
-        //         },
-        //         // abilityType(keyValue) {
-        //         //     return `<div class="imageRowStatisticBoxWithIcon">
-        //         //         <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
-        //         //     </div>`;
-        //         // },
-        //     }
-            
-        //     for (let entry of startingKeys) {
-        //         if (configAbility[entry.keyValue] == null) {
-
-        //             // loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
-
-        //             for (let findAbilityEntry of compositeAbilityObject.abilityList) {
-        //                 const testCurrentEntry = compositeAbilityObject.abilityObject[findAbilityEntry];
-        //                 if (!testCurrentEntry.childAbilityList) {continue;}
-
-        //                 const newSet = new Set(testCurrentEntry.childAbilityList)
-        //                 if (newSet.has(loadFile)) {
-        //                     configAbility["energy"] = testCurrentEntry["energy"];
-        //                     configAbility["abilityType"] = testCurrentEntry["abilityType"];
-        //                     configAbility["skillTrigger"] = testCurrentEntry["skillTrigger"];
-        //                     configAbility.toughnessList = testCurrentEntry.toughnessList;
-        //                     break;
-        //                 }
-        //             }
-
-        //             // childAbilityList
-
-
-        //             continue;
-        //         }
-        //         if (entry.keyValue === "abilityType") {continue;}
-        //         // startingString += `<div class="">${configAbility[entry]}</div>`;
-
-        //         // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
-        //         // ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
-
-
-        //         if (propertyDisplayTemplates[entry.keyValue]) {startingString += propertyDisplayTemplates[entry.keyValue](configAbility[entry.keyValue],configAbility);}
-        //         else {
-        //             startingString +=  `<div class="imageRowStatisticBox${(globalIsLightcone || globalIsRelic) ? rowAlternating : 0}DETAILS">
-        //                 <div class="imageRowStatisticNameBoxDETAILS">${entry.leftHand}</div>
-        //                 <div class="imageRowStatisticStatBoxDETAILS">${configAbility[entry.keyValue]}</div>
-        //             </div>`;
-        //         }
-
-        //         if (rowAlternating === 2) {rowAlternating = 1;}
-        //         else {rowAlternating++;}
-        //     }
-        // }
-
-
-        // let toughnessRowString = "";
-        // if (configAbility.toughnessList) {
-        //     const toughnessIndexConversion = {
-        //         0: "ST",
-        //         1: "AOE",
-        //         2: "Blast"
-        //     }
-
-        //     const check1 = configAbility.toughnessList[0] != 0;
-        //     const check2 = configAbility.toughnessList[1] != 0;
-        //     const check3 = configAbility.toughnessList[2] != 0;
-        //     const hasActualValues = check1 || check2 || check3;
+            let referenceBodyString = configAbility?.references.length ? megaParsingFuckery.fillEventBodyBox(configAbility.references,initialCounter) : null;
+            currentCharFilePrefix = compositeAbilityObject.trimCharacterName;
 
             
 
-        //     if (hasActualValues) {
-        //         toughnessRowString += `<img src="/HonkaiSR/icon/property/IconBreakUp.png" class="characterDisplayLogStatIconCenter"></img>`;
-
-        //         for (let i=0;i<3;i++) {
-        //             if (configAbility.toughnessList[i] === 0) {continue;}
-        //             toughnessRowString += `<div class="toughnessTableRowItemBox">
-        //                 <div class="toughnessTableRowItemHeader">${toughnessIndexConversion[i]}</div>
-        //                 <div class="toughnessTableRowItemValue">${configAbility.toughnessList[i]}</div>
-        //             </div>`;
-        //         }
-        //     }
-        // }
-
-        // // <div class="toughnessTableRowHeader">Toughness</div>
-        // let toughnessString = !isLightcone && toughnessRowString != "" ? `<div class="toughnessTableRowBox">
-            
-
-        //     <div class="toughnessTableRowTableRow">
-        //         ${toughnessRowString}
-        //     </div>
-        
-        // </div>` : "";
-
-        // let statRowString1 = "";
-        // let statRowString2 = "";
-
-        // let lightconeStatRow = "";
-
-        // console.log(compositeAbilityObject.fixedStats)
-        // if (isRelic) {
-        //     if (compositeAbilityObject.fixedStats[2]) {
-        //         const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[2]);
-        //         statRowString1 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[2]);
-        //     }
-        //     if (compositeAbilityObject.fixedStats[4]) {
-        //         const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[4]);
-        //         statRowString2 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[4]);
-        //     }
-        // }
-        // if (isLightcone && !isRelic && compositeAbilityObject.fixedStats && compositeAbilityObject.fixedStats[currentLCSuperimposition]) {
-        //     const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[currentLCSuperimposition]);
-        //     lightconeStatRow = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[currentLCSuperimposition]);
-        // }
-
-        
-
-        // if (isLightcone) {
-        //     toughnessString += `
-        //     ${!isRelic ? `<div class="customMenuSearchNote" id="customMenuSearchNote">Changing superimposition won't change the events, only the description</div>
-        //     <div class="superimpositionHolderbox">
-        //         <div class="superimpositionButton clickable" id="superimpositionButton1" onclick="megaParsingFuckery.updateSuperimposition(1)" style="${currentLCSuperimposition === 1 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">1</div>
-        //         <div class="superimpositionButton clickable" id="superimpositionButton2" onclick="megaParsingFuckery.updateSuperimposition(2)" style="${currentLCSuperimposition === 2 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">2</div>
-        //         <div class="superimpositionButton clickable" id="superimpositionButton3" onclick="megaParsingFuckery.updateSuperimposition(3)" style="${currentLCSuperimposition === 3 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">3</div>
-        //         <div class="superimpositionButton clickable" id="superimpositionButton4" onclick="megaParsingFuckery.updateSuperimposition(4)" style="${currentLCSuperimposition === 4 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">4</div>
-        //         <div class="superimpositionButton clickable" id="superimpositionButton5" onclick="megaParsingFuckery.updateSuperimposition(5)" style="${currentLCSuperimposition === 5 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">5</div>
-        //     </div>` : ""}
+            let referenceGlobalString = configAbility?.referencesGlobal?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobal,initialCounter) : null;
+            let referenceGlobalFunctionString = configAbility?.referencesGlobalFunctions?.length ? megaParsingFuckery.fillEventBodyBox(configAbility.referencesGlobalFunctions,initialCounter) : null;
             
             
-            
-        //     ${lightconeStatRow ? `<div class="characterDisplayPathAndNameBox">
-        //         <div class="characterDisplayPathNameBox">Lightcone Menu Bonuses:</div>
-        //     </div>` + lightconeStatRow : ""}
-        //     ${isRelic ? `
-        //         ${statRowString1 ? `<div class="characterDisplayPathAndNameBox">
-        //             <div class="characterDisplayPathNameBox">2-Piece Menu Bonuses:</div>
-        //         </div>` + statRowString1 : ""}
+
+            // "fileName": "Saber_Skill02",
+            // "abilityType": "Skill",
+            // "energy": 30,
+            // "toughnessList": [
+            //     20,
+            //     0,
+            //     10
+            // ],
+            // parse: []
+            // references: []
+            // desc: currentLCEntry.desc,
+            // params: currentLCEntry.params,
+            const isGlobalNoImage = false;
+            // const isGlobalNoImage = compositeAbilityObject.fullCharacterName.toLowerCase().includes("global")
+            // || compositeAbilityObject.fullCharacterName.toLowerCase().includes("enemyabilities");
+
+            globalIsNoImage = isGlobalNoImage;
+
+            // console.log(compositeAbilityObject.fullCharacterName,characterRef.preview)
+            // const characterRef = characters[compositeAbilityObject.fullCharacterName];
+            // const lightconeRef = lightcones[compositeAbilityObject.fullCharacterName];
+            // const relicSetRef = relicSets[compositeAbilityObject.fullCharacterName];
+            // console.log(compositeAbilityObject.fullCharacterName,characterRef,characters)
+
+            const startingKeys = [
+                // {leftHand: "File", keyValue: "fileName"},
+                {leftHand: "Ability", keyValue: "abilityType"},
+                {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
+                {leftHand: "Energy", keyValue: "energy"},
+                
+                
+                // {leftHand: "Toughness", keyValue: "toughnessList"},
+            ];
+
+
+
+            // ${!isGlobalNoImage ? `<div class="customMenuResultRowIcon">
+            //     <img src="/HonkaiSR/${isRelic ? relicSetRef.icon : (isLightcone ? lightconeRef.preview : characterRef.preview)}" class="${isRelic ? "eventCharacterFileIconRelic" : "eventCharacterFileIcon"}" style="border: 2px solid #d2ae73;">
+            // </div>` : ""}
+            let startingString = `
+                
+                
+                <div class="eventCharacterFileInfoBox">
+
+                <div class="abilitySelectorFloaterBox">
+                    <div class="abilitySelectorFloaterBoxName">Ability Selection</div>
+                    <select class="selectorWidthRestriction" id="fileSelectionSelector" onchange="megaParsingFuckery.renewFileSelected()">
+                </div>
+                `;
                 
 
-        //         ${statRowString2 ? `<div class="characterDisplayPathAndNameBox">
-        //             <div class="characterDisplayPathNameBox">4-Piece Menu Bonuses:</div>
-        //         </div>` + statRowString2 : ""}
+            let optionsString = "";
 
+            for (let fileEntry of compositeAbilityObject.abilityList) {
+                optionsString += `<option value="${fileEntry}" ${fileEntry === loadFile ? "selected" : ""}>${fileEntry}</option>`
+            }
+            optionsString += "</select></div>"
+            startingString += optionsString;
+
+
+
+            let rowAlternating = 1;
+            startingString += `<div class="${globalIsLightcone || globalIsRelic ? "energyAndToughnessRowHolderItems" : "energyAndToughnessRowHolder"}">`;
+            if (!isLightcone && abilitiesHaveLength) {
+
+
+                const propertyDisplayTemplates = {
+                    energy(keyValue,configAbility) {
+                        return `<div class="imageRowStatisticBoxWithIcon">
+                            <img src="/HonkaiSR/icon/property/IconEnergyRecovery.png" class="characterDisplayLogStatIcon"></img>
+                            <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
+                        </div>`;
+                    },
+                    skillTrigger(keyValue,configAbility) {
+                        return `<div class="imageRowStatisticBoxWithIcon">
+                            <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}${configAbility.abilityType ? `[${configAbility.abilityType}]` : ""}</div>
+                        </div>`;
+                    },
+                    // abilityType(keyValue) {
+                    //     return `<div class="imageRowStatisticBoxWithIcon">
+                    //         <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
+                    //     </div>`;
+                    // },
+                }
                 
-        //         <div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">2pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[0],relicSetRef.desc[0])}</div>
-        //         ${relicSetRef.params[1] != undefined && relicSetRef.desc[1] != undefined ? `<div class="rightDescriptionBox" id="lightconeSkillDescription"><span class="descriptionNumberColor">4pc:</span> ${pagePopulation.cleanDescription(relicSetRef.params[1],relicSetRef.desc[1])}</div>` : ""}
-        //         ` 
-        //         : `<div class="rightDescriptionBox" id="lightconeSkillDescription">${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}</div>`}
-        //     `
-        // }
-        // startingString += toughnessString + ``;
-        // startingString += `</div>`
+                for (let entry of startingKeys) {
+                    if (configAbility[entry.keyValue] == null) {
+
+                        // loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
+
+                        for (let findAbilityEntry of compositeAbilityObject.abilityList) {
+                            const testCurrentEntry = compositeAbilityObject.abilityObject[findAbilityEntry];
+                            if (!testCurrentEntry.childAbilityList) {continue;}
+
+                            const newSet = new Set(testCurrentEntry.childAbilityList)
+                            if (newSet.has(loadFile)) {
+                                configAbility["energy"] = testCurrentEntry["energy"];
+                                configAbility["abilityType"] = testCurrentEntry["abilityType"];
+                                configAbility["skillTrigger"] = testCurrentEntry["skillTrigger"];
+                                configAbility.toughnessList = testCurrentEntry.toughnessList;
+                                break;
+                            }
+                        }
+
+                        // childAbilityList
 
 
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //         <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
-        //         ${returnString}
-        //     </summary>
-
-        //     <div class="rotationConditionOperatorBoxMain">
-        //         ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">THEN</div>
-        //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
-        //             ${parseString}
-        //         </div>` : ""}
-        //         ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">ELSE</div>
-        //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
-        //             ${refString}
-        //         </div>` : ""}
-        //     </div>
-        // </details>
-
-
-        //TODO: add back in later
-        // ${startingString}
-
-        // let startingString = "";
-        // readSelection("eventReaderControlsBox").innerHTML = startingString;
-
-        // const mainAbilityString = `
-        // <div class="eventBodyScrollerMain">
-        //     <details class="rotationsPermaConditionsExpand" open="">
-        //         <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //             <div class="rotationConditionOperatorHeaderCondition">ABILITY LOG</div>
-        //         </summary>
-        //         ${eventBodyString}
-        //     </details>
-        //     ${eventBodyStringOnAdd ? `<details class="rotationsPermaConditionsExpand" open="">
-        //         <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //             <div class="rotationConditionOperatorHeaderCondition">ADDED LOG</div>
-        //         </summary>
-        //         ${eventBodyStringOnAdd}
-        //     </details>` : ""}
-        //     ${eventBodyStringOnAbort ? `<details class="rotationsPermaConditionsExpand" open="">
-        //         <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //             <div class="rotationConditionOperatorHeaderCondition">ON ABILITY ABORT</div>
-        //         </summary>
-        //         ${eventBodyStringOnAbort}
-        //     </details>` : ""}
-
-            
-        //     ${referenceBodyString ? `<details class="rotationsPermaConditionsExpand" open="">
-        //         <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //             <div class="rotationConditionOperatorHeaderCondition">MODIFIER LOG</div>
-        //         </summary>
-        //         ${referenceBodyString}
-        //     </details>` : ""}
-        //     ${eventBodyStringFunctions ? `<details class="rotationsPermaConditionsExpand" open="">
-        //         <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //             <div class="rotationConditionOperatorHeaderCondition">ABILITY FUNCTIONS</div>
-        //         </summary>
-        //         ${eventBodyStringFunctions}
-        //     </details>` : ""}
-        //     ${referenceGlobalString ? `<details class="rotationsPermaConditionsExpand" open="">
-        //         <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //             <div class="rotationConditionOperatorHeaderCondition">GLOBAL MODIFERS</div>
-        //         </summary>
-        //         ${referenceGlobalString}
-        //     </details>` : ""}
-        //     ${referenceGlobalFunctionString ? `<details class="rotationsPermaConditionsExpand" open="">
-        //         <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //             <div class="rotationConditionOperatorHeaderCondition">GLOBAL FUNCTIONS</div>
-        //         </summary>
-        //         ${referenceGlobalFunctionString}
-        //     </details>` : ""}
-        // </div>
-        // `;
-
-        
-
-        // bodyBox.innerHTML = mainAbilityString;
-
-        // if (isLightcone) {readSelection("lightconeSkillDescription").innerHTML = pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition],lightconeRef.desc);}
-    },
-    fillEventBodyBox(parseRef,initialCounter) {
-        // initialCounter++;
-        let returnString = "";
-
-        const isArray = Array.isArray(parseRef);
-        const isObject = typeof parseRef === "object";
-        const isString = typeof parseRef === "string";
-
-
-        if (isArray) {
-            for (let entry of parseRef) {
-
-                const isArrayInner = Array.isArray(entry);
-                const isObjectInner = typeof entry === "object";
-                const isStringInner = typeof entry === "string";
-
-                // console.log(`reached objectparse on ${entry.name}`)
-
-                if (isArrayInner) {returnString += megaParsingFuckery.fillEventBodyBox(entry,initialCounter);}//go recursive if the entry is another array
-                else if (isObjectInner) {
-                    const functionExists = megaParsingFuckery[entry.name];
-                    if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(entry,initialCounter) + `</div>`;}
-                    else if (entry.displayLines != undefined) {
-                        // entry.displayLines
-                        // console.log(entry.displayLines,typeof entry.displayLines,entry)
-
-                        // const finalString = `<div class="rotationsConditionsBodyBox">${entry.displayLines}</div>`
-                        // console.log(finalString,entry.displayLines,typeof entry.displayLines,entry)
-
-                        returnString += `<div class="rotationsConditionsBodyBox">${entry.displayLines}</div>`;
+                        continue;
                     }
-                    else if (entry.eventTrigger) {returnString += `<div class="rotationsConditionsBodyBox">` + megaParsingFuckery["eventTrigger"](entry,initialCounter) + `</div>`;}
+                    if (entry.keyValue === "abilityType") {continue;}
+                    // startingString += `<div class="">${configAbility[entry]}</div>`;
+
+                    // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
+                    // ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
+
+
+                    if (propertyDisplayTemplates[entry.keyValue]) {startingString += propertyDisplayTemplates[entry.keyValue](configAbility[entry.keyValue],configAbility);}
                     else {
-                        console.log(entry)
-                        throw new Error(`Unknown function to call: ${entry.name}`);
+                        startingString +=  `<div class="imageRowStatisticBox${(globalIsLightcone || globalIsRelic) ? rowAlternating : 0}DETAILS">
+                            <div class="imageRowStatisticNameBoxDETAILS">${entry.leftHand}</div>
+                            <div class="imageRowStatisticStatBoxDETAILS">${configAbility[entry.keyValue]}</div>
+                        </div>`;
                     }
-                    // rotationConditionOperatorBox
-                    // rotationsConditionsBodyBox
-                }
-                else if (isStringInner && entry != "Deleted bullshit") {
-                    returnString += `<div class="rotationsConditionsBodyBox">
-                        <div class="rotationConditionOperatorHeaderConditionTriggerRow">${entry}</div>
-                    </div>`;
 
-                    
+                    if (rowAlternating === 2) {rowAlternating = 1;}
+                    else {rowAlternating++;}
                 }
-                // entry.eventTrigger
-                
             }
-        }
-        else if (isObject) {
-            const functionExists = megaParsingFuckery[parseRef.name];
+
+
+            let toughnessRowString = "";
+            if (configAbility?.toughnessList && abilitiesHaveLength) {
+                const toughnessIndexConversion = {
+                    0: "ST",
+                    1: "AOE",
+                    2: "Blast"
+                }
+
+                const check1 = configAbility.toughnessList[0] != 0;
+                const check2 = configAbility.toughnessList[1] != 0;
+                const check3 = configAbility.toughnessList[2] != 0;
+                const hasActualValues = check1 || check2 || check3;
+
+                
+
+                if (hasActualValues) {
+                    toughnessRowString += `<img src="/HonkaiSR/icon/property/IconBreakUp.png" class="characterDisplayLogStatIconCenter"></img>`;
+
+                    for (let i=0;i<3;i++) {
+                        if (configAbility.toughnessList[i] === 0) {continue;}
+                        toughnessRowString += `<div class="toughnessTableRowItemBox">
+                            <div class="toughnessTableRowItemHeader">${toughnessIndexConversion[i]}</div>
+                            <div class="toughnessTableRowItemValue">${configAbility.toughnessList[i]}</div>
+                        </div>`;
+                    }
+                }
+            }
+
+            // <div class="toughnessTableRowHeader">Toughness</div>
+            let toughnessString = !isLightcone && toughnessRowString != "" ? `<div class="toughnessTableRowBox">
+                
+
+                <div class="toughnessTableRowTableRow">
+                    ${toughnessRowString}
+                </div>
+            
+            </div>` : "";
+
+            let statRowString1 = "";
+            let statRowString2 = "";
+
+            let lightconeStatRow = "";
+
+            console.log(compositeAbilityObject.fixedStats)
+            if (isRelic) {
+                if (compositeAbilityObject.fixedStats[2]) {
+                    const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[2]);
+                    statRowString1 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[2]);
+                }
+                if (compositeAbilityObject.fixedStats[4]) {
+                    const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[4]);
+                    statRowString2 = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[4]);
+                }
+            }
+            if (isLightcone && !isRelic && compositeAbilityObject.fixedStats && compositeAbilityObject.fixedStats[currentLCSuperimposition]) {
+                const menuBoxDisplayOrder = Object.keys(compositeAbilityObject.fixedStats[currentLCSuperimposition]);
+                lightconeStatRow = customHTML.createAlternatingStatRows(menuBoxDisplayOrder,compositeAbilityObject.fixedStats[currentLCSuperimposition]);
+            }
 
             
-            // if (functionExists) {returnString += functionExists(parseRef);}
-            if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(parseRef,initialCounter) + `</div>`;}
-            else if (parseRef.eventTrigger) {returnString += `<div class="rotationsConditionsBodyBox">` + megaParsingFuckery["eventTrigger"](parseRef,initialCounter) + `</div>`;}
-            else {
-                console.log(parseRef)
-                throw new Error(`Unknown function to call: ${parseRef.name}`);
+
+            if (isLightcone) {
+                toughnessString += `
+                ${!isRelic ? `<div class="customMenuSearchNote" id="customMenuSearchNote">Changing superimposition won't change the events, only the description</div>
+                <div class="superimpositionHolderbox">
+                    <div class="superimpositionButton clickable" id="superimpositionButton1" onclick="megaParsingFuckery.updateSuperimposition(1)" style="${currentLCSuperimposition === 1 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">1</div>
+                    <div class="superimpositionButton clickable" id="superimpositionButton2" onclick="megaParsingFuckery.updateSuperimposition(2)" style="${currentLCSuperimposition === 2 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">2</div>
+                    <div class="superimpositionButton clickable" id="superimpositionButton3" onclick="megaParsingFuckery.updateSuperimposition(3)" style="${currentLCSuperimposition === 3 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">3</div>
+                    <div class="superimpositionButton clickable" id="superimpositionButton4" onclick="megaParsingFuckery.updateSuperimposition(4)" style="${currentLCSuperimposition === 4 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">4</div>
+                    <div class="superimpositionButton clickable" id="superimpositionButton5" onclick="megaParsingFuckery.updateSuperimposition(5)" style="${currentLCSuperimposition === 5 ? "background-color: rgb(225, 225, 228); color: black;" : "background-color: transparent; color: rgb(225, 225, 228);"}">5</div>
+                </div>` : ""}
+                
+                
+                
+                ${lightconeStatRow ? `<div class="characterDisplayPathAndNameBox">
+                    <div class="characterDisplayPathNameBox">Lightcone Menu Bonuses:</div>
+                </div>` + lightconeStatRow : ""}
+                
+                `
             }
-            // else {console.log(parseRef)}
-        }
-        else if (isString && parseRef != "Deleted bullshit") {
-            returnString += `<div class="rotationsConditionsBodyBox">` + parseRef + `</div>`;
-        }
+            startingString += toughnessString + ``;
+            startingString += `</div>`
 
 
-        return returnString;
+
+            // <details class="rotationsPermaConditionsExpand" open="">
+            //     <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+            //         <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+            //         ${returnString}
+            //     </summary>
+
+            //     <div class="rotationConditionOperatorBoxMain">
+            //         ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">THEN</div>
+            //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+            //             ${parseString}
+            //         </div>` : ""}
+            //         ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">ELSE</div>
+            //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+            //             ${refString}
+            //         </div>` : ""}
+            //     </div>
+            // </details>
+
+
+            //TODO: add back in later
+            // ${startingString}
+
+            readSelection("eventReaderControlsBox").innerHTML = startingString;
+
+            const mainAbilityString = `
+            <div class="eventBodyScrollerMain">
+                <details class="rotationsPermaConditionsExpand" open="">
+                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                        <div class="rotationConditionOperatorHeaderCondition">ABILITY LOG</div>
+                    </summary>
+                    ${eventBodyString}
+                </details>
+                ${eventBodyStringOnAdd ? `<details class="rotationsPermaConditionsExpand" open="">
+                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                        <div class="rotationConditionOperatorHeaderCondition">ADDED LOG</div>
+                    </summary>
+                    ${eventBodyStringOnAdd}
+                </details>` : ""}
+                ${eventBodyStringOnAbort ? `<details class="rotationsPermaConditionsExpand" open="">
+                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                        <div class="rotationConditionOperatorHeaderCondition">ON ABILITY ABORT</div>
+                    </summary>
+                    ${eventBodyStringOnAbort}
+                </details>` : ""}
+
+                
+                ${referenceBodyString ? `<details class="rotationsPermaConditionsExpand" open="">
+                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                        <div class="rotationConditionOperatorHeaderCondition">MODIFIER LOG</div>
+                    </summary>
+                    ${referenceBodyString}
+                </details>` : ""}
+                ${eventBodyStringFunctions ? `<details class="rotationsPermaConditionsExpand" open="">
+                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                        <div class="rotationConditionOperatorHeaderCondition">ABILITY FUNCTIONS</div>
+                    </summary>
+                    ${eventBodyStringFunctions}
+                </details>` : ""}
+                ${referenceGlobalString ? `<details class="rotationsPermaConditionsExpand" open="">
+                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                        <div class="rotationConditionOperatorHeaderCondition">GLOBAL MODIFERS</div>
+                    </summary>
+                    ${referenceGlobalString}
+                </details>` : ""}
+                ${referenceGlobalFunctionString ? `<details class="rotationsPermaConditionsExpand" open="">
+                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                        <div class="rotationConditionOperatorHeaderCondition">GLOBAL FUNCTIONS</div>
+                    </summary>
+                    ${referenceGlobalFunctionString}
+                </details>` : ""}
+            </div>
+            `;
+
+            
+
+            bodyBox.innerHTML = mainAbilityString;
+        }
     },
+    ...megaParsingFuckeryPain
 }
 
 megaParsingFuckery.pageLoad();
