@@ -3234,7 +3234,7 @@ const userTriggers = {
     },
     updateMainMenuDisplayed(elementID) {
 
-        if (compositeAbilityObject === 1) {
+        if (elementID === 1 && Array.isArray(compositeAbilityObject)) {
             alert(`This enemy doesn't have a reader entry set up yet. YET.\n\nThat you're seeing this message means I've already started on enemy readers though, I just can't do all of them at once.\n\nSee the library homepage for progress% or the changelog for who has been added recently.`)
             return;
         }

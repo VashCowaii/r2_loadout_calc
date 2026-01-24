@@ -466,7 +466,7 @@ const megaParsingFuckery = {
 
 
 
-        if (compositeAbilityObject) {
+        if (compositeAbilityObject && !Array.isArray(compositeAbilityObject)) {
             const bodyBox = readSelection("eventBodyMainBox");
             const isLightcone = compositeAbilityObject.isLightcone;
             const isRelic = compositeAbilityObject.isRelic;
