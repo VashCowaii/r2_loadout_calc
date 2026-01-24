@@ -326,7 +326,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Battle Event",
-              "teamName": "Allied Team",
+              "teamName": "Player Team",
               "eventID": 11407,
               "variables": {
                 "MDF_Castorice_CreateBattleEvent": {
