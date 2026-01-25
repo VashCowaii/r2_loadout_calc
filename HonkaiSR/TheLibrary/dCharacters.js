@@ -37244,6 +37244,722 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Sunday": {
+    "internalID": 1313,
+    "name": "Sunday",
+    "path": "Harmony",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 533.61,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 96,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "131301",
+        "name": "Millennium's Quietus",
+        "rank": 1,
+        "desc": "When Sunday uses Skill, the target character can ignore 16% of enemy target's DEF to deal DMG and their summon can ignore 40% of enemy target's DEF to deal DMG, lasting for 2 turn(s).",
+        "icon": "icon/skill/1313_rank1.png",
+        "paramsEido": [
+          2,
+          0.16,
+          0.4
+        ]
+      },
+      {
+        "id": "131302",
+        "name": "Faith Outstrips Frailty",
+        "rank": 2,
+        "desc": "After the first use of Ultimate, recovers 2 Skill Point(s). The DMG dealt by \"The Beatified\" increases by 30%.",
+        "icon": "icon/skill/1313_rank2.png",
+        "paramsEido": [
+          0.3,
+          2
+        ]
+      },
+      {
+        "id": "131303",
+        "name": "Hermitage of Thorns",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1313_ultimate.png"
+      },
+      {
+        "id": "131304",
+        "name": "Sculpture's Preamble",
+        "rank": 4,
+        "desc": "When the turn starts, regenerates 8 Energy.",
+        "icon": "icon/skill/1313_rank4.png",
+        "paramsEido": [
+          8
+        ]
+      },
+      {
+        "id": "131305",
+        "name": "Paper Raft in Silver Bay",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1313_skill.png"
+      },
+      {
+        "id": "131306",
+        "name": "Dawn of Sidereal Cacophony",
+        "rank": 6,
+        "desc": "The Talent's CRIT Rate boost effect becomes stackable up to 3 time(s), and the Talent's duration increases by 1 turn(s). When Sunday uses Ultimate, can also apply the Talent's CRIT Rate boost effect to the target. When the Talent's CRIT Rate boost takes effect and the target's CRIT Rate exceeds 100%, every 1% of excess CRIT Rate increases CRIT DMG by 2%.",
+        "icon": "icon/skill/1313_rank6.png",
+        "paramsEido": [
+          3,
+          0.02,
+          1
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Gleaming Admonition": {
+          "variant1": {
+            "skillID": 131301,
+            "trigger": "Skill01",
+            "name": "Gleaming Admonition",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Sunday's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sunday_10_Skill01_Camera",
+              "Avatar_Sunday_10_Skill01_Phase01",
+              "Avatar_Sunday_10_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Benison of Paper and Rites": {
+          "variant1": {
+            "skillID": 131302,
+            "trigger": "Skill02",
+            "name": "Benison of Paper and Rites",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Enables one designated ally character and their summon to immediately take action, and increases their DMG dealt by #2[i]%. If the target has a summon, then the dealt DMG increase is further boosted by an additional #4[i]%, lasting for #3[i] turn(s).\\nAfter using Skill on The Beatified, recovers 1 Skill Point.\\nWhen Sunday uses this ability on characters following the Path of Harmony, cannot trigger the \"immediate action\" effect.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.15,
+                2,
+                0.25
+              ],
+              "2": [
+                1,
+                0.165,
+                2,
+                0.275
+              ],
+              "3": [
+                1,
+                0.18,
+                2,
+                0.3
+              ],
+              "4": [
+                1,
+                0.195,
+                2,
+                0.325
+              ],
+              "5": [
+                1,
+                0.21,
+                2,
+                0.35
+              ],
+              "6": [
+                1,
+                0.225,
+                2,
+                0.375
+              ],
+              "7": [
+                1,
+                0.24375,
+                2,
+                0.40625
+              ],
+              "8": [
+                1,
+                0.2625,
+                2,
+                0.4375
+              ],
+              "9": [
+                1,
+                0.28125,
+                2,
+                0.46875
+              ],
+              "10": [
+                1,
+                0.3,
+                2,
+                0.5
+              ],
+              "11": [
+                1,
+                0.315,
+                2,
+                0.525
+              ],
+              "12": [
+                1,
+                0.33,
+                2,
+                0.55
+              ],
+              "13": [
+                1,
+                0.345,
+                2,
+                0.575
+              ],
+              "14": [
+                1,
+                0.36,
+                2,
+                0.6
+              ],
+              "15": [
+                1,
+                0.375,
+                2,
+                0.625
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sunday_10_Skill02_Camera",
+              "Avatar_Sunday_10_Skill02_Phase01",
+              "Avatar_Sunday_10_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Ode to Caress and Cicatrix": {
+          "variant1": {
+            "skillID": 131303,
+            "trigger": "Skill03",
+            "name": "Ode to Caress and Cicatrix",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Regenerates Energy by #1[f1]% of Max Energy for one designated ally character, and turns the target and their summon into \"The Beatified.\" \"The Beatified\" have their CRIT DMG increased by an amount equal to #2[f1]% of Sunday's CRIT DMG plus #4[f1]%.\\nAt the start of Sunday's every turn, the duration of \"The Beatified\" decreases by 1 turn, lasting for a total of #3[i] turn(s). And it only takes effect on the most recent target of the Ultimate (excluding Sunday himself). When Sunday is knocked down, \"The Beatified\" will also be dispelled.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                0.12,
+                3,
+                0.08
+              ],
+              "2": [
+                0.2,
+                0.138,
+                3,
+                0.084
+              ],
+              "3": [
+                0.2,
+                0.156,
+                3,
+                0.088
+              ],
+              "4": [
+                0.2,
+                0.174,
+                3,
+                0.092
+              ],
+              "5": [
+                0.2,
+                0.192,
+                3,
+                0.096
+              ],
+              "6": [
+                0.2,
+                0.21,
+                3,
+                0.1
+              ],
+              "7": [
+                0.2,
+                0.2325,
+                3,
+                0.105
+              ],
+              "8": [
+                0.2,
+                0.255,
+                3,
+                0.11
+              ],
+              "9": [
+                0.2,
+                0.2775,
+                3,
+                0.115
+              ],
+              "10": [
+                0.2,
+                0.3,
+                3,
+                0.12
+              ],
+              "11": [
+                0.2,
+                0.318,
+                3,
+                0.124
+              ],
+              "12": [
+                0.2,
+                0.336,
+                3,
+                0.128
+              ],
+              "13": [
+                0.2,
+                0.354,
+                3,
+                0.132
+              ],
+              "14": [
+                0.2,
+                0.372,
+                3,
+                0.13599999
+              ],
+              "15": [
+                0.2,
+                0.39,
+                3,
+                0.14
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sunday_10_Skill03_Camera",
+              "Avatar_Sunday_10_Skill03_EnterReady",
+              "Avatar_Sunday_10_Skill03_Phase01",
+              "Avatar_Sunday_10_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "The Sorrowing Body": {
+          "variant1": {
+            "skillID": 131304,
+            "trigger": "SkillP01",
+            "name": "The Sorrowing Body",
+            "type": "Support",
+            "slot": "Talent",
+            "desc": "When using Skill, increases the target's CRIT Rate by #1[f1]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                3
+              ],
+              "2": [
+                0.11,
+                3
+              ],
+              "3": [
+                0.12,
+                3
+              ],
+              "4": [
+                0.13,
+                3
+              ],
+              "5": [
+                0.14,
+                3
+              ],
+              "6": [
+                0.15,
+                3
+              ],
+              "7": [
+                0.1625,
+                3
+              ],
+              "8": [
+                0.175,
+                3
+              ],
+              "9": [
+                0.1875,
+                3
+              ],
+              "10": [
+                0.2,
+                3
+              ],
+              "11": [
+                0.21,
+                3
+              ],
+              "12": [
+                0.22,
+                3
+              ],
+              "13": [
+                0.23,
+                3
+              ],
+              "14": [
+                0.24,
+                3
+              ],
+              "15": [
+                0.25,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sunday_10_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "The Glorious Mysteries": {
+          "variant1": {
+            "skillID": 131307,
+            "trigger": "SkillMaze",
+            "name": "The Glorious Mysteries",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After this Technique is used, the first time Sunday uses an ability on an ally target in the next battle, the target's DMG dealt increases by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Sunday_10_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1313_basic_atk.png",
+        "skillRef": {
+          "skillName": "Gleaming Admonition",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1313_skill.png",
+        "skillRef": {
+          "skillName": "Benison of Paper and Rites",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1313_ultimate.png",
+        "skillRef": {
+          "skillName": "Ode to Caress and Cicatrix",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1313_talent.png",
+        "skillRef": {
+          "skillName": "The Sorrowing Body",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1313_technique.png",
+        "skillRef": {
+          "skillName": "The Glorious Mysteries",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Rest Day's Longing",
+        "icon": "icon/skill/1313_skilltree1.png",
+        "desc": "When using Ultimate, if the Energy regenerated for the target is less than #1[i], increases the regenerated Energy to #1[i].",
+        "params": [
+          40
+        ]
+      },
+      "Point07": {
+        "name": "Exalted Sweep",
+        "icon": "icon/skill/1313_skilltree2.png",
+        "desc": "When battle starts, Sunday regenerates #1[i] Energy.",
+        "params": [
+          25
+        ]
+      },
+      "Point08": {
+        "name": "Haven in Palm",
+        "icon": "icon/skill/1313_skilltree3.png",
+        "desc": "When using Skill, dispels #1[i] debuff(s) from the target.",
+        "params": [
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              1
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1313.png",
+    "preview": "image/character_preview/1313.png",
+    "portrait": "image/character_portrait/1313.png",
+    "bannerOffsets": [
+      5,
+      -95,
+      0.64,
+      5,
+      -95,
+      0.64,
+      5,
+      -95,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Jade": {
     "internalID": 1314,
     "name": "Jade",
