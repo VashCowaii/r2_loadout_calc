@@ -2418,7 +2418,7 @@ div {
     /* background-color: rgb(22, 22, 22); */
 }
 
-.turnStarterBarAlly, .turnStarterBarEnemy, .turnStarterBarUltimate, .turnStarterBarMiniAction, .turnStarterBarMiniActionEnemy {
+.turnStarterBarAlly, .turnStarterBarEnemy, .turnStarterBarUltimate, .turnStarterBarMiniAction, .turnStarterBarMiniActionEnemy,.turnStarterBarMiniActionComplexity {
     width: 100%;
     min-height: 50px;
     max-height: 50px;
@@ -2439,6 +2439,9 @@ div {
 }
 .hoverOpacity:hover {
     opacity: 0.6;
+}
+.turnStarterBarMiniActionComplexity {
+    border-left: 2px solid #5f656b;
 }
 .turnStarterBarEnemy {
     border-left: 2px solid #ff5a3f;

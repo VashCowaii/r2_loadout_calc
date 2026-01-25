@@ -369,6 +369,7 @@ let globalIsRelic = false;
 let globalIsNoImage = false;
 let enemyVariantSelected = null;
 
+let isEnemyReaderPage = true;
 let scalingElite = null;
 let scalingHard = null;
 let levelIndex = 95;
@@ -432,7 +433,7 @@ const megaParsingFuckery = {
         enemyVariantSelected = readSelection("fileSelectionSelectorEnemyOptions").value;
         userTriggers.updateCharacterUI();
     },
-    pageLoad(loadFile) {
+    pageLoadSetup(loadFile) {
         // const bodyBox = readSelection("eventBodyMainBox");
         // const isLightcone = compositeAbilityObject.isLightcone;
         // const isRelic = compositeAbilityObject.isRelic;
@@ -447,6 +448,8 @@ const megaParsingFuckery = {
         let optionsStringer = "";
         enemyVariantSelected ??= enemyData.image;
 
+        currentCharFilePrefix = enemyData.image;
+
         for (let enemyOption in enemyOptions) {
             const currentEnemyOption = enemyOptions[enemyOption];
             const optionName = currentEnemyOption.name;
@@ -459,33 +462,60 @@ const megaParsingFuckery = {
         readSelection("libraryCharacterHeaderPreview").src = `/HonkaiSR/${enemyImages[enemyData.image]}`;
 
 
-
-
-
-
-
-
+    },
+    pageLoad(loadFile) {
 
         if (compositeAbilityObject && !Array.isArray(compositeAbilityObject)) {
             const bodyBox = readSelection("eventBodyMainBox");
+
+
+            const abilityObjectInstance = compositeAbilityObject.abilityObject;
+            const abilityListInstance = compositeAbilityObject.abilityList;
+
             const isLightcone = compositeAbilityObject.isLightcone;
             const isRelic = compositeAbilityObject.isRelic;
 
             globalIsLightcone = isLightcone;
             globalIsRelic = isRelic;
 
-            loadFile = loadFile ?? compositeAbilityObject.abilityList[compositeAbilityObject.abilityList.length >= 2 ? 1 : 0];
-            let configAbility = compositeAbilityObject.abilityObject[loadFile];
+            loadFile = loadFile ?? abilityListInstance[abilityListInstance.length >= 2 ? 1 : 0];
+            let configAbility = abilityObjectInstance[loadFile];
 
-            if (!configAbility && compositeAbilityObject.abilityList.length) {
+            if (!configAbility && abilityListInstance.length) {
                 loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
                 // console.log(loadFile)
-                configAbility = compositeAbilityObject.abilityObject[loadFile];
+                configAbility = abilityObjectInstance[loadFile];
                 // compositeAbilityObject.trimSummonName
 
             }
 
-            const abilitiesHaveLength = compositeAbilityObject.abilityList.length;
+
+
+
+            const hasValidInstance = !!configAbility;
+
+            // let paramObject = hasValidInstance ? userTriggers.getEnemySkillsObject(true) : null;
+            let paramObject = userTriggers.getEnemySkillsObject(true);
+            // console.log(paramObject)
+
+            let stringInstance = hasValidInstance ? JSON.stringify(configAbility).replace(
+                /\{\[([A-Za-z0-9_]+)\[(\d+)\]\]\}/g,
+                (_,skill,index) => {
+                    const currentSkillEntryList = paramObject[skill];
+
+                    let paramIndex = Number(index);
+                    
+                    let paramEntry = currentSkillEntryList.paramOverrides?.[paramIndex] && currentSkillEntryList.paramOverrides[paramIndex] != "-" ? currentSkillEntryList.paramOverrides[paramIndex] : currentSkillEntryList.params[paramIndex];
+
+                    // paramOverrides
+                    return paramEntry;
+                }
+            ) : null;
+
+            configAbility = hasValidInstance ? JSON.parse(stringInstance) : configAbility;
+            stringInstance = null;
+
+            const abilitiesHaveLength = abilityListInstance.length;
 
             let initialCounter = 1;
             let eventBodyString = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter) : "";
@@ -530,9 +560,12 @@ const megaParsingFuckery = {
 
             const startingKeys = [
                 // {leftHand: "File", keyValue: "fileName"},
+                {leftHand: "trash", keyValue: "trash"},
                 {leftHand: "Ability", keyValue: "abilityType"},
                 {leftHand: "Skill Trigger", keyValue: "skillTrigger"},
+                {leftHand: "Element", keyValue: "element"},
                 {leftHand: "Energy", keyValue: "energy"},
+                
                 
                 
                 // {leftHand: "Toughness", keyValue: "toughnessList"},
@@ -557,7 +590,7 @@ const megaParsingFuckery = {
 
             let optionsString = "";
 
-            for (let fileEntry of compositeAbilityObject.abilityList) {
+            for (let fileEntry of abilityListInstance) {
                 optionsString += `<option value="${fileEntry}" ${fileEntry === loadFile ? "selected" : ""}>${fileEntry}</option>`
             }
             optionsString += "</select></div>"
@@ -571,13 +604,18 @@ const megaParsingFuckery = {
 
 
                 const propertyDisplayTemplates = {
-                    energy(keyValue,configAbility) {
+                    energy(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
                         return `<div class="imageRowStatisticBoxWithIcon">
                             <img src="/HonkaiSR/icon/property/IconEnergyRecovery.png" class="characterDisplayLogStatIcon"></img>
                             <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}</div>
                         </div>`;
                     },
-                    skillTrigger(keyValue,configAbility) {
+                    element(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
+                        return `<div class="imageRowStatisticBoxWithIcon">
+                            <img src="/HonkaiSR/icon/element/${keyValue}.png" class="characterDisplayLogStatIconElement"></img>
+                        </div>`;
+                    },
+                    skillTrigger(keyValue,configAbility,currentSkillTrigger,currentParamsEntry) {
                         return `<div class="imageRowStatisticBoxWithIcon">
                             <div class="imageRowStatisticNameBoxDETAILSWithIcon">${keyValue}${configAbility.abilityType ? `[${configAbility.abilityType}]` : ""}</div>
                         </div>`;
@@ -588,6 +626,8 @@ const megaParsingFuckery = {
                     //     </div>`;
                     // },
                 }
+
+                
                 
                 for (let entry of startingKeys) {
                     if (configAbility[entry.keyValue] == null) {
@@ -600,9 +640,14 @@ const megaParsingFuckery = {
 
                             const newSet = new Set(testCurrentEntry.childAbilityList)
                             if (newSet.has(loadFile)) {
-                                configAbility["energy"] = testCurrentEntry["energy"];
+                                
                                 configAbility["abilityType"] = testCurrentEntry["abilityType"];
                                 configAbility["skillTrigger"] = testCurrentEntry["skillTrigger"];
+                                // configAbility["energy"] = testCurrentEntry["energy"];
+                                configAbility["energy"] = configAbility["energy"] ?? paramObject[testCurrentEntry["skillTrigger"]]?.["energy"];
+                                configAbility["element"] = configAbility["element"] ?? paramObject[testCurrentEntry["skillTrigger"]]?.["element"];
+                                // console.log("EEEEEEEEEEEEE",configAbility["energy"])
+
                                 configAbility.toughnessList = testCurrentEntry.toughnessList;
                                 break;
                             }
@@ -614,13 +659,18 @@ const megaParsingFuckery = {
                         continue;
                     }
                     if (entry.keyValue === "abilityType") {continue;}
+
+                    let currentSkillTrigger = null;
+                    let currentParamsEntry = null;
+
+                    // if (entry.keyValue === "energy") {console.log("AAAAAAAAAAH")}
                     // startingString += `<div class="">${configAbility[entry]}</div>`;
 
                     // <div class="imageRowStatisticImageBox"><img src="${currentKey.icon}" class="${isStatMenuCreation ? "imageRowStatisticImageStatMenu" : "imageRowStatisticImage"}"/></div>
                     // ${subRolls && estRolls ? `<div class="imageRowStatisticStatBoxRollsEst">${estRolls}</div>` : ""}
 
 
-                    if (propertyDisplayTemplates[entry.keyValue]) {startingString += propertyDisplayTemplates[entry.keyValue](configAbility[entry.keyValue],configAbility);}
+                    if (propertyDisplayTemplates[entry.keyValue] || currentParamsEntry[entry.keyValue]) {startingString += propertyDisplayTemplates[entry.keyValue](configAbility[entry.keyValue],configAbility,currentSkillTrigger,currentParamsEntry);}
                     else {
                         startingString +=  `<div class="imageRowStatisticBox${(globalIsLightcone || globalIsRelic) ? rowAlternating : 0}DETAILS">
                             <div class="imageRowStatisticNameBoxDETAILS">${entry.leftHand}</div>
@@ -800,6 +850,7 @@ const megaParsingFuckery = {
     ...megaParsingFuckeryPain
 }
 
+megaParsingFuckery.pageLoadSetup();
 megaParsingFuckery.pageLoad();
 
 

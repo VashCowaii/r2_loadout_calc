@@ -3512,6 +3512,131 @@ const userTriggers = {
         "Sphere": "Planar Sphere",
         "Rope": "Link Rope",
     },
+    getEnemySkillsObject(isForReader) {
+        let charRef = enemyData;
+        const newCharRef = charRef.options[enemyVariantSelected];
+        const newCharAbilitiesRef = newCharRef.abilities;
+        const paramOverrides = newCharRef.overrideParams;
+
+        let newSkillsObject = {};
+        let isForReaderObject = {};
+
+        for (let enemyAbility of newCharAbilitiesRef) {
+            const currentSkillEntry = enemyAbilityData[enemyAbility];//should have converted this to an index value unless I forgot
+
+
+            const currentTagObject = newSkillsObject[currentSkillEntry.type ?? "-N/A-"] ??= {};
+            const currentNameObject = currentTagObject[currentSkillEntry.name ?? "-N/A-"] ??= {};
+            let currentVariantObject = {};
+            let selectedVariantObject = null;
+
+            for (let variantCounter = 1;variantCounter <200;variantCounter++) {
+
+                if (!currentNameObject[`variant${variantCounter}`]) {
+                    currentNameObject[`variant${variantCounter}`] = {};
+                    selectedVariantObject = currentNameObject[`variant${variantCounter}`];
+                    variantCounter = null;
+                    break;
+                }
+                else if (variantCounter >= 100) {
+                    alert("Either an ability actually has over 100 variants, or Vash didn't catch this error properly.\n\nIf you ever see this, screenshot this error and join the discord to let Vash know. In theory you should never see it though, this error message is just a failsafe.")
+                    break;
+                }
+            }
+
+            // "skillID": 100101,
+            // "trigger": "Skill01",
+            // "name": "Frigid Cold Arrow",
+            // "type": "Single Target",
+            // "slot": "Basic ATK",
+            // "desc": "Deals Ice DMG equal to #1[i]% of March 7th's ATK to one enemy.",
+            // "energyCost": null,
+            // "energyRegen": 20,
+            // "energyRate": 0.5,
+            // "toughnessReductionDisplayed": 10,
+            // "skillPointCost": 0,
+            // "skillPointGain": 1,
+            // "params": {
+            //   "1": [
+            //     0.5
+            //   ],
+            // },
+            // "element": "Ice",
+            // "attackType": "Normal",
+            // "skillEffect": "SingleAttack",
+            // "maxLevel": 10,
+            // "configAbilityList": [],
+            // "toughnessList": [],
+            // "hitSplits": []
+
+            // if (paramOverrides && paramOverrides[currentSkillEntry.skillID]?.length) {
+            //     console.log(paramOverrides[currentSkillEntry.skillID])
+            // }
+
+            Object.assign(selectedVariantObject,{
+                "skillID": currentSkillEntry.skillID,
+                "trigger": currentSkillEntry.trigger,
+                "name": currentSkillEntry.name ?? "-N/A-",
+                "type": currentSkillEntry.tag,
+                "slot": currentSkillEntry.type,
+                "desc": currentSkillEntry.desc,
+                "energyRegen": currentSkillEntry.energyPerHit,
+                "delay": currentSkillEntry.delay,
+                "params": currentSkillEntry.params,
+                ...(paramOverrides && paramOverrides[enemyAbility]?.length ? {paramOverrides: paramOverrides[enemyAbility]} : {}),
+                ...(currentSkillEntry.alert ? {isAlert: currentSkillEntry.alert} : {}),
+
+                
+                "extraEffects": currentSkillEntry.extraEffects,
+
+                "element": currentSkillEntry.element,
+                "phaseList": currentSkillEntry.phases,
+            });
+
+
+            if (isForReader) {
+
+                isForReaderObject[currentSkillEntry.trigger] ??= {
+                    "params": currentSkillEntry.params,
+                    ...(paramOverrides && paramOverrides[enemyAbility]?.length ? {paramOverrides: paramOverrides[enemyAbility]} : {}),
+                    ...(currentSkillEntry.element ? {element: currentSkillEntry.element} : {}),
+                    ...(currentSkillEntry.type ? {slot: currentSkillEntry.type} : {}),
+                    ...(currentSkillEntry.energyPerHit ? {energy: currentSkillEntry.energyPerHit} : {}),
+                    ...(currentSkillEntry.phases?.length ? {phaseList: currentSkillEntry.phases?.length} : {}),
+                }
+            }
+
+            // currentNameObject
+    
+
+
+            // console.log(selectedVariantObject)
+
+
+
+            // "id": 100203003,
+            // "name": "Covering Support",
+            // "type": "Talent",
+            // "trigger": "SkillP01",
+            // "desc": "Provides support to one designated friendly unit. When this unit attacks, it performs a Follow-Up ATK that deals minor Physical DMG to the attacked target and units adjacent to the target.",
+            // "tag": "Talent",
+            // "params": [
+            // 2.2,
+            // 1.5
+            // ],
+            // "atkType": "Basic ATK",
+            // "energyPerHit": 12
+
+
+        }
+
+        if (isForReader) {
+            newSkillsObject = null;
+            return isForReaderObject;
+        }
+
+        return newSkillsObject;
+    },
     updateCharacterUI(statTableRef,currentSlot,silent) {
 
         if (globalIsLightcone || globalIsRelic || globalIsNoImage) {
@@ -3638,103 +3763,7 @@ const userTriggers = {
         
 
 
-        let newSkillsObject = {};
-
-        for (let enemyAbility of newCharAbilitiesRef) {
-            const currentSkillEntry = enemyAbilityData[enemyAbility];//should have converted this to an index value unless I forgot
-
-
-            const currentTagObject = newSkillsObject[currentSkillEntry.type ?? "-N/A-"] ??= {};
-            const currentNameObject = currentTagObject[currentSkillEntry.name ?? "-N/A-"] ??= {};
-            let currentVariantObject = {};
-            let selectedVariantObject = null;
-
-            for (let variantCounter = 1;variantCounter <200;variantCounter++) {
-
-                if (!currentNameObject[`variant${variantCounter}`]) {
-                    currentNameObject[`variant${variantCounter}`] = {};
-                    selectedVariantObject = currentNameObject[`variant${variantCounter}`];
-                    variantCounter = null;
-                    break;
-                }
-                else if (variantCounter >= 100) {
-                    alert("Either an ability actually has over 100 variants, or Vash didn't catch this error properly.\n\nIf you ever see this, screenshot this error and join the discord to let Vash know. In theory you should never see it though, this error message is just a failsafe.")
-                    break;
-                }
-            }
-
-            // "skillID": 100101,
-            // "trigger": "Skill01",
-            // "name": "Frigid Cold Arrow",
-            // "type": "Single Target",
-            // "slot": "Basic ATK",
-            // "desc": "Deals Ice DMG equal to #1[i]% of March 7th's ATK to one enemy.",
-            // "energyCost": null,
-            // "energyRegen": 20,
-            // "energyRate": 0.5,
-            // "toughnessReductionDisplayed": 10,
-            // "skillPointCost": 0,
-            // "skillPointGain": 1,
-            // "params": {
-            //   "1": [
-            //     0.5
-            //   ],
-            // },
-            // "element": "Ice",
-            // "attackType": "Normal",
-            // "skillEffect": "SingleAttack",
-            // "maxLevel": 10,
-            // "configAbilityList": [],
-            // "toughnessList": [],
-            // "hitSplits": []
-
-            // if (paramOverrides && paramOverrides[currentSkillEntry.skillID]?.length) {
-            //     console.log(paramOverrides[currentSkillEntry.skillID])
-            // }
-
-            Object.assign(selectedVariantObject,{
-                "skillID": currentSkillEntry.skillID,
-                "trigger": currentSkillEntry.trigger,
-                "name": currentSkillEntry.name ?? "-N/A-",
-                "type": currentSkillEntry.tag,
-                "slot": currentSkillEntry.type,
-                "desc": currentSkillEntry.desc,
-                "energyRegen": currentSkillEntry.energyPerHit,
-                "delay": currentSkillEntry.delay,
-                "params": currentSkillEntry.params,
-                ...(paramOverrides && paramOverrides[enemyAbility]?.length ? {paramOverrides: paramOverrides[enemyAbility]} : {}),
-                ...(currentSkillEntry.alert ? {isAlert: currentSkillEntry.alert} : {}),
-
-                
-                "extraEffects": currentSkillEntry.extraEffects,
-
-                "element": currentSkillEntry.element,
-                "phaseList": currentSkillEntry.phases,
-            })
-
-            // currentNameObject
-    
-
-
-            // console.log(selectedVariantObject)
-
-
-
-            // "id": 100203003,
-            // "name": "Covering Support",
-            // "type": "Talent",
-            // "trigger": "SkillP01",
-            // "desc": "Provides support to one designated friendly unit. When this unit attacks, it performs a Follow-Up ATK that deals minor Physical DMG to the attacked target and units adjacent to the target.",
-            // "tag": "Talent",
-            // "params": [
-            // 2.2,
-            // 1.5
-            // ],
-            // "atkType": "Basic ATK",
-            // "energyPerHit": 12
-
-
-        }
+        let newSkillsObject = userTriggers.getEnemySkillsObject();
         let overviewString = ``;
         // let rankCounter = 0;
         for (let traceEntry in newSkillsObject) {
@@ -4961,6 +4990,8 @@ const userTriggers = {
         const serialized = new URLSearchParams(seralize);
         history.replaceState(null, "", `?${serialized.toString()}`);
 
+        
+        newSkillsObject = null;
 
     },
     updateSkillLevel(skillSlot,valueToChange) {
