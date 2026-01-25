@@ -829,6 +829,37 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
         </div>`;
     },
+    "Define Variable with Random Value"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            // "value",
+            "integer",
+            "scope",
+            "min",
+            "max",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Variable with Random Value");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Random Value:</div>&nbsp;
+            ${parseRef.variableName} = Random value from Range~
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.min != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Minimum:</div>&nbsp;
+                ${parseRef.min.displayLines ?? parseRef.min}
+            </div>` : ""}
+            ${parseRef.max != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Maximum:</div>&nbsp;
+                ${parseRef.max.displayLines ?? parseRef.max}
+            </div>` : ""}
+            ${parseRef.integer != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Integer:</div>&nbsp;
+                ${parseRef.integer}
+            </div>` : ""}
+        </div>`;
+    },
     "Define Custom Variable (VFX)"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -3058,6 +3089,7 @@ const megaParsingFuckeryPain = {
             "ID",
             "target",
             "characterName",
+            "isCompareUniqueID",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Enemy ID");
 
@@ -3065,6 +3097,13 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)} = ${parseRef.ID?.displayLines ?? parseRef.ID}(${parseRef.characterName})
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.isCompareUniqueID != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Is Partial Unique ID Comparison:</div>&nbsp;
+                ${parseRef.isCompareUniqueID}
+            </div>` : ""}
+
         </div>`;
     },
     "Character ID"(parseRef,initialCounter) {
@@ -9516,6 +9555,8 @@ const megaParsingFuckeryPain = {
         // let refString = "";
         const hasParse = parseRef.conditionList?.length;
         // const hasRef = parseRef.failed?.length;
+
+        console.log(parseRef.conditionList)
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.conditionList,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed);}
         initialCounter++;

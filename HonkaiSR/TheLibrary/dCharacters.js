@@ -30723,6 +30723,800 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Aventurine": {
+    "internalID": 1304,
+    "name": "Aventurine",
+    "path": "Preservation",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 446.29200000000003,
+      "DEFBase": 654.885,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 106,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "130401",
+        "name": "Prisoner's Dilemma",
+        "rank": 1,
+        "desc": "Increases CRIT DMG by 20% for ally targets with Fortified Wager. After using the Ultimate, provides all allies with a Fortified Wager shield, whose Shield Effect is equal to 100% of the one provided by the Skill, lasting for 3 turn(s).",
+        "icon": "icon/skill/1304_rank1.png",
+        "paramsEido": [
+          0.2,
+          1,
+          3
+        ]
+      },
+      {
+        "id": "130402",
+        "name": "Bounded Rationality",
+        "rank": 2,
+        "desc": "When using the Basic ATK, reduces the target's All-Type RES by 12% for 3 turn(s).",
+        "icon": "icon/skill/1304_rank2.png",
+        "paramsEido": [
+          1.2,
+          0.12,
+          3
+        ]
+      },
+      {
+        "id": "130403",
+        "name": "Droprate Maxing",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1304_ultimate.png"
+      },
+      {
+        "id": "130404",
+        "name": "Unexpected Hanging Paradox",
+        "rank": 4,
+        "desc": "When triggering his Talent's Follow-Up ATK, first increases Aventurine's DEF by 40% for 2 turn(s), and additionally increases the Hits Per Action for his talent's Follow-Up ATK by 3.",
+        "icon": "icon/skill/1304_rank4.png",
+        "paramsEido": [
+          0.4,
+          2,
+          3
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "130405",
+        "name": "Ambiguity Aversion",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1304_skill.png"
+      },
+      {
+        "id": "130406",
+        "name": "Stag Hunt Game",
+        "rank": 6,
+        "desc": "For every teammate that holds a Shield, the DMG dealt by Aventurine increases by 50%, up to a maximum of 150%.",
+        "icon": "icon/skill/1304_rank6.png",
+        "paramsEido": [
+          0.5,
+          1.5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Straight Bet": {
+          "variant1": {
+            "skillID": 130401,
+            "trigger": "Skill01",
+            "name": "Straight Bet",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Aventurine's DEF to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill01_Camera",
+              "Avatar_Aventurine_00_Skill01_Phase01",
+              "Avatar_Aventurine_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Cornerstone Deluxe": {
+          "variant1": {
+            "skillID": 130402,
+            "trigger": "Skill02",
+            "name": "Cornerstone Deluxe",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Provides all allies with a Fortified Wager shield that can block DMG equal to #1[f1]% of Aventurine's DEF plus #2[i], lasting for #3[i] turn(s). When Fortified Wager is gained repeatedly, the Shield Effect can stack, up to #4[i]% of the current Shield Effect provided by the Skill.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.16,
+                80,
+                3,
+                2
+              ],
+              "2": [
+                0.17,
+                128,
+                3,
+                2
+              ],
+              "3": [
+                0.18,
+                164,
+                3,
+                2
+              ],
+              "4": [
+                0.19,
+                200,
+                3,
+                2
+              ],
+              "5": [
+                0.2,
+                224,
+                3,
+                2
+              ],
+              "6": [
+                0.208,
+                248,
+                3,
+                2
+              ],
+              "7": [
+                0.216,
+                266,
+                3,
+                2
+              ],
+              "8": [
+                0.224,
+                284,
+                3,
+                2
+              ],
+              "9": [
+                0.232,
+                302,
+                3,
+                2
+              ],
+              "10": [
+                0.24,
+                320,
+                3,
+                2
+              ],
+              "11": [
+                0.248,
+                338,
+                3,
+                2
+              ],
+              "12": [
+                0.256,
+                356,
+                3,
+                2
+              ],
+              "13": [
+                0.264,
+                374,
+                3,
+                2
+              ],
+              "14": [
+                0.272,
+                392,
+                3,
+                2
+              ],
+              "15": [
+                0.28,
+                410,
+                3,
+                2
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill02_Camera",
+              "Avatar_Aventurine_00_Skill02_Phase01",
+              "Avatar_Aventurine_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Roulette Shark": {
+          "variant1": {
+            "skillID": 130403,
+            "trigger": "Skill03",
+            "name": "Roulette Shark",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Randomly gains 1 to #1[i] points of \"Blind Bet.\" Then, inflicts \"Unnerved\" on one designated enemy target for #4[i] turn(s) and deals Imaginary DMG equal to #2[i]% of Aventurine's DEF to that enemy target. When an ally hits an \"Unnerved\" enemy target, the CRIT DMG dealt increases by #3[f1]%.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                7,
+                1.62,
+                0.09,
+                3
+              ],
+              "2": [
+                7,
+                1.728,
+                0.096,
+                3
+              ],
+              "3": [
+                7,
+                1.836,
+                0.102,
+                3
+              ],
+              "4": [
+                7,
+                1.944,
+                0.108,
+                3
+              ],
+              "5": [
+                7,
+                2.052,
+                0.114,
+                3
+              ],
+              "6": [
+                7,
+                2.16,
+                0.12,
+                3
+              ],
+              "7": [
+                7,
+                2.295,
+                0.1275,
+                3
+              ],
+              "8": [
+                7,
+                2.43,
+                0.135,
+                3
+              ],
+              "9": [
+                7,
+                2.565,
+                0.1425,
+                3
+              ],
+              "10": [
+                7,
+                2.7,
+                0.15,
+                3
+              ],
+              "11": [
+                7,
+                2.808,
+                0.156,
+                3
+              ],
+              "12": [
+                7,
+                2.916,
+                0.162,
+                3
+              ],
+              "13": [
+                7,
+                3.024,
+                0.168,
+                3
+              ],
+              "14": [
+                7,
+                3.132,
+                0.174,
+                3
+              ],
+              "15": [
+                7,
+                3.24,
+                0.18,
+                3
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill03_Camera",
+              "Avatar_Aventurine_00_Skill03_EnterReady",
+              "Avatar_Aventurine_00_Skill03_Phase01",
+              "Avatar_Aventurine_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Shot Loaded Right": {
+          "variant1": {
+            "skillID": 130404,
+            "trigger": "SkillP01",
+            "name": "Shot Loaded Right",
+            "type": "Bounce",
+            "slot": "Talent",
+            "desc": "For any single ally with \"Fortified Wager,\" their Effect RES increases by #4[f1]%, and when they get attacked, Aventurine gains 1 point of \"Blind Bet.\" When Aventurine has \"Fortified Wager,\" he can resist Crowd Control debuffs. This effect can trigger again after #5[i] turn(s). Aventurine additionally gains #1[i] point(s) of \"Blind Bet\" after getting attacked. Upon reaching 7 points of \"Blind Bet,\" Aventurine consumes the 7 points to launch a #2[i]-hit Follow-Up ATK, with each hit dealing Imaginary DMG equal to #3[i]% of Aventurine's DEF to one random enemy. \"Blind Bet\" is capped at 10 points.",
+            "energyCost": null,
+            "energyRegen": 1,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 3,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                7,
+                0.125,
+                0.25,
+                2
+              ],
+              "2": [
+                1,
+                7,
+                0.1375,
+                0.275,
+                2
+              ],
+              "3": [
+                1,
+                7,
+                0.15,
+                0.3,
+                2
+              ],
+              "4": [
+                1,
+                7,
+                0.1625,
+                0.325,
+                2
+              ],
+              "5": [
+                1,
+                7,
+                0.175,
+                0.35,
+                2
+              ],
+              "6": [
+                1,
+                7,
+                0.1875,
+                0.375,
+                2
+              ],
+              "7": [
+                1,
+                7,
+                0.203125,
+                0.40625,
+                2
+              ],
+              "8": [
+                1,
+                7,
+                0.21875,
+                0.4375,
+                2
+              ],
+              "9": [
+                1,
+                7,
+                0.234375,
+                0.46875,
+                2
+              ],
+              "10": [
+                1,
+                7,
+                0.25,
+                0.5,
+                2
+              ],
+              "11": [
+                1,
+                7,
+                0.2625,
+                0.525,
+                2
+              ],
+              "12": [
+                1,
+                7,
+                0.275,
+                0.55,
+                2
+              ],
+              "13": [
+                1,
+                7,
+                0.2875,
+                0.575,
+                2
+              ],
+              "14": [
+                1,
+                7,
+                0.3,
+                0.6,
+                2
+              ],
+              "15": [
+                1,
+                7,
+                0.3125,
+                0.625,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_PassiveSkill01",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbility",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbilityPhase02",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbility_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 10
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "The Red or the Black": {
+          "variant1": {
+            "skillID": 130407,
+            "trigger": "SkillMaze",
+            "name": "The Red or the Black",
+            "type": "Defense",
+            "slot": "Technique",
+            "desc": "After using the Technique, 1 of the following effects will be granted:\\nThere is a chance for DEF to increase by #1[i]%.\\nThere is a high chance for DEF to increase by #2[i]%.\\nThere is a small chance for DEF to increase by #3[i]%.\\n\\nWhen this Technique is used repeatedly, the acquired effect with the highest buff value is retained.\\nWhen the next battle starts, increases all allies' DEF by the corresponding value, lasting for #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.24,
+                0.36,
+                0.6,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Defence",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1304_basic_atk.png",
+        "skillRef": {
+          "skillName": "Straight Bet",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1304_skill.png",
+        "skillRef": {
+          "skillName": "Cornerstone Deluxe",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1304_ultimate.png",
+        "skillRef": {
+          "skillName": "Roulette Shark",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1304_talent.png",
+        "skillRef": {
+          "skillName": "Shot Loaded Right",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1304_technique.png",
+        "skillRef": {
+          "skillName": "The Red or the Black",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Leverage",
+        "icon": "icon/skill/1304_skilltree1.png",
+        "desc": "For every 100 of Aventurine's DEF that exceeds #3[i], increases his own CRIT Rate by #1[i]%, up to a maximum increase of #2[i]%.",
+        "params": [
+          0.02,
+          0.48,
+          1600
+        ]
+      },
+      "Point07": {
+        "name": "Hot Hand",
+        "icon": "icon/skill/1304_skilltree2.png",
+        "desc": "When battle starts, grants all allies a Fortified Wager shield, whose Shield Effect is equal to #2[i]% of the one provided by the Skill, lasting for #1[i] turn(s).",
+        "params": [
+          3,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Bingo!",
+        "icon": "icon/skill/1304_skilltree3.png",
+        "desc": "After a teammate with \"Fortified Wager\" launches Follow-Up ATK, Aventurine accumulates 1 \"Blind Bet\" point. This effect can trigger up to #3[i] time(s). Its trigger count resets at the start of Aventurine's turn. After Aventurine launches his Talent's Follow-Up ATK, provides all ally targets with a \"Fortified Wager\" that can offset DMG equal to #1[i]% of Aventurine's DEF plus #2[i], and additionally grants a \"Fortified Wager\" that can block DMG equal to #4[i]% of Aventurine's DEF plus #5[i] to the ally with the lowest Shield Effect, lasting for 3 turns.",
+        "params": [
+          0.072,
+          96,
+          3,
+          0.072,
+          96
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.072,
+              96,
+              3,
+              0.072,
+              96
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point11": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point15": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      },
+      "Point18": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1304.png",
+    "preview": "image/character_preview/1304.png",
+    "portrait": "image/character_portrait/1304.png",
+    "bannerOffsets": [
+      -32.1,
+      38,
+      0.61,
+      -32.1,
+      38,
+      0.61,
+      -32.1,
+      38,
+      0.61
+    ],
+    "isBuffed": false
+  },
   "Dr. Ratio": {
     "internalID": 1305,
     "name": "Dr. Ratio",
