@@ -113,6 +113,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Yunli",
+    "trimCharacterName": "Yunli",
+    "entryIcon": "icon/character/1221.png",
+    "lineCount": 4001,
+    "sizeCount": 133968
+  },
+  {
+    "entryType": "char",
     "entryName": "Anaxa",
     "trimCharacterName": "Anaxa",
     "entryIcon": "icon/character/1405.png",

@@ -26916,6 +26916,834 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Yunli": {
+    "internalID": 1221,
+    "name": "Yunli",
+    "path": "Destruction",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 240,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 460.845,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 94,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "122101",
+        "name": "Weathered Blade Does Not Sully",
+        "rank": 1,
+        "desc": "Increases DMG dealt by \"Intuit: Slash\" and \"Intuit: Cull\" by 20%. Increases the number of additional DMG instances for \"Intuit: Cull\" by 3.",
+        "icon": "icon/skill/1221_rank1.png",
+        "paramsEido": [
+          0.2,
+          3
+        ]
+      },
+      {
+        "id": "122102",
+        "name": "First Luster Breaks Dawn",
+        "rank": 2,
+        "desc": "When dealing DMG via Counter, ignores 20% of the target's DEF.",
+        "icon": "icon/skill/1221_rank2.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "Counter": {
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+          }
+        }
+      },
+      {
+        "id": "122103",
+        "name": "Mastlength Twirls Mountweight",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1221_ultimate.png"
+      },
+      {
+        "id": "122104",
+        "name": "Artisan's Ironsong",
+        "rank": 4,
+        "desc": "After launching \"Intuit: Slash\" or \"Intuit: Cull,\" increases this unit's Effect RES by 50%, lasting for 1 turn(s).",
+        "icon": "icon/skill/1221_rank4.png",
+        "paramsEido": [
+          0.5,
+          1
+        ]
+      },
+      {
+        "id": "122105",
+        "name": "Blade of Old Outlasts All",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1221_skill.png"
+      },
+      {
+        "id": "122106",
+        "name": "Walk in Blade, Talk in Zither",
+        "rank": 6,
+        "desc": "While \"Parry\" is active, if an enemy actively uses their abilities, regardless of whether it attacks Yunli or not, it will trigger \"Intuit: Cull\" and remove the \"Parry\" effect. When dealing DMG via \"Intuit: Slash\" or \"Intuit: Cull,\" increases CRIT Rate by 15% and Physical RES PEN by 20%.",
+        "icon": "icon/skill/1221_rank6.png",
+        "paramsEido": [
+          0.15,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Galespin Summersault": {
+          "variant1": {
+            "skillID": 122101,
+            "trigger": "Skill01",
+            "name": "Galespin Summersault",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Yunli's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Yunli_00_Skill01_Camera",
+              "Avatar_Yunli_00_Skill01_Phase01",
+              "Avatar_Yunli_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Bladeborne Quake": {
+          "variant1": {
+            "skillID": 122102,
+            "trigger": "Skill02",
+            "name": "Bladeborne Quake",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Restores HP equal to #3[f1]% of Yunli's ATK plus #4[i]. Deals Physical DMG equal to #1[i]% of Yunli's ATK to one designated enemy target and Physical DMG equal to #2[i]% of Yunli's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                0.2,
+                50
+              ],
+              "2": [
+                0.66,
+                0.33,
+                0.2125,
+                80
+              ],
+              "3": [
+                0.72,
+                0.36,
+                0.225,
+                102.5
+              ],
+              "4": [
+                0.78,
+                0.39,
+                0.2375,
+                125
+              ],
+              "5": [
+                0.84,
+                0.42,
+                0.25,
+                140
+              ],
+              "6": [
+                0.9,
+                0.45,
+                0.26,
+                155
+              ],
+              "7": [
+                0.975,
+                0.4875,
+                0.27,
+                166.25
+              ],
+              "8": [
+                1.05,
+                0.525,
+                0.28,
+                177.5
+              ],
+              "9": [
+                1.125,
+                0.5625,
+                0.29,
+                188.75
+              ],
+              "10": [
+                1.2,
+                0.6,
+                0.3,
+                200
+              ],
+              "11": [
+                1.26,
+                0.63,
+                0.31,
+                211.25
+              ],
+              "12": [
+                1.32,
+                0.66,
+                0.32,
+                222.5
+              ],
+              "13": [
+                1.38,
+                0.69,
+                0.33,
+                233.75
+              ],
+              "14": [
+                1.44,
+                0.72,
+                0.34,
+                245
+              ],
+              "15": [
+                1.5,
+                0.75,
+                0.35,
+                256.25
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yunli_00_Skill02_Camera",
+              "Avatar_Yunli_00_Skill02_Phase01",
+              "Avatar_Yunli_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Earthbind, Etherbreak": {
+          "variant1": {
+            "skillID": 122103,
+            "trigger": "Skill03",
+            "name": "Earthbind, Etherbreak",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Consumes #8[i] Energy. Yunli gains Parry and Taunts all enemies, lasting until the end of the next ally's or enemy's turn. Increases the CRIT DMG dealt by Yunli's next Counter by #2[i]%. When triggering the Counter effect from Talent, launches the Counter \"Intuit: Cull\" instead and removes the Parry effect. If no Counter is triggered while Parry is active, Yunli will immediately launch the Counter \"Intuit: Slash\" on a random enemy target.\\n\\n\"Intuit: Slash\": Deals Physical DMG equal to #1[i]% of Yunli's ATK to the target, and deals Physical DMG equal to #6[i]% of Yunli's ATK to adjacent targets.\\n\"Intuit: Cull\": Deals Physical DMG equal to #1[i]% of Yunli's ATK to the target, and deals Physical DMG equal to #6[i]% of Yunli's ATK to adjacent targets. Then, additionally deals #4[i] instances of DMG, each dealing Physical DMG equal to #7[i]% of Yunli's ATK to a random single enemy.\\n\\nWhen Yunli deals DMG via this ability, it's considered as dealing Ultimate DMG.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.32,
+                0.6,
+                0,
+                6,
+                0,
+                0.66,
+                0.432,
+                120
+              ],
+              "2": [
+                1.408,
+                0.64,
+                0,
+                6,
+                0,
+                0.704,
+                0.4608,
+                120
+              ],
+              "3": [
+                1.496,
+                0.68,
+                0,
+                6,
+                0,
+                0.748,
+                0.4896,
+                120
+              ],
+              "4": [
+                1.584,
+                0.72,
+                0,
+                6,
+                0,
+                0.792,
+                0.5184,
+                120
+              ],
+              "5": [
+                1.672,
+                0.76,
+                0,
+                6,
+                0,
+                0.836,
+                0.5472,
+                120
+              ],
+              "6": [
+                1.76,
+                0.8,
+                0,
+                6,
+                0,
+                0.88,
+                0.576,
+                120
+              ],
+              "7": [
+                1.87,
+                0.85,
+                0,
+                6,
+                0,
+                0.935,
+                0.612,
+                120
+              ],
+              "8": [
+                1.98,
+                0.9,
+                0,
+                6,
+                0,
+                0.99,
+                0.648,
+                120
+              ],
+              "9": [
+                2.09,
+                0.95,
+                0,
+                6,
+                0,
+                1.045,
+                0.684,
+                120
+              ],
+              "10": [
+                2.2,
+                1,
+                0,
+                6,
+                0,
+                1.1,
+                0.72,
+                120
+              ],
+              "11": [
+                2.288,
+                1.04,
+                0,
+                6,
+                0,
+                1.144,
+                0.7488,
+                120
+              ],
+              "12": [
+                2.376,
+                1.08,
+                0,
+                6,
+                0,
+                1.188,
+                0.7776,
+                120
+              ],
+              "13": [
+                2.464,
+                1.12,
+                0,
+                6,
+                0,
+                1.232,
+                0.8064,
+                120
+              ],
+              "14": [
+                2.552,
+                1.16,
+                0,
+                6,
+                0,
+                1.276,
+                0.8352,
+                120
+              ],
+              "15": [
+                2.64,
+                1.2,
+                0,
+                6,
+                0,
+                1.32,
+                0.864,
+                120
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yunli_00_Skill03_Camera",
+              "Avatar_Yunli_00_Skill03_EnterReady",
+              "Avatar_Yunli_00_Skill03_Phase01",
+              "Avatar_Yunli_00_Skill03_Phase02",
+              "Avatar_Yunli_00_Skill03_Counter_Camera",
+              "Avatar_Yunli_00_Skill03_SuperCounter_Camera",
+              "Avatar_Yunli_00_Skill03_NormalCounter_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Flashforge": {
+          "variant1": {
+            "skillID": 122104,
+            "trigger": "SkillP01",
+            "name": "Flashforge",
+            "type": "Blast",
+            "slot": "Talent",
+            "desc": "When Yunli gets attacked by an enemy target, additionally regenerates #3[i] Energy and immediately launches a Counter on the attacker, dealing Physical DMG equal to #1[i]% of Yunli's ATK to the attacker and Physical DMG equal to #2[i]% of Yunli's ATK to adjacent targets.\\nIf there is no immediate target to Counter, then Counters a random enemy target instead.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                15
+              ],
+              "2": [
+                0.66,
+                0.33,
+                15
+              ],
+              "3": [
+                0.72,
+                0.36,
+                15
+              ],
+              "4": [
+                0.78,
+                0.39,
+                15
+              ],
+              "5": [
+                0.84,
+                0.42,
+                15
+              ],
+              "6": [
+                0.9,
+                0.45,
+                15
+              ],
+              "7": [
+                0.975,
+                0.4875,
+                15
+              ],
+              "8": [
+                1.05,
+                0.525,
+                15
+              ],
+              "9": [
+                1.125,
+                0.5625,
+                15
+              ],
+              "10": [
+                1.2,
+                0.6,
+                15
+              ],
+              "11": [
+                1.26,
+                0.63,
+                15
+              ],
+              "12": [
+                1.32,
+                0.66,
+                15
+              ],
+              "13": [
+                1.38,
+                0.69,
+                15
+              ],
+              "14": [
+                1.44,
+                0.72,
+                15
+              ],
+              "15": [
+                1.5,
+                0.75,
+                15
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yunli_00_Skill03_Counter_Phase01",
+              "Avatar_Yunli_00_Skill03_NormalCounter",
+              "Avatar_Yunli_00_Skill03_SuperCounter",
+              "Avatar_Yunli_00_PassiveSkill01",
+              "Avatar_Yunli_00_Counter_Phase01",
+              "Avatar_Yunli_00_Counter_Phase02",
+              "Avatar_Yunli_00_Counter_Camera",
+              "Avatar_Yunli_00_Counter_Preshow"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Posterior Precedence": {
+          "variant1": {
+            "skillID": 122107,
+            "trigger": "SkillMaze",
+            "name": "Posterior Precedence",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "This unit gains the Ward effect, lasting for #2[i] seconds. During this time, upon entering combat by either attacking enemies or receiving an attack, immediately casts \"Intuit: Cull\" on a random enemy, and increases the DMG dealt by this attack by #1[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Yunli_00_SkillMazeInLevel",
+              "Avatar_Yunli_00_SkillMazeInLevel_Insert",
+              "Avatar_Yunli_00_SkillMazeInLevel_Insert_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1221_basic_atk.png",
+        "skillRef": {
+          "skillName": "Galespin Summersault",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1221_skill.png",
+        "skillRef": {
+          "skillName": "Bladeborne Quake",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1221_ultimate.png",
+        "skillRef": {
+          "skillName": "Earthbind, Etherbreak",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1221_talent.png",
+        "skillRef": {
+          "skillName": "Flashforge",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1221_technique.png",
+        "skillRef": {
+          "skillName": "Posterior Precedence",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Fiery Wheel",
+        "icon": "icon/skill/1221_skilltree1.png",
+        "desc": "After each use of \"Intuit: Slash,\" the next \"Intuit: Slash\" will be replaced by \"Intuit: Cull.\""
+      },
+      "Point07": {
+        "name": "Demon Quell",
+        "icon": "icon/skill/1221_skilltree2.png",
+        "desc": "While in the \"Parry\" state, resists Crowd Control debuffs received and reduces DMG received by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              0.2
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "True Sunder",
+        "icon": "icon/skill/1221_skilltree3.png",
+        "desc": "When using a Counter, increases Yunli's ATK by #1[i]%, lasting for 1 turn.",
+        "params": [
+          0.3
+        ],
+        "extraEffects": {
+          "Counter": {
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK.",
+            "params": [
+              0.3
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1221.png",
+    "preview": "image/character_preview/1221.png",
+    "portrait": "image/character_portrait/1221.png",
+    "bannerOffsets": [
+      -44,
+      76.1,
+      0.64,
+      -44,
+      76.1,
+      0.64,
+      -44,
+      76.1,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Moze": {
     "internalID": 1223,
     "name": "Moze",
