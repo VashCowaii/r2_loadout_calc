@@ -176,6 +176,144 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Aglaea's Ult Countdown",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 11402,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aglaea, Garmentmaker, +ST and Blast",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Garmentmaker}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{ST and Blast}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aglaea and All Hostile Entities",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Garmentmaker}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aglaea and Garmentmaker",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Caster's Memosprite}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Garmentmaker",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster's Memosprite}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Aglaea's Battle Event",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "MWAglaea_Summon_Passive"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Dahlia's Dance Partners",
       "isTargetOperator": false,
       "execute": [

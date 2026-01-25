@@ -39763,6 +39763,1363 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Aglaea": {
+    "internalID": 1402,
+    "name": "Aglaea",
+    "path": "Remembrance",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 350,
+    "baseStats": {
+      "ATKBase": 698.544,
+      "DEFBase": 485.1,
+      "HPBase": 1241.8560000000002,
+      "SPDBase": 102,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "140201",
+        "name": "Drift at the Whim of Venus",
+        "rank": 1,
+        "desc": "The enemy afflicted with \"Seam Stitch\" takes 15% increased DMG. After Aglaea or Garmentmaker attacks this target, additionally regenerates 20 Energy.",
+        "icon": "icon/skill/1402_rank1.png",
+        "paramsEido": [
+          0.15,
+          20
+        ]
+      },
+      {
+        "id": "140202",
+        "name": "Sail on the Raft of Eyelids",
+        "rank": 2,
+        "desc": "When Aglaea or Garmentmaker takes action, enables the DMG dealt by Aglaea and Garmentmaker to ignore 14% of the target's DEF. This effect stacks up to 3 time(s) and lasts until any unit, other than Aglaea or Garmentmaker, actively uses an ability.",
+        "icon": "icon/skill/1402_rank2.png",
+        "paramsEido": [
+          0.14,
+          3
+        ]
+      },
+      {
+        "id": "140203",
+        "name": "Bequeath in the Coalescence of Dew",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1402_skill.png"
+      },
+      {
+        "id": "140204",
+        "name": "Flicker Below the Surface of Marble",
+        "rank": 4,
+        "desc": "The SPD Boost effect from the Memosprite Talent has its max stack limit increased by 1. After Aglaea uses an attack, can also make Garmentmaker gain the SPD Boost effect from the Memosprite Talent.",
+        "icon": "icon/skill/1402_rank4.png",
+        "paramsEido": [
+          1,
+          2
+        ]
+      },
+      {
+        "id": "140205",
+        "name": "Weave Under the Shroud of Woe",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1402_ultimate.png"
+      },
+      {
+        "id": "140206",
+        "name": "Fluctuate in the Tapestry of Fates",
+        "rank": 6,
+        "desc": "While Aglaea is in \"Supreme Stance,\" increases her and Garmentmaker's Lightning RES PEN by 20%. When Aglaea's or Garmentmaker's SPD is greater than 160/240/320, the Joint ATK DMG dealt by them increases by 10%/30%/60%.",
+        "icon": "icon/skill/1402_rank6.png",
+        "paramsEido": [
+          0.2,
+          0.1,
+          0.3,
+          0.6
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Joint Attack": {
+            "desc": "Multiple targets respectively use attacks on enemy targets in one action."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Memosprite Talent": 1
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Memosprite Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Thorned Nectar": {
+          "variant1": {
+            "skillID": 140201,
+            "trigger": "Skill01",
+            "name": "Thorned Nectar",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Aglaea's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                1
+              ],
+              "2": [
+                0.6,
+                1
+              ],
+              "3": [
+                0.7,
+                1
+              ],
+              "4": [
+                0.8,
+                1
+              ],
+              "5": [
+                0.9,
+                1
+              ],
+              "6": [
+                1,
+                1
+              ],
+              "7": [
+                1.1,
+                1
+              ],
+              "8": [
+                1.2,
+                1
+              ],
+              "9": [
+                1.3,
+                1
+              ],
+              "10": [
+                1.4,
+                1
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Aglaea_00_Skill01_Camera",
+              "Avatar_Aglaea_00_Skill01_Phase01",
+              "Avatar_Aglaea_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Slash by a Thousandfold Kiss": {
+          "variant1": {
+            "skillID": 140208,
+            "trigger": "Skill11",
+            "name": "Slash by a Thousandfold Kiss",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Aglaea and Garmentmaker launch a Joint ATK on the target, respectively dealing Lightning DMG equal to #1[f1]% of Aglaea's ATK and #3[f1]% of Garmentmaker's ATK to the target. Also, respectively deals Lightning DMG equal to #2[i]% of Aglaea's ATK and #4[i]% of Garmentmaker's ATK to adjacent targets.\\n\"Slash by a Thousandfold Kiss\" cannot recover Skill Points.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.45,
+                1,
+                0.45
+              ],
+              "2": [
+                1.2,
+                0.54,
+                1.2,
+                0.54
+              ],
+              "3": [
+                1.4,
+                0.63,
+                1.4,
+                0.63
+              ],
+              "4": [
+                1.6,
+                0.72,
+                1.6,
+                0.72
+              ],
+              "5": [
+                1.8,
+                0.81,
+                1.8,
+                0.81
+              ],
+              "6": [
+                2,
+                0.9,
+                2,
+                0.9
+              ],
+              "7": [
+                2.2,
+                0.99,
+                2.2,
+                0.99
+              ],
+              "8": [
+                2.4,
+                1.08,
+                2.4,
+                1.08
+              ],
+              "9": [
+                2.6,
+                1.17,
+                2.6,
+                1.17
+              ],
+              "10": [
+                2.8,
+                1.26,
+                2.8,
+                1.26
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Aglaea_00_Skill11_Camera",
+              "Avatar_Aglaea_00_Skill11_Phase01",
+              "Avatar_Aglaea_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Joint Attack": {
+                "desc": "Multiple targets respectively use attacks on enemy targets in one action."
+              }
+            }
+          }
+        }
+      },
+      "Skill": {
+        "Rise, Exalted Renown": {
+          "variant1": {
+            "skillID": 140202,
+            "trigger": "Skill02",
+            "name": "Rise, Exalted Renown",
+            "type": "Summon",
+            "slot": "Skill",
+            "desc": "Restores HP to Garmentmaker by #1[i]% of its Max HP. If Garmentmaker is absent, then summons the memosprite Garmentmaker and makes this unit immediately take action.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                0,
+                5
+              ],
+              "2": [
+                0.275,
+                0,
+                5
+              ],
+              "3": [
+                0.3,
+                0,
+                5
+              ],
+              "4": [
+                0.325,
+                0,
+                5
+              ],
+              "5": [
+                0.35,
+                0,
+                5
+              ],
+              "6": [
+                0.375,
+                0,
+                5
+              ],
+              "7": [
+                0.40625,
+                0,
+                5
+              ],
+              "8": [
+                0.4375,
+                0,
+                5
+              ],
+              "9": [
+                0.46875,
+                0,
+                5
+              ],
+              "10": [
+                0.5,
+                0,
+                5
+              ],
+              "11": [
+                0.525,
+                0,
+                5
+              ],
+              "12": [
+                0.55,
+                0,
+                5
+              ],
+              "13": [
+                0.575,
+                0,
+                5
+              ],
+              "14": [
+                0.6,
+                0,
+                5
+              ],
+              "15": [
+                0.625,
+                0,
+                5
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aglaea_00_Skill02_Camera",
+              "Avatar_Aglaea_00_Skill02_Phase01",
+              "Avatar_Aglaea_00_Skill02_Phase02",
+              "Avatar_Aglaea_00_Skill02_Camera_Self"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          },
+          "variant2": {
+            "skillID": 140209,
+            "trigger": "Skill21",
+            "name": "Rise, Exalted Renown",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Restores HP for Garmentmaker. If Garmentmaker is absent, summons the memosprite Garmentmaker and makes this unit immediately take action.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.275
+              ],
+              "3": [
+                0.3
+              ],
+              "4": [
+                0.325
+              ],
+              "5": [
+                0.35
+              ],
+              "6": [
+                0.375
+              ],
+              "7": [
+                0.40625
+              ],
+              "8": [
+                0.4375
+              ],
+              "9": [
+                0.46875
+              ],
+              "10": [
+                0.5
+              ],
+              "11": [
+                0.525
+              ],
+              "12": [
+                0.55
+              ],
+              "13": [
+                0.575
+              ],
+              "14": [
+                0.6
+              ],
+              "15": [
+                0.625
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aglaea_00_Skill21_Camera",
+              "Avatar_Aglaea_00_Skill21_Phase01",
+              "Avatar_Aglaea_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Dance, Destined Weaveress": {
+          "variant1": {
+            "skillID": 140203,
+            "trigger": "Skill03",
+            "name": "Dance, Destined Weaveress",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Summons the memosprite Garmentmaker. If Garmentmaker is already on the field, then restores its HP to max. Aglaea enters the \"Supreme Stance\" state and immediately takes action.\\nWhile in \"Supreme Stance,\" Aglaea gains the SPD Boost stacks from Garmentmaker's Memosprite Talent, with each stack increasing this unit's SPD by #1[f1]%. Enhances Basic ATK to \"Slash by a Thousandfold Kiss,\" and cannot use Skill. Garmentmaker is immune to Crowd Control debuffs.\\nA countdown appears in the Action Order, with its own SPD set at #4[i]. While the countdown exists, using Ultimate again will reset the countdown. When the countdown's turn starts, Garmentmaker self-destructs. When Garmentmaker disappears, Aglaea dispels the \"Supreme Stance\" state.",
+            "energyCost": 350,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "2": [
+                0.105,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "3": [
+                0.11,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "4": [
+                0.115,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "5": [
+                0.12,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "6": [
+                0.125,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "7": [
+                0.13125,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "8": [
+                0.1375,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "9": [
+                0.14375,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "10": [
+                0.15,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "11": [
+                0.155,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "12": [
+                0.16,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "13": [
+                0.165,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "14": [
+                0.17,
+                0,
+                0,
+                100,
+                0,
+                0
+              ],
+              "15": [
+                0.175,
+                0,
+                0,
+                100,
+                0,
+                0
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aglaea_00_Skill03_Camera",
+              "Avatar_Aglaea_00_Skill03_EnterReady",
+              "Avatar_Aglaea_00_Skill03_Phase01",
+              "Avatar_Aglaea_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Rosy-Fingered": {
+          "variant1": {
+            "skillID": 140204,
+            "trigger": "SkillP01",
+            "name": "Rosy-Fingered",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "The memosprite Garmentmaker has an initial SPD equal to #4[i]% of Aglaea's SPD and a Max HP equal to #5[i]% of Aglaea's Max HP plus #6[i]. While Garmentmaker is on the field, Aglaea's attacks inflict the target with the \"Seam Stitch\" state. After attacking enemies in the \"Seam Stitch\" state, further deals Lightning Additional DMG equal to #1[i]% of Aglaea's ATK. \"Seam Stitch\" only takes effect on the most recently inflicted target.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                0,
+                0,
+                0.35,
+                0.44,
+                180
+              ],
+              "2": [
+                0.138,
+                0,
+                0,
+                0.35,
+                0.4675,
+                247.5
+              ],
+              "3": [
+                0.156,
+                0,
+                0,
+                0.35,
+                0.495,
+                315
+              ],
+              "4": [
+                0.174,
+                0,
+                0,
+                0.35,
+                0.5225,
+                382.5
+              ],
+              "5": [
+                0.192,
+                0,
+                0,
+                0.35,
+                0.55,
+                450
+              ],
+              "6": [
+                0.21,
+                0,
+                0,
+                0.35,
+                0.572,
+                504
+              ],
+              "7": [
+                0.2325,
+                0,
+                0,
+                0.35,
+                0.594,
+                558
+              ],
+              "8": [
+                0.255,
+                0,
+                0,
+                0.35,
+                0.616,
+                612
+              ],
+              "9": [
+                0.2775,
+                0,
+                0,
+                0.35,
+                0.638,
+                666
+              ],
+              "10": [
+                0.3,
+                0,
+                0,
+                0.35,
+                0.66,
+                720
+              ],
+              "11": [
+                0.318,
+                0,
+                0,
+                0.35,
+                0.682,
+                774
+              ],
+              "12": [
+                0.336,
+                0,
+                0,
+                0.35,
+                0.704,
+                828
+              ],
+              "13": [
+                0.354,
+                0,
+                0,
+                0.35,
+                0.726,
+                882
+              ],
+              "14": [
+                0.372,
+                0,
+                0,
+                0.35,
+                0.748,
+                936
+              ],
+              "15": [
+                0.39,
+                0,
+                0,
+                0.35,
+                0.77,
+                990
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aglaea_00_PassiveSkill01",
+              "Avatar_Aglaea_00_Bonus",
+              "Avatar_Aglaea_00_Bonus_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Meteoric Sunder": {
+          "variant1": {
+            "skillID": 140207,
+            "trigger": "SkillMaze",
+            "name": "Meteoric Sunder",
+            "slot": "Technique",
+            "desc": "Summons the memosprite Garmentmaker and launches a forward joint attack. After entering battle, regenerates #2[i] Energy and deals Lightning DMG equal to #1[i]% of Aglaea's ATK to all enemy targets. Then, randomly inflicts the \"Seam Stitch\" state on a random enemy target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                30
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Aglaea_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Thorned Snare": {
+          "variant1": {
+            "skillID": 1140201,
+            "trigger": "Skill01",
+            "name": "Thorned Snare",
+            "type": "Blast",
+            "slot": "Memosprite Skill",
+            "desc": "Deals Lightning DMG equal to #1[i]% of ATK to one enemy and Lightning DMG equal to #2[i]% of ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.55,
+                0.33,
+                1
+              ],
+              "2": [
+                0.66,
+                0.396,
+                1
+              ],
+              "3": [
+                0.77,
+                0.462,
+                1
+              ],
+              "4": [
+                0.88,
+                0.528,
+                1
+              ],
+              "5": [
+                0.99,
+                0.594,
+                1
+              ],
+              "6": [
+                1.1,
+                0.66,
+                1
+              ],
+              "7": [
+                1.21,
+                0.726,
+                1
+              ],
+              "8": [
+                1.32,
+                0.792,
+                1
+              ],
+              "9": [
+                1.43,
+                0.858,
+                1
+              ],
+              "10": [
+                1.54,
+                0.924,
+                1
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Servant",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_AglaeaServant_00_Skill11_Phase01",
+              "Servant_AglaeaServant_00_Skill11_Phase02",
+              "Servant_AglaeaServant_00_Skill11_Camera",
+              "Servant_AglaeaServant_00_Skill11_Camera_Charm"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "A Body Brewed by Tears": {
+          "variant1": {
+            "skillID": 1140203,
+            "trigger": "SkillP01",
+            "name": "A Body Brewed by Tears",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "After attacking an enemy afflicted with \"Seam Stitch,\" increases this unit's SPD by #1[i], stacking up to #3[i] time(s). When Garmentmaker takes action, automatically uses \"Thorned Snare,\" prioritizing enemies under the \"Seam Stitch\" state.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                44,
+                3,
+                6
+              ],
+              "2": [
+                46.2,
+                3,
+                6
+              ],
+              "3": [
+                48.4,
+                3,
+                6
+              ],
+              "4": [
+                50.6,
+                3,
+                6
+              ],
+              "5": [
+                52.8,
+                3,
+                6
+              ],
+              "6": [
+                55,
+                3,
+                6
+              ],
+              "7": [
+                57.2,
+                3,
+                6
+              ],
+              "8": [
+                59.4,
+                3,
+                6
+              ],
+              "9": [
+                61.6,
+                3,
+                6
+              ],
+              "10": [
+                63.8,
+                3,
+                6
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_AglaeaServant_00_Passive",
+              "Servant_AglaeaServant_00_Skill11_Together_Phase01",
+              "Servant_AglaeaServant_Skill11_00_Together_Phase02",
+              "Servant_Aglaea_00_PassiveSkill01_ForceKill_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "The Speeding Summer": {
+          "variant1": {
+            "skillID": 1140205,
+            "trigger": "SkillP03",
+            "name": "The Speeding Summer",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When Garmentmaker is summoned, this unit's action advances by #1[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1
+              ],
+              "2": [
+                1
+              ],
+              "3": [
+                1
+              ],
+              "4": [
+                1
+              ],
+              "5": [
+                1
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1
+              ],
+              "8": [
+                1
+              ],
+              "9": [
+                1
+              ],
+              "10": [
+                1
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_AglaeaServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        },
+        "Bloom of Drying Grass": {
+          "variant1": {
+            "skillID": 1140206,
+            "trigger": "SkillP04",
+            "name": "Bloom of Drying Grass",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When Garmentmaker disappears, regenerates #1[i] Energy for Aglaea.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20
+              ],
+              "2": [
+                20
+              ],
+              "3": [
+                20
+              ],
+              "4": [
+                20
+              ],
+              "5": [
+                20
+              ],
+              "6": [
+                20
+              ],
+              "7": [
+                20
+              ],
+              "8": [
+                20
+              ],
+              "9": [
+                20
+              ],
+              "10": [
+                20
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_AglaeaServant_00_DeathRattle"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1402_basic_atk.png",
+        "skillRef": {
+          "skillName": "Thorned Nectar",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1402_skill.png",
+        "skillRef": {
+          "skillName": "Rise, Exalted Renown",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1402_ultimate.png",
+        "skillRef": {
+          "skillName": "Dance, Destined Weaveress",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1402_talent.png",
+        "skillRef": {
+          "skillName": "Rosy-Fingered",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1402_technique.png",
+        "skillRef": {
+          "skillName": "Meteoric Sunder",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "The Myopic's Doom",
+        "icon": "icon/skill/1402_skilltree1.png",
+        "desc": "While in \"Supreme Stance,\" increases Aglaea's and Garmentmaker's ATK by an amount equal to #1[i]% of Aglaea's SPD plus #2[i]% of Garmentmaker's SPD.",
+        "params": [
+          7.2,
+          3.6
+        ]
+      },
+      "Point07": {
+        "name": "Last Thread of Fate",
+        "icon": "icon/skill/1402_skilltree2.png",
+        "desc": "When Garmentmaker disappears, up to #1[i] stack(s) of the SPD Boost from the Memosprite Talent can be retained. When Garmentmaker is summoned again, gains the corresponding number of SPD Boost stacks.",
+        "params": [
+          1
+        ]
+      },
+      "Point08": {
+        "name": "The Speeding Sol",
+        "icon": "icon/skill/1402_skilltree3.png",
+        "desc": "At the start of battle, if this unit's Energy is lower than #1[i]%, regenerates this unit's Energy to #2[i]%.",
+        "params": [
+          0.5,
+          0.5
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.032
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.032
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.048
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.048
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.064
+        }
+      },
+      "Point19": {
+        "name": "Thorned Snare",
+        "icon": "icon/skill/1402_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Thorned Snare",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "A Body Brewed by Tears",
+        "icon": "icon/skill/1402_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "A Body Brewed by Tears",
+          "skillSlot": "Memosprite Talent"
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1402.png",
+    "preview": "image/character_preview/1402.png",
+    "portrait": "image/character_portrait/1402.png",
+    "bannerOffsets": [
+      -44,
+      -134,
+      0.64,
+      -44,
+      -134,
+      0.64,
+      -44,
+      -134,
+      0.64
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 125
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11402,
+    "summonName": "Garmentmaker"
+  },
   "Tribbie": {
     "internalID": 1403,
     "name": "Tribbie",
