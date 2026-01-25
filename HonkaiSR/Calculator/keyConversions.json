@@ -123,6 +123,7 @@
     "IcePenetrate": "ResistanceIcePEN",
     "ThunderPenetrate": "ResistanceLightningPEN",
     "ImaginaryPenetrate": "ResistanceImaginaryPEN",
+    "PhysicalPenetrate": "ResistancePhysicalPEN",
 
     "AllDamageTypeResistance": "ResistanceAll",
     "PhysicalResistance": "ResistancePhysical",

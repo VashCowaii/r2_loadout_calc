@@ -26916,6 +26916,834 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Yunli": {
+    "internalID": 1221,
+    "name": "Yunli",
+    "path": "Destruction",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 240,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 460.845,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 94,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "122101",
+        "name": "Weathered Blade Does Not Sully",
+        "rank": 1,
+        "desc": "Increases DMG dealt by \"Intuit: Slash\" and \"Intuit: Cull\" by 20%. Increases the number of additional DMG instances for \"Intuit: Cull\" by 3.",
+        "icon": "icon/skill/1221_rank1.png",
+        "paramsEido": [
+          0.2,
+          3
+        ]
+      },
+      {
+        "id": "122102",
+        "name": "First Luster Breaks Dawn",
+        "rank": 2,
+        "desc": "When dealing DMG via Counter, ignores 20% of the target's DEF.",
+        "icon": "icon/skill/1221_rank2.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "Counter": {
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+          }
+        }
+      },
+      {
+        "id": "122103",
+        "name": "Mastlength Twirls Mountweight",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1221_ultimate.png"
+      },
+      {
+        "id": "122104",
+        "name": "Artisan's Ironsong",
+        "rank": 4,
+        "desc": "After launching \"Intuit: Slash\" or \"Intuit: Cull,\" increases this unit's Effect RES by 50%, lasting for 1 turn(s).",
+        "icon": "icon/skill/1221_rank4.png",
+        "paramsEido": [
+          0.5,
+          1
+        ]
+      },
+      {
+        "id": "122105",
+        "name": "Blade of Old Outlasts All",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1221_skill.png"
+      },
+      {
+        "id": "122106",
+        "name": "Walk in Blade, Talk in Zither",
+        "rank": 6,
+        "desc": "While \"Parry\" is active, if an enemy actively uses their abilities, regardless of whether it attacks Yunli or not, it will trigger \"Intuit: Cull\" and remove the \"Parry\" effect. When dealing DMG via \"Intuit: Slash\" or \"Intuit: Cull,\" increases CRIT Rate by 15% and Physical RES PEN by 20%.",
+        "icon": "icon/skill/1221_rank6.png",
+        "paramsEido": [
+          0.15,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Galespin Summersault": {
+          "variant1": {
+            "skillID": 122101,
+            "trigger": "Skill01",
+            "name": "Galespin Summersault",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Yunli's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Yunli_00_Skill01_Camera",
+              "Avatar_Yunli_00_Skill01_Phase01",
+              "Avatar_Yunli_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Bladeborne Quake": {
+          "variant1": {
+            "skillID": 122102,
+            "trigger": "Skill02",
+            "name": "Bladeborne Quake",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Restores HP equal to #3[f1]% of Yunli's ATK plus #4[i]. Deals Physical DMG equal to #1[i]% of Yunli's ATK to one designated enemy target and Physical DMG equal to #2[i]% of Yunli's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                0.2,
+                50
+              ],
+              "2": [
+                0.66,
+                0.33,
+                0.2125,
+                80
+              ],
+              "3": [
+                0.72,
+                0.36,
+                0.225,
+                102.5
+              ],
+              "4": [
+                0.78,
+                0.39,
+                0.2375,
+                125
+              ],
+              "5": [
+                0.84,
+                0.42,
+                0.25,
+                140
+              ],
+              "6": [
+                0.9,
+                0.45,
+                0.26,
+                155
+              ],
+              "7": [
+                0.975,
+                0.4875,
+                0.27,
+                166.25
+              ],
+              "8": [
+                1.05,
+                0.525,
+                0.28,
+                177.5
+              ],
+              "9": [
+                1.125,
+                0.5625,
+                0.29,
+                188.75
+              ],
+              "10": [
+                1.2,
+                0.6,
+                0.3,
+                200
+              ],
+              "11": [
+                1.26,
+                0.63,
+                0.31,
+                211.25
+              ],
+              "12": [
+                1.32,
+                0.66,
+                0.32,
+                222.5
+              ],
+              "13": [
+                1.38,
+                0.69,
+                0.33,
+                233.75
+              ],
+              "14": [
+                1.44,
+                0.72,
+                0.34,
+                245
+              ],
+              "15": [
+                1.5,
+                0.75,
+                0.35,
+                256.25
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yunli_00_Skill02_Camera",
+              "Avatar_Yunli_00_Skill02_Phase01",
+              "Avatar_Yunli_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Earthbind, Etherbreak": {
+          "variant1": {
+            "skillID": 122103,
+            "trigger": "Skill03",
+            "name": "Earthbind, Etherbreak",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Consumes #8[i] Energy. Yunli gains Parry and Taunts all enemies, lasting until the end of the next ally's or enemy's turn. Increases the CRIT DMG dealt by Yunli's next Counter by #2[i]%. When triggering the Counter effect from Talent, launches the Counter \"Intuit: Cull\" instead and removes the Parry effect. If no Counter is triggered while Parry is active, Yunli will immediately launch the Counter \"Intuit: Slash\" on a random enemy target.\\n\\n\"Intuit: Slash\": Deals Physical DMG equal to #1[i]% of Yunli's ATK to the target, and deals Physical DMG equal to #6[i]% of Yunli's ATK to adjacent targets.\\n\"Intuit: Cull\": Deals Physical DMG equal to #1[i]% of Yunli's ATK to the target, and deals Physical DMG equal to #6[i]% of Yunli's ATK to adjacent targets. Then, additionally deals #4[i] instances of DMG, each dealing Physical DMG equal to #7[i]% of Yunli's ATK to a random single enemy.\\n\\nWhen Yunli deals DMG via this ability, it's considered as dealing Ultimate DMG.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.32,
+                0.6,
+                0,
+                6,
+                0,
+                0.66,
+                0.432,
+                120
+              ],
+              "2": [
+                1.408,
+                0.64,
+                0,
+                6,
+                0,
+                0.704,
+                0.4608,
+                120
+              ],
+              "3": [
+                1.496,
+                0.68,
+                0,
+                6,
+                0,
+                0.748,
+                0.4896,
+                120
+              ],
+              "4": [
+                1.584,
+                0.72,
+                0,
+                6,
+                0,
+                0.792,
+                0.5184,
+                120
+              ],
+              "5": [
+                1.672,
+                0.76,
+                0,
+                6,
+                0,
+                0.836,
+                0.5472,
+                120
+              ],
+              "6": [
+                1.76,
+                0.8,
+                0,
+                6,
+                0,
+                0.88,
+                0.576,
+                120
+              ],
+              "7": [
+                1.87,
+                0.85,
+                0,
+                6,
+                0,
+                0.935,
+                0.612,
+                120
+              ],
+              "8": [
+                1.98,
+                0.9,
+                0,
+                6,
+                0,
+                0.99,
+                0.648,
+                120
+              ],
+              "9": [
+                2.09,
+                0.95,
+                0,
+                6,
+                0,
+                1.045,
+                0.684,
+                120
+              ],
+              "10": [
+                2.2,
+                1,
+                0,
+                6,
+                0,
+                1.1,
+                0.72,
+                120
+              ],
+              "11": [
+                2.288,
+                1.04,
+                0,
+                6,
+                0,
+                1.144,
+                0.7488,
+                120
+              ],
+              "12": [
+                2.376,
+                1.08,
+                0,
+                6,
+                0,
+                1.188,
+                0.7776,
+                120
+              ],
+              "13": [
+                2.464,
+                1.12,
+                0,
+                6,
+                0,
+                1.232,
+                0.8064,
+                120
+              ],
+              "14": [
+                2.552,
+                1.16,
+                0,
+                6,
+                0,
+                1.276,
+                0.8352,
+                120
+              ],
+              "15": [
+                2.64,
+                1.2,
+                0,
+                6,
+                0,
+                1.32,
+                0.864,
+                120
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yunli_00_Skill03_Camera",
+              "Avatar_Yunli_00_Skill03_EnterReady",
+              "Avatar_Yunli_00_Skill03_Phase01",
+              "Avatar_Yunli_00_Skill03_Phase02",
+              "Avatar_Yunli_00_Skill03_Counter_Camera",
+              "Avatar_Yunli_00_Skill03_SuperCounter_Camera",
+              "Avatar_Yunli_00_Skill03_NormalCounter_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Flashforge": {
+          "variant1": {
+            "skillID": 122104,
+            "trigger": "SkillP01",
+            "name": "Flashforge",
+            "type": "Blast",
+            "slot": "Talent",
+            "desc": "When Yunli gets attacked by an enemy target, additionally regenerates #3[i] Energy and immediately launches a Counter on the attacker, dealing Physical DMG equal to #1[i]% of Yunli's ATK to the attacker and Physical DMG equal to #2[i]% of Yunli's ATK to adjacent targets.\\nIf there is no immediate target to Counter, then Counters a random enemy target instead.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                15
+              ],
+              "2": [
+                0.66,
+                0.33,
+                15
+              ],
+              "3": [
+                0.72,
+                0.36,
+                15
+              ],
+              "4": [
+                0.78,
+                0.39,
+                15
+              ],
+              "5": [
+                0.84,
+                0.42,
+                15
+              ],
+              "6": [
+                0.9,
+                0.45,
+                15
+              ],
+              "7": [
+                0.975,
+                0.4875,
+                15
+              ],
+              "8": [
+                1.05,
+                0.525,
+                15
+              ],
+              "9": [
+                1.125,
+                0.5625,
+                15
+              ],
+              "10": [
+                1.2,
+                0.6,
+                15
+              ],
+              "11": [
+                1.26,
+                0.63,
+                15
+              ],
+              "12": [
+                1.32,
+                0.66,
+                15
+              ],
+              "13": [
+                1.38,
+                0.69,
+                15
+              ],
+              "14": [
+                1.44,
+                0.72,
+                15
+              ],
+              "15": [
+                1.5,
+                0.75,
+                15
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Yunli_00_Skill03_Counter_Phase01",
+              "Avatar_Yunli_00_Skill03_NormalCounter",
+              "Avatar_Yunli_00_Skill03_SuperCounter",
+              "Avatar_Yunli_00_PassiveSkill01",
+              "Avatar_Yunli_00_Counter_Phase01",
+              "Avatar_Yunli_00_Counter_Phase02",
+              "Avatar_Yunli_00_Counter_Camera",
+              "Avatar_Yunli_00_Counter_Preshow"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Posterior Precedence": {
+          "variant1": {
+            "skillID": 122107,
+            "trigger": "SkillMaze",
+            "name": "Posterior Precedence",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "This unit gains the Ward effect, lasting for #2[i] seconds. During this time, upon entering combat by either attacking enemies or receiving an attack, immediately casts \"Intuit: Cull\" on a random enemy, and increases the DMG dealt by this attack by #1[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                20
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Yunli_00_SkillMazeInLevel",
+              "Avatar_Yunli_00_SkillMazeInLevel_Insert",
+              "Avatar_Yunli_00_SkillMazeInLevel_Insert_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1221_basic_atk.png",
+        "skillRef": {
+          "skillName": "Galespin Summersault",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1221_skill.png",
+        "skillRef": {
+          "skillName": "Bladeborne Quake",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1221_ultimate.png",
+        "skillRef": {
+          "skillName": "Earthbind, Etherbreak",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1221_talent.png",
+        "skillRef": {
+          "skillName": "Flashforge",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1221_technique.png",
+        "skillRef": {
+          "skillName": "Posterior Precedence",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Fiery Wheel",
+        "icon": "icon/skill/1221_skilltree1.png",
+        "desc": "After each use of \"Intuit: Slash,\" the next \"Intuit: Slash\" will be replaced by \"Intuit: Cull.\""
+      },
+      "Point07": {
+        "name": "Demon Quell",
+        "icon": "icon/skill/1221_skilltree2.png",
+        "desc": "While in the \"Parry\" state, resists Crowd Control debuffs received and reduces DMG received by #1[i]%.",
+        "params": [
+          0.2
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              0.2
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "True Sunder",
+        "icon": "icon/skill/1221_skilltree3.png",
+        "desc": "When using a Counter, increases Yunli's ATK by #1[i]%, lasting for 1 turn.",
+        "params": [
+          0.3
+        ],
+        "extraEffects": {
+          "Counter": {
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK.",
+            "params": [
+              0.3
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1221.png",
+    "preview": "image/character_preview/1221.png",
+    "portrait": "image/character_portrait/1221.png",
+    "bannerOffsets": [
+      -44,
+      76.1,
+      0.64,
+      -44,
+      76.1,
+      0.64,
+      -44,
+      76.1,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Moze": {
     "internalID": 1223,
     "name": "Moze",
@@ -30723,6 +31551,800 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Aventurine": {
+    "internalID": 1304,
+    "name": "Aventurine",
+    "path": "Preservation",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 446.29200000000003,
+      "DEFBase": 654.885,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 106,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "130401",
+        "name": "Prisoner's Dilemma",
+        "rank": 1,
+        "desc": "Increases CRIT DMG by 20% for ally targets with Fortified Wager. After using the Ultimate, provides all allies with a Fortified Wager shield, whose Shield Effect is equal to 100% of the one provided by the Skill, lasting for 3 turn(s).",
+        "icon": "icon/skill/1304_rank1.png",
+        "paramsEido": [
+          0.2,
+          1,
+          3
+        ]
+      },
+      {
+        "id": "130402",
+        "name": "Bounded Rationality",
+        "rank": 2,
+        "desc": "When using the Basic ATK, reduces the target's All-Type RES by 12% for 3 turn(s).",
+        "icon": "icon/skill/1304_rank2.png",
+        "paramsEido": [
+          1.2,
+          0.12,
+          3
+        ]
+      },
+      {
+        "id": "130403",
+        "name": "Droprate Maxing",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1304_ultimate.png"
+      },
+      {
+        "id": "130404",
+        "name": "Unexpected Hanging Paradox",
+        "rank": 4,
+        "desc": "When triggering his Talent's Follow-Up ATK, first increases Aventurine's DEF by 40% for 2 turn(s), and additionally increases the Hits Per Action for his talent's Follow-Up ATK by 3.",
+        "icon": "icon/skill/1304_rank4.png",
+        "paramsEido": [
+          0.4,
+          2,
+          3
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "130405",
+        "name": "Ambiguity Aversion",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1304_skill.png"
+      },
+      {
+        "id": "130406",
+        "name": "Stag Hunt Game",
+        "rank": 6,
+        "desc": "For every teammate that holds a Shield, the DMG dealt by Aventurine increases by 50%, up to a maximum of 150%.",
+        "icon": "icon/skill/1304_rank6.png",
+        "paramsEido": [
+          0.5,
+          1.5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Straight Bet": {
+          "variant1": {
+            "skillID": 130401,
+            "trigger": "Skill01",
+            "name": "Straight Bet",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Aventurine's DEF to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill01_Camera",
+              "Avatar_Aventurine_00_Skill01_Phase01",
+              "Avatar_Aventurine_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Cornerstone Deluxe": {
+          "variant1": {
+            "skillID": 130402,
+            "trigger": "Skill02",
+            "name": "Cornerstone Deluxe",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Provides all allies with a Fortified Wager shield that can block DMG equal to #1[f1]% of Aventurine's DEF plus #2[i], lasting for #3[i] turn(s). When Fortified Wager is gained repeatedly, the Shield Effect can stack, up to #4[i]% of the current Shield Effect provided by the Skill.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.16,
+                80,
+                3,
+                2
+              ],
+              "2": [
+                0.17,
+                128,
+                3,
+                2
+              ],
+              "3": [
+                0.18,
+                164,
+                3,
+                2
+              ],
+              "4": [
+                0.19,
+                200,
+                3,
+                2
+              ],
+              "5": [
+                0.2,
+                224,
+                3,
+                2
+              ],
+              "6": [
+                0.208,
+                248,
+                3,
+                2
+              ],
+              "7": [
+                0.216,
+                266,
+                3,
+                2
+              ],
+              "8": [
+                0.224,
+                284,
+                3,
+                2
+              ],
+              "9": [
+                0.232,
+                302,
+                3,
+                2
+              ],
+              "10": [
+                0.24,
+                320,
+                3,
+                2
+              ],
+              "11": [
+                0.248,
+                338,
+                3,
+                2
+              ],
+              "12": [
+                0.256,
+                356,
+                3,
+                2
+              ],
+              "13": [
+                0.264,
+                374,
+                3,
+                2
+              ],
+              "14": [
+                0.272,
+                392,
+                3,
+                2
+              ],
+              "15": [
+                0.28,
+                410,
+                3,
+                2
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill02_Camera",
+              "Avatar_Aventurine_00_Skill02_Phase01",
+              "Avatar_Aventurine_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Roulette Shark": {
+          "variant1": {
+            "skillID": 130403,
+            "trigger": "Skill03",
+            "name": "Roulette Shark",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Randomly gains 1 to #1[i] points of \"Blind Bet.\" Then, inflicts \"Unnerved\" on one designated enemy target for #4[i] turn(s) and deals Imaginary DMG equal to #2[i]% of Aventurine's DEF to that enemy target. When an ally hits an \"Unnerved\" enemy target, the CRIT DMG dealt increases by #3[f1]%.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                7,
+                1.62,
+                0.09,
+                3
+              ],
+              "2": [
+                7,
+                1.728,
+                0.096,
+                3
+              ],
+              "3": [
+                7,
+                1.836,
+                0.102,
+                3
+              ],
+              "4": [
+                7,
+                1.944,
+                0.108,
+                3
+              ],
+              "5": [
+                7,
+                2.052,
+                0.114,
+                3
+              ],
+              "6": [
+                7,
+                2.16,
+                0.12,
+                3
+              ],
+              "7": [
+                7,
+                2.295,
+                0.1275,
+                3
+              ],
+              "8": [
+                7,
+                2.43,
+                0.135,
+                3
+              ],
+              "9": [
+                7,
+                2.565,
+                0.1425,
+                3
+              ],
+              "10": [
+                7,
+                2.7,
+                0.15,
+                3
+              ],
+              "11": [
+                7,
+                2.808,
+                0.156,
+                3
+              ],
+              "12": [
+                7,
+                2.916,
+                0.162,
+                3
+              ],
+              "13": [
+                7,
+                3.024,
+                0.168,
+                3
+              ],
+              "14": [
+                7,
+                3.132,
+                0.174,
+                3
+              ],
+              "15": [
+                7,
+                3.24,
+                0.18,
+                3
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_Skill03_Camera",
+              "Avatar_Aventurine_00_Skill03_EnterReady",
+              "Avatar_Aventurine_00_Skill03_Phase01",
+              "Avatar_Aventurine_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Shot Loaded Right": {
+          "variant1": {
+            "skillID": 130404,
+            "trigger": "SkillP01",
+            "name": "Shot Loaded Right",
+            "type": "Bounce",
+            "slot": "Talent",
+            "desc": "For any single ally with \"Fortified Wager,\" their Effect RES increases by #4[f1]%, and when they get attacked, Aventurine gains 1 point of \"Blind Bet.\" When Aventurine has \"Fortified Wager,\" he can resist Crowd Control debuffs. This effect can trigger again after #5[i] turn(s). Aventurine additionally gains #1[i] point(s) of \"Blind Bet\" after getting attacked. Upon reaching 7 points of \"Blind Bet,\" Aventurine consumes the 7 points to launch a #2[i]-hit Follow-Up ATK, with each hit dealing Imaginary DMG equal to #3[i]% of Aventurine's DEF to one random enemy. \"Blind Bet\" is capped at 10 points.",
+            "energyCost": null,
+            "energyRegen": 1,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 3,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                7,
+                0.125,
+                0.25,
+                2
+              ],
+              "2": [
+                1,
+                7,
+                0.1375,
+                0.275,
+                2
+              ],
+              "3": [
+                1,
+                7,
+                0.15,
+                0.3,
+                2
+              ],
+              "4": [
+                1,
+                7,
+                0.1625,
+                0.325,
+                2
+              ],
+              "5": [
+                1,
+                7,
+                0.175,
+                0.35,
+                2
+              ],
+              "6": [
+                1,
+                7,
+                0.1875,
+                0.375,
+                2
+              ],
+              "7": [
+                1,
+                7,
+                0.203125,
+                0.40625,
+                2
+              ],
+              "8": [
+                1,
+                7,
+                0.21875,
+                0.4375,
+                2
+              ],
+              "9": [
+                1,
+                7,
+                0.234375,
+                0.46875,
+                2
+              ],
+              "10": [
+                1,
+                7,
+                0.25,
+                0.5,
+                2
+              ],
+              "11": [
+                1,
+                7,
+                0.2625,
+                0.525,
+                2
+              ],
+              "12": [
+                1,
+                7,
+                0.275,
+                0.55,
+                2
+              ],
+              "13": [
+                1,
+                7,
+                0.2875,
+                0.575,
+                2
+              ],
+              "14": [
+                1,
+                7,
+                0.3,
+                0.6,
+                2
+              ],
+              "15": [
+                1,
+                7,
+                0.3125,
+                0.625,
+                2
+              ]
+            },
+            "element": "Imaginary",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_PassiveSkill01",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbility",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbilityPhase02",
+              "Avatar_Aventurine_00_PassiveSkill01_InsertAbility_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 10
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "The Red or the Black": {
+          "variant1": {
+            "skillID": 130407,
+            "trigger": "SkillMaze",
+            "name": "The Red or the Black",
+            "type": "Defense",
+            "slot": "Technique",
+            "desc": "After using the Technique, 1 of the following effects will be granted:\\nThere is a chance for DEF to increase by #1[i]%.\\nThere is a high chance for DEF to increase by #2[i]%.\\nThere is a small chance for DEF to increase by #3[i]%.\\n\\nWhen this Technique is used repeatedly, the acquired effect with the highest buff value is retained.\\nWhen the next battle starts, increases all allies' DEF by the corresponding value, lasting for #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.24,
+                0.36,
+                0.6,
+                3
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Defence",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Aventurine_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1304_basic_atk.png",
+        "skillRef": {
+          "skillName": "Straight Bet",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1304_skill.png",
+        "skillRef": {
+          "skillName": "Cornerstone Deluxe",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1304_ultimate.png",
+        "skillRef": {
+          "skillName": "Roulette Shark",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1304_talent.png",
+        "skillRef": {
+          "skillName": "Shot Loaded Right",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1304_technique.png",
+        "skillRef": {
+          "skillName": "The Red or the Black",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Leverage",
+        "icon": "icon/skill/1304_skilltree1.png",
+        "desc": "For every 100 of Aventurine's DEF that exceeds #3[i], increases his own CRIT Rate by #1[i]%, up to a maximum increase of #2[i]%.",
+        "params": [
+          0.02,
+          0.48,
+          1600
+        ]
+      },
+      "Point07": {
+        "name": "Hot Hand",
+        "icon": "icon/skill/1304_skilltree2.png",
+        "desc": "When battle starts, grants all allies a Fortified Wager shield, whose Shield Effect is equal to #2[i]% of the one provided by the Skill, lasting for #1[i] turn(s).",
+        "params": [
+          3,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Bingo!",
+        "icon": "icon/skill/1304_skilltree3.png",
+        "desc": "After a teammate with \"Fortified Wager\" launches Follow-Up ATK, Aventurine accumulates 1 \"Blind Bet\" point. This effect can trigger up to #3[i] time(s). Its trigger count resets at the start of Aventurine's turn. After Aventurine launches his Talent's Follow-Up ATK, provides all ally targets with a \"Fortified Wager\" that can offset DMG equal to #1[i]% of Aventurine's DEF plus #2[i], and additionally grants a \"Fortified Wager\" that can block DMG equal to #4[i]% of Aventurine's DEF plus #5[i] to the ally with the lowest Shield Effect, lasting for 3 turns.",
+        "params": [
+          0.072,
+          96,
+          3,
+          0.072,
+          96
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.072,
+              96,
+              3,
+              0.072,
+              96
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.032
+        }
+      },
+      "Point11": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.048
+        }
+      },
+      "Point15": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Imaginary",
+        "icon": "icon/property/IconImaginaryAddedRatio.png",
+        "stats": {
+          "DamageImaginary": 0.064
+        }
+      },
+      "Point18": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1304.png",
+    "preview": "image/character_preview/1304.png",
+    "portrait": "image/character_portrait/1304.png",
+    "bannerOffsets": [
+      -32.1,
+      38,
+      0.61,
+      -32.1,
+      38,
+      0.61,
+      -32.1,
+      38,
+      0.61
+    ],
+    "isBuffed": false
+  },
   "Dr. Ratio": {
     "internalID": 1305,
     "name": "Dr. Ratio",
@@ -33851,6 +35473,1047 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Firefly": {
+    "internalID": 1310,
+    "name": "Firefly",
+    "path": "Destruction",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 240,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 776.1600000000001,
+      "HPBase": 814.968,
+      "SPDBase": 104,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "131001",
+        "name": "In Reddened Chrysalis, I Once Rest",
+        "rank": 1,
+        "desc": "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
+        "icon": "icon/skill/1310_rank1.png",
+        "paramsEido": [
+          0.15
+        ]
+      },
+      {
+        "id": "131002",
+        "name": "From Shattered Sky, I Free Fall",
+        "rank": 2,
+        "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can trigger again after 1 turn(s).",
+        "icon": "icon/skill/1310_rank2.png",
+        "paramsEido": [
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        }
+      },
+      {
+        "id": "131003",
+        "name": "Amidst Silenced Stars, I Deep Sleep",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1310_skill.png"
+      },
+      {
+        "id": "131004",
+        "name": "Upon Lighted Fyrefly, I Soon Gaze",
+        "rank": 4,
+        "desc": "While in Complete Combustion, increases SAM's Effect RES by 50%.",
+        "icon": "icon/skill/1310_rank4.png",
+        "paramsEido": [
+          0.5
+        ]
+      },
+      {
+        "id": "131005",
+        "name": "From Undreamt Night, I Thence Shine",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1310_ultimate.png"
+      },
+      {
+        "id": "131006",
+        "name": "In Finalized Morrow, I Full Bloom",
+        "rank": 6,
+        "desc": "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
+        "icon": "icon/skill/1310_rank6.png",
+        "paramsEido": [
+          0.2,
+          0.5
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Order: Flare Propulsion": {
+          "variant1": {
+            "skillID": 131001,
+            "trigger": "Skill01",
+            "name": "Order: Flare Propulsion",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill01_Camera",
+              "Avatar_Sam_00_Skill01_Phase01",
+              "Avatar_Sam_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fyrefly Type-IV: Pyrogenic Decimation": {
+          "variant1": {
+            "skillID": 131008,
+            "trigger": "Skill11",
+            "name": "Fyrefly Type-IV: Pyrogenic Decimation",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Restores HP by an amount equal to #2[i]% of this unit's Max HP. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 15,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                1,
+                0.2
+              ],
+              "2": [
+                1.2,
+                0.2
+              ],
+              "3": [
+                1.4,
+                0.2
+              ],
+              "4": [
+                1.6,
+                0.2
+              ],
+              "5": [
+                1.8,
+                0.2
+              ],
+              "6": [
+                2,
+                0.2
+              ],
+              "7": [
+                2.2,
+                0.2
+              ],
+              "8": [
+                2.4,
+                0.2
+              ],
+              "9": [
+                2.6,
+                0.2
+              ],
+              "10": [
+                2.8,
+                0.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill11_Camera",
+              "Avatar_Sam_00_Skill11_Phase01",
+              "Avatar_Sam_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 45
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Order: Aerial Bombardment": {
+          "variant1": {
+            "skillID": 131002,
+            "trigger": "Skill02",
+            "name": "Order: Aerial Bombardment",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.4,
+                0.5,
+                0.25
+              ],
+              "2": [
+                1.1,
+                0.4,
+                0.51,
+                0.25
+              ],
+              "3": [
+                1.2,
+                0.4,
+                0.52,
+                0.25
+              ],
+              "4": [
+                1.3,
+                0.4,
+                0.53,
+                0.25
+              ],
+              "5": [
+                1.4,
+                0.4,
+                0.54,
+                0.25
+              ],
+              "6": [
+                1.5,
+                0.4,
+                0.55,
+                0.25
+              ],
+              "7": [
+                1.625,
+                0.4,
+                0.5625,
+                0.25
+              ],
+              "8": [
+                1.75,
+                0.4,
+                0.575,
+                0.25
+              ],
+              "9": [
+                1.875,
+                0.4,
+                0.5875,
+                0.25
+              ],
+              "10": [
+                2,
+                0.4,
+                0.6,
+                0.25
+              ],
+              "11": [
+                2.1,
+                0.4,
+                0.61,
+                0.25
+              ],
+              "12": [
+                2.2,
+                0.4,
+                0.62,
+                0.25
+              ],
+              "13": [
+                2.3,
+                0.4,
+                0.63,
+                0.25
+              ],
+              "14": [
+                2.4,
+                0.4,
+                0.64,
+                0.25
+              ],
+              "15": [
+                2.5,
+                0.4,
+                0.65,
+                0.25
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill02_Camera",
+              "Avatar_Sam_00_Skill02_Phase01",
+              "Avatar_Sam_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        },
+        "Fyrefly Type-IV: Deathstar Overload": {
+          "variant1": {
+            "skillID": 131009,
+            "trigger": "Skill21",
+            "name": "Fyrefly Type-IV: Deathstar Overload",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Restores HP by an amount equal to #3[i]% of this unit's Max HP. Applies Fire Weakness to one designated enemy target, lasting for #4[i] turn(s). Deals Fire DMG equal to (#5[f1] × Break Effect + #1[f1]%) of SAM's ATK to this target. At the same time, deals Fire DMG equal to (#6[f1] × Break Effect + #2[f1]%) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation is capped at #7[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "2": [
+                1.1,
+                0.55,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "3": [
+                1.2,
+                0.6,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "4": [
+                1.3,
+                0.65,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "5": [
+                1.4,
+                0.7,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "6": [
+                1.5,
+                0.75,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "7": [
+                1.625,
+                0.8125,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "8": [
+                1.75,
+                0.875,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "9": [
+                1.875,
+                0.9375,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "10": [
+                2,
+                1,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "11": [
+                2.1,
+                1.05,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "12": [
+                2.2,
+                1.1,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "13": [
+                2.3,
+                1.15,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "14": [
+                2.4,
+                1.2,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ],
+              "15": [
+                2.5,
+                1.25,
+                0.25,
+                2,
+                0.2,
+                0.1,
+                3.6
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill21_Camera",
+              "Avatar_Sam_00_Skill21_Phase01",
+              "Avatar_Sam_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 45
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Fyrefly Type-IV: Complete Combustion": {
+          "variant1": {
+            "skillID": 131003,
+            "trigger": "Skill03",
+            "name": "Fyrefly Type-IV: Complete Combustion",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Enters the Complete Combustion state, advances this unit's Action by 100%, and gains Enhanced Basic ATK and Enhanced Skill. While in Complete Combustion, increases SPD by #3[i], and when using the Enhanced Basic ATK or Enhanced Skill, increases this unit's Weakness Break Efficiency by #2[i]% and increases the Break DMG dealt by SAM to the enemy targets by #1[f1]%, lasting until this current attack ends.\\nA countdown timer for the Complete Combustion state appears in the Action Order. When the countdown timer's turn starts, SAM exits the Complete Combustion state. The countdown timer has a fixed SPD of #4[i].\\nSAM cannot use Ultimate while in Complete Combustion.",
+            "energyCost": 240,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.5,
+                30,
+                70
+              ],
+              "2": [
+                0.11,
+                0.5,
+                33,
+                70
+              ],
+              "3": [
+                0.12,
+                0.5,
+                36,
+                70
+              ],
+              "4": [
+                0.13,
+                0.5,
+                39,
+                70
+              ],
+              "5": [
+                0.14,
+                0.5,
+                42,
+                70
+              ],
+              "6": [
+                0.15,
+                0.5,
+                45,
+                70
+              ],
+              "7": [
+                0.1625,
+                0.5,
+                48.75,
+                70
+              ],
+              "8": [
+                0.175,
+                0.5,
+                52.5,
+                70
+              ],
+              "9": [
+                0.1875,
+                0.5,
+                56.25,
+                70
+              ],
+              "10": [
+                0.2,
+                0.5,
+                60,
+                70
+              ],
+              "11": [
+                0.21,
+                0.5,
+                63,
+                70
+              ],
+              "12": [
+                0.22,
+                0.5,
+                66,
+                70
+              ],
+              "13": [
+                0.23,
+                0.5,
+                69,
+                70
+              ],
+              "14": [
+                0.24,
+                0.5,
+                72,
+                70
+              ],
+              "15": [
+                0.25,
+                0.5,
+                75,
+                70
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_Skill03_Camera",
+              "Avatar_Sam_00_Skill03_EnterReady",
+              "Avatar_Sam_00_Skill03_Phase01",
+              "Avatar_Sam_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Chrysalid Pyronexus": {
+          "variant1": {
+            "skillID": 131004,
+            "trigger": "SkillP01",
+            "name": "Chrysalid Pyronexus",
+            "type": "Defense",
+            "slot": "Talent",
+            "desc": "The lower the HP, the less DMG received. When HP is #3[i]% or lower, the DMG Reduction reaches its maximum effect, reducing up to #1[i]%. During the Complete Combustion, the DMG Reduction remains at its maximum effect, and the Effect RES increases by #4[i]%.\\nIf Energy is lower than #2[i]% when the battle starts, regenerates Energy to #2[i]%. Once Energy is regenerated to its maximum, dispels all debuffs on this unit.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                0.5,
+                0.2,
+                0.1
+              ],
+              "2": [
+                0.22,
+                0.5,
+                0.2,
+                0.12
+              ],
+              "3": [
+                0.24,
+                0.5,
+                0.2,
+                0.14
+              ],
+              "4": [
+                0.26,
+                0.5,
+                0.2,
+                0.16
+              ],
+              "5": [
+                0.28,
+                0.5,
+                0.2,
+                0.18
+              ],
+              "6": [
+                0.3,
+                0.5,
+                0.2,
+                0.2
+              ],
+              "7": [
+                0.325,
+                0.5,
+                0.2,
+                0.225
+              ],
+              "8": [
+                0.35,
+                0.5,
+                0.2,
+                0.25
+              ],
+              "9": [
+                0.375,
+                0.5,
+                0.2,
+                0.275
+              ],
+              "10": [
+                0.4,
+                0.5,
+                0.2,
+                0.3
+              ],
+              "11": [
+                0.42,
+                0.5,
+                0.2,
+                0.32
+              ],
+              "12": [
+                0.44,
+                0.5,
+                0.2,
+                0.34
+              ],
+              "13": [
+                0.46,
+                0.5,
+                0.2,
+                0.36
+              ],
+              "14": [
+                0.48,
+                0.5,
+                0.2,
+                0.38
+              ],
+              "15": [
+                0.5,
+                0.5,
+                0.2,
+                0.4
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sam_00_PassiveSkill01",
+              "Avatar_Sam_00_Rank02_Bonus",
+              "Avatar_Sam_00_PassiveSkill01_BattleEvent_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Δ Order: Meteoric Incineration": {
+          "variant1": {
+            "skillID": 131007,
+            "trigger": "SkillMaze",
+            "name": "Δ Order: Meteoric Incineration",
+            "slot": "Technique",
+            "desc": "Leaps into the air and moves about freely for #1[i] seconds, which can be ended early by launching a plunging attack. When the duration ends, plunges and immediately attacks all enemies within a set area. At the start of each wave, applies a Fire Weakness to all enemies, lasting for #3[i] turn(s). Then, deals Fire DMG equal to #2[i]% of SAM's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5,
+                2,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Sam_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1310_basic_atk.png",
+        "skillRef": {
+          "skillName": "Order: Flare Propulsion",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1310_skill.png",
+        "skillRef": {
+          "skillName": "Order: Aerial Bombardment",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1310_ultimate.png",
+        "skillRef": {
+          "skillName": "Fyrefly Type-IV: Complete Combustion",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1310_talent.png",
+        "skillRef": {
+          "skillName": "Chrysalid Pyronexus",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1310_technique.png",
+        "skillRef": {
+          "skillName": "Δ Order: Meteoric Incineration",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Module α: Antilag Outburst",
+        "icon": "icon/skill/1310_skilltree1.png",
+        "desc": "During the Complete Combustion, attacking enemies that have no Fire Weakness can also reduce their Toughness, with the effect being equivalent to #1[i]% of the original Toughness Reduction from abilities.",
+        "params": [
+          0.55
+        ]
+      },
+      "Point07": {
+        "name": "Module β: Autoreactive Armor",
+        "icon": "icon/skill/1310_skilltree2.png",
+        "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
+        "params": [
+          2,
+          3.6,
+          0.35,
+          0.5
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+            "params": [
+              2,
+              3.6,
+              0.35,
+              0.5
+            ]
+          },
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG.",
+            "params": [
+              2,
+              3.6,
+              0.35,
+              0.5
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Module γ: Core Overload",
+        "icon": "icon/skill/1310_skilltree3.png",
+        "desc": "For every #2[i] point(s) of SAM's ATK that exceeds #1[i], increases this unit's Break Effect by #3[f1]%.",
+        "params": [
+          1800,
+          10,
+          0.007999999
+        ]
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1310.png",
+    "preview": "image/character_preview/1310.png",
+    "portrait": "image/character_portrait/1310.png",
+    "bannerOffsets": [
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Misha": {
     "internalID": 1312,
     "name": "Misha",
@@ -34578,6 +37241,799 @@ let characters = {
       -34,
       98,
       0.57
+    ],
+    "isBuffed": false
+  },
+  "Jade": {
+    "internalID": 1314,
+    "name": "Jade",
+    "path": "Erudition",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 659.7360000000001,
+      "DEFBase": 509.355,
+      "HPBase": 1086.624,
+      "SPDBase": 103,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "131401",
+        "name": "Altruism? Nevertheless Tradable",
+        "rank": 1,
+        "desc": "The Follow-Up ATK DMG from Jade's Talent increases by 32%. After the \"Debt Collector\" character attacks and the number of the enemy target(s) hit is either 2 or 1, Jade additionally gains 1 or 2 point(s) of Charge respectively.",
+        "icon": "icon/skill/1314_rank1.png",
+        "paramsEido": [
+          0.32,
+          1,
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "131402",
+        "name": "Morality? Herein Authenticated",
+        "rank": 2,
+        "desc": "When there are 15 stacks of Pawned Asset, Jade's CRIT Rate increases by 18%.",
+        "icon": "icon/skill/1314_rank2.png",
+        "paramsEido": [
+          15,
+          0.18
+        ]
+      },
+      {
+        "id": "131403",
+        "name": "Honesty? Soon Mortgaged",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1314_skill.png"
+      },
+      {
+        "id": "131404",
+        "name": "Sincerity? Put Option Only",
+        "rank": 4,
+        "desc": "When using Ultimate, enables the DMG dealt by Jade to ignore 12% of enemy targets' DEF, lasting for 3 turn(s).",
+        "icon": "icon/skill/1314_rank4.png",
+        "paramsEido": [
+          0.12,
+          3
+        ]
+      },
+      {
+        "id": "131405",
+        "name": "Hope? Hitherto Forfeited",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1314_ultimate.png"
+      },
+      {
+        "id": "131406",
+        "name": "Equity? Pending Sponsorship",
+        "rank": 6,
+        "desc": "While the \"Debt Collector\" character exists on the field, Jade's Quantum RES PEN increases by 20%, and Jade gains the \"Debt Collector\" state.",
+        "icon": "icon/skill/1314_rank6.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lash of Riches": {
+          "variant1": {
+            "skillID": 131401,
+            "trigger": "Skill01",
+            "name": "Lash of Riches",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Jade's ATK to one designated enemy target, and Quantum DMG equal to #2[i]% of Jade's ATK to adjacent enemies.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.45,
+                0.15
+              ],
+              "2": [
+                0.54,
+                0.18
+              ],
+              "3": [
+                0.63,
+                0.21
+              ],
+              "4": [
+                0.72,
+                0.24
+              ],
+              "5": [
+                0.81,
+                0.27
+              ],
+              "6": [
+                0.9,
+                0.3
+              ],
+              "7": [
+                0.99,
+                0.33
+              ],
+              "8": [
+                1.08,
+                0.36
+              ],
+              "9": [
+                1.17,
+                0.39
+              ],
+              "10": [
+                1.26,
+                0.42
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Jade_00_Skill01_Camera",
+              "Avatar_Jade_00_Skill01_Phase01",
+              "Avatar_Jade_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Acquisition Surety": {
+          "variant1": {
+            "skillID": 131402,
+            "trigger": "Skill02",
+            "name": "Acquisition Surety",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Makes a single target ally become the Debt Collector and increases their SPD by #1[i], lasting for #4[i] turn(s).\\nAfter the Debt Collector attacks, deals 1 instance of Quantum Additional DMG equal to #3[i]% of Jade's ATK to each enemy target hit, and consumes the Debt Collector's HP by an amount equal to #2[i]% of their Max HP. If the current HP is insufficient, reduces HP to 1.\\nIf Jade becomes the Debt Collector, she cannot gain the SPD boost effect, and her attacks do not consume HP.\\nWhen the Debt Collector exists on the field, Jade cannot use her Skill. At the start of Jade's every turn, the Debt Collector's duration decreases by 1 turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                30,
+                0.02,
+                0.15,
+                3
+              ],
+              "2": [
+                30,
+                0.02,
+                0.16,
+                3
+              ],
+              "3": [
+                30,
+                0.02,
+                0.17,
+                3
+              ],
+              "4": [
+                30,
+                0.02,
+                0.18,
+                3
+              ],
+              "5": [
+                30,
+                0.02,
+                0.19,
+                3
+              ],
+              "6": [
+                30,
+                0.02,
+                0.2,
+                3
+              ],
+              "7": [
+                30,
+                0.02,
+                0.2125,
+                3
+              ],
+              "8": [
+                30,
+                0.02,
+                0.225,
+                3
+              ],
+              "9": [
+                30,
+                0.02,
+                0.2375,
+                3
+              ],
+              "10": [
+                30,
+                0.02,
+                0.25,
+                3
+              ],
+              "11": [
+                30,
+                0.02,
+                0.26,
+                3
+              ],
+              "12": [
+                30,
+                0.02,
+                0.27,
+                3
+              ],
+              "13": [
+                30,
+                0.02,
+                0.28,
+                3
+              ],
+              "14": [
+                30,
+                0.02,
+                0.29,
+                3
+              ],
+              "15": [
+                30,
+                0.02,
+                0.3,
+                3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jade_00_Skill02_Camera",
+              "Avatar_Jade_00_Skill02_Camera_Self",
+              "Avatar_Jade_00_Skill02_Phase01",
+              "Avatar_Jade_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Vow of the Deep": {
+          "variant1": {
+            "skillID": 131403,
+            "trigger": "Skill03",
+            "name": "Vow of the Deep",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Quantum DMG equal to #3[i]% of Jade's ATK to all enemies. At the same time, Jade enhances her Talent's Follow-Up ATK, increasing its DMG multiplier by #1[i]%. This enhancement can take effect #2[i] time(s).",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                2,
+                1.2
+              ],
+              "2": [
+                0.44,
+                2,
+                1.32
+              ],
+              "3": [
+                0.48,
+                2,
+                1.44
+              ],
+              "4": [
+                0.52,
+                2,
+                1.56
+              ],
+              "5": [
+                0.56,
+                2,
+                1.68
+              ],
+              "6": [
+                0.6,
+                2,
+                1.8
+              ],
+              "7": [
+                0.65,
+                2,
+                1.95
+              ],
+              "8": [
+                0.7,
+                2,
+                2.1
+              ],
+              "9": [
+                0.75,
+                2,
+                2.25
+              ],
+              "10": [
+                0.8,
+                2,
+                2.4
+              ],
+              "11": [
+                0.84,
+                2,
+                2.52
+              ],
+              "12": [
+                0.88,
+                2,
+                2.64
+              ],
+              "13": [
+                0.92,
+                2,
+                2.76
+              ],
+              "14": [
+                0.96,
+                2,
+                2.88
+              ],
+              "15": [
+                1,
+                2,
+                3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jade_00_Skill03_Camera",
+              "Avatar_Jade_00_Skill03_EnterReady",
+              "Avatar_Jade_00_Skill03_Phase01",
+              "Avatar_Jade_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Fang of Flare Flaying": {
+          "variant1": {
+            "skillID": 131404,
+            "trigger": "SkillP01",
+            "name": "Fang of Flare Flaying",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "After Jade or the \"Debt Collector\" unit attacks, gains 1 point of Charge for each enemy target hit. Upon reaching #3[i] points of Charge, consumes the #3[i] points to launch 1 instance of Follow-Up ATK, dealing Quantum DMG equal to #5[i]% of Jade's ATK to all enemies. This Follow-Up ATK does not generate Charge.\\nWhen launching her Talent's Follow-Up ATK, Jade immediately gains #4[i] stack(s) of \"Pawned Asset,\" with each stack increasing CRIT DMG by #1[f1]%, stacking up to #2[i] times.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.012,
+                50,
+                8,
+                5,
+                0.6
+              ],
+              "2": [
+                0.0132,
+                50,
+                8,
+                5,
+                0.66
+              ],
+              "3": [
+                0.0144,
+                50,
+                8,
+                5,
+                0.72
+              ],
+              "4": [
+                0.0156,
+                50,
+                8,
+                5,
+                0.78
+              ],
+              "5": [
+                0.0168,
+                50,
+                8,
+                5,
+                0.84
+              ],
+              "6": [
+                0.018,
+                50,
+                8,
+                5,
+                0.9
+              ],
+              "7": [
+                0.0195,
+                50,
+                8,
+                5,
+                0.975
+              ],
+              "8": [
+                0.021,
+                50,
+                8,
+                5,
+                1.05
+              ],
+              "9": [
+                0.0225,
+                50,
+                8,
+                5,
+                1.125
+              ],
+              "10": [
+                0.024,
+                50,
+                8,
+                5,
+                1.2
+              ],
+              "11": [
+                0.0252,
+                50,
+                8,
+                5,
+                1.26
+              ],
+              "12": [
+                0.0264,
+                50,
+                8,
+                5,
+                1.32
+              ],
+              "13": [
+                0.0276,
+                50,
+                8,
+                5,
+                1.38
+              ],
+              "14": [
+                0.0288,
+                50,
+                8,
+                5,
+                1.44
+              ],
+              "15": [
+                0.03,
+                50,
+                8,
+                5,
+                1.5
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jade_00_Passive_Camera_Start",
+              "Avatar_Jade_00_Passive_Camera_End01",
+              "Avatar_Jade_00_Passive_Camera_End01_ToStandBy",
+              "Avatar_Jade_00_Passive_Camera_End02",
+              "Avatar_Jade_00_PassiveSkill01",
+              "Avatar_Jade_00_Passive_Phase01",
+              "Avatar_Jade_00_Passive_Phase02_01",
+              "Avatar_Jade_00_Passive_Phase02_02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Visionary Predation": {
+          "variant1": {
+            "skillID": 131407,
+            "trigger": "SkillMaze",
+            "name": "Visionary Predation",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using the Technique, inflicts enemies within a set area with Blind Fealty for #1[i] second(s). Enemies inflicted with Blind Fealty will not initiate attacks on allies. When entering battle via actively attacking enemies inflicted with Blind Fealty, all enemies with Blind Fealty will enter combat simultaneously. After entering battle, deals Quantum DMG equal to #2[i]% of Jade's ATK to all enemies, and immediately gains #3[i] stack(s) of Pawned Asset.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0.5,
+                15
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Jade_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1314_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lash of Riches",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1314_skill.png",
+        "skillRef": {
+          "skillName": "Acquisition Surety",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1314_ultimate.png",
+        "skillRef": {
+          "skillName": "Vow of the Deep",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1314_talent.png",
+        "skillRef": {
+          "skillName": "Fang of Flare Flaying",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1314_technique.png",
+        "skillRef": {
+          "skillName": "Visionary Predation",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Reverse Repo",
+        "icon": "icon/skill/1314_skilltree1.png",
+        "desc": "When an enemy target enters combat, Jade gains #2[i] stack(s) of Pawned Asset. When the Debt Collector character's turn starts, additionally gains #1[i] stack(s) of Pawned Asset.",
+        "params": [
+          3,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Collateral Ticket",
+        "icon": "icon/skill/1314_skilltree2.png",
+        "desc": "When the battle starts, action advances Jade by #1[i]%.",
+        "params": [
+          0.5
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.5
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Asset Forfeiture",
+        "icon": "icon/skill/1314_skilltree3.png",
+        "desc": "Each Pawned Asset stack from the Talent additionally increases Jade's ATK by #1[f1]%.",
+        "params": [
+          0.005
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1314.png",
+    "preview": "image/character_preview/1314.png",
+    "portrait": "image/character_portrait/1314.png",
+    "bannerOffsets": [
+      5,
+      -66,
+      0.64,
+      5,
+      -66,
+      0.64,
+      5,
+      -66,
+      0.64
     ],
     "isBuffed": false
   },
@@ -36755,6 +40211,1205 @@ let characters = {
       0.63
     ],
     "isBuffed": false
+  },
+  "Hyacine": {
+    "internalID": 1409,
+    "name": "Hyacine",
+    "path": "Remembrance",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 388.08000000000004,
+      "DEFBase": 630.6300000000001,
+      "HPBase": 1086.624,
+      "SPDBase": 110,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "140901",
+        "name": "Cradle the Candle of Night",
+        "rank": 1,
+        "desc": "While Hyacine is in the \"After Rain\" state, all ally targets additionally increase their Max HP by 50%, and after using an attack, immediately restore their HP by an amount equal to 8% of Hyacine's Max HP.",
+        "icon": "icon/skill/1409_rank1.png",
+        "paramsEido": [
+          0.5,
+          0.08
+        ]
+      },
+      {
+        "id": "140902",
+        "name": "Come Sit in My Courtyard",
+        "rank": 2,
+        "desc": "When an ally target's HP decreases, SPD increases by 30%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1409_rank2.png",
+        "paramsEido": [
+          0.3,
+          2
+        ]
+      },
+      {
+        "id": "140903",
+        "name": "Depart, Unto the Sun!",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1409_ultimate.png"
+      },
+      {
+        "id": "140904",
+        "name": "Sunlit Amber, Yours to Keep",
+        "rank": 4,
+        "desc": "The \"Tempestuous Halt\" Trace gets enhanced: For every 1 excess SPD, additionally increases Hyacine's and Little Ica's CRIT DMG by 2%.",
+        "icon": "icon/skill/1409_rank4.png",
+        "paramsEido": [
+          1,
+          0.02
+        ]
+      },
+      {
+        "id": "140905",
+        "name": "Twilight Drapes the Tide",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1409_skill.png"
+      },
+      {
+        "id": "140906",
+        "name": "O Sky, Heed My Plea",
+        "rank": 6,
+        "desc": "When Little Ica uses Memosprite Skill, the amount cleared from the tally of healing is changed to 12%. While Little Ica is on the field, all ally targets' All-Type RES PEN increases by 20%.",
+        "icon": "icon/skill/1409_rank6.png",
+        "paramsEido": [
+          0.12,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Memosprite Skill": 1
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2,
+        "Memosprite Talent": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "When Breeze Kisses Cirrus": {
+          "variant1": {
+            "skillID": 140901,
+            "trigger": "Skill01",
+            "name": "When Breeze Kisses Cirrus",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Hyacine's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_Skill01_Camera",
+              "Avatar_Hyacine_00_Skill01_Phase01",
+              "Avatar_Hyacine_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Love Over the Rainbow": {
+          "variant1": {
+            "skillID": 140902,
+            "trigger": "Skill02",
+            "name": "Love Over the Rainbow",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Summons memosprite Little Ica. Restores HP equal to #1[f1]% of Hyacine's Max HP plus #2[i] for all allies (except Little Ica), and restores HP equal to #3[f1]% of Hyacine's Max HP plus #4[i] for Little Ica.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.04,
+                40,
+                0.05,
+                50
+              ],
+              "2": [
+                0.044999998,
+                64,
+                0.05625,
+                80
+              ],
+              "3": [
+                0.05,
+                82,
+                0.0625,
+                102.5
+              ],
+              "4": [
+                0.055,
+                100,
+                0.06875,
+                125
+              ],
+              "5": [
+                0.06,
+                112,
+                0.075,
+                140
+              ],
+              "6": [
+                0.064,
+                124,
+                0.08,
+                155
+              ],
+              "7": [
+                0.067999996,
+                133,
+                0.085,
+                166.25
+              ],
+              "8": [
+                0.072,
+                142,
+                0.09,
+                177.5
+              ],
+              "9": [
+                0.076,
+                151,
+                0.095,
+                188.75
+              ],
+              "10": [
+                0.08,
+                160,
+                0.1,
+                200
+              ],
+              "11": [
+                0.084,
+                169,
+                0.105,
+                211.25
+              ],
+              "12": [
+                0.088,
+                178,
+                0.11,
+                222.5
+              ],
+              "13": [
+                0.092,
+                187,
+                0.115,
+                233.75
+              ],
+              "14": [
+                0.096,
+                196,
+                0.12,
+                245
+              ],
+              "15": [
+                0.1,
+                205,
+                0.125,
+                256.25
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_Skill02_Camera",
+              "Avatar_Hyacine_00_Skill02_Phase01",
+              "Avatar_Hyacine_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "We Who Fly Into Twilight": {
+          "variant1": {
+            "skillID": 140903,
+            "trigger": "Skill03",
+            "name": "We Who Fly Into Twilight",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Summons memosprite Little Ica. Restores HP equal to #1[f1]% of Hyacine's Max HP plus #2[i] for all allies (except Little Ica), and restores HP equal to #6[f1]% of Hyacine's Max HP plus #7[i] for Little Ica. Hyacine enters the \"After Rain\" state, lasting for #5[i] turn(s). This duration decreases by 1 at the start of Hyacine's every turn. While \"After Rain\" is active, all ally targets increase their Max HP by #3[f1]% plus #4[i].",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.05,
+                50,
+                0.15,
+                150,
+                3,
+                0.06,
+                60
+              ],
+              "2": [
+                0.05625,
+                80,
+                0.165,
+                240,
+                3,
+                0.0675,
+                96
+              ],
+              "3": [
+                0.0625,
+                102.5,
+                0.18,
+                307.5,
+                3,
+                0.075,
+                123
+              ],
+              "4": [
+                0.06875,
+                125,
+                0.195,
+                375,
+                3,
+                0.0825,
+                150
+              ],
+              "5": [
+                0.075,
+                140,
+                0.21,
+                420,
+                3,
+                0.09,
+                168
+              ],
+              "6": [
+                0.08,
+                155,
+                0.225,
+                465,
+                3,
+                0.096,
+                186
+              ],
+              "7": [
+                0.085,
+                166.25,
+                0.24375,
+                498.75,
+                3,
+                0.102,
+                199.5
+              ],
+              "8": [
+                0.09,
+                177.5,
+                0.2625,
+                532.5,
+                3,
+                0.108,
+                213
+              ],
+              "9": [
+                0.095,
+                188.75,
+                0.28125,
+                566.25,
+                3,
+                0.114,
+                226.5
+              ],
+              "10": [
+                0.1,
+                200,
+                0.3,
+                600,
+                3,
+                0.12,
+                240
+              ],
+              "11": [
+                0.105,
+                211.25,
+                0.315,
+                633.75,
+                3,
+                0.126,
+                253.5
+              ],
+              "12": [
+                0.11,
+                222.5,
+                0.33,
+                667.5,
+                3,
+                0.132,
+                267
+              ],
+              "13": [
+                0.115,
+                233.75,
+                0.345,
+                701.25,
+                3,
+                0.138,
+                280.5
+              ],
+              "14": [
+                0.12,
+                245,
+                0.36,
+                735,
+                3,
+                0.144,
+                294
+              ],
+              "15": [
+                0.125,
+                256.25,
+                0.375,
+                768.75,
+                3,
+                0.15,
+                307.5
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_Skill03_Camera",
+              "Avatar_Hyacine_00_Skill03_EnterReady",
+              "Avatar_Hyacine_00_Skill03_Phase01",
+              "Avatar_Hyacine_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "First Light Heals the World": {
+          "variant1": {
+            "skillID": 140904,
+            "trigger": "SkillP01",
+            "name": "First Light Heals the World",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "The memosprite Little Ica initially has Max HP equal to #1[i]% of Hyacine's Max HP. When Hyacine or Little Ica provides healing, increases Little Ica's DMG dealt by #3[i]% for #4[i] turn(s). Stacks up to #5[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                1,
+                0.4,
+                2,
+                3
+              ],
+              "2": [
+                0.5,
+                1,
+                0.44,
+                2,
+                3
+              ],
+              "3": [
+                0.5,
+                1,
+                0.48,
+                2,
+                3
+              ],
+              "4": [
+                0.5,
+                1,
+                0.52,
+                2,
+                3
+              ],
+              "5": [
+                0.5,
+                1,
+                0.56,
+                2,
+                3
+              ],
+              "6": [
+                0.5,
+                1,
+                0.6,
+                2,
+                3
+              ],
+              "7": [
+                0.5,
+                1,
+                0.65,
+                2,
+                3
+              ],
+              "8": [
+                0.5,
+                1,
+                0.7,
+                2,
+                3
+              ],
+              "9": [
+                0.5,
+                1,
+                0.75,
+                2,
+                3
+              ],
+              "10": [
+                0.5,
+                1,
+                0.8,
+                2,
+                3
+              ],
+              "11": [
+                0.5,
+                1,
+                0.84,
+                2,
+                3
+              ],
+              "12": [
+                0.5,
+                1,
+                0.88,
+                2,
+                3
+              ],
+              "13": [
+                0.5,
+                1,
+                0.92,
+                2,
+                3
+              ],
+              "14": [
+                0.5,
+                1,
+                0.96,
+                2,
+                3
+              ],
+              "15": [
+                0.5,
+                1,
+                1,
+                2,
+                3
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Day So Right, Life So Fine!": {
+          "variant1": {
+            "skillID": 140907,
+            "trigger": "SkillMaze",
+            "name": "Day So Right, Life So Fine!",
+            "type": "Restore",
+            "slot": "Technique",
+            "desc": "When the next battle starts, restores HP by an amount equal to #1[i]% of Hyacine's Max HP plus #2[i] for all allies and increases Max HP by #3[i]%, lasting for #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                600,
+                0.2,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Restore",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Rainclouds, Time to Go!": {
+          "variant1": {
+            "skillID": 1140901,
+            "trigger": "Skill01",
+            "name": "Rainclouds, Time to Go!",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Deals Wind DMG to all enemies by an amount equal to #1[i]% of the tally of healing done by Hyacine and Little Ica in the current battle, and clears #2[i]% of this tally of healing.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.5
+              ],
+              "2": [
+                0.12,
+                0.5
+              ],
+              "3": [
+                0.14,
+                0.5
+              ],
+              "4": [
+                0.16,
+                0.5
+              ],
+              "5": [
+                0.18,
+                0.5
+              ],
+              "6": [
+                0.2,
+                0.5
+              ],
+              "7": [
+                0.22,
+                0.5
+              ],
+              "8": [
+                0.24,
+                0.5
+              ],
+              "9": [
+                0.26,
+                0.5
+              ],
+              "10": [
+                0.28,
+                0.5
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_HyacineServant_00_Skill01_Phase01",
+              "Servant_HyacineServant_00_Skill01_Phase02",
+              "Servant_HyacineServant_00_Insert_Camera",
+              "Servant_HyacineServant_00_Insert_Camera_Charm"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Take Sky in Hand": {
+          "variant1": {
+            "skillID": 1140903,
+            "trigger": "SkillP01",
+            "name": "Take Sky in Hand",
+            "type": "Restore",
+            "slot": "Memosprite Talent",
+            "desc": "Little Ica maintains 0 SPD, is immune to debuffs, and will not appear in the Action Order.\\nIf the HP of an ally target (except Little Ica) is reduced, then at the start of any target's turn or after any target takes action, Little Ica will consume #1[i]% of their own Max HP and heal the ally target with reduced HP for an amount equal to #2[f1]% of Hyacine's Max HP plus #3[i].\\nWhile Hyacine is in the \"After Rain\" state, Little Ica gains 1 extra turn and automatically casts \"Rainclouds, Time to Go!\" immediately after Hyacine uses an ability. Moreover, when Little Ica triggers the Talent's healing effect, additionally restores HP for all ally targets by an amount equal to #4[f1]% of Hyacine's Max HP plus #5[i]. After Little Ica uses an ability, the duration of all their Continuous Effects decreases by 1 turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.04,
+                0.01,
+                10,
+                0.01,
+                10
+              ],
+              "2": [
+                0.04,
+                0.012,
+                12,
+                0.012,
+                12
+              ],
+              "3": [
+                0.04,
+                0.0139999995,
+                14,
+                0.0139999995,
+                14
+              ],
+              "4": [
+                0.04,
+                0.015999999,
+                16,
+                0.015999999,
+                16
+              ],
+              "5": [
+                0.04,
+                0.018,
+                18,
+                0.018,
+                18
+              ],
+              "6": [
+                0.04,
+                0.02,
+                20,
+                0.02,
+                20
+              ],
+              "7": [
+                0.04,
+                0.022,
+                22,
+                0.022,
+                22
+              ],
+              "8": [
+                0.04,
+                0.024,
+                24,
+                0.024,
+                24
+              ],
+              "9": [
+                0.04,
+                0.026,
+                26,
+                0.026,
+                26
+              ],
+              "10": [
+                0.04,
+                0.027999999,
+                28,
+                0.027999999,
+                28
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_HyacineServant_00_PassiveSkill"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              },
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              },
+              "Continuous Effect": {
+                "desc": "Includes buffs, debuffs, and other effects."
+              }
+            }
+          }
+        },
+        "Soar, Unto the Sunlight": {
+          "variant1": {
+            "skillID": 1140905,
+            "trigger": "SkillP03",
+            "name": "Soar, Unto the Sunlight",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When summoned, regenerates #1[i] Energy for Hyacine. On the first summon, additionally regenerates #2[i] Energy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                15,
+                30
+              ],
+              "2": [
+                15,
+                30
+              ],
+              "3": [
+                15,
+                30
+              ],
+              "4": [
+                15,
+                30
+              ],
+              "5": [
+                15,
+                30
+              ],
+              "6": [
+                15,
+                30
+              ],
+              "7": [
+                15,
+                30
+              ],
+              "8": [
+                15,
+                30
+              ],
+              "9": [
+                15,
+                30
+              ],
+              "10": [
+                15,
+                30
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_HyacineServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fall, Then Take Wing": {
+          "variant1": {
+            "skillID": 1140906,
+            "trigger": "SkillP04",
+            "name": "Fall, Then Take Wing",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "Upon disappearing, advances the action of Hyacine by #1[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.3
+              ],
+              "4": [
+                0.3
+              ],
+              "5": [
+                0.3
+              ],
+              "6": [
+                0.3
+              ],
+              "7": [
+                0.3
+              ],
+              "8": [
+                0.3
+              ],
+              "9": [
+                0.3
+              ],
+              "10": [
+                0.3
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_HyacineServant_00_DeathRattle"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point19": {
+        "name": "Rainclouds, Time to Go!",
+        "icon": "icon/skill/1409_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Rainclouds, Time to Go!",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Take Sky in Hand",
+        "icon": "icon/skill/1409_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Take Sky in Hand",
+          "skillSlot": "Memosprite Talent"
+        }
+      },
+      "Point01": {
+        "icon": "icon/skill/1409_basic_atk.png",
+        "skillRef": {
+          "skillName": "When Breeze Kisses Cirrus",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1409_skill.png",
+        "skillRef": {
+          "skillName": "Love Over the Rainbow",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1409_ultimate.png",
+        "skillRef": {
+          "skillName": "We Who Fly Into Twilight",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1409_talent.png",
+        "skillRef": {
+          "skillName": "First Light Heals the World",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1409_technique.png",
+        "skillRef": {
+          "skillName": "Day So Right, Life So Fine!",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Gloomy Grin",
+        "icon": "icon/skill/1409_skilltree1.png",
+        "desc": "Increases Hyacine's and Little Ica's CRIT Rate by #1[i]%. When providing healing to an ally target whose current HP is equal to or less than #2[i]% of their Max HP, increases Hyacine's and Little Ica's Outgoing Healing by #3[i]%.",
+        "params": [
+          1,
+          0.5,
+          0.25
+        ]
+      },
+      "Point07": {
+        "name": "Stormy Caress",
+        "icon": "icon/skill/1409_skilltree2.png",
+        "desc": "Increases Hyacine's Effect RES by #1[i]%. When using Skill and Ultimate, dispels #2[i] debuff(s) from all ally targets.",
+        "params": [
+          0.5,
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              0.5,
+              1
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Tempestuous Halt",
+        "icon": "icon/skill/1409_skilltree3.png",
+        "desc": "When Hyacine's SPD exceeds #1[i], increases her and Little Ica's Max HP by #2[i]%. Then, for every #3[i] excess SPD, increases Hyacine's and Little Ica's Outgoing Healing by #4[i]%. Up to a max of #5[i] excess SPD can be taken into account for this effect.",
+        "params": [
+          200,
+          0.2,
+          1,
+          0.01,
+          200
+        ]
+      },
+      "Point09": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1409.png",
+    "preview": "image/character_preview/1409.png",
+    "portrait": "image/character_portrait/1409.png",
+    "bannerOffsets": [
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 100
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11409,
+    "summonName": "Little Ica"
   },
   "Hysilens": {
     "internalID": 1410,

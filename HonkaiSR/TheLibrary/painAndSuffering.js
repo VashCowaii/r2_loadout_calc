@@ -829,6 +829,37 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
         </div>`;
     },
+    "Define Variable with Random Value"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            // "value",
+            "integer",
+            "scope",
+            "min",
+            "max",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Variable with Random Value");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Random Value:</div>&nbsp;
+            ${parseRef.variableName} = Random value from Range~
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.min != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Minimum:</div>&nbsp;
+                ${parseRef.min.displayLines ?? parseRef.min}
+            </div>` : ""}
+            ${parseRef.max != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Maximum:</div>&nbsp;
+                ${parseRef.max.displayLines ?? parseRef.max}
+            </div>` : ""}
+            ${parseRef.integer != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Integer:</div>&nbsp;
+                ${parseRef.integer}
+            </div>` : ""}
+        </div>`;
+    },
     "Define Custom Variable (VFX)"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -974,7 +1005,7 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
             ${parseRef.variable2 != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Paste To:</div>&nbsp;
-                ${parseRef.variable2} ${parseRef.modifier2 ? `from (${parseRef.modifier2})` : ""} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target2,initialCounter)}
+                ${parseRef.variable2} ${parseRef.modifier2 ? `from (${parseRef.modifier2})` : ""}${parseRef.target2 ? ` on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target2,initialCounter)}` : ""}
             </div>` : ""}
             ${parseRef.scope != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
@@ -3058,6 +3089,7 @@ const megaParsingFuckeryPain = {
             "ID",
             "target",
             "characterName",
+            "isCompareUniqueID",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Enemy ID");
 
@@ -3065,6 +3097,13 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)} = ${parseRef.ID?.displayLines ?? parseRef.ID}(${parseRef.characterName})
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.isCompareUniqueID != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Is Partial Unique ID Comparison:</div>&nbsp;
+                ${parseRef.isCompareUniqueID}
+            </div>` : ""}
+
         </div>`;
     },
     "Character ID"(parseRef,initialCounter) {
@@ -3539,7 +3578,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${parseRef.whitelist != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Whitelist Targets:</div>&nbsp;
-                ${parseRef.whitelist}
+                ${megaParsingFuckery.makeConditionTargetBox(parseRef.whitelist,initialCounter)}
             </div>` : ""}
             ${parseRef.whitelistTag != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Whitelist Tag:</div>&nbsp;
@@ -7057,7 +7096,7 @@ const megaParsingFuckeryPain = {
 
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
-            ${parseRef.weakTo} is${parseRef.invertCondition != undefined ? " NOT" : ""} Weak to ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+            ${megaParsingFuckery.makeConditionTargetBox(parseRef.weakTo,initialCounter)} is${parseRef.invertCondition != undefined ? " NOT" : ""} Weak to ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>
         `;
     },
@@ -8319,7 +8358,7 @@ const megaParsingFuckeryPain = {
                 ${parseRef.addedDisplayWeakness ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Display Added Weakness:</div>&nbsp;
                     
-                    ${megaParsingFuckery.makeConditionTargetBox(parseRef.addedDisplayWeakness,initialCounter)}
+                    ${parseRef.addedDisplayWeakness?.DamageType ? parseRef.addedDisplayWeakness?.DamageType : megaParsingFuckery.makeConditionTargetBox(parseRef.addedDisplayWeakness,initialCounter)}
                 </div>` : ""}
                 ${parseRef.multiplier ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Multiplier:</div>&nbsp;
@@ -9152,6 +9191,7 @@ const megaParsingFuckeryPain = {
         }
         else if (typeOfParse === "object") {
             wasObject = true;
+            // console.log(parseRef)
             console.log(parseRef.name)
             parseString = megaParsingFuckery[parseRef.name](parseRef,initialCounter);
 
@@ -9515,6 +9555,8 @@ const megaParsingFuckeryPain = {
         // let refString = "";
         const hasParse = parseRef.conditionList?.length;
         // const hasRef = parseRef.failed?.length;
+
+        console.log(parseRef.conditionList)
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.conditionList,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed);}
         initialCounter++;

@@ -144,6 +144,10 @@ let allowedCharacterList = [
     "trimName": "Huohuo"
   },
   {
+    "fullName": "Yunli",
+    "trimName": "Yunli"
+  },
+  {
     "fullName": "Moze",
     "trimName": "Moze"
   },
@@ -164,6 +168,10 @@ let allowedCharacterList = [
     "trimName": "RuanMei"
   },
   {
+    "fullName": "Aventurine",
+    "trimName": "Aventurine"
+  },
+  {
     "fullName": "Dr. Ratio",
     "trimName": "DrRatio"
   },
@@ -180,8 +188,16 @@ let allowedCharacterList = [
     "trimName": "Robin"
   },
   {
+    "fullName": "Firefly",
+    "trimName": "Firefly"
+  },
+  {
     "fullName": "Misha",
     "trimName": "Misha"
+  },
+  {
+    "fullName": "Jade",
+    "trimName": "Jade"
   },
   {
     "fullName": "The Dahlia",
@@ -194,6 +210,14 @@ let allowedCharacterList = [
   {
     "fullName": "Anaxa",
     "trimName": "Anaxa"
+  },
+  {
+    "fullName": "Hyacine",
+    "trimName": "Hyacine"
+  },
+  {
+    "fullName": "Little Ica",
+    "trimName": "LittleIca"
   },
   {
     "fullName": "Hysilens",

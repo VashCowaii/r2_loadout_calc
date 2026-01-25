@@ -1252,7 +1252,7 @@ const megaParsingFuckery = {
                     if (configAbility.toughnessList[i] === 0) {continue;}
                     toughnessRowString += `<div class="toughnessTableRowItemBox">
                         <div class="toughnessTableRowItemHeader">${toughnessIndexConversion[i]}</div>
-                        <div class="toughnessTableRowItemValue">${configAbility.toughnessList[i]}</div>
+                        <div class="toughnessTableRowItemValue">${+(configAbility.toughnessList[i]).toFixed(5)}</div>
                     </div>`;
                 }
             }

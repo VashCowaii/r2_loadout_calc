@@ -25,6 +25,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Aventurine",
+    "trimCharacterName": "Aventurine",
+    "entryIcon": "icon/character/1304.png",
+    "lineCount": 4426,
+    "sizeCount": 168209
+  },
+  {
+    "entryType": "char",
     "entryName": "The Dahlia",
     "trimCharacterName": "TheDahlia",
     "entryIcon": "icon/character/1321.png",
@@ -54,6 +62,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1412.png",
     "lineCount": 4311,
     "sizeCount": 160474
+  },
+  {
+    "entryType": "char",
+    "entryName": "Firefly",
+    "trimCharacterName": "Firefly",
+    "entryIcon": "icon/character/1310.png",
+    "lineCount": 4652,
+    "sizeCount": 160417
   },
   {
     "entryType": "char",
@@ -97,6 +113,22 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Hyacine",
+    "trimCharacterName": "Hyacine",
+    "entryIcon": "icon/character/1409.png",
+    "lineCount": 3703,
+    "sizeCount": 134081
+  },
+  {
+    "entryType": "char",
+    "entryName": "Yunli",
+    "trimCharacterName": "Yunli",
+    "entryIcon": "icon/character/1221.png",
+    "lineCount": 4001,
+    "sizeCount": 133968
+  },
+  {
+    "entryType": "char",
     "entryName": "Anaxa",
     "trimCharacterName": "Anaxa",
     "entryIcon": "icon/character/1405.png",
@@ -110,6 +142,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1223.png",
     "lineCount": 3800,
     "sizeCount": 132453
+  },
+  {
+    "entryType": "char",
+    "entryName": "Jade",
+    "trimCharacterName": "Jade",
+    "entryIcon": "icon/character/1314.png",
+    "lineCount": 3709,
+    "sizeCount": 130242
   },
   {
     "entryType": "char",
