@@ -241,6 +241,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Fugue",
+    "trimCharacterName": "Fugue",
+    "entryIcon": "icon/character/1225.png",
+    "lineCount": 2851,
+    "sizeCount": 100943
+  },
+  {
+    "entryType": "char",
     "entryName": "Sparkle",
     "trimCharacterName": "Sparkle",
     "entryIcon": "icon/character/1306.png",
@@ -333,7 +341,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TrailblazerHarmony",
     "entryIcon": "icon/character/8005.png",
     "lineCount": 2130,
-    "sizeCount": 77091
+    "sizeCount": 77061
   },
   {
     "entryType": "char",

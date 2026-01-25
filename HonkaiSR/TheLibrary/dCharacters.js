@@ -29295,6 +29295,818 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Fugue": {
+    "internalID": 1225,
+    "name": "Fugue",
+    "path": "Nihility",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 557.865,
+      "HPBase": 1125.4319999999998,
+      "SPDBase": 102,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "122501",
+        "name": "Earthbound I Was, Cloudward I Be",
+        "rank": 1,
+        "desc": "Ally target with \"Foxian Prayer\" increases their Weakness Break Efficiency by 50%.",
+        "icon": "icon/skill/1225_rank1.png",
+        "paramsEido": [
+          0.5
+        ]
+      },
+      {
+        "id": "122502",
+        "name": "Beatitude Dawns for the Worthy",
+        "rank": 2,
+        "desc": "When an enemy target's Weakness gets broken, Fugue regenerates 3 Energy. After using Ultimate, advances the action of all allies by 24%.",
+        "icon": "icon/skill/1225_rank2.png",
+        "paramsEido": [
+          3,
+          0.24
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "122503",
+        "name": "Verity Weaves Thoughts to Blade",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1225_skill.png"
+      },
+      {
+        "id": "122504",
+        "name": "Bereft of Form, Which Name to Bear",
+        "rank": 4,
+        "desc": "Ally target with \"Foxian Prayer\" increases their Break DMG dealt by 20%.",
+        "icon": "icon/skill/1225_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "122505",
+        "name": "Colored Cloud Rains Fortune",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1225_ultimate.png"
+      },
+      {
+        "id": "122506",
+        "name": "Clairvoyance of Boom and Doom",
+        "rank": 6,
+        "desc": "Increases Fugue's Weakness Break Efficiency by 50%. While Fugue is in the \"Torrid Scorch\" state, \"Foxian Prayer\" takes effect on all allies.",
+        "icon": "icon/skill/1225_rank6.png",
+        "paramsEido": [
+          0.5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Radiant Streak": {
+          "variant1": {
+            "skillID": 122501,
+            "trigger": "Skill01",
+            "name": "Radiant Streak",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Fugue's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Fugue_00_Skill01_Camera",
+              "Avatar_Fugue_00_Skill01_Phase01",
+              "Avatar_Fugue_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fiery Caress": {
+          "variant1": {
+            "skillID": 122508,
+            "trigger": "Skill11",
+            "name": "Fiery Caress",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Fugue's ATK to one designated enemy and Fire DMG equal to #2[i]% of Fugue's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                0.25
+              ],
+              "2": [
+                0.6,
+                0.3
+              ],
+              "3": [
+                0.7,
+                0.35
+              ],
+              "4": [
+                0.8,
+                0.4
+              ],
+              "5": [
+                0.9,
+                0.45
+              ],
+              "6": [
+                1,
+                0.5
+              ],
+              "7": [
+                1.1,
+                0.55
+              ],
+              "8": [
+                1.2,
+                0.6
+              ],
+              "9": [
+                1.3,
+                0.65
+              ],
+              "10": [
+                1.4,
+                0.7
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Fugue_00_Skill11_Camera",
+              "Avatar_Fugue_00_Skill11_Phase01",
+              "Avatar_Fugue_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Virtue Beckons Bliss": {
+          "variant1": {
+            "skillID": 122502,
+            "trigger": "Skill02",
+            "name": "Virtue Beckons Bliss",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Grants one designated ally \"Foxian Prayer\". Enters the \"Torrid Scorch\" state, lasting for #1[i] turn(s). The duration decreases by 1 at the start of Fugue's every turn. \"Foxian Prayer\" only takes effect on the most recent target of Fugue's Skill.\\nThe ally target with \"Foxian Prayer\" increases their Break Effect by #2[i]% and can also reduce Toughness even when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to #6[i]% of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type.\\nWhile in the \"Torrid Scorch\" state, Fugue enhances her Basic ATK. Every time an ally target with \"Foxian Prayer\" attacks, Fugue has a #3[i]% base chance to reduce the attacked enemy target's DEF by #4[i]%, lasting for #5[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.15,
+                1,
+                0.08,
+                2,
+                0.5
+              ],
+              "2": [
+                3,
+                0.165,
+                1,
+                0.09,
+                2,
+                0.5
+              ],
+              "3": [
+                3,
+                0.18,
+                1,
+                0.1,
+                2,
+                0.5
+              ],
+              "4": [
+                3,
+                0.195,
+                1,
+                0.11,
+                2,
+                0.5
+              ],
+              "5": [
+                3,
+                0.21,
+                1,
+                0.12,
+                2,
+                0.5
+              ],
+              "6": [
+                3,
+                0.225,
+                1,
+                0.13,
+                2,
+                0.5
+              ],
+              "7": [
+                3,
+                0.24375,
+                1,
+                0.1425,
+                2,
+                0.5
+              ],
+              "8": [
+                3,
+                0.2625,
+                1,
+                0.155,
+                2,
+                0.5
+              ],
+              "9": [
+                3,
+                0.28125,
+                1,
+                0.1675,
+                2,
+                0.5
+              ],
+              "10": [
+                3,
+                0.3,
+                1,
+                0.18,
+                2,
+                0.5
+              ],
+              "11": [
+                3,
+                0.315,
+                1,
+                0.19,
+                2,
+                0.5
+              ],
+              "12": [
+                3,
+                0.33,
+                1,
+                0.2,
+                2,
+                0.5
+              ],
+              "13": [
+                3,
+                0.345,
+                1,
+                0.21,
+                2,
+                0.5
+              ],
+              "14": [
+                3,
+                0.36,
+                1,
+                0.22,
+                2,
+                0.5
+              ],
+              "15": [
+                3,
+                0.375,
+                1,
+                0.23,
+                2,
+                0.5
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Fugue_00_Skill02_Camera",
+              "Avatar_Fugue_00_Skill02_Camera_Self",
+              "Avatar_Fugue_00_Skill02_Phase01",
+              "Avatar_Fugue_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Solar Splendor Shines Upon All": {
+          "variant1": {
+            "skillID": 122503,
+            "trigger": "Skill03",
+            "name": "Solar Splendor Shines Upon All",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Fire DMG equal to #1[i]% of Fugue's ATK to all enemies. This attack ignores Weakness Type to reduce all enemies' Toughness. And when breaking Weakness, triggers the Fire Weakness Break effect.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1
+              ],
+              "2": [
+                1.1
+              ],
+              "3": [
+                1.2
+              ],
+              "4": [
+                1.3
+              ],
+              "5": [
+                1.4
+              ],
+              "6": [
+                1.5
+              ],
+              "7": [
+                1.625
+              ],
+              "8": [
+                1.75
+              ],
+              "9": [
+                1.875
+              ],
+              "10": [
+                2
+              ],
+              "11": [
+                2.1
+              ],
+              "12": [
+                2.2
+              ],
+              "13": [
+                2.3
+              ],
+              "14": [
+                2.4
+              ],
+              "15": [
+                2.5
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Fugue_00_Skill03_Camera",
+              "Avatar_Fugue_00_Skill03_EnterReady",
+              "Avatar_Fugue_00_Skill03_Phase01",
+              "Avatar_Fugue_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Fortune Follows Where Virtue Spreads": {
+          "variant1": {
+            "skillID": 122504,
+            "trigger": "SkillP01",
+            "name": "Fortune Follows Where Virtue Spreads",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "While Fugue is on the field, enemy targets will get additionally afflicted with \"Cloudflame Luster,\" equal to #2[i]% of their Max Toughness. When the initial Toughness is reduced to 0, \"Cloudflame Luster\" can continue to be reduced. When \"Cloudflame Luster\" is reduced to 0, the enemy will receive Weakness Break DMG again.\\nWhile Fugue is on the field and after allies attack Weakness Broken enemy targets, converts the Toughness Reduction of this attack into 1 instance of #1[i]% Super Break DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.4
+              ],
+              "2": [
+                0.55,
+                0.4
+              ],
+              "3": [
+                0.6,
+                0.4
+              ],
+              "4": [
+                0.65,
+                0.4
+              ],
+              "5": [
+                0.7,
+                0.4
+              ],
+              "6": [
+                0.75,
+                0.4
+              ],
+              "7": [
+                0.8125,
+                0.4
+              ],
+              "8": [
+                0.875,
+                0.4
+              ],
+              "9": [
+                0.9375,
+                0.4
+              ],
+              "10": [
+                1,
+                0.4
+              ],
+              "11": [
+                1.05,
+                0.4
+              ],
+              "12": [
+                1.1,
+                0.4
+              ],
+              "13": [
+                1.15,
+                0.4
+              ],
+              "14": [
+                1.2,
+                0.4
+              ],
+              "15": [
+                1.25,
+                0.4
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Fugue_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Super Break DMG": {
+                "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Percipient Shine": {
+          "variant1": {
+            "skillID": 122507,
+            "trigger": "SkillMaze",
+            "name": "Percipient Shine",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, inflicts Daze on enemies within a certain area, lasting for #1[i] second(s). While Dazed, enemies will not actively attack ally targets.\\nAfter entering battle via actively attacking Dazed enemies, Fugue's action advances by #4[i]%, with a #2[i]% base chance to inflict each enemy target with the same DEF Reduction state as that applied by Fugue's Skill, lasting for #3[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                1,
+                2,
+                0.4
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Fugue_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1225_basic_atk.png",
+        "skillRef": {
+          "skillName": "Radiant Streak",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1225_skill.png",
+        "skillRef": {
+          "skillName": "Virtue Beckons Bliss",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1225_ultimate.png",
+        "skillRef": {
+          "skillName": "Solar Splendor Shines Upon All",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1225_talent.png",
+        "skillRef": {
+          "skillName": "Fortune Follows Where Virtue Spreads",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1225_technique.png",
+        "skillRef": {
+          "skillName": "Percipient Shine",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Verdantia Renaissance",
+        "icon": "icon/skill/1225_skilltree1.png",
+        "desc": "After ally targets break weakness, additionally delays the action of the enemy target by #1[i]%.",
+        "params": [
+          0.15
+        ],
+        "extraEffects": {
+          "Action Delayed": {
+            "desc": "Increases the target's waiting interval before the next action.",
+            "params": [
+              0.15
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Sylvan Enigma",
+        "icon": "icon/skill/1225_skilltree2.png",
+        "desc": "Increases this unit's Break Effect by #1[i]%. After using Skill for the first time, immediately recovers #2[i] Skill Point(s).",
+        "params": [
+          0.3,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Phecda Primordia",
+        "icon": "icon/skill/1225_skilltree3.png",
+        "desc": "When an enemy target's Weakness gets broken, increases teammates' (i.e., excluding this unit) Break Effect by #1[i]%. If Fugue's Break Effect is #4[i]% or higher, the Break Effect increase is boosted by an additional #5[i]%, lasting for #2[i] turn(s). This effect can stack up to #3[i] time(s).",
+        "params": [
+          0.06,
+          2,
+          2,
+          2.2,
+          0.12
+        ]
+      },
+      "Point09": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point10": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point11": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point14": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point15": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      },
+      "Point18": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1225.png",
+    "preview": "image/character_preview/1225.png",
+    "portrait": "image/character_portrait/1225.png",
+    "bannerOffsets": [
+      115,
+      97,
+      0.64,
+      115,
+      97,
+      0.64,
+      115,
+      97,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Gallagher": {
     "internalID": 1301,
     "name": "Gallagher",

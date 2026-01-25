@@ -5324,6 +5324,47 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Stack Exo-Toughness"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "exoPercent",
+            "exoFlat",
+            // "buffID",
+            // "variables",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Stack Exo-Toughness");
+
+        // const conditionObject = parseRef.conditions;
+        // const conditionName = conditionObject?.name;
+
+        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        // const functionExists = megaParsingFuckery[conditionName];
+        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Stack Exo-Toughness:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.exoPercent != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Exo-Percent:</div>&nbsp;
+                ${parseRef.exoPercent.displayLines ?? parseRef.exoPercent}
+            </div>` : ""}
+            ${parseRef.exoFlat != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Exo-Flat:</div>&nbsp;
+                ${parseRef.exoFlat.displayLines ?? parseRef.exoFlat}
+            </div>` : ""}
+        </div>
+        `;
+    },
     "Add to Team Target Grouping"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
