@@ -196,6 +196,14 @@ let allowedCharacterList = [
     "trimName": "Anaxa"
   },
   {
+    "fullName": "Hyacine",
+    "trimName": "Hyacine"
+  },
+  {
+    "fullName": "Little Ica",
+    "trimName": "LittleIca"
+  },
+  {
     "fullName": "Hysilens",
     "trimName": "Hysilens"
   },

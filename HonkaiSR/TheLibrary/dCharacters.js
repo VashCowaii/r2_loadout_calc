@@ -36756,6 +36756,1205 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Hyacine": {
+    "internalID": 1409,
+    "name": "Hyacine",
+    "path": "Remembrance",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 388.08000000000004,
+      "DEFBase": 630.6300000000001,
+      "HPBase": 1086.624,
+      "SPDBase": 110,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "140901",
+        "name": "Cradle the Candle of Night",
+        "rank": 1,
+        "desc": "While Hyacine is in the \"After Rain\" state, all ally targets additionally increase their Max HP by 50%, and after using an attack, immediately restore their HP by an amount equal to 8% of Hyacine's Max HP.",
+        "icon": "icon/skill/1409_rank1.png",
+        "paramsEido": [
+          0.5,
+          0.08
+        ]
+      },
+      {
+        "id": "140902",
+        "name": "Come Sit in My Courtyard",
+        "rank": 2,
+        "desc": "When an ally target's HP decreases, SPD increases by 30%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1409_rank2.png",
+        "paramsEido": [
+          0.3,
+          2
+        ]
+      },
+      {
+        "id": "140903",
+        "name": "Depart, Unto the Sun!",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1409_ultimate.png"
+      },
+      {
+        "id": "140904",
+        "name": "Sunlit Amber, Yours to Keep",
+        "rank": 4,
+        "desc": "The \"Tempestuous Halt\" Trace gets enhanced: For every 1 excess SPD, additionally increases Hyacine's and Little Ica's CRIT DMG by 2%.",
+        "icon": "icon/skill/1409_rank4.png",
+        "paramsEido": [
+          1,
+          0.02
+        ]
+      },
+      {
+        "id": "140905",
+        "name": "Twilight Drapes the Tide",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1409_skill.png"
+      },
+      {
+        "id": "140906",
+        "name": "O Sky, Heed My Plea",
+        "rank": 6,
+        "desc": "When Little Ica uses Memosprite Skill, the amount cleared from the tally of healing is changed to 12%. While Little Ica is on the field, all ally targets' All-Type RES PEN increases by 20%.",
+        "icon": "icon/skill/1409_rank6.png",
+        "paramsEido": [
+          0.12,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Memosprite Skill": 1
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2,
+        "Memosprite Talent": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "When Breeze Kisses Cirrus": {
+          "variant1": {
+            "skillID": 140901,
+            "trigger": "Skill01",
+            "name": "When Breeze Kisses Cirrus",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Hyacine's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_Skill01_Camera",
+              "Avatar_Hyacine_00_Skill01_Phase01",
+              "Avatar_Hyacine_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Love Over the Rainbow": {
+          "variant1": {
+            "skillID": 140902,
+            "trigger": "Skill02",
+            "name": "Love Over the Rainbow",
+            "type": "Restore",
+            "slot": "Skill",
+            "desc": "Summons memosprite Little Ica. Restores HP equal to #1[f1]% of Hyacine's Max HP plus #2[i] for all allies (except Little Ica), and restores HP equal to #3[f1]% of Hyacine's Max HP plus #4[i] for Little Ica.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.04,
+                40,
+                0.05,
+                50
+              ],
+              "2": [
+                0.044999998,
+                64,
+                0.05625,
+                80
+              ],
+              "3": [
+                0.05,
+                82,
+                0.0625,
+                102.5
+              ],
+              "4": [
+                0.055,
+                100,
+                0.06875,
+                125
+              ],
+              "5": [
+                0.06,
+                112,
+                0.075,
+                140
+              ],
+              "6": [
+                0.064,
+                124,
+                0.08,
+                155
+              ],
+              "7": [
+                0.067999996,
+                133,
+                0.085,
+                166.25
+              ],
+              "8": [
+                0.072,
+                142,
+                0.09,
+                177.5
+              ],
+              "9": [
+                0.076,
+                151,
+                0.095,
+                188.75
+              ],
+              "10": [
+                0.08,
+                160,
+                0.1,
+                200
+              ],
+              "11": [
+                0.084,
+                169,
+                0.105,
+                211.25
+              ],
+              "12": [
+                0.088,
+                178,
+                0.11,
+                222.5
+              ],
+              "13": [
+                0.092,
+                187,
+                0.115,
+                233.75
+              ],
+              "14": [
+                0.096,
+                196,
+                0.12,
+                245
+              ],
+              "15": [
+                0.1,
+                205,
+                0.125,
+                256.25
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Restore",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_Skill02_Camera",
+              "Avatar_Hyacine_00_Skill02_Phase01",
+              "Avatar_Hyacine_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "We Who Fly Into Twilight": {
+          "variant1": {
+            "skillID": 140903,
+            "trigger": "Skill03",
+            "name": "We Who Fly Into Twilight",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Summons memosprite Little Ica. Restores HP equal to #1[f1]% of Hyacine's Max HP plus #2[i] for all allies (except Little Ica), and restores HP equal to #6[f1]% of Hyacine's Max HP plus #7[i] for Little Ica. Hyacine enters the \"After Rain\" state, lasting for #5[i] turn(s). This duration decreases by 1 at the start of Hyacine's every turn. While \"After Rain\" is active, all ally targets increase their Max HP by #3[f1]% plus #4[i].",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.05,
+                50,
+                0.15,
+                150,
+                3,
+                0.06,
+                60
+              ],
+              "2": [
+                0.05625,
+                80,
+                0.165,
+                240,
+                3,
+                0.0675,
+                96
+              ],
+              "3": [
+                0.0625,
+                102.5,
+                0.18,
+                307.5,
+                3,
+                0.075,
+                123
+              ],
+              "4": [
+                0.06875,
+                125,
+                0.195,
+                375,
+                3,
+                0.0825,
+                150
+              ],
+              "5": [
+                0.075,
+                140,
+                0.21,
+                420,
+                3,
+                0.09,
+                168
+              ],
+              "6": [
+                0.08,
+                155,
+                0.225,
+                465,
+                3,
+                0.096,
+                186
+              ],
+              "7": [
+                0.085,
+                166.25,
+                0.24375,
+                498.75,
+                3,
+                0.102,
+                199.5
+              ],
+              "8": [
+                0.09,
+                177.5,
+                0.2625,
+                532.5,
+                3,
+                0.108,
+                213
+              ],
+              "9": [
+                0.095,
+                188.75,
+                0.28125,
+                566.25,
+                3,
+                0.114,
+                226.5
+              ],
+              "10": [
+                0.1,
+                200,
+                0.3,
+                600,
+                3,
+                0.12,
+                240
+              ],
+              "11": [
+                0.105,
+                211.25,
+                0.315,
+                633.75,
+                3,
+                0.126,
+                253.5
+              ],
+              "12": [
+                0.11,
+                222.5,
+                0.33,
+                667.5,
+                3,
+                0.132,
+                267
+              ],
+              "13": [
+                0.115,
+                233.75,
+                0.345,
+                701.25,
+                3,
+                0.138,
+                280.5
+              ],
+              "14": [
+                0.12,
+                245,
+                0.36,
+                735,
+                3,
+                0.144,
+                294
+              ],
+              "15": [
+                0.125,
+                256.25,
+                0.375,
+                768.75,
+                3,
+                0.15,
+                307.5
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_Skill03_Camera",
+              "Avatar_Hyacine_00_Skill03_EnterReady",
+              "Avatar_Hyacine_00_Skill03_Phase01",
+              "Avatar_Hyacine_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "First Light Heals the World": {
+          "variant1": {
+            "skillID": 140904,
+            "trigger": "SkillP01",
+            "name": "First Light Heals the World",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "The memosprite Little Ica initially has Max HP equal to #1[i]% of Hyacine's Max HP. When Hyacine or Little Ica provides healing, increases Little Ica's DMG dealt by #3[i]% for #4[i] turn(s). Stacks up to #5[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                1,
+                0.4,
+                2,
+                3
+              ],
+              "2": [
+                0.5,
+                1,
+                0.44,
+                2,
+                3
+              ],
+              "3": [
+                0.5,
+                1,
+                0.48,
+                2,
+                3
+              ],
+              "4": [
+                0.5,
+                1,
+                0.52,
+                2,
+                3
+              ],
+              "5": [
+                0.5,
+                1,
+                0.56,
+                2,
+                3
+              ],
+              "6": [
+                0.5,
+                1,
+                0.6,
+                2,
+                3
+              ],
+              "7": [
+                0.5,
+                1,
+                0.65,
+                2,
+                3
+              ],
+              "8": [
+                0.5,
+                1,
+                0.7,
+                2,
+                3
+              ],
+              "9": [
+                0.5,
+                1,
+                0.75,
+                2,
+                3
+              ],
+              "10": [
+                0.5,
+                1,
+                0.8,
+                2,
+                3
+              ],
+              "11": [
+                0.5,
+                1,
+                0.84,
+                2,
+                3
+              ],
+              "12": [
+                0.5,
+                1,
+                0.88,
+                2,
+                3
+              ],
+              "13": [
+                0.5,
+                1,
+                0.92,
+                2,
+                3
+              ],
+              "14": [
+                0.5,
+                1,
+                0.96,
+                2,
+                3
+              ],
+              "15": [
+                0.5,
+                1,
+                1,
+                2,
+                3
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Day So Right, Life So Fine!": {
+          "variant1": {
+            "skillID": 140907,
+            "trigger": "SkillMaze",
+            "name": "Day So Right, Life So Fine!",
+            "type": "Restore",
+            "slot": "Technique",
+            "desc": "When the next battle starts, restores HP by an amount equal to #1[i]% of Hyacine's Max HP plus #2[i] for all allies and increases Max HP by #3[i]%, lasting for #4[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                600,
+                0.2,
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Restore",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Hyacine_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Rainclouds, Time to Go!": {
+          "variant1": {
+            "skillID": 1140901,
+            "trigger": "Skill01",
+            "name": "Rainclouds, Time to Go!",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Deals Wind DMG to all enemies by an amount equal to #1[i]% of the tally of healing done by Hyacine and Little Ica in the current battle, and clears #2[i]% of this tally of healing.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.5
+              ],
+              "2": [
+                0.12,
+                0.5
+              ],
+              "3": [
+                0.14,
+                0.5
+              ],
+              "4": [
+                0.16,
+                0.5
+              ],
+              "5": [
+                0.18,
+                0.5
+              ],
+              "6": [
+                0.2,
+                0.5
+              ],
+              "7": [
+                0.22,
+                0.5
+              ],
+              "8": [
+                0.24,
+                0.5
+              ],
+              "9": [
+                0.26,
+                0.5
+              ],
+              "10": [
+                0.28,
+                0.5
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_HyacineServant_00_Skill01_Phase01",
+              "Servant_HyacineServant_00_Skill01_Phase02",
+              "Servant_HyacineServant_00_Insert_Camera",
+              "Servant_HyacineServant_00_Insert_Camera_Charm"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Take Sky in Hand": {
+          "variant1": {
+            "skillID": 1140903,
+            "trigger": "SkillP01",
+            "name": "Take Sky in Hand",
+            "type": "Restore",
+            "slot": "Memosprite Talent",
+            "desc": "Little Ica maintains 0 SPD, is immune to debuffs, and will not appear in the Action Order.\\nIf the HP of an ally target (except Little Ica) is reduced, then at the start of any target's turn or after any target takes action, Little Ica will consume #1[i]% of their own Max HP and heal the ally target with reduced HP for an amount equal to #2[f1]% of Hyacine's Max HP plus #3[i].\\nWhile Hyacine is in the \"After Rain\" state, Little Ica gains 1 extra turn and automatically casts \"Rainclouds, Time to Go!\" immediately after Hyacine uses an ability. Moreover, when Little Ica triggers the Talent's healing effect, additionally restores HP for all ally targets by an amount equal to #4[f1]% of Hyacine's Max HP plus #5[i]. After Little Ica uses an ability, the duration of all their Continuous Effects decreases by 1 turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.04,
+                0.01,
+                10,
+                0.01,
+                10
+              ],
+              "2": [
+                0.04,
+                0.012,
+                12,
+                0.012,
+                12
+              ],
+              "3": [
+                0.04,
+                0.0139999995,
+                14,
+                0.0139999995,
+                14
+              ],
+              "4": [
+                0.04,
+                0.015999999,
+                16,
+                0.015999999,
+                16
+              ],
+              "5": [
+                0.04,
+                0.018,
+                18,
+                0.018,
+                18
+              ],
+              "6": [
+                0.04,
+                0.02,
+                20,
+                0.02,
+                20
+              ],
+              "7": [
+                0.04,
+                0.022,
+                22,
+                0.022,
+                22
+              ],
+              "8": [
+                0.04,
+                0.024,
+                24,
+                0.024,
+                24
+              ],
+              "9": [
+                0.04,
+                0.026,
+                26,
+                0.026,
+                26
+              ],
+              "10": [
+                0.04,
+                0.027999999,
+                28,
+                0.027999999,
+                28
+              ]
+            },
+            "skillEffect": "Restore",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_HyacineServant_00_PassiveSkill"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              },
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              },
+              "Continuous Effect": {
+                "desc": "Includes buffs, debuffs, and other effects."
+              }
+            }
+          }
+        },
+        "Soar, Unto the Sunlight": {
+          "variant1": {
+            "skillID": 1140905,
+            "trigger": "SkillP03",
+            "name": "Soar, Unto the Sunlight",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When summoned, regenerates #1[i] Energy for Hyacine. On the first summon, additionally regenerates #2[i] Energy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                15,
+                30
+              ],
+              "2": [
+                15,
+                30
+              ],
+              "3": [
+                15,
+                30
+              ],
+              "4": [
+                15,
+                30
+              ],
+              "5": [
+                15,
+                30
+              ],
+              "6": [
+                15,
+                30
+              ],
+              "7": [
+                15,
+                30
+              ],
+              "8": [
+                15,
+                30
+              ],
+              "9": [
+                15,
+                30
+              ],
+              "10": [
+                15,
+                30
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_HyacineServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fall, Then Take Wing": {
+          "variant1": {
+            "skillID": 1140906,
+            "trigger": "SkillP04",
+            "name": "Fall, Then Take Wing",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "Upon disappearing, advances the action of Hyacine by #1[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.3
+              ],
+              "4": [
+                0.3
+              ],
+              "5": [
+                0.3
+              ],
+              "6": [
+                0.3
+              ],
+              "7": [
+                0.3
+              ],
+              "8": [
+                0.3
+              ],
+              "9": [
+                0.3
+              ],
+              "10": [
+                0.3
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_HyacineServant_00_DeathRattle"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point19": {
+        "name": "Rainclouds, Time to Go!",
+        "icon": "icon/skill/1409_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Rainclouds, Time to Go!",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Take Sky in Hand",
+        "icon": "icon/skill/1409_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Take Sky in Hand",
+          "skillSlot": "Memosprite Talent"
+        }
+      },
+      "Point01": {
+        "icon": "icon/skill/1409_basic_atk.png",
+        "skillRef": {
+          "skillName": "When Breeze Kisses Cirrus",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1409_skill.png",
+        "skillRef": {
+          "skillName": "Love Over the Rainbow",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1409_ultimate.png",
+        "skillRef": {
+          "skillName": "We Who Fly Into Twilight",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1409_talent.png",
+        "skillRef": {
+          "skillName": "First Light Heals the World",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1409_technique.png",
+        "skillRef": {
+          "skillName": "Day So Right, Life So Fine!",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Gloomy Grin",
+        "icon": "icon/skill/1409_skilltree1.png",
+        "desc": "Increases Hyacine's and Little Ica's CRIT Rate by #1[i]%. When providing healing to an ally target whose current HP is equal to or less than #2[i]% of their Max HP, increases Hyacine's and Little Ica's Outgoing Healing by #3[i]%.",
+        "params": [
+          1,
+          0.5,
+          0.25
+        ]
+      },
+      "Point07": {
+        "name": "Stormy Caress",
+        "icon": "icon/skill/1409_skilltree2.png",
+        "desc": "Increases Hyacine's Effect RES by #1[i]%. When using Skill and Ultimate, dispels #2[i] debuff(s) from all ally targets.",
+        "params": [
+          0.5,
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [
+              0.5,
+              1
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Tempestuous Halt",
+        "icon": "icon/skill/1409_skilltree3.png",
+        "desc": "When Hyacine's SPD exceeds #1[i], increases her and Little Ica's Max HP by #2[i]%. Then, for every #3[i] excess SPD, increases Hyacine's and Little Ica's Outgoing Healing by #4[i]%. Up to a max of #5[i] excess SPD can be taken into account for this effect.",
+        "params": [
+          200,
+          0.2,
+          1,
+          0.01,
+          200
+        ]
+      },
+      "Point09": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point10": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point11": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point14": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point15": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.08
+        }
+      },
+      "Point18": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1409.png",
+    "preview": "image/character_preview/1409.png",
+    "portrait": "image/character_portrait/1409.png",
+    "bannerOffsets": [
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 100
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11409,
+    "summonName": "Little Ica"
+  },
   "Hysilens": {
     "internalID": 1410,
     "name": "Hysilens",

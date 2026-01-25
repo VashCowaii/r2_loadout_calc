@@ -974,7 +974,7 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
             ${parseRef.variable2 != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Paste To:</div>&nbsp;
-                ${parseRef.variable2} ${parseRef.modifier2 ? `from (${parseRef.modifier2})` : ""} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target2,initialCounter)}
+                ${parseRef.variable2} ${parseRef.modifier2 ? `from (${parseRef.modifier2})` : ""}${parseRef.target2 ? ` on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target2,initialCounter)}` : ""}
             </div>` : ""}
             ${parseRef.scope != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
@@ -9152,6 +9152,7 @@ const megaParsingFuckeryPain = {
         }
         else if (typeOfParse === "object") {
             wasObject = true;
+            // console.log(parseRef)
             console.log(parseRef.name)
             parseString = megaParsingFuckery[parseRef.name](parseRef,initialCounter);
 
