@@ -1139,7 +1139,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Add Battle Event",
-          "teamName": "Allied Team",
+          "teamName": "Player Team",
           "eventID": 11216,
           "variables": null
         },

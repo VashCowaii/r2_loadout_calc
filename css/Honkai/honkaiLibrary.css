@@ -1127,8 +1127,67 @@ div {
     /* transform: translateY(50%); */
     /* border: 1px solid green; */
 }
+.characterDisplayLogStatIconElement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    width: 30px;
+    max-width: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
+    /* position:absolute; */
+    /* right: 0;
+    bottom: 50%; */
+    /* transform: translateY(50%); */
+    /* border: 1px solid green; */
+}
 
 
+/* .turnStarterBarAlly, .turnStarterBarEnemy, .turnStarterBarUltimate, .turnStarterBarMiniAction, .turnStarterBarMiniActionEnemy {
+    width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    border: 2px solid #5f656b;
+    border-left: 2px solid #03dbd1;
+    box-sizing: border-box;
+    font-size: 16px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-top-right-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+} */
+
+.turnOrderDisplayPreview, .turnOrderDisplayPreviewEnemyGlorp, .turnOrderDisplayPreviewUltimate, .turnOrderDisplayPreviewUltimateSummon .turnOrderDisplayPreviewEventIcon, .turnOrderDisplayPreviewEventAction {
+    height: 100%;
+    /* max-height: 100%; */
+    width: auto;
+    /* max-width: 100%; */
+    object-fit: contain;
+    scale: 4;
+    transform:translate(20%,20%);
+    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    box-sizing: border-box;
+}
+.turnOrderDisplayPreview {
+    /* transform:translate(-20%,5%);
+    scale: 0.5; */
+    /* object-fit: none; */
+    /* scale: 3.7; */
+    height: 100px;
+    width: auto;
+    scale: 1;
+    transform:translate(10%,00%);
+    margin-right: 15px;
+    /* background-color: white; */
+}
 
 
 

@@ -899,7 +899,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Add Battle Event",
-                  "teamName": "Allied Team",
+                  "teamName": "Player Team",
                   "eventID": 11309,
                   "variables": {
                     "BattleEvent_Geji_BaseSpeed": {
