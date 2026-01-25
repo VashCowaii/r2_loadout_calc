@@ -35375,6 +35375,799 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Jade": {
+    "internalID": 1314,
+    "name": "Jade",
+    "path": "Erudition",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 659.7360000000001,
+      "DEFBase": 509.355,
+      "HPBase": 1086.624,
+      "SPDBase": 103,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "131401",
+        "name": "Altruism? Nevertheless Tradable",
+        "rank": 1,
+        "desc": "The Follow-Up ATK DMG from Jade's Talent increases by 32%. After the \"Debt Collector\" character attacks and the number of the enemy target(s) hit is either 2 or 1, Jade additionally gains 1 or 2 point(s) of Charge respectively.",
+        "icon": "icon/skill/1314_rank1.png",
+        "paramsEido": [
+          0.32,
+          1,
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "131402",
+        "name": "Morality? Herein Authenticated",
+        "rank": 2,
+        "desc": "When there are 15 stacks of Pawned Asset, Jade's CRIT Rate increases by 18%.",
+        "icon": "icon/skill/1314_rank2.png",
+        "paramsEido": [
+          15,
+          0.18
+        ]
+      },
+      {
+        "id": "131403",
+        "name": "Honesty? Soon Mortgaged",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1314_skill.png"
+      },
+      {
+        "id": "131404",
+        "name": "Sincerity? Put Option Only",
+        "rank": 4,
+        "desc": "When using Ultimate, enables the DMG dealt by Jade to ignore 12% of enemy targets' DEF, lasting for 3 turn(s).",
+        "icon": "icon/skill/1314_rank4.png",
+        "paramsEido": [
+          0.12,
+          3
+        ]
+      },
+      {
+        "id": "131405",
+        "name": "Hope? Hitherto Forfeited",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1314_ultimate.png"
+      },
+      {
+        "id": "131406",
+        "name": "Equity? Pending Sponsorship",
+        "rank": 6,
+        "desc": "While the \"Debt Collector\" character exists on the field, Jade's Quantum RES PEN increases by 20%, and Jade gains the \"Debt Collector\" state.",
+        "icon": "icon/skill/1314_rank6.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lash of Riches": {
+          "variant1": {
+            "skillID": 131401,
+            "trigger": "Skill01",
+            "name": "Lash of Riches",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Jade's ATK to one designated enemy target, and Quantum DMG equal to #2[i]% of Jade's ATK to adjacent enemies.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.45,
+                0.15
+              ],
+              "2": [
+                0.54,
+                0.18
+              ],
+              "3": [
+                0.63,
+                0.21
+              ],
+              "4": [
+                0.72,
+                0.24
+              ],
+              "5": [
+                0.81,
+                0.27
+              ],
+              "6": [
+                0.9,
+                0.3
+              ],
+              "7": [
+                0.99,
+                0.33
+              ],
+              "8": [
+                1.08,
+                0.36
+              ],
+              "9": [
+                1.17,
+                0.39
+              ],
+              "10": [
+                1.26,
+                0.42
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Jade_00_Skill01_Camera",
+              "Avatar_Jade_00_Skill01_Phase01",
+              "Avatar_Jade_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Acquisition Surety": {
+          "variant1": {
+            "skillID": 131402,
+            "trigger": "Skill02",
+            "name": "Acquisition Surety",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Makes a single target ally become the Debt Collector and increases their SPD by #1[i], lasting for #4[i] turn(s).\\nAfter the Debt Collector attacks, deals 1 instance of Quantum Additional DMG equal to #3[i]% of Jade's ATK to each enemy target hit, and consumes the Debt Collector's HP by an amount equal to #2[i]% of their Max HP. If the current HP is insufficient, reduces HP to 1.\\nIf Jade becomes the Debt Collector, she cannot gain the SPD boost effect, and her attacks do not consume HP.\\nWhen the Debt Collector exists on the field, Jade cannot use her Skill. At the start of Jade's every turn, the Debt Collector's duration decreases by 1 turn.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                30,
+                0.02,
+                0.15,
+                3
+              ],
+              "2": [
+                30,
+                0.02,
+                0.16,
+                3
+              ],
+              "3": [
+                30,
+                0.02,
+                0.17,
+                3
+              ],
+              "4": [
+                30,
+                0.02,
+                0.18,
+                3
+              ],
+              "5": [
+                30,
+                0.02,
+                0.19,
+                3
+              ],
+              "6": [
+                30,
+                0.02,
+                0.2,
+                3
+              ],
+              "7": [
+                30,
+                0.02,
+                0.2125,
+                3
+              ],
+              "8": [
+                30,
+                0.02,
+                0.225,
+                3
+              ],
+              "9": [
+                30,
+                0.02,
+                0.2375,
+                3
+              ],
+              "10": [
+                30,
+                0.02,
+                0.25,
+                3
+              ],
+              "11": [
+                30,
+                0.02,
+                0.26,
+                3
+              ],
+              "12": [
+                30,
+                0.02,
+                0.27,
+                3
+              ],
+              "13": [
+                30,
+                0.02,
+                0.28,
+                3
+              ],
+              "14": [
+                30,
+                0.02,
+                0.29,
+                3
+              ],
+              "15": [
+                30,
+                0.02,
+                0.3,
+                3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jade_00_Skill02_Camera",
+              "Avatar_Jade_00_Skill02_Camera_Self",
+              "Avatar_Jade_00_Skill02_Phase01",
+              "Avatar_Jade_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Vow of the Deep": {
+          "variant1": {
+            "skillID": 131403,
+            "trigger": "Skill03",
+            "name": "Vow of the Deep",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Quantum DMG equal to #3[i]% of Jade's ATK to all enemies. At the same time, Jade enhances her Talent's Follow-Up ATK, increasing its DMG multiplier by #1[i]%. This enhancement can take effect #2[i] time(s).",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                2,
+                1.2
+              ],
+              "2": [
+                0.44,
+                2,
+                1.32
+              ],
+              "3": [
+                0.48,
+                2,
+                1.44
+              ],
+              "4": [
+                0.52,
+                2,
+                1.56
+              ],
+              "5": [
+                0.56,
+                2,
+                1.68
+              ],
+              "6": [
+                0.6,
+                2,
+                1.8
+              ],
+              "7": [
+                0.65,
+                2,
+                1.95
+              ],
+              "8": [
+                0.7,
+                2,
+                2.1
+              ],
+              "9": [
+                0.75,
+                2,
+                2.25
+              ],
+              "10": [
+                0.8,
+                2,
+                2.4
+              ],
+              "11": [
+                0.84,
+                2,
+                2.52
+              ],
+              "12": [
+                0.88,
+                2,
+                2.64
+              ],
+              "13": [
+                0.92,
+                2,
+                2.76
+              ],
+              "14": [
+                0.96,
+                2,
+                2.88
+              ],
+              "15": [
+                1,
+                2,
+                3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jade_00_Skill03_Camera",
+              "Avatar_Jade_00_Skill03_EnterReady",
+              "Avatar_Jade_00_Skill03_Phase01",
+              "Avatar_Jade_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Fang of Flare Flaying": {
+          "variant1": {
+            "skillID": 131404,
+            "trigger": "SkillP01",
+            "name": "Fang of Flare Flaying",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "After Jade or the \"Debt Collector\" unit attacks, gains 1 point of Charge for each enemy target hit. Upon reaching #3[i] points of Charge, consumes the #3[i] points to launch 1 instance of Follow-Up ATK, dealing Quantum DMG equal to #5[i]% of Jade's ATK to all enemies. This Follow-Up ATK does not generate Charge.\\nWhen launching her Talent's Follow-Up ATK, Jade immediately gains #4[i] stack(s) of \"Pawned Asset,\" with each stack increasing CRIT DMG by #1[f1]%, stacking up to #2[i] times.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.012,
+                50,
+                8,
+                5,
+                0.6
+              ],
+              "2": [
+                0.0132,
+                50,
+                8,
+                5,
+                0.66
+              ],
+              "3": [
+                0.0144,
+                50,
+                8,
+                5,
+                0.72
+              ],
+              "4": [
+                0.0156,
+                50,
+                8,
+                5,
+                0.78
+              ],
+              "5": [
+                0.0168,
+                50,
+                8,
+                5,
+                0.84
+              ],
+              "6": [
+                0.018,
+                50,
+                8,
+                5,
+                0.9
+              ],
+              "7": [
+                0.0195,
+                50,
+                8,
+                5,
+                0.975
+              ],
+              "8": [
+                0.021,
+                50,
+                8,
+                5,
+                1.05
+              ],
+              "9": [
+                0.0225,
+                50,
+                8,
+                5,
+                1.125
+              ],
+              "10": [
+                0.024,
+                50,
+                8,
+                5,
+                1.2
+              ],
+              "11": [
+                0.0252,
+                50,
+                8,
+                5,
+                1.26
+              ],
+              "12": [
+                0.0264,
+                50,
+                8,
+                5,
+                1.32
+              ],
+              "13": [
+                0.0276,
+                50,
+                8,
+                5,
+                1.38
+              ],
+              "14": [
+                0.0288,
+                50,
+                8,
+                5,
+                1.44
+              ],
+              "15": [
+                0.03,
+                50,
+                8,
+                5,
+                1.5
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jade_00_Passive_Camera_Start",
+              "Avatar_Jade_00_Passive_Camera_End01",
+              "Avatar_Jade_00_Passive_Camera_End01_ToStandBy",
+              "Avatar_Jade_00_Passive_Camera_End02",
+              "Avatar_Jade_00_PassiveSkill01",
+              "Avatar_Jade_00_Passive_Phase01",
+              "Avatar_Jade_00_Passive_Phase02_01",
+              "Avatar_Jade_00_Passive_Phase02_02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Visionary Predation": {
+          "variant1": {
+            "skillID": 131407,
+            "trigger": "SkillMaze",
+            "name": "Visionary Predation",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using the Technique, inflicts enemies within a set area with Blind Fealty for #1[i] second(s). Enemies inflicted with Blind Fealty will not initiate attacks on allies. When entering battle via actively attacking enemies inflicted with Blind Fealty, all enemies with Blind Fealty will enter combat simultaneously. After entering battle, deals Quantum DMG equal to #2[i]% of Jade's ATK to all enemies, and immediately gains #3[i] stack(s) of Pawned Asset.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0.5,
+                15
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Jade_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1314_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lash of Riches",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1314_skill.png",
+        "skillRef": {
+          "skillName": "Acquisition Surety",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1314_ultimate.png",
+        "skillRef": {
+          "skillName": "Vow of the Deep",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1314_talent.png",
+        "skillRef": {
+          "skillName": "Fang of Flare Flaying",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1314_technique.png",
+        "skillRef": {
+          "skillName": "Visionary Predation",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Reverse Repo",
+        "icon": "icon/skill/1314_skilltree1.png",
+        "desc": "When an enemy target enters combat, Jade gains #2[i] stack(s) of Pawned Asset. When the Debt Collector character's turn starts, additionally gains #1[i] stack(s) of Pawned Asset.",
+        "params": [
+          3,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Collateral Ticket",
+        "icon": "icon/skill/1314_skilltree2.png",
+        "desc": "When the battle starts, action advances Jade by #1[i]%.",
+        "params": [
+          0.5
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.5
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Asset Forfeiture",
+        "icon": "icon/skill/1314_skilltree3.png",
+        "desc": "Each Pawned Asset stack from the Talent additionally increases Jade's ATK by #1[f1]%.",
+        "params": [
+          0.005
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1314.png",
+    "preview": "image/character_preview/1314.png",
+    "portrait": "image/character_portrait/1314.png",
+    "bannerOffsets": [
+      5,
+      -66,
+      0.64,
+      5,
+      -66,
+      0.64,
+      5,
+      -66,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "The Dahlia": {
     "internalID": 1321,
     "name": "The Dahlia",

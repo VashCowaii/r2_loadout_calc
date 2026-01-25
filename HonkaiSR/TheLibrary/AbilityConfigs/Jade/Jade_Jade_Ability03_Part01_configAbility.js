@@ -1,0 +1,30 @@
+const configAbility = {
+  "fileName": "Jade_Jade_Ability03_Part01",
+  "childAbilityList": [
+    "Jade_Jade_Ability03_Camera",
+    "Jade_Jade_Ability03_EnterReady",
+    "Jade_Jade_Ability03_Part01",
+    "Jade_Jade_Ability03_Part02"
+  ],
+  "skillTrigger": "Skill03",
+  "abilityType": "Ultimate",
+  "energy": 5,
+  "toughnessList": [
+    0,
+    20,
+    0
+  ],
+  "parse": [
+    "Deleted bullshit",
+    {
+      "name": "Trigger Ability",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "ability": "Jade_Ability03_Part02",
+      "isTrigger": true
+    }
+  ],
+  "references": []
+}
