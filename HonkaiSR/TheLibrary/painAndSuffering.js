@@ -7493,6 +7493,7 @@ const megaParsingFuckeryPain = {
             "ignoreCost",
             "conditions",
             "skillTypeDelayed",
+            "cancelIfDelayed",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Inject Extra-Turn");
 
@@ -7560,11 +7561,15 @@ const megaParsingFuckeryPain = {
                 </div>` : ""}
 
                 
-
+                    
                 
                 ${parseRef.forceAction ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Action is Forced:</div>&nbsp;
                     ${parseRef.forceAction}
+                </div>` : ""}
+                ${parseRef.cancelIfDelayed ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Cancel when Delayed:</div>&nbsp;
+                    ${parseRef.cancelIfDelayed}
                 </div>` : ""}
                 ${parseRef.runsAfterBattleEnd ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Can Run After Battle End:</div>&nbsp;

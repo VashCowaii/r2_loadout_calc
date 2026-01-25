@@ -41229,6 +41229,838 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Boothill": {
+    "internalID": 1315,
+    "name": "Boothill",
+    "path": "The Hunt",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 115,
+    "baseStats": {
+      "ATKBase": 620.9280000000001,
+      "DEFBase": 436.59000000000003,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 107,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "131501",
+        "name": "Dusty Trail's Lone Star",
+        "rank": 1,
+        "desc": "When the battle starts, obtains 1 stack of Pocket Trickshot. When Boothill deals DMG, ignores 16% of the enemy target's DEF.",
+        "icon": "icon/skill/1315_rank1.png",
+        "paramsEido": [
+          0.16
+        ]
+      },
+      {
+        "id": "131502",
+        "name": "Milestonemonger",
+        "rank": 2,
+        "desc": "When in Standoff and gaining Pocket Trickshot, recovers 1 Skill Point(s) and increases Break Effect by 30%, lasting for 2 turn(s). Can also trigger this effect when gaining Pocket Trickshot stacks that exceed the max limit. But cannot trigger repeatedly within one turn.",
+        "icon": "icon/skill/1315_rank2.png",
+        "paramsEido": [
+          1,
+          0.3,
+          2
+        ]
+      },
+      {
+        "id": "131503",
+        "name": "Marble Orchard's Guard",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1315_ultimate.png"
+      },
+      {
+        "id": "131504",
+        "name": "Cold Cuts Chef",
+        "rank": 4,
+        "desc": "When the enemy target in the Standoff is attacked by Boothill, the DMG they receive additionally increases by 12%. When Boothill is attacked by the enemy target in the Standoff, the effect of him receiving increased DMG is offset by 12%.",
+        "icon": "icon/skill/1315_rank4.png",
+        "paramsEido": [
+          0.12,
+          0.12
+        ]
+      },
+      {
+        "id": "131505",
+        "name": "Stump Speech",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1315_skill.png"
+      },
+      {
+        "id": "131506",
+        "name": "Crowbar Hotel's Raccoon",
+        "rank": 6,
+        "desc": "When triggering the Talent's Break DMG, additionally deals Break DMG to the target equal to 40% of the original DMG multiplier and additionally deals Break DMG to adjacent targets equal to 70% of the original DMG multiplier.",
+        "icon": "icon/skill/1315_rank6.png",
+        "paramsEido": [
+          0.4,
+          0.7
+        ],
+        "extraEffects": {
+          "Break DMG": {
+            "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Skullcrush Spurs": {
+          "variant1": {
+            "skillID": 131501,
+            "trigger": "Skill01",
+            "name": "Skullcrush Spurs",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Boothill's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Boothill_00_Skill01_Camera",
+              "Avatar_Boothill_00_Skill01_Phase01",
+              "Avatar_Boothill_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fanning the Hammer": {
+          "variant1": {
+            "skillID": 131508,
+            "trigger": "Skill11",
+            "name": "Fanning the Hammer",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Boothill's ATK to one designated enemy target.\\nThe Enhanced Basic Attack cannot recover Skill Points and can only target the enemy that is in the \"Standoff\" state.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.1
+              ],
+              "2": [
+                1.32
+              ],
+              "3": [
+                1.54
+              ],
+              "4": [
+                1.76
+              ],
+              "5": [
+                1.98
+              ],
+              "6": [
+                2.2
+              ],
+              "7": [
+                2.42
+              ],
+              "8": [
+                2.64
+              ],
+              "9": [
+                2.86
+              ],
+              "10": [
+                3.08
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Boothill_00_Skill11_Camera",
+              "Avatar_Boothill_00_Skill11_End_Camera",
+              "Avatar_Boothill_00_Skill11_Bonus_Camera",
+              "Avatar_Boothill_00_Skill11_Phase01",
+              "Avatar_Boothill_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Sizzlin' Tango": {
+          "variant1": {
+            "skillID": 131502,
+            "trigger": "Skill02",
+            "name": "Sizzlin' Tango",
+            "type": "Impair",
+            "slot": "Skill",
+            "desc": "Forces Boothill and one designated enemy target into the \"Standoff\" state. Boothill's Basic ATK gets Enhanced, and he cannot use his Skill, lasting for #3[i] turn(s). This duration decreases by 1 at the start of Boothill's every turn.\\nThe enemy target in the \"Standoff\" becomes Taunted. When this enemy target/Boothill gets attacked by the other party in the Standoff, the DMG they receive increases by #1[i]%/#2[i]%.\\nAfter this target is defeated or becomes Weakness Broken, Boothill gains 1 stack of \"Pocket Trickshot,\" then dispels the \"Standoff.\"\\nThis Skill cannot regenerate Energy. After using this Skill, the current turn does not end.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                0.15,
+                2
+              ],
+              "2": [
+                0.165,
+                0.15,
+                2
+              ],
+              "3": [
+                0.18,
+                0.15,
+                2
+              ],
+              "4": [
+                0.195,
+                0.15,
+                2
+              ],
+              "5": [
+                0.21,
+                0.15,
+                2
+              ],
+              "6": [
+                0.225,
+                0.15,
+                2
+              ],
+              "7": [
+                0.24375,
+                0.15,
+                2
+              ],
+              "8": [
+                0.2625,
+                0.15,
+                2
+              ],
+              "9": [
+                0.28125,
+                0.15,
+                2
+              ],
+              "10": [
+                0.3,
+                0.15,
+                2
+              ],
+              "11": [
+                0.315,
+                0.15,
+                2
+              ],
+              "12": [
+                0.33,
+                0.15,
+                2
+              ],
+              "13": [
+                0.345,
+                0.15,
+                2
+              ],
+              "14": [
+                0.36,
+                0.15,
+                2
+              ],
+              "15": [
+                0.375,
+                0.15,
+                2
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Boothill_00_Skill02_Camera",
+              "Avatar_Boothill_00_Skill02_Phase01",
+              "Avatar_Boothill_00_Skill02_Phase02",
+              "Avatar_Boothill_00_Bonus",
+              "Avatar_Boothill_00_Bonus_Camera",
+              "Avatar_Boothill_00_Bonus_Camera_Cut"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Dust Devil's Sunset Rodeo": {
+          "variant1": {
+            "skillID": 131503,
+            "trigger": "Skill03",
+            "name": "Dust Devil's Sunset Rodeo",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Applies Physical Weakness to one designated enemy target, lasting for #3[i] turn(s).\\nDeals Physical DMG equal to #1[i]% of Boothill's ATK to the target and delays their action by #2[i]%.",
+            "energyCost": 115,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.4,
+                0.3,
+                2
+              ],
+              "2": [
+                2.56,
+                0.31,
+                2
+              ],
+              "3": [
+                2.72,
+                0.32,
+                2
+              ],
+              "4": [
+                2.88,
+                0.33,
+                2
+              ],
+              "5": [
+                3.04,
+                0.34,
+                2
+              ],
+              "6": [
+                3.2,
+                0.35,
+                2
+              ],
+              "7": [
+                3.4,
+                0.3625,
+                2
+              ],
+              "8": [
+                3.6,
+                0.375,
+                2
+              ],
+              "9": [
+                3.8,
+                0.3875,
+                2
+              ],
+              "10": [
+                4,
+                0.4,
+                2
+              ],
+              "11": [
+                4.16,
+                0.41,
+                2
+              ],
+              "12": [
+                4.32,
+                0.42,
+                2
+              ],
+              "13": [
+                4.48,
+                0.43,
+                2
+              ],
+              "14": [
+                4.64,
+                0.44,
+                2
+              ],
+              "15": [
+                4.8,
+                0.45,
+                2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Boothill_00_Skill03_Camera",
+              "Avatar_Boothill_00_Skill03_Phase01",
+              "Avatar_Boothill_00_Skill03_Phase02",
+              "Avatar_Boothill_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Five Peas in a Pod": {
+          "variant1": {
+            "skillID": 131504,
+            "trigger": "SkillP01",
+            "name": "Five Peas in a Pod",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Each stack of Pocket Trickshot increases the Enhanced Basic Attack's Toughness Reduction by #4[i]%, stacking up to #5[i] time(s).\\nIf the target is Weakness Broken while the Enhanced Basic ATK is being used, based on the number of Pocket Trickshot stacks, deals Break DMG to this target equal to #1[i]%/#2[i]%/#3[i]% of Boothill's Physical Break DMG. The max Toughness taken into account for this DMG cannot exceed #6[i] times the base Toughness Reduction of the Basic Attack \"Skullcrush Spurs.\"\\nAfter winning the battle, Boothill can retain Pocket Trickshot for the next battle.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.35,
+                0.6,
+                0.85,
+                0.5,
+                3,
+                16
+              ],
+              "2": [
+                0.385,
+                0.66,
+                0.935,
+                0.5,
+                3,
+                16
+              ],
+              "3": [
+                0.42,
+                0.72,
+                1.02,
+                0.5,
+                3,
+                16
+              ],
+              "4": [
+                0.455,
+                0.78,
+                1.105,
+                0.5,
+                3,
+                16
+              ],
+              "5": [
+                0.49,
+                0.84,
+                1.19,
+                0.5,
+                3,
+                16
+              ],
+              "6": [
+                0.525,
+                0.9,
+                1.275,
+                0.5,
+                3,
+                16
+              ],
+              "7": [
+                0.56875,
+                0.975,
+                1.38125,
+                0.5,
+                3,
+                16
+              ],
+              "8": [
+                0.6125,
+                1.05,
+                1.4875,
+                0.5,
+                3,
+                16
+              ],
+              "9": [
+                0.65625,
+                1.125,
+                1.59375,
+                0.5,
+                3,
+                16
+              ],
+              "10": [
+                0.7,
+                1.2,
+                1.7,
+                0.5,
+                3,
+                16
+              ],
+              "11": [
+                0.735,
+                1.26,
+                1.785,
+                0.5,
+                3,
+                16
+              ],
+              "12": [
+                0.77,
+                1.32,
+                1.87,
+                0.5,
+                3,
+                16
+              ],
+              "13": [
+                0.805,
+                1.38,
+                1.955,
+                0.5,
+                3,
+                16
+              ],
+              "14": [
+                0.84,
+                1.44,
+                2.04,
+                0.5,
+                3,
+                16
+              ],
+              "15": [
+                0.875,
+                1.5,
+                2.125,
+                0.5,
+                3,
+                16
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Boothill_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              },
+              "Break DMG": {
+                "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "3-9× Smile": {
+          "variant1": {
+            "skillID": 131507,
+            "trigger": "SkillMaze",
+            "name": "3-9× Smile",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After the Technique is used, when casting the Skill for the first time in the next battle, applies the same Physical Weakness to the target as the one induced by the Ultimate, lasting for #1[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Boothill_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1315_basic_atk.png",
+        "skillRef": {
+          "skillName": "Skullcrush Spurs",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1315_skill.png",
+        "skillRef": {
+          "skillName": "Sizzlin' Tango",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1315_ultimate.png",
+        "skillRef": {
+          "skillName": "Dust Devil's Sunset Rodeo",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1315_talent.png",
+        "skillRef": {
+          "skillName": "Five Peas in a Pod",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1315_technique.png",
+        "skillRef": {
+          "skillName": "3-9× Smile",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Ghost Load",
+        "icon": "icon/skill/1315_skilltree1.png",
+        "desc": "Increase this character's CRIT Rate/CRIT DMG, by an amount equal to #1[i]%/#3[i]% of Break Effect, up to a max increase of #2[i]%/#4[i]%.",
+        "params": [
+          0.1,
+          0.3,
+          0.5,
+          1.5
+        ]
+      },
+      "Point07": {
+        "name": "Above Snakes",
+        "icon": "icon/skill/1315_skilltree2.png",
+        "desc": "While Boothill is in the Standoff, reduces the DMG he receives from targets that are not in the Standoff by #1[i]%.",
+        "params": [
+          0.3
+        ]
+      },
+      "Point08": {
+        "name": "Point Blank",
+        "icon": "icon/skill/1315_skilltree3.png",
+        "desc": "When in Standoff and gaining Pocket Trickshot, regenerates #1[i] Energy. Can also trigger this effect when gaining Pocket Trickshot stacks that exceed the max limit.",
+        "params": [
+          10
+        ]
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1315.png",
+    "preview": "image/character_preview/1315.png",
+    "portrait": "image/character_portrait/1315.png",
+    "bannerOffsets": [
+      10,
+      -39,
+      0.65,
+      10,
+      -39,
+      0.65,
+      10,
+      -39,
+      0.65
+    ],
+    "isBuffed": false
+  },
   "The Dahlia": {
     "internalID": 1321,
     "name": "The Dahlia",
