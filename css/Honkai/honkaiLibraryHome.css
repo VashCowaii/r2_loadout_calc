@@ -251,7 +251,7 @@
     color: white;
 
     position: absolute;
-    bottom: 19%;
+    bottom: 10%;
     padding-left: 5px;
     padding-right: 5px;
 
@@ -347,22 +347,53 @@
 
 .mainGridRow {
     flex-direction: column;
+    height: auto;
+    max-height: unset;
 }
 .mainBodyBufferleftBox {
     width: 100%;
+    justify-content: flex-start;
+    /* height: 400px;
+    min-height: 500px; */
 }
 .mainBodyCardBox {
     width: 100%;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    margin: 0px;
+    padding: 0px;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardBoxIconTextVersion {
     bottom: 20%;
+    position: relative;
+}
+.cardBoxCharacterCard,.cardBoxLCAndRelicBox  {
+    width: 90%;
+    margin: 0px;
+    /* margin: 10px; */
+    padding: 0px;
 }
 
 .mainSelectionHeaderRow {
     bottom: 0%;
+    position: relative;
 
+}
+
+.cardBoxRelicCard,.cardBoxLightconeCard,.cardBoxCharacterCard {
+    height: 200px;
+    margin: 10px;
+}
+
+.cardBoxCharacterCardIcon {
+    transform: translateY(17%);
+}
+.cardBoxLightconeCardIcon  {
+    transform: translateY(25%);
 }
 
 
