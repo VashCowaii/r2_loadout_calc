@@ -3578,7 +3578,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${parseRef.whitelist != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Whitelist Targets:</div>&nbsp;
-                ${parseRef.whitelist}
+                ${megaParsingFuckery.makeConditionTargetBox(parseRef.whitelist,initialCounter)}
             </div>` : ""}
             ${parseRef.whitelistTag != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Whitelist Tag:</div>&nbsp;
@@ -7096,7 +7096,7 @@ const megaParsingFuckeryPain = {
 
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
-            ${parseRef.weakTo} is${parseRef.invertCondition != undefined ? " NOT" : ""} Weak to ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+            ${megaParsingFuckery.makeConditionTargetBox(parseRef.weakTo,initialCounter)} is${parseRef.invertCondition != undefined ? " NOT" : ""} Weak to ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>
         `;
     },
@@ -8358,7 +8358,7 @@ const megaParsingFuckeryPain = {
                 ${parseRef.addedDisplayWeakness ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Display Added Weakness:</div>&nbsp;
                     
-                    ${megaParsingFuckery.makeConditionTargetBox(parseRef.addedDisplayWeakness,initialCounter)}
+                    ${parseRef.addedDisplayWeakness?.DamageType ? parseRef.addedDisplayWeakness?.DamageType : megaParsingFuckery.makeConditionTargetBox(parseRef.addedDisplayWeakness,initialCounter)}
                 </div>` : ""}
                 ${parseRef.multiplier ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Multiplier:</div>&nbsp;
