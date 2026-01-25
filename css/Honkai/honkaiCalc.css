@@ -2436,6 +2436,7 @@ div {
     position: relative;
     overflow: hidden;
     background-color: black;
+    text-decoration: none;
 }
 .hoverOpacity:hover {
     opacity: 0.6;

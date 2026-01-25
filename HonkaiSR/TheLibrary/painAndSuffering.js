@@ -2699,7 +2699,7 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
         </div>`;
     },
-    "Sort by Life-State"(parseRef,initialCounter) {
+    "Filter by Target"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             // "stat",
@@ -2708,7 +2708,29 @@ const megaParsingFuckeryPain = {
             // "defenders",
             // "sortByHighest",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Life-State");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"SorFilter by Targetate");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.exclude != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Exclude:</div>&nbsp;
+                ${megaParsingFuckery.makeConditionTargetBox(parseRef.exclude,initialCounter)}
+            </div>` : ""}
+        </div>`;
+    },
+    "Filter by Life-State"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "stat",
+            // "living",
+            "state",
+            // "defenders",
+            // "sortByHighest",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Filter by Life-State");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
@@ -3323,6 +3345,29 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.team}
+        </div>`;
+    },
+    "Add Target by Pseudo-Character Partner"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "identifier",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Attack-Type Extension");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.identifier != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Identifier:</div>&nbsp;
+                ${parseRef.target}
+            </div>` : ""}
+            ${parseRef.identifier != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Target:</div>&nbsp;
+                ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+            </div>` : ""}
         </div>`;
     },
     "Attack-Type Extension"(parseRef,initialCounter) {

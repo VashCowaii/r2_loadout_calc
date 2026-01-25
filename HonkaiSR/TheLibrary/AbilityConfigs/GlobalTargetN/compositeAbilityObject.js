@@ -83,7 +83,7 @@ const compositeAbilityObject = {
                   "target": "{{Hostile Entities(AOE)}}"
                 },
                 {
-                  "name": "Sort by Life-State",
+                  "name": "Filter by Life-State",
                   "state": "Mask_AliveOnly"
                 },
                 {
@@ -138,7 +138,7 @@ const compositeAbilityObject = {
                   "target": "{{Hostile Entities(AOE)}}"
                 },
                 {
-                  "name": "Sort by Life-State",
+                  "name": "Filter by Life-State",
                   "state": "Mask_AliveOnly"
                 },
                 {
