@@ -38829,6 +38829,940 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "The Herta": {
+    "internalID": 1401,
+    "name": "The Herta",
+    "path": "Erudition",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 220,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1164.2399999999998,
+      "SPDBase": 99,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "140101",
+        "name": "Night at Shorefall",
+        "rank": 1,
+        "desc": "When the Enhanced Skill calculates the number of \"Interpretation\" stacks, additionally counts 50% of the number of \"Interpretation\" stacks on the 1 target with the most stacks among the primary target and adjacent targets. When \"Interpretation\" is reset by using the Enhanced Skill, its stack number is reset to 15 instead.",
+        "icon": "icon/skill/1401_rank1.png",
+        "paramsEido": [
+          0.5,
+          15
+        ]
+      },
+      {
+        "id": "140102",
+        "name": "Wind Through Keyhole",
+        "rank": 2,
+        "desc": "After The Herta enters battle or uses Ultimate, additionally gains 1 \"Inspiration\" stack. After using Enhanced Skill, advances The Herta's next action by 35%.",
+        "icon": "icon/skill/1401_rank2.png",
+        "paramsEido": [
+          0.35,
+          42,
+          0.25
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "140103",
+        "name": "Door into Summer",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1401_skill.png"
+      },
+      {
+        "id": "140104",
+        "name": "The Sixteenth Key",
+        "rank": 4,
+        "desc": "The SPD of Erudition characters in the team increases by 12%.",
+        "icon": "icon/skill/1401_rank4.png",
+        "paramsEido": [
+          0.12
+        ]
+      },
+      {
+        "id": "140105",
+        "name": "Bitter Pill of Truth",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1401_ultimate.png"
+      },
+      {
+        "id": "140106",
+        "name": "Sweet Lure of Answer",
+        "rank": 6,
+        "desc": "The Herta's Ice RES PEN increases by 20%. When the number of enemy targets on the field is 3 (or more)/2/1, Ultimate's DMG multiplier increases by 140%/250%/400% respectively.",
+        "icon": "icon/skill/1401_rank6.png",
+        "paramsEido": [
+          1.4,
+          2.5,
+          4,
+          0.2
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Did You Get It": {
+          "variant1": {
+            "skillID": 140101,
+            "trigger": "Skill01",
+            "name": "Did You Get It",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of The Herta's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                3,
+                1,
+                0.3
+              ],
+              "2": [
+                0.6,
+                3,
+                1,
+                0.3
+              ],
+              "3": [
+                0.7,
+                3,
+                1,
+                0.3
+              ],
+              "4": [
+                0.8,
+                3,
+                1,
+                0.3
+              ],
+              "5": [
+                0.9,
+                3,
+                1,
+                0.3
+              ],
+              "6": [
+                1,
+                3,
+                1,
+                0.3
+              ],
+              "7": [
+                1.1,
+                3,
+                1,
+                0.3
+              ],
+              "8": [
+                1.2,
+                3,
+                1,
+                0.3
+              ],
+              "9": [
+                1.3,
+                3,
+                1,
+                0.3
+              ],
+              "10": [
+                1.4,
+                3,
+                1,
+                0.3
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_TheHerta_00_Skill01_Camera",
+              "Avatar_TheHerta_00_Skill01_Phase01",
+              "Avatar_TheHerta_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Big Brain Energy": {
+          "variant1": {
+            "skillID": 140102,
+            "trigger": "Skill02",
+            "name": "Big Brain Energy",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of The Herta's ATK to one designated enemy, and inflicts #2[i] stack(s) of \"Interpretation.\" Deals Ice DMG equal to #1[i]% of The Herta's ATK to the targets hit by this instance of Skill and their respective adjacent targets. This effect can repeat 2 times.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 15,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.35,
+                1
+              ],
+              "2": [
+                0.385,
+                1
+              ],
+              "3": [
+                0.42,
+                1
+              ],
+              "4": [
+                0.455,
+                1
+              ],
+              "5": [
+                0.49,
+                1
+              ],
+              "6": [
+                0.525,
+                1
+              ],
+              "7": [
+                0.56875,
+                1
+              ],
+              "8": [
+                0.6125,
+                1
+              ],
+              "9": [
+                0.65625,
+                1
+              ],
+              "10": [
+                0.7,
+                1
+              ],
+              "11": [
+                0.735,
+                1
+              ],
+              "12": [
+                0.77,
+                1
+              ],
+              "13": [
+                0.805,
+                1
+              ],
+              "14": [
+                0.84,
+                1
+              ],
+              "15": [
+                0.875,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_TheHerta_00_Skill02_Camera",
+              "Avatar_TheHerta_00_Skill02_Phase01",
+              "Avatar_TheHerta_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 45
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Hear Me Out": {
+          "variant1": {
+            "skillID": 140109,
+            "trigger": "Skill21",
+            "name": "Hear Me Out",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Consumes 1 stack of \"Inspiration.\" Deals Ice DMG equal to #1[i]% of The Herta's ATK to one designated enemy and inflicts #2[i] stack(s) of \"Interpretation.\" Deals Ice DMG equal to #1[i]% of The Herta's ATK to the targets hit by this instance of Skill and their respective adjacent targets, repeating 2 times. At the end, deals Ice DMG equal to #3[i]% of The Herta's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                1,
+                0.2
+              ],
+              "2": [
+                0.44,
+                1,
+                0.22
+              ],
+              "3": [
+                0.48,
+                1,
+                0.24
+              ],
+              "4": [
+                0.52,
+                1,
+                0.26
+              ],
+              "5": [
+                0.56,
+                1,
+                0.28
+              ],
+              "6": [
+                0.6,
+                1,
+                0.3
+              ],
+              "7": [
+                0.65,
+                1,
+                0.325
+              ],
+              "8": [
+                0.7,
+                1,
+                0.35
+              ],
+              "9": [
+                0.75,
+                1,
+                0.375
+              ],
+              "10": [
+                0.8,
+                1,
+                0.4
+              ],
+              "11": [
+                0.84,
+                1,
+                0.42
+              ],
+              "12": [
+                0.88,
+                1,
+                0.44
+              ],
+              "13": [
+                0.92,
+                1,
+                0.46
+              ],
+              "14": [
+                0.96,
+                1,
+                0.48
+              ],
+              "15": [
+                1,
+                1,
+                0.5
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_TheHerta_00_Skill021_Camera",
+              "Avatar_TheHerta_00_Skill21_Phase01",
+              "Avatar_TheHerta_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Told Ya! Magic Happens": {
+          "variant1": {
+            "skillID": 140103,
+            "trigger": "Skill03",
+            "name": "Told Ya! Magic Happens",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Rearranges the numbers of \"Interpretation\" stacks on all enemies, prioritizing the transfer of the higher numbers of \"Interpretation\" stacks to Elite-level targets and above. Then, deals Ice DMG equal to #1[i]% of The Herta's ATK to all enemies. When using Ultimate, increases The Herta's ATK by #4[i]%, lasting for #5[i] turn(s). After the use, The Herta immediately takes action and gains 1 stack of \"Inspiration.\" \"Inspiration\" can stack up to #6[i] time(s). While having \"Inspiration,\" enhances Skill to \"Hear Me Out.\"",
+            "energyCost": 220,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                2,
+                1,
+                0.4,
+                3,
+                4
+              ],
+              "2": [
+                1.1,
+                2,
+                1,
+                0.44,
+                3,
+                4
+              ],
+              "3": [
+                1.2,
+                2,
+                1,
+                0.48,
+                3,
+                4
+              ],
+              "4": [
+                1.3,
+                2,
+                1,
+                0.52,
+                3,
+                4
+              ],
+              "5": [
+                1.4,
+                2,
+                1,
+                0.56,
+                3,
+                4
+              ],
+              "6": [
+                1.5,
+                2,
+                1,
+                0.6,
+                3,
+                4
+              ],
+              "7": [
+                1.625,
+                2,
+                1,
+                0.65,
+                3,
+                4
+              ],
+              "8": [
+                1.75,
+                2,
+                1,
+                0.7,
+                3,
+                4
+              ],
+              "9": [
+                1.875,
+                2,
+                1,
+                0.75,
+                3,
+                4
+              ],
+              "10": [
+                2,
+                2,
+                1,
+                0.8,
+                3,
+                4
+              ],
+              "11": [
+                2.1,
+                2,
+                1,
+                0.84,
+                3,
+                4
+              ],
+              "12": [
+                2.2,
+                2,
+                1,
+                0.88,
+                3,
+                4
+              ],
+              "13": [
+                2.3,
+                2,
+                1,
+                0.92,
+                3,
+                4
+              ],
+              "14": [
+                2.4,
+                2,
+                1,
+                0.96,
+                3,
+                4
+              ],
+              "15": [
+                2.5,
+                2,
+                1,
+                1,
+                3,
+                4
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_TheHerta_00_Skill03_Camera",
+              "Avatar_TheHerta_00_Skill03_EnterReady",
+              "Avatar_TheHerta_00_Skill03_Phase01",
+              "Avatar_TheHerta_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Hand Them Over": {
+          "variant1": {
+            "skillID": 140104,
+            "trigger": "SkillP01",
+            "name": "Hand Them Over",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When enemy targets enter battle, The Herta inflicts 1 stack of \"Interpretation\" on them. At the start of each wave, applies #6[i] stack(s) of \"Interpretation\" to a random enemy target, prioritizing Elite-level targets and above. When the Enhanced Skill's primary target has \"Interpretation,\" the multiplier for the DMG dealt increases, with each stack granting an increase of #1[f1]%/#2[f1]% on the primary target/other targets respectively. If 2 or more characters follow the Path of Erudition in the team, each stack grants an additional increase of #1[f1]%/#2[f1]% on the primary target/other targets respectively. \"Interpretation\" can stack up to #3[i] time(s). When using the Enhanced Skill, resets the number of \"Interpretation\" stacks on the primary target to 1. After the enemy target leaves the field or gets defeated by any unit, \"Interpretation\" will be transferred, prioritizing the transfer to Elite-level targets and above.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.04,
+                0.02,
+                42,
+                1,
+                42,
+                25
+              ],
+              "2": [
+                0.044,
+                0.022,
+                42,
+                1,
+                42,
+                25
+              ],
+              "3": [
+                0.048,
+                0.024,
+                42,
+                1,
+                42,
+                25
+              ],
+              "4": [
+                0.052,
+                0.026,
+                42,
+                1,
+                42,
+                25
+              ],
+              "5": [
+                0.055999998,
+                0.027999999,
+                42,
+                1,
+                42,
+                25
+              ],
+              "6": [
+                0.06,
+                0.03,
+                42,
+                1,
+                42,
+                25
+              ],
+              "7": [
+                0.065,
+                0.0325,
+                42,
+                1,
+                42,
+                25
+              ],
+              "8": [
+                0.07,
+                0.035,
+                42,
+                1,
+                42,
+                25
+              ],
+              "9": [
+                0.075,
+                0.0375,
+                42,
+                1,
+                42,
+                25
+              ],
+              "10": [
+                0.08,
+                0.04,
+                42,
+                1,
+                42,
+                25
+              ],
+              "11": [
+                0.084,
+                0.042,
+                42,
+                1,
+                42,
+                25
+              ],
+              "12": [
+                0.088,
+                0.044,
+                42,
+                1,
+                42,
+                25
+              ],
+              "13": [
+                0.092,
+                0.046,
+                42,
+                1,
+                42,
+                25
+              ],
+              "14": [
+                0.096,
+                0.048,
+                42,
+                1,
+                42,
+                25
+              ],
+              "15": [
+                0.1,
+                0.05,
+                42,
+                1,
+                42,
+                25
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_TheHerta_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Vibe Checker": {
+          "variant1": {
+            "skillID": 140107,
+            "trigger": "SkillMaze",
+            "name": "Vibe Checker",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, increases The Herta's ATK by #1[i]% at the start of the next battle, lasting for #2[i] turn(s).\\nIf there are Basic Treasures in this current map, using Technique can mark up to #3[i] Basic Treasures' locations.\\nAfter entering battle by using Technique in Simulated Universe or Divergent Universe, at the start of each wave, deals True DMG to enemy targets lower than Elite-level by an amount equal to #4[i]% of the targets' Max HP, and deals True DMG to enemy targets at Elite-level and above by an amount equal to #5[i]% of the targets' Max HP.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                2,
+                3,
+                0.99,
+                0.3,
+                25
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_TheHerta_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "True DMG": {
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1401_basic_atk.png",
+        "skillRef": {
+          "skillName": "Did You Get It",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1401_skill.png",
+        "skillRef": {
+          "skillName": "Big Brain Energy",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1401_ultimate.png",
+        "skillRef": {
+          "skillName": "Told Ya! Magic Happens",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1401_talent.png",
+        "skillRef": {
+          "skillName": "Hand Them Over",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1401_technique.png",
+        "skillRef": {
+          "skillName": "Vibe Checker",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Aloofly Honest",
+        "icon": "icon/skill/1401_skilltree1.png",
+        "desc": "When ally targets attack, inflicts 1 stack of \"Interpretation\" on the hit enemy target. After attacking, for every 1 target hit by this attack, regenerates #1[i] fixed Energy for The Herta, counting up to a maximum of 5 targets. When using Enhanced Skill, if the primary target's \"Interpretation\" stack reaches 42, increases the Ice DMG dealt by The Herta by #2[i]%, lasting until the end of this attack.",
+        "params": [
+          3,
+          0.5
+        ]
+      },
+      "Point07": {
+        "name": "Message From Beyond the Veil",
+        "icon": "icon/skill/1401_skilltree2.png",
+        "desc": "When entering battle, if the team has 2 or more Erudition characters, increases all allies' CRIT DMG by #1[i]%. And the Trace \"Aloofly Honest\" counts at least #2[i] target(s) when calculating the number of targets hit. After attacking, applies #3[i] \"Interpretation\" stack(s) to the target that has the highest existing \"Interpretation\" stacks among the hit enemy targets. If the attacker is an Erudition character, then additionally applies #4[i] \"Interpretation\" stack(s).",
+        "params": [
+          0.8,
+          3,
+          1,
+          2
+        ]
+      },
+      "Point08": {
+        "name": "Starved Landscape of Vacua",
+        "icon": "icon/skill/1401_skilltree3.png",
+        "desc": "For every 1 stack of \"Interpretation\" inflicted on enemy targets, The Herta gains 1 stack of \"Answer,\" up to a max of #2[i] stack(s). When using Ultimate, each \"Answer\" stack increases this instance of Ultimate's DMG multiplier by #1[f1]%.",
+        "params": [
+          0.01,
+          99
+        ]
+      },
+      "Point09": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.032
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.048
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "DMG Boost: Ice",
+        "icon": "icon/property/IconIceAddedRatio.png",
+        "stats": {
+          "DamageIce": 0.064
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1401.png",
+    "preview": "image/character_preview/1401.png",
+    "portrait": "image/character_portrait/1401.png",
+    "bannerOffsets": [
+      48,
+      60,
+      0.64,
+      48,
+      60,
+      0.64,
+      48,
+      60,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Tribbie": {
     "internalID": 1403,
     "name": "Tribbie",

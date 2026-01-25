@@ -2855,6 +2855,34 @@ const megaParsingFuckeryPain = {
             
         </div>`;
     },
+    "Sort by Modifier Value"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "modifier",
+            "value",
+            "sortByHighest",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Modifier Value");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.modifier != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Modifier:</div>&nbsp;
+                ${parseRef.modifier}
+            </div>` : ""}
+            ${parseRef.value != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Modifier Value:</div>&nbsp;
+                ${parseRef.value}
+            </div>` : ""}
+            ${parseRef.sortByHighest != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">By Highest:</div>&nbsp;
+                ${parseRef.sortByHighest}
+            </div>` : ""}
+        </div>`;
+    },
     "Sort by Stat"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -8237,6 +8265,7 @@ const megaParsingFuckeryPain = {
             "name",
             "show",
             "target",
+            "attacker",
             "skillType",
 
             "delayAdvancePreview",
@@ -8257,6 +8286,8 @@ const megaParsingFuckeryPain = {
             "addedValue",
             "maxToughness",
             "minToughness",
+            "toughnessType",
+            "baseToughnessDMG",
 
             // "for",
             // "stackType",
@@ -8296,6 +8327,13 @@ const megaParsingFuckeryPain = {
             ${returnString ?? ""} ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) ?? ""}
 
             <div class="modifierDetailsBox">
+
+                
+                ${parseRef.attacker ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Attacker:</div>&nbsp;
+                    ${megaParsingFuckery.makeConditionTargetBox(parseRef.attacker,initialCounter)}
+                </div>` : ""}
+
                 ${parseRef.show ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Display:</div>&nbsp;
                     ${parseRef.show}
@@ -8335,7 +8373,17 @@ const megaParsingFuckeryPain = {
                     <div class="rotationConditionOperatorHeaderInline">Min Toughness:</div>&nbsp;
                     ${parseRef.minToughness.displayLines ?? parseRef.minToughness}
                 </div>` : ""}
+                ${parseRef.toughnessType ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Toughness Element:</div>&nbsp;
+                    ${parseRef.toughnessType.displayLines ?? parseRef.toughnessType}
+                </div>` : ""}
+                ${parseRef.baseToughnessDMG ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Base Toughness DMG:</div>&nbsp;
+                    ${parseRef.baseToughnessDMG.displayLines ?? parseRef.baseToughnessDMG}
+                </div>` : ""}
 
+
+                
 
                 
                 ${delayAdvancePreview ? `<div class="actionDetailBody2">
