@@ -144,8 +144,16 @@ let allowedCharacterList = [
     "trimName": "Huohuo"
   },
   {
+    "fullName": "Jiaoqiu",
+    "trimName": "Jiaoqiu"
+  },
+  {
     "fullName": "Yunli",
     "trimName": "Yunli"
+  },
+  {
+    "fullName": "Lingsha",
+    "trimName": "Lingsha"
   },
   {
     "fullName": "Moze",
@@ -154,6 +162,10 @@ let allowedCharacterList = [
   {
     "fullName": "March 7th - The Hunt",
     "trimName": "March7thTH"
+  },
+  {
+    "fullName": "Fugue",
+    "trimName": "Fugue"
   },
   {
     "fullName": "Gallagher",
@@ -196,12 +208,32 @@ let allowedCharacterList = [
     "trimName": "Misha"
   },
   {
+    "fullName": "Sunday",
+    "trimName": "Sunday"
+  },
+  {
     "fullName": "Jade",
     "trimName": "Jade"
   },
   {
+    "fullName": "Boothill",
+    "trimName": "Boothill"
+  },
+  {
     "fullName": "The Dahlia",
     "trimName": "TheDahlia"
+  },
+  {
+    "fullName": "The Herta",
+    "trimName": "TheHerta"
+  },
+  {
+    "fullName": "Aglaea",
+    "trimName": "Aglaea"
+  },
+  {
+    "fullName": "Garmentmaker",
+    "trimName": "Garmentmaker"
   },
   {
     "fullName": "Tribbie",

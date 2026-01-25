@@ -1910,11 +1910,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakConverted</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (MDF_AddBreakDamageRatio) || RETURN",
-                    "displayLines": "MDF_AddBreakDamageRatio",
+                    "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
+                    "displayLines": "MDF_BreakDamageAdd",
                     "constants": [],
                     "variables": [
-                      "MDF_AddBreakDamageRatio"
+                      "MDF_BreakDamageAdd"
                     ]
                   }
                 }
@@ -2071,11 +2071,11 @@ const compositeAbilityObject = {
                   "modifier": "PlayerBoy_20_Eidolon4_BreakDamageBonus[<span class=\"descriptionNumberColor\">Dove in Tophat</span>]",
                   "valuePerStack": {
                     "MDF_AddBreakDamageRatio": {
-                      "operator": "Variables[0] (MDF_AddBreakDamageRatio) || RETURN",
-                      "displayLines": "MDF_AddBreakDamageRatio",
+                      "operator": "Variables[0] (MDF_BreakDamageAdd) || RETURN",
+                      "displayLines": "MDF_BreakDamageAdd",
                       "constants": [],
                       "variables": [
-                        "MDF_AddBreakDamageRatio"
+                        "MDF_BreakDamageAdd"
                       ]
                     }
                   }
