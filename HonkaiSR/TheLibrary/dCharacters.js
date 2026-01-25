@@ -26916,6 +26916,802 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Jiaoqiu": {
+    "internalID": 1218,
+    "name": "Jiaoqiu",
+    "path": "Nihility",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 100,
+    "baseStats": {
+      "ATKBase": 601.5239999999999,
+      "DEFBase": 509.355,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 98,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "121801",
+        "name": "Pentapathic Transference",
+        "rank": 1,
+        "desc": "Allies deal 40% increased DMG to enemy targets afflicted with Ashen Roast. Whenever inflicting Ashen Roast on an enemy target via triggering the Talent's effect, additionally increases the number of \"Ashen Roast\" stacks applied this time by 1.",
+        "icon": "icon/skill/1218_rank1.png",
+        "paramsEido": [
+          0.4,
+          1
+        ]
+      },
+      {
+        "id": "121802",
+        "name": "From Savor Comes Suffer",
+        "rank": 2,
+        "desc": "When an enemy target is afflicted with Ashen Roast, increases the multiplier for the Fire DoT dealt by Ashen Roast to this target by 300%.",
+        "icon": "icon/skill/1218_rank2.png",
+        "paramsEido": [
+          3
+        ]
+      },
+      {
+        "id": "121803",
+        "name": "Flavored Euphony Reigns Supreme",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1218_skill.png"
+      },
+      {
+        "id": "121804",
+        "name": "Leisure In, Luster Out",
+        "rank": 4,
+        "desc": "When the Zone exists, reduces enemy target's ATK by 15%.",
+        "icon": "icon/skill/1218_rank4.png",
+        "paramsEido": [
+          0.15
+        ]
+      },
+      {
+        "id": "121805",
+        "name": "Duel in Dawn, Dash in Dusk",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1218_ultimate.png"
+      },
+      {
+        "id": "121806",
+        "name": "Nonamorphic Pyrobind",
+        "rank": 6,
+        "desc": "When an enemy target gets defeated, their accumulated \"Ashen Roast\" stacks will transfer to the enemy with the lowest number of \"Ashen Roast\" stacks on the battlefield. The maximum stack limit of Ashen Roast increases to 9, and each \"Ashen Roast\" stack reduces the target's All-Type RES by 3%.",
+        "icon": "icon/skill/1218_rank6.png",
+        "paramsEido": [
+          1,
+          9,
+          0.03
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Heart Afire": {
+          "variant1": {
+            "skillID": 121801,
+            "trigger": "Skill01",
+            "name": "Heart Afire",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Jiaoqiu's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Jiaoqiu_00_Skill01_Camera",
+              "Avatar_Jiaoqiu_00_Skill01_Phase01",
+              "Avatar_Jiaoqiu_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Scorch Onslaught": {
+          "variant1": {
+            "skillID": 121802,
+            "trigger": "Skill02",
+            "name": "Scorch Onslaught",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Jiaoqiu's ATK to one designated enemy target and Fire DMG equal to #2[i]% of Jiaoqiu's ATK to adjacent targets, with a #3[i]% base chance to inflict 1 stack of \"Ashen Roast\" on the primary target.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.75,
+                0.45,
+                1
+              ],
+              "2": [
+                0.825,
+                0.495,
+                1
+              ],
+              "3": [
+                0.9,
+                0.54,
+                1
+              ],
+              "4": [
+                0.975,
+                0.585,
+                1
+              ],
+              "5": [
+                1.05,
+                0.63,
+                1
+              ],
+              "6": [
+                1.125,
+                0.675,
+                1
+              ],
+              "7": [
+                1.21875,
+                0.73125,
+                1
+              ],
+              "8": [
+                1.3125,
+                0.7875,
+                1
+              ],
+              "9": [
+                1.40625,
+                0.84375,
+                1
+              ],
+              "10": [
+                1.5,
+                0.9,
+                1
+              ],
+              "11": [
+                1.575,
+                0.945,
+                1
+              ],
+              "12": [
+                1.65,
+                0.99,
+                1
+              ],
+              "13": [
+                1.725,
+                1.035,
+                1
+              ],
+              "14": [
+                1.8,
+                1.08,
+                1
+              ],
+              "15": [
+                1.875,
+                1.125,
+                1
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jiaoqiu_00_Skill02_Camera",
+              "Avatar_Jiaoqiu_00_Skill02_Phase01",
+              "Avatar_Jiaoqiu_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Pyrograph Arcanum": {
+          "variant1": {
+            "skillID": 121803,
+            "trigger": "Skill03",
+            "name": "Pyrograph Arcanum",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Sets the number of \"Ashen Roast\" stacks on enemy targets to the highest number of \"Ashen Roast\" stacks present on the battlefield. Then, activates a Zone and deals Fire DMG equal to #1[i]% of Jiaoqiu's ATK to all enemies.\\nWhile inside the Zone, enemy targets receive #3[f1]% increased Ultimate DMG, with a #2[i]% base chance of being inflicted with 1 stack of Ashen Roast when taking action. While the Zone exists, this effect can trigger up to #5[i] time(s). And for each enemy target, it can only trigger once per turn. This trigger count resets every time Jiaoqiu uses Ultimate.\\nThe Zone lasts for #4[i] turn(s), and its duration decreases by 1 at the start of this unit's every turn. If Jiaoqiu gets knocked down, the Zone will also be dispelled.",
+            "energyCost": 100,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.5,
+                0.09,
+                3,
+                6
+              ],
+              "2": [
+                0.64,
+                0.51,
+                0.096,
+                3,
+                6
+              ],
+              "3": [
+                0.68,
+                0.52,
+                0.102,
+                3,
+                6
+              ],
+              "4": [
+                0.72,
+                0.53,
+                0.108,
+                3,
+                6
+              ],
+              "5": [
+                0.76,
+                0.54,
+                0.114,
+                3,
+                6
+              ],
+              "6": [
+                0.8,
+                0.55,
+                0.12,
+                3,
+                6
+              ],
+              "7": [
+                0.85,
+                0.5625,
+                0.1275,
+                3,
+                6
+              ],
+              "8": [
+                0.9,
+                0.575,
+                0.135,
+                3,
+                6
+              ],
+              "9": [
+                0.95,
+                0.5875,
+                0.1425,
+                3,
+                6
+              ],
+              "10": [
+                1,
+                0.6,
+                0.15,
+                3,
+                6
+              ],
+              "11": [
+                1.04,
+                0.61,
+                0.156,
+                3,
+                6
+              ],
+              "12": [
+                1.08,
+                0.62,
+                0.162,
+                3,
+                6
+              ],
+              "13": [
+                1.12,
+                0.63,
+                0.168,
+                3,
+                6
+              ],
+              "14": [
+                1.16,
+                0.64,
+                0.174,
+                3,
+                6
+              ],
+              "15": [
+                1.2,
+                0.65,
+                0.18,
+                3,
+                6
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jiaoqiu_00_Skill03_Camera",
+              "Avatar_Jiaoqiu_00_Skill03_EnterReady",
+              "Avatar_Jiaoqiu_00_Skill03_Phase01",
+              "Avatar_Jiaoqiu_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Quartet Finesse, Octave Finery": {
+          "variant1": {
+            "skillID": 121804,
+            "trigger": "SkillP01",
+            "name": "Quartet Finesse, Octave Finery",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "When Jiaoqiu hits an enemy with Basic ATK, Skill or Ultimate, there is a #1[i]% base chance to inflict 1 stack of Ashen Roast on them. At 1 stack, increases DMG received by the enemy by #2[f1]%. Then, each subsequent stack increases this by #3[f1]%.\\nAshen Roast is capped at #4[i] stack(s) and lasts for #5[i] turn(s).\\nWhen an enemy target is afflicted with Ashen Roast, they are also considered as being Burned at the same time, taking Fire DoT equal to #6[i]% of Jiaoqiu's ATK at the start of each turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.075,
+                0.025,
+                5,
+                2,
+                0.9
+              ],
+              "2": [
+                1,
+                0.0825,
+                0.0275,
+                5,
+                2,
+                0.99
+              ],
+              "3": [
+                1,
+                0.09,
+                0.03,
+                5,
+                2,
+                1.08
+              ],
+              "4": [
+                1,
+                0.0975,
+                0.0325,
+                5,
+                2,
+                1.17
+              ],
+              "5": [
+                1,
+                0.105,
+                0.035,
+                5,
+                2,
+                1.26
+              ],
+              "6": [
+                1,
+                0.1125,
+                0.0375,
+                5,
+                2,
+                1.35
+              ],
+              "7": [
+                1,
+                0.121875,
+                0.040625002,
+                5,
+                2,
+                1.4625
+              ],
+              "8": [
+                1,
+                0.13125,
+                0.04375,
+                5,
+                2,
+                1.575
+              ],
+              "9": [
+                1,
+                0.140625,
+                0.046875,
+                5,
+                2,
+                1.6875
+              ],
+              "10": [
+                1,
+                0.15,
+                0.05,
+                5,
+                2,
+                1.8
+              ],
+              "11": [
+                1,
+                0.1575,
+                0.052500002,
+                5,
+                2,
+                1.89
+              ],
+              "12": [
+                1,
+                0.165,
+                0.055,
+                5,
+                2,
+                1.98
+              ],
+              "13": [
+                1,
+                0.1725,
+                0.0575,
+                5,
+                2,
+                2.07
+              ],
+              "14": [
+                1,
+                0.18,
+                0.06,
+                5,
+                2,
+                2.16
+              ],
+              "15": [
+                1,
+                0.1875,
+                0.0625,
+                5,
+                2,
+                2.25
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jiaoqiu_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Fiery Queller": {
+          "variant1": {
+            "skillID": 121807,
+            "trigger": "SkillMaze",
+            "name": "Fiery Queller",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that lasts for #2[i] second(s). After entering combat with enemies in this Special Dimension, deals Fire DMG equal to #1[i]% of Jiaoqiu's ATK to all enemies, with a #3[i]% base chance of applying 1 \"Ashen Roast\" stack. Only 1 dimension created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                15,
+                1
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Jiaoqiu_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1218_basic_atk.png",
+        "skillRef": {
+          "skillName": "Heart Afire",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1218_skill.png",
+        "skillRef": {
+          "skillName": "Scorch Onslaught",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1218_ultimate.png",
+        "skillRef": {
+          "skillName": "Pyrograph Arcanum",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1218_talent.png",
+        "skillRef": {
+          "skillName": "Quartet Finesse, Octave Finery",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1218_technique.png",
+        "skillRef": {
+          "skillName": "Fiery Queller",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Pyre Cleanse",
+        "icon": "icon/skill/1218_skilltree1.png",
+        "desc": "When battle starts, immediately regenerates #1[i] Energy.",
+        "params": [
+          15
+        ]
+      },
+      "Point07": {
+        "name": "Hearth Kindle",
+        "icon": "icon/skill/1218_skilltree2.png",
+        "desc": "For every #2[i]% of Jiaoqiu's Effect Hit Rate that exceeds #1[i]%, additionally increases ATK by #3[i]%, up to #4[i]%.",
+        "params": [
+          0.8,
+          0.15,
+          0.6,
+          2.4
+        ]
+      },
+      "Point08": {
+        "name": "Seared Scent",
+        "icon": "icon/skill/1218_skilltree3.png",
+        "desc": "While the Zone exists, enemies entering combat will be inflicted with Ashen Roast. The number of stacks applied will match the highest number of \"Ashen Roast\" stacks possessed by any unit while the Zone is active, with a minimum of #1[i] stack(s).",
+        "params": [
+          1
+        ]
+      },
+      "Point09": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point11": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point15": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.064
+        }
+      },
+      "Point18": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1218.png",
+    "preview": "image/character_preview/1218.png",
+    "portrait": "image/character_portrait/1218.png",
+    "bannerOffsets": [
+      1,
+      -6,
+      0.64,
+      1,
+      -6,
+      0.64,
+      1,
+      -6,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Yunli": {
     "internalID": 1221,
     "name": "Yunli",
