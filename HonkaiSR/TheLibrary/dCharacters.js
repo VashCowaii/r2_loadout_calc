@@ -27744,6 +27744,874 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Lingsha": {
+    "internalID": 1222,
+    "name": "Lingsha",
+    "path": "Abundance",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 436.59000000000003,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 98,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "122201",
+        "name": "Bloom on Vileward Bouquet",
+        "rank": 1,
+        "desc": "Lingsha's Weakness Break Efficiency increases by 50%. When an enemy unit's Weakness is Broken, reduces their DEF by 20%.",
+        "icon": "icon/skill/1222_rank1.png",
+        "paramsEido": [
+          0.2,
+          0.5
+        ]
+      },
+      {
+        "id": "122202",
+        "name": "Leisure in Carmine Smokeveil",
+        "rank": 2,
+        "desc": "When using Ultimate, increases all allies' Break Effect by 40%, lasting for 3 turn(s).",
+        "icon": "icon/skill/1222_rank2.png",
+        "paramsEido": [
+          0.4,
+          3
+        ]
+      },
+      {
+        "id": "122203",
+        "name": "Shine of Floral Wick",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1222_ultimate.png"
+      },
+      {
+        "id": "122204",
+        "name": "Redolence from Canopied Banquet",
+        "rank": 4,
+        "desc": "When Fuyuan takes action, restores HP equal to 40% of Lingsha's ATK for the ally target whose current HP is the lowest.",
+        "icon": "icon/skill/1222_rank4.png",
+        "paramsEido": [
+          0.4
+        ]
+      },
+      {
+        "id": "122205",
+        "name": "Poise Atop Twists and Turns",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1222_skill.png"
+      },
+      {
+        "id": "122206",
+        "name": "Arcadia Under Deep Seclusion",
+        "rank": 6,
+        "desc": "While \"Fuyuan\" is on the field, reduces all enemies' All-Type RES by 20%. When \"Fuyuan\" attacks, additionally deals 4 instance(s) of DMG, with each instance dealing Fire DMG equal to 50% of Lingsha's ATK and 5 Toughness Reduction to one random enemy. This prioritizes targets with both Toughness greater than 0 and Fire Weakness.",
+        "icon": "icon/skill/1222_rank6.png",
+        "paramsEido": [
+          0.2,
+          4,
+          0.5,
+          5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Votive Incense": {
+          "variant1": {
+            "skillID": 122201,
+            "trigger": "Skill01",
+            "name": "Votive Incense",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Lingsha's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Lingsha_00_Skill01_Camera",
+              "Avatar_Lingsha_00_Skill01_Phase01",
+              "Avatar_Lingsha_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Smoke and Splendor": {
+          "variant1": {
+            "skillID": 122202,
+            "trigger": "Skill02",
+            "name": "Smoke and Splendor",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Lingsha's ATK to all enemies and at the same time, restores HP equal to #2[f1]% of Lingsha's ATK plus #3[i] for all allies. Fuyuan's action advances by #4[i]%.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.1,
+                105,
+                0.2
+              ],
+              "2": [
+                0.44,
+                0.105,
+                168,
+                0.2
+              ],
+              "3": [
+                0.48,
+                0.11,
+                215.25,
+                0.2
+              ],
+              "4": [
+                0.52,
+                0.115,
+                262.5,
+                0.2
+              ],
+              "5": [
+                0.56,
+                0.12,
+                294,
+                0.2
+              ],
+              "6": [
+                0.6,
+                0.124,
+                325.5,
+                0.2
+              ],
+              "7": [
+                0.65,
+                0.128,
+                349.125,
+                0.2
+              ],
+              "8": [
+                0.7,
+                0.132,
+                372.75,
+                0.2
+              ],
+              "9": [
+                0.75,
+                0.13599999,
+                396.375,
+                0.2
+              ],
+              "10": [
+                0.8,
+                0.14,
+                420,
+                0.2
+              ],
+              "11": [
+                0.84,
+                0.144,
+                443.625,
+                0.2
+              ],
+              "12": [
+                0.88,
+                0.148,
+                467.25,
+                0.2
+              ],
+              "13": [
+                0.92,
+                0.152,
+                490.875,
+                0.2
+              ],
+              "14": [
+                0.96,
+                0.156,
+                514.5,
+                0.2
+              ],
+              "15": [
+                1,
+                0.16,
+                538.125,
+                0.2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lingsha_00_Skill02_Camera",
+              "Avatar_Lingsha_00_Skill02_Phase01",
+              "Avatar_Lingsha_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Dripping Mistscape": {
+          "variant1": {
+            "skillID": 122203,
+            "trigger": "Skill03",
+            "name": "Dripping Mistscape",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Inflicts \"Befog\" on all enemies. While in \"Befog,\" targets receive #4[i]% increased Break DMG, lasting for #5[i] turn(s).\\nDeals Fire DMG equal to #1[i]% of Lingsha's ATK to all enemies, and at the same time restores HP equal to #2[f1]% of Lingsha's ATK plus #3[i] for all allies. Fuyuan's action advances by #6[i]%.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.9,
+                0.08,
+                90,
+                0.15,
+                2,
+                1
+              ],
+              "2": [
+                0.96,
+                0.085,
+                144,
+                0.16,
+                2,
+                1
+              ],
+              "3": [
+                1.02,
+                0.09,
+                184.5,
+                0.17,
+                2,
+                1
+              ],
+              "4": [
+                1.08,
+                0.095,
+                225,
+                0.18,
+                2,
+                1
+              ],
+              "5": [
+                1.14,
+                0.1,
+                252,
+                0.19,
+                2,
+                1
+              ],
+              "6": [
+                1.2,
+                0.104,
+                279,
+                0.2,
+                2,
+                1
+              ],
+              "7": [
+                1.275,
+                0.108,
+                299.25,
+                0.2125,
+                2,
+                1
+              ],
+              "8": [
+                1.35,
+                0.112,
+                319.5,
+                0.225,
+                2,
+                1
+              ],
+              "9": [
+                1.425,
+                0.116,
+                339.75,
+                0.2375,
+                2,
+                1
+              ],
+              "10": [
+                1.5,
+                0.12,
+                360,
+                0.25,
+                2,
+                1
+              ],
+              "11": [
+                1.56,
+                0.124,
+                380.25,
+                0.26,
+                2,
+                1
+              ],
+              "12": [
+                1.62,
+                0.128,
+                400.5,
+                0.27,
+                2,
+                1
+              ],
+              "13": [
+                1.68,
+                0.132,
+                420.75,
+                0.28,
+                2,
+                1
+              ],
+              "14": [
+                1.74,
+                0.13599999,
+                441,
+                0.29,
+                2,
+                1
+              ],
+              "15": [
+                1.8,
+                0.14,
+                461.25,
+                0.3,
+                2,
+                1
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lingsha_00_Skill03_Camera",
+              "Avatar_Lingsha_00_Skill03_EnterReady",
+              "Avatar_Lingsha_00_Skill03_Phase01",
+              "Avatar_Lingsha_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Break DMG": {
+                "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
+              },
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Mistdance Manifest": {
+          "variant1": {
+            "skillID": 122204,
+            "trigger": "SkillP01",
+            "name": "Mistdance Manifest",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "When using Skill, summons \"Fuyuan,\" with an initial SPD of #1[i] and an initial action count of #7[i].\\nWhen taking action, \"Fuyuan\" launches Follow-Up ATK, dealing Fire DMG equal to #2[i]% of Lingsha's ATK to all enemies. Additionally deals Fire DMG equal to #8[i]% of Lingsha's ATK to one random enemy, and this DMG prioritizes targets that have both Toughness greater than 0 and Fire Weakness. Dispels #6[i] debuff(s) from all allies and restores HP equal to #3[f1]% of Lingsha's ATK plus #4[i].\\n\"Fuyuan's\" action count can accumulate up to #5[i]. When the action count reaches 0 or when Lingsha is knocked down, \"Fuyuan\" disappears.\\nWhile \"Fuyuan\" is on the field, using Skill can increase \"Fuyuan's\" action count by #7[i].",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                90,
+                0.375,
+                0.08,
+                90,
+                5,
+                1,
+                3,
+                0.375
+              ],
+              "2": [
+                90,
+                0.4125,
+                0.085,
+                144,
+                5,
+                1,
+                3,
+                0.4125
+              ],
+              "3": [
+                90,
+                0.45,
+                0.09,
+                184.5,
+                5,
+                1,
+                3,
+                0.45
+              ],
+              "4": [
+                90,
+                0.4875,
+                0.095,
+                225,
+                5,
+                1,
+                3,
+                0.4875
+              ],
+              "5": [
+                90,
+                0.525,
+                0.1,
+                252,
+                5,
+                1,
+                3,
+                0.525
+              ],
+              "6": [
+                90,
+                0.5625,
+                0.104,
+                279,
+                5,
+                1,
+                3,
+                0.5625
+              ],
+              "7": [
+                90,
+                0.609375,
+                0.108,
+                299.25,
+                5,
+                1,
+                3,
+                0.609375
+              ],
+              "8": [
+                90,
+                0.65625,
+                0.112,
+                319.5,
+                5,
+                1,
+                3,
+                0.65625
+              ],
+              "9": [
+                90,
+                0.703125,
+                0.116,
+                339.75,
+                5,
+                1,
+                3,
+                0.703125
+              ],
+              "10": [
+                90,
+                0.75,
+                0.12,
+                360,
+                5,
+                1,
+                3,
+                0.75
+              ],
+              "11": [
+                90,
+                0.7875,
+                0.124,
+                380.25,
+                5,
+                1,
+                3,
+                0.7875
+              ],
+              "12": [
+                90,
+                0.825,
+                0.128,
+                400.5,
+                5,
+                1,
+                3,
+                0.825
+              ],
+              "13": [
+                90,
+                0.8625,
+                0.132,
+                420.75,
+                5,
+                1,
+                3,
+                0.8625
+              ],
+              "14": [
+                90,
+                0.9,
+                0.13599999,
+                441,
+                5,
+                1,
+                3,
+                0.9
+              ],
+              "15": [
+                90,
+                0.9375,
+                0.14,
+                461.25,
+                5,
+                1,
+                3,
+                0.9375
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Lingsha_00_PassiveSkill01",
+              "Avatar_Lingsha_00_BPSkill_BattleEvent_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Wisps of Aurora": {
+          "variant1": {
+            "skillID": 122207,
+            "trigger": "SkillMaze",
+            "name": "Wisps of Aurora",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, immediately summons Fuyuan at the start of the next battle and inflicts \"Befog\" on all enemies, lasting for #1[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Lingsha_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1222_basic_atk.png",
+        "skillRef": {
+          "skillName": "Votive Incense",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1222_skill.png",
+        "skillRef": {
+          "skillName": "Smoke and Splendor",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1222_ultimate.png",
+        "skillRef": {
+          "skillName": "Dripping Mistscape",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1222_talent.png",
+        "skillRef": {
+          "skillName": "Mistdance Manifest",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1222_technique.png",
+        "skillRef": {
+          "skillName": "Wisps of Aurora",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Vermilion Waft",
+        "icon": "icon/skill/1222_skilltree1.png",
+        "desc": "Increases this unit's ATK or Outgoing Healing by an amount equal to #1[i]%/#2[i]% of Break Effect, up to a maximum increase of #3[i]%/#4[i]% respectively.",
+        "params": [
+          0.25,
+          0.1,
+          0.5,
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Sylvan Smoke",
+        "icon": "icon/skill/1222_skilltree2.png",
+        "desc": "When using Basic ATK, additionally regenerates #1[i] Energy.",
+        "params": [
+          10
+        ]
+      },
+      "Point08": {
+        "name": "Ember's Echo",
+        "icon": "icon/skill/1222_skilltree3.png",
+        "desc": "While \"Fuyuan\" is on the field and any ally character takes DMG or consumes HP, if a character in the team has their current HP percentage lower than or equal to #1[i]%, \"Fuyuan\" will immediately launch the Talent's Follow-Up ATK against enemies. This does not consume Fuyuan's action count. This effect can trigger again after #2[i] turn(s).",
+        "params": [
+          0.6,
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.6,
+              2
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point12": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point16": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1222.png",
+    "preview": "image/character_preview/1222.png",
+    "portrait": "image/character_portrait/1222.png",
+    "bannerOffsets": [
+      -32.1,
+      24,
+      0.64,
+      -32.1,
+      24,
+      0.64,
+      -32.1,
+      24,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Moze": {
     "internalID": 1223,
     "name": "Moze",

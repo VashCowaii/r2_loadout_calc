@@ -4064,6 +4064,7 @@ const megaParsingFuckeryPain = {
             "flagName",
             "invertCondition",
             "casterFilter",
+            "justAddedOrLiving",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Flag");
 
@@ -4076,6 +4077,10 @@ const megaParsingFuckeryPain = {
             ${parseRef.casterFilter != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Caster Filter:</div>&nbsp;
                 ${megaParsingFuckery.makeConditionTargetBox(parseRef.casterFilter,initialCounter)}
+            </div>` : ""}
+            ${parseRef.justAddedOrLiving != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Just Added/Living:</div>&nbsp;
+                ${parseRef.justAddedOrLiving}
             </div>` : ""}
         </div>`;
     },

@@ -148,6 +148,10 @@ let allowedCharacterList = [
     "trimName": "Yunli"
   },
   {
+    "fullName": "Lingsha",
+    "trimName": "Lingsha"
+  },
+  {
     "fullName": "Moze",
     "trimName": "Moze"
   },

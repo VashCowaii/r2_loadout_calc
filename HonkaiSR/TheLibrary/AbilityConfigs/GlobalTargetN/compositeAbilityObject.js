@@ -402,6 +402,33 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Fuyuan",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "Lingsha_BPAbility_BattleEvent"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Yukong's Flower Target",
           "isTargetOperator": false,
           "execute": [
