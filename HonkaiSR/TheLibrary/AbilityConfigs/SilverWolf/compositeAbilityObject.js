@@ -4017,7 +4017,7 @@ const compositeAbilityObject = {
                     "target": "{{Enemy Team All}}"
                   },
                   {
-                    "name": "Sort by Life-State",
+                    "name": "Filter by Life-State",
                     "state": "Mask_AliveOnly"
                   },
                   {
