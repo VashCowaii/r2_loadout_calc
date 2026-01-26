@@ -83,6 +83,21 @@ const endgameModeDisplay = {
         readSelection("pureFictionBannerImage").src = `/HonkaiSR/${bgImagePath}`;
 
 
+        let currentUserInput = readSelection("statFilterBoxInput").value;
+
+        // erosionModsData
+        function fuzzyMatch(input, itemParam1, itemParam2,desc,aim) {
+            const search = input.toLowerCase();
+            return itemParam1.toLowerCase().includes(search) 
+            // || itemParam2.toLowerCase().includes(search) 
+            // || desc.toLowerCase().includes(search)
+            // || aim.toLowerCase().includes(search)
+            
+            
+            ;
+        }
+
+
 
         // sizeLeaderboardArray
 
@@ -162,14 +177,16 @@ const endgameModeDisplay = {
 
             const currentSize = sizeEntry.sizeCount;
             const currentSizeFinal = 100 * (sizeEntry.sizeCount - smallestSize) / fullSizeRange;//trimCharacterName
-
+            rankCounter++
+            if (!fuzzyMatch(currentUserInput,sizeEntry.entryName ?? sizeEntry.enemyID ?? "")) {continue;}
+            
 
             
             // style="background: linear-gradient(200deg, rgb(13, 57, 59), transparent);"
             sizeString += `<a class="${barType} clickable hoverOpacity" href="${linkBase}" target="_blank">
                     <div class="${circleType}"></div>
                     <img src="${finalImage}" class="turnOrderDisplayPreview">
-                    <div class="turnOrderAVBox">${rankCounter}</div>
+                    <div class="turnOrderAVBox">${rankCounter-1}</div>
                     <div class="complexityHolderBoxDisplay">
                         <div class="rowSummaryDMGNameAndPercent">${sizeEntry.entryName ?? sizeEntry.enemyID}:&nbsp;<span class="smallFont">${(currentSize/1024).toLocaleString()}KB</span></div>
                         
@@ -180,7 +197,7 @@ const endgameModeDisplay = {
                         
                     </div>
                 </a>`;
-            rankCounter++
+            
                 // <div class="turnOrderAVBox">37.5</div>
         }
         readSelection("mocEachSide1").innerHTML = sizeString;
@@ -237,12 +254,14 @@ const endgameModeDisplay = {
             const currentSizeFinal = 100 * (sizeEntry.lineCount - smallestSize2) / fullSizeRange2
 
 
+            rankCounter++
+            if (!fuzzyMatch(currentUserInput,sizeEntry.entryName ?? sizeEntry.enemyID ?? "")) {continue;}
 
             // style="background: linear-gradient(200deg, rgb(13, 57, 59), transparent);"
             linesStringer += `<a class="${barType} clickable hoverOpacity" href="${linkBase}" target="_blank">
                     <div class="${circleType}"></div>
                     <img src="${finalImage}" class="turnOrderDisplayPreview">
-                    <div class="turnOrderAVBox">${rankCounter}</div>
+                    <div class="turnOrderAVBox">${rankCounter-1}</div>
                     <div class="complexityHolderBoxDisplay">
                         <div class="rowSummaryDMGNameAndPercent">${sizeEntry.entryName ?? sizeEntry.enemyID}:&nbsp;<span class="smallFont">${(currentSize).toLocaleString()} lines</span></div>
                         
@@ -253,7 +272,6 @@ const endgameModeDisplay = {
                         
                     </div>
                 </a>`;
-            rankCounter++
                 // <div class="turnOrderAVBox">37.5</div>
         }
         readSelection("mocEachSide2").innerHTML = linesStringer;

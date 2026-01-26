@@ -126,7 +126,16 @@
             </div>
           </div>
 
-          <div class="superimpositionHolderbox" id="superimpositionHolderbox"></div>
+          
+          <!-- superimpositionHolderbox -->
+          <div class="superimpositionHolderbox">
+            <div class="selectionSelectorBoxes" style="max-width: 300px;">
+              <div class="selectSelectorTitle">SEARCH:&nbsp;</div>
+              <div class="presetsSelectorBox">
+                  <input class="selectSelector hasHoverTooltip" id="statFilterBoxInput" style="width: 100%;" oninput="endgameModeDisplay.setEndgameDisplay()">
+              </div>
+            </div>
+          </div>
 
           <!-- <div class="bulletSelectorIDRowBox">
             <div class="toggleArrowBox" onclick="reactorFunctions.updateRotationDisplay(-1)">&#9664;</div>
