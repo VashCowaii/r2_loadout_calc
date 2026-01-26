@@ -256,6 +256,10 @@ let allowedCharacterList = [
     "trimName": "Anaxa"
   },
   {
+    "fullName": "Cipher",
+    "trimName": "Cipher"
+  },
+  {
     "fullName": "Hyacine",
     "trimName": "Hyacine"
   },

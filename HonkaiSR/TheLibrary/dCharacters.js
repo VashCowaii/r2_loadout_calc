@@ -49921,6 +49921,844 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Cipher": {
+    "internalID": 1406,
+    "name": "Cipher",
+    "path": "Nihility",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 509.355,
+      "HPBase": 931.392,
+      "SPDBase": 106,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "140601",
+        "name": "Read the Room, Seek the Glee",
+        "rank": 1,
+        "desc": "Cipher's tally of DMG is 150% of its original value. When using the Talent's Follow-Up ATK, increases Cipher's ATK by 80%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1406_rank1.png",
+        "paramsEido": [
+          0.8,
+          2,
+          1.5
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "140602",
+        "name": "In the Fray, Nab On a Spree",
+        "rank": 2,
+        "desc": "When Cipher hits an enemy target, there is a 120% base chance to increase the DMG it receives by 30%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1406_rank2.png",
+        "paramsEido": [
+          2,
+          1.2,
+          0.3
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "140603",
+        "name": "From Thin Air, Hard to Foresee",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1406_ultimate.png"
+      },
+      {
+        "id": "140604",
+        "name": "The Jig Is Up, Quick to Flee",
+        "rank": 4,
+        "desc": "After the \"Patron\" gets attacked by an ally target, Cipher deals Quantum Additional DMG to it equal to 50% of Cipher's ATK.",
+        "icon": "icon/skill/1406_rank4.png",
+        "paramsEido": [
+          0.5
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "140605",
+        "name": "Safe in Numbers, Light as a Bee",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1406_skill.png"
+      },
+      {
+        "id": "140606",
+        "name": "The Thief's Game, Unsung and Free",
+        "rank": 6,
+        "desc": "The DMG dealt by Follow-Up ATK from Cipher's Talent increases by 350%. During the tally, an additional 16% of non-Overflow DMG dealt by this attack is tallied. After the tally is cleared by using Ultimate, 20% of the cleared tally is returned.",
+        "icon": "icon/skill/1406_rank6.png",
+        "paramsEido": [
+          0.2,
+          3.5,
+          0.16
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Oops, a Missed Catch": {
+          "variant1": {
+            "skillID": 140601,
+            "trigger": "Skill01",
+            "name": "Oops, a Missed Catch",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Cipher's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Cipher_00_Skill01_Camera",
+              "Avatar_Cipher_00_Skill01_Phase01",
+              "Avatar_Cipher_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Hey, Jackpot for the Taking": {
+          "variant1": {
+            "skillID": 140602,
+            "trigger": "Skill02",
+            "name": "Hey, Jackpot for the Taking",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Has a #6[i]% base chance to Weaken one designated enemy and its adjacent targets (decreasing their DMG dealt by #3[i]%) and increases Cipher's ATK by #5[i]%, lasting for #4[i] turn(s). Moreover, deals Quantum DMG equal to #1[i]% of Cipher's ATK to one designated enemy, and Quantum DMG equal to #2[i]% of Cipher's ATK to the adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.5,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "2": [
+                1.1,
+                0.55,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "3": [
+                1.2,
+                0.6,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "4": [
+                1.3,
+                0.65,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "5": [
+                1.4,
+                0.7,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "6": [
+                1.5,
+                0.75,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "7": [
+                1.625,
+                0.8125,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "8": [
+                1.75,
+                0.875,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "9": [
+                1.875,
+                0.9375,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "10": [
+                2,
+                1,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "11": [
+                2.1,
+                1.05,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "12": [
+                2.2,
+                1.1,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "13": [
+                2.3,
+                1.15,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "14": [
+                2.4,
+                1.2,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ],
+              "15": [
+                2.5,
+                1.25,
+                0.1,
+                2,
+                0.3,
+                1.2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cipher_00_Skill02_Camera",
+              "Avatar_Cipher_00_Skill02_Phase01",
+              "Avatar_Cipher_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Yours Truly, Kitty Phantom Thief!": {
+          "variant1": {
+            "skillID": 140603,
+            "trigger": "Skill03",
+            "name": "Yours Truly, Kitty Phantom Thief!",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Cipher's ATK to one designated enemy. Then, deals True DMG equal to #2[i]% of the current tally kept by Talent to the one designated enemy. Moreover, deals Quantum DMG equal to #4[i]% of Cipher's ATK alongside True DMG equal to #3[i]% of the current tally kept by Talent to the one designated enemy and its adjacent targets. And this True DMG is distributed evenly among all targets of this ability.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.25,
+                0.75,
+                0.2
+              ],
+              "2": [
+                0.66,
+                0.25,
+                0.75,
+                0.22
+              ],
+              "3": [
+                0.72,
+                0.25,
+                0.75,
+                0.24
+              ],
+              "4": [
+                0.78,
+                0.25,
+                0.75,
+                0.26
+              ],
+              "5": [
+                0.84,
+                0.25,
+                0.75,
+                0.28
+              ],
+              "6": [
+                0.9,
+                0.25,
+                0.75,
+                0.3
+              ],
+              "7": [
+                0.975,
+                0.25,
+                0.75,
+                0.325
+              ],
+              "8": [
+                1.05,
+                0.25,
+                0.75,
+                0.35
+              ],
+              "9": [
+                1.125,
+                0.25,
+                0.75,
+                0.375
+              ],
+              "10": [
+                1.2,
+                0.25,
+                0.75,
+                0.4
+              ],
+              "11": [
+                1.26,
+                0.25,
+                0.75,
+                0.42
+              ],
+              "12": [
+                1.32,
+                0.25,
+                0.75,
+                0.44
+              ],
+              "13": [
+                1.38,
+                0.25,
+                0.75,
+                0.46
+              ],
+              "14": [
+                1.44,
+                0.25,
+                0.75,
+                0.48
+              ],
+              "15": [
+                1.5,
+                0.25,
+                0.75,
+                0.5
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cipher_00_Skill03_Camera",
+              "Avatar_Cipher_00_Skill03_Phase01",
+              "Avatar_Cipher_00_Skill03_Phase02",
+              "Avatar_Cipher_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "True DMG": {
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "The Hospitable Dolosian": {
+          "variant1": {
+            "skillID": 140604,
+            "trigger": "SkillP01",
+            "name": "The Hospitable Dolosian",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "When there are no enemy targets in the \"Patron\" state on the battlefield, Cipher immediately causes one enemy target with the highest Max HP on the battlefield to become the \"Patron.\" When using Skill and Ultimate, the primary target becomes the \"Patron.\" The \"Patron\" state only takes effect on the most recent target.\\nAfter the \"Patron\" gets attacked by other ally targets, Cipher immediately launches Follow-Up ATK against the \"Patron,\" dealing Quantum DMG equal to #1[i]% of Cipher's ATK. This effect can trigger up to #3[i] time(s) per turn, and this trigger count resets at the start of Cipher's turn.\\nCipher will tally #2[i]% of the non-True DMG dealt by ally targets to the \"Patron.\" Overflow DMG will not be tallied. After using Ultimate, clears this tally.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.75,
+                0.12,
+                1,
+                5
+              ],
+              "2": [
+                0.825,
+                0.12,
+                1,
+                5
+              ],
+              "3": [
+                0.9,
+                0.12,
+                1,
+                5
+              ],
+              "4": [
+                0.975,
+                0.12,
+                1,
+                5
+              ],
+              "5": [
+                1.05,
+                0.12,
+                1,
+                5
+              ],
+              "6": [
+                1.125,
+                0.12,
+                1,
+                5
+              ],
+              "7": [
+                1.21875,
+                0.12,
+                1,
+                5
+              ],
+              "8": [
+                1.3125,
+                0.12,
+                1,
+                5
+              ],
+              "9": [
+                1.40625,
+                0.12,
+                1,
+                5
+              ],
+              "10": [
+                1.5,
+                0.12,
+                1,
+                5
+              ],
+              "11": [
+                1.575,
+                0.12,
+                1,
+                5
+              ],
+              "12": [
+                1.65,
+                0.12,
+                1,
+                5
+              ],
+              "13": [
+                1.725,
+                0.12,
+                1,
+                5
+              ],
+              "14": [
+                1.8,
+                0.12,
+                1,
+                5
+              ],
+              "15": [
+                1.875,
+                0.12,
+                1,
+                5
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cipher_00_PassiveSkill01",
+              "Avatar_Cipher_00_PassiveSkill01_Insert_Buffer",
+              "Avatar_Cipher_00_PassiveSkill01_Insert_Phase01",
+              "Avatar_Cipher_00_PassiveSkill01_Insert_Phase02",
+              "Avatar_Cipher_00_PassiveSkill01_Insert_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "True DMG": {
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Puss in Boots": {
+          "variant1": {
+            "skillID": 140607,
+            "trigger": "SkillMaze",
+            "name": "Puss in Boots",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "Gains \"Zagreus's Blessing\" that lasts for #1[i] second(s). During this time, Cipher will be undetectable by enemies and her movement speed increases by 50%. When approaching an enemy in the overworld/Simulated Universe/Divergent Universe, can immediately gain a random Consumable. Consumables can be gained this way for up to #4[i] time(s) in each Earth day.\\nWhen entering battle with \"Zagreus's Blessing\" active, deals Quantum DMG equal to #3[i]% of Cipher's ATK to all enemies. And the tallied amount Cipher gains from this instance of DMG increases by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                15,
+                2,
+                1,
+                50
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Cipher_00_SkillMazeInLevel",
+              "Avatar_Cipher_00_SkillMazeInLevel_Insert"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1406_basic_atk.png",
+        "skillRef": {
+          "skillName": "Oops, a Missed Catch",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1406_skill.png",
+        "skillRef": {
+          "skillName": "Hey, Jackpot for the Taking",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1406_ultimate.png",
+        "skillRef": {
+          "skillName": "Yours Truly, Kitty Phantom Thief!",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1406_talent.png",
+        "skillRef": {
+          "skillName": "The Hospitable Dolosian",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1406_technique.png",
+        "skillRef": {
+          "skillName": "Puss in Boots",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Empyrean Strides",
+        "icon": "icon/skill/1406_skilltree1.png",
+        "desc": "When Cipher's SPD is higher than or equal to 140/170, CRIT Rate increases by #1[i]%/#2[i]%, and the gained tally increases by #3[i]%/#4[i]%.",
+        "params": [
+          0.25,
+          0.5,
+          0.5,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "300 Rogues",
+        "icon": "icon/skill/1406_skilltree2.png",
+        "desc": "Cipher can tally #1[i]% of the non-True DMG dealt by ally targets to the enemy targets other than the \"Patron.\" Overflow DMG is not tallied.",
+        "params": [
+          0.08
+        ],
+        "extraEffects": {
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack.",
+            "params": [
+              0.08
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Sleight of Sky",
+        "icon": "icon/skill/1406_skilltree3.png",
+        "desc": "Increases the CRIT DMG dealt by the Talent's Follow-Up ATK by #2[i]%. When Cipher is on the battlefield, DMG received by all enemy targets increases by #1[i]%.",
+        "params": [
+          0.4,
+          1
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.4,
+              1
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point11": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point12": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point13": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point15": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point16": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.064
+        }
+      },
+      "Point18": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1406.png",
+    "preview": "image/character_preview/1406.png",
+    "portrait": "image/character_portrait/1406.png",
+    "bannerOffsets": [
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64,
+      2,
+      33,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Hyacine": {
     "internalID": 1409,
     "name": "Hyacine",
