@@ -27712,6 +27712,1143 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Feixiao": {
+    "internalID": 1220,
+    "name": "Feixiao",
+    "path": "The Hunt",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 12,
+    "baseStats": {
+      "ATKBase": 601.5239999999999,
+      "DEFBase": 388.08000000000004,
+      "HPBase": 1047.816,
+      "SPDBase": 112,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "122001",
+        "name": "Skyward I Quell",
+        "rank": 1,
+        "desc": "After launching \"Boltsunder Blitz\" or \"Waraxe Skyward,\" additionally increases the Ultimate DMG dealt by Feixiao by an amount equal to 10% of the original DMG, stacking up to 5 time(s) and lasting until the end of the Ultimate action.",
+        "icon": "icon/skill/1220_rank1.png",
+        "paramsEido": [
+          0.1,
+          5
+        ]
+      },
+      {
+        "id": "122002",
+        "name": "Moonward I Wish",
+        "rank": 2,
+        "desc": "In the Talent's effect, for every 1 instance of Follow-Up ATK launched by ally targets, Feixiao gains 1 point of \"Flying Aureus.\" This effect can trigger up to 6 time(s) per turn.",
+        "icon": "icon/skill/1220_rank2.png",
+        "paramsEido": [
+          6
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "122003",
+        "name": "Starward I Bode",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1220_ultimate.png"
+      },
+      {
+        "id": "122004",
+        "name": "Stormward I Hear",
+        "rank": 4,
+        "desc": "The Toughness Reduction from the Talent's Follow-Up ATK increases by 100% and, when launched, increases this unit's SPD by 8%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1220_rank4.png",
+        "paramsEido": [
+          1,
+          0.08,
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "122005",
+        "name": "Heavenward I Leap",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1220_skill.png"
+      },
+      {
+        "id": "122006",
+        "name": "Homeward I Near",
+        "rank": 6,
+        "desc": "Increases the All-Type RES PEN of Ultimate DMG dealt by Feixiao by 20%. Talent's Follow-Up ATK DMG is considered as Ultimate DMG at the same time, and its DMG multiplier increases by 140%.",
+        "icon": "icon/skill/1220_rank6.png",
+        "paramsEido": [
+          0.2,
+          1.4
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Boltsunder": {
+          "variant1": {
+            "skillID": 122001,
+            "trigger": "Skill01",
+            "name": "Boltsunder",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill01_Camera",
+              "Avatar_Feixiao_00_Skill01_Phase01",
+              "Avatar_Feixiao_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Waraxe": {
+          "variant1": {
+            "skillID": 122002,
+            "trigger": "Skill02",
+            "name": "Waraxe",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to one designated enemy target. Then, immediately launches 1 extra instance of Talent's Follow-Up ATK against the target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1
+              ],
+              "2": [
+                1.1
+              ],
+              "3": [
+                1.2
+              ],
+              "4": [
+                1.3
+              ],
+              "5": [
+                1.4
+              ],
+              "6": [
+                1.5
+              ],
+              "7": [
+                1.625
+              ],
+              "8": [
+                1.75
+              ],
+              "9": [
+                1.875
+              ],
+              "10": [
+                2
+              ],
+              "11": [
+                2.1
+              ],
+              "12": [
+                2.2
+              ],
+              "13": [
+                2.3
+              ],
+              "14": [
+                2.4
+              ],
+              "15": [
+                2.5
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill02_Camera",
+              "Avatar_Feixiao_00_Skill02_Phase01",
+              "Avatar_Feixiao_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Terrasplit": {
+          "variant1": {
+            "skillID": 122003,
+            "trigger": "Skill03",
+            "name": "Terrasplit",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG to one designated enemy target, up to #4[i]% of Feixiao's ATK. During this time, can ignore Weakness Type to reduce the target's Toughness. When the target is not Weakness Broken, Feixiao's Weakness Break Efficiency increases by #2[i]%.\\nDuring the attack, Feixiao first launches \"Boltsunder Blitz\" or \"Waraxe Skyward\" on the target, for a total of #3[i] time(s). At the end, deals Wind DMG equal to #1[i]% of Feixiao's ATK to the target.",
+            "energyCost": 6,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                1,
+                6,
+                4.02
+              ],
+              "2": [
+                1.024,
+                1,
+                6,
+                4.318
+              ],
+              "3": [
+                1.088,
+                1,
+                6,
+                4.616
+              ],
+              "4": [
+                1.152,
+                1,
+                6,
+                4.914
+              ],
+              "5": [
+                1.216,
+                1,
+                6,
+                5.212
+              ],
+              "6": [
+                1.28,
+                1,
+                6,
+                5.51
+              ],
+              "7": [
+                1.36,
+                1,
+                6,
+                5.8825
+              ],
+              "8": [
+                1.44,
+                1,
+                6,
+                6.255
+              ],
+              "9": [
+                1.52,
+                1,
+                6,
+                6.6275
+              ],
+              "10": [
+                1.6,
+                1,
+                6,
+                7
+              ],
+              "11": [
+                1.664,
+                1,
+                6,
+                7.298
+              ],
+              "12": [
+                1.728,
+                1,
+                6,
+                7.596
+              ],
+              "13": [
+                1.792,
+                1,
+                6,
+                7.894
+              ],
+              "14": [
+                1.856,
+                1,
+                6,
+                8.192
+              ],
+              "15": [
+                1.92,
+                1,
+                6,
+                8.49
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill03_EnterReady",
+              "Avatar_Feixiao_00_Skill03_Camera",
+              "Avatar_Feixiao_00_Skill03_Phase01",
+              "Avatar_Feixiao_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              }
+            }
+          },
+          "variant2": {
+            "skillID": 122014,
+            "trigger": "Skill31",
+            "name": "Terrasplit",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "During the Ultimate, can ignore Weakness Type to reduce enemy Toughness. When the target is not Weakness Broken, Feixiao's Weakness Break Efficiency increases.\\nLaunches \"Boltsunder Blitz\" or \"Waraxe Skyward\" on one enemy #3[i] time(s). Deals Wind DMG at the end.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                1,
+                6,
+                4.02
+              ],
+              "2": [
+                1.024,
+                1,
+                6,
+                4.318
+              ],
+              "3": [
+                1.088,
+                1,
+                6,
+                4.616
+              ],
+              "4": [
+                1.152,
+                1,
+                6,
+                4.914
+              ],
+              "5": [
+                1.216,
+                1,
+                6,
+                5.212
+              ],
+              "6": [
+                1.28,
+                1,
+                6,
+                5.51
+              ],
+              "7": [
+                1.36,
+                1,
+                6,
+                5.8825
+              ],
+              "8": [
+                1.44,
+                1,
+                6,
+                6.255
+              ],
+              "9": [
+                1.52,
+                1,
+                6,
+                6.6275
+              ],
+              "10": [
+                1.6,
+                1,
+                6,
+                7
+              ],
+              "11": [
+                1.664,
+                1,
+                6,
+                7.298
+              ],
+              "12": [
+                1.728,
+                1,
+                6,
+                7.596
+              ],
+              "13": [
+                1.792,
+                1,
+                6,
+                7.894
+              ],
+              "14": [
+                1.856,
+                1,
+                6,
+                8.192
+              ],
+              "15": [
+                1.92,
+                1,
+                6,
+                8.49
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill03_Finish_Camera",
+              "Avatar_Feixiao_00_Skill03_Finish_Phase01",
+              "Avatar_Feixiao_00_Skill03_Finish_Phase02",
+              "Avatar_Feixiao_00_Skill03_Finish_W2Main_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Boltsunder Blitz": {
+          "variant1": {
+            "skillID": 122008,
+            "trigger": "Skill11",
+            "name": "Boltsunder Blitz",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to the chosen target. If the target is Weakness Broken, the DMG multiplier increases by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                0.15
+              ],
+              "2": [
+                0.384,
+                0.165
+              ],
+              "3": [
+                0.408,
+                0.18
+              ],
+              "4": [
+                0.432,
+                0.195
+              ],
+              "5": [
+                0.456,
+                0.21
+              ],
+              "6": [
+                0.48,
+                0.225
+              ],
+              "7": [
+                0.51,
+                0.24375
+              ],
+              "8": [
+                0.54,
+                0.2625
+              ],
+              "9": [
+                0.57,
+                0.28125
+              ],
+              "10": [
+                0.6,
+                0.3
+              ],
+              "11": [
+                0.624,
+                0.315
+              ],
+              "12": [
+                0.648,
+                0.33
+              ],
+              "13": [
+                0.672,
+                0.345
+              ],
+              "14": [
+                0.696,
+                0.36
+              ],
+              "15": [
+                0.72,
+                0.375
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill11_Entry",
+              "Avatar_Feixiao_00_Skill11_Camera",
+              "Avatar_Feixiao_00_Skill11_Anim1_Phase01",
+              "Avatar_Feixiao_00_Skill11_Anim2_Phase01",
+              "Avatar_Feixiao_00_Skill11_Anim3_Phase01",
+              "Avatar_Feixiao_00_Skill11_Anim4_Phase01",
+              "Avatar_Feixiao_00_Skill11_Anim1_Phase02",
+              "Avatar_Feixiao_00_Skill11_Anim2_Phase02",
+              "Avatar_Feixiao_00_Skill11_Anim3_Phase02",
+              "Avatar_Feixiao_00_Skill11_Anim4_Phase02",
+              "Avatar_Feixiao_00_Skill03_ComboFinish1_Camera",
+              "Avatar_Feixiao_00_Skill03_ComboFinish1_Phase01",
+              "Avatar_Feixiao_00_Skill03_ComboFinish1_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              }
+            }
+          }
+        },
+        "Waraxe Skyward": {
+          "variant1": {
+            "skillID": 122009,
+            "trigger": "Skill21",
+            "name": "Waraxe Skyward",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to the chosen target. If the target is not Weakness Broken, the DMG multiplier increases by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                0.15
+              ],
+              "2": [
+                0.384,
+                0.165
+              ],
+              "3": [
+                0.408,
+                0.18
+              ],
+              "4": [
+                0.432,
+                0.195
+              ],
+              "5": [
+                0.456,
+                0.21
+              ],
+              "6": [
+                0.48,
+                0.225
+              ],
+              "7": [
+                0.51,
+                0.24375
+              ],
+              "8": [
+                0.54,
+                0.2625
+              ],
+              "9": [
+                0.57,
+                0.28125
+              ],
+              "10": [
+                0.6,
+                0.3
+              ],
+              "11": [
+                0.624,
+                0.315
+              ],
+              "12": [
+                0.648,
+                0.33
+              ],
+              "13": [
+                0.672,
+                0.345
+              ],
+              "14": [
+                0.696,
+                0.36
+              ],
+              "15": [
+                0.72,
+                0.375
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill21_Entry",
+              "Avatar_Feixiao_00_Skill21_Camera_1",
+              "Avatar_Feixiao_00_Skill21_Camera_2",
+              "Avatar_Feixiao_00_Skill21_Anim1_Phase01",
+              "Avatar_Feixiao_00_Skill21_Anim2_Phase01",
+              "Avatar_Feixiao_00_Skill21_Anim1_Phase02",
+              "Avatar_Feixiao_00_Skill21_Anim2_Phase02",
+              "Avatar_Feixiao_00_Skill03_ComboFinish2_Camera",
+              "Avatar_Feixiao_00_Skill03_ComboFinish2_Phase01",
+              "Avatar_Feixiao_00_Skill03_ComboFinish2_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Thunderhunt": {
+          "variant1": {
+            "skillID": 122004,
+            "trigger": "SkillP01",
+            "name": "Thunderhunt",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "Can activate Ultimate when \"Flying Aureus\" reaches #3[i] points, accumulating up to #4[i] points. Feixiao gains 1 point of \"Flying Aureus\" for every #2[i] attacks by ally targets. Feixiao's Ultimate attacks do not count towards this number.\\nAfter Feixiao's teammates attack an Enemy target, Feixiao immediately launches Follow-Up ATK against the primary target, dealing Wind DMG equal to #1[i]% of Feixiao's ATK. If there is no primary target available to attack, Feixiao attacks a single random enemy instead. This effect can only trigger once per turn and the trigger count resets at the start of Feixiao's turn. When using this attack, increases DMG dealt by this unit by #5[i]%, lasting for #6[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.55,
+                2,
+                6,
+                12,
+                0.3,
+                2
+              ],
+              "2": [
+                0.605,
+                2,
+                6,
+                12,
+                0.33,
+                2
+              ],
+              "3": [
+                0.66,
+                2,
+                6,
+                12,
+                0.36,
+                2
+              ],
+              "4": [
+                0.715,
+                2,
+                6,
+                12,
+                0.39,
+                2
+              ],
+              "5": [
+                0.77,
+                2,
+                6,
+                12,
+                0.42,
+                2
+              ],
+              "6": [
+                0.825,
+                2,
+                6,
+                12,
+                0.45,
+                2
+              ],
+              "7": [
+                0.89375,
+                2,
+                6,
+                12,
+                0.4875,
+                2
+              ],
+              "8": [
+                0.9625,
+                2,
+                6,
+                12,
+                0.525,
+                2
+              ],
+              "9": [
+                1.03125,
+                2,
+                6,
+                12,
+                0.5625,
+                2
+              ],
+              "10": [
+                1.1,
+                2,
+                6,
+                12,
+                0.6,
+                2
+              ],
+              "11": [
+                1.155,
+                2,
+                6,
+                12,
+                0.63,
+                2
+              ],
+              "12": [
+                1.21,
+                2,
+                6,
+                12,
+                0.66,
+                2
+              ],
+              "13": [
+                1.265,
+                2,
+                6,
+                12,
+                0.69,
+                2
+              ],
+              "14": [
+                1.32,
+                2,
+                6,
+                12,
+                0.72,
+                2
+              ],
+              "15": [
+                1.375,
+                2,
+                6,
+                12,
+                0.75,
+                2
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_PassiveSkill01",
+              "Avatar_Feixiao_00_Insert_SelectTarget",
+              "Avatar_Feixiao_00_Insert_SelectTargetSelf",
+              "Avatar_Feixiao_00_Insert_Phase01",
+              "Avatar_Feixiao_00_Insert_Phase02",
+              "Avatar_Feixiao_00_Insert_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Stormborn": {
+          "variant1": {
+            "skillID": 122007,
+            "trigger": "SkillMaze",
+            "name": "Stormborn",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, enters the \"Onrush\" state, lasting for #1[i] seconds. While in \"Onrush,\" pulls in enemies within a certain range, and increases this unit's movement speed by #2[i]%. After entering battle, gains #4[i] point(s) of \"Flying Aureus.\"\\nWhile in \"Onrush,\" actively attacking will start battle with all pulled enemies. After entering battle, deals Wind DMG equal to #3[i]% of Feixiao's ATK to all enemies at the start of each wave. This DMG is guaranteed to CRIT. If more than 1 enemy is pulled in, increases the multiplier of this DMG by #5[i]% for each additional enemy pulled in, up to a maximum of #6[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                0.5,
+                2,
+                1,
+                1,
+                10
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1220_basic_atk.png",
+        "skillRef": {
+          "skillName": "Boltsunder",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1220_skill.png",
+        "skillRef": {
+          "skillName": "Waraxe",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1220_ultimate.png",
+        "skillRef": {
+          "skillName": "Terrasplit",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1220_talent.png",
+        "skillRef": {
+          "skillName": "Thunderhunt",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1220_technique.png",
+        "skillRef": {
+          "skillName": "Stormborn",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Heavenpath",
+        "icon": "icon/skill/1220_skilltree1.png",
+        "desc": "When the battle starts, gains #1[i] point(s) of \"Flying Aureus.\"\nAt the start of a turn, if no Follow-Up ATK was launched via Talent in the previous turn, then this counts as 1 toward the number of attacks required to gain \"Flying Aureus.\"",
+        "params": [
+          3
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              3
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Formshift",
+        "icon": "icon/skill/1220_skilltree2.png",
+        "desc": "When using Ultimate to deal DMG to an enemy target, it is considered as a Follow-Up ATK. Follow-Up ATKs' CRIT DMG increases by #1[i]%.",
+        "params": [
+          0.36
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.36
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Boltcatch",
+        "icon": "icon/skill/1220_skilltree3.png",
+        "desc": "When using Skill, increases ATK by #1[i]%, lasting for #2[i] turn(s).",
+        "params": [
+          0.48,
+          3
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1220.png",
+    "preview": "image/character_preview/1220.png",
+    "portrait": "image/character_portrait/1220.png",
+    "bannerOffsets": [
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Yunli": {
     "internalID": 1221,
     "name": "Yunli",

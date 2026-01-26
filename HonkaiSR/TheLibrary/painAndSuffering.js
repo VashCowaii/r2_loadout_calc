@@ -340,6 +340,7 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "ability",
+            "subAbilityIndex",
             // "from",
             // "parse",
             // "references",
@@ -383,6 +384,10 @@ const megaParsingFuckeryPain = {
                 ${parseRef.inherentTarget != undefined ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Inherent Target:</div>&nbsp;
                     ${parseRef.inherentTarget}
+                </div>` : ""}
+                ${parseRef.subAbilityIndex != undefined ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Sub-Ability Index:</div>&nbsp;
+                    ${parseRef.subAbilityIndex}
                 </div>` : ""}
             </div>
         `;
@@ -1877,6 +1882,27 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
         </div>`;
     },
+    "Toggle View Mode"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "enable",
+            // "matchToPathFrom",
+            // "context",
+            // "value",
+            // "variableName",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Toggle View Mode");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Toggle View Mode:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.enable != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Enable:</div>&nbsp;
+                ${parseRef.enable}
+            </div>` : ""}
+        </div>`;
+    },
     "Trigger: Ability End"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -2038,6 +2064,29 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Remove Modifier Behavior Flag(s):</div>&nbsp;
             ${parseRef.flagNames} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>`;
+    },
+    "Define Custom Variable with Stage Wave Count"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            // "target",
+            // "valueType",
+            // "multiplier",
+            // "modifierName",
+            "scope",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Stage Wave Count");
+        // initialCounter++;
+        return `<div class="actionDetailBody2Preview"> 
+            <div class="rotationConditionOperatorHeaderInline">Define with Stage's Wave Count:</div>&nbsp;
+            ${parseRef.variableName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.scope != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
+                ${parseRef.scope}
+            </div>` : ""}
         </div>`;
     },
     "Define Custom Variable with Modifier Values"(parseRef,initialCounter) {
@@ -3543,6 +3592,7 @@ const megaParsingFuckeryPain = {
             "typeToExtend",
             "extendTypeTo",
             "isRemove",
+            "instanceIdentifier",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Attack-Type Extension");
 
@@ -3559,6 +3609,10 @@ const megaParsingFuckeryPain = {
             ${parseRef.extendTypeTo != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Consider as:</div>&nbsp;
                 ${parseRef.extendTypeTo}
+            </div>` : ""}
+            ${parseRef.instanceIdentifier != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Instance Tag/Identifier:</div>&nbsp;
+                ${parseRef.instanceIdentifier}
             </div>` : ""}
         </div>`;
     },
@@ -3925,7 +3979,8 @@ const megaParsingFuckeryPain = {
             "name",
             "target",
             "display",
-            "abilityName"
+            "abilityName",
+            "subAbilityIndex",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Ability Enhance Button");
 
@@ -3933,6 +3988,12 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.display} ENHANCE on ${parseRef.abilityName} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.subAbilityIndex != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Sub-Ability Index:</div>&nbsp;
+                ${parseRef.subAbilityIndex}
+            </div>` : ""}
         </div>`;
     },
     "Skill Type"(parseRef,initialCounter) {

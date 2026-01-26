@@ -834,6 +834,33 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Feixiao Ult Target",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "M_Feixiao_UltraTarget"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Yukong's Flower Target",
       "isTargetOperator": false,
       "execute": [

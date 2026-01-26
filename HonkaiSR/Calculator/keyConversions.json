@@ -17,6 +17,8 @@
     "StanceBreakAddRatio": "DamageBreakEfficiency[?]",
     "StanceBreakTakenRatio": "ToughnessVulnerability",
 
+    "IndependentDamageAddedRatio": "UniqueFinalMultiplier",
+
     "SPRatioBase": "EnergyRegenRate",
     "SPRatio": "EnergyRegenRateSUM",
     "CurrentSP": "EnergyCurrent",
@@ -63,6 +65,7 @@
     "StatusResistance": "EffectRESSUM",
 
     "FixedCriticalChance": "CritRateFIXED",
+    "ForceCritical": "CritRateOverride",
     "CriticalChance": "CritRateSUM",
     "CriticalChanceBase": "CritRateBase",
     "CriticalChanceConvert": "CritRateConverted",
