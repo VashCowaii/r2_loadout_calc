@@ -11,7 +11,7 @@ const configAbility = {
     {
       "name": "Battle Event Construction",
       "ID": 11222,
-      "team": "TeamLight",
+      "team": "Player Team",
       "eventType": "Summon",
       "abilityList": null,
       "overridesArray": [

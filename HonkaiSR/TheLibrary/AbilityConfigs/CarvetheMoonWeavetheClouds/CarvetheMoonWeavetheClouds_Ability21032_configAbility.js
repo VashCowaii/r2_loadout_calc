@@ -187,7 +187,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "team": "TeamLight"
+                "team": "Player Team"
               },
               "passed": [
                 {
@@ -281,7 +281,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "team": "TeamLight"
+                "team": "Player Team"
               },
               "passed": [
                 {
@@ -377,7 +377,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "team": "TeamLight"
+                "team": "Player Team"
               },
               "passed": [
                 {

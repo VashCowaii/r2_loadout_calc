@@ -761,7 +761,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -1029,7 +1029,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   "passed": [
                     {
@@ -1315,7 +1315,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       {
                         "name": "Has Modifier",
@@ -1749,7 +1749,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -1943,7 +1943,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -2858,7 +2858,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "team": "TeamLight"
+                              "team": "Player Team"
                             },
                             {
                               "name": "Is Entity a Battle Event/Summon",
@@ -2931,7 +2931,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -3002,7 +3002,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Is Entity a Battle Event/Summon",
@@ -7657,7 +7657,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -7708,7 +7708,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {

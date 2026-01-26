@@ -1689,7 +1689,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Target is Unselectable",
@@ -3252,7 +3252,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {

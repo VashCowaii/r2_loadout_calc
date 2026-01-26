@@ -234,7 +234,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Player Team Ability Target Lock}}"
               },
-              "team": "TeamDark"
+              "team": "Enemy Team"
             }
           ]
         },

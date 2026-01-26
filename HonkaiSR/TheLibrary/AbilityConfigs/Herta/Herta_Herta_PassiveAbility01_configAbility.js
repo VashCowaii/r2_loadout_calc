@@ -118,7 +118,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target 2}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Target Is Hostile",

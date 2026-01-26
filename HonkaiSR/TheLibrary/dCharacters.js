@@ -27712,6 +27712,1143 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Feixiao": {
+    "internalID": 1220,
+    "name": "Feixiao",
+    "path": "The Hunt",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 12,
+    "baseStats": {
+      "ATKBase": 601.5239999999999,
+      "DEFBase": 388.08000000000004,
+      "HPBase": 1047.816,
+      "SPDBase": 112,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "122001",
+        "name": "Skyward I Quell",
+        "rank": 1,
+        "desc": "After launching \"Boltsunder Blitz\" or \"Waraxe Skyward,\" additionally increases the Ultimate DMG dealt by Feixiao by an amount equal to 10% of the original DMG, stacking up to 5 time(s) and lasting until the end of the Ultimate action.",
+        "icon": "icon/skill/1220_rank1.png",
+        "paramsEido": [
+          0.1,
+          5
+        ]
+      },
+      {
+        "id": "122002",
+        "name": "Moonward I Wish",
+        "rank": 2,
+        "desc": "In the Talent's effect, for every 1 instance of Follow-Up ATK launched by ally targets, Feixiao gains 1 point of \"Flying Aureus.\" This effect can trigger up to 6 time(s) per turn.",
+        "icon": "icon/skill/1220_rank2.png",
+        "paramsEido": [
+          6
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "122003",
+        "name": "Starward I Bode",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1220_ultimate.png"
+      },
+      {
+        "id": "122004",
+        "name": "Stormward I Hear",
+        "rank": 4,
+        "desc": "The Toughness Reduction from the Talent's Follow-Up ATK increases by 100% and, when launched, increases this unit's SPD by 8%, lasting for 2 turn(s).",
+        "icon": "icon/skill/1220_rank4.png",
+        "paramsEido": [
+          1,
+          0.08,
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      {
+        "id": "122005",
+        "name": "Heavenward I Leap",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1220_skill.png"
+      },
+      {
+        "id": "122006",
+        "name": "Homeward I Near",
+        "rank": 6,
+        "desc": "Increases the All-Type RES PEN of Ultimate DMG dealt by Feixiao by 20%. Talent's Follow-Up ATK DMG is considered as Ultimate DMG at the same time, and its DMG multiplier increases by 140%.",
+        "icon": "icon/skill/1220_rank6.png",
+        "paramsEido": [
+          0.2,
+          1.4
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Boltsunder": {
+          "variant1": {
+            "skillID": 122001,
+            "trigger": "Skill01",
+            "name": "Boltsunder",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill01_Camera",
+              "Avatar_Feixiao_00_Skill01_Phase01",
+              "Avatar_Feixiao_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Waraxe": {
+          "variant1": {
+            "skillID": 122002,
+            "trigger": "Skill02",
+            "name": "Waraxe",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to one designated enemy target. Then, immediately launches 1 extra instance of Talent's Follow-Up ATK against the target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1
+              ],
+              "2": [
+                1.1
+              ],
+              "3": [
+                1.2
+              ],
+              "4": [
+                1.3
+              ],
+              "5": [
+                1.4
+              ],
+              "6": [
+                1.5
+              ],
+              "7": [
+                1.625
+              ],
+              "8": [
+                1.75
+              ],
+              "9": [
+                1.875
+              ],
+              "10": [
+                2
+              ],
+              "11": [
+                2.1
+              ],
+              "12": [
+                2.2
+              ],
+              "13": [
+                2.3
+              ],
+              "14": [
+                2.4
+              ],
+              "15": [
+                2.5
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill02_Camera",
+              "Avatar_Feixiao_00_Skill02_Phase01",
+              "Avatar_Feixiao_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Terrasplit": {
+          "variant1": {
+            "skillID": 122003,
+            "trigger": "Skill03",
+            "name": "Terrasplit",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG to one designated enemy target, up to #4[i]% of Feixiao's ATK. During this time, can ignore Weakness Type to reduce the target's Toughness. When the target is not Weakness Broken, Feixiao's Weakness Break Efficiency increases by #2[i]%.\\nDuring the attack, Feixiao first launches \"Boltsunder Blitz\" or \"Waraxe Skyward\" on the target, for a total of #3[i] time(s). At the end, deals Wind DMG equal to #1[i]% of Feixiao's ATK to the target.",
+            "energyCost": 6,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                1,
+                6,
+                4.02
+              ],
+              "2": [
+                1.024,
+                1,
+                6,
+                4.318
+              ],
+              "3": [
+                1.088,
+                1,
+                6,
+                4.616
+              ],
+              "4": [
+                1.152,
+                1,
+                6,
+                4.914
+              ],
+              "5": [
+                1.216,
+                1,
+                6,
+                5.212
+              ],
+              "6": [
+                1.28,
+                1,
+                6,
+                5.51
+              ],
+              "7": [
+                1.36,
+                1,
+                6,
+                5.8825
+              ],
+              "8": [
+                1.44,
+                1,
+                6,
+                6.255
+              ],
+              "9": [
+                1.52,
+                1,
+                6,
+                6.6275
+              ],
+              "10": [
+                1.6,
+                1,
+                6,
+                7
+              ],
+              "11": [
+                1.664,
+                1,
+                6,
+                7.298
+              ],
+              "12": [
+                1.728,
+                1,
+                6,
+                7.596
+              ],
+              "13": [
+                1.792,
+                1,
+                6,
+                7.894
+              ],
+              "14": [
+                1.856,
+                1,
+                6,
+                8.192
+              ],
+              "15": [
+                1.92,
+                1,
+                6,
+                8.49
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill03_EnterReady",
+              "Avatar_Feixiao_00_Skill03_Camera",
+              "Avatar_Feixiao_00_Skill03_Phase01",
+              "Avatar_Feixiao_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              }
+            }
+          },
+          "variant2": {
+            "skillID": 122014,
+            "trigger": "Skill31",
+            "name": "Terrasplit",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "During the Ultimate, can ignore Weakness Type to reduce enemy Toughness. When the target is not Weakness Broken, Feixiao's Weakness Break Efficiency increases.\\nLaunches \"Boltsunder Blitz\" or \"Waraxe Skyward\" on one enemy #3[i] time(s). Deals Wind DMG at the end.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                1,
+                6,
+                4.02
+              ],
+              "2": [
+                1.024,
+                1,
+                6,
+                4.318
+              ],
+              "3": [
+                1.088,
+                1,
+                6,
+                4.616
+              ],
+              "4": [
+                1.152,
+                1,
+                6,
+                4.914
+              ],
+              "5": [
+                1.216,
+                1,
+                6,
+                5.212
+              ],
+              "6": [
+                1.28,
+                1,
+                6,
+                5.51
+              ],
+              "7": [
+                1.36,
+                1,
+                6,
+                5.8825
+              ],
+              "8": [
+                1.44,
+                1,
+                6,
+                6.255
+              ],
+              "9": [
+                1.52,
+                1,
+                6,
+                6.6275
+              ],
+              "10": [
+                1.6,
+                1,
+                6,
+                7
+              ],
+              "11": [
+                1.664,
+                1,
+                6,
+                7.298
+              ],
+              "12": [
+                1.728,
+                1,
+                6,
+                7.596
+              ],
+              "13": [
+                1.792,
+                1,
+                6,
+                7.894
+              ],
+              "14": [
+                1.856,
+                1,
+                6,
+                8.192
+              ],
+              "15": [
+                1.92,
+                1,
+                6,
+                8.49
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill03_Finish_Camera",
+              "Avatar_Feixiao_00_Skill03_Finish_Phase01",
+              "Avatar_Feixiao_00_Skill03_Finish_Phase02",
+              "Avatar_Feixiao_00_Skill03_Finish_W2Main_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Boltsunder Blitz": {
+          "variant1": {
+            "skillID": 122008,
+            "trigger": "Skill11",
+            "name": "Boltsunder Blitz",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to the chosen target. If the target is Weakness Broken, the DMG multiplier increases by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                0.15
+              ],
+              "2": [
+                0.384,
+                0.165
+              ],
+              "3": [
+                0.408,
+                0.18
+              ],
+              "4": [
+                0.432,
+                0.195
+              ],
+              "5": [
+                0.456,
+                0.21
+              ],
+              "6": [
+                0.48,
+                0.225
+              ],
+              "7": [
+                0.51,
+                0.24375
+              ],
+              "8": [
+                0.54,
+                0.2625
+              ],
+              "9": [
+                0.57,
+                0.28125
+              ],
+              "10": [
+                0.6,
+                0.3
+              ],
+              "11": [
+                0.624,
+                0.315
+              ],
+              "12": [
+                0.648,
+                0.33
+              ],
+              "13": [
+                0.672,
+                0.345
+              ],
+              "14": [
+                0.696,
+                0.36
+              ],
+              "15": [
+                0.72,
+                0.375
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill11_Entry",
+              "Avatar_Feixiao_00_Skill11_Camera",
+              "Avatar_Feixiao_00_Skill11_Anim1_Phase01",
+              "Avatar_Feixiao_00_Skill11_Anim2_Phase01",
+              "Avatar_Feixiao_00_Skill11_Anim3_Phase01",
+              "Avatar_Feixiao_00_Skill11_Anim4_Phase01",
+              "Avatar_Feixiao_00_Skill11_Anim1_Phase02",
+              "Avatar_Feixiao_00_Skill11_Anim2_Phase02",
+              "Avatar_Feixiao_00_Skill11_Anim3_Phase02",
+              "Avatar_Feixiao_00_Skill11_Anim4_Phase02",
+              "Avatar_Feixiao_00_Skill03_ComboFinish1_Camera",
+              "Avatar_Feixiao_00_Skill03_ComboFinish1_Phase01",
+              "Avatar_Feixiao_00_Skill03_ComboFinish1_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              }
+            }
+          }
+        },
+        "Waraxe Skyward": {
+          "variant1": {
+            "skillID": 122009,
+            "trigger": "Skill21",
+            "name": "Waraxe Skyward",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to the chosen target. If the target is not Weakness Broken, the DMG multiplier increases by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                0.15
+              ],
+              "2": [
+                0.384,
+                0.165
+              ],
+              "3": [
+                0.408,
+                0.18
+              ],
+              "4": [
+                0.432,
+                0.195
+              ],
+              "5": [
+                0.456,
+                0.21
+              ],
+              "6": [
+                0.48,
+                0.225
+              ],
+              "7": [
+                0.51,
+                0.24375
+              ],
+              "8": [
+                0.54,
+                0.2625
+              ],
+              "9": [
+                0.57,
+                0.28125
+              ],
+              "10": [
+                0.6,
+                0.3
+              ],
+              "11": [
+                0.624,
+                0.315
+              ],
+              "12": [
+                0.648,
+                0.33
+              ],
+              "13": [
+                0.672,
+                0.345
+              ],
+              "14": [
+                0.696,
+                0.36
+              ],
+              "15": [
+                0.72,
+                0.375
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_Skill21_Entry",
+              "Avatar_Feixiao_00_Skill21_Camera_1",
+              "Avatar_Feixiao_00_Skill21_Camera_2",
+              "Avatar_Feixiao_00_Skill21_Anim1_Phase01",
+              "Avatar_Feixiao_00_Skill21_Anim2_Phase01",
+              "Avatar_Feixiao_00_Skill21_Anim1_Phase02",
+              "Avatar_Feixiao_00_Skill21_Anim2_Phase02",
+              "Avatar_Feixiao_00_Skill03_ComboFinish2_Camera",
+              "Avatar_Feixiao_00_Skill03_ComboFinish2_Phase01",
+              "Avatar_Feixiao_00_Skill03_ComboFinish2_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Weakness Break State": {
+                "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Thunderhunt": {
+          "variant1": {
+            "skillID": 122004,
+            "trigger": "SkillP01",
+            "name": "Thunderhunt",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "Can activate Ultimate when \"Flying Aureus\" reaches #3[i] points, accumulating up to #4[i] points. Feixiao gains 1 point of \"Flying Aureus\" for every #2[i] attacks by ally targets. Feixiao's Ultimate attacks do not count towards this number.\\nAfter Feixiao's teammates attack an Enemy target, Feixiao immediately launches Follow-Up ATK against the primary target, dealing Wind DMG equal to #1[i]% of Feixiao's ATK. If there is no primary target available to attack, Feixiao attacks a single random enemy instead. This effect can only trigger once per turn and the trigger count resets at the start of Feixiao's turn. When using this attack, increases DMG dealt by this unit by #5[i]%, lasting for #6[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.55,
+                2,
+                6,
+                12,
+                0.3,
+                2
+              ],
+              "2": [
+                0.605,
+                2,
+                6,
+                12,
+                0.33,
+                2
+              ],
+              "3": [
+                0.66,
+                2,
+                6,
+                12,
+                0.36,
+                2
+              ],
+              "4": [
+                0.715,
+                2,
+                6,
+                12,
+                0.39,
+                2
+              ],
+              "5": [
+                0.77,
+                2,
+                6,
+                12,
+                0.42,
+                2
+              ],
+              "6": [
+                0.825,
+                2,
+                6,
+                12,
+                0.45,
+                2
+              ],
+              "7": [
+                0.89375,
+                2,
+                6,
+                12,
+                0.4875,
+                2
+              ],
+              "8": [
+                0.9625,
+                2,
+                6,
+                12,
+                0.525,
+                2
+              ],
+              "9": [
+                1.03125,
+                2,
+                6,
+                12,
+                0.5625,
+                2
+              ],
+              "10": [
+                1.1,
+                2,
+                6,
+                12,
+                0.6,
+                2
+              ],
+              "11": [
+                1.155,
+                2,
+                6,
+                12,
+                0.63,
+                2
+              ],
+              "12": [
+                1.21,
+                2,
+                6,
+                12,
+                0.66,
+                2
+              ],
+              "13": [
+                1.265,
+                2,
+                6,
+                12,
+                0.69,
+                2
+              ],
+              "14": [
+                1.32,
+                2,
+                6,
+                12,
+                0.72,
+                2
+              ],
+              "15": [
+                1.375,
+                2,
+                6,
+                12,
+                0.75,
+                2
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_PassiveSkill01",
+              "Avatar_Feixiao_00_Insert_SelectTarget",
+              "Avatar_Feixiao_00_Insert_SelectTargetSelf",
+              "Avatar_Feixiao_00_Insert_Phase01",
+              "Avatar_Feixiao_00_Insert_Phase02",
+              "Avatar_Feixiao_00_Insert_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Stormborn": {
+          "variant1": {
+            "skillID": 122007,
+            "trigger": "SkillMaze",
+            "name": "Stormborn",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, enters the \"Onrush\" state, lasting for #1[i] seconds. While in \"Onrush,\" pulls in enemies within a certain range, and increases this unit's movement speed by #2[i]%. After entering battle, gains #4[i] point(s) of \"Flying Aureus.\"\\nWhile in \"Onrush,\" actively attacking will start battle with all pulled enemies. After entering battle, deals Wind DMG equal to #3[i]% of Feixiao's ATK to all enemies at the start of each wave. This DMG is guaranteed to CRIT. If more than 1 enemy is pulled in, increases the multiplier of this DMG by #5[i]% for each additional enemy pulled in, up to a maximum of #6[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                0.5,
+                2,
+                1,
+                1,
+                10
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Feixiao_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1220_basic_atk.png",
+        "skillRef": {
+          "skillName": "Boltsunder",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1220_skill.png",
+        "skillRef": {
+          "skillName": "Waraxe",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1220_ultimate.png",
+        "skillRef": {
+          "skillName": "Terrasplit",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1220_talent.png",
+        "skillRef": {
+          "skillName": "Thunderhunt",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1220_technique.png",
+        "skillRef": {
+          "skillName": "Stormborn",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Heavenpath",
+        "icon": "icon/skill/1220_skilltree1.png",
+        "desc": "When the battle starts, gains #1[i] point(s) of \"Flying Aureus.\"\nAt the start of a turn, if no Follow-Up ATK was launched via Talent in the previous turn, then this counts as 1 toward the number of attacks required to gain \"Flying Aureus.\"",
+        "params": [
+          3
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              3
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Formshift",
+        "icon": "icon/skill/1220_skilltree2.png",
+        "desc": "When using Ultimate to deal DMG to an enemy target, it is considered as a Follow-Up ATK. Follow-Up ATKs' CRIT DMG increases by #1[i]%.",
+        "params": [
+          0.36
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.36
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Boltcatch",
+        "icon": "icon/skill/1220_skilltree3.png",
+        "desc": "When using Skill, increases ATK by #1[i]%, lasting for #2[i] turn(s).",
+        "params": [
+          0.48,
+          3
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1220.png",
+    "preview": "image/character_preview/1220.png",
+    "portrait": "image/character_portrait/1220.png",
+    "bannerOffsets": [
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63,
+      54,
+      45,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Yunli": {
     "internalID": 1221,
     "name": "Yunli",
@@ -37204,6 +38341,1176 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Acheron": {
+    "internalID": 1308,
+    "name": "Acheron",
+    "path": "Nihility",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 9,
+    "baseStats": {
+      "ATKBase": 698.544,
+      "DEFBase": 436.59000000000003,
+      "HPBase": 1125.4319999999998,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130801",
+        "name": "Silenced Sky Spake Sooth",
+        "rank": 1,
+        "desc": "When dealing DMG to debuffed enemies, increases CRIT Rate by 18%.",
+        "icon": "icon/skill/1308_rank1.png",
+        "paramsEido": [
+          0.18
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      {
+        "id": "130802",
+        "name": "Mute Thunder in Still Tempest",
+        "rank": 2,
+        "desc": "The number of Nihility characters required for the Trace \"The Abyss\" to achieve its highest possible effect is reduced by 1. When this unit's turn starts, gains 1 point of Slashed Dream and inflicts 1 stack of Crimson Knot on the enemy with the most Crimson Knot stacks.",
+        "icon": "icon/skill/1308_rank2.png"
+      },
+      {
+        "id": "130803",
+        "name": "Frost Bites in Death",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1308_ultimate.png"
+      },
+      {
+        "id": "130804",
+        "name": "Shrined Fire for Mirrored Soul",
+        "rank": 4,
+        "desc": "When enemy targets enter combat, inflicts them with the Ultimate DMG Vulnerability, increasing the amount of Ultimate DMG they take by 8%.",
+        "icon": "icon/skill/1308_rank4.png",
+        "paramsEido": [
+          0.08
+        ]
+      },
+      {
+        "id": "130805",
+        "name": "Strewn Souls on Erased Earths",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1308_skill.png"
+      },
+      {
+        "id": "130806",
+        "name": "Apocalypse, the Emancipator",
+        "rank": 6,
+        "desc": "Increases the All-Type RES PEN for the Ultimate DMG dealt by Acheron by 20%. The DMG dealt by Basic ATK and Skill will also be considered as Ultimate DMG and can Reduce enemy Toughness regardless of Weakness Types. When breaking Weaknesses, triggers the Lightning Weakness Break effect.",
+        "icon": "icon/skill/1308_rank6.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Trilateral Wiltcross": {
+          "variant1": {
+            "skillID": 130801,
+            "trigger": "Skill01",
+            "name": "Trilateral Wiltcross",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Acheron's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill01_Camera",
+              "Avatar_Acheron_00_Skill01_Phase01",
+              "Avatar_Acheron_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Octobolt Flash": {
+          "variant1": {
+            "skillID": 130802,
+            "trigger": "Skill02",
+            "name": "Octobolt Flash",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Gains #3[i] point(s) of \"Slashed Dream.\" Inflicts #3[i] stack(s) of \"Crimson Knot\" on one designated enemy target, dealing Lightning DMG equal to #1[i]% of Acheron's ATK to this target, as well as Lightning DMG equal to #2[i]% of Acheron's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                0.3,
+                1
+              ],
+              "2": [
+                0.88,
+                0.33,
+                1
+              ],
+              "3": [
+                0.96,
+                0.36,
+                1
+              ],
+              "4": [
+                1.04,
+                0.39,
+                1
+              ],
+              "5": [
+                1.12,
+                0.42,
+                1
+              ],
+              "6": [
+                1.2,
+                0.45,
+                1
+              ],
+              "7": [
+                1.3,
+                0.4875,
+                1
+              ],
+              "8": [
+                1.4,
+                0.525,
+                1
+              ],
+              "9": [
+                1.5,
+                0.5625,
+                1
+              ],
+              "10": [
+                1.6,
+                0.6,
+                1
+              ],
+              "11": [
+                1.68,
+                0.63,
+                1
+              ],
+              "12": [
+                1.76,
+                0.66,
+                1
+              ],
+              "13": [
+                1.84,
+                0.69,
+                1
+              ],
+              "14": [
+                1.92,
+                0.72,
+                1
+              ],
+              "15": [
+                2,
+                0.75,
+                1
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill02_Camera",
+              "Avatar_Acheron_00_Skill02_Phase01",
+              "Avatar_Acheron_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Slashed Dream Cries in Red": {
+          "variant1": {
+            "skillID": 130803,
+            "trigger": "Skill03",
+            "name": "Slashed Dream Cries in Red",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Sequentially unleash \"Rainblade\" 3 times and \"Stygian Resurge\" 1 time, dealing Lightning DMG up to #6[i]% of Acheron's ATK to one designated enemy target, as well as Lightning DMG up to #7[i]% of Acheron's ATK to other targets.\\n\"Rainblade\": Deals Lightning DMG equal to #1[f1]% of Acheron's ATK to one designated enemy target and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, immediately deals Lightning DMG equal to #2[f1]% of Acheron's ATK to all enemies. For every stack of \"Crimson Knot\" removed, this DMG Multiplier is additionally increased, up to a maximum of #5[f1]%.\\n\"Stygian Resurge\": Deals Lightning DMG equal to #3[i]% of Acheron's ATK to all enemies and remove all \"Crimson Knots.\"\\n\"Crimson Knot\" cannot be applied to enemies during the Ultimate.",
+            "energyCost": 9,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.144,
+                0.09,
+                0.72,
+                9,
+                0.36,
+                2.232,
+                1.8
+              ],
+              "2": [
+                0.1536,
+                0.096,
+                0.768,
+                9,
+                0.384,
+                2.3808,
+                1.92
+              ],
+              "3": [
+                0.1632,
+                0.102,
+                0.816,
+                9,
+                0.408,
+                2.5296,
+                2.04
+              ],
+              "4": [
+                0.1728,
+                0.108,
+                0.864,
+                9,
+                0.432,
+                2.6784,
+                2.16
+              ],
+              "5": [
+                0.1824,
+                0.114,
+                0.912,
+                9,
+                0.456,
+                2.8272,
+                2.28
+              ],
+              "6": [
+                0.192,
+                0.12,
+                0.96,
+                9,
+                0.48,
+                2.976,
+                2.4
+              ],
+              "7": [
+                0.204,
+                0.1275,
+                1.02,
+                9,
+                0.51,
+                3.162,
+                2.55
+              ],
+              "8": [
+                0.216,
+                0.135,
+                1.08,
+                9,
+                0.54,
+                3.348,
+                2.7
+              ],
+              "9": [
+                0.228,
+                0.1425,
+                1.14,
+                9,
+                0.57,
+                3.534,
+                2.85
+              ],
+              "10": [
+                0.24,
+                0.15,
+                1.2,
+                9,
+                0.6,
+                3.72,
+                3
+              ],
+              "11": [
+                0.2496,
+                0.156,
+                1.248,
+                9,
+                0.624,
+                3.8688,
+                3.12
+              ],
+              "12": [
+                0.2592,
+                0.162,
+                1.296,
+                9,
+                0.648,
+                4.0176,
+                3.24
+              ],
+              "13": [
+                0.2688,
+                0.168,
+                1.344,
+                9,
+                0.672,
+                4.1664,
+                3.36
+              ],
+              "14": [
+                0.2784,
+                0.174,
+                1.392,
+                9,
+                0.696,
+                4.3152,
+                3.48
+              ],
+              "15": [
+                0.288,
+                0.18,
+                1.44,
+                9,
+                0.72,
+                4.464,
+                3.6
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill03_Camera",
+              "Avatar_Acheron_00_Skill03_EnterReady",
+              "Avatar_Acheron_00_Skill03_Phase01",
+              "Avatar_Acheron_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Rainblade": {
+          "variant1": {
+            "skillID": 130814,
+            "trigger": "Skill31",
+            "name": "Rainblade",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals minor Lightning DMG to one enemy, and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, deals minor Lightning DMG to all enemies 1 time, with this DMG multiplier increased for every stack of \"Crimson Knot\" removed.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.144,
+                0.09,
+                0.72
+              ],
+              "2": [
+                0.1536,
+                0.096,
+                0.768
+              ],
+              "3": [
+                0.1632,
+                0.102,
+                0.816
+              ],
+              "4": [
+                0.1728,
+                0.108,
+                0.864
+              ],
+              "5": [
+                0.1824,
+                0.114,
+                0.912
+              ],
+              "6": [
+                0.192,
+                0.12,
+                0.96
+              ],
+              "7": [
+                0.204,
+                0.1275,
+                1.02
+              ],
+              "8": [
+                0.216,
+                0.135,
+                1.08
+              ],
+              "9": [
+                0.228,
+                0.1425,
+                1.14
+              ],
+              "10": [
+                0.24,
+                0.15,
+                1.2
+              ],
+              "11": [
+                0.2496,
+                0.156,
+                1.248
+              ],
+              "12": [
+                0.2592,
+                0.162,
+                1.296
+              ],
+              "13": [
+                0.2688,
+                0.168,
+                1.344
+              ],
+              "14": [
+                0.2784,
+                0.174,
+                1.392
+              ],
+              "15": [
+                0.288,
+                0.18,
+                1.44
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill31_Camera",
+              "Avatar_Acheron_00_Skill31_Phase01",
+              "Avatar_Acheron_00_Skill31_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 130815,
+            "trigger": "Skill32",
+            "name": "Rainblade",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals minor Lightning DMG to one enemy, and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, deals minor Lightning DMG to all enemies 1 time, with this DMG multiplier increased for every stack of \"Crimson Knot\" removed.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.144,
+                0.09,
+                0.72
+              ],
+              "2": [
+                0.1536,
+                0.096,
+                0.768
+              ],
+              "3": [
+                0.1632,
+                0.102,
+                0.816
+              ],
+              "4": [
+                0.1728,
+                0.108,
+                0.864
+              ],
+              "5": [
+                0.1824,
+                0.114,
+                0.912
+              ],
+              "6": [
+                0.192,
+                0.12,
+                0.96
+              ],
+              "7": [
+                0.204,
+                0.1275,
+                1.02
+              ],
+              "8": [
+                0.216,
+                0.135,
+                1.08
+              ],
+              "9": [
+                0.228,
+                0.1425,
+                1.14
+              ],
+              "10": [
+                0.24,
+                0.15,
+                1.2
+              ],
+              "11": [
+                0.2496,
+                0.156,
+                1.248
+              ],
+              "12": [
+                0.2592,
+                0.162,
+                1.296
+              ],
+              "13": [
+                0.2688,
+                0.168,
+                1.344
+              ],
+              "14": [
+                0.2784,
+                0.174,
+                1.392
+              ],
+              "15": [
+                0.288,
+                0.18,
+                1.44
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill32_Camera",
+              "Avatar_Acheron_00_Skill32_Phase01",
+              "Avatar_Acheron_00_Skill32_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant3": {
+            "skillID": 130816,
+            "trigger": "Skill33",
+            "name": "Rainblade",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals minor Lightning DMG to one enemy, and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, deals minor Lightning DMG to all enemies 1 time, with this DMG multiplier increased for every stack of \"Crimson Knot\" removed.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.144,
+                0.09,
+                0.72
+              ],
+              "2": [
+                0.1536,
+                0.096,
+                0.768
+              ],
+              "3": [
+                0.1632,
+                0.102,
+                0.816
+              ],
+              "4": [
+                0.1728,
+                0.108,
+                0.864
+              ],
+              "5": [
+                0.1824,
+                0.114,
+                0.912
+              ],
+              "6": [
+                0.192,
+                0.12,
+                0.96
+              ],
+              "7": [
+                0.204,
+                0.1275,
+                1.02
+              ],
+              "8": [
+                0.216,
+                0.135,
+                1.08
+              ],
+              "9": [
+                0.228,
+                0.1425,
+                1.14
+              ],
+              "10": [
+                0.24,
+                0.15,
+                1.2
+              ],
+              "11": [
+                0.2496,
+                0.156,
+                1.248
+              ],
+              "12": [
+                0.2592,
+                0.162,
+                1.296
+              ],
+              "13": [
+                0.2688,
+                0.168,
+                1.344
+              ],
+              "14": [
+                0.2784,
+                0.174,
+                1.392
+              ],
+              "15": [
+                0.288,
+                0.18,
+                1.44
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill33_Camera",
+              "Avatar_Acheron_00_Skill33_Phase01",
+              "Avatar_Acheron_00_Skill33_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Stygian Resurge": {
+          "variant1": {
+            "skillID": 130817,
+            "trigger": "Skill34",
+            "name": "Stygian Resurge",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG to all enemies and removes all Crimson Knots.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.72
+              ],
+              "2": [
+                0.768
+              ],
+              "3": [
+                0.816
+              ],
+              "4": [
+                0.864
+              ],
+              "5": [
+                0.912
+              ],
+              "6": [
+                0.96
+              ],
+              "7": [
+                1.02
+              ],
+              "8": [
+                1.08
+              ],
+              "9": [
+                1.14
+              ],
+              "10": [
+                1.2
+              ],
+              "11": [
+                1.248
+              ],
+              "12": [
+                1.296
+              ],
+              "13": [
+                1.344
+              ],
+              "14": [
+                1.392
+              ],
+              "15": [
+                1.44
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill34_Camera",
+              "Avatar_Acheron_00_Skill34_Phase01",
+              "Avatar_Acheron_00_Skill34_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Atop Rainleaf Hangs Oneness": {
+          "variant1": {
+            "skillID": 130804,
+            "trigger": "SkillP01",
+            "name": "Atop Rainleaf Hangs Oneness",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When Slashed Dream reaches #1[i] point(s), the Ultimate can be activated. During the Ultimate, reduces enemies' Toughness regardless of Weakness Types and reduces all enemies' All-Type RES by #2[i]%, lasting until the end of the Ultimate.\\nWhen any unit inflicts debuffs on an enemy target while using their ability, Acheron gains 1 point of Slashed Dream and inflicts 1 stack of Crimson Knot on a target. If debuffs are inflicted on multiple targets, then the 1 stack of Crimson Knot will be inflicted on the enemy target with the most Crimson Knot stacks. This effect can only trigger once for every ability use.\\nAfter an enemy target exits the field or gets defeated by any unit while Acheron is on the field, their Crimson Knot stacks will be transferred to the enemy target with the most Crimson Knot stacks on the whole field.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                9,
+                0.1
+              ],
+              "2": [
+                9,
+                0.11
+              ],
+              "3": [
+                9,
+                0.12
+              ],
+              "4": [
+                9,
+                0.13
+              ],
+              "5": [
+                9,
+                0.14
+              ],
+              "6": [
+                9,
+                0.15
+              ],
+              "7": [
+                9,
+                0.1625
+              ],
+              "8": [
+                9,
+                0.175
+              ],
+              "9": [
+                9,
+                0.1875
+              ],
+              "10": [
+                9,
+                0.2
+              ],
+              "11": [
+                9,
+                0.21
+              ],
+              "12": [
+                9,
+                0.22
+              ],
+              "13": [
+                9,
+                0.23
+              ],
+              "14": [
+                9,
+                0.24
+              ],
+              "15": [
+                9,
+                0.25
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_PassiveSkill_1"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Quadrivalent Ascendance": {
+          "variant1": {
+            "skillID": 130807,
+            "trigger": "SkillMaze",
+            "name": "Quadrivalent Ascendance",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. At the start of each wave, gains Quadrivalent Ascendance, dealing Lightning DMG equal to #1[i]% of Acheron's ATK to all enemies and reducing Toughness of all enemies irrespective of Weakness Types. When breaking Weaknesses, triggers the Lightning Weakness Break effect.\\nQuadrivalent Ascendance: After using the Ultimate, Acheron gains #2[i] point(s) of Slashed Dream and inflicts #2[i] stack(s) of Crimson Knot on a single random enemy.\\nIf attacking a normal enemy, immediately defeats them without entering combat. When not hitting enemies, no Technique Points are consumed.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                1
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Acheron_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1308_basic_atk.png",
+        "skillRef": {
+          "skillName": "Trilateral Wiltcross",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1308_skill.png",
+        "skillRef": {
+          "skillName": "Octobolt Flash",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1308_ultimate.png",
+        "skillRef": {
+          "skillName": "Slashed Dream Cries in Red",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1308_talent.png",
+        "skillRef": {
+          "skillName": "Atop Rainleaf Hangs Oneness",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1308_technique.png",
+        "skillRef": {
+          "skillName": "Quadrivalent Ascendance",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Red Oni",
+        "icon": "icon/skill/1308_skilltree1.png",
+        "desc": "When battle starts, immediately gains #1[i] point(s) of Slashed Dream and applies #1[i] stack(s) of Crimson Knot to a random enemy. When Slashed Dream reaches its upper limit, for every point of Slashed Dream that exceeds the limit, gains 1 stack of Quadrivalent Ascendance. Enables Quadrivalent Ascendance to stack up to #2[i] time(s).",
+        "params": [
+          5,
+          3
+        ]
+      },
+      "Point07": {
+        "name": "The Abyss",
+        "icon": "icon/skill/1308_skilltree2.png",
+        "desc": "When there are 1 or 2 Nihility characters other than Acheron in the team, the DMG dealt by Acheron's Basic ATK, Skill, and Ultimate increases to #1[i]% or #2[i]% of the original DMG respectively.",
+        "params": [
+          1.15,
+          1.6
+        ]
+      },
+      "Point08": {
+        "name": "Thunder Core",
+        "icon": "icon/skill/1308_skilltree3.png",
+        "desc": "When the Ultimate's Rainblade hits enemy targets that have Crimson Knot, the DMG dealt by Acheron increases by #1[i]%, stacking up to #2[i] time(s) and lasting for #3[i] turn(s). And when Stygian Resurge triggers, additionally deals DMG for #4[i] times. Each time deals Lightning DMG equal to #5[i]% of Acheron's ATK to a single random enemy and is considered as Ultimate DMG.",
+        "params": [
+          0.3,
+          3,
+          3,
+          6,
+          0.25
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.032
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.048
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1308.png",
+    "preview": "image/character_preview/1308.png",
+    "portrait": "image/character_portrait/1308.png",
+    "bannerOffsets": [
+      9,
+      -24,
+      0.56,
+      9,
+      -24,
+      0.56,
+      9,
+      -24,
+      0.56
+    ],
+    "isBuffed": false
+  },
   "Robin": {
     "internalID": 1309,
     "name": "Robin",
@@ -42058,6 +44365,1093 @@ let characters = {
       10,
       -39,
       0.65
+    ],
+    "isBuffed": false
+  },
+  "Rappa": {
+    "internalID": 1317,
+    "name": "Rappa",
+    "path": "Erudition",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 717.9480000000001,
+      "DEFBase": 460.845,
+      "HPBase": 1086.624,
+      "SPDBase": 96,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "131701",
+        "name": "Returned Is the Revenant With No Ferry Toll",
+        "rank": 1,
+        "desc": "During the \"Sealform\" state entered by using Ultimate, DMG dealt by Rappa ignores 15% of the targets' DEF. After exiting the \"Sealform\" state, regenerates 20 Energy.",
+        "icon": "icon/skill/1317_rank1.png",
+        "paramsEido": [
+          0.15,
+          20
+        ]
+      },
+      {
+        "id": "131702",
+        "name": "Free Is the Mind Enlightened by Haikus",
+        "rank": 2,
+        "desc": "The Enhanced Basic ATK's first 2 hits have their Toughness Reduction against the one designated enemy increased by 50%.",
+        "icon": "icon/skill/1317_rank2.png",
+        "paramsEido": [
+          0.5
+        ]
+      },
+      {
+        "id": "131703",
+        "name": "Many Are the Shrines That Repel No Hell",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1317_skill.png"
+      },
+      {
+        "id": "131704",
+        "name": "Lost Is the Nindō Devoured by Time",
+        "rank": 4,
+        "desc": "While in the \"Sealform\" state, increases all allies' SPD by 12%.",
+        "icon": "icon/skill/1317_rank4.png",
+        "paramsEido": [
+          0.12
+        ]
+      },
+      {
+        "id": "131705",
+        "name": "Steady Is The Ranger With Unerring Arrows",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1317_ultimate.png"
+      },
+      {
+        "id": "131706",
+        "name": "Righteous Is the Wrath That Spares No Evil",
+        "rank": 6,
+        "desc": "When battle starts, Rappa gains 5 point(s) of her Talent's Charge, and its upper limit increases by 5 point(s). After launching the third hit of \"Ningu: Demonbane Petalblade,\" gains 5 point(s) of Charge.",
+        "icon": "icon/skill/1317_rank6.png",
+        "paramsEido": [
+          5,
+          5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Ninjutsu: Rise Above Tumbles": {
+          "variant1": {
+            "skillID": 131701,
+            "trigger": "Skill01",
+            "name": "Ninjutsu: Rise Above Tumbles",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Rappa's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill01_Camera",
+              "Avatar_Rappa_00_Skill01_Phase01",
+              "Avatar_Rappa_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ningu: Demonbane Petalblade": {
+          "variant1": {
+            "skillID": 131708,
+            "trigger": "Skill11",
+            "name": "Ningu: Demonbane Petalblade",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals minor Imaginary DMG to one designated enemy and minor Imaginary DMG to adjacent targets. Attacking enemies without Imaginary Weakness can also reduce their Toughness.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                0.6,
+                0.5
+              ],
+              "2": [
+                0.68,
+                0.34,
+                0.68,
+                0.5
+              ],
+              "3": [
+                0.76,
+                0.38,
+                0.76,
+                0.5
+              ],
+              "4": [
+                0.84,
+                0.42,
+                0.84,
+                0.5
+              ],
+              "5": [
+                0.92,
+                0.46,
+                0.92,
+                0.5
+              ],
+              "6": [
+                1,
+                0.5,
+                1,
+                0.5
+              ],
+              "7": [
+                1.08,
+                0.54,
+                1.08,
+                0.5
+              ],
+              "8": [
+                1.16,
+                0.58,
+                1.16,
+                0.5
+              ],
+              "9": [
+                1.24,
+                0.62,
+                1.24,
+                0.5
+              ],
+              "10": [
+                1.32,
+                0.66,
+                1.32,
+                0.5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill11_Phase01",
+              "Avatar_Rappa_00_Skill11_Phase02",
+              "Avatar_Rappa_00_Skill03_FPS_Hit1_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 131710,
+            "trigger": "Skill12",
+            "name": "Ningu: Demonbane Petalblade",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals minor Imaginary DMG to one designated enemy and minor Imaginary DMG to adjacent targets. Attacking enemies without Imaginary Weakness can also reduce their Toughness.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3
+              ],
+              "2": [
+                0.68,
+                0.34
+              ],
+              "3": [
+                0.76,
+                0.38
+              ],
+              "4": [
+                0.84,
+                0.42
+              ],
+              "5": [
+                0.92,
+                0.46
+              ],
+              "6": [
+                1,
+                0.5
+              ],
+              "7": [
+                1.08,
+                0.54
+              ],
+              "8": [
+                1.16,
+                0.58
+              ],
+              "9": [
+                1.24,
+                0.62
+              ],
+              "10": [
+                1.32,
+                0.66
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill12_Phase01",
+              "Avatar_Rappa_00_Skill12_Phase02",
+              "Avatar_Rappa_00_Skill03_FPS_Hit2_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant3": {
+            "skillID": 131712,
+            "trigger": "Skill13",
+            "name": "Ningu: Demonbane Petalblade",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Deals minor Imaginary DMG to all enemies. Attacking enemies without Imaginary Weakness can also reduce their Toughness.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6
+              ],
+              "2": [
+                0.68
+              ],
+              "3": [
+                0.76
+              ],
+              "4": [
+                0.84
+              ],
+              "5": [
+                0.92
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.08
+              ],
+              "8": [
+                1.16
+              ],
+              "9": [
+                1.24
+              ],
+              "10": [
+                1.32
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill13_Phase01",
+              "Avatar_Rappa_00_Skill13_Phase02",
+              "Avatar_Rappa_00_Skill03_FPS_Hit3_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant4": {
+            "skillID": 131718,
+            "trigger": "Skill14",
+            "name": "Ningu: Demonbane Petalblade",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Launches \"Ningu: Demonbane Petalblade.\" The first 2 hits deal Imaginary DMG equal to #1[i]% of Rappa's ATK to one designated enemy and Imaginary DMG equal to #2[i]% of Rappa's ATK to adjacent targets, and the 3rd hit deals Imaginary DMG equal to #3[i]% of Rappa's ATK to all enemies.\\nEnhanced Basic ATK will not recover Skill Points. Attacking enemies that don't have Imaginary Weakness can also reduce Toughness, whose effect is equal to #4[i]% of the original Toughness Reduction. When Breaking Weakness, triggers the Imaginary Weakness Break effect.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 25,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                0.6,
+                0.5
+              ],
+              "2": [
+                0.68,
+                0.34,
+                0.68,
+                0.5
+              ],
+              "3": [
+                0.76,
+                0.38,
+                0.76,
+                0.5
+              ],
+              "4": [
+                0.84,
+                0.42,
+                0.84,
+                0.5
+              ],
+              "5": [
+                0.92,
+                0.46,
+                0.92,
+                0.5
+              ],
+              "6": [
+                1,
+                0.5,
+                1,
+                0.5
+              ],
+              "7": [
+                1.08,
+                0.54,
+                1.08,
+                0.5
+              ],
+              "8": [
+                1.16,
+                0.58,
+                1.16,
+                0.5
+              ],
+              "9": [
+                1.24,
+                0.62,
+                1.24,
+                0.5
+              ],
+              "10": [
+                1.32,
+                0.66,
+                1.32,
+                0.5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 75
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 45
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Ninja Strike: Rooted Resolute": {
+          "variant1": {
+            "skillID": 131702,
+            "trigger": "Skill02",
+            "name": "Ninja Strike: Rooted Resolute",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Rappa's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6
+              ],
+              "2": [
+                0.66
+              ],
+              "3": [
+                0.72
+              ],
+              "4": [
+                0.78
+              ],
+              "5": [
+                0.84
+              ],
+              "6": [
+                0.9
+              ],
+              "7": [
+                0.975
+              ],
+              "8": [
+                1.05
+              ],
+              "9": [
+                1.125
+              ],
+              "10": [
+                1.2
+              ],
+              "11": [
+                1.26
+              ],
+              "12": [
+                1.32
+              ],
+              "13": [
+                1.38
+              ],
+              "14": [
+                1.44
+              ],
+              "15": [
+                1.5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill02_Camera",
+              "Avatar_Rappa_00_Skill02_Phase01",
+              "Avatar_Rappa_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Nindō Supreme: Aishiteru": {
+          "variant1": {
+            "skillID": 131703,
+            "trigger": "Skill03",
+            "name": "Nindō Supreme: Aishiteru",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Enters the \"Sealform\" state, immediately gains 1 extra turn, obtains #3[i] points of \"Chroma Ink,\" and increases Weakness Break Efficiency by #1[i]% and Break Effect by #2[i]%.\\nWhile in the \"Sealform\" state, Basic ATK is enhanced, and Skill and Ultimate cannot be used. After using Enhanced Basic ATK, consumes 1 point of \"Chroma Ink.\" When \"Chroma Ink\" is depleted, exits the \"Sealform\" state.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.1,
+                3
+              ],
+              "2": [
+                0.5,
+                0.12,
+                3
+              ],
+              "3": [
+                0.5,
+                0.14,
+                3
+              ],
+              "4": [
+                0.5,
+                0.16,
+                3
+              ],
+              "5": [
+                0.5,
+                0.18,
+                3
+              ],
+              "6": [
+                0.5,
+                0.2,
+                3
+              ],
+              "7": [
+                0.5,
+                0.225,
+                3
+              ],
+              "8": [
+                0.5,
+                0.25,
+                3
+              ],
+              "9": [
+                0.5,
+                0.275,
+                3
+              ],
+              "10": [
+                0.5,
+                0.3,
+                3
+              ],
+              "11": [
+                0.5,
+                0.32,
+                3
+              ],
+              "12": [
+                0.5,
+                0.34,
+                3
+              ],
+              "13": [
+                0.5,
+                0.36,
+                3
+              ],
+              "14": [
+                0.5,
+                0.38,
+                3
+              ],
+              "15": [
+                0.5,
+                0.4,
+                3
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill03_Camera",
+              "Avatar_Rappa_00_Skill03_EnterReady",
+              "Avatar_Rappa_00_Skill03_Phase01",
+              "Avatar_Rappa_00_Skill03_Phase02",
+              "Avatar_Rappa_00_Skill03_FPS_Camera",
+              "Avatar_Rappa_00_Skill03_FPS_Camera_Steady",
+              "Avatar_Rappa_00_Skill03_SP0_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Ninja Tech: Endurance Gauge": {
+          "variant1": {
+            "skillID": 131704,
+            "trigger": "SkillP01",
+            "name": "Ninja Tech: Endurance Gauge",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Each time the enemy target is Weakness Broken, Rappa gains 1 point of Charge, up to a max of #1[i] points of Charge. When Rappa next launches the third hit of \"Ningu: Demonbane Petalblade,\" additionally deals Break DMG equal to #3[i]% of Rappa's Imaginary Break DMG to all enemies. This DMG can ignore Weakness Type to reduce #4[i] Toughness, consuming all Charge. Each point of Charge increases the Break DMG multiplier by #5[i]% and increases the Toughness Reduction that can ignore Weakness Type by #6[i].\\nWhen Breaking Weakness, triggers the Imaginary Weakness Break effect.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 2,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0,
+                0.3,
+                2,
+                0.25,
+                1
+              ],
+              "2": [
+                10,
+                0,
+                0.33,
+                2,
+                0.275,
+                1
+              ],
+              "3": [
+                10,
+                0,
+                0.36,
+                2,
+                0.3,
+                1
+              ],
+              "4": [
+                10,
+                0,
+                0.39,
+                2,
+                0.325,
+                1
+              ],
+              "5": [
+                10,
+                0,
+                0.42,
+                2,
+                0.35,
+                1
+              ],
+              "6": [
+                10,
+                0,
+                0.45,
+                2,
+                0.375,
+                1
+              ],
+              "7": [
+                10,
+                0,
+                0.4875,
+                2,
+                0.40625,
+                1
+              ],
+              "8": [
+                10,
+                0,
+                0.525,
+                2,
+                0.4375,
+                1
+              ],
+              "9": [
+                10,
+                0,
+                0.5625,
+                2,
+                0.46875,
+                1
+              ],
+              "10": [
+                10,
+                0,
+                0.6,
+                2,
+                0.5,
+                1
+              ],
+              "11": [
+                10,
+                0,
+                0.63,
+                2,
+                0.525,
+                1
+              ],
+              "12": [
+                10,
+                0,
+                0.66,
+                2,
+                0.55,
+                1
+              ],
+              "13": [
+                10,
+                0,
+                0.69,
+                2,
+                0.575,
+                1
+              ],
+              "14": [
+                10,
+                0,
+                0.72,
+                2,
+                0.6,
+                1
+              ],
+              "15": [
+                10,
+                0,
+                0.75,
+                2,
+                0.625,
+                1
+              ]
+            },
+            "element": "Imaginary",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Rappa_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 6
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Ninja Dash: By Leaps and Bounds": {
+          "variant1": {
+            "skillID": 131707,
+            "trigger": "SkillMaze",
+            "name": "Ninja Dash: By Leaps and Bounds",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, enters the \"Graffiti\" state for #1[i] seconds. While in the \"Graffiti\" state, moves forward rapidly for a set distance and attacks any enemies touched. During the rapid movement, can block all enemies' attacks. Using an attack in the \"Graffiti\" state can end the state's duration early. After entering combat via attacking enemies, deals #5[i] Toughness Reduction regardless of Weakness Type and Break DMG equal to #2[i]% of Rappa's Imaginary Break DMG to each enemy target, and deals Break DMG equal to #3[i]% of Rappa's Imaginary Break DMG to adjacent targets. At the same time, this unit regenerates #4[i] Energy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                2,
+                1.8,
+                10,
+                30
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Rappa_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1317_basic_atk.png",
+        "skillRef": {
+          "skillName": "Ninjutsu: Rise Above Tumbles",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1317_skill.png",
+        "skillRef": {
+          "skillName": "Ninja Strike: Rooted Resolute",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1317_ultimate.png",
+        "skillRef": {
+          "skillName": "Nindō Supreme: Aishiteru",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1317_talent.png",
+        "skillRef": {
+          "skillName": "Ninja Tech: Endurance Gauge",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1317_technique.png",
+        "skillRef": {
+          "skillName": "Ninja Dash: By Leaps and Bounds",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Ninjutsu Inscription: Sky High",
+        "icon": "icon/skill/1317_skilltree1.png",
+        "desc": "When the Weakness of an elite-level or higher enemy is broken, Rappa additionally gains #2[i] point(s) of Charge and regenerates #1[i] Energy.",
+        "params": [
+          10,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Ninjutsu Inscription: Sea Echo",
+        "icon": "icon/skill/1317_skilltree2.png",
+        "desc": "While in the \"Sealform\" state, after Rappa uses Enhanced Basic ATK to deal DMG to a Weakness Broken enemy target, converts the Toughness Reduction from this instance of DMG to 1 instance of #1[i]% Super Break DMG.",
+        "params": [
+          0.6
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+            "params": [
+              0.6
+            ]
+          },
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG.",
+            "params": [
+              0.6
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Ninjutsu Inscription: Withered Leaf",
+        "icon": "icon/skill/1317_skilltree3.png",
+        "desc": "When an enemy target becomes Weakness Broken, increases the Break DMG taken by #1[i]%. If Rappa's current ATK is higher than #2[i], for every 100 excess ATK, additionally increases this value by #3[i]%, up to a max additional increase of #4[i]%. This effect lasts for #5[i] turn(s).",
+        "params": [
+          0.02,
+          2400,
+          0.01,
+          0.08,
+          2
+        ],
+        "extraEffects": {
+          "Break DMG": {
+            "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+            "params": [
+              0.02,
+              2400,
+              0.01,
+              0.08,
+              2
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1317.png",
+    "preview": "image/character_preview/1317.png",
+    "portrait": "image/character_portrait/1317.png",
+    "bannerOffsets": [
+      13,
+      111,
+      0.63,
+      13,
+      111,
+      0.63,
+      13,
+      111,
+      0.63
     ],
     "isBuffed": false
   },

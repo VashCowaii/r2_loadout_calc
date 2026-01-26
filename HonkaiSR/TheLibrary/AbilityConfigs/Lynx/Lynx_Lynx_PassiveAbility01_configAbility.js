@@ -244,7 +244,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   {
                     "name": "Has Modifier",

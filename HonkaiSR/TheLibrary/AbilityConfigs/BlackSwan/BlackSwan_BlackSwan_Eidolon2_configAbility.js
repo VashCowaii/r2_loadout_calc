@@ -42,7 +42,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       {
                         "name": "NOT",
@@ -52,7 +52,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target 2}}"
                           },
-                          "team": "TeamDark"
+                          "team": "Enemy Team"
                         }
                       },
                       {

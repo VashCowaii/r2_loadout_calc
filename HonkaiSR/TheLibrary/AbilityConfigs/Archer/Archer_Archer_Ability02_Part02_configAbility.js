@@ -292,7 +292,7 @@ const configAbility = {
       "name": "WAIT FOR",
       "condition": {
         "name": "Death Animation Completed",
-        "team": "TeamDark",
+        "team": "Enemy Team",
         "type": "Team Characters"
       }
     },

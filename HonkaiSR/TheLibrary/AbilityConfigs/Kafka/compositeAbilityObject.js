@@ -535,7 +535,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -614,7 +614,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "team": "TeamDark"
+                            "team": "Enemy Team"
                           },
                           {
                             "name": "NOT",
@@ -624,7 +624,7 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target 2}}"
                               },
-                              "team": "TeamDark"
+                              "team": "Enemy Team"
                             }
                           },
                           {
@@ -1494,7 +1494,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target's Ability Targets}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       }
                     ]
                   },
@@ -1927,7 +1927,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       {
                         "name": "Has Flag",
@@ -1974,7 +1974,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       {
                         "name": "Has Flag",
@@ -2908,7 +2908,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   "passed": [
                     {

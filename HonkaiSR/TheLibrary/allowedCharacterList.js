@@ -148,6 +148,10 @@ let allowedCharacterList = [
     "trimName": "Jiaoqiu"
   },
   {
+    "fullName": "Feixiao",
+    "trimName": "Feixiao"
+  },
+  {
     "fullName": "Yunli",
     "trimName": "Yunli"
   },
@@ -196,6 +200,10 @@ let allowedCharacterList = [
     "trimName": "BlackSwan"
   },
   {
+    "fullName": "Acheron",
+    "trimName": "Acheron"
+  },
+  {
     "fullName": "Robin",
     "trimName": "Robin"
   },
@@ -218,6 +226,10 @@ let allowedCharacterList = [
   {
     "fullName": "Boothill",
     "trimName": "Boothill"
+  },
+  {
+    "fullName": "Rappa",
+    "trimName": "Rappa"
   },
   {
     "fullName": "The Dahlia",

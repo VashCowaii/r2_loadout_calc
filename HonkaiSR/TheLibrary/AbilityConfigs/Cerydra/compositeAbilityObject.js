@@ -664,7 +664,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -701,7 +701,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Player's Aim Primary-Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       }
                     ]
                   },
@@ -967,7 +967,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Player's Aim Primary-Target}}"
                         },
-                        "team": "TeamLight",
+                        "team": "Player Team",
                         "invertCondition": true
                       }
                     ]

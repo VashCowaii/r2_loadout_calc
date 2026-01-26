@@ -809,7 +809,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Is Entity Type",
@@ -1918,7 +1918,7 @@ const compositeAbilityObject = {
         {
           "name": "Battle Event Construction",
           "ID": 11407,
-          "team": "TeamLight",
+          "team": "Player Team",
           "eventType": "Assist",
           "abilityList": null,
           "overridesArray": [],

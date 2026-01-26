@@ -88,7 +88,7 @@ const configAbility = {
                   },
                   {
                     "name": "Current Action Holder's Team",
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   {
                     "name": "Skill Type",
