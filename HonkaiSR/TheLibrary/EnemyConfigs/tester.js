@@ -3867,6 +3867,26 @@ const userTriggers = {
                             `
                         }
 
+                        const phasesCheckOverride = currentInnerSkillVariant?.phaseList;
+                        let phasesStringerOverride = "";
+                        if (phasesCheckOverride?.length) {
+
+                            let paramString = "";
+                            let paramCounter = 0;
+                            for (let paramEntry of phasesCheckOverride) {
+                                // console.log(paramEntry)
+                                paramString += `${isNaN(paramEntry) ? paramEntry : +(paramEntry).toFixed(7)}${paramCounter != phasesCheckOverride.length-1 ? ", " : ""}`;
+                                paramCounter++;
+                            }
+        
+                            // phasesStringerOverride += `
+                            //     <div class="actionDetailBody">
+                            //         <div class="rotationConditionOperatorHeaderInlineParams">Allowed in HP-Phase: [${paramString}]</div>
+                            //     </div>
+                            // `
+                            phasesStringerOverride += paramString;
+                        }
+
 
 
                         const paramsCheck = currentInnerSkillVariant?.params;
@@ -3967,6 +3987,12 @@ const userTriggers = {
                                         <div class="traceToughnessTitleBox">Hit-Energy</div>
                                         <div class="traceToughnessValueBox">${currentInnerSkillVariant.energyRegen}</div>
                                     </div>` : ""}
+                                    ${phasesStringerOverride ? `<div class="traceToughnessBoxOverviewSkill">
+                                        <div class="traceToughnessTitleBox">Phase Allowed</div>
+                                        <div class="traceToughnessValueBox">${phasesStringerOverride}</div>
+                                    </div>` : ""}
+
+                                    
 
                                     ${currentInnerSkillVariant.toughnessList?.length ? `<div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
                                         <div class="traceToughnessTitleBoxToughnessRow">
