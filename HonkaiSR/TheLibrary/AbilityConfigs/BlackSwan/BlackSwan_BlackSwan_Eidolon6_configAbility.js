@@ -109,7 +109,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "team": "TeamDark"
+                "team": "Enemy Team"
               },
               "passed": [
                 {

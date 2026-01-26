@@ -1250,7 +1250,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Ability Targets of Modifier Holder}}"
                             },
-                            "team": "TeamDark"
+                            "team": "Enemy Team"
                           }
                         ]
                       },
@@ -1642,7 +1642,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Compare: Target",
@@ -2753,7 +2753,7 @@ const compositeAbilityObject = {
           "name": "WAIT FOR",
           "condition": {
             "name": "Death Animation Completed",
-            "team": "TeamDark",
+            "team": "Enemy Team",
             "type": "Team Characters"
           }
         },

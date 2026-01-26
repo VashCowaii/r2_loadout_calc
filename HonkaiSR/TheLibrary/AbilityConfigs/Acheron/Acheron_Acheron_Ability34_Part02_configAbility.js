@@ -17,7 +17,7 @@ const configAbility = {
       "to": {
         "name": "Target Search",
         "entityType": 6,
-        "teamType": "TeamDark"
+        "teamType": "Enemy Team"
       },
       "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
     },

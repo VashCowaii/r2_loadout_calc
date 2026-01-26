@@ -108,7 +108,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   {
                     "name": "Compare: Modifier Status Type",

@@ -2637,7 +2637,7 @@ const compositeAbilityObject = {
         {
           "name": "Battle Event Construction",
           "ID": 11203,
-          "team": "TeamNeutral",
+          "team": "Neutral Team",
           "eventType": "Summon",
           "abilityList": [
             "BattleEventAbility_JingYuan_Passive",

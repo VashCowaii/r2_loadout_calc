@@ -44368,6 +44368,1093 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Rappa": {
+    "internalID": 1317,
+    "name": "Rappa",
+    "path": "Erudition",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 717.9480000000001,
+      "DEFBase": 460.845,
+      "HPBase": 1086.624,
+      "SPDBase": 96,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "131701",
+        "name": "Returned Is the Revenant With No Ferry Toll",
+        "rank": 1,
+        "desc": "During the \"Sealform\" state entered by using Ultimate, DMG dealt by Rappa ignores 15% of the targets' DEF. After exiting the \"Sealform\" state, regenerates 20 Energy.",
+        "icon": "icon/skill/1317_rank1.png",
+        "paramsEido": [
+          0.15,
+          20
+        ]
+      },
+      {
+        "id": "131702",
+        "name": "Free Is the Mind Enlightened by Haikus",
+        "rank": 2,
+        "desc": "The Enhanced Basic ATK's first 2 hits have their Toughness Reduction against the one designated enemy increased by 50%.",
+        "icon": "icon/skill/1317_rank2.png",
+        "paramsEido": [
+          0.5
+        ]
+      },
+      {
+        "id": "131703",
+        "name": "Many Are the Shrines That Repel No Hell",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1317_skill.png"
+      },
+      {
+        "id": "131704",
+        "name": "Lost Is the Nindō Devoured by Time",
+        "rank": 4,
+        "desc": "While in the \"Sealform\" state, increases all allies' SPD by 12%.",
+        "icon": "icon/skill/1317_rank4.png",
+        "paramsEido": [
+          0.12
+        ]
+      },
+      {
+        "id": "131705",
+        "name": "Steady Is The Ranger With Unerring Arrows",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1317_ultimate.png"
+      },
+      {
+        "id": "131706",
+        "name": "Righteous Is the Wrath That Spares No Evil",
+        "rank": 6,
+        "desc": "When battle starts, Rappa gains 5 point(s) of her Talent's Charge, and its upper limit increases by 5 point(s). After launching the third hit of \"Ningu: Demonbane Petalblade,\" gains 5 point(s) of Charge.",
+        "icon": "icon/skill/1317_rank6.png",
+        "paramsEido": [
+          5,
+          5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Ninjutsu: Rise Above Tumbles": {
+          "variant1": {
+            "skillID": 131701,
+            "trigger": "Skill01",
+            "name": "Ninjutsu: Rise Above Tumbles",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Rappa's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill01_Camera",
+              "Avatar_Rappa_00_Skill01_Phase01",
+              "Avatar_Rappa_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ningu: Demonbane Petalblade": {
+          "variant1": {
+            "skillID": 131708,
+            "trigger": "Skill11",
+            "name": "Ningu: Demonbane Petalblade",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals minor Imaginary DMG to one designated enemy and minor Imaginary DMG to adjacent targets. Attacking enemies without Imaginary Weakness can also reduce their Toughness.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                0.6,
+                0.5
+              ],
+              "2": [
+                0.68,
+                0.34,
+                0.68,
+                0.5
+              ],
+              "3": [
+                0.76,
+                0.38,
+                0.76,
+                0.5
+              ],
+              "4": [
+                0.84,
+                0.42,
+                0.84,
+                0.5
+              ],
+              "5": [
+                0.92,
+                0.46,
+                0.92,
+                0.5
+              ],
+              "6": [
+                1,
+                0.5,
+                1,
+                0.5
+              ],
+              "7": [
+                1.08,
+                0.54,
+                1.08,
+                0.5
+              ],
+              "8": [
+                1.16,
+                0.58,
+                1.16,
+                0.5
+              ],
+              "9": [
+                1.24,
+                0.62,
+                1.24,
+                0.5
+              ],
+              "10": [
+                1.32,
+                0.66,
+                1.32,
+                0.5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill11_Phase01",
+              "Avatar_Rappa_00_Skill11_Phase02",
+              "Avatar_Rappa_00_Skill03_FPS_Hit1_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 131710,
+            "trigger": "Skill12",
+            "name": "Ningu: Demonbane Petalblade",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Deals minor Imaginary DMG to one designated enemy and minor Imaginary DMG to adjacent targets. Attacking enemies without Imaginary Weakness can also reduce their Toughness.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3
+              ],
+              "2": [
+                0.68,
+                0.34
+              ],
+              "3": [
+                0.76,
+                0.38
+              ],
+              "4": [
+                0.84,
+                0.42
+              ],
+              "5": [
+                0.92,
+                0.46
+              ],
+              "6": [
+                1,
+                0.5
+              ],
+              "7": [
+                1.08,
+                0.54
+              ],
+              "8": [
+                1.16,
+                0.58
+              ],
+              "9": [
+                1.24,
+                0.62
+              ],
+              "10": [
+                1.32,
+                0.66
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill12_Phase01",
+              "Avatar_Rappa_00_Skill12_Phase02",
+              "Avatar_Rappa_00_Skill03_FPS_Hit2_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant3": {
+            "skillID": 131712,
+            "trigger": "Skill13",
+            "name": "Ningu: Demonbane Petalblade",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Deals minor Imaginary DMG to all enemies. Attacking enemies without Imaginary Weakness can also reduce their Toughness.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6
+              ],
+              "2": [
+                0.68
+              ],
+              "3": [
+                0.76
+              ],
+              "4": [
+                0.84
+              ],
+              "5": [
+                0.92
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.08
+              ],
+              "8": [
+                1.16
+              ],
+              "9": [
+                1.24
+              ],
+              "10": [
+                1.32
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill13_Phase01",
+              "Avatar_Rappa_00_Skill13_Phase02",
+              "Avatar_Rappa_00_Skill03_FPS_Hit3_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant4": {
+            "skillID": 131718,
+            "trigger": "Skill14",
+            "name": "Ningu: Demonbane Petalblade",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Launches \"Ningu: Demonbane Petalblade.\" The first 2 hits deal Imaginary DMG equal to #1[i]% of Rappa's ATK to one designated enemy and Imaginary DMG equal to #2[i]% of Rappa's ATK to adjacent targets, and the 3rd hit deals Imaginary DMG equal to #3[i]% of Rappa's ATK to all enemies.\\nEnhanced Basic ATK will not recover Skill Points. Attacking enemies that don't have Imaginary Weakness can also reduce Toughness, whose effect is equal to #4[i]% of the original Toughness Reduction. When Breaking Weakness, triggers the Imaginary Weakness Break effect.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 25,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                0.6,
+                0.5
+              ],
+              "2": [
+                0.68,
+                0.34,
+                0.68,
+                0.5
+              ],
+              "3": [
+                0.76,
+                0.38,
+                0.76,
+                0.5
+              ],
+              "4": [
+                0.84,
+                0.42,
+                0.84,
+                0.5
+              ],
+              "5": [
+                0.92,
+                0.46,
+                0.92,
+                0.5
+              ],
+              "6": [
+                1,
+                0.5,
+                1,
+                0.5
+              ],
+              "7": [
+                1.08,
+                0.54,
+                1.08,
+                0.5
+              ],
+              "8": [
+                1.16,
+                0.58,
+                1.16,
+                0.5
+              ],
+              "9": [
+                1.24,
+                0.62,
+                1.24,
+                0.5
+              ],
+              "10": [
+                1.32,
+                0.66,
+                1.32,
+                0.5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              {
+                "Value": 75
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 45
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Ninja Strike: Rooted Resolute": {
+          "variant1": {
+            "skillID": 131702,
+            "trigger": "Skill02",
+            "name": "Ninja Strike: Rooted Resolute",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Rappa's ATK to all enemies.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6
+              ],
+              "2": [
+                0.66
+              ],
+              "3": [
+                0.72
+              ],
+              "4": [
+                0.78
+              ],
+              "5": [
+                0.84
+              ],
+              "6": [
+                0.9
+              ],
+              "7": [
+                0.975
+              ],
+              "8": [
+                1.05
+              ],
+              "9": [
+                1.125
+              ],
+              "10": [
+                1.2
+              ],
+              "11": [
+                1.26
+              ],
+              "12": [
+                1.32
+              ],
+              "13": [
+                1.38
+              ],
+              "14": [
+                1.44
+              ],
+              "15": [
+                1.5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill02_Camera",
+              "Avatar_Rappa_00_Skill02_Phase01",
+              "Avatar_Rappa_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Nindō Supreme: Aishiteru": {
+          "variant1": {
+            "skillID": 131703,
+            "trigger": "Skill03",
+            "name": "Nindō Supreme: Aishiteru",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Enters the \"Sealform\" state, immediately gains 1 extra turn, obtains #3[i] points of \"Chroma Ink,\" and increases Weakness Break Efficiency by #1[i]% and Break Effect by #2[i]%.\\nWhile in the \"Sealform\" state, Basic ATK is enhanced, and Skill and Ultimate cannot be used. After using Enhanced Basic ATK, consumes 1 point of \"Chroma Ink.\" When \"Chroma Ink\" is depleted, exits the \"Sealform\" state.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.1,
+                3
+              ],
+              "2": [
+                0.5,
+                0.12,
+                3
+              ],
+              "3": [
+                0.5,
+                0.14,
+                3
+              ],
+              "4": [
+                0.5,
+                0.16,
+                3
+              ],
+              "5": [
+                0.5,
+                0.18,
+                3
+              ],
+              "6": [
+                0.5,
+                0.2,
+                3
+              ],
+              "7": [
+                0.5,
+                0.225,
+                3
+              ],
+              "8": [
+                0.5,
+                0.25,
+                3
+              ],
+              "9": [
+                0.5,
+                0.275,
+                3
+              ],
+              "10": [
+                0.5,
+                0.3,
+                3
+              ],
+              "11": [
+                0.5,
+                0.32,
+                3
+              ],
+              "12": [
+                0.5,
+                0.34,
+                3
+              ],
+              "13": [
+                0.5,
+                0.36,
+                3
+              ],
+              "14": [
+                0.5,
+                0.38,
+                3
+              ],
+              "15": [
+                0.5,
+                0.4,
+                3
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Rappa_00_Skill03_Camera",
+              "Avatar_Rappa_00_Skill03_EnterReady",
+              "Avatar_Rappa_00_Skill03_Phase01",
+              "Avatar_Rappa_00_Skill03_Phase02",
+              "Avatar_Rappa_00_Skill03_FPS_Camera",
+              "Avatar_Rappa_00_Skill03_FPS_Camera_Steady",
+              "Avatar_Rappa_00_Skill03_SP0_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Ninja Tech: Endurance Gauge": {
+          "variant1": {
+            "skillID": 131704,
+            "trigger": "SkillP01",
+            "name": "Ninja Tech: Endurance Gauge",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Each time the enemy target is Weakness Broken, Rappa gains 1 point of Charge, up to a max of #1[i] points of Charge. When Rappa next launches the third hit of \"Ningu: Demonbane Petalblade,\" additionally deals Break DMG equal to #3[i]% of Rappa's Imaginary Break DMG to all enemies. This DMG can ignore Weakness Type to reduce #4[i] Toughness, consuming all Charge. Each point of Charge increases the Break DMG multiplier by #5[i]% and increases the Toughness Reduction that can ignore Weakness Type by #6[i].\\nWhen Breaking Weakness, triggers the Imaginary Weakness Break effect.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 2,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0,
+                0.3,
+                2,
+                0.25,
+                1
+              ],
+              "2": [
+                10,
+                0,
+                0.33,
+                2,
+                0.275,
+                1
+              ],
+              "3": [
+                10,
+                0,
+                0.36,
+                2,
+                0.3,
+                1
+              ],
+              "4": [
+                10,
+                0,
+                0.39,
+                2,
+                0.325,
+                1
+              ],
+              "5": [
+                10,
+                0,
+                0.42,
+                2,
+                0.35,
+                1
+              ],
+              "6": [
+                10,
+                0,
+                0.45,
+                2,
+                0.375,
+                1
+              ],
+              "7": [
+                10,
+                0,
+                0.4875,
+                2,
+                0.40625,
+                1
+              ],
+              "8": [
+                10,
+                0,
+                0.525,
+                2,
+                0.4375,
+                1
+              ],
+              "9": [
+                10,
+                0,
+                0.5625,
+                2,
+                0.46875,
+                1
+              ],
+              "10": [
+                10,
+                0,
+                0.6,
+                2,
+                0.5,
+                1
+              ],
+              "11": [
+                10,
+                0,
+                0.63,
+                2,
+                0.525,
+                1
+              ],
+              "12": [
+                10,
+                0,
+                0.66,
+                2,
+                0.55,
+                1
+              ],
+              "13": [
+                10,
+                0,
+                0.69,
+                2,
+                0.575,
+                1
+              ],
+              "14": [
+                10,
+                0,
+                0.72,
+                2,
+                0.6,
+                1
+              ],
+              "15": [
+                10,
+                0,
+                0.75,
+                2,
+                0.625,
+                1
+              ]
+            },
+            "element": "Imaginary",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Rappa_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 6
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Ninja Dash: By Leaps and Bounds": {
+          "variant1": {
+            "skillID": 131707,
+            "trigger": "SkillMaze",
+            "name": "Ninja Dash: By Leaps and Bounds",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, enters the \"Graffiti\" state for #1[i] seconds. While in the \"Graffiti\" state, moves forward rapidly for a set distance and attacks any enemies touched. During the rapid movement, can block all enemies' attacks. Using an attack in the \"Graffiti\" state can end the state's duration early. After entering combat via attacking enemies, deals #5[i] Toughness Reduction regardless of Weakness Type and Break DMG equal to #2[i]% of Rappa's Imaginary Break DMG to each enemy target, and deals Break DMG equal to #3[i]% of Rappa's Imaginary Break DMG to adjacent targets. At the same time, this unit regenerates #4[i] Energy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20,
+                2,
+                1.8,
+                10,
+                30
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Rappa_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1317_basic_atk.png",
+        "skillRef": {
+          "skillName": "Ninjutsu: Rise Above Tumbles",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1317_skill.png",
+        "skillRef": {
+          "skillName": "Ninja Strike: Rooted Resolute",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1317_ultimate.png",
+        "skillRef": {
+          "skillName": "Nindō Supreme: Aishiteru",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1317_talent.png",
+        "skillRef": {
+          "skillName": "Ninja Tech: Endurance Gauge",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1317_technique.png",
+        "skillRef": {
+          "skillName": "Ninja Dash: By Leaps and Bounds",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Ninjutsu Inscription: Sky High",
+        "icon": "icon/skill/1317_skilltree1.png",
+        "desc": "When the Weakness of an elite-level or higher enemy is broken, Rappa additionally gains #2[i] point(s) of Charge and regenerates #1[i] Energy.",
+        "params": [
+          10,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Ninjutsu Inscription: Sea Echo",
+        "icon": "icon/skill/1317_skilltree2.png",
+        "desc": "While in the \"Sealform\" state, after Rappa uses Enhanced Basic ATK to deal DMG to a Weakness Broken enemy target, converts the Toughness Reduction from this instance of DMG to 1 instance of #1[i]% Super Break DMG.",
+        "params": [
+          0.6
+        ],
+        "extraEffects": {
+          "Weakness Break State": {
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+            "params": [
+              0.6
+            ]
+          },
+          "Super Break DMG": {
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG.",
+            "params": [
+              0.6
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Ninjutsu Inscription: Withered Leaf",
+        "icon": "icon/skill/1317_skilltree3.png",
+        "desc": "When an enemy target becomes Weakness Broken, increases the Break DMG taken by #1[i]%. If Rappa's current ATK is higher than #2[i], for every 100 excess ATK, additionally increases this value by #3[i]%, up to a max additional increase of #4[i]%. This effect lasts for #5[i] turn(s).",
+        "params": [
+          0.02,
+          2400,
+          0.01,
+          0.08,
+          2
+        ],
+        "extraEffects": {
+          "Break DMG": {
+            "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+            "params": [
+              0.02,
+              2400,
+              0.01,
+              0.08,
+              2
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.053
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Break Boost",
+        "icon": "icon/property/IconBreakUp.png",
+        "stats": {
+          "DamageBreak": 0.08
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1317.png",
+    "preview": "image/character_preview/1317.png",
+    "portrait": "image/character_portrait/1317.png",
+    "bannerOffsets": [
+      13,
+      111,
+      0.63,
+      13,
+      111,
+      0.63,
+      13,
+      111,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "The Dahlia": {
     "internalID": 1321,
     "name": "The Dahlia",

@@ -435,7 +435,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target 2}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   {
                     "name": "Is Entity a Battle Event/Summon",
@@ -451,7 +451,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   {
                     "name": "Has Modifier",

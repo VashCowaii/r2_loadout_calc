@@ -307,7 +307,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target's Ability Targets}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       "passed": [
                         {
@@ -331,7 +331,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target's Ability Targets}}"
                                 },
-                                "team": "TeamLight"
+                                "team": "Player Team"
                               },
                               {
                                 "name": "Compare: Target Count",

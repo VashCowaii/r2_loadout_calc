@@ -63,7 +63,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Ability Indicator Target List}}"
                   },
-                  "team": "TeamLight"
+                  "team": "Player Team"
                 }
               ]
             },

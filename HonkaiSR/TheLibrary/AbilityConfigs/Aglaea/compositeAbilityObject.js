@@ -2746,7 +2746,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       }
                     ]
                   }
@@ -3008,7 +3008,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       }
                     ]
                   },
@@ -3066,7 +3066,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       }
                     ]
                   },
@@ -3116,7 +3116,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Is Entity a Battle Event/Summon",
@@ -3910,7 +3910,7 @@ const compositeAbilityObject = {
         {
           "name": "Battle Event Construction",
           "ID": 11402,
-          "team": "TeamLight",
+          "team": "Player Team",
           "eventType": "Assist",
           "abilityList": [
             "Aglaea_PassiveAbility01_BattleEvent"
@@ -5290,7 +5290,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Compare: Target",
@@ -5389,7 +5389,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Current Action Owner}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {

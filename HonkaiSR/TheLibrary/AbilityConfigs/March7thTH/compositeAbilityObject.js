@@ -271,7 +271,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target's Ability Targets}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       }
                     ]
                   },
@@ -3751,7 +3751,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Player Team Ability Target Lock}}"
                   },
-                  "team": "TeamDark"
+                  "team": "Enemy Team"
                 }
               ]
             },

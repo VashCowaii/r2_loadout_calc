@@ -34,7 +34,6 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "team": "TeamLight",
             "location": "Max"
           },
           "failed": [
@@ -45,8 +44,7 @@ const compositeAbilityObject = {
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
-                },
-                "team": "TeamLight"
+                }
               }
             }
           ]
@@ -292,7 +290,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   "passed": [
                     {

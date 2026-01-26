@@ -11,7 +11,7 @@ const configAbility = {
     {
       "name": "Battle Event Construction",
       "ID": 11402,
-      "team": "TeamLight",
+      "team": "Player Team",
       "eventType": "Assist",
       "abilityList": [
         "Aglaea_PassiveAbility01_BattleEvent"

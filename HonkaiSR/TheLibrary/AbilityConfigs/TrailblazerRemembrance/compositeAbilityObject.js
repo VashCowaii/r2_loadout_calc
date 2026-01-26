@@ -276,7 +276,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Compare: Variable",
@@ -353,7 +353,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Compare: Variable",
@@ -764,7 +764,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -2911,7 +2911,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "SWITCH",
-          "teamCountFrom": "TeamLight",
+          "teamCountFrom": "Player Team",
           "caseEvents": [
             {
               "name": "SWITCH CONDITON",

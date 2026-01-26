@@ -396,7 +396,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   "passed": [
                     {
@@ -811,7 +811,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       {
                         "name": "Has Modifier",
@@ -929,7 +929,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       {
                         "name": "Has Modifier",
@@ -1008,7 +1008,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       "passed": [
                         {
@@ -1158,7 +1158,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "team": "TeamNeutral"
+                                "team": "Neutral Team"
                               },
                               {
                                 "name": "Is Entity a Battle Event/Summon",
@@ -1212,7 +1212,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "team": "TeamLight"
+                            "team": "Player Team"
                           },
                           {
                             "name": "Skill Type",
@@ -1779,7 +1779,7 @@ const compositeAbilityObject = {
           "to": {
             "name": "Target Search",
             "entityType": 6,
-            "teamType": "TeamDark"
+            "teamType": "Enemy Team"
           },
           "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
         },

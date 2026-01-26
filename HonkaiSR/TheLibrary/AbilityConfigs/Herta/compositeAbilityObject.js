@@ -693,7 +693,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target 2}}"
                             },
-                            "team": "TeamLight"
+                            "team": "Player Team"
                           },
                           {
                             "name": "Target Is Hostile",
@@ -1581,7 +1581,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Has Modifier",

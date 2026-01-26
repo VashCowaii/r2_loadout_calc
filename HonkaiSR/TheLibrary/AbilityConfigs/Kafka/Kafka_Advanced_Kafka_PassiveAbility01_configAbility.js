@@ -370,7 +370,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target's Ability Targets}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   }
                 ]
               },
@@ -803,7 +803,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   {
                     "name": "Has Flag",
@@ -850,7 +850,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   {
                     "name": "Has Flag",

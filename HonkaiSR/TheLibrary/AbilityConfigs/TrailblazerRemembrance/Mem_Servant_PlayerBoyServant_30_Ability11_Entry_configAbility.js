@@ -6,7 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "SWITCH",
-      "teamCountFrom": "TeamLight",
+      "teamCountFrom": "Player Team",
       "caseEvents": [
         {
           "name": "SWITCH CONDITON",

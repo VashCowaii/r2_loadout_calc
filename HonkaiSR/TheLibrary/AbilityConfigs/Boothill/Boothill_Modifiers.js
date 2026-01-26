@@ -321,7 +321,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   }
                 ]
               },
@@ -375,7 +375,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "team": "TeamDark"
+                        "team": "Enemy Team"
                       },
                       {
                         "name": "NOT",
@@ -385,7 +385,7 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "team": "TeamDark"
+                          "team": "Enemy Team"
                         }
                       }
                     ]

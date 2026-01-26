@@ -534,7 +534,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Current Action Owner}}"
                       },
-                      "team": "TeamLight"
+                      "team": "Player Team"
                     }
                   ]
                 },
@@ -569,7 +569,7 @@ const configAbility = {
                         }
                       ]
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   "targetPass": {
                     "name": "Target Selector",
@@ -613,7 +613,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Current Action Owner}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       "targetPass": {
                         "name": "Compute Targets",
@@ -697,7 +697,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Current Action Target List}}"
                       },
-                      "team": "TeamDark"
+                      "team": "Enemy Team"
                     }
                   ]
                 },
@@ -1122,7 +1122,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   }
                 }
               ]
@@ -2341,7 +2341,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "team": "TeamLight"
+                "team": "Player Team"
               }
             }
           ]
@@ -2368,7 +2368,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "team": "TeamDark"
+                "team": "Enemy Team"
               }
             }
           ]
@@ -3353,7 +3353,7 @@ const configAbility = {
             {
               "name": "Target Search",
               "entityType": "Avatar",
-              "teamType": "TeamLight",
+              "teamType": "Player Team",
               "livingState": "Mask_AliveOnly"
             },
             {
@@ -3856,7 +3856,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Add Target by Team Entity",
-          "team": "TeamDark"
+          "team": "Enemy Team"
         }
       ]
     },
@@ -3867,7 +3867,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Add Target by Team Entity",
-          "team": "TeamLight"
+          "team": "Player Team"
         }
       ]
     },

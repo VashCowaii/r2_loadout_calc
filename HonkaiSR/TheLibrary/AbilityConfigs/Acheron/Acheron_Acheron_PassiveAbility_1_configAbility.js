@@ -146,7 +146,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "team": "TeamDark"
+                "team": "Enemy Team"
               },
               "passed": [
                 {
@@ -561,7 +561,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   {
                     "name": "Has Modifier",
@@ -679,7 +679,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   {
                     "name": "Has Modifier",
@@ -758,7 +758,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamDark"
+                    "team": "Enemy Team"
                   },
                   "passed": [
                     {
@@ -908,7 +908,7 @@ const configAbility = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "team": "TeamNeutral"
+                            "team": "Neutral Team"
                           },
                           {
                             "name": "Is Entity a Battle Event/Summon",
@@ -962,7 +962,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "team": "TeamLight"
+                        "team": "Player Team"
                       },
                       {
                         "name": "Skill Type",

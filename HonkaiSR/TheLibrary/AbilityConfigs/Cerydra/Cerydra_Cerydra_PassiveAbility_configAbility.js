@@ -497,7 +497,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "team": "TeamLight"
+                "team": "Player Team"
               },
               "passed": [
                 {
@@ -534,7 +534,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Player's Aim Primary-Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   }
                 ]
               },
@@ -800,7 +800,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Player's Aim Primary-Target}}"
                     },
-                    "team": "TeamLight",
+                    "team": "Player Team",
                     "invertCondition": true
                   }
                 ]

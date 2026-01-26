@@ -2066,6 +2066,37 @@ const megaParsingFuckeryPain = {
             ${parseRef.flagNames} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>`;
     },
+    "Define Custom Variable with Distance to Team Center"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "target",
+            "living",
+            // "multiplier",
+            // "modifierName",
+            "scope",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Distance to Team Center");
+        // initialCounter++;
+        return `<div class="actionDetailBody2Preview"> 
+            <div class="rotationConditionOperatorHeaderInline">Define with Distance to Team's Center:</div>&nbsp;
+            ${parseRef.variableName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.target != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
+                ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+            </div>` : ""}
+            ${parseRef.scope != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
+                ${parseRef.scope}
+            </div>` : ""}
+            ${parseRef.living != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Require Living:</div>&nbsp;
+                ${parseRef.living}
+            </div>` : ""}
+        </div>`;
+    },
     "Define Custom Variable with Stage Wave Count"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -3540,13 +3571,14 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "target",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Current Action Holder Is");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+            ${parseRef.invertCondition ? "NOT " : ""}${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>`;
     },
     "Current Action Holder's Team"(parseRef,initialCounter) {
@@ -4232,6 +4264,21 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.triggerName} on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>`;
+    },
+    "Has Exo-Toughness"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "target",
+            "target",
+            "invertCondition"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Exo-Toughness");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""}on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>`;
     },
     "Has Param Flag"(parseRef,initialCounter) {
@@ -6191,6 +6238,7 @@ const megaParsingFuckeryPain = {
 
             "from",
             "to",
+            "team",
 
             "valueType",
             "contextScope",
@@ -6236,6 +6284,10 @@ const megaParsingFuckeryPain = {
             ${parseRef.contextScope != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Context:</div>&nbsp;
                 ${parseRef.contextScope}
+            </div>` : ""}
+            ${parseRef.team != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Team:</div>&nbsp;
+                ${parseRef.team}
             </div>` : ""}
             ${parseRef.includeInjectedActions != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Include Injected Actions:</div>&nbsp;
@@ -8667,6 +8719,7 @@ const megaParsingFuckeryPain = {
             "toughnessReductionPreview",
             "toughnessForcedReductionPreview",
             "showAsForcedReduction",
+            "isForcedReduction",
 
             "conditions",
             "addedDisplayWeakness",
@@ -8682,6 +8735,7 @@ const megaParsingFuckeryPain = {
             "minToughness",
             "toughnessType",
             "baseToughnessDMG",
+            "percent",
 
             // "for",
             // "stackType",
@@ -8797,6 +8851,11 @@ const megaParsingFuckeryPain = {
                     <div class="rotationConditionOperatorHeaderInline">Display as Forced Reduction:</div>&nbsp;
                     ${parseRef.showAsForcedReduction}
                 </div>` : ""}
+                ${parseRef.isForcedReduction ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Is Forced Reduction:</div>&nbsp;
+                    ${parseRef.isForcedReduction}
+                </div>` : ""}
+
                 ${parseRef.addedDisplayWeakness ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Display Added Weakness:</div>&nbsp;
                     
@@ -8806,8 +8865,12 @@ const megaParsingFuckeryPain = {
                     <div class="rotationConditionOperatorHeaderInline">Multiplier:</div>&nbsp;
                     ${parseRef.multiplier.displayLines ?? parseRef.multiplier}
                 </div>` : ""}
+                ${parseRef.percent ? `<div class="actionDetailBody2">
+                    <div class="rotationConditionOperatorHeaderInline">Percent:</div>&nbsp;
+                    ${parseRef.percent.displayLines ?? parseRef.percent}
+                </div>` : ""}
 
-                
+                    
             </div>
         `;
         // ${parseRef.addedDisplayWeakness} //this one can be a target read as fun as that is

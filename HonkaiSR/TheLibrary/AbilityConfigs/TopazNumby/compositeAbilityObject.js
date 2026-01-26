@@ -1449,7 +1449,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "team": "TeamLight"
+                    "team": "Player Team"
                   },
                   "passed": [
                     {
@@ -3223,7 +3223,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Current Action Owner}}"
                                 },
-                                "team": "TeamLight"
+                                "team": "Player Team"
                               },
                               {
                                 "name": "Compare: Variable",
@@ -3739,7 +3739,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Current Action Owner}}"
                                 },
-                                "team": "TeamLight"
+                                "team": "Player Team"
                               },
                               {
                                 "name": "Compare: Variable",
@@ -4303,7 +4303,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "team": "TeamLight"
+                            "team": "Player Team"
                           },
                           {
                             "name": "Compare: Variable",
@@ -4387,7 +4387,7 @@ const compositeAbilityObject = {
         {
           "name": "Battle Event Construction",
           "ID": 11216,
-          "team": "TeamLight",
+          "team": "Player Team",
           "eventType": "Summon",
           "abilityList": null,
           "overridesArray": [
