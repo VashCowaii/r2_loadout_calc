@@ -60861,5 +60861,3420 @@ let characters = {
       0.64
     ],
     "isBuffed": false
+  },
+  "Kafka_v0": {
+    "internalID": 1005,
+    "name": "Kafka_v0",
+    "path": "Nihility",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1086.624,
+      "SPDBase": 100,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "100501",
+        "name": "Da Capo",
+        "rank": 1,
+        "desc": "When the Talent triggers a Follow-Up ATK, there is a 100% base chance to increase the DoT received by the target by 30% for 2 turn(s).",
+        "icon": "icon/skill/1005_rank1.png",
+        "paramsEido": [
+          1,
+          0.3,
+          2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          },
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "100502",
+        "name": "Fortississimo",
+        "rank": 2,
+        "desc": "While Kafka is on the field, DoT dealt by all allies increases by 25%.",
+        "icon": "icon/skill/1005_rank2.png",
+        "paramsEido": [
+          0.25
+        ]
+      },
+      {
+        "id": "100503",
+        "name": "Capriccio",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1005_skill.png"
+      },
+      {
+        "id": "100504",
+        "name": "Recitativo",
+        "rank": 4,
+        "desc": "When an enemy target takes DMG from the Shock status inflicted by Kafka, Kafka additionally regenerates 2 Energy.",
+        "icon": "icon/skill/1005_rank4.png",
+        "paramsEido": [
+          2
+        ]
+      },
+      {
+        "id": "100505",
+        "name": "Doloroso",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1005_ultimate.png"
+      },
+      {
+        "id": "100506",
+        "name": "Leggiero",
+        "rank": 6,
+        "desc": "The Shock state inflicted on the enemy target by the Ultimate, Technique, or the Talent-triggered Follow-Up ATK has a DMG multiplier increase of 156% and lasts 1 turn(s) longer.",
+        "icon": "icon/skill/1005_rank6.png",
+        "paramsEido": [
+          1.56,
+          1
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Midnight Tumult": {
+          "variant1": {
+            "skillID": 100501,
+            "trigger": "Skill01",
+            "name": "Midnight Tumult",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Kafka's ATK to a one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Kafka_00_Skill01_Camera",
+              "Avatar_Kafka_00_Skill01_Phase01",
+              "Avatar_Kafka_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Caressing Moonlight": {
+          "variant1": {
+            "skillID": 100502,
+            "trigger": "Skill02",
+            "name": "Caressing Moonlight",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Kafka's ATK to a target enemy and Lightning DMG equal to #3[i]% of Kafka's ATK to enemies adjacent to it.\\nIf the target enemy is currently receiving DoT, all DoTs currently placed on that enemy immediately produce DMG equal to #2[i]% of their original DMG.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                0.6,
+                0.3
+              ],
+              "2": [
+                0.88,
+                0.615,
+                0.33
+              ],
+              "3": [
+                0.96,
+                0.63,
+                0.36
+              ],
+              "4": [
+                1.04,
+                0.645,
+                0.39
+              ],
+              "5": [
+                1.12,
+                0.66,
+                0.42
+              ],
+              "6": [
+                1.2,
+                0.675,
+                0.45
+              ],
+              "7": [
+                1.3,
+                0.69375,
+                0.4875
+              ],
+              "8": [
+                1.4,
+                0.7125,
+                0.525
+              ],
+              "9": [
+                1.5,
+                0.73125,
+                0.5625
+              ],
+              "10": [
+                1.6,
+                0.75,
+                0.6
+              ],
+              "11": [
+                1.68,
+                0.765,
+                0.63
+              ],
+              "12": [
+                1.76,
+                0.78,
+                0.66
+              ],
+              "13": [
+                1.84,
+                0.795,
+                0.69
+              ],
+              "14": [
+                1.92,
+                0.81,
+                0.72
+              ],
+              "15": [
+                2,
+                0.825,
+                0.75
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Kafka_00_Skill02_Camera",
+              "Avatar_Kafka_00_Skill02_Phase01",
+              "Avatar_Kafka_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Twilight Trill": {
+          "variant1": {
+            "skillID": 100503,
+            "trigger": "Skill03",
+            "name": "Twilight Trill",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Kafka's ATK to all enemies, with a #2[i]% base chance for enemies hit to become Shocked and immediately take DMG from their current Shock state, equal to #5[i]% of its original DMG. Shock lasts for #3[i] turn(s).\\nWhile Shocked, enemies receive Lightning DoT equal to #4[i]% of Kafka's ATK at the beginning of each turn.",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.48,
+                1,
+                2,
+                1.16,
+                0.8
+              ],
+              "2": [
+                0.512,
+                1,
+                2,
+                1.26875,
+                0.82
+              ],
+              "3": [
+                0.544,
+                1,
+                2,
+                1.3775,
+                0.84
+              ],
+              "4": [
+                0.576,
+                1,
+                2,
+                1.48625,
+                0.86
+              ],
+              "5": [
+                0.608,
+                1,
+                2,
+                1.595,
+                0.88
+              ],
+              "6": [
+                0.64,
+                1,
+                2,
+                1.758125,
+                0.9
+              ],
+              "7": [
+                0.68,
+                1,
+                2,
+                1.975625,
+                0.925
+              ],
+              "8": [
+                0.72,
+                1,
+                2,
+                2.2475,
+                0.95
+              ],
+              "9": [
+                0.76,
+                1,
+                2,
+                2.57375,
+                0.975
+              ],
+              "10": [
+                0.8,
+                1,
+                2,
+                2.9,
+                1
+              ],
+              "11": [
+                0.832,
+                1,
+                2,
+                3.041375,
+                1.02
+              ],
+              "12": [
+                0.864,
+                1,
+                2,
+                3.18275,
+                1.04
+              ],
+              "13": [
+                0.896,
+                1,
+                2,
+                3.324125,
+                1.06
+              ],
+              "14": [
+                0.928,
+                1,
+                2,
+                3.4655,
+                1.08
+              ],
+              "15": [
+                0.96,
+                1,
+                2,
+                3.606875,
+                1.1
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Kafka_00_Skill03_Camera",
+              "Avatar_Kafka_00_Skill03_Phase01",
+              "Avatar_Kafka_00_Skill03_Phase02",
+              "Avatar_Kafka_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Gentle but Cruel": {
+          "variant1": {
+            "skillID": 100504,
+            "trigger": "SkillP01",
+            "name": "Gentle but Cruel",
+            "type": "Single Target",
+            "slot": "Talent",
+            "desc": "After Kafka's teammate uses Basic ATK on an enemy target, Kafka immediately launches Follow-Up ATK and deals Lightning DMG equal to #1[i]% of her ATK to that target, with a #2[i]% base chance to inflict Shock equivalent to that applied by her Ultimate to the attacked enemy target, lasting for #3[i] turns. This effect can only be triggered 1 time per turn.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.42,
+                1,
+                2
+              ],
+              "2": [
+                0.518,
+                1,
+                2
+              ],
+              "3": [
+                0.616,
+                1,
+                2
+              ],
+              "4": [
+                0.714,
+                1,
+                2
+              ],
+              "5": [
+                0.812,
+                1,
+                2
+              ],
+              "6": [
+                0.91,
+                1,
+                2
+              ],
+              "7": [
+                1.0325,
+                1,
+                2
+              ],
+              "8": [
+                1.155,
+                1,
+                2
+              ],
+              "9": [
+                1.2775,
+                1,
+                2
+              ],
+              "10": [
+                1.4,
+                1,
+                2
+              ],
+              "11": [
+                1.498,
+                1,
+                2
+              ],
+              "12": [
+                1.596,
+                1,
+                2
+              ],
+              "13": [
+                1.694,
+                1,
+                2
+              ],
+              "14": [
+                1.792,
+                1,
+                2
+              ],
+              "15": [
+                1.89,
+                1,
+                2
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Kafka_00_PassiveSkill01",
+              "Avatar_Kafka_00_PassiveAtk_Ability",
+              "Avatar_Kafka_Passive1Atk_Ability_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Mercy Is Not Forgiveness": {
+          "variant1": {
+            "skillID": 100507,
+            "trigger": "SkillMaze",
+            "name": "Mercy Is Not Forgiveness",
+            "slot": "Technique",
+            "desc": "Immediately attacks all enemies within a set range. After entering battle, deals Lightning DMG equal to #3[i]% of Kafka's ATK to all enemies, with a #1[i]% base chance to inflict Shock equivalent to that applied by her Ultimate on every enemy target for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                2,
+                0.5
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Kafka_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1005_basic_atk.png",
+        "skillRef": {
+          "skillName": "Midnight Tumult",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1005_skill.png",
+        "skillRef": {
+          "skillName": "Caressing Moonlight",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1005_ultimate.png",
+        "skillRef": {
+          "skillName": "Twilight Trill",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1005_talent.png",
+        "skillRef": {
+          "skillName": "Gentle but Cruel",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1005_technique.png",
+        "skillRef": {
+          "skillName": "Mercy Is Not Forgiveness",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point07": {
+        "name": "Plunder",
+        "icon": "icon/skill/1005_skilltree2.png",
+        "desc": "If an enemy target is defeated while Shocked, Kafka additionally regenerates #1[i] Energy.",
+        "params": [
+          5
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Torture",
+        "icon": "icon/skill/1005_skilltree1.png",
+        "desc": "When an ally target's Effect Hit Rate is #1[i]% or higher, Kafka increases that target's ATK by #2[i]%.",
+        "params": [
+          0.75,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Thorns",
+        "icon": "icon/skill/1005_skilltree3.png",
+        "desc": "After using Ultimate, restores the triggerable count of Talent's Follow-Up ATK by 1. And the Talent's Follow-Up ATK can cause all DoTs debuffs currently on the target to immediately produce DMG equal to #1[i]% of the original DMG.",
+        "params": [
+          0.8
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.8
+            ]
+          }
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1005.png",
+    "preview": "image/character_preview/1005.png",
+    "portrait": "image/character_portrait/1005.png",
+    "bannerOffsets": [
+      1,
+      -50,
+      0.71,
+      1,
+      -50,
+      0.71,
+      1,
+      -50,
+      0.71
+    ],
+    "isBuffed": true
+  },
+  "Silver Wolf_v0": {
+    "internalID": 1006,
+    "name": "Silver Wolf_v0",
+    "path": "Nihility",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 110,
+    "baseStats": {
+      "ATKBase": 640.332,
+      "DEFBase": 460.845,
+      "HPBase": 1047.816,
+      "SPDBase": 107,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "100601",
+        "name": "Social Engineering",
+        "rank": 1,
+        "desc": "After using her Ultimate to attack enemies, Silver Wolf regenerates 7 Energy for every debuff that the target enemy currently has. This effect can be triggered up to 5 time(s) in each use of her Ultimate.",
+        "icon": "icon/skill/1006_rank1.png",
+        "paramsEido": [
+          7,
+          5
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      {
+        "id": "100602",
+        "name": "Zombie Network",
+        "rank": 2,
+        "desc": "When an enemy enters battle, reduces their Effect RES by 20%.",
+        "icon": "icon/skill/1006_rank2.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "100603",
+        "name": "Payload",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1006_skill.png"
+      },
+      {
+        "id": "100604",
+        "name": "Bounce Attack",
+        "rank": 4,
+        "desc": "After using her Ultimate to attack enemies, deals Quantum Additional DMG equal to 20% of Silver Wolf's ATK for every debuff currently on the enemy target. This effect can be triggered for a maximum of 5 time(s) during each use of her Ultimate.",
+        "icon": "icon/skill/1006_rank4.png",
+        "paramsEido": [
+          0.2,
+          5
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          },
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "100605",
+        "name": "Brute Force Attack",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1006_ultimate.png"
+      },
+      {
+        "id": "100606",
+        "name": "Overlay Network",
+        "rank": 6,
+        "desc": "For every debuff the enemy target has, the DMG dealt by Silver Wolf to it increases by 20%, up to a max increase of 100%.",
+        "icon": "icon/skill/1006_rank6.png",
+        "paramsEido": [
+          0.2,
+          1
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "System Warning": {
+          "variant1": {
+            "skillID": 100601,
+            "trigger": "Skill01",
+            "name": "System Warning",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Silver Wolf's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Silwolf_00_Skill01_Camera",
+              "Avatar_Silwolf_00_Skill01_Phase01",
+              "Avatar_Silwolf_00_Skill01_Phase02",
+              "Avatar_Silwolf_00_PassiveSkill_RandomBug"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Allow Changes?": {
+          "variant1": {
+            "skillID": 100602,
+            "trigger": "Skill02",
+            "name": "Allow Changes?",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "There is a #2[i]% base chance to add 1 Weakness of an on-field character's Type to the target enemy. This also reduces the enemy's DMG RES to that Weakness Type by #4[i]% for #3[i] turn(s). If the enemy already has that Type Weakness, the effect of DMG RES reduction to that Weakness Type will not be triggered.\\nEach enemy can only have 1 Weakness implanted by Silver Wolf. When Silver Wolf implants another Weakness to the target, only the most recent implanted Weakness will be kept.\\nIn addition, there is a #5[i]% base chance to further reduce the All-Type RES of the enemy by #6[f1]% for #7[i] turn(s).\\nDeals Quantum DMG equal to #1[i]% of Silver Wolf's ATK to this enemy.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.98,
+                0.75,
+                2,
+                0.2,
+                1,
+                0.075,
+                2
+              ],
+              "2": [
+                1.078,
+                0.76,
+                2,
+                0.2,
+                1,
+                0.0775,
+                2
+              ],
+              "3": [
+                1.176,
+                0.77,
+                2,
+                0.2,
+                1,
+                0.08,
+                2
+              ],
+              "4": [
+                1.274,
+                0.78,
+                2,
+                0.2,
+                1,
+                0.0825,
+                2
+              ],
+              "5": [
+                1.372,
+                0.79,
+                2,
+                0.2,
+                1,
+                0.085,
+                2
+              ],
+              "6": [
+                1.47,
+                0.8,
+                2,
+                0.2,
+                1,
+                0.0875,
+                2
+              ],
+              "7": [
+                1.5925,
+                0.8125,
+                2,
+                0.2,
+                1,
+                0.090625,
+                2
+              ],
+              "8": [
+                1.715,
+                0.825,
+                2,
+                0.2,
+                1,
+                0.09375,
+                2
+              ],
+              "9": [
+                1.8375,
+                0.8375,
+                2,
+                0.2,
+                1,
+                0.096875,
+                2
+              ],
+              "10": [
+                1.96,
+                0.85,
+                2,
+                0.2,
+                1,
+                0.1,
+                2
+              ],
+              "11": [
+                2.058,
+                0.86,
+                2,
+                0.2,
+                1,
+                0.1025,
+                2
+              ],
+              "12": [
+                2.156,
+                0.87,
+                2,
+                0.2,
+                1,
+                0.105,
+                2
+              ],
+              "13": [
+                2.254,
+                0.88,
+                2,
+                0.2,
+                1,
+                0.1075,
+                2
+              ],
+              "14": [
+                2.352,
+                0.89,
+                2,
+                0.2,
+                1,
+                0.11,
+                2
+              ],
+              "15": [
+                2.45,
+                0.9,
+                2,
+                0.2,
+                1,
+                0.1125,
+                2
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Silwolf_00_Skill02_Camera",
+              "Avatar_Silwolf_00_Skill02_Phase01",
+              "Avatar_Silwolf_00_Skill02_Phase02",
+              "Avatar_Silwolf_00_Skill02_Success_Camera",
+              "Avatar_Silwolf_00_Skill02_Failed_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "User Banned": {
+          "variant1": {
+            "skillID": 100603,
+            "trigger": "Skill03",
+            "name": "User Banned",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "There's a #2[i]% base chance to decrease the target enemy's DEF by #3[f1]% for #4[i] turn(s). And at the same time, deals Quantum DMG equal to #1[i]% of Silver Wolf's ATK to the target enemy.",
+            "energyCost": 110,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.28,
+                0.85,
+                0.36,
+                3
+              ],
+              "2": [
+                2.432,
+                0.865,
+                0.369,
+                3
+              ],
+              "3": [
+                2.584,
+                0.88,
+                0.378,
+                3
+              ],
+              "4": [
+                2.736,
+                0.895,
+                0.387,
+                3
+              ],
+              "5": [
+                2.888,
+                0.91,
+                0.396,
+                3
+              ],
+              "6": [
+                3.04,
+                0.925,
+                0.405,
+                3
+              ],
+              "7": [
+                3.23,
+                0.94375,
+                0.41625,
+                3
+              ],
+              "8": [
+                3.42,
+                0.9625,
+                0.4275,
+                3
+              ],
+              "9": [
+                3.61,
+                0.98125,
+                0.43875,
+                3
+              ],
+              "10": [
+                3.8,
+                1,
+                0.45,
+                3
+              ],
+              "11": [
+                3.952,
+                1.015,
+                0.459,
+                3
+              ],
+              "12": [
+                4.104,
+                1.03,
+                0.468,
+                3
+              ],
+              "13": [
+                4.256,
+                1.045,
+                0.477,
+                3
+              ],
+              "14": [
+                4.408,
+                1.06,
+                0.486,
+                3
+              ],
+              "15": [
+                4.56,
+                1.075,
+                0.495,
+                3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Silwolf_00_Skill03_Camera",
+              "Avatar_Silwolf_00_Skill03_EnterReady",
+              "Avatar_Silwolf_00_Skill03_Phase01",
+              "Avatar_Silwolf_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Awaiting System Response...": {
+          "variant1": {
+            "skillID": 100604,
+            "trigger": "SkillP01",
+            "name": "Awaiting System Response...",
+            "type": "Impair",
+            "slot": "Talent",
+            "desc": "Silver Wolf can create three types of Bugs: Reduce ATK by #1[f1]%, reduce DEF by #2[f1]%, and reduce SPD by #3[f1]%.\\nEvery time Silver Wolf attacks, she has a #4[i]% base chance to implant a random Bug that lasts for #5[i] turn(s) in an enemy target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.05,
+                0.04,
+                0.03,
+                0.6,
+                3
+              ],
+              "2": [
+                0.055,
+                0.044,
+                0.033,
+                0.612,
+                3
+              ],
+              "3": [
+                0.06,
+                0.048,
+                0.036,
+                0.624,
+                3
+              ],
+              "4": [
+                0.065,
+                0.052,
+                0.039,
+                0.636,
+                3
+              ],
+              "5": [
+                0.07,
+                0.055999998,
+                0.042,
+                0.648,
+                3
+              ],
+              "6": [
+                0.075,
+                0.06,
+                0.044999998,
+                0.66,
+                3
+              ],
+              "7": [
+                0.08125,
+                0.065,
+                0.048750002,
+                0.675,
+                3
+              ],
+              "8": [
+                0.0875,
+                0.07,
+                0.052500002,
+                0.69,
+                3
+              ],
+              "9": [
+                0.09375,
+                0.075,
+                0.05625,
+                0.705,
+                3
+              ],
+              "10": [
+                0.1,
+                0.08,
+                0.06,
+                0.72,
+                3
+              ],
+              "11": [
+                0.105,
+                0.084,
+                0.063,
+                0.732,
+                3
+              ],
+              "12": [
+                0.11,
+                0.088,
+                0.066,
+                0.744,
+                3
+              ],
+              "13": [
+                0.115,
+                0.092,
+                0.069,
+                0.756,
+                3
+              ],
+              "14": [
+                0.12,
+                0.096,
+                0.072,
+                0.768,
+                3
+              ],
+              "15": [
+                0.125,
+                0.1,
+                0.075,
+                0.78,
+                3
+              ]
+            },
+            "skillEffect": "Impair",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Silwolf_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Force Quit Program": {
+          "variant1": {
+            "skillID": 100607,
+            "trigger": "SkillMaze",
+            "name": "Force Quit Program",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering battle, deals Quantum DMG equal to #1[i]% of Silver Wolf's ATK to all enemies, and ignores Weakness Types and reduces Toughness from all enemies. Enemies with their Weakness Broken in this way will trigger the Quantum Weakness Break effect.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Silwolf_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1006_basic_atk.png",
+        "skillRef": {
+          "skillName": "System Warning",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1006_skill.png",
+        "skillRef": {
+          "skillName": "Allow Changes?",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1006_ultimate.png",
+        "skillRef": {
+          "skillName": "User Banned",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1006_talent.png",
+        "skillRef": {
+          "skillName": "Awaiting System Response...",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1006_technique.png",
+        "skillRef": {
+          "skillName": "Force Quit Program",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point17": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Generate",
+        "icon": "icon/skill/1006_skilltree1.png",
+        "desc": "The duration of \"Bug\" is extended by #1[i] turn(s). Every time an enemy's Weakness gets broken, Silver Wolf has a #2[i]% base chance of implanting a random \"Bug\" on that target.",
+        "params": [
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+            "params": [
+              1,
+              1
+            ]
+          }
+        }
+      },
+      "Point07": {
+        "name": "Inject",
+        "icon": "icon/skill/1006_skilltree2.png",
+        "desc": "When the battle starts, immediately regenerates #1[i] Energy. When Silver Wolf's turn starts, she regenerates #2[i] Energy.",
+        "params": [
+          20,
+          5
+        ]
+      },
+      "Point08": {
+        "name": "Side Note",
+        "icon": "icon/skill/1006_skilltree3.png",
+        "desc": "For every #1[i]% Effect Hit Rate that Silver Wolf has, additionally increases her ATK by #2[i]%, up to a max of #3[i]%.",
+        "params": [
+          0.1,
+          0.1,
+          0.5
+        ]
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1006.png",
+    "preview": "image/character_preview/1006.png",
+    "portrait": "image/character_portrait/1006.png",
+    "bannerOffsets": [
+      -33,
+      33,
+      0.5,
+      -33,
+      33,
+      0.5,
+      -33,
+      33,
+      0.5
+    ],
+    "isBuffed": true
+  },
+  "Blade_v0": {
+    "internalID": 1205,
+    "name": "Blade_v0",
+    "path": "Destruction",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 543.312,
+      "DEFBase": 485.1,
+      "HPBase": 1358.2800000000002,
+      "SPDBase": 97,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "120501",
+        "name": "Blade Cuts the Deepest in Hell",
+        "rank": 1,
+        "desc": "Blade's Ultimate deals additionally increased DMG to one designated enemy target, with the increased amount equal to 150% of the tally of Blade's HP loss in the current battle.\nThe tally of Blade's HP loss in the current battle is capped at 90% of his Max HP. The tally value will be reset and re-accumulated after his Ultimate has been used.",
+        "icon": "icon/skill/1205_rank1.png",
+        "paramsEido": [
+          1.5,
+          0.9
+        ]
+      },
+      {
+        "id": "120502",
+        "name": "Ten Thousand Sorrows From One Broken Dream",
+        "rank": 2,
+        "desc": "When Blade is in the Hellscape state, his CRIT Rate increases by 15%.",
+        "icon": "icon/skill/1205_rank2.png",
+        "paramsEido": [
+          0.15
+        ]
+      },
+      {
+        "id": "120503",
+        "name": "Hardened Blade Bleeds Coldest Shade",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1205_ultimate.png"
+      },
+      {
+        "id": "120504",
+        "name": "Rejected by Death, Infected With Life",
+        "rank": 4,
+        "desc": "When Blade's current HP percentage drops to 50% or lower of his Max HP, increases his Max HP by 20%. Stacks up to 2 time(s).",
+        "icon": "icon/skill/1205_rank4.png",
+        "paramsEido": [
+          0.2,
+          2
+        ]
+      },
+      {
+        "id": "120505",
+        "name": "Death By Ten Lords' Gaze",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1205_skill.png"
+      },
+      {
+        "id": "120506",
+        "name": "Reborn Into an Empty Husk",
+        "rank": 6,
+        "desc": "The maximum number of Charge stacks is reduced to 4. The Follow-Up ATK triggered by Talent deals additionally increased DMG, with the increased amount equal to 50% of Blade's Max HP.",
+        "icon": "icon/skill/1205_rank6.png",
+        "paramsEido": [
+          0.5
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Shard Sword": {
+          "variant1": {
+            "skillID": 120501,
+            "trigger": "Skill01",
+            "name": "Shard Sword",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals #1[i]% of Blade's ATK as Wind DMG to a target enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill01_Camera",
+              "Avatar_Ren_00_Skill01_Phase01",
+              "Avatar_Ren_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Forest of Swords": {
+          "variant1": {
+            "skillID": 120508,
+            "trigger": "Skill11",
+            "name": "Forest of Swords",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Consumes HP equal to #1[i]% of Blade's Max HP and deals Wind DMG equal to the sum of #2[i]% of his ATK and #4[i]% of his Max HP to one designated enemy. In addition, deals Wind DMG equal to the sum of #3[i]% of Blade's ATK and #5[i]% of his Max HP to adjacent targets.\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when using \"Forest of Swords.\"\\n\"Forest of Swords\" cannot regenerate Skill Points.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.2,
+                0.08,
+                0.5,
+                0.2
+              ],
+              "2": [
+                0.1,
+                0.24,
+                0.096,
+                0.6,
+                0.24
+              ],
+              "3": [
+                0.1,
+                0.28,
+                0.112,
+                0.7,
+                0.28
+              ],
+              "4": [
+                0.1,
+                0.32,
+                0.128,
+                0.8,
+                0.32
+              ],
+              "5": [
+                0.1,
+                0.36,
+                0.144,
+                0.9,
+                0.36
+              ],
+              "6": [
+                0.1,
+                0.4,
+                0.16,
+                1,
+                0.4
+              ],
+              "7": [
+                0.1,
+                0.44,
+                0.176,
+                1.1,
+                0.44
+              ],
+              "8": [
+                0.1,
+                0.48,
+                0.192,
+                1.2,
+                0.48
+              ],
+              "9": [
+                0.1,
+                0.52,
+                0.208,
+                1.3,
+                0.52
+              ],
+              "10": [
+                0.1,
+                0.56,
+                0.224,
+                1.4,
+                0.56
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill11_Phase01",
+              "Avatar_Ren_00_Skill11_Phase02",
+              "Avatar_Ren_00_Skill11_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Hellscape": {
+          "variant1": {
+            "skillID": 120502,
+            "trigger": "Skill02",
+            "name": "Hellscape",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Consumes HP equal to #1[i]% of Blade's Max HP to enter the Hellscape state.\\nWhen Hellscape is active, his Skill cannot be used, his DMG dealt increases by #4[i]%, and his Basic ATK Shard Sword is enhanced to Forest of Swords for #2[i] turn(s).\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when he uses his Skill.\\nThis Skill does not regenerate Energy. Using this Skill does not end the current turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                3,
+                1,
+                0.12
+              ],
+              "2": [
+                0.3,
+                3,
+                1,
+                0.148
+              ],
+              "3": [
+                0.3,
+                3,
+                1,
+                0.176
+              ],
+              "4": [
+                0.3,
+                3,
+                1,
+                0.204
+              ],
+              "5": [
+                0.3,
+                3,
+                1,
+                0.232
+              ],
+              "6": [
+                0.3,
+                3,
+                1,
+                0.26
+              ],
+              "7": [
+                0.3,
+                3,
+                1,
+                0.295
+              ],
+              "8": [
+                0.3,
+                3,
+                1,
+                0.33
+              ],
+              "9": [
+                0.3,
+                3,
+                1,
+                0.365
+              ],
+              "10": [
+                0.3,
+                3,
+                1,
+                0.4
+              ],
+              "11": [
+                0.3,
+                3,
+                1,
+                0.428
+              ],
+              "12": [
+                0.3,
+                3,
+                1,
+                0.456
+              ],
+              "13": [
+                0.3,
+                3,
+                1,
+                0.484
+              ],
+              "14": [
+                0.3,
+                3,
+                1,
+                0.512
+              ],
+              "15": [
+                0.3,
+                3,
+                1,
+                0.54
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill02_Camera",
+              "Avatar_Ren_00_Skill02_Phase01",
+              "Avatar_Ren_00_Skill02_Phase02",
+              "Avatar_Ren_00_Bonus",
+              "Avatar_Ren_00_Bonus_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Death Sentence": {
+          "variant1": {
+            "skillID": 120503,
+            "trigger": "Skill03",
+            "name": "Death Sentence",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Sets Blade's current HP to 50% of his Max HP and deals Wind DMG to one enemy equal to the sum of #1[i]% of his ATK, #2[i]% of his Max HP, and #5[i]% of the tally of Blade's HP loss in the current battle. At the same time, deals Wind DMG to adjacent targets equal to the sum of #3[f1]% of his ATK, #4[i]% of his Max HP, and #6[i]% of the tally of his HP loss in the current battle.\\nThe tally of Blade's HP loss in the current battle is capped at #7[i]% of his Max HP. This value will be reset and re-accumulated after his Ultimate has been used.",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.24,
+                0.6,
+                0.096,
+                0.24,
+                0.6,
+                0.24,
+                0.9
+              ],
+              "2": [
+                0.256,
+                0.64,
+                0.1024,
+                0.256,
+                0.64,
+                0.256,
+                0.9
+              ],
+              "3": [
+                0.272,
+                0.68,
+                0.1088,
+                0.272,
+                0.68,
+                0.272,
+                0.9
+              ],
+              "4": [
+                0.288,
+                0.72,
+                0.1152,
+                0.288,
+                0.72,
+                0.288,
+                0.9
+              ],
+              "5": [
+                0.304,
+                0.76,
+                0.1216,
+                0.304,
+                0.76,
+                0.304,
+                0.9
+              ],
+              "6": [
+                0.32,
+                0.8,
+                0.128,
+                0.32,
+                0.8,
+                0.32,
+                0.9
+              ],
+              "7": [
+                0.34,
+                0.85,
+                0.13599999,
+                0.34,
+                0.85,
+                0.34,
+                0.9
+              ],
+              "8": [
+                0.36,
+                0.9,
+                0.144,
+                0.36,
+                0.9,
+                0.36,
+                0.9
+              ],
+              "9": [
+                0.38,
+                0.95,
+                0.152,
+                0.38,
+                0.95,
+                0.38,
+                0.9
+              ],
+              "10": [
+                0.4,
+                1,
+                0.16,
+                0.4,
+                1,
+                0.4,
+                0.9
+              ],
+              "11": [
+                0.416,
+                1.04,
+                0.1664,
+                0.416,
+                1.04,
+                0.416,
+                0.9
+              ],
+              "12": [
+                0.432,
+                1.08,
+                0.1728,
+                0.432,
+                1.08,
+                0.432,
+                0.9
+              ],
+              "13": [
+                0.448,
+                1.12,
+                0.1792,
+                0.448,
+                1.12,
+                0.448,
+                0.9
+              ],
+              "14": [
+                0.464,
+                1.16,
+                0.1856,
+                0.464,
+                1.16,
+                0.464,
+                0.9
+              ],
+              "15": [
+                0.48,
+                1.2,
+                0.192,
+                0.48,
+                1.2,
+                0.48,
+                0.9
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_00_Skill03_Camera",
+              "Avatar_Ren_00_Skill03_EnterReady",
+              "Avatar_Ren_00_Skill03_Phase01",
+              "Avatar_Ren_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Shuhu's Gift": {
+          "variant1": {
+            "skillID": 120504,
+            "trigger": "SkillP01",
+            "name": "Shuhu's Gift",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "When Blade sustains DMG or consumes his HP, he gains 1 stack of Charge, stacking up to 5 times. A max of 1 Charge stack can be gained every time he is attacked.\\nWhen Charge stack reaches maximum, immediately launches a Follow-Up ATK on all enemies, dealing Wind DMG equal to #2[i]% of Blade's ATK plus #4[i]% of his Max HP. At the same time, restores Blade's HP by #3[i]% of his Max HP. After the Follow-Up ATK, all Charges are consumed.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.22,
+                0.25,
+                0.55
+              ],
+              "2": [
+                3,
+                0.242,
+                0.25,
+                0.605
+              ],
+              "3": [
+                3,
+                0.264,
+                0.25,
+                0.66
+              ],
+              "4": [
+                3,
+                0.286,
+                0.25,
+                0.715
+              ],
+              "5": [
+                3,
+                0.308,
+                0.25,
+                0.77
+              ],
+              "6": [
+                3,
+                0.33,
+                0.25,
+                0.825
+              ],
+              "7": [
+                3,
+                0.3575,
+                0.25,
+                0.89375
+              ],
+              "8": [
+                3,
+                0.385,
+                0.25,
+                0.9625
+              ],
+              "9": [
+                3,
+                0.4125,
+                0.25,
+                1.03125
+              ],
+              "10": [
+                3,
+                0.44,
+                0.25,
+                1.1
+              ],
+              "11": [
+                3,
+                0.462,
+                0.25,
+                1.155
+              ],
+              "12": [
+                3,
+                0.484,
+                0.25,
+                1.21
+              ],
+              "13": [
+                3,
+                0.506,
+                0.25,
+                1.265
+              ],
+              "14": [
+                3,
+                0.528,
+                0.25,
+                1.32
+              ],
+              "15": [
+                3,
+                0.55,
+                0.25,
+                1.375
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Ren_Passive_Camera",
+              "Avatar_Ren_00_PassiveSkill01",
+              "Avatar_Ren_00_Passive1Atk_Ability",
+              "Avatar_Ren_00_Passive1Atk02_Ability"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Karma Wind": {
+          "variant1": {
+            "skillID": 120507,
+            "trigger": "SkillMaze",
+            "name": "Karma Wind",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. After entering combat, consumes #2[i]% of Blade's Max HP while dealing Wind DMG equal to #1[i]% of his Max HP to all enemies.\\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when this Technique is used.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Ren_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1205_basic_atk.png",
+        "skillRef": {
+          "skillName": "Shard Sword",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1205_skill.png",
+        "skillRef": {
+          "skillName": "Hellscape",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1205_ultimate.png",
+        "skillRef": {
+          "skillName": "Death Sentence",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1205_talent.png",
+        "skillRef": {
+          "skillName": "Shuhu's Gift",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1205_technique.png",
+        "skillRef": {
+          "skillName": "Karma Wind",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Vita Infinita",
+        "icon": "icon/skill/1205_skilltree1.png",
+        "desc": "When Blade uses Ultimate, the amount cleared from the tally of HP loss is changed to #1[i]%.",
+        "params": [
+          0.5
+        ]
+      },
+      "Point07": {
+        "name": "Neverending Deaths",
+        "icon": "icon/skill/1205_skilltree2.png",
+        "desc": "HP restored from healing increases by #2[i]%. After receiving healing, converts #1[i]% of the healed amount to Ultimate's tally of HP loss.",
+        "params": [
+          0.25,
+          0.2
+        ]
+      },
+      "Point08": {
+        "name": "Cyclone of Destruction",
+        "icon": "icon/skill/1205_skilltree3.png",
+        "desc": "Increases Follow-Up ATK DMG from Talent by #1[i]% and additionally regenerates #2[i] Energy.",
+        "params": [
+          0.2,
+          15
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+            "params": [
+              0.2,
+              15
+            ]
+          }
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1205.png",
+    "preview": "image/character_preview/1205.png",
+    "portrait": "image/character_portrait/1205.png",
+    "bannerOffsets": [
+      0,
+      -91,
+      0.52,
+      0,
+      -91,
+      0.52,
+      0,
+      -91,
+      0.52
+    ],
+    "isBuffed": true
+  },
+  "Jingliu_v0": {
+    "internalID": 1212,
+    "name": "Jingliu_v0",
+    "path": "Destruction",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 679.1400000000001,
+      "DEFBase": 485.1,
+      "HPBase": 1435.8960000000002,
+      "SPDBase": 96,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "121201",
+        "name": "Moon Crashes Tianguan Gate",
+        "rank": 1,
+        "desc": "When using her Ultimate or Enhanced Skill, Jingliu's CRIT DMG increases by 24% for 1 turn(s). If only one enemy target is attacked, the target will additionally be dealt Ice DMG equal to 100% of Jingliu's ATK.",
+        "icon": "icon/skill/1212_rank1.png",
+        "paramsEido": [
+          0.24,
+          1,
+          1
+        ]
+      },
+      {
+        "id": "121202",
+        "name": "Crescent Shadows Qixing Dipper",
+        "rank": 2,
+        "desc": "After using Ultimate, increases the DMG of the next Enhanced Skill by 80%.",
+        "icon": "icon/skill/1212_rank2.png",
+        "paramsEido": [
+          0.8
+        ]
+      },
+      {
+        "id": "121203",
+        "name": "Halfmoon Gapes Mercurial Haze",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1212_ultimate.png"
+      },
+      {
+        "id": "121204",
+        "name": "Lunarlance Shines Skyward Dome",
+        "rank": 4,
+        "desc": "During the Spectral Transmigration state, the ATK gained from consuming teammates' HP is additionally increased by 90% of the total HP consumed from the entire team. The cap for ATK gained this way also increases by 30%.",
+        "icon": "icon/skill/1212_rank4.png",
+        "paramsEido": [
+          0.9,
+          0.3
+        ]
+      },
+      {
+        "id": "121205",
+        "name": "Night Shades Astral Radiance",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1212_skill.png"
+      },
+      {
+        "id": "121206",
+        "name": "Eclipse Hollows Corporeal Husk",
+        "rank": 6,
+        "desc": "When Jingliu enters the Spectral Transmigration state, the Syzygy stack limit increases by 1, and Jingliu obtains 1 stack(s) of Syzygy. While she is in the Spectral Transmigration state, her CRIT DMG increases by 50%.",
+        "icon": "icon/skill/1212_rank6.png",
+        "paramsEido": [
+          1,
+          0.5
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lucent Moonglow": {
+          "variant1": {
+            "skillID": 121201,
+            "trigger": "Skill01",
+            "name": "Lucent Moonglow",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Jingliu_Skill01_Camera",
+              "Avatar_Jingliu_Skill01_Phase01",
+              "Avatar_Jingliu_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Transcendent Flash": {
+          "variant1": {
+            "skillID": 121202,
+            "trigger": "Skill02",
+            "name": "Transcendent Flash",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to one designated enemy and obtains #2[i] stack(s) of \"Syzygy.\"",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1
+              ],
+              "2": [
+                1.1,
+                1
+              ],
+              "3": [
+                1.2,
+                1
+              ],
+              "4": [
+                1.3,
+                1
+              ],
+              "5": [
+                1.4,
+                1
+              ],
+              "6": [
+                1.5,
+                1
+              ],
+              "7": [
+                1.625,
+                1
+              ],
+              "8": [
+                1.75,
+                1
+              ],
+              "9": [
+                1.875,
+                1
+              ],
+              "10": [
+                2,
+                1
+              ],
+              "11": [
+                2.1,
+                1
+              ],
+              "12": [
+                2.2,
+                1
+              ],
+              "13": [
+                2.3,
+                1
+              ],
+              "14": [
+                2.4,
+                1
+              ],
+              "15": [
+                2.5,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jingliu_Skill02_Camera",
+              "Avatar_Jingliu_Skill02_Phase01",
+              "Avatar_Jingliu_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Moon On Glacial River": {
+          "variant1": {
+            "skillID": 121209,
+            "trigger": "Skill21",
+            "name": "Moon On Glacial River",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to one designated enemy, and deals Ice DMG equal to #3[i]% of Jingliu's ATK to adjacent enemies. Consumes #2[i] stack(s) of \"Syzygy.\" Using this ability does not consume Skill Points.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.25,
+                1,
+                0.625
+              ],
+              "2": [
+                1.375,
+                1,
+                0.6875
+              ],
+              "3": [
+                1.5,
+                1,
+                0.75
+              ],
+              "4": [
+                1.625,
+                1,
+                0.8125
+              ],
+              "5": [
+                1.75,
+                1,
+                0.875
+              ],
+              "6": [
+                1.875,
+                1,
+                0.9375
+              ],
+              "7": [
+                2.03125,
+                1,
+                1.015625
+              ],
+              "8": [
+                2.1875,
+                1,
+                1.09375
+              ],
+              "9": [
+                2.34375,
+                1,
+                1.171875
+              ],
+              "10": [
+                2.5,
+                1,
+                1.25
+              ],
+              "11": [
+                2.625,
+                1,
+                1.3125
+              ],
+              "12": [
+                2.75,
+                1,
+                1.375
+              ],
+              "13": [
+                2.875,
+                1,
+                1.4375
+              ],
+              "14": [
+                3,
+                1,
+                1.5
+              ],
+              "15": [
+                3.125,
+                1,
+                1.5625
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jingliu_00_PassiveAtkReady_Ability",
+              "Avatar_Jingliu_PassiveAtk_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Florephemeral Dreamflux": {
+          "variant1": {
+            "skillID": 121203,
+            "trigger": "Skill03",
+            "name": "Florephemeral Dreamflux",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to one designated enemy, and deals Ice DMG equal to #3[i]% of Jingliu's ATK to any adjacent enemies. Gains #2[i] stack(s) of \"Syzygy\" after attack ends.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.8,
+                1,
+                0.9,
+                1
+              ],
+              "2": [
+                1.92,
+                1,
+                0.96,
+                1
+              ],
+              "3": [
+                2.04,
+                1,
+                1.02,
+                1
+              ],
+              "4": [
+                2.16,
+                1,
+                1.08,
+                1
+              ],
+              "5": [
+                2.28,
+                1,
+                1.14,
+                1
+              ],
+              "6": [
+                2.4,
+                1,
+                1.2,
+                1
+              ],
+              "7": [
+                2.55,
+                1,
+                1.275,
+                1
+              ],
+              "8": [
+                2.7,
+                1,
+                1.35,
+                1
+              ],
+              "9": [
+                2.85,
+                1,
+                1.425,
+                1
+              ],
+              "10": [
+                3,
+                1,
+                1.5,
+                1
+              ],
+              "11": [
+                3.12,
+                1,
+                1.56,
+                1
+              ],
+              "12": [
+                3.24,
+                1,
+                1.62,
+                1
+              ],
+              "13": [
+                3.36,
+                1,
+                1.68,
+                1
+              ],
+              "14": [
+                3.48,
+                1,
+                1.74,
+                1
+              ],
+              "15": [
+                3.6,
+                1,
+                1.8,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jingliu_00_Skill03_Camera",
+              "Avatar_Jingliu_Skill03_Phase01",
+              "Avatar_Jingliu_Skill03_Phase02",
+              "Avatar_Jingliu_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Crescent Transmigration": {
+          "variant1": {
+            "skillID": 121204,
+            "trigger": "SkillP01",
+            "name": "Crescent Transmigration",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When Jingliu has #5[i] stack(s) of Syzygy, she enters the Spectral Transmigration state with her action advanced by #6[i]% and her CRIT Rate increased by #7[i]%. Then, Jingliu's Skill \"Transcendent Flash\" is enhanced to \"Moon On Glacial River,\" and only this enhanced Skill is available for use in battle. When Jingliu uses an attack in the Spectral Transmigration state, she consumes HP from her teammates equal to #2[i]% of their respective Max HP (this cannot reduce teammates' HP to lower than 1). Jingliu's ATK increases by #3[i]% of the total HP consumed from all allies in this attack, capped at #4[i]% of her base ATK, lasting until the current attack ends. Jingliu cannot enter the Spectral Transmigration state again until the current Spectral Transmigration state ends. Syzygy can stack up to 3 times. When Syzygy stacks become 0, Jingliu will exit the Spectral Transmigration state.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                0.04,
+                5.4,
+                0.9,
+                2,
+                1,
+                0.4
+              ],
+              "2": [
+                0.3,
+                0.04,
+                5.4,
+                0.99,
+                2,
+                1,
+                0.41
+              ],
+              "3": [
+                0.3,
+                0.04,
+                5.4,
+                1.08,
+                2,
+                1,
+                0.42
+              ],
+              "4": [
+                0.3,
+                0.04,
+                5.4,
+                1.17,
+                2,
+                1,
+                0.43
+              ],
+              "5": [
+                0.3,
+                0.04,
+                5.4,
+                1.26,
+                2,
+                1,
+                0.44
+              ],
+              "6": [
+                0.3,
+                0.04,
+                5.4,
+                1.35,
+                2,
+                1,
+                0.45
+              ],
+              "7": [
+                0.3,
+                0.04,
+                5.4,
+                1.4625,
+                2,
+                1,
+                0.4625
+              ],
+              "8": [
+                0.3,
+                0.04,
+                5.4,
+                1.575,
+                2,
+                1,
+                0.475
+              ],
+              "9": [
+                0.3,
+                0.04,
+                5.4,
+                1.6875,
+                2,
+                1,
+                0.4875
+              ],
+              "10": [
+                0.3,
+                0.04,
+                5.4,
+                1.8,
+                2,
+                1,
+                0.5
+              ],
+              "11": [
+                0.3,
+                0.04,
+                5.4,
+                1.89,
+                2,
+                1,
+                0.51
+              ],
+              "12": [
+                0.3,
+                0.04,
+                5.4,
+                1.98,
+                2,
+                1,
+                0.52
+              ],
+              "13": [
+                0.3,
+                0.04,
+                5.4,
+                2.07,
+                2,
+                1,
+                0.53
+              ],
+              "14": [
+                0.3,
+                0.04,
+                5.4,
+                2.16,
+                2,
+                1,
+                0.54
+              ],
+              "15": [
+                0.3,
+                0.04,
+                5.4,
+                2.25,
+                2,
+                1,
+                0.55
+              ]
+            },
+            "element": "Ice",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Jingliu_PassiveSkill01",
+              "Avatar_Jingliu_Passive_Camera",
+              "Avatar_Jingliu_00_PassiveAtkReady_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Shine of Truth": {
+          "variant1": {
+            "skillID": 121207,
+            "trigger": "SkillMaze",
+            "name": "Shine of Truth",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using this Technique, creates a Special Dimension around Jingliu that lasts for #3[i] seconds, and all enemies in this Special Dimension will become Frozen. After entering combat with enemies in the Special Dimension, Jingliu immediately regenerates #6[i] Energy and obtains #1[i] stack(s) of Syzygy, with a #2[i]% base chance of Freezing enemy targets for #4[i] turn(s). While Frozen, enemy targets cannot take action, and receive Ice Additional DMG equal to #5[i]% of Jingliu's ATK at the start of every turn. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1,
+                20,
+                1,
+                0.8,
+                15
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Jingliu_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1212_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lucent Moonglow",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1212_skill.png",
+        "skillRef": {
+          "skillName": "Transcendent Flash",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1212_ultimate.png",
+        "skillRef": {
+          "skillName": "Florephemeral Dreamflux",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1212_talent.png",
+        "skillRef": {
+          "skillName": "Crescent Transmigration",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1212_technique.png",
+        "skillRef": {
+          "skillName": "Shine of Truth",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point06": {
+        "name": "Deathrealm",
+        "icon": "icon/skill/1212_skilltree1.png",
+        "desc": "While in the \"Spectral Transmigration\" state, increases Effect RES by #1[i]%, and increases the Ultimate DMG dealt by #2[i]%.",
+        "params": [
+          0.35,
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Sword Champion",
+        "icon": "icon/skill/1212_skilltree2.png",
+        "desc": "After using \"Transcendent Flash,\" additionally regenerates #1[i] Energy. And after using \"Moon On Glacial River,\" additionally regenerates #2[i] Energy.",
+        "params": [
+          15,
+          8
+        ]
+      },
+      "Point08": {
+        "name": "Frost Wraith",
+        "icon": "icon/skill/1212_skilltree3.png",
+        "desc": "Upon obtaining \"Syzygy,\" if its stack limit has been reached, Jingliu's next attack ignores #1[i]% of the target's DEF.",
+        "params": [
+          0.25
+        ]
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1212.png",
+    "preview": "image/character_preview/1212.png",
+    "portrait": "image/character_portrait/1212.png",
+    "bannerOffsets": [
+      13,
+      -50,
+      0.57,
+      13,
+      -50,
+      0.57,
+      13,
+      -50,
+      0.57
+    ],
+    "isBuffed": true
   }
 }

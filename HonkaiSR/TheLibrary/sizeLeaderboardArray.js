@@ -137,6 +137,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Jingliu_v0",
+    "trimCharacterName": "Jingliuv0",
+    "entryIcon": "icon/character/1212.png",
+    "lineCount": 4138,
+    "sizeCount": 145619
+  },
+  {
+    "entryType": "char",
     "entryName": "Saber",
     "trimCharacterName": "Saber",
     "entryIcon": "icon/character/1014.png",
@@ -289,6 +297,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Blade_v0",
+    "trimCharacterName": "Bladev0",
+    "entryIcon": "icon/character/1205.png",
+    "lineCount": 3078,
+    "sizeCount": 105514
+  },
+  {
+    "entryType": "char",
     "entryName": "Fu Xuan",
     "trimCharacterName": "FuXuan",
     "entryIcon": "icon/character/1208.png",
@@ -310,6 +326,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1225.png",
     "lineCount": 2851,
     "sizeCount": 100951
+  },
+  {
+    "entryType": "char",
+    "entryName": "Silver Wolf_v0",
+    "trimCharacterName": "SilverWolfv0",
+    "entryIcon": "icon/character/1006.png",
+    "lineCount": 2751,
+    "sizeCount": 99727
   },
   {
     "entryType": "char",
@@ -374,6 +398,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1001.png",
     "lineCount": 2464,
     "sizeCount": 82306
+  },
+  {
+    "entryType": "char",
+    "entryName": "Kafka_v0",
+    "trimCharacterName": "Kafkav0",
+    "entryIcon": "icon/character/1005.png",
+    "lineCount": 2509,
+    "sizeCount": 81705
   },
   {
     "entryType": "char",
