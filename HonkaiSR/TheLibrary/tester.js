@@ -2695,7 +2695,7 @@ const customMenu = {
                     let stringCustom = `
                         <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" target="_blank">
                             <div class="customMenuResultRowIcon">
-                                <img src="/HonkaiSR/${result.icon}" class="customMenuResultImgRounded" style="border: 2px solid ${customMenu.rarityColors[result.rarity]};"/>
+                                <img src="/HonkaiSR/${result.icon}" class="customMenuResultImgRounded${result.name?.includes("_v") ? " turnOrderDisplayPreviewGREY" : ""}" style="border: 2px solid ${customMenu.rarityColors[result.rarity]};"/>
                             </div>
                             <div class="customMenuResultBodyBox">
 

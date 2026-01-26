@@ -87,6 +87,8 @@ const endgameModeDisplay = {
 
         // erosionModsData
         function fuzzyMatch(input, itemParam1, itemParam2,desc,aim) {
+            if (typeof itemParam1 != "string") {itemParam1 = itemParam1.toString()}
+
             const search = input.toLowerCase();
             return itemParam1.toLowerCase().includes(search) 
             // || itemParam2.toLowerCase().includes(search) 
@@ -185,7 +187,7 @@ const endgameModeDisplay = {
             // style="background: linear-gradient(200deg, rgb(13, 57, 59), transparent);"
             sizeString += `<a class="${barType} clickable hoverOpacity" href="${linkBase}" target="_blank">
                     <div class="${circleType}"></div>
-                    <img src="${finalImage}" class="turnOrderDisplayPreview">
+                    <img src="${finalImage}" class="turnOrderDisplayPreview${sizeEntry.entryName?.includes("_v") ? " turnOrderDisplayPreviewGREY" : ""}">
                     <div class="turnOrderAVBox">${rankCounter-1}</div>
                     <div class="complexityHolderBoxDisplay">
                         <div class="rowSummaryDMGNameAndPercent">${sizeEntry.entryName ?? sizeEntry.enemyID}:&nbsp;<span class="smallFont">${(currentSize/1024).toLocaleString()}KB</span></div>
@@ -260,7 +262,7 @@ const endgameModeDisplay = {
             // style="background: linear-gradient(200deg, rgb(13, 57, 59), transparent);"
             linesStringer += `<a class="${barType} clickable hoverOpacity" href="${linkBase}" target="_blank">
                     <div class="${circleType}"></div>
-                    <img src="${finalImage}" class="turnOrderDisplayPreview">
+                    <img src="${finalImage}" class="turnOrderDisplayPreview${sizeEntry.entryName?.includes("_v") ? " turnOrderDisplayPreviewGREY" : ""}">
                     <div class="turnOrderAVBox">${rankCounter-1}</div>
                     <div class="complexityHolderBoxDisplay">
                         <div class="rowSummaryDMGNameAndPercent">${sizeEntry.entryName ?? sizeEntry.enemyID}:&nbsp;<span class="smallFont">${(currentSize).toLocaleString()} lines</span></div>
