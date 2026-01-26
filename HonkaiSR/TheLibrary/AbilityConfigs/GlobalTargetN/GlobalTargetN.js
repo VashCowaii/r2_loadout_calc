@@ -120,6 +120,61 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Phainon's Forced-Action Teammates",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team Entity}}"
+            },
+            "Adjust Relative to Target, Get Team",
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Flag",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "flagName": "STAT_ForceActionable"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Khaslana(Battle Event Cluster)",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "Phainon_Ability03_BattleEvent_BaseSpeed"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Anaxa's Ult Target List",
       "isTargetOperator": false,
       "execute": [

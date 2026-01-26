@@ -17,6 +17,10 @@ div {
     color: white;
 }
 
+.turnOrderDisplayPreviewGREY {
+    filter: grayscale(100%);
+}
+
 .updateBannerMegaBox {
     background-color: #111;
     grid-column: 2;

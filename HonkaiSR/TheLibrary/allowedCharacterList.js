@@ -64,6 +64,10 @@ let allowedCharacterList = [
     "trimName": "Clara"
   },
   {
+    "fullName": "Sampo",
+    "trimName": "Sampo"
+  },
+  {
     "fullName": "Hook",
     "trimName": "Hook"
   },
@@ -256,6 +260,14 @@ let allowedCharacterList = [
     "trimName": "Anaxa"
   },
   {
+    "fullName": "Cipher",
+    "trimName": "Cipher"
+  },
+  {
+    "fullName": "Phainon",
+    "trimName": "Phainon"
+  },
+  {
     "fullName": "Hyacine",
     "trimName": "Hyacine"
   },
@@ -298,6 +310,22 @@ let allowedCharacterList = [
   {
     "fullName": "Archer",
     "trimName": "Archer"
+  },
+  {
+    "fullName": "Kafka_v0",
+    "trimName": "Kafkav0"
+  },
+  {
+    "fullName": "Silver Wolf_v0",
+    "trimName": "SilverWolfv0"
+  },
+  {
+    "fullName": "Blade_v0",
+    "trimName": "Bladev0"
+  },
+  {
+    "fullName": "Jingliu_v0",
+    "trimName": "Jingliuv0"
   },
   {
     "fullName": "GlobalAbilities",

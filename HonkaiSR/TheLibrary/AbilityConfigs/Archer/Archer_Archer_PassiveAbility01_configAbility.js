@@ -1053,7 +1053,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Extra Action/Turn [Owner]: End ",
+          "eventTrigger": "Extra Action/Turn [Owner]: End",
           "execute": [
             {
               "name": "IF",
