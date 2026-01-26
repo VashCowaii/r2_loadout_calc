@@ -11473,6 +11473,739 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Sampo": {
+    "internalID": 1108,
+    "name": "Sampo",
+    "path": "Nihility",
+    "element": "Wind",
+    "rarity": 4,
+    "energyMax": 120,
+    "baseStats": {
+      "ATKBase": 617.4000000000001,
+      "DEFBase": 396.9,
+      "HPBase": 1023.12,
+      "SPDBase": 102,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "110801",
+        "name": "Rising Love",
+        "rank": 1,
+        "desc": "When using Skill, deals DMG for 1 extra time(s) to a random enemy.",
+        "icon": "icon/skill/1108_rank1.png",
+        "paramsEido": [
+          1
+        ]
+      },
+      {
+        "id": "110802",
+        "name": "Infectious Enthusiasm",
+        "rank": 2,
+        "desc": "Defeating an enemy afflicted with Wind Shear has a 100% base chance to inflict all enemies with 1 stack(s) of Wind Shear, equivalent to that of Skill.",
+        "icon": "icon/skill/1108_rank2.png",
+        "paramsEido": [
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Base Chance": {
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+          }
+        }
+      },
+      {
+        "id": "110803",
+        "name": "Big Money!",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1108_skill.png"
+      },
+      {
+        "id": "110804",
+        "name": "The Deeper the Love, the Stronger the Hate",
+        "rank": 4,
+        "desc": "When Skill hits an enemy with 5 or more stack(s) of Wind Shear, the enemy immediately takes 8% of current Wind Shear DMG.",
+        "icon": "icon/skill/1108_rank4.png",
+        "paramsEido": [
+          5,
+          0.08
+        ]
+      },
+      {
+        "id": "110805",
+        "name": "Huuuuge Money!",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1108_ultimate.png"
+      },
+      {
+        "id": "110806",
+        "name": "Increased Spending",
+        "rank": 6,
+        "desc": "Talent's Wind Shear DMG multiplier increases by 15%.",
+        "icon": "icon/skill/1108_rank6.png",
+        "paramsEido": [
+          0.15
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Dazzling Blades": {
+          "variant1": {
+            "skillID": 110801,
+            "trigger": "Skill01",
+            "name": "Dazzling Blades",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Sampo's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Sampo_00_Skill01_Camera",
+              "Avatar_Sampo_00_Skill01_Phase01",
+              "Avatar_Sampo_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Ricochet Love": {
+          "variant1": {
+            "skillID": 110802,
+            "trigger": "Skill02",
+            "name": "Ricochet Love",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Deals Wind DMG equal to #2[i]% of Sampo's ATK to one designated enemy, and further deals DMG for #1[i] extra time(s), with each time dealing Wind DMG equal to #2[i]% of Sampo's ATK to a random enemy.",
+            "energyCost": null,
+            "energyRegen": 6,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                4,
+                0.28
+              ],
+              "2": [
+                4,
+                0.308
+              ],
+              "3": [
+                4,
+                0.336
+              ],
+              "4": [
+                4,
+                0.364
+              ],
+              "5": [
+                4,
+                0.392
+              ],
+              "6": [
+                4,
+                0.42
+              ],
+              "7": [
+                4,
+                0.455
+              ],
+              "8": [
+                4,
+                0.49
+              ],
+              "9": [
+                4,
+                0.525
+              ],
+              "10": [
+                4,
+                0.56
+              ],
+              "11": [
+                4,
+                0.588
+              ],
+              "12": [
+                4,
+                0.616
+              ],
+              "13": [
+                4,
+                0.644
+              ],
+              "14": [
+                4,
+                0.672
+              ],
+              "15": [
+                4,
+                0.7
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sampo_00_Skill02_Camera",
+              "Avatar_Sampo_00_Skill02_Phase01",
+              "Avatar_Sampo_00_Skill02_Phase02",
+              "FireBullet_Ability",
+              "Avatar_Sampo_00_Skill02_End_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Surprise Present": {
+          "variant1": {
+            "skillID": 110803,
+            "trigger": "Skill03",
+            "name": "Surprise Present",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG equal to #1[i]% of Sampo's ATK to all enemies, with a #4[i]% base chance to increase the targets' DoT taken by #2[i]% for #3[i] turn(s).",
+            "energyCost": 120,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                0.2,
+                2,
+                1
+              ],
+              "2": [
+                1.024,
+                0.21,
+                2,
+                1
+              ],
+              "3": [
+                1.088,
+                0.22,
+                2,
+                1
+              ],
+              "4": [
+                1.152,
+                0.23,
+                2,
+                1
+              ],
+              "5": [
+                1.216,
+                0.24,
+                2,
+                1
+              ],
+              "6": [
+                1.28,
+                0.25,
+                2,
+                1
+              ],
+              "7": [
+                1.36,
+                0.2625,
+                2,
+                1
+              ],
+              "8": [
+                1.44,
+                0.275,
+                2,
+                1
+              ],
+              "9": [
+                1.52,
+                0.2875,
+                2,
+                1
+              ],
+              "10": [
+                1.6,
+                0.3,
+                2,
+                1
+              ],
+              "11": [
+                1.664,
+                0.31,
+                2,
+                1
+              ],
+              "12": [
+                1.728,
+                0.32,
+                2,
+                1
+              ],
+              "13": [
+                1.792,
+                0.33,
+                2,
+                1
+              ],
+              "14": [
+                1.856,
+                0.34,
+                2,
+                1
+              ],
+              "15": [
+                1.92,
+                0.35,
+                2,
+                1
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sampo_00_Skill03_Camera",
+              "Avatar_Sampo_00_Skill03_Phase01",
+              "Avatar_Sampo_00_Skill03_Phase02",
+              "Avatar_Sampo_00_Skill03_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Windtorn Dagger": {
+          "variant1": {
+            "skillID": 110804,
+            "trigger": "SkillP01",
+            "name": "Windtorn Dagger",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Sampo's attacks have a #1[i]% base chance to inflict Wind Shear for #3[i] turn(s).\\nEnemies inflicted with Wind Shear will take Wind DoT equal to #2[i]% of Sampo's ATK at the beginning of each turn. Wind Shear can stack up to #4[i] time(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.65,
+                0.2,
+                3,
+                5
+              ],
+              "2": [
+                0.65,
+                0.22,
+                3,
+                5
+              ],
+              "3": [
+                0.65,
+                0.24,
+                3,
+                5
+              ],
+              "4": [
+                0.65,
+                0.26,
+                3,
+                5
+              ],
+              "5": [
+                0.65,
+                0.28,
+                3,
+                5
+              ],
+              "6": [
+                0.65,
+                0.31,
+                3,
+                5
+              ],
+              "7": [
+                0.65,
+                0.35,
+                3,
+                5
+              ],
+              "8": [
+                0.65,
+                0.4,
+                3,
+                5
+              ],
+              "9": [
+                0.65,
+                0.46,
+                3,
+                5
+              ],
+              "10": [
+                0.65,
+                0.52,
+                3,
+                5
+              ],
+              "11": [
+                0.65,
+                0.546,
+                3,
+                5
+              ],
+              "12": [
+                0.65,
+                0.572,
+                3,
+                5
+              ],
+              "13": [
+                0.65,
+                0.598,
+                3,
+                5
+              ],
+              "14": [
+                0.65,
+                0.624,
+                3,
+                5
+              ],
+              "15": [
+                0.65,
+                0.65,
+                3,
+                5
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Sampo_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Base Chance": {
+                "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Shining Bright": {
+          "variant1": {
+            "skillID": 110807,
+            "trigger": "SkillMaze",
+            "name": "Shining Bright",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After Sampo uses his Technique, enemies in a set area are afflicted with Blind for #1[i] second(s). Blinded enemies cannot detect ally targets.\\nWhen initiating combat against a Blinded enemy, there is a #2[i]% fixed chance to delay all enemies' action by #3[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                1,
+                0.25
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Sampo_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Fixed Chance": {
+                "desc": "Fixed chance will not be affected by any factor."
+              },
+              "Action Delayed": {
+                "desc": "Increases the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1108_basic_atk.png",
+        "skillRef": {
+          "skillName": "Dazzling Blades",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1108_skill.png",
+        "skillRef": {
+          "skillName": "Ricochet Love",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1108_ultimate.png",
+        "skillRef": {
+          "skillName": "Surprise Present",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1108_talent.png",
+        "skillRef": {
+          "skillName": "Windtorn Dagger",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1108_technique.png",
+        "skillRef": {
+          "skillName": "Shining Bright",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point07": {
+        "name": "Defensive Position",
+        "icon": "icon/skill/1108_skilltree2.png",
+        "desc": "Using Ultimate additionally regenerates #1[i] Energy.",
+        "params": [
+          10
+        ]
+      },
+      "Point08": {
+        "name": "Spice Up",
+        "icon": "icon/skill/1108_skilltree3.png",
+        "desc": "Enemies with Wind Shear effect deal #1[i]% less DMG to Sampo.",
+        "params": [
+          0.15
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.04
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.06
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point17": {
+        "name": "Effect Hit Rate Boost",
+        "icon": "icon/property/IconStatusProbability.png",
+        "stats": {
+          "EffectHitRate": 0.08
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point06": {
+        "name": "Trap",
+        "icon": "icon/skill/1108_skilltree1.png",
+        "desc": "Extends the duration of Wind Shear caused by Talent by #1[i] turn(s).",
+        "params": [
+          1
+        ]
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1108.png",
+    "preview": "image/character_preview/1108.png",
+    "portrait": "image/character_portrait/1108.png",
+    "bannerOffsets": [
+      13,
+      -13,
+      0.57,
+      13,
+      -13,
+      0.57,
+      13,
+      -13,
+      0.57
+    ],
+    "isBuffed": false
+  },
   "Hook": {
     "internalID": 1109,
     "name": "Hook",

@@ -561,6 +561,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Sampo",
+    "trimCharacterName": "Sampo",
+    "entryIcon": "icon/character/1108.png",
+    "lineCount": 1218,
+    "sizeCount": 40392
+  },
+  {
+    "entryType": "char",
     "entryName": "Trailblazer - Destruction",
     "trimCharacterName": "TrailblazerDestruction",
     "entryIcon": "icon/character/8001.png",
