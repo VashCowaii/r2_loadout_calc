@@ -375,6 +375,418 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Acheron: Crimson Knot Transfer Target[v2]",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All}}"
+                    },
+                    {
+                      "name": "Filter by Life-State",
+                      "state": "Mask_AliveOrLimbo"
+                    },
+                    "Shuffle Targets"
+                  ]
+                },
+                {
+                  "name": "Sort by Modifier Types",
+                  "buffType": "Debuff",
+                  "sortByHighest": true
+                },
+                {
+                  "name": "Sort by Monster Rank",
+                  "byHighest": true,
+                  "maxRank": "Elite"
+                },
+                {
+                  "name": "Sort by Modifier Value",
+                  "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                  "sortByHighest": true
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target is Unselectable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Living State",
+                        "state": "Bit_OnStage",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Return Target",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Acheron: Crimson Knot Transfer Target[v1]",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All}}"
+                },
+                {
+                  "name": "Filter by Life-State",
+                  "state": "Mask_AliveOnly"
+                },
+                "Shuffle Targets",
+                {
+                  "name": "Sort by Modifier Types",
+                  "buffType": "Debuff",
+                  "sortByHighest": true
+                },
+                {
+                  "name": "Sort by Monster Rank",
+                  "byHighest": true,
+                  "maxRank": "Elite"
+                },
+                {
+                  "name": "Sort by Modifier Value",
+                  "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                  "sortByHighest": true
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target is Unselectable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Living State",
+                        "state": "Bit_OnStage",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Return Target",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Acheron Debuff Gained Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Selector",
+                  "conditions": {
+                    "name": "Is Ability Ongoing",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    }
+                  },
+                  "targetPass": {
+                    "name": "Target Selector",
+                    "conditions": {
+                      "name": "AND",
+                      "conditionList": [
+                        {
+                          "name": "Is Current Ability Target",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Hostile Entities(AOE)}}"
+                          }
+                        },
+                        {
+                          "name": "Is Part Of Team",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Current Action Owner}}"
+                          },
+                          "team": "TeamLight"
+                        }
+                      ]
+                    },
+                    "targetPass": {
+                      "name": "Target Sequence",
+                      "Sequence": [
+                        {
+                          "name": "Target Name",
+                          "target": "{{Current Action Target List}}"
+                        },
+                        {
+                          "name": "Filter by Life-State",
+                          "state": "Mask_AliveOnly"
+                        },
+                        "Shuffle Targets"
+                      ]
+                    },
+                    "targetFail": {
+                      "name": "Target Selector",
+                      "conditions": {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Sequence",
+                          "Sequence": [
+                            {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            {
+                              "name": "Adjust Target by Skill Point User",
+                              "canFail": true
+                            }
+                          ]
+                        },
+                        "team": "TeamDark"
+                      },
+                      "targetPass": {
+                        "name": "Target Selector",
+                        "conditions": {
+                          "name": "Compare: Target Count",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Current Action Target List}}"
+                          },
+                          "compareType": ">=",
+                          "value2": 1
+                        },
+                        "targetPass": {
+                          "name": "Compute Targets",
+                          "type": "Union",
+                          "TargetList": [
+                            {
+                              "name": "Target Sequence",
+                              "Sequence": [
+                                {
+                                  "name": "Target Name",
+                                  "target": "{{Current Action Owner}}"
+                                },
+                                {
+                                  "name": "Adjust Target by Skill Point User",
+                                  "canFail": true
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Target Name",
+                              "target": "{{Current Action Target List}}"
+                            }
+                          ]
+                        },
+                        "targetFail": {
+                          "name": "Target Selector",
+                          "conditions": {
+                            "name": "Is Part Of Team",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Current Action Owner}}"
+                            },
+                            "team": "TeamLight"
+                          },
+                          "targetPass": {
+                            "name": "Compute Targets",
+                            "type": "Union",
+                            "TargetList": [
+                              {
+                                "name": "Target Sequence",
+                                "Sequence": [
+                                  {
+                                    "name": "Target Name",
+                                    "target": "{{Current Action Owner}}"
+                                  },
+                                  {
+                                    "name": "Adjust Target by Skill Point User",
+                                    "canFail": true
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Target Name",
+                                "target": "{{Current Action Target List}}"
+                              }
+                            ]
+                          },
+                          "targetFail": {
+                            "name": "Compute Targets",
+                            "type": "Union",
+                            "TargetList": [
+                              {
+                                "name": "Target Sequence",
+                                "Sequence": [
+                                  {
+                                    "name": "Target Name",
+                                    "target": "{{Current Action Owner}}"
+                                  },
+                                  {
+                                    "name": "Adjust Target by Skill Point User",
+                                    "canFail": true
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "targetFail": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Enemy Team All}}"
+                          },
+                          {
+                            "name": "Filter by Life-State",
+                            "state": "Mask_AliveOnly"
+                          },
+                          "Shuffle Targets"
+                        ]
+                      }
+                    }
+                  },
+                  "targetFail": {
+                    "name": "Target Selector",
+                    "conditions": {
+                      "name": "AND",
+                      "conditionList": [
+                        {
+                          "name": "Target Exists",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Current Action Owner}}"
+                          }
+                        },
+                        {
+                          "name": "Is Part Of Team",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Current Action Target List}}"
+                          },
+                          "team": "TeamDark"
+                        }
+                      ]
+                    },
+                    "targetPass": {
+                      "name": "Target Sequence",
+                      "Sequence": [
+                        {
+                          "name": "Target Name",
+                          "target": "{{Current Action Target List}}"
+                        },
+                        {
+                          "name": "Filter by Life-State",
+                          "state": "Mask_AliveOnly"
+                        },
+                        "Shuffle Targets"
+                      ]
+                    },
+                    "targetFail": {
+                      "name": "Target Sequence",
+                      "Sequence": [
+                        {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}"
+                        },
+                        {
+                          "name": "Filter by Life-State",
+                          "state": "Mask_AliveOnly"
+                        },
+                        "Shuffle Targets"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "name": "Sort by Modifier Types",
+                  "buffType": "Debuff",
+                  "sortByHighest": true
+                },
+                {
+                  "name": "Sort by Monster Rank",
+                  "byHighest": true,
+                  "maxRank": "Elite"
+                },
+                {
+                  "name": "Sort by Modifier Value",
+                  "modifier": "Acheron_PassiveFlag01[<span class=\"descriptionNumberColor\">Crimson Knot</span>]",
+                  "sortByHighest": true
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target is Unselectable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Living State",
+                        "state": "Bit_OnStage",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "Return Target",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Marth 7th's Shifu",
           "isTargetOperator": false,
           "execute": [

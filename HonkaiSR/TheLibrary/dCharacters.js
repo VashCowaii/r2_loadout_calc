@@ -37204,6 +37204,1176 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Acheron": {
+    "internalID": 1308,
+    "name": "Acheron",
+    "path": "Nihility",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 9,
+    "baseStats": {
+      "ATKBase": 698.544,
+      "DEFBase": 436.59000000000003,
+      "HPBase": 1125.4319999999998,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "130801",
+        "name": "Silenced Sky Spake Sooth",
+        "rank": 1,
+        "desc": "When dealing DMG to debuffed enemies, increases CRIT Rate by 18%.",
+        "icon": "icon/skill/1308_rank1.png",
+        "paramsEido": [
+          0.18
+        ],
+        "extraEffects": {
+          "Debuff": {
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+          }
+        }
+      },
+      {
+        "id": "130802",
+        "name": "Mute Thunder in Still Tempest",
+        "rank": 2,
+        "desc": "The number of Nihility characters required for the Trace \"The Abyss\" to achieve its highest possible effect is reduced by 1. When this unit's turn starts, gains 1 point of Slashed Dream and inflicts 1 stack of Crimson Knot on the enemy with the most Crimson Knot stacks.",
+        "icon": "icon/skill/1308_rank2.png"
+      },
+      {
+        "id": "130803",
+        "name": "Frost Bites in Death",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1308_ultimate.png"
+      },
+      {
+        "id": "130804",
+        "name": "Shrined Fire for Mirrored Soul",
+        "rank": 4,
+        "desc": "When enemy targets enter combat, inflicts them with the Ultimate DMG Vulnerability, increasing the amount of Ultimate DMG they take by 8%.",
+        "icon": "icon/skill/1308_rank4.png",
+        "paramsEido": [
+          0.08
+        ]
+      },
+      {
+        "id": "130805",
+        "name": "Strewn Souls on Erased Earths",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1308_skill.png"
+      },
+      {
+        "id": "130806",
+        "name": "Apocalypse, the Emancipator",
+        "rank": 6,
+        "desc": "Increases the All-Type RES PEN for the Ultimate DMG dealt by Acheron by 20%. The DMG dealt by Basic ATK and Skill will also be considered as Ultimate DMG and can Reduce enemy Toughness regardless of Weakness Types. When breaking Weaknesses, triggers the Lightning Weakness Break effect.",
+        "icon": "icon/skill/1308_rank6.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Trilateral Wiltcross": {
+          "variant1": {
+            "skillID": 130801,
+            "trigger": "Skill01",
+            "name": "Trilateral Wiltcross",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Acheron's ATK to one designated enemy target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill01_Camera",
+              "Avatar_Acheron_00_Skill01_Phase01",
+              "Avatar_Acheron_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Octobolt Flash": {
+          "variant1": {
+            "skillID": 130802,
+            "trigger": "Skill02",
+            "name": "Octobolt Flash",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Gains #3[i] point(s) of \"Slashed Dream.\" Inflicts #3[i] stack(s) of \"Crimson Knot\" on one designated enemy target, dealing Lightning DMG equal to #1[i]% of Acheron's ATK to this target, as well as Lightning DMG equal to #2[i]% of Acheron's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                0.3,
+                1
+              ],
+              "2": [
+                0.88,
+                0.33,
+                1
+              ],
+              "3": [
+                0.96,
+                0.36,
+                1
+              ],
+              "4": [
+                1.04,
+                0.39,
+                1
+              ],
+              "5": [
+                1.12,
+                0.42,
+                1
+              ],
+              "6": [
+                1.2,
+                0.45,
+                1
+              ],
+              "7": [
+                1.3,
+                0.4875,
+                1
+              ],
+              "8": [
+                1.4,
+                0.525,
+                1
+              ],
+              "9": [
+                1.5,
+                0.5625,
+                1
+              ],
+              "10": [
+                1.6,
+                0.6,
+                1
+              ],
+              "11": [
+                1.68,
+                0.63,
+                1
+              ],
+              "12": [
+                1.76,
+                0.66,
+                1
+              ],
+              "13": [
+                1.84,
+                0.69,
+                1
+              ],
+              "14": [
+                1.92,
+                0.72,
+                1
+              ],
+              "15": [
+                2,
+                0.75,
+                1
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill02_Camera",
+              "Avatar_Acheron_00_Skill02_Phase01",
+              "Avatar_Acheron_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Slashed Dream Cries in Red": {
+          "variant1": {
+            "skillID": 130803,
+            "trigger": "Skill03",
+            "name": "Slashed Dream Cries in Red",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Sequentially unleash \"Rainblade\" 3 times and \"Stygian Resurge\" 1 time, dealing Lightning DMG up to #6[i]% of Acheron's ATK to one designated enemy target, as well as Lightning DMG up to #7[i]% of Acheron's ATK to other targets.\\n\"Rainblade\": Deals Lightning DMG equal to #1[f1]% of Acheron's ATK to one designated enemy target and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, immediately deals Lightning DMG equal to #2[f1]% of Acheron's ATK to all enemies. For every stack of \"Crimson Knot\" removed, this DMG Multiplier is additionally increased, up to a maximum of #5[f1]%.\\n\"Stygian Resurge\": Deals Lightning DMG equal to #3[i]% of Acheron's ATK to all enemies and remove all \"Crimson Knots.\"\\n\"Crimson Knot\" cannot be applied to enemies during the Ultimate.",
+            "energyCost": 9,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.144,
+                0.09,
+                0.72,
+                9,
+                0.36,
+                2.232,
+                1.8
+              ],
+              "2": [
+                0.1536,
+                0.096,
+                0.768,
+                9,
+                0.384,
+                2.3808,
+                1.92
+              ],
+              "3": [
+                0.1632,
+                0.102,
+                0.816,
+                9,
+                0.408,
+                2.5296,
+                2.04
+              ],
+              "4": [
+                0.1728,
+                0.108,
+                0.864,
+                9,
+                0.432,
+                2.6784,
+                2.16
+              ],
+              "5": [
+                0.1824,
+                0.114,
+                0.912,
+                9,
+                0.456,
+                2.8272,
+                2.28
+              ],
+              "6": [
+                0.192,
+                0.12,
+                0.96,
+                9,
+                0.48,
+                2.976,
+                2.4
+              ],
+              "7": [
+                0.204,
+                0.1275,
+                1.02,
+                9,
+                0.51,
+                3.162,
+                2.55
+              ],
+              "8": [
+                0.216,
+                0.135,
+                1.08,
+                9,
+                0.54,
+                3.348,
+                2.7
+              ],
+              "9": [
+                0.228,
+                0.1425,
+                1.14,
+                9,
+                0.57,
+                3.534,
+                2.85
+              ],
+              "10": [
+                0.24,
+                0.15,
+                1.2,
+                9,
+                0.6,
+                3.72,
+                3
+              ],
+              "11": [
+                0.2496,
+                0.156,
+                1.248,
+                9,
+                0.624,
+                3.8688,
+                3.12
+              ],
+              "12": [
+                0.2592,
+                0.162,
+                1.296,
+                9,
+                0.648,
+                4.0176,
+                3.24
+              ],
+              "13": [
+                0.2688,
+                0.168,
+                1.344,
+                9,
+                0.672,
+                4.1664,
+                3.36
+              ],
+              "14": [
+                0.2784,
+                0.174,
+                1.392,
+                9,
+                0.696,
+                4.3152,
+                3.48
+              ],
+              "15": [
+                0.288,
+                0.18,
+                1.44,
+                9,
+                0.72,
+                4.464,
+                3.6
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill03_Camera",
+              "Avatar_Acheron_00_Skill03_EnterReady",
+              "Avatar_Acheron_00_Skill03_Phase01",
+              "Avatar_Acheron_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Rainblade": {
+          "variant1": {
+            "skillID": 130814,
+            "trigger": "Skill31",
+            "name": "Rainblade",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals minor Lightning DMG to one enemy, and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, deals minor Lightning DMG to all enemies 1 time, with this DMG multiplier increased for every stack of \"Crimson Knot\" removed.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.144,
+                0.09,
+                0.72
+              ],
+              "2": [
+                0.1536,
+                0.096,
+                0.768
+              ],
+              "3": [
+                0.1632,
+                0.102,
+                0.816
+              ],
+              "4": [
+                0.1728,
+                0.108,
+                0.864
+              ],
+              "5": [
+                0.1824,
+                0.114,
+                0.912
+              ],
+              "6": [
+                0.192,
+                0.12,
+                0.96
+              ],
+              "7": [
+                0.204,
+                0.1275,
+                1.02
+              ],
+              "8": [
+                0.216,
+                0.135,
+                1.08
+              ],
+              "9": [
+                0.228,
+                0.1425,
+                1.14
+              ],
+              "10": [
+                0.24,
+                0.15,
+                1.2
+              ],
+              "11": [
+                0.2496,
+                0.156,
+                1.248
+              ],
+              "12": [
+                0.2592,
+                0.162,
+                1.296
+              ],
+              "13": [
+                0.2688,
+                0.168,
+                1.344
+              ],
+              "14": [
+                0.2784,
+                0.174,
+                1.392
+              ],
+              "15": [
+                0.288,
+                0.18,
+                1.44
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill31_Camera",
+              "Avatar_Acheron_00_Skill31_Phase01",
+              "Avatar_Acheron_00_Skill31_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 130815,
+            "trigger": "Skill32",
+            "name": "Rainblade",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals minor Lightning DMG to one enemy, and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, deals minor Lightning DMG to all enemies 1 time, with this DMG multiplier increased for every stack of \"Crimson Knot\" removed.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.144,
+                0.09,
+                0.72
+              ],
+              "2": [
+                0.1536,
+                0.096,
+                0.768
+              ],
+              "3": [
+                0.1632,
+                0.102,
+                0.816
+              ],
+              "4": [
+                0.1728,
+                0.108,
+                0.864
+              ],
+              "5": [
+                0.1824,
+                0.114,
+                0.912
+              ],
+              "6": [
+                0.192,
+                0.12,
+                0.96
+              ],
+              "7": [
+                0.204,
+                0.1275,
+                1.02
+              ],
+              "8": [
+                0.216,
+                0.135,
+                1.08
+              ],
+              "9": [
+                0.228,
+                0.1425,
+                1.14
+              ],
+              "10": [
+                0.24,
+                0.15,
+                1.2
+              ],
+              "11": [
+                0.2496,
+                0.156,
+                1.248
+              ],
+              "12": [
+                0.2592,
+                0.162,
+                1.296
+              ],
+              "13": [
+                0.2688,
+                0.168,
+                1.344
+              ],
+              "14": [
+                0.2784,
+                0.174,
+                1.392
+              ],
+              "15": [
+                0.288,
+                0.18,
+                1.44
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill32_Camera",
+              "Avatar_Acheron_00_Skill32_Phase01",
+              "Avatar_Acheron_00_Skill32_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant3": {
+            "skillID": 130816,
+            "trigger": "Skill33",
+            "name": "Rainblade",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals minor Lightning DMG to one enemy, and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, deals minor Lightning DMG to all enemies 1 time, with this DMG multiplier increased for every stack of \"Crimson Knot\" removed.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.144,
+                0.09,
+                0.72
+              ],
+              "2": [
+                0.1536,
+                0.096,
+                0.768
+              ],
+              "3": [
+                0.1632,
+                0.102,
+                0.816
+              ],
+              "4": [
+                0.1728,
+                0.108,
+                0.864
+              ],
+              "5": [
+                0.1824,
+                0.114,
+                0.912
+              ],
+              "6": [
+                0.192,
+                0.12,
+                0.96
+              ],
+              "7": [
+                0.204,
+                0.1275,
+                1.02
+              ],
+              "8": [
+                0.216,
+                0.135,
+                1.08
+              ],
+              "9": [
+                0.228,
+                0.1425,
+                1.14
+              ],
+              "10": [
+                0.24,
+                0.15,
+                1.2
+              ],
+              "11": [
+                0.2496,
+                0.156,
+                1.248
+              ],
+              "12": [
+                0.2592,
+                0.162,
+                1.296
+              ],
+              "13": [
+                0.2688,
+                0.168,
+                1.344
+              ],
+              "14": [
+                0.2784,
+                0.174,
+                1.392
+              ],
+              "15": [
+                0.288,
+                0.18,
+                1.44
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill33_Camera",
+              "Avatar_Acheron_00_Skill33_Phase01",
+              "Avatar_Acheron_00_Skill33_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Stygian Resurge": {
+          "variant1": {
+            "skillID": 130817,
+            "trigger": "Skill34",
+            "name": "Stygian Resurge",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG to all enemies and removes all Crimson Knots.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.72
+              ],
+              "2": [
+                0.768
+              ],
+              "3": [
+                0.816
+              ],
+              "4": [
+                0.864
+              ],
+              "5": [
+                0.912
+              ],
+              "6": [
+                0.96
+              ],
+              "7": [
+                1.02
+              ],
+              "8": [
+                1.08
+              ],
+              "9": [
+                1.14
+              ],
+              "10": [
+                1.2
+              ],
+              "11": [
+                1.248
+              ],
+              "12": [
+                1.296
+              ],
+              "13": [
+                1.344
+              ],
+              "14": [
+                1.392
+              ],
+              "15": [
+                1.44
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_Skill34_Camera",
+              "Avatar_Acheron_00_Skill34_Phase01",
+              "Avatar_Acheron_00_Skill34_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Atop Rainleaf Hangs Oneness": {
+          "variant1": {
+            "skillID": 130804,
+            "trigger": "SkillP01",
+            "name": "Atop Rainleaf Hangs Oneness",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When Slashed Dream reaches #1[i] point(s), the Ultimate can be activated. During the Ultimate, reduces enemies' Toughness regardless of Weakness Types and reduces all enemies' All-Type RES by #2[i]%, lasting until the end of the Ultimate.\\nWhen any unit inflicts debuffs on an enemy target while using their ability, Acheron gains 1 point of Slashed Dream and inflicts 1 stack of Crimson Knot on a target. If debuffs are inflicted on multiple targets, then the 1 stack of Crimson Knot will be inflicted on the enemy target with the most Crimson Knot stacks. This effect can only trigger once for every ability use.\\nAfter an enemy target exits the field or gets defeated by any unit while Acheron is on the field, their Crimson Knot stacks will be transferred to the enemy target with the most Crimson Knot stacks on the whole field.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                9,
+                0.1
+              ],
+              "2": [
+                9,
+                0.11
+              ],
+              "3": [
+                9,
+                0.12
+              ],
+              "4": [
+                9,
+                0.13
+              ],
+              "5": [
+                9,
+                0.14
+              ],
+              "6": [
+                9,
+                0.15
+              ],
+              "7": [
+                9,
+                0.1625
+              ],
+              "8": [
+                9,
+                0.175
+              ],
+              "9": [
+                9,
+                0.1875
+              ],
+              "10": [
+                9,
+                0.2
+              ],
+              "11": [
+                9,
+                0.21
+              ],
+              "12": [
+                9,
+                0.22
+              ],
+              "13": [
+                9,
+                0.23
+              ],
+              "14": [
+                9,
+                0.24
+              ],
+              "15": [
+                9,
+                0.25
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Acheron_00_PassiveSkill_1"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Quadrivalent Ascendance": {
+          "variant1": {
+            "skillID": 130807,
+            "trigger": "SkillMaze",
+            "name": "Quadrivalent Ascendance",
+            "slot": "Technique",
+            "desc": "Immediately attacks the enemy. At the start of each wave, gains Quadrivalent Ascendance, dealing Lightning DMG equal to #1[i]% of Acheron's ATK to all enemies and reducing Toughness of all enemies irrespective of Weakness Types. When breaking Weaknesses, triggers the Lightning Weakness Break effect.\\nQuadrivalent Ascendance: After using the Ultimate, Acheron gains #2[i] point(s) of Slashed Dream and inflicts #2[i] stack(s) of Crimson Knot on a single random enemy.\\nIf attacking a normal enemy, immediately defeats them without entering combat. When not hitting enemies, no Technique Points are consumed.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                1
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Acheron_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1308_basic_atk.png",
+        "skillRef": {
+          "skillName": "Trilateral Wiltcross",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1308_skill.png",
+        "skillRef": {
+          "skillName": "Octobolt Flash",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1308_ultimate.png",
+        "skillRef": {
+          "skillName": "Slashed Dream Cries in Red",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1308_talent.png",
+        "skillRef": {
+          "skillName": "Atop Rainleaf Hangs Oneness",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1308_technique.png",
+        "skillRef": {
+          "skillName": "Quadrivalent Ascendance",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Red Oni",
+        "icon": "icon/skill/1308_skilltree1.png",
+        "desc": "When battle starts, immediately gains #1[i] point(s) of Slashed Dream and applies #1[i] stack(s) of Crimson Knot to a random enemy. When Slashed Dream reaches its upper limit, for every point of Slashed Dream that exceeds the limit, gains 1 stack of Quadrivalent Ascendance. Enables Quadrivalent Ascendance to stack up to #2[i] time(s).",
+        "params": [
+          5,
+          3
+        ]
+      },
+      "Point07": {
+        "name": "The Abyss",
+        "icon": "icon/skill/1308_skilltree2.png",
+        "desc": "When there are 1 or 2 Nihility characters other than Acheron in the team, the DMG dealt by Acheron's Basic ATK, Skill, and Ultimate increases to #1[i]% or #2[i]% of the original DMG respectively.",
+        "params": [
+          1.15,
+          1.6
+        ]
+      },
+      "Point08": {
+        "name": "Thunder Core",
+        "icon": "icon/skill/1308_skilltree3.png",
+        "desc": "When the Ultimate's Rainblade hits enemy targets that have Crimson Knot, the DMG dealt by Acheron increases by #1[i]%, stacking up to #2[i] time(s) and lasting for #3[i] turn(s). And when Stygian Resurge triggers, additionally deals DMG for #4[i] times. Each time deals Lightning DMG equal to #5[i]% of Acheron's ATK to a single random enemy and is considered as Ultimate DMG.",
+        "params": [
+          0.3,
+          3,
+          3,
+          6,
+          0.25
+        ]
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.032
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.048
+        }
+      },
+      "Point17": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1308.png",
+    "preview": "image/character_preview/1308.png",
+    "portrait": "image/character_portrait/1308.png",
+    "bannerOffsets": [
+      9,
+      -24,
+      0.56,
+      9,
+      -24,
+      0.56,
+      9,
+      -24,
+      0.56
+    ],
+    "isBuffed": false
+  },
   "Robin": {
     "internalID": 1309,
     "name": "Robin",
