@@ -50759,6 +50759,1375 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Phainon": {
+    "internalID": 1408,
+    "name": "Phainon",
+    "path": "Destruction",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 12,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 703.395,
+      "HPBase": 1435.8960000000002,
+      "SPDBase": 94,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "140801",
+        "name": "Fire and Light Bind Virtue and Vice",
+        "rank": 1,
+        "desc": "The base SPD inheritance ratio for Khaslana's extra turn increases to 66%. For every enemy target defeated in one battle, additionally increases this ratio by 1.5%, up to a max of 84%.\nWhen using Ultimate, increases CRIT DMG by 50%, lasting for 3 turn(s).",
+        "icon": "icon/skill/1408_rank1.png",
+        "paramsEido": [
+          0.015,
+          0.5,
+          3,
+          0.84,
+          0.66
+        ],
+        "extraEffects": {
+          "Khaslana's Extra Turn": {
+            "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+          }
+        }
+      },
+      {
+        "id": "140802",
+        "name": "Sky and Earth Churn Mortal Froth",
+        "rank": 2,
+        "desc": "Khaslana's Physical RES PEN increases by 20%. When one use of \"Foundation: Stardeath Verdict\" consumes 4 \"Scourge\" point(s), gains 1 extra turn.",
+        "icon": "icon/skill/1408_rank2.png",
+        "paramsEido": [
+          4,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Scourge": {
+            "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        }
+      },
+      {
+        "id": "140803",
+        "name": "Depths of Quiet, Entombed in Ruin",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1408_ultimate.png"
+      },
+      {
+        "id": "140804",
+        "name": "Faces of Titans, Blurred by Time",
+        "rank": 4,
+        "desc": "When using \"Calamity: Soulscorch Edict,\" additionally gains 4 stack(s) of \"Soulscorch.\"",
+        "icon": "icon/skill/1408_rank4.png",
+        "paramsEido": [
+          4
+        ]
+      },
+      {
+        "id": "140805",
+        "name": "The Wheel Spins Forevermore",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1408_skill.png"
+      },
+      {
+        "id": "140806",
+        "name": "Embers of Old Rise Still",
+        "rank": 6,
+        "desc": "The number of overflow points allowed for \"Coreflame\" no longer has an upper limit. When the battle starts, gains 6 point(s) of \"Coreflame.\"\nAfter using the attack from \"Foundation: Stardeath Verdict,\" additionally deals True DMG equal to 36% of the total DMG dealt in this attack to the enemy target with the highest HP.",
+        "icon": "icon/skill/1408_rank6.png",
+        "paramsEido": [
+          0.36,
+          6
+        ],
+        "extraEffects": {
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Stride to Deliverance": {
+          "variant1": {
+            "skillID": 140801,
+            "trigger": "Skill01",
+            "name": "Stride to Deliverance",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Phainon's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill01_Phase01",
+              "Avatar_Phainon_00_Skill01_Phase02",
+              "Avatar_Phainon_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Creation: Bloodthorn Ferry": {
+          "variant1": {
+            "skillID": 140808,
+            "trigger": "Skill11",
+            "name": "Creation: Bloodthorn Ferry",
+            "type": "Blast",
+            "slot": "Basic ATK",
+            "desc": "Gains #3[i] point(s) of \"Scourge\", dealing Physical DMG equal to #1[i]% of Khaslana's ATK to one designated enemy and Physical DMG equal to #2[i]% of Khaslana's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.25,
+                0.375,
+                2
+              ],
+              "2": [
+                1.5,
+                0.45,
+                2
+              ],
+              "3": [
+                1.75,
+                0.525,
+                2
+              ],
+              "4": [
+                2,
+                0.6,
+                2
+              ],
+              "5": [
+                2.25,
+                0.675,
+                2
+              ],
+              "6": [
+                2.5,
+                0.75,
+                2
+              ],
+              "7": [
+                2.75,
+                0.825,
+                2
+              ],
+              "8": [
+                3,
+                0.9,
+                2
+              ],
+              "9": [
+                3.25,
+                0.975,
+                2
+              ],
+              "10": [
+                3.5,
+                1.05,
+                2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "Blast",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill11_EnterReady",
+              "Avatar_Phainon_00_Skill11_Phase01",
+              "Avatar_Phainon_00_Skill11_Phase02",
+              "Avatar_Phainon_00_Skill11_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              }
+            }
+          }
+        }
+      },
+      "Skill": {
+        "Let There Be Light": {
+          "variant1": {
+            "skillID": 140802,
+            "trigger": "Skill02",
+            "name": "Let There Be Light",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Gains #3[i] point(s) of \"Coreflame,\" dealing Physical DMG equal to #1[i]% of Phainon's ATK to one designated enemy and Physical DMG equal to #2[i]% of Phainon's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.5,
+                0.6,
+                2
+              ],
+              "2": [
+                1.65,
+                0.66,
+                2
+              ],
+              "3": [
+                1.8,
+                0.72,
+                2
+              ],
+              "4": [
+                1.95,
+                0.78,
+                2
+              ],
+              "5": [
+                2.1,
+                0.84,
+                2
+              ],
+              "6": [
+                2.25,
+                0.9,
+                2
+              ],
+              "7": [
+                2.4375,
+                0.975,
+                2
+              ],
+              "8": [
+                2.625,
+                1.05,
+                2
+              ],
+              "9": [
+                2.8125,
+                1.125,
+                2
+              ],
+              "10": [
+                3,
+                1.2,
+                2
+              ],
+              "11": [
+                3.15,
+                1.26,
+                2
+              ],
+              "12": [
+                3.3,
+                1.32,
+                2
+              ],
+              "13": [
+                3.45,
+                1.38,
+                2
+              ],
+              "14": [
+                3.6,
+                1.44,
+                2
+              ],
+              "15": [
+                3.75,
+                1.5,
+                2
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill02_Phase01",
+              "Avatar_Phainon_00_Skill02_Phase02",
+              "Avatar_Phainon_00_Skill02_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Calamity: Soulscorch Edict": {
+          "variant1": {
+            "skillID": 140809,
+            "trigger": "Skill21",
+            "name": "Calamity: Soulscorch Edict",
+            "type": "Enhance",
+            "slot": "Skill",
+            "desc": "Gains \"Scourge\" by an amount equal to the number of enemies and 1 stack of \"Soulscorch,\" then causes all enemies to immediately take action.\\nWhile in the \"Soulscorch\" state, Khaslana takes #2[i]% reduced DMG. After an enemy target attacks or takes action, gains 1 more stack of \"Soulscorch.\" After said enemy targets finish their actions, immediately launches Counter, deals Physical DMG to all enemies equal to #1[i]% of Khaslana's ATK, and additionally deals #3[i] instance(s) of DMG, with each instance being Physical DMG equal to #4[i]% of Khaslana's ATK dealt to one random enemy. Afterward, \"Soulscorch\" is dispelled. Each \"Soulscorch\" stack increases the DMG multiplier of said Counter by #5[i]% of its original multiplier value.\\nDMG dealt through this ability is considered as Skill DMG. If \"Soulscorch\" is still active at the start of Khaslana's extra turn, immediately launches Counter.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                0.75,
+                4,
+                0.15,
+                0.2
+              ],
+              "2": [
+                0.22,
+                0.75,
+                4,
+                0.165,
+                0.2
+              ],
+              "3": [
+                0.24,
+                0.75,
+                4,
+                0.18,
+                0.2
+              ],
+              "4": [
+                0.26,
+                0.75,
+                4,
+                0.195,
+                0.2
+              ],
+              "5": [
+                0.28,
+                0.75,
+                4,
+                0.21,
+                0.2
+              ],
+              "6": [
+                0.3,
+                0.75,
+                4,
+                0.225,
+                0.2
+              ],
+              "7": [
+                0.325,
+                0.75,
+                4,
+                0.24375,
+                0.2
+              ],
+              "8": [
+                0.35,
+                0.75,
+                4,
+                0.2625,
+                0.2
+              ],
+              "9": [
+                0.375,
+                0.75,
+                4,
+                0.28125,
+                0.2
+              ],
+              "10": [
+                0.4,
+                0.75,
+                4,
+                0.3,
+                0.2
+              ],
+              "11": [
+                0.42,
+                0.75,
+                4,
+                0.315,
+                0.2
+              ],
+              "12": [
+                0.44,
+                0.75,
+                4,
+                0.33,
+                0.2
+              ],
+              "13": [
+                0.46,
+                0.75,
+                4,
+                0.345,
+                0.2
+              ],
+              "14": [
+                0.48,
+                0.75,
+                4,
+                0.36,
+                0.2
+              ],
+              "15": [
+                0.5,
+                0.75,
+                4,
+                0.375,
+                0.2
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill21_Phase01",
+              "Avatar_Phainon_00_Skill21_Phase02",
+              "Avatar_Phainon_00_Skill21_Camera",
+              "Avatar_Phainon_00_Skill21_Insert_Phase01",
+              "Avatar_Phainon_00_Skill21_Insert_Phase02",
+              "Avatar_Phainon_00_Skill21_Insert_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              },
+              "Counter": {
+                "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
+              },
+              "Khaslana's Extra Turn": {
+                "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+              }
+            }
+          }
+        },
+        "Foundation: Stardeath Verdict": {
+          "variant1": {
+            "skillID": 140811,
+            "trigger": "Skill22",
+            "name": "Foundation: Stardeath Verdict",
+            "type": "Bounce",
+            "slot": "Skill",
+            "desc": "Dispels all debuffs on this unit, then deals Physical DMG equal to a max of #5[i]% of Khaslana's ATK.\\nFor every 1 point of \"Scourge\" consumed, deals #3[i] instance(s) of DMG, with each instance being Physical DMG equal to #2[f1]% of Khaslana's ATK dealt to one random enemy. When consuming #4[i] point(s) of \"Scourge\", additionally deals Physical DMG equal to #1[i]% of Khaslana's ATK, which is evenly distributed across all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.25,
+                0.225,
+                4,
+                4,
+                5.85
+              ],
+              "2": [
+                2.475,
+                0.2475,
+                4,
+                4,
+                6.435
+              ],
+              "3": [
+                2.7,
+                0.27,
+                4,
+                4,
+                7.02
+              ],
+              "4": [
+                2.925,
+                0.2925,
+                4,
+                4,
+                7.605
+              ],
+              "5": [
+                3.15,
+                0.315,
+                4,
+                4,
+                8.19
+              ],
+              "6": [
+                3.375,
+                0.3375,
+                4,
+                4,
+                8.775
+              ],
+              "7": [
+                3.65625,
+                0.365625,
+                4,
+                4,
+                9.50625
+              ],
+              "8": [
+                3.9375,
+                0.39375,
+                4,
+                4,
+                10.2375
+              ],
+              "9": [
+                4.21875,
+                0.421875,
+                4,
+                4,
+                10.96875
+              ],
+              "10": [
+                4.5,
+                0.45,
+                4,
+                4,
+                11.7
+              ],
+              "11": [
+                4.725,
+                0.4725,
+                4,
+                4,
+                12.285
+              ],
+              "12": [
+                4.95,
+                0.495,
+                4,
+                4,
+                12.87
+              ],
+              "13": [
+                5.175,
+                0.5175,
+                4,
+                4,
+                13.455
+              ],
+              "14": [
+                5.4,
+                0.54,
+                4,
+                4,
+                14.04
+              ],
+              "15": [
+                5.625,
+                0.5625,
+                4,
+                4,
+                14.625
+              ]
+            },
+            "element": "Physical",
+            "attackType": "BPSkill",
+            "skillEffect": "Bounce",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill22_Entry",
+              "Avatar_Phainon_00_Skill22_Phase01",
+              "Avatar_Phainon_00_Skill22_v2_Phase01",
+              "Avatar_Phainon_00_Skill22_Phase02",
+              "Avatar_Phainon_00_Skill22_v2_Phase02",
+              "Avatar_Phainon_00_Skill22_Camera",
+              "Avatar_Phainon_00_Skill22_v2_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 10
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              },
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "He Who Bears the World Must Burn": {
+          "variant1": {
+            "skillID": 140803,
+            "trigger": "Skill03",
+            "name": "He Who Bears the World Must Burn",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Transforms into Khaslana. During the transformation, deploys the Territory \"Ruinous Irontomb.\" Within the Territory, other teammates depart and cannot take action, and all enemies have Physical Weaknesses.\\nKhaslana does not enter his own turn, but has #4[i] Khaslana's extra turn(s), with a SPD set at #3[i]% of Khaslana's base SPD. When the last of Khaslana's extra turns starts, immediately launches a final hit and deals Physical Ultimate DMG equal to #1[i]% of Khaslana's ATK that is distributed evenly across all enemies.",
+            "energyCost": 12,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                4.8,
+                12,
+                0.6,
+                8
+              ],
+              "2": [
+                5.28,
+                12,
+                0.6,
+                8
+              ],
+              "3": [
+                5.76,
+                12,
+                0.6,
+                8
+              ],
+              "4": [
+                6.24,
+                12,
+                0.6,
+                8
+              ],
+              "5": [
+                6.72,
+                12,
+                0.6,
+                8
+              ],
+              "6": [
+                7.2,
+                12,
+                0.6,
+                8
+              ],
+              "7": [
+                7.8,
+                12,
+                0.6,
+                8
+              ],
+              "8": [
+                8.4,
+                12,
+                0.6,
+                8
+              ],
+              "9": [
+                9,
+                12,
+                0.6,
+                8
+              ],
+              "10": [
+                9.6,
+                12,
+                0.6,
+                8
+              ],
+              "11": [
+                10.08,
+                12,
+                0.6,
+                8
+              ],
+              "12": [
+                10.56,
+                12,
+                0.6,
+                8
+              ],
+              "13": [
+                11.04,
+                12,
+                0.6,
+                8
+              ],
+              "14": [
+                11.52,
+                12,
+                0.6,
+                8
+              ],
+              "15": [
+                12,
+                12,
+                0.6,
+                8
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_Skill03_EnterReady",
+              "Avatar_Phainon_00_Skill03_Phase01",
+              "Avatar_Phainon_00_Skill03_Phase02",
+              "Avatar_Phainon_00_Skill03_Camera",
+              "Avatar_Phainon_00_Skill31_Camera",
+              "Avatar_Phainon_00_Skill31_SelectTarget",
+              "Avatar_Phainon_00_Skill31_SelectTarget_OnLimbo",
+              "Avatar_Phainon_00_Skill31_Phase1",
+              "Avatar_Phainon_00_Skill31_Phase2"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Territory": {
+                "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used."
+              },
+              "Departed": {
+                "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order."
+              },
+              "Khaslana's Extra Turn": {
+                "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Pyric Corpus": {
+          "variant1": {
+            "skillID": 140804,
+            "trigger": "SkillP01",
+            "name": "Pyric Corpus",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Phainon's Talent. When \"Coreflame\" reaches #4[i] point(s), can activate Ultimate. Even after reaching the limit, can still hold up to #3[i] overflow point(s). When the transformation ends, gains \"Coreflame\" based on the number of overflow points.\\nWhen Phainon is targeted by an ability from any other target, gains 1 \"Coreflame\" point. And if the ability is cast by one of Phainon's teammates, can also increase Phainon's CRIT DMG by #1[i]% for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                3,
+                3,
+                12
+              ],
+              "2": [
+                0.165,
+                3,
+                3,
+                12
+              ],
+              "3": [
+                0.18,
+                3,
+                3,
+                12
+              ],
+              "4": [
+                0.195,
+                3,
+                3,
+                12
+              ],
+              "5": [
+                0.21,
+                3,
+                3,
+                12
+              ],
+              "6": [
+                0.225,
+                3,
+                3,
+                12
+              ],
+              "7": [
+                0.24375,
+                3,
+                3,
+                12
+              ],
+              "8": [
+                0.2625,
+                3,
+                3,
+                12
+              ],
+              "9": [
+                0.28125,
+                3,
+                3,
+                12
+              ],
+              "10": [
+                0.3,
+                3,
+                3,
+                12
+              ],
+              "11": [
+                0.315,
+                3,
+                3,
+                12
+              ],
+              "12": [
+                0.33,
+                3,
+                3,
+                12
+              ],
+              "13": [
+                0.345,
+                3,
+                3,
+                12
+              ],
+              "14": [
+                0.36,
+                3,
+                3,
+                12
+              ],
+              "15": [
+                0.375,
+                3,
+                3,
+                12
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Fate: Divine Vessel": {
+          "variant1": {
+            "skillID": 140805,
+            "trigger": "SkillP02",
+            "name": "Fate: Divine Vessel",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Khaslana's Talent. Upon transformation, gains #1[i] point(s) of \"Scourge\". If this happens during an ally target's turn, then the duration of all buffs on that target is extended by 1 turn and the current turn ends.\\nKhaslana is immune to Crowd Control debuffs, has 1 Enhanced Basic ATK and 2 Enhanced Skills, but cannot use Ultimate. During the transformation, increases ATK by #4[i]% and Max HP by #5[i]%. After using an attack, restores HP equal to #7[i]% of his Max HP. When Khaslana takes a killing blow, he will not get knocked down. Instead, he will restore HP equal to #2[i]% of Max HP and immediately launch a final hit. For every 1 remaining Khaslana's extra turn, the final hit's DMG multiplier decreases by #3[f1]% of its original multiplier value.\\nWhen the transformation ends, increases all allies' SPD by #6[i]% for 1 turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                4,
+                0.25,
+                0.125,
+                0.4,
+                1.35,
+                0.15,
+                0.2
+              ],
+              "2": [
+                4,
+                0.25,
+                0.125,
+                0.44,
+                1.485,
+                0.15,
+                0.2
+              ],
+              "3": [
+                4,
+                0.25,
+                0.125,
+                0.48,
+                1.62,
+                0.15,
+                0.2
+              ],
+              "4": [
+                4,
+                0.25,
+                0.125,
+                0.52,
+                1.755,
+                0.15,
+                0.2
+              ],
+              "5": [
+                4,
+                0.25,
+                0.125,
+                0.56,
+                1.89,
+                0.15,
+                0.2
+              ],
+              "6": [
+                4,
+                0.25,
+                0.125,
+                0.6,
+                2.025,
+                0.15,
+                0.2
+              ],
+              "7": [
+                4,
+                0.25,
+                0.125,
+                0.65,
+                2.19375,
+                0.15,
+                0.2
+              ],
+              "8": [
+                4,
+                0.25,
+                0.125,
+                0.7,
+                2.3625,
+                0.15,
+                0.2
+              ],
+              "9": [
+                4,
+                0.25,
+                0.125,
+                0.75,
+                2.53125,
+                0.15,
+                0.2
+              ],
+              "10": [
+                4,
+                0.25,
+                0.125,
+                0.8,
+                2.7,
+                0.15,
+                0.2
+              ],
+              "11": [
+                4,
+                0.25,
+                0.125,
+                0.84,
+                2.835,
+                0.15,
+                0.2
+              ],
+              "12": [
+                4,
+                0.25,
+                0.125,
+                0.88,
+                2.97,
+                0.15,
+                0.2
+              ],
+              "13": [
+                4,
+                0.25,
+                0.125,
+                0.92,
+                3.105,
+                0.15,
+                0.2
+              ],
+              "14": [
+                4,
+                0.25,
+                0.125,
+                0.96,
+                3.24,
+                0.15,
+                0.2
+              ],
+              "15": [
+                4,
+                0.25,
+                0.125,
+                1,
+                3.375,
+                0.15,
+                0.2
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Phainon_00_PassiveSkill02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              },
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              },
+              "Khaslana's Extra Turn": {
+                "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Beginning of the End": {
+          "variant1": {
+            "skillID": 140807,
+            "trigger": "SkillMaze",
+            "name": "Beginning of the End",
+            "slot": "Technique",
+            "desc": "While Phainon is in the team, increases Max Technique Points by 3.\\nWhen actively using this Technique, consumes 2 Technique Points and immediately attacks all enemies within a certain range. After entering combat, regenerates #3[i] Energy for allies and gains #2[i] \"Scourge\" and #4[i] Skill Point(s). Deals Physical DMG equal to #1[i]% of Phainon's ATK to all enemies at the start of each wave.\\nIf attacking a normal enemy, immediately defeats them without entering combat. No Technique Points are consumed if no enemies are hit.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                2,
+                25,
+                1
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Phainon_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1408_basic_atk.png",
+        "skillRef": {
+          "skillName": "Stride to Deliverance",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1408_skill.png",
+        "skillRef": {
+          "skillName": "Let There Be Light",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1408_ultimate.png",
+        "skillRef": {
+          "skillName": "He Who Bears the World Must Burn",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1408_talent.png",
+        "skillRef": {
+          "skillName": "Pyric Corpus",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1408_technique.png",
+        "skillRef": {
+          "skillName": "Beginning of the End",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "March to Oblivion",
+        "icon": "icon/skill/1408_skilltree1.png",
+        "desc": "When the battle starts, gains #2[i] point(s) of \"Coreflame.\" When the transformation ends, gains #1[i] point(s) of \"Coreflame.\"",
+        "params": [
+          3,
+          1
+        ]
+      },
+      "Point07": {
+        "name": "Bide in Flames",
+        "icon": "icon/skill/1408_skilltree2.png",
+        "desc": "When receiving healing or a Shield from a teammate, deals #1[i]% increased DMG for #2[i] turn(s). This effect cannot trigger repeatedly within one turn.\nWhen receiving an Energy Regeneration effect from a teammate's ability, gains #3[i] point(s) of \"Coreflame.\"",
+        "params": [
+          0.45,
+          4,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Shine with Valor",
+        "icon": "icon/skill/1408_skilltree3.png",
+        "desc": "When entering combat or ending transformation, increases ATK by #1[i]%. This effect can stack up to #2[i] time(s).",
+        "params": [
+          0.5,
+          2
+        ]
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1408.png",
+    "preview": "image/character_preview/1408.png",
+    "portrait": "image/character_portrait/1408.png",
+    "bannerOffsets": [
+      140,
+      -13,
+      0.64,
+      140,
+      -13,
+      0.64,
+      140,
+      -13,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Hyacine": {
     "internalID": 1409,
     "name": "Hyacine",

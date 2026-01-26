@@ -260,6 +260,10 @@ let allowedCharacterList = [
     "trimName": "Cipher"
   },
   {
+    "fullName": "Phainon",
+    "trimName": "Phainon"
+  },
+  {
     "fullName": "Hyacine",
     "trimName": "Hyacine"
   },
