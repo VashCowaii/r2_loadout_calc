@@ -440,19 +440,24 @@
     height: 100%;
     /* color: transparent; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.219);
+    background-color: rgba(0, 0, 0, 0.514);
     position: absolute;
     z-index: 5;
     display: none;
     flex-direction: column;
     overflow: hidden;
+    /* z-index: 0; */
+    padding-top: 20px;
 
 }
 .enemyWaveEnemyDisplayBox:hover .enemyWaveEnemyDisplayBoxIDLinker, .enemyWaveEnemyDisplayBoxWideEnemy:hover .enemyWaveEnemyDisplayBoxIDLinker {
     display: flex;
+}
+.enemyWaveEnemyDisplayBox:hover {
+    opacity: 1;
 }
 .characterDisplayElementWeaknessIcon {
     width: 20px;
