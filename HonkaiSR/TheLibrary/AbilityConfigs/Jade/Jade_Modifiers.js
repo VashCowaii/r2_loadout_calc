@@ -393,7 +393,7 @@ const configAbility = {
                 },
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Every stack increases CRIT DMG by #1[f1]% and ATK by #2[f1]%."
+                  "popUpText": "Every stack increases CRIT DMG by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>."
                 }
               ]
             }

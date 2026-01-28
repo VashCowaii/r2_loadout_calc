@@ -256,12 +256,24 @@ let allowedCharacterList = [
     "trimName": "Tribbie"
   },
   {
+    "fullName": "Mydei",
+    "trimName": "Mydei"
+  },
+  {
     "fullName": "Anaxa",
     "trimName": "Anaxa"
   },
   {
     "fullName": "Cipher",
     "trimName": "Cipher"
+  },
+  {
+    "fullName": "Castorice",
+    "trimName": "Castorice"
+  },
+  {
+    "fullName": "Netherwing: Pollux",
+    "trimName": "NetherwingPollux"
   },
   {
     "fullName": "Phainon",
@@ -282,6 +294,26 @@ let allowedCharacterList = [
   {
     "fullName": "Cerydra",
     "trimName": "Cerydra"
+  },
+  {
+    "fullName": "Evernight",
+    "trimName": "Evernight"
+  },
+  {
+    "fullName": "Evey",
+    "trimName": "Evey"
+  },
+  {
+    "fullName": "Dan Heng • Permansor Terrae",
+    "trimName": "DanHengPT"
+  },
+  {
+    "fullName": "Cyrene",
+    "trimName": "Cyrene"
+  },
+  {
+    "fullName": "Demiurge",
+    "trimName": "Demiurge"
   },
   {
     "fullName": "Trailblazer - Destruction",

@@ -2224,7 +2224,7 @@ const configAbility = {
                 },
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Enemy targets within the Zone have their ATK decreased by #5[f1]%, DEF decreased by #3[f1]%, and All-Type RES decreased by #4[i]%. For every 1 instance of DoT they receive, they will take Physical DoT equal to #1[i]% of Hysilens's ATK. This damage triggers at the start of each turn or after one attack by an ally target, up to #2[i] time(s). And it cannot repeatedly trigger this effect."
+                  "popUpText": "Enemy targets within the Zone have their ATK decreased by <span class=\"descriptionNumberColor\">MDF_AttackDownRatio</span>, DEF decreased by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>, and All-Type RES decreased by <span class=\"descriptionNumberColor\">MDF_ResistanceDownRatio</span>. For every 1 instance of DoT they receive, they will take Physical DoT equal to <span class=\"descriptionNumberColor\">MDF_DOTDamagePercentage</span> of Hysilens's ATK. This damage triggers at the start of each turn or after one attack by an ally target, up to <span class=\"descriptionNumberColor\">MDF_TriggerDOTMaxCount</span> time(s). And it cannot repeatedly trigger this effect."
                 }
               ]
             }

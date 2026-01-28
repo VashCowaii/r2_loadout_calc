@@ -241,7 +241,7 @@ const configAbility = {
                 },
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Each stack increases ATK by #1[f1]% and DEF by #2[f1]%, up to 5 stacks."
+                  "popUpText": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackAddedRatio</span> and DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio</span>, up to 5 stacks."
                 }
               ],
               "failed": [

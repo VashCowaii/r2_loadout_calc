@@ -1714,7 +1714,7 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Increases Max HP by #1[i] and Effect RES by #2[i]%, and greatly increases the chance of being attacked by enemies."
+                      "popUpText": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and Effect RES by <span class=\"descriptionNumberColor\">MDF_AddStatusResistance</span>, and greatly increases the chance of being attacked by enemies."
                     }
                   ]
                 },
@@ -1814,7 +1814,7 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Increases Max HP by #1[i] and greatly increases the chance of being attacked by enemies."
+                      "popUpText": "Increases Max HP by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and greatly increases the chance of being attacked by enemies."
                     }
                   ]
                 },

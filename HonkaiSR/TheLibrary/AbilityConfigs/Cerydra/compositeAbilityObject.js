@@ -3268,7 +3268,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "When dealing DMG, ignores #1[i]% of enemy targets' DEF. When dealing Skill DMG, additionally ignores #2[i]% of targets' DEF."
+                      "popUpText": "When dealing DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of enemy targets' DEF. When dealing Skill DMG, additionally ignores <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> of targets' DEF."
                     }
                   ]
                 }

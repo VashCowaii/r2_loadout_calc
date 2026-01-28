@@ -37,6 +37,395 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "Demiurge",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Character ID",
+                "ID": 1415,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}.[[getSummoner]]"
+                },
+                "characterName": "Cyrene"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Cyrene",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Character ID",
+                "ID": 1415,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": "Cyrene"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Demiurge's Player Team Mirror",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Search",
+              "entityType": "Avatar",
+              "teamType": "Player Team",
+              "livingState": "Mask_AliveOnly"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Target is Unselectable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "invertCondition": true
+              }
+            },
+            {
+              "name": "Filter by Target",
+              "exclude": {
+                "name": "Target Name",
+                "target": "{{Caster's Summoner}}"
+              }
+            },
+            {
+              "name": "Sort by Physical Positioning",
+              "byHighest": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Cyrene's All Player Characters",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Search",
+          "entityType": "Avatar",
+          "teamType": "Player Team",
+          "livingState": "Mask_AliveOnly"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "DHPT Player Team Living",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Player Team All}}"
+            },
+            {
+              "name": "Filter by Life-State",
+              "state": "Mask_AliveOnly"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "DHPT",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{All Team Members with Unselectables}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "DanHengPT_PassiveModifier"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Souldragon",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Battle Event List}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "DanHengPT_BEModifier"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Bondmate",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{All Team Members with Unselectables}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Evernight's Passive Group",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Evernight's Group}}"
+            },
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "Evernight_Passive"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Evernight's Passive Group v2",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Evernight's Group v2}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Evernight's Group v2",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{Caster's Memosprite}}"
+            },
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "identifier": "Evernight_PTN01"
+            },
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "identifier": "Evernight_PTN02"
+            },
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "identifier": "Evernight_PTN03"
+            },
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster's Memosprite}}"
+              },
+              "identifier": "Evernight_PTN04"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Evernight's Group",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Memosprites}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "Memosprite_EvernightServant_PartnerControl"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "identifier": "Evernight_PTN01"
+            },
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "identifier": "Evernight_PTN02"
+            },
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "identifier": "Evernight_PTN03"
+            },
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "identifier": "Evernight_PTN04"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "Evey",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{All Memosprites}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "Memosprite_EvernightServant_PartnerControl"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Cerydra Self-Target",
       "isTargetOperator": false,
       "execute": [

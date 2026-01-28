@@ -1445,7 +1445,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Increases CRIT Rate by #1[f1]% and CRIT DMG by #2[i]%."
+                      "popUpText": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CritChance</span> and CRIT DMG by <span class=\"descriptionNumberColor\">MDF_CritDamage</span>."
                     },
                     {
                       "name": "Define Custom Variable",

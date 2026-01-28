@@ -49988,6 +49988,1007 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Mydei": {
+    "internalID": 1404,
+    "name": "Mydei",
+    "path": "Destruction",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 160,
+    "baseStats": {
+      "ATKBase": 426.88800000000003,
+      "DEFBase": 194.04000000000002,
+      "HPBase": 1552.3200000000002,
+      "SPDBase": 95,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "140401",
+        "name": "Frost Hones Spine of Steel",
+        "rank": 1,
+        "desc": "Increases the DMG multiplier dealt by \"Godslayer Be God\" to the primary target by 30%. This ability now deals to all enemies Imaginary DMG equal to the DMG multiplier dealt to the primary target.",
+        "icon": "icon/skill/1404_rank1.png",
+        "paramsEido": [
+          0.3
+        ]
+      },
+      {
+        "id": "140402",
+        "name": "Strife Beholds Cry of Dead",
+        "rank": 2,
+        "desc": "During \"Vendetta,\" the DMG dealt by Mydei ignores 15% of enemy targets' DEF. After he receives healing, converts 40% of the healed amount to Charge. The tally of the converted Charge cannot exceed 40 point(s). Resets this tally of Charge after any unit takes action.",
+        "icon": "icon/skill/1404_rank2.png",
+        "paramsEido": [
+          0.15,
+          0.4,
+          40
+        ]
+      },
+      {
+        "id": "140403",
+        "name": "Honor Exalts Feast of Faith",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1404_skill.png"
+      },
+      {
+        "id": "140404",
+        "name": "Siren Jolts the Laconic Lion",
+        "rank": 4,
+        "desc": "While in \"Vendetta,\" increases CRIT DMG by 30% and restores HP by 10% of this unit's Max HP after receiving attacks from enemy targets.",
+        "icon": "icon/skill/1404_rank4.png",
+        "paramsEido": [
+          0.1,
+          0.3
+        ]
+      },
+      {
+        "id": "140405",
+        "name": "War Chisels Flesh of Flame",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1404_ultimate.png"
+      },
+      {
+        "id": "140406",
+        "name": "Legacy Scales Mound of Blood",
+        "rank": 6,
+        "desc": "When entering battle, immediately enters the \"Vendetta\" state, and lowers the Charge required for \"Godslayer Be God\" to 100 point(s).",
+        "icon": "icon/skill/1404_rank6.png",
+        "paramsEido": [
+          100
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Vow of Voyage": {
+          "variant1": {
+            "skillID": 140401,
+            "trigger": "Skill01",
+            "name": "Vow of Voyage",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill01_Camera",
+              "Avatar_Mydeimos_00_Skill01_Phase01",
+              "Avatar_Mydeimos_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Deaths are Legion, Regrets are None": {
+          "variant1": {
+            "skillID": 140402,
+            "trigger": "Skill02",
+            "name": "Deaths are Legion, Regrets are None",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Consumes HP by an amount equal to #3[i]% of Mydei's current HP. Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one designated enemy and Imaginary DMG equal to #2[i]% of Mydei's Max HP to adjacent targets.\\nIf the current HP is not sufficient, using Skill reduces Mydei's current HP to 1.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.45,
+                0.25,
+                0.5
+              ],
+              "2": [
+                0.495,
+                0.275,
+                0.5
+              ],
+              "3": [
+                0.54,
+                0.3,
+                0.5
+              ],
+              "4": [
+                0.585,
+                0.325,
+                0.5
+              ],
+              "5": [
+                0.63,
+                0.35,
+                0.5
+              ],
+              "6": [
+                0.675,
+                0.375,
+                0.5
+              ],
+              "7": [
+                0.73125,
+                0.40625,
+                0.5
+              ],
+              "8": [
+                0.7875,
+                0.4375,
+                0.5
+              ],
+              "9": [
+                0.84375,
+                0.46875,
+                0.5
+              ],
+              "10": [
+                0.9,
+                0.5,
+                0.5
+              ],
+              "11": [
+                0.945,
+                0.525,
+                0.5
+              ],
+              "12": [
+                0.99,
+                0.55,
+                0.5
+              ],
+              "13": [
+                1.035,
+                0.575,
+                0.5
+              ],
+              "14": [
+                1.08,
+                0.6,
+                0.5
+              ],
+              "15": [
+                1.125,
+                0.625,
+                0.5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill02_Camera",
+              "Avatar_Mydeimos_00_Skill02_Phase01",
+              "Avatar_Mydeimos_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Kingslayer Be King": {
+          "variant1": {
+            "skillID": 140409,
+            "trigger": "Skill21",
+            "name": "Kingslayer Be King",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Consumes HP by an amount equal to #3[i]% of Mydei's current HP. Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one enemy and Imaginary DMG equal to #2[i]% of Mydei's Max HP to adjacent targets.\\nIf the current HP is not sufficient, using Skill reduces Mydei's current HP to 1.\\nThis ability will be automatically used.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.55,
+                0.33,
+                0.35
+              ],
+              "2": [
+                0.605,
+                0.363,
+                0.35
+              ],
+              "3": [
+                0.66,
+                0.396,
+                0.35
+              ],
+              "4": [
+                0.715,
+                0.429,
+                0.35
+              ],
+              "5": [
+                0.77,
+                0.462,
+                0.35
+              ],
+              "6": [
+                0.825,
+                0.495,
+                0.35
+              ],
+              "7": [
+                0.89375,
+                0.53625,
+                0.35
+              ],
+              "8": [
+                0.9625,
+                0.5775,
+                0.35
+              ],
+              "9": [
+                1.03125,
+                0.61875,
+                0.35
+              ],
+              "10": [
+                1.1,
+                0.66,
+                0.35
+              ],
+              "11": [
+                1.155,
+                0.693,
+                0.35
+              ],
+              "12": [
+                1.21,
+                0.726,
+                0.35
+              ],
+              "13": [
+                1.265,
+                0.759,
+                0.35
+              ],
+              "14": [
+                1.32,
+                0.792,
+                0.35
+              ],
+              "15": [
+                1.375,
+                0.825,
+                0.35
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill21_Camera",
+              "Avatar_Mydeimos_00_Skill21_Ability"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Godslayer Be God": {
+          "variant1": {
+            "skillID": 140411,
+            "trigger": "Skill22",
+            "name": "Godslayer Be God",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Consumes #3[i] point(s) of Charge. Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one enemy and Imaginary DMG equal to #2[i]% of Mydei's Max HP to adjacent targets.\\nThis ability will be automatically used. While this ability is in use, Charge cannot be accumulated.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.4,
+                0.84,
+                150
+              ],
+              "2": [
+                1.54,
+                0.924,
+                150
+              ],
+              "3": [
+                1.68,
+                1.008,
+                150
+              ],
+              "4": [
+                1.82,
+                1.092,
+                150
+              ],
+              "5": [
+                1.96,
+                1.176,
+                150
+              ],
+              "6": [
+                2.1,
+                1.26,
+                150
+              ],
+              "7": [
+                2.275,
+                1.365,
+                150
+              ],
+              "8": [
+                2.45,
+                1.47,
+                150
+              ],
+              "9": [
+                2.625,
+                1.575,
+                150
+              ],
+              "10": [
+                2.8,
+                1.68,
+                150
+              ],
+              "11": [
+                2.94,
+                1.764,
+                150
+              ],
+              "12": [
+                3.08,
+                1.848,
+                150
+              ],
+              "13": [
+                3.22,
+                1.932,
+                150
+              ],
+              "14": [
+                3.36,
+                2.016,
+                150
+              ],
+              "15": [
+                3.5,
+                2.1,
+                150
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill22_Ability",
+              "Avatar_Mydeimos_00_Skill22_Camera",
+              "Avatar_Mydeimos_00_Skill22_Camera02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Throne of Bones": {
+          "variant1": {
+            "skillID": 140403,
+            "trigger": "Skill03",
+            "name": "Throne of Bones",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Restores HP by #3[f1]% of Mydei's Max HP and accumulates #5[i] Talent's Charge point(s). Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one designated enemy, and deals Imaginary DMG equal to #2[i]% of Mydei's Max HP to adjacent targets. Additionally, Taunts the target and targets adjacent to it, lasting for #4[i] turn(s). The next use of \"Godslayer Be God\" prioritizes attacking one designated enemy, and this effect only works on the latest target.",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                0.6,
+                0.15,
+                2,
+                20
+              ],
+              "2": [
+                1.024,
+                0.64,
+                0.155,
+                2,
+                20
+              ],
+              "3": [
+                1.088,
+                0.68,
+                0.16,
+                2,
+                20
+              ],
+              "4": [
+                1.152,
+                0.72,
+                0.165,
+                2,
+                20
+              ],
+              "5": [
+                1.216,
+                0.76,
+                0.17,
+                2,
+                20
+              ],
+              "6": [
+                1.28,
+                0.8,
+                0.175,
+                2,
+                20
+              ],
+              "7": [
+                1.36,
+                0.85,
+                0.18125,
+                2,
+                20
+              ],
+              "8": [
+                1.44,
+                0.9,
+                0.1875,
+                2,
+                20
+              ],
+              "9": [
+                1.52,
+                0.95,
+                0.19375,
+                2,
+                20
+              ],
+              "10": [
+                1.6,
+                1,
+                0.2,
+                2,
+                20
+              ],
+              "11": [
+                1.664,
+                1.04,
+                0.205,
+                2,
+                20
+              ],
+              "12": [
+                1.728,
+                1.08,
+                0.21,
+                2,
+                20
+              ],
+              "13": [
+                1.792,
+                1.12,
+                0.215,
+                2,
+                20
+              ],
+              "14": [
+                1.856,
+                1.16,
+                0.22,
+                2,
+                20
+              ],
+              "15": [
+                1.92,
+                1.2,
+                0.225,
+                2,
+                20
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill03_Camera",
+              "Avatar_Mydeimos_00_Skill03_EnterReady",
+              "Avatar_Mydeimos_00_Skill03_Phase01",
+              "Avatar_Mydeimos_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Blood for Blood": {
+          "variant1": {
+            "skillID": 140404,
+            "trigger": "SkillP01",
+            "name": "Blood for Blood",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "For each 1% of HP lost, accumulates 1 point of Charge (up to 200 points). When Charge reaches 100, consumes 100 points of Charge to enter the \"Vendetta\" state, restores HP equal to #1[i]% of Mydei's Max HP, and advances action by 100%. While the \"Vendetta\" state is active, Max HP increases by #5[i]% of the current Max HP and DEF remains at 0. At the start of this unit's turn, automatically uses \"Kingslayer Be King.\"\\nWhen Charge reaches #3[i] points during the \"Vendetta\" state, Mydei immediately gains 1 extra turn and automatically uses \"Godslayer Be God.\"\\nWhen receiving a killing blow during the \"Vendetta\" state, Mydei will not be knocked down, but will clear his Charge, exits the \"Vendetta\" state, and restores HP by #4[i]% of his Max HP.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "2": [
+                0.16,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "3": [
+                0.17,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "4": [
+                0.18,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "5": [
+                0.19,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "6": [
+                0.2,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "7": [
+                0.2125,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "8": [
+                0.225,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "9": [
+                0.2375,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "10": [
+                0.25,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "11": [
+                0.26,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "12": [
+                0.27,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "13": [
+                0.28,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "14": [
+                0.29,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "15": [
+                0.3,
+                0,
+                150,
+                0.5,
+                0.5
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_PassiveSkill01",
+              "Avatar_Mydeimos_00_PassiveSkill01_Insert",
+              "Avatar_Mydeimos_00_PassiveSkill01_Insert_Camera",
+              "Avatar_Mydeimos_00_PassiveSkill01_InsertExit"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Cage of Broken Lance": {
+          "variant1": {
+            "skillID": 140407,
+            "trigger": "SkillMaze",
+            "name": "Cage of Broken Lance",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, pulls in enemies within a certain area and inflicts Daze on them for #1[i] second(s). Dazed enemies will not actively attack ally targets.\\nIf actively attacking Dazed enemies, when entering battle, deals Imaginary DMG equal to #2[i]% of Mydei's Max HP to all enemies, and Taunts the targets, lasting for #4[i] turn(s). This unit accumulates #5[i] point(s) of Talent's Charge.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0.8,
+                1,
+                1,
+                50
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1404_basic_atk.png",
+        "skillRef": {
+          "skillName": "Vow of Voyage",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1404_skill.png",
+        "skillRef": {
+          "skillName": "Deaths are Legion, Regrets are None",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1404_ultimate.png",
+        "skillRef": {
+          "skillName": "Throne of Bones",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1404_talent.png",
+        "skillRef": {
+          "skillName": "Blood for Blood",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1404_technique.png",
+        "skillRef": {
+          "skillName": "Cage of Broken Lance",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Earth and Water",
+        "icon": "icon/skill/1404_skilltree1.png",
+        "desc": "During the \"Vendetta\" state, Mydei will not exit the \"Vendetta\" state when receiving a killing blow. This effect can trigger #1[i] time(s) per battle.",
+        "params": [
+          3
+        ]
+      },
+      "Point07": {
+        "name": "Thirty Tyrants",
+        "icon": "icon/skill/1404_skilltree2.png",
+        "desc": "While in the \"Vendetta\" state, Mydei is immune to Crowd Control debuffs.",
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": []
+          }
+        }
+      },
+      "Point08": {
+        "name": "Bloodied Chiton",
+        "icon": "icon/skill/1404_skilltree3.png",
+        "desc": "When battle starts, if Mydei's Max HP exceeds #1[i], for every 100 excess HP, Mydei's CRIT Rate increases by #3[f1]%, his Charge ratio from enemy targets' DMG increases by #4[f1]%, and his HP restored when receiving healing increases by #5[f2]%. Up to #2[i] excess HP can be taken into account for this effect.",
+        "params": [
+          4000,
+          4000,
+          0.012,
+          0.025,
+          0.0075
+        ]
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1404.png",
+    "preview": "image/character_preview/1404.png",
+    "portrait": "image/character_portrait/1404.png",
+    "bannerOffsets": [
+      139,
+      74,
+      0.64,
+      139,
+      74,
+      0.64,
+      139,
+      74,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Anaxa": {
     "internalID": 1405,
     "name": "Anaxa",
@@ -51491,6 +52492,1598 @@ let characters = {
       0.64
     ],
     "isBuffed": false
+  },
+  "Castorice": {
+    "internalID": 1407,
+    "name": "Castorice",
+    "path": "Remembrance",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": null,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 485.1,
+      "HPBase": 1629.936,
+      "SPDBase": 95,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "140701",
+        "name": "Snowbound Maiden, Memory to Tomb",
+        "rank": 1,
+        "desc": "When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by \"Boneclaw, Doomdrake's Embrace,\" \"Claw Splits the Veil,\" \"Breath Scorches the Shadow,\" and \"Wings Sweep the Ruins\" is 120%/140% of the original DMG respectively.",
+        "icon": "icon/skill/1407_rank1.png",
+        "paramsEido": [
+          0.8,
+          0.5,
+          1.2,
+          1.4
+        ]
+      },
+      {
+        "id": "140702",
+        "name": "Crown on Wings of Bloom",
+        "rank": 2,
+        "desc": "After summoning the memosprite Netherwing, Castorice gains 2 stack(s) of \"Ardent Will.\" \"Ardent Will\" can stack up to 2 time(s) and can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow\" and advance Castorice's action by 100%. When using the next Enhanced Skill, Castorice gains \"Newbud\" by an amount equal to 30% of max \"Newbud.\"",
+        "icon": "icon/skill/1407_rank2.png",
+        "paramsEido": [
+          2,
+          2,
+          0.3
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "140703",
+        "name": "Pious Pilgrim, Dance in Doom",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1407_ultimate.png"
+      },
+      {
+        "id": "140704",
+        "name": "Rest in Songs of Gloom",
+        "rank": 4,
+        "desc": "While Castorice is on the field, all allies' HP restored when receiving healing increases by 20%.",
+        "icon": "icon/skill/1407_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "140705",
+        "name": "Pristine Pages, Prophecy as Plume",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1407_skill.png"
+      },
+      {
+        "id": "140706",
+        "name": "Await for Years to Loom",
+        "rank": 6,
+        "desc": "When Castorice or Netherwing deals DMG, increases Quantum RES PEN by 20%. During Netherwing's attacks, can reduce enemy Toughness regardless of Weakness Types. When breaking Weaknesses, triggers the Quantum Weakness Break effect. And the number of Bounces for Netherwing's Talent \"Wings Sweep the Ruins\" additionally increases by 3.",
+        "icon": "icon/skill/1407_rank6.png",
+        "paramsEido": [
+          0.2,
+          3
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Memosprite Talent": 1,
+        "Memosprite Skill": 1
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2,
+        "Memosprite Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lament, Nethersea's Ripple": {
+          "variant1": {
+            "skillID": 140701,
+            "trigger": "Skill01",
+            "name": "Lament, Nethersea's Ripple",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Castorice's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Castorice_00_Skill01_Camera",
+              "Avatar_Castorice_00_Skill01_Phase01",
+              "Avatar_Castorice_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Silence, Wraithfly's Caress": {
+          "variant1": {
+            "skillID": 140702,
+            "trigger": "Skill02",
+            "name": "Silence, Wraithfly's Caress",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Consumes #1[i]% of all allies' current HP. Deals Quantum DMG equal to #2[i]% of Castorice's Max HP to one designated enemy and Quantum DMG equal to #3[i]% of Castorice's Max HP to adjacent targets.\\nIf the current HP is insufficient, reduces the current HP down to 1.\\nIf Netherwing is on the battlefield, the Skill becomes \"Boneclaw, Doomdrake's Embrace\" instead.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                0.25,
+                0.15
+              ],
+              "2": [
+                0.3,
+                0.275,
+                0.165
+              ],
+              "3": [
+                0.3,
+                0.3,
+                0.18
+              ],
+              "4": [
+                0.3,
+                0.325,
+                0.195
+              ],
+              "5": [
+                0.3,
+                0.35,
+                0.21
+              ],
+              "6": [
+                0.3,
+                0.375,
+                0.225
+              ],
+              "7": [
+                0.3,
+                0.40625,
+                0.24375
+              ],
+              "8": [
+                0.3,
+                0.4375,
+                0.2625
+              ],
+              "9": [
+                0.3,
+                0.46875,
+                0.28125
+              ],
+              "10": [
+                0.3,
+                0.5,
+                0.3
+              ],
+              "11": [
+                0.3,
+                0.525,
+                0.315
+              ],
+              "12": [
+                0.3,
+                0.55,
+                0.33
+              ],
+              "13": [
+                0.3,
+                0.575,
+                0.345
+              ],
+              "14": [
+                0.3,
+                0.6,
+                0.36
+              ],
+              "15": [
+                0.3,
+                0.625,
+                0.375
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Castorice_00_Skill02_Camera",
+              "Avatar_Castorice_00_Skill02_Phase01",
+              "Avatar_Castorice_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Boneclaw, Doomdrake's Embrace": {
+          "variant1": {
+            "skillID": 140709,
+            "trigger": "Skill21",
+            "name": "Boneclaw, Doomdrake's Embrace",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Consumes #1[i]% of the current HP of all allies (except Netherwing). Castorice and Netherwing launch Joint ATK on the targets, dealing Quantum DMG equal to #2[f1]% and #3[f1]% of Castorice's Max HP to all enemies.\\nIf the current HP is insufficient, reduces the current HP down to 1.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.15,
+                0.25
+              ],
+              "2": [
+                0.4,
+                0.165,
+                0.275
+              ],
+              "3": [
+                0.4,
+                0.18,
+                0.3
+              ],
+              "4": [
+                0.4,
+                0.195,
+                0.325
+              ],
+              "5": [
+                0.4,
+                0.21,
+                0.35
+              ],
+              "6": [
+                0.4,
+                0.225,
+                0.375
+              ],
+              "7": [
+                0.4,
+                0.24375,
+                0.40625
+              ],
+              "8": [
+                0.4,
+                0.2625,
+                0.4375
+              ],
+              "9": [
+                0.4,
+                0.28125,
+                0.46875
+              ],
+              "10": [
+                0.4,
+                0.3,
+                0.5
+              ],
+              "11": [
+                0.4,
+                0.315,
+                0.525
+              ],
+              "12": [
+                0.4,
+                0.33,
+                0.55
+              ],
+              "13": [
+                0.4,
+                0.345,
+                0.575
+              ],
+              "14": [
+                0.4,
+                0.36,
+                0.6
+              ],
+              "15": [
+                0.4,
+                0.375,
+                0.625
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Castorice_00_Skill21_Camera",
+              "Avatar_Castorice_00_Skill21_Camera02",
+              "Avatar_Castorice_00_Skill21_Phase01",
+              "Avatar_Castorice_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Joint Attack": {
+                "desc": "Multiple targets respectively use attacks on enemy targets in one action."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Doomshriek, Dawn's Chime": {
+          "variant1": {
+            "skillID": 140703,
+            "trigger": "Skill03",
+            "name": "Doomshriek, Dawn's Chime",
+            "type": "Summon",
+            "slot": "Ultimate",
+            "desc": "Summons the memosprite Netherwing and advances its action by 100%. At the same time, deploys the Territory \"Lost Netherland,\" which decreases all enemies' All-Type RES by #4[i]%. If Castorice has the DMG Boost effect from her Talent, then this effect spreads to Netherwing. Netherwing has an initial SPD of #1[i] and a set Max HP equal to #3[i]% of max \"Newbud.\"\\nAfter Netherwing experiences #2[i] turns or when its HP is 0, it disappears and dispels the Territory \"Lost Netherland.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                165,
+                3,
+                1,
+                0.1,
+                0
+              ],
+              "2": [
+                165,
+                3,
+                1,
+                0.11,
+                0
+              ],
+              "3": [
+                165,
+                3,
+                1,
+                0.12,
+                0
+              ],
+              "4": [
+                165,
+                3,
+                1,
+                0.13,
+                0
+              ],
+              "5": [
+                165,
+                3,
+                1,
+                0.14,
+                0
+              ],
+              "6": [
+                165,
+                3,
+                1,
+                0.15,
+                0
+              ],
+              "7": [
+                165,
+                3,
+                1,
+                0.1625,
+                0
+              ],
+              "8": [
+                165,
+                3,
+                1,
+                0.175,
+                0
+              ],
+              "9": [
+                165,
+                3,
+                1,
+                0.1875,
+                0
+              ],
+              "10": [
+                165,
+                3,
+                1,
+                0.2,
+                0
+              ],
+              "11": [
+                165,
+                3,
+                1,
+                0.21,
+                0
+              ],
+              "12": [
+                165,
+                3,
+                1,
+                0.22,
+                0
+              ],
+              "13": [
+                165,
+                3,
+                1,
+                0.23,
+                0
+              ],
+              "14": [
+                165,
+                3,
+                1,
+                0.24,
+                0
+              ],
+              "15": [
+                165,
+                3,
+                1,
+                0.25,
+                0
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Castorice_00_Skill03_Camera",
+              "Avatar_Castorice_00_Skill03_Camera02",
+              "Avatar_Castorice_00_Skill03_EnterReady",
+              "Avatar_Castorice_00_Skill03_Phase01",
+              "Avatar_Castorice_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "Territory": {
+                "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Desolation Across Palms": {
+          "variant1": {
+            "skillID": 140704,
+            "trigger": "SkillP01",
+            "name": "Desolation Across Palms",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "The maximum limit of \"Newbud\" is related to the levels of all characters on the battlefield. For every 1 point of HP lost by all allies, Castorice gains 1 point of \"Newbud.\" When \"Newbud\" reaches its maximum limit, can activate the Ultimate. When allies lose HP, Castorice's and Netherwing's DMG dealt increases by #2[i]%. This effect can stack up to #3[i] time(s), lasting for #4[i] turn(s).\\nWhen Netherwing is on the field, \"Newbud\" cannot be gained through Talent, and every 1 point of HP lost by all allies (except Netherwing) will be converted to an equal amount of HP for Netherwing.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0,
+                0.1,
+                3,
+                3
+              ],
+              "2": [
+                0,
+                0.11,
+                3,
+                3
+              ],
+              "3": [
+                0,
+                0.12,
+                3,
+                3
+              ],
+              "4": [
+                0,
+                0.13,
+                3,
+                3
+              ],
+              "5": [
+                0,
+                0.14,
+                3,
+                3
+              ],
+              "6": [
+                0,
+                0.15,
+                3,
+                3
+              ],
+              "7": [
+                0,
+                0.1625,
+                3,
+                3
+              ],
+              "8": [
+                0,
+                0.175,
+                3,
+                3
+              ],
+              "9": [
+                0,
+                0.1875,
+                3,
+                3
+              ],
+              "10": [
+                0,
+                0.2,
+                3,
+                3
+              ],
+              "11": [
+                0,
+                0.21,
+                3,
+                3
+              ],
+              "12": [
+                0,
+                0.22,
+                3,
+                3
+              ],
+              "13": [
+                0,
+                0.23,
+                3,
+                3
+              ],
+              "14": [
+                0,
+                0.24,
+                3,
+                3
+              ],
+              "15": [
+                0,
+                0.25,
+                3,
+                3
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Castorice_00_PassiveSkill_1"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Wail, Death's Herald": {
+          "variant1": {
+            "skillID": 140707,
+            "trigger": "SkillMaze",
+            "name": "Wail, Death's Herald",
+            "slot": "Technique",
+            "desc": "After using Technique, enters the \"Netherveil\" state that lasts for #3[i] seconds. While \"Netherveil\" is active, enemies are unable to actively approach Castorice.\\nDuring \"Netherveil,\" active attacks will cause all enemies within range to enter combat. At the same time, summons the memosprite Netherwing, advances its action by 100%, and deploys the Territory \"Lost Netherland.\" Netherwing has its current HP equal to #2[i]% of max \"Newbud.\" After entering battle, consumes #1[i]% of the current HP of all allies (except Netherwing).\\nIf Netherwing is not summoned after entering battle, Castorice gains \"Newbud\" by an amount equal to #4[i]% of max \"Newbud.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.5,
+                20,
+                0.3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Castorice_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "Territory": {
+                "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used."
+              }
+            }
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Claw Splits the Veil": {
+          "variant1": {
+            "skillID": 1140701,
+            "trigger": "Skill01",
+            "name": "Claw Splits the Veil",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Deals Quantum DMG equal to #1[f1]% of Castorice's Max HP to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2
+              ],
+              "2": [
+                0.24
+              ],
+              "3": [
+                0.28
+              ],
+              "4": [
+                0.32
+              ],
+              "5": [
+                0.36
+              ],
+              "6": [
+                0.4
+              ],
+              "7": [
+                0.44
+              ],
+              "8": [
+                0.48
+              ],
+              "9": [
+                0.52
+              ],
+              "10": [
+                0.56
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill01_Phase01",
+              "Servant_CastoriceServant_Skill01_Phase02",
+              "Servant_CastoriceServant_Skill01_Camera",
+              "Servant_CastoriceServant_Skill01_Ready"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Breath Scorches the Shadow": {
+          "variant1": {
+            "skillID": 1140702,
+            "trigger": "Skill02",
+            "name": "Breath Scorches the Shadow",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Launching \"Breath Scorches the Shadow\" will consume #1[i]% of Netherwing's Max HP to deal Quantum DMG equal to #2[f1]% of Castorice's Max HP to all enemies.\\nIn one attack, \"Breath Scorches the Shadow\" can be launched repeatedly, with the DMG multiplier increased progressively to #3[f1]% / #4[f1]%. After reaching #4[f1]%, it will not increase further. The DMG Multiplier Boost effect will not decrease before Netherwing disappears.\\nWhen Netherwing's current HP is equal to or less than #5[i]% of its Max HP, launching this ability will actively reduce HP down to 1, and then trigger the ability effect equal to that of the Talent \"Wings Sweep the Ruins.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                0.12,
+                0.14,
+                0.17,
+                0.25
+              ],
+              "2": [
+                0.25,
+                0.144,
+                0.168,
+                0.204,
+                0.25
+              ],
+              "3": [
+                0.25,
+                0.168,
+                0.196,
+                0.238,
+                0.25
+              ],
+              "4": [
+                0.25,
+                0.192,
+                0.224,
+                0.272,
+                0.25
+              ],
+              "5": [
+                0.25,
+                0.216,
+                0.252,
+                0.306,
+                0.25
+              ],
+              "6": [
+                0.25,
+                0.24,
+                0.28,
+                0.34,
+                0.25
+              ],
+              "7": [
+                0.25,
+                0.264,
+                0.308,
+                0.374,
+                0.25
+              ],
+              "8": [
+                0.25,
+                0.288,
+                0.336,
+                0.408,
+                0.25
+              ],
+              "9": [
+                0.25,
+                0.312,
+                0.364,
+                0.442,
+                0.25
+              ],
+              "10": [
+                0.25,
+                0.336,
+                0.392,
+                0.476,
+                0.25
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill02_Phase01",
+              "Servant_CastoriceServant_Skill02_Phase02",
+              "Servant_CastoriceServant_Skill02_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 1140710,
+            "trigger": "Skill21",
+            "name": "Breath Scorches the Shadow",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Consumes this unit's HP to deal Quantum DMG to all enemies, and this turn will not conclude. When using this ability repeatedly, the ability can be enhanced up to 3 times. When HP is #5[i]% or lower, using this ability will actively trigger the ability effect of Memosprite Talent \"Wings Sweep the Ruins.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.25
+              ],
+              "3": [
+                0.25
+              ],
+              "4": [
+                0.25
+              ],
+              "5": [
+                0.25
+              ],
+              "6": [
+                0.25
+              ],
+              "7": [
+                0.25
+              ],
+              "8": [
+                0.25
+              ],
+              "9": [
+                0.25
+              ],
+              "10": [
+                0.25
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill21_Phase01",
+              "Servant_CastoriceServant_Skill21_Phase02",
+              "Servant_CastoriceServant_Skill21_Camera",
+              "Servant_CastoriceServant_Skill21_Skill01toSkill21_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant3": {
+            "skillID": 1140711,
+            "trigger": "Skill22",
+            "name": "Breath Scorches the Shadow",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Consumes this unit's HP to deal Quantum DMG to all enemies, and this turn will not conclude. When using this ability repeatedly, the ability can be enhanced up to 3 times. When HP is #5[i]% or lower, using this ability will actively trigger the ability effect of Memosprite Talent \"Wings Sweep the Ruins.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.25
+              ],
+              "3": [
+                0.25
+              ],
+              "4": [
+                0.25
+              ],
+              "5": [
+                0.25
+              ],
+              "6": [
+                0.25
+              ],
+              "7": [
+                0.25
+              ],
+              "8": [
+                0.25
+              ],
+              "9": [
+                0.25
+              ],
+              "10": [
+                0.25
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill22_Phase01",
+              "Servant_CastoriceServant_Skill22_Phase02",
+              "Servant_CastoriceServant_Skill22_Camera",
+              "Servant_CastoriceServant_Skill22_Skill01toSkill22_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Wings Sweep the Ruins": {
+          "variant1": {
+            "skillID": 1140712,
+            "trigger": "Skill23",
+            "name": "Wings Sweep the Ruins",
+            "type": "Bounce",
+            "slot": "Memosprite Skill",
+            "desc": "Consumes all HP and deals #2[i] instance(s) of DMG, with each instance dealing Quantum DMG equal to #1[f1]% of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to #3[i]% of Castorice's Max HP plus #4[i] for all allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                6,
+                0.03,
+                400
+              ],
+              "2": [
+                0.24,
+                6,
+                0.036,
+                480
+              ],
+              "3": [
+                0.28,
+                6,
+                0.042,
+                560
+              ],
+              "4": [
+                0.32,
+                6,
+                0.048,
+                640
+              ],
+              "5": [
+                0.36,
+                6,
+                0.054,
+                720
+              ],
+              "6": [
+                0.4,
+                6,
+                0.06,
+                800
+              ],
+              "7": [
+                0.44,
+                6,
+                0.066,
+                880
+              ],
+              "8": [
+                0.48,
+                6,
+                0.072,
+                960
+              ],
+              "9": [
+                0.52,
+                6,
+                0.078,
+                1040
+              ],
+              "10": [
+                0.56,
+                6,
+                0.084,
+                1120
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "Bounce",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill23_Phase01",
+              "Servant_CastoriceServant_Skill23_Phase02",
+              "Servant_CastoriceServant_Skill23_Camera",
+              "Servant_CastoriceServant_Skill23_Camera_NoneCasterSummonerCamera",
+              "Servant_CastoriceServant_Skill23_ReadytoFly_Camera",
+              "Servant_CastoriceServant_Skill23_ReadytoFly_Camera02",
+              "Servant_CastoriceServant_Skill23_ReadytoFly_Camera03"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Mooncocoon Shrouds the Form": {
+          "variant1": {
+            "skillID": 1140703,
+            "trigger": "SkillP01",
+            "name": "Mooncocoon Shrouds the Form",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "When Netherwing is on the field, it acts as backup for allies. When allies take DMG or consume HP, their current HP can be reduced down to a minimum of 1, after which Netherwing will bear the HP loss. But Netherwing consumes HP equal to #1[i]% of the original value. This lasts until Netherwing disappears.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5
+              ],
+              "2": [
+                5
+              ],
+              "3": [
+                5
+              ],
+              "4": [
+                5
+              ],
+              "5": [
+                5
+              ],
+              "6": [
+                5
+              ],
+              "7": [
+                5
+              ],
+              "8": [
+                5
+              ],
+              "9": [
+                5
+              ],
+              "10": [
+                5
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_PassiveSkill01",
+              "Servant_CastoriceServant_Together_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Backup": {
+                "desc": "Enemies cannot actively target backup units. Allies' Blast-type abilities cannot Blast to backup units."
+              }
+            }
+          }
+        },
+        "Roar Rumbles the Realm": {
+          "variant1": {
+            "skillID": 1140705,
+            "trigger": "SkillP03",
+            "name": "Roar Rumbles the Realm",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "When Netherwing is summoned, increases DMG dealt by all allies by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                3
+              ],
+              "2": [
+                0.1,
+                3
+              ],
+              "3": [
+                0.1,
+                3
+              ],
+              "4": [
+                0.1,
+                3
+              ],
+              "5": [
+                0.1,
+                3
+              ],
+              "6": [
+                0.1,
+                3
+              ],
+              "7": [
+                0.1,
+                3
+              ],
+              "8": [
+                0.1,
+                3
+              ],
+              "9": [
+                0.1,
+                3
+              ],
+              "10": [
+                0.1,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Wings Sweep the Ruins": {
+          "variant1": {
+            "skillID": 1140706,
+            "trigger": "SkillP04",
+            "name": "Wings Sweep the Ruins",
+            "type": "Bounce",
+            "slot": "Memosprite Talent",
+            "desc": "When Netherwing disappears, deals #2[i] instance(s) of DMG, with each instance dealing Quantum DMG equal to #1[f1]% of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to #3[i]% of Castorice's Max HP plus #4[i] for all allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                6,
+                0.03,
+                400
+              ],
+              "2": [
+                0.24,
+                6,
+                0.036,
+                480
+              ],
+              "3": [
+                0.28,
+                6,
+                0.042,
+                560
+              ],
+              "4": [
+                0.32,
+                6,
+                0.048,
+                640
+              ],
+              "5": [
+                0.36,
+                6,
+                0.054,
+                720
+              ],
+              "6": [
+                0.4,
+                6,
+                0.06,
+                800
+              ],
+              "7": [
+                0.44,
+                6,
+                0.066,
+                880
+              ],
+              "8": [
+                0.48,
+                6,
+                0.072,
+                960
+              ],
+              "9": [
+                0.52,
+                6,
+                0.078,
+                1040
+              ],
+              "10": [
+                0.56,
+                6,
+                0.084,
+                1120
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "Bounce",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_DeathRattle",
+              "Servant_CastoriceServant_PassiveInsertAbility_Phase01",
+              "Servant_CastoriceServant_PassiveInsertAbility_Phase02",
+              "Servant_CastoriceServant_PassiveInsertAbility_Camera",
+              "Servant_CastoriceServant_PassiveInsertAbility_NoneCasterSummonerCamera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1407_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lament, Nethersea's Ripple",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1407_skill.png",
+        "skillRef": {
+          "skillName": "Silence, Wraithfly's Caress",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1407_ultimate.png",
+        "skillRef": {
+          "skillName": "Doomshriek, Dawn's Chime",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1407_talent.png",
+        "skillRef": {
+          "skillName": "Desolation Across Palms",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1407_technique.png",
+        "skillRef": {
+          "skillName": "Wail, Death's Herald",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Contained Dark Tide",
+        "icon": "icon/skill/1407_skilltree1.png",
+        "desc": "After ally targets (excluding Netherwing) receive healing, converts #1[i]% of the healed amount into \"Newbud.\" If Netherwing is on the field, this is converted to Netherwing's HP instead. Each ally target can accumulate a conversion amount up to #2[i]% of the max \"Newbud.\" After any unit takes action, all units reset their accumulated conversion amount.",
+        "params": [
+          1,
+          0.12
+        ]
+      },
+      "Point07": {
+        "name": "Inverted Torch",
+        "icon": "icon/skill/1407_skilltree2.png",
+        "desc": "When Castorice's current HP is higher than or equal to #1[i]% of her Max HP, her SPD increases by #2[i]%. When Netherwing uses \"Breath Scorches the Shadow\" and deals fatal damage to all enemies on the field or brings them to a point where their HP cannot be reduced further, Netherwing's SPD increases by #3[i]%, lasting for 1 turn.",
+        "params": [
+          0.5,
+          0.4,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Where The West Wind Dwells",
+        "icon": "icon/skill/1407_skilltree3.png",
+        "desc": "Each time Netherwing uses \"Breath Scorches the Shadow,\" the DMG dealt increases by #1[i]%. This effect stacks up to #2[i] time(s) and lasts until the end of this turn.",
+        "params": [
+          0.3,
+          6
+        ]
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.064
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point19": {
+        "name": "Claw Splits the Veil",
+        "icon": "icon/skill/1407_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Claw Splits the Veil",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Breath Scorches the Shadow",
+        "icon": "icon/skill/1407_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Mooncocoon Shrouds the Form",
+          "skillSlot": "Memosprite Talent"
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1407.png",
+    "preview": "image/character_preview/1407.png",
+    "portrait": "image/character_portrait/1407.png",
+    "bannerOffsets": [
+      36,
+      8,
+      0.64,
+      36,
+      8,
+      0.64,
+      36,
+      8,
+      0.64
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 100
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11407,
+    "summonName": "Netherwing: Pollux"
   },
   "Phainon": {
     "internalID": 1408,
@@ -55646,6 +58239,5012 @@ let characters = {
       0.63
     ],
     "isBuffed": false
+  },
+  "Evernight": {
+    "internalID": 1413,
+    "name": "Evernight",
+    "path": "Remembrance",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 240,
+    "baseStats": {
+      "ATKBase": 543.312,
+      "DEFBase": 582.1199999999999,
+      "HPBase": 1319.4720000000002,
+      "SPDBase": 99,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "141301",
+        "name": "Sleep Tight, the Night Dreams Long",
+        "rank": 1,
+        "desc": "When Evernight is on the field, if there are (4 or more)/3/2/1 enemy targets on the field, ally memosprites deal DMG equal to 120%/125%/130%/150% of their original DMG respectively.",
+        "icon": "icon/skill/1413_rank1.png",
+        "paramsEido": [
+          1.2,
+          1.25,
+          1.3,
+          1.5
+        ]
+      },
+      {
+        "id": "141302",
+        "name": "Listen Up, the Slumber Speaks Soft",
+        "rank": 2,
+        "desc": "Increases Evernight's and the memosprite Evey's CRIT DMG by 40%. Each time Evernight gains \"Memoria,\" increases the amount of \"Memoria\" gain by 2 point(s). When using Ultimate, additionally gains 2 Charge for \"Darkest Riddle.\"",
+        "icon": "icon/skill/1413_rank2.png",
+        "paramsEido": [
+          2,
+          2,
+          0.4
+        ]
+      },
+      {
+        "id": "141303",
+        "name": "Fear Not, the Nightmare Lies Past",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1413_skill.png"
+      },
+      {
+        "id": "141304",
+        "name": "Wake Up, the Tomorrow is Yours",
+        "rank": 4,
+        "desc": "While Evernight is on the field, ally memosprites' Weakness Break Efficiency increases by 25%, and the memosprite Evey's Weakness Break Efficiency additionally increases by 25%.",
+        "icon": "icon/skill/1413_rank4.png",
+        "paramsEido": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "id": "141305",
+        "name": "Let Go, the \"Me\" in Memories",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1413_ultimate.png"
+      },
+      {
+        "id": "141306",
+        "name": "Like This, Always",
+        "rank": 6,
+        "desc": "While Evernight is on the field, all ally targets' All-Type RES PEN increases by 20%. After the memosprite Evey uses \"Dream, Dissolving, as Dew,\" Evernight gains 30% of the amount of \"Memoria\" consumed in this attack.",
+        "icon": "icon/skill/1413_rank6.png",
+        "paramsEido": [
+          0.3,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Memosprite Talent": 1
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Memosprite Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Time Thence Blurs": {
+          "variant1": {
+            "skillID": 141301,
+            "trigger": "Skill01",
+            "name": "Time Thence Blurs",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Evernight's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Evernight_00_Skill01_Camera",
+              "Avatar_Evernight_00_Skill01_Far_Camera",
+              "Avatar_Evernight_00_Skill01_Phase01",
+              "Avatar_Evernight_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Day Gently Slips": {
+          "variant1": {
+            "skillID": 141302,
+            "trigger": "Skill02",
+            "name": "Day Gently Slips",
+            "type": "Summon",
+            "slot": "Skill",
+            "desc": "Consumes #6[i]% of Evernight's current HP to summon memosprite Evey and increases CRIT DMG of all ally memosprites by an amount equal to #1[i]% of Evernight's CRIT DMG for #2[i] turn(s). This duration decreases by 1 at the start of Evernight's every turn. If Evey is already on the field, restores its HP by #4[i]% of its Max HP. When using this, gains #3[i] point(s) of \"Memoria.\" If in the \"Darkest Riddle\" state, gains #5[i] additional point(s) of \"Memoria.\"",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "2": [
+                0.132,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "3": [
+                0.144,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "4": [
+                0.156,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "5": [
+                0.168,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "6": [
+                0.18,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "7": [
+                0.195,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "8": [
+                0.21,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "9": [
+                0.225,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "10": [
+                0.24,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "11": [
+                0.252,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "12": [
+                0.264,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "13": [
+                0.276,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "14": [
+                0.288,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "15": [
+                0.3,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evernight_00_Skill02_Camera",
+              "Avatar_Evernight_00_Skill02_Phase01",
+              "Avatar_Evernight_00_Skill02_Phase02",
+              "Avatar_Evernight_00_Skill02_2_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          },
+          "variant2": {
+            "skillID": 141309,
+            "trigger": "Skill21",
+            "name": "Day Gently Slips",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Consumes this unit's HP to summon memosprite Evey and increase CRIT DMG for all ally memosprites. If Evey is already on the field, restores its HP. When using this, gains #3[i] \"Memoria.\" If in the \"Darkest Riddle\" state, additionally gains #5[i] \"Memoria.\"",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "2": [
+                0.22,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "3": [
+                0.24,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "4": [
+                0.26,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "5": [
+                0.28,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "6": [
+                0.3,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "7": [
+                0.325,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "8": [
+                0.35,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "9": [
+                0.375,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "10": [
+                0.4,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "11": [
+                0.42,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "12": [
+                0.44,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "13": [
+                0.46,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "14": [
+                0.48,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "15": [
+                0.5,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evernight_00_Skill21_Phase01",
+              "Avatar_Evernight_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "O Wakeful World, Goodnight": {
+          "variant1": {
+            "skillID": 141303,
+            "trigger": "Skill03",
+            "name": "O Wakeful World, Goodnight",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Summons memosprite Evey. Then Evey deals Ice DMG to all enemies equal to #1[i]% of Evey's Max HP and Evernight enters the \"Darkest Riddle\" state. During this state, all enemies take #4[i]% increased DMG while both Evernight and Evey deal #3[i]% increased DMG and are immune to Crowd Control debuffs. Gains #2[i] point(s) of Charge for \"Darkest Riddle.\" And Evey consumes 1 point after it uses \"Dream, Dissolving, as Dew.\" At the start of Evernight's turn, if no Charge remains, exits the \"Darkest Riddle\" state.",
+            "energyCost": 240,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                2,
+                0.3,
+                0.15
+              ],
+              "2": [
+                1.1,
+                2,
+                0.33,
+                0.165
+              ],
+              "3": [
+                1.2,
+                2,
+                0.36,
+                0.18
+              ],
+              "4": [
+                1.3,
+                2,
+                0.39,
+                0.195
+              ],
+              "5": [
+                1.4,
+                2,
+                0.42,
+                0.21
+              ],
+              "6": [
+                1.5,
+                2,
+                0.45,
+                0.225
+              ],
+              "7": [
+                1.625,
+                2,
+                0.4875,
+                0.24375
+              ],
+              "8": [
+                1.75,
+                2,
+                0.525,
+                0.2625
+              ],
+              "9": [
+                1.875,
+                2,
+                0.5625,
+                0.28125
+              ],
+              "10": [
+                2,
+                2,
+                0.6,
+                0.3
+              ],
+              "11": [
+                2.1,
+                2,
+                0.63,
+                0.315
+              ],
+              "12": [
+                2.2,
+                2,
+                0.66,
+                0.33
+              ],
+              "13": [
+                2.3,
+                2,
+                0.69,
+                0.345
+              ],
+              "14": [
+                2.4,
+                2,
+                0.72,
+                0.36
+              ],
+              "15": [
+                2.5,
+                2,
+                0.75,
+                0.375
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evernight_00_Skill03_Camera",
+              "Avatar_Evernight_00_Skill03_EnterReady",
+              "Avatar_Evernight_00_Skill03_Phase01",
+              "Avatar_Evernight_00_Skill03_Phase02",
+              "Avatar_Evernight_00_Skill03_Phase02_Charge"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "With Me, This Night": {
+          "variant1": {
+            "skillID": 141304,
+            "trigger": "SkillP01",
+            "name": "With Me, This Night",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When entering combat, summons memosprite Evey. Evey has an initial SPD of #4[i] and its Max HP equals to #5[i]% of that of Evernight's. Each time Evernight or Evey loses HP, increases CRIT DMG for Evernight and Evey by #2[i]% for #3[i] turn(s), and gains #1[i] \"Memoria.\" This effect can trigger only once per target for each received attack.\\nWhen Evernight has #6[i] or more points of \"Memoria,\" dispels Crowd Control debuffs and becomes immune to them. If Evey is on the field, it immediately takes action. The immediate action effect can only trigger again after Evey uses \"Dream, Dissolving, as Dew.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.3,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "2": [
+                2,
+                0.33,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "3": [
+                2,
+                0.36,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "4": [
+                2,
+                0.39,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "5": [
+                2,
+                0.42,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "6": [
+                2,
+                0.45,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "7": [
+                2,
+                0.4875,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "8": [
+                2,
+                0.525,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "9": [
+                2,
+                0.5625,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "10": [
+                2,
+                0.6,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "11": [
+                2,
+                0.63,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "12": [
+                2,
+                0.66,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "13": [
+                2,
+                0.69,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "14": [
+                2,
+                0.72,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "15": [
+                2,
+                0.75,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evernight_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Let it Rain Cold On Thee": {
+          "variant1": {
+            "skillID": 141307,
+            "trigger": "SkillMaze",
+            "name": "Let it Rain Cold On Thee",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, at the start of the next battle, obtains the same effect as the one from Skill that increases CRIT DMG for all ally memosprites, and gains #1[i] \"Memoria.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Evernight_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Remembrance, Whirling, Like Rain": {
+          "variant1": {
+            "skillID": 1141301,
+            "trigger": "Skill01",
+            "name": "Remembrance, Whirling, Like Rain",
+            "type": "Single Target",
+            "slot": "Memosprite Skill",
+            "desc": "This ability automatically selects a target, prioritizing the enemy target that Evernight last attacked. Deals Ice DMG equal to #1[i]% of Evey's Max HP to one enemy. For every #3[i] point(s) of \"Memoria\" Evernight currently has, additionally deals Ice DMG equal to #2[f1]% of Evey's Max HP. Gains #4[i] point(s) of \"Memoria\" after use.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                0.05,
+                4,
+                1
+              ],
+              "2": [
+                0.3,
+                0.06,
+                4,
+                1
+              ],
+              "3": [
+                0.35,
+                0.07,
+                4,
+                1
+              ],
+              "4": [
+                0.4,
+                0.08,
+                4,
+                1
+              ],
+              "5": [
+                0.45,
+                0.09,
+                4,
+                1
+              ],
+              "6": [
+                0.5,
+                0.1,
+                4,
+                1
+              ],
+              "7": [
+                0.55,
+                0.11,
+                4,
+                1
+              ],
+              "8": [
+                0.6,
+                0.12,
+                4,
+                1
+              ],
+              "9": [
+                0.65,
+                0.13,
+                4,
+                1
+              ],
+              "10": [
+                0.7,
+                0.14,
+                4,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Servant",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_Skill01_Phase01",
+              "Servant_EvernightServant_00_Skill01_Phase02",
+              "Servant_EvernightServant_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Dream, Dissolving, as Dew": {
+          "variant1": {
+            "skillID": 1141307,
+            "trigger": "Skill11",
+            "name": "Dream, Dissolving, as Dew",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "This ability is used when Evernight's \"Memoria\" is greater than or equal to #3[i] and she is not affected by Crowd Control. For every 1 \"Memoria\" point currently held, deals Ice DMG equal to #1[f1]% of Evey's Max HP to the primary target, and Ice DMG equal to #2[f1]% of Evey's Max HP to the other enemy targets. After use, consumes all \"Memoria\" and HP, and makes Evey disappear.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.06,
+                0.03,
+                16
+              ],
+              "2": [
+                0.072,
+                0.036,
+                16
+              ],
+              "3": [
+                0.084,
+                0.042,
+                16
+              ],
+              "4": [
+                0.096,
+                0.048,
+                16
+              ],
+              "5": [
+                0.108,
+                0.054,
+                16
+              ],
+              "6": [
+                0.12,
+                0.06,
+                16
+              ],
+              "7": [
+                0.132,
+                0.066,
+                16
+              ],
+              "8": [
+                0.144,
+                0.072,
+                16
+              ],
+              "9": [
+                0.156,
+                0.078,
+                16
+              ],
+              "10": [
+                0.168,
+                0.084,
+                16
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_Skill11_Phase01",
+              "Servant_EvernightServant_00_Skill11_Phase02",
+              "Servant_EvernightServant_00_Skill11_Camera",
+              "Servant_EvernightServant_00_Skill12_Phase02",
+              "Servant_EvernightServant_00_Skill12_Camera",
+              "Servant_EvernightServant_00_Skill11_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Solitude, Drifting, In Murk": {
+          "variant1": {
+            "skillID": 1141303,
+            "trigger": "SkillP01",
+            "name": "Solitude, Drifting, In Murk",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "Evey is immune to Crowd Control debuffs and has an increased chance of getting attacked. While Evey is on the field, Evernight and Evey deal #1[i]% increased DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                3
+              ],
+              "2": [
+                0.3,
+                3
+              ],
+              "3": [
+                0.35,
+                3
+              ],
+              "4": [
+                0.4,
+                3
+              ],
+              "5": [
+                0.45,
+                3
+              ],
+              "6": [
+                0.5,
+                3
+              ],
+              "7": [
+                0.55,
+                3
+              ],
+              "8": [
+                0.6,
+                3
+              ],
+              "9": [
+                0.65,
+                3
+              ],
+              "10": [
+                0.7,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_PassiveSkill01",
+              "Servant_EvernightServant_00_PassiveSkill01_Resummon"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        },
+        "Night, Trailing, In Step": {
+          "variant1": {
+            "skillID": 1141305,
+            "trigger": "SkillP03",
+            "name": "Night, Trailing, In Step",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When summoned, this unit immediately takes action.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": [],
+              "6": [],
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": []
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "You, Parting, Beyond Reach": {
+          "variant1": {
+            "skillID": 1141306,
+            "trigger": "SkillP04",
+            "name": "You, Parting, Beyond Reach",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "Upon disappearing, increases Evernight's SPD by #1[i]%. If the disappearance is due to using \"Dream, Dissolving, as Dew,\" then, for every 1 \"Memoria\" point consumed by the attack, additionally increases Evernight's SPD by #2[i]%. Up to #3[i] \"Memoria\" points can be taken into account for this. The SPD Boost effect cannot stack and is removed at the start of Evernight's next turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.01,
+                40
+              ],
+              "2": [
+                0.1,
+                0.01,
+                40
+              ],
+              "3": [
+                0.1,
+                0.01,
+                40
+              ],
+              "4": [
+                0.1,
+                0.01,
+                40
+              ],
+              "5": [
+                0.1,
+                0.01,
+                40
+              ],
+              "6": [
+                0.1,
+                0.01,
+                40
+              ],
+              "7": [
+                0.1,
+                0.01,
+                40
+              ],
+              "8": [
+                0.1,
+                0.01,
+                40
+              ],
+              "9": [
+                0.1,
+                0.01,
+                40
+              ],
+              "10": [
+                0.1,
+                0.01,
+                40
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_DeathRattle"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1413_basic_atk.png",
+        "skillRef": {
+          "skillName": "Time Thence Blurs",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1413_skill.png",
+        "skillRef": {
+          "skillName": "Day Gently Slips",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1413_ultimate.png",
+        "skillRef": {
+          "skillName": "O Wakeful World, Goodnight",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1413_talent.png",
+        "skillRef": {
+          "skillName": "With Me, This Night",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1413_technique.png",
+        "skillRef": {
+          "skillName": "Let it Rain Cold On Thee",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Dark the Night, Still the Moon",
+        "icon": "icon/skill/1413_skilltree1.png",
+        "desc": "Increases Evernight's and the memosprite Evey's CRIT Rate by #1[i]%. When using an ability, consumes #2[i]% of this unit's current HP to increase CRIT DMG for both of them by #3[i]%, lasting for #4[i] turn(s). After Evey uses \"Dream, Dissolving, as Dew,\" recovers 1 Skill Point for allies.",
+        "params": [
+          0.35,
+          0.05,
+          0.15,
+          2
+        ]
+      },
+      "Point07": {
+        "name": "Rouse the Flame, Lull the Light",
+        "icon": "icon/skill/1413_skilltree2.png",
+        "desc": "When combat starts, Evernight regenerates #2[i] Energy and gains #3[i] \"Memoria.\" When Evernight or an ally memosprite uses an ability, Evernight regenerates #4[i] Energy and gains #1[i] \"Memoria.\"",
+        "params": [
+          1,
+          70,
+          1,
+          5
+        ]
+      },
+      "Point08": {
+        "name": "Kindle the Morn, Drop the Rain",
+        "icon": "icon/skill/1413_skilltree3.png",
+        "desc": "When there are 1/2/3/(4 or more) Remembrance characters in the team, increases CRIT DMG for all ally memosprites by #1[i]%/#2[i]%/#3[i]%/#4[i]% respectively while Evernight's Skill lasts.",
+        "params": [
+          0.05,
+          0.15,
+          0.5,
+          0.65
+        ]
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point19": {
+        "name": "Remembrance, Whirling, Like Rain",
+        "icon": "icon/skill/1413_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Remembrance, Whirling, Like Rain",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Solitude, Drifting, In Murk",
+        "icon": "icon/skill/1413_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Solitude, Drifting, In Murk",
+          "skillSlot": "Memosprite Talent"
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1413.png",
+    "preview": "image/character_preview/1413.png",
+    "portrait": "image/character_portrait/1413.png",
+    "bannerOffsets": [
+      88,
+      -13,
+      0.63,
+      88,
+      -13,
+      0.63,
+      88,
+      -13,
+      0.63
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 125
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11413,
+    "summonName": "Evey"
+  },
+  "Dan Heng • Permansor Terrae": {
+    "internalID": 1414,
+    "name": "Dan Heng • Permansor Terrae",
+    "path": "Preservation",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 135,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 776.1600000000001,
+      "HPBase": 1047.816,
+      "SPDBase": 97,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "141401",
+        "name": "Shed Scales of Old",
+        "rank": 1,
+        "desc": "When Dan Heng • Permansor Terrae uses Ultimate, recovers 1 Skill Point(s) and increases the \"Bondmate's\" All-Type RES PEN by 18%, lasting for 3 turn(s).",
+        "icon": "icon/skill/1414_rank1.png",
+        "paramsEido": [
+          1,
+          0.18,
+          3
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      {
+        "id": "141402",
+        "name": "Watch Trails to Blaze",
+        "rank": 2,
+        "desc": "Additionally increases the number of actions for the enhanced Souldragon from Ultimate by 2. After Dan Heng • Permansor Terrae uses Ultimate, Souldragon advances action by 100%. When the enhanced \"Souldragon\" takes action, the Additional DMG dealt by the \"Bondmate\" becomes 200% of its original DMG, and the Shield Effect provided in this instance becomes 200% of its original Shield Effect.",
+        "icon": "icon/skill/1414_rank2.png",
+        "paramsEido": [
+          2,
+          2,
+          2
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          },
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "141403",
+        "name": "Bear Weight of Worlds",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1414_ultimate.png"
+      },
+      {
+        "id": "141404",
+        "name": "By Oath, This Vessel Is I",
+        "rank": 4,
+        "desc": "Reduces the DMG taken by the \"Bondmate\" by 20%.",
+        "icon": "icon/skill/1414_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "141405",
+        "name": "The Path of Permanence Sweeps Far",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1414_skill.png"
+      },
+      {
+        "id": "141406",
+        "name": "One Dream to Enfold All Wilds",
+        "rank": 6,
+        "desc": "When the \"Bondmate\" is on the field, increases the DMG taken by all enemies by 20%. When the \"Bondmate\" deals DMG, ignores 12% of the enemy targets' DEF. When Dan Heng • Permansor Terrae uses Ultimate, the \"Bondmate\" will deal Additional DMG of the Bondmate's Type to all enemies, equal to 330% of the Bondmate's ATK.",
+        "icon": "icon/skill/1414_rank6.png",
+        "paramsEido": [
+          0.2,
+          3.3,
+          0.12
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Aegis Vitae": {
+          "variant1": {
+            "skillID": 141401,
+            "trigger": "Skill01",
+            "name": "Aegis Vitae",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Dan Heng • Permansor Terrae's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_Skill01_Camera",
+              "Avatar_DanHengPT_00_Skill01_Phase01",
+              "Avatar_DanHengPT_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Terra Omnibus": {
+          "variant1": {
+            "skillID": 141402,
+            "trigger": "Skill02",
+            "name": "Terra Omnibus",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Designates one ally character as the \"Bondmate\" and provides all allies with a Shield that can offset DMG equal to #1[f1]% of Dan Heng • Permansor Terrae's ATK plus #2[i] for #3[i] turn(s). When repeatedly receiving Dan Heng • Permansor Terrae's Shield, can stack the Shield Effect, but it will not exceed #4[i]% of the current Shield provided by Skill.\\n\"Bondmate\" only applies to the most recent target of Dan Heng • Permansor Terrae's Skill.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.14,
+                100,
+                3,
+                3
+              ],
+              "2": [
+                0.1475,
+                160,
+                3,
+                3
+              ],
+              "3": [
+                0.155,
+                205,
+                3,
+                3
+              ],
+              "4": [
+                0.1625,
+                250,
+                3,
+                3
+              ],
+              "5": [
+                0.17,
+                280,
+                3,
+                3
+              ],
+              "6": [
+                0.176,
+                310,
+                3,
+                3
+              ],
+              "7": [
+                0.182,
+                332.5,
+                3,
+                3
+              ],
+              "8": [
+                0.188,
+                355,
+                3,
+                3
+              ],
+              "9": [
+                0.194,
+                377.5,
+                3,
+                3
+              ],
+              "10": [
+                0.2,
+                400,
+                3,
+                3
+              ],
+              "11": [
+                0.206,
+                422.5,
+                3,
+                3
+              ],
+              "12": [
+                0.212,
+                445,
+                3,
+                3
+              ],
+              "13": [
+                0.218,
+                467.5,
+                3,
+                3
+              ],
+              "14": [
+                0.224,
+                490,
+                3,
+                3
+              ],
+              "15": [
+                0.23,
+                512.5,
+                3,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_Skill02_Camera",
+              "Avatar_DanHengPT_00_Skill02_Camera_End",
+              "Avatar_DanHengPT_00_Skill02_Phase01",
+              "Avatar_DanHengPT_00_Skill02_Phase02",
+              "Avatar_DanHengPT_00_BE_AddShield"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "A Dragon's Zenith Knows No Rue": {
+          "variant1": {
+            "skillID": 141403,
+            "trigger": "Skill03",
+            "name": "A Dragon's Zenith Knows No Rue",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Physical DMG equal to #1[i]% of Dan Heng • Permansor Terrae's ATK to all enemies, and provides a Shield to all allies that can offset DMG equal to #4[f1]% of Dan Heng • Permansor Terrae's ATK plus #5[i], lasting for #6[i] turn(s). When repeatedly receiving Dan Heng • Permansor Terrae's Shield, can stack the Shield Effect, but it will not exceed #7[i]% of the current Shield provided by Skill.\\n\"Souldragon\" becomes enhanced. When \"Souldragon\" takes action, launches Follow-Up ATK, dealing Physical DMG to all enemies equal to #2[i]% of Dan Heng • Permansor Terrae's ATK and Additional DMG of the Bondmate's Type to all enemies equal to #8[f1]% of the Bondmate's ATK. The enhancement lasts for #3[i] \"Souldragon\" action(s).",
+            "energyCost": 135,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.5,
+                0.4,
+                2,
+                0.14,
+                100,
+                3,
+                3,
+                0.4
+              ],
+              "2": [
+                1.65,
+                0.44,
+                2,
+                0.1475,
+                160,
+                3,
+                3,
+                0.44
+              ],
+              "3": [
+                1.8,
+                0.48,
+                2,
+                0.155,
+                205,
+                3,
+                3,
+                0.48
+              ],
+              "4": [
+                1.95,
+                0.52,
+                2,
+                0.1625,
+                250,
+                3,
+                3,
+                0.52
+              ],
+              "5": [
+                2.1,
+                0.56,
+                2,
+                0.17,
+                280,
+                3,
+                3,
+                0.56
+              ],
+              "6": [
+                2.25,
+                0.6,
+                2,
+                0.176,
+                310,
+                3,
+                3,
+                0.6
+              ],
+              "7": [
+                2.4375,
+                0.65,
+                2,
+                0.182,
+                332.5,
+                3,
+                3,
+                0.65
+              ],
+              "8": [
+                2.625,
+                0.7,
+                2,
+                0.188,
+                355,
+                3,
+                3,
+                0.7
+              ],
+              "9": [
+                2.8125,
+                0.75,
+                2,
+                0.194,
+                377.5,
+                3,
+                3,
+                0.75
+              ],
+              "10": [
+                3,
+                0.8,
+                2,
+                0.2,
+                400,
+                3,
+                3,
+                0.8
+              ],
+              "11": [
+                3.15,
+                0.84,
+                2,
+                0.206,
+                422.5,
+                3,
+                3,
+                0.84
+              ],
+              "12": [
+                3.3,
+                0.88,
+                2,
+                0.212,
+                445,
+                3,
+                3,
+                0.88
+              ],
+              "13": [
+                3.45,
+                0.92,
+                2,
+                0.218,
+                467.5,
+                3,
+                3,
+                0.92
+              ],
+              "14": [
+                3.6,
+                0.96,
+                2,
+                0.224,
+                490,
+                3,
+                3,
+                0.96
+              ],
+              "15": [
+                3.75,
+                1,
+                2,
+                0.23,
+                512.5,
+                3,
+                3,
+                1
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_Skill03_Camera",
+              "Avatar_DanHengPT_00_Skill03_EnterReady",
+              "Avatar_DanHengPT_00_Skill03_Phase01",
+              "Avatar_DanHengPT_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Of Virtue, Forms Unfold": {
+          "variant1": {
+            "skillID": 141404,
+            "trigger": "SkillP01",
+            "name": "Of Virtue, Forms Unfold",
+            "type": "Defense",
+            "slot": "Talent",
+            "desc": "When an ally character becomes the \"Bondmate,\" Dan Heng • Permansor Terrae summons \"Souldragon\" for them, which has an initial SPD of #5[i].\\nWhen \"Souldragon\" takes action, dispels #6[i] debuff(s) from all allies and provides a Shield that can offset DMG equal to #1[f1]% of Dan Heng • Permansor Terrae's ATK plus #2[i] for #3[i] turn(s). The Shield Effect provided by Dan Heng • Permansor Terrae and \"Souldragon\" can be stacked, but it will not exceed #4[i]% of the Shield provided by Dan Heng • Permansor Terrae's Skill.\\nWhen Dan Heng • Permansor Terrae or the \"Bondmate\" is knocked down, \"Souldragon\" disappears.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.07,
+                50,
+                3,
+                3,
+                165,
+                1
+              ],
+              "2": [
+                0.073750004,
+                80,
+                3,
+                3,
+                165,
+                1
+              ],
+              "3": [
+                0.0775,
+                102.5,
+                3,
+                3,
+                165,
+                1
+              ],
+              "4": [
+                0.08125,
+                125,
+                3,
+                3,
+                165,
+                1
+              ],
+              "5": [
+                0.085,
+                140,
+                3,
+                3,
+                165,
+                1
+              ],
+              "6": [
+                0.088,
+                155,
+                3,
+                3,
+                165,
+                1
+              ],
+              "7": [
+                0.091,
+                166.25,
+                3,
+                3,
+                165,
+                1
+              ],
+              "8": [
+                0.094,
+                177.5,
+                3,
+                3,
+                165,
+                1
+              ],
+              "9": [
+                0.097,
+                188.75,
+                3,
+                3,
+                165,
+                1
+              ],
+              "10": [
+                0.1,
+                200,
+                3,
+                3,
+                165,
+                1
+              ],
+              "11": [
+                0.103,
+                211.25,
+                3,
+                3,
+                165,
+                1
+              ],
+              "12": [
+                0.106,
+                222.5,
+                3,
+                3,
+                165,
+                1
+              ],
+              "13": [
+                0.109,
+                233.75,
+                3,
+                3,
+                165,
+                1
+              ],
+              "14": [
+                0.112,
+                245,
+                3,
+                3,
+                165,
+                1
+              ],
+              "15": [
+                0.115,
+                256.25,
+                3,
+                3,
+                165,
+                1
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_PassiveSkill01",
+              "Avatar_DanHengPT_00_BE_InsertAttack_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Earthrend": {
+          "variant1": {
+            "skillID": 141407,
+            "trigger": "SkillMaze",
+            "name": "Earthrend",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, gains \"Bondmate\" and inflict Daze on enemies within a certain area for #1[i] second(s). Dazed enemies will not actively attack ally targets.\\nWhen switching the active character, \"Bondmate\" transfers to the current active character. At the start of the next battle, automatically uses Skill 1 time on the character with \"Bondmate\" without consuming any Skill Points.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1414_basic_atk.png",
+        "skillRef": {
+          "skillName": "Aegis Vitae",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1414_skill.png",
+        "skillRef": {
+          "skillName": "Terra Omnibus",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1414_ultimate.png",
+        "skillRef": {
+          "skillName": "A Dragon's Zenith Knows No Rue",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1414_talent.png",
+        "skillRef": {
+          "skillName": "Of Virtue, Forms Unfold",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1414_technique.png",
+        "skillRef": {
+          "skillName": "Earthrend",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Empyreanity",
+        "icon": "icon/skill/1414_skilltree1.png",
+        "desc": "When using Skill, increases ATK for the target who has become \"Bondmate\" by an amount equal to #1[i]% of Dan Heng • Permansor Terrae's ATK.",
+        "params": [
+          0.15
+        ]
+      },
+      "Point07": {
+        "name": "Sylvanity",
+        "icon": "icon/skill/1414_skilltree2.png",
+        "desc": "When combat starts, Dan Heng • Permansor Terrae advances action by #1[i]%. When the \"Bondmate\" uses an attack, Dan Heng • Permansor Terrae regenerates #2[i] Energy and \"Souldragon\" advances action by #3[i]%.",
+        "params": [
+          0.4,
+          6,
+          0.15
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.4,
+              6,
+              0.15
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Sublimity",
+        "icon": "icon/skill/1414_skilltree3.png",
+        "desc": "When \"Souldragon\" takes action, additionally provides a Shield that can offset DMG equal to #2[i]% of Dan Heng • Permansor Terrae's ATK plus #3[i] to the ally target whose current Shield Effect is the lowest. When repeatedly receiving Dan Heng • Permansor Terrae's Shield, can stack the Shield Effect, but it will not exceed #4[i]% of the current Shield provided by Skill. When the enhanced \"Souldragon\" takes action, additionally deals 1 instance of Additional DMG of the Bondmate's Type to the one enemy target whose current HP is the highest, equal to #1[i]% of the Bondmate's ATK.",
+        "params": [
+          0.4,
+          0.05,
+          100,
+          3
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+            "params": [
+              0.4,
+              0.05,
+              100,
+              3
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1414.png",
+    "preview": "image/character_preview/1414.png",
+    "portrait": "image/character_portrait/1414.png",
+    "bannerOffsets": [
+      126,
+      42,
+      0.63,
+      126,
+      42,
+      0.63,
+      126,
+      42,
+      0.63
+    ],
+    "isBuffed": false
+  },
+  "Cyrene": {
+    "internalID": 1415,
+    "name": "Cyrene",
+    "path": "Remembrance",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 24,
+    "baseStats": {
+      "ATKBase": 446.29200000000003,
+      "DEFBase": 582.1199999999999,
+      "HPBase": 1397.088,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "141501",
+        "name": "Epics, Born on a Blank Slate",
+        "rank": 1,
+        "desc": "When Demiurge triggers the Memosprite Skill \"Ode to Ego\" during the use of \"Minuet of Blooms and Plumes,\" gains 6 \"Recollection\" point(s) and increases the number of bounces for this attack by 12.",
+        "icon": "icon/skill/1415_rank1.png",
+        "paramsEido": [
+          6,
+          12
+        ]
+      },
+      {
+        "id": "141502",
+        "name": "A Tomorrow in Thirteen Shades",
+        "rank": 2,
+        "desc": "When entering combat, additionally gains 12 \"Recollection\" point(s). For every 1 different ally character that gains the Memosprite Skill buff from Demiurge, the DMG multiplier for the True DMG dealt by ally targets via the Skill's Zone increases by 6%, up to a max increase of 24%.",
+        "icon": "icon/skill/1415_rank2.png",
+        "paramsEido": [
+          12,
+          0,
+          0.06,
+          0.24
+        ],
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          },
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+          }
+        }
+      },
+      {
+        "id": "141503",
+        "name": "By Thy Being, As I've Written",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1415_ultimate.png"
+      },
+      {
+        "id": "141504",
+        "name": "Please Write On, With a Smile",
+        "rank": 4,
+        "desc": "After every 1 use of \"Minuet of Blooms and Plumes\" by Demiurge, the Bounce DMG multiplier for the triggered Memosprite Skill \"Ode to Ego\" increases by 6% in the current battle, stacking up to 24 times.",
+        "icon": "icon/skill/1415_rank4.png",
+        "paramsEido": [
+          0.06,
+          24
+        ]
+      },
+      {
+        "id": "141505",
+        "name": "Gaze, Steeped in Yesterbloom",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1415_skill.png"
+      },
+      {
+        "id": "141506",
+        "name": "Remembrance, Sung in Ripples ♪",
+        "rank": 6,
+        "desc": "When Cyrene uses Ultimate for the first time, all allies advance action by 100%. Each time Demiurge triggers the Memosprite Skill \"Ode to Ego\" during the use of \"Minuet of Blooms and Plumes,\" gains the following effects based on the number of times it has been triggered in the current battle:\n1 time: When Demiurge is on the field, reduces all enemy targets' DEF by 20%.\n2 times and more: All allies advance action by 24%.",
+        "icon": "icon/skill/1415_rank6.png",
+        "paramsEido": [
+          1,
+          0.2,
+          0.24
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Memosprite Skill": 1
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Memosprite Talent": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lo, Hope Takes Flight!": {
+          "variant1": {
+            "skillID": 141501,
+            "trigger": "Skill01",
+            "name": "Lo, Hope Takes Flight!",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Gains #2[i] \"Recollection\" point(s) and deals Ice DMG equal to #1[i]% of Cyrene's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25,
+                1
+              ],
+              "2": [
+                0.3,
+                1
+              ],
+              "3": [
+                0.35,
+                1
+              ],
+              "4": [
+                0.4,
+                1
+              ],
+              "5": [
+                0.45,
+                1
+              ],
+              "6": [
+                0.5,
+                1
+              ],
+              "7": [
+                0.55,
+                1
+              ],
+              "8": [
+                0.6,
+                1
+              ],
+              "9": [
+                0.65,
+                1
+              ],
+              "10": [
+                0.7,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill01_Camera",
+              "Avatar_Cyrene_00_Skill01_Phase01",
+              "Avatar_Cyrene_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "To Love and Tomorrow ♪": {
+          "variant1": {
+            "skillID": 141508,
+            "trigger": "Skill11",
+            "name": "To Love and Tomorrow ♪",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Gains #2[i] \"Recollection\" points and deals Ice DMG equal to #3[i]% of Cyrene's Max HP to one designated enemy. Then, deals Ice DMG equal to #1[i]% of Cyrene's Max HP to all enemies.\\n\"To Love and Tomorrow ♪\" cannot recover Skill Points.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                3,
+                0.15
+              ],
+              "2": [
+                0.18,
+                3,
+                0.18
+              ],
+              "3": [
+                0.21,
+                3,
+                0.21
+              ],
+              "4": [
+                0.24,
+                3,
+                0.24
+              ],
+              "5": [
+                0.27,
+                3,
+                0.27
+              ],
+              "6": [
+                0.3,
+                3,
+                0.3
+              ],
+              "7": [
+                0.33,
+                3,
+                0.33
+              ],
+              "8": [
+                0.36,
+                3,
+                0.36
+              ],
+              "9": [
+                0.39,
+                3,
+                0.39
+              ],
+              "10": [
+                0.42,
+                3,
+                0.42
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill11_Camera",
+              "Avatar_Cyrene_00_Skill11_Charm_Camera",
+              "Avatar_Cyrene_00_Skill11_Phase01",
+              "Avatar_Cyrene_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Bloom, Elysium of Beyond": {
+          "variant1": {
+            "skillID": 141502,
+            "trigger": "Skill02",
+            "name": "Bloom, Elysium of Beyond",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Gains #3[i] \"Recollection\" point(s) and deploys a Zone that lasts for #2[i] turns. The Zone's duration decreases by 1 at the start of Cyrene's every turn. While the Zone lasts, for each instance of DMG dealt by all ally targets, deals 1 additional instance of True DMG equal to #1[i]% of the original DMG. When Cyrene is downed, the Zone will also be dispelled.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                2,
+                3
+              ],
+              "2": [
+                0.132,
+                2,
+                3
+              ],
+              "3": [
+                0.144,
+                2,
+                3
+              ],
+              "4": [
+                0.156,
+                2,
+                3
+              ],
+              "5": [
+                0.168,
+                2,
+                3
+              ],
+              "6": [
+                0.18,
+                2,
+                3
+              ],
+              "7": [
+                0.195,
+                2,
+                3
+              ],
+              "8": [
+                0.21,
+                2,
+                3
+              ],
+              "9": [
+                0.225,
+                2,
+                3
+              ],
+              "10": [
+                0.24,
+                2,
+                3
+              ],
+              "11": [
+                0.252,
+                2,
+                3
+              ],
+              "12": [
+                0.264,
+                2,
+                3
+              ],
+              "13": [
+                0.276,
+                2,
+                3
+              ],
+              "14": [
+                0.288,
+                2,
+                3
+              ],
+              "15": [
+                0.3,
+                2,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill02_Camera",
+              "Avatar_Cyrene_00_Skill02_Phase01",
+              "Avatar_Cyrene_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "True DMG": {
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Verse ◦ Vow ∞": {
+          "variant1": {
+            "skillID": 141503,
+            "trigger": "Skill03",
+            "name": "Verse ◦ Vow ∞",
+            "type": "Summon",
+            "slot": "Ultimate",
+            "desc": "Summons memosprite Demiurge, causes it to immediately gain 1 extra turn, and activates all teammates' Ultimate. Then, enters the \"Ripples of Past Reverie\" state. Enhances Basic ATK to \"To Love and Tomorrow ♪\" and can only use this Basic ATK. Increases Cyrene's and Demiurge's CRIT Rate by #3[i]%, and deploys the Zone effect from Skill with no duration limit.\\nCan only be used once per battle. Demiurge's initial Max HP equals to #1[i]% of Cyrene's Max HP.",
+            "energyCost": 12,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                24,
+                0.25,
+                12
+              ],
+              "2": [
+                1,
+                24,
+                0.275,
+                12
+              ],
+              "3": [
+                1,
+                24,
+                0.3,
+                12
+              ],
+              "4": [
+                1,
+                24,
+                0.325,
+                12
+              ],
+              "5": [
+                1,
+                24,
+                0.35,
+                12
+              ],
+              "6": [
+                1,
+                24,
+                0.375,
+                12
+              ],
+              "7": [
+                1,
+                24,
+                0.40625,
+                12
+              ],
+              "8": [
+                1,
+                24,
+                0.4375,
+                12
+              ],
+              "9": [
+                1,
+                24,
+                0.46875,
+                12
+              ],
+              "10": [
+                1,
+                24,
+                0.5,
+                12
+              ],
+              "11": [
+                1,
+                24,
+                0.525,
+                12
+              ],
+              "12": [
+                1,
+                24,
+                0.55,
+                12
+              ],
+              "13": [
+                1,
+                24,
+                0.575,
+                12
+              ],
+              "14": [
+                1,
+                24,
+                0.6,
+                12
+              ],
+              "15": [
+                1,
+                24,
+                0.625,
+                12
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill03_Camera",
+              "Avatar_Cyrene_00_Skill03_B_Camera",
+              "Avatar_Cyrene_00_Skill03_Slow_Camera",
+              "Avatar_Cyrene_00_Skill03_Slow_Camera_Timeline",
+              "Avatar_Cyrene_00_Skill03_Slow_Camera2_Timeline",
+              "Avatar_Cyrene_00_Skill03_EnterReady",
+              "Avatar_Cyrene_00_Skill03_Phase01",
+              "Avatar_Cyrene_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        },
+        "Reunion at First Sight": {
+          "variant1": {
+            "skillID": 141514,
+            "trigger": "Skill31",
+            "name": "Reunion at First Sight",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Enables Demiurge to immediately gain 1 extra turn.",
+            "energyCost": 12,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                12
+              ],
+              "2": [
+                12
+              ],
+              "3": [
+                12
+              ],
+              "4": [
+                12
+              ],
+              "5": [
+                12
+              ],
+              "6": [
+                12
+              ],
+              "7": [
+                12
+              ],
+              "8": [
+                12
+              ],
+              "9": [
+                12
+              ],
+              "10": [
+                12
+              ],
+              "11": [
+                12
+              ],
+              "12": [
+                12
+              ],
+              "13": [
+                12
+              ],
+              "14": [
+                12
+              ],
+              "15": [
+                12
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill31_Camera",
+              "Avatar_Cyrene_00_Skill31_EnterReady",
+              "Avatar_Cyrene_00_Skill31_Phase01",
+              "Avatar_Cyrene_00_Skill31_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Hearts Gather as One": {
+          "variant1": {
+            "skillID": 141504,
+            "trigger": "SkillP01",
+            "name": "Hearts Gather as One",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When combat begins or after Cyrene takes action, other ally characters under any state and their memosprites gain \"Future.\" When ally targets with \"Future\" take action, consumes \"Future\" to grant Cyrene #1[i] \"Recollection\" point(s). When Cyrene has #4[i] \"Recollection\" points, can activate Ultimate and dispel all debuffs on her. When she has #5[i] \"Recollection\" points during the \"Ripples of Past Reverie\" state, can activate Ultimate. After reaching the maximum, it can overflow by up to #3[i] points. While Cyrene is on the field, increases DMG dealt by all ally targets by #2[f1]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.1,
+                27,
+                24,
+                12
+              ],
+              "2": [
+                1,
+                0.11,
+                27,
+                24,
+                12
+              ],
+              "3": [
+                1,
+                0.12,
+                27,
+                24,
+                12
+              ],
+              "4": [
+                1,
+                0.13,
+                27,
+                24,
+                12
+              ],
+              "5": [
+                1,
+                0.14,
+                27,
+                24,
+                12
+              ],
+              "6": [
+                1,
+                0.15,
+                27,
+                24,
+                12
+              ],
+              "7": [
+                1,
+                0.1625,
+                27,
+                24,
+                12
+              ],
+              "8": [
+                1,
+                0.175,
+                27,
+                24,
+                12
+              ],
+              "9": [
+                1,
+                0.1875,
+                27,
+                24,
+                12
+              ],
+              "10": [
+                1,
+                0.2,
+                27,
+                24,
+                12
+              ],
+              "11": [
+                1,
+                0.21,
+                27,
+                24,
+                12
+              ],
+              "12": [
+                1,
+                0.22,
+                27,
+                24,
+                12
+              ],
+              "13": [
+                1,
+                0.23,
+                27,
+                24,
+                12
+              ],
+              "14": [
+                1,
+                0.24,
+                27,
+                24,
+                12
+              ],
+              "15": [
+                1,
+                0.25,
+                27,
+                24,
+                12
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_PassiveSkill_1"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Peace at West Wind's End": {
+          "variant1": {
+            "skillID": 141507,
+            "trigger": "SkillMaze",
+            "name": "Peace at West Wind's End",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that lasts for #1[i] second(s) around the character. Enemies within this Special Dimension enter the \"This Moment, Forever\" state. While in this state, enemies will cease all actions. Ally characters within this Special Dimension have #2[i]% increased movement speed. After entering combat within the duration, deploys the Skill's Zone. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                30,
+                0.5
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Minuet of Blooms and Plumes": {
+          "variant1": {
+            "skillID": 1141501,
+            "trigger": "Skill01",
+            "name": "Minuet of Blooms and Plumes",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Deals Ice DMG to all enemies equal to #1[i]% of Demiurge's Max HP.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                12
+              ],
+              "2": [
+                0.36,
+                12
+              ],
+              "3": [
+                0.42,
+                12
+              ],
+              "4": [
+                0.48,
+                12
+              ],
+              "5": [
+                0.54,
+                12
+              ],
+              "6": [
+                0.6,
+                12
+              ],
+              "7": [
+                0.66,
+                12
+              ],
+              "8": [
+                0.72,
+                12
+              ],
+              "9": [
+                0.78,
+                12
+              ],
+              "10": [
+                0.84,
+                12
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_Skill01_Phase01",
+              "Servant_CyreneServant_00_Skill01_Phase02",
+              "Servant_CyreneServant_00_Skill01_Camera",
+              "Servant_CyreneServant_00_Skill01_Ready",
+              "Servant_CyreneServant_00_Skill01_Ready_Camera",
+              "Servant_CyreneServant_00_Skill01_VisualPrepare"
+            ],
+            "toughnessList": [
+              {
+                "Value": 5
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "This Ode, to All Lives": {
+          "variant1": {
+            "skillID": 1141502,
+            "trigger": "Skill02",
+            "name": "This Ode, to All Lives",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Applies a buff to one designated ally character. When the character is a Chrysos Heir, the target gains a special effect. When the character is not a Chrysos Heir, increases the target's DMG dealt by #2[i]% for #3[i] turns. This effect also applies on memosprites.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                12,
+                0.2,
+                2
+              ],
+              "2": [
+                12,
+                0.24,
+                2
+              ],
+              "3": [
+                12,
+                0.28,
+                2
+              ],
+              "4": [
+                12,
+                0.32,
+                2
+              ],
+              "5": [
+                12,
+                0.36,
+                2
+              ],
+              "6": [
+                12,
+                0.4,
+                2
+              ],
+              "7": [
+                12,
+                0.44,
+                2
+              ],
+              "8": [
+                12,
+                0.48,
+                2
+              ],
+              "9": [
+                12,
+                0.52,
+                2
+              ],
+              "10": [
+                12,
+                0.56,
+                2
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_Skill02_Phase01",
+              "Servant_CyreneServant_00_Skill02_Phase02",
+              "Servant_CyreneServant_00_Skill02_Camera",
+              "Servant_CyreneServant_00_Skill02_Ready",
+              "Servant_CyreneServant_00_Skill02_Ready_Camera",
+              "Servant_CyreneServant_00_Skill02_VisualPrepare"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              },
+              "Chrysos Heir": {
+                "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance)."
+              }
+            }
+          }
+        },
+        "Ode to Genesis": {
+          "variant1": {
+            "skillID": 1141513,
+            "trigger": "SkillCY01",
+            "name": "Ode to Genesis",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. When used on Trailblazer (Remembrance), increases Trailblazer (Remembrance)'s ATK by an amount equal to #1[i]% of Demiurge's Max HP, and increases Trailblazer (Remembrance)'s CRIT Rate by an amount equal to #2[i]% of Demiurge's CRIT Rate. This effect also applies to Mem. After Trailblazer (Remembrance) uses Enhanced Basic ATK in this battle, Demiurge immediately gains 1 extra turn and automatically uses \"Minuet of Blooms and Plumes.\" If the target was defeated before this ability is used, it will be used on newly appeared enemy targets instead.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.08,
+                0.36,
+                1
+              ],
+              "2": [
+                0.096,
+                0.432,
+                1
+              ],
+              "3": [
+                0.112,
+                0.504,
+                1
+              ],
+              "4": [
+                0.128,
+                0.576,
+                1
+              ],
+              "5": [
+                0.144,
+                0.648,
+                1
+              ],
+              "6": [
+                0.16,
+                0.72,
+                1
+              ],
+              "7": [
+                0.176,
+                0.792,
+                1
+              ],
+              "8": [
+                0.192,
+                0.864,
+                1
+              ],
+              "9": [
+                0.208,
+                0.936,
+                1
+              ],
+              "10": [
+                0.224,
+                1.008,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        },
+        "Ode to Romance": {
+          "variant1": {
+            "skillID": 1141514,
+            "trigger": "SkillCY02",
+            "name": "Ode to Romance",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "One-time effect. When used on Aglaea, causes Aglaea to gain \"Romance\" and immediately stacks Garmentmaker's Memosprite Talent's SPD Boost effect to its upper limit. After Aglaea or Garmentmaker uses an attack, consumes \"Romance\" and regenerates #1[i] Energy. Increases DMG dealt by Aglaea and Garmentmaker by #2[i]%, and ignores #3[i]% of the targets' DEF, lasting until Aglaea exits the \"Supreme Stance\" state.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                70,
+                0.36,
+                0.18
+              ],
+              "2": [
+                70,
+                0.432,
+                0.216
+              ],
+              "3": [
+                70,
+                0.504,
+                0.252
+              ],
+              "4": [
+                70,
+                0.576,
+                0.288
+              ],
+              "5": [
+                70,
+                0.648,
+                0.324
+              ],
+              "6": [
+                70,
+                0.72,
+                0.36
+              ],
+              "7": [
+                70,
+                0.792,
+                0.396
+              ],
+              "8": [
+                70,
+                0.864,
+                0.432
+              ],
+              "9": [
+                70,
+                0.936,
+                0.468
+              ],
+              "10": [
+                70,
+                1.008,
+                0.504
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Passage": {
+          "variant1": {
+            "skillID": 1141515,
+            "trigger": "SkillCY03",
+            "name": "Ode to Passage",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. When used on Tribbie, causes DMG dealt by Tribbie to ignore #2[i]% of enemies' DEF. When Tribbie launches Follow-Up ATK and triggers the Additional DMG from Tribbie's Zone, it further deals #1[i] instance(s) of Additional DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.06,
+                3
+              ],
+              "2": [
+                1,
+                0.072,
+                3
+              ],
+              "3": [
+                1,
+                0.084,
+                3
+              ],
+              "4": [
+                1,
+                0.096,
+                3
+              ],
+              "5": [
+                1,
+                0.108,
+                3
+              ],
+              "6": [
+                1,
+                0.12,
+                3
+              ],
+              "7": [
+                1,
+                0.132,
+                3
+              ],
+              "8": [
+                1,
+                0.144,
+                3
+              ],
+              "9": [
+                1,
+                0.156,
+                3
+              ],
+              "10": [
+                1,
+                0.168,
+                3
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY03"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        },
+        "Ode to Strife": {
+          "variant1": {
+            "skillID": 1141516,
+            "trigger": "SkillCY04",
+            "name": "Ode to Strife",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "One-time effect. When used on Mydei, removes all Crowd Control debuffs inflicted on him. And if Mydei is in the \"Vendetta\" state, he automatically uses 1 instance of \"Godslayer Be God\" without consuming Charge. Mydei's CRIT DMG increases by #1[i]% during this attack. If the target gets defeated before the use, then it will target the newly arriving enemy targets instead. If Mydei is not in the \"Vendetta\" state, then advances Mydei's action by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1
+              ],
+              "2": [
+                1.2,
+                1
+              ],
+              "3": [
+                1.4,
+                1
+              ],
+              "4": [
+                1.6,
+                1
+              ],
+              "5": [
+                1.8,
+                1
+              ],
+              "6": [
+                2,
+                1
+              ],
+              "7": [
+                2.2,
+                1
+              ],
+              "8": [
+                2.4,
+                1
+              ],
+              "9": [
+                2.6,
+                1
+              ],
+              "10": [
+                2.8,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY04"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        },
+        "Ode to Life and Death": {
+          "variant1": {
+            "skillID": 1141517,
+            "trigger": "SkillCY05",
+            "name": "Ode to Life and Death",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. When used on Castorice, \"Newbud\" can overflow up to #3[i]%. When summoning Netherwing, consumes all overflowing \"Newbud.\" For every 1% overflow amount consumed, increases the multiplier by #2[f2]% for the DMG dealt when this summoned Netherwing triggers the ability effect of its Talent \"Wings Sweep the Ruins.\" If there are #6[i] enemy target(s) or fewer on the field when summoned, the DMG multiplier additionally increases by #5[f2]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0,
+                0.0012,
+                2,
+                0,
+                0.0024,
+                2
+              ],
+              "2": [
+                0,
+                0.0014400005,
+                2,
+                0,
+                0.002880001,
+                2
+              ],
+              "3": [
+                0,
+                0.0016800009,
+                2,
+                0,
+                0.0033600004,
+                2
+              ],
+              "4": [
+                0,
+                0.0019200006,
+                2,
+                0,
+                0.0038400006,
+                2
+              ],
+              "5": [
+                0,
+                0.0021600004,
+                2,
+                0,
+                0.0043200003,
+                2
+              ],
+              "6": [
+                0,
+                0.0024,
+                2,
+                0,
+                0.0048,
+                2
+              ],
+              "7": [
+                0,
+                0.0026400005,
+                2,
+                0,
+                0.00528,
+                2
+              ],
+              "8": [
+                0,
+                0.002880001,
+                2,
+                0,
+                0.0057600006,
+                2
+              ],
+              "9": [
+                0,
+                0.00312,
+                2,
+                0,
+                0.00624,
+                2
+              ],
+              "10": [
+                0,
+                0.0033600004,
+                2,
+                0,
+                0.00672,
+                2
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY05"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Reason": {
+          "variant1": {
+            "skillID": 1141518,
+            "trigger": "SkillCY06",
+            "name": "Ode to Reason",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "One-time effect. When used on Anaxa, recovers #4[i] Skill Point(s) for allies and enables Anaxa to take action immediately. Skill has #1[i] more instances of DMG, lasting for 1 turn. The next time Anaxa uses Basic ATK or Skill, he gains \"True Knowledge\": All Erudition characters have their ATK increased by #3[i]% and their dealt Skill DMG increased by #2[i]%, lasting until the start of Anaxa's next turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.2,
+                0.3,
+                1
+              ],
+              "2": [
+                3,
+                0.24,
+                0.36,
+                1
+              ],
+              "3": [
+                3,
+                0.28,
+                0.42,
+                1
+              ],
+              "4": [
+                3,
+                0.32,
+                0.48,
+                1
+              ],
+              "5": [
+                3,
+                0.36,
+                0.54,
+                1
+              ],
+              "6": [
+                3,
+                0.4,
+                0.6,
+                1
+              ],
+              "7": [
+                3,
+                0.44,
+                0.66,
+                1
+              ],
+              "8": [
+                3,
+                0.48,
+                0.72,
+                1
+              ],
+              "9": [
+                3,
+                0.52,
+                0.78,
+                1
+              ],
+              "10": [
+                3,
+                0.56,
+                0.84,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY06"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Sky": {
+          "variant1": {
+            "skillID": 1141519,
+            "trigger": "SkillCY07",
+            "name": "Ode to Sky",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "When Demiurge uses Memosprite Skill, causes Hyacine to gain 2 stacks of \"Ode to Sky.\" When used on Hyacine, regenerates #2[i] Energy for Hyacine. When Hyacine has \"Ode to Sky\" and is providing healing, additionally increases the amount to be included in the tally of Little Ica's Memosprite Skill by an amount equal to #1[i]% of the current healing amount. After Hyacine uses Skill/Ultimate, consumes 1 stack of \"Ode to Sky.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                12
+              ],
+              "2": [
+                0.432,
+                14.4
+              ],
+              "3": [
+                0.504,
+                16.8
+              ],
+              "4": [
+                0.576,
+                19.2
+              ],
+              "5": [
+                0.648,
+                21.6
+              ],
+              "6": [
+                0.72,
+                24
+              ],
+              "7": [
+                0.792,
+                26.4
+              ],
+              "8": [
+                0.864,
+                28.8
+              ],
+              "9": [
+                0.936,
+                31.2
+              ],
+              "10": [
+                1.008,
+                33.6
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY07"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Trickery": {
+          "variant1": {
+            "skillID": 1141520,
+            "trigger": "SkillCY08",
+            "name": "Ode to Trickery",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. When used on Cipher, increases the DMG dealt by Cipher by #1[i]%, decreases the DEF of the \"Patron\" by #2[i]% and decreases the DEF of all other enemy targets by #3[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.18,
+                0.1,
+                0.06
+              ],
+              "2": [
+                0.216,
+                0.12,
+                0.072
+              ],
+              "3": [
+                0.252,
+                0.14,
+                0.084
+              ],
+              "4": [
+                0.288,
+                0.16,
+                0.096
+              ],
+              "5": [
+                0.324,
+                0.18,
+                0.108
+              ],
+              "6": [
+                0.36,
+                0.2,
+                0.12
+              ],
+              "7": [
+                0.396,
+                0.22,
+                0.132
+              ],
+              "8": [
+                0.432,
+                0.24,
+                0.144
+              ],
+              "9": [
+                0.468,
+                0.26,
+                0.156
+              ],
+              "10": [
+                0.504,
+                0.28,
+                0.168
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY08"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Worldbearing": {
+          "variant1": {
+            "skillID": 1141521,
+            "trigger": "SkillCY09",
+            "name": "Ode to Worldbearing",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. After it is used on Phainon, Phainon gains #8[i] \"Coreflame\" as well as \"Eternal Ignition\" when Transforming. When Transforming, if \"Coreflame\" exceeds #5[i], for each point in excess, Khaslana's CRIT DMG increases by #6[i]%, up to a max increase of #7[i]%. While \"Eternal Ignition\" persists, increases Khaslana's CRIT Rate by #1[f1]%. After the extra turns are depleted, the Transformation does not end, and all of Khaslana's extra turns get refreshed and #9[i] \"Scourge\" is granted. At the start of extra turns, Khaslana consumes HP equal to #2[i]% of his current HP. After using an attack, deals #3[i] instances of Additional DMG, with each instance dealing Fire Additional DMG equal to #4[f1]% of Khaslana's ATK to one random enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.08,
+                0.15,
+                5,
+                0.05,
+                12,
+                0.06,
+                0.36,
+                6,
+                4
+              ],
+              "2": [
+                0.096,
+                0.15,
+                5,
+                0.06,
+                12,
+                0.072,
+                0.432,
+                6,
+                4
+              ],
+              "3": [
+                0.112,
+                0.15,
+                5,
+                0.07,
+                12,
+                0.084,
+                0.504,
+                6,
+                4
+              ],
+              "4": [
+                0.128,
+                0.15,
+                5,
+                0.08,
+                12,
+                0.096,
+                0.576,
+                6,
+                4
+              ],
+              "5": [
+                0.144,
+                0.15,
+                5,
+                0.09,
+                12,
+                0.108,
+                0.648,
+                6,
+                4
+              ],
+              "6": [
+                0.16,
+                0.15,
+                5,
+                0.1,
+                12,
+                0.12,
+                0.72,
+                6,
+                4
+              ],
+              "7": [
+                0.176,
+                0.15,
+                5,
+                0.11,
+                12,
+                0.132,
+                0.792,
+                6,
+                4
+              ],
+              "8": [
+                0.192,
+                0.15,
+                5,
+                0.12,
+                12,
+                0.144,
+                0.864,
+                6,
+                4
+              ],
+              "9": [
+                0.208,
+                0.15,
+                5,
+                0.13,
+                12,
+                0.156,
+                0.936,
+                6,
+                4
+              ],
+              "10": [
+                0.224,
+                0.15,
+                5,
+                0.14,
+                12,
+                0.168,
+                1.008,
+                6,
+                4
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY09"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Khaslana's Extra Turn": {
+                "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              },
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              },
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        },
+        "Ode to Ocean": {
+          "variant1": {
+            "skillID": 1141522,
+            "trigger": "SkillCY10",
+            "name": "Ode to Ocean",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "One-time effect. When used on Hysilens, Hysilens gains \"Flowing Warmth.\" After Hysilens uses an attack, consumes \"Flowing Warmth\" and regenerates #4[i] Energy for this unit. In this battle, increases the DMG dealt by Hysilens by #1[i]%. After Hysilens uses Basic ATK/Skill to attack enemies, causes all the DoT currently applied on the attacked enemy targets to immediately produce DMG equal to #2[i]%/#3[i]% of the original DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                0.4,
+                60
+              ],
+              "2": [
+                0.72,
+                0.36,
+                0.48,
+                60
+              ],
+              "3": [
+                0.84,
+                0.42,
+                0.56,
+                60
+              ],
+              "4": [
+                0.96,
+                0.48,
+                0.64,
+                60
+              ],
+              "5": [
+                1.08,
+                0.54,
+                0.72,
+                60
+              ],
+              "6": [
+                1.2,
+                0.6,
+                0.8,
+                60
+              ],
+              "7": [
+                1.32,
+                0.66,
+                0.88,
+                60
+              ],
+              "8": [
+                1.44,
+                0.72,
+                0.96,
+                60
+              ],
+              "9": [
+                1.56,
+                0.78,
+                1.04,
+                60
+              ],
+              "10": [
+                1.68,
+                0.84,
+                1.12,
+                60
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY10"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Law": {
+          "variant1": {
+            "skillID": 1141523,
+            "trigger": "SkillCY11",
+            "name": "Ode to Law",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. After using on Cerydra, increases the CRIT DMG of the character with \"Military Merit\" by #1[i]%. After Coup de Main ends, Cerydra immediately gains #2[i] Charge.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                1
+              ],
+              "2": [
+                0.18,
+                1
+              ],
+              "3": [
+                0.21,
+                1
+              ],
+              "4": [
+                0.24,
+                1
+              ],
+              "5": [
+                0.27,
+                1
+              ],
+              "6": [
+                0.3,
+                1
+              ],
+              "7": [
+                0.33,
+                1
+              ],
+              "8": [
+                0.36,
+                1
+              ],
+              "9": [
+                0.39,
+                1
+              ],
+              "10": [
+                0.42,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY11"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Coup de Main": {
+                "desc": "Copy and immediately use the ability about to be used, then use the original ability.\\nCoup de Main won't trigger Coup de Main again."
+              }
+            }
+          }
+        },
+        "Ode to Time": {
+          "variant1": {
+            "skillID": 1141524,
+            "trigger": "SkillCY12",
+            "name": "Ode to Time",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. After it is used on Evernight, increases the DMG dealt when Evey uses the Memosprite Skill \"Dream, Dissolving, as Dew\" by #1[i]%. After Evernight uses Skill/Ultimate, additionally gains #2[i] \"Memoria.\" The CRIT DMG boost effect provided by the Skill is further increased by an amount equal to #3[i]% of Evernight's CRIT DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.09,
+                1,
+                0.06
+              ],
+              "2": [
+                0.108,
+                1,
+                0.072
+              ],
+              "3": [
+                0.126,
+                1,
+                0.084
+              ],
+              "4": [
+                0.144,
+                1,
+                0.096
+              ],
+              "5": [
+                0.162,
+                1,
+                0.108
+              ],
+              "6": [
+                0.18,
+                1,
+                0.12
+              ],
+              "7": [
+                0.198,
+                1,
+                0.132
+              ],
+              "8": [
+                0.216,
+                1,
+                0.144
+              ],
+              "9": [
+                0.234,
+                1,
+                0.156
+              ],
+              "10": [
+                0.252,
+                1,
+                0.168
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY12"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Earth": {
+          "variant1": {
+            "skillID": 1141525,
+            "trigger": "SkillCY13",
+            "name": "Ode to Earth",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "When Demiurge uses Memosprite Skill, grants \"Ode to Earth\" to Dan Heng • Permansor Terrae, and enables the next #3[i] attack(s) of \"Souldragon\" to deal Additional DMG of the Bondmate's Type, equal to #4[i]% of the Bondmate's Shield Effect. When Dan Heng • Permansor Terrae holds \"Ode to Earth,\" the \"Bondmate\" deals #1[f1]% increased DMG. When used on Dan Heng • Permansor Terrae, advances Souldragon's action by 100%. Souldragon's next action gains the enhancement effect of Dan Heng • Permansor Terrae's Ultimate and the Shield Effect provided by Souldragon is #5[i]% of its original Shield Effect. Does not consume the enhancement number of Dan Heng • Permansor Terrae's Ultimate.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                2,
+                3,
+                0.4,
+                1.5
+              ],
+              "2": [
+                0.144,
+                2,
+                3,
+                0.48,
+                1.5
+              ],
+              "3": [
+                0.168,
+                2,
+                3,
+                0.56,
+                1.5
+              ],
+              "4": [
+                0.192,
+                2,
+                3,
+                0.64,
+                1.5
+              ],
+              "5": [
+                0.216,
+                2,
+                3,
+                0.72,
+                1.5
+              ],
+              "6": [
+                0.24,
+                2,
+                3,
+                0.8,
+                1.5
+              ],
+              "7": [
+                0.264,
+                2,
+                3,
+                0.88,
+                1.5
+              ],
+              "8": [
+                0.288,
+                2,
+                3,
+                0.96,
+                1.5
+              ],
+              "9": [
+                0.312,
+                2,
+                3,
+                1.04,
+                1.5
+              ],
+              "10": [
+                0.336,
+                2,
+                3,
+                1.12,
+                1.5
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY13"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        },
+        "Ode to Ego": {
+          "variant1": {
+            "skillID": 1141526,
+            "trigger": "SkillCY14",
+            "name": "Ode to Ego",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "For every 1 different teammate (i.e., excluding Demiurge) from whom Cyrene has gained \"Recollection,\" additionally deals 1 instance of Ice DMG equal to #1[i]% of Demiurge's Max HP to one random enemy when Demiurge uses \"Minuet of Blooms and Plumes.\" After Cyrene uses Ultimate or when Demiurge is summoned, Demiurge immediately gains 1 \"Story.\" When \"Story\" reaches #2[i], Demiurge consumes all \"Story\" points to immediately gain 1 extra turn and automatically use \"Minuet of Blooms and Plumes.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                3
+              ],
+              "2": [
+                0.36,
+                3
+              ],
+              "3": [
+                0.42,
+                3
+              ],
+              "4": [
+                0.48,
+                3
+              ],
+              "5": [
+                0.54,
+                3
+              ],
+              "6": [
+                0.6,
+                3
+              ],
+              "7": [
+                0.66,
+                3
+              ],
+              "8": [
+                0.72,
+                3
+              ],
+              "9": [
+                0.78,
+                3
+              ],
+              "10": [
+                0.84,
+                3
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY14"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Waiting, In Every Past": {
+          "variant1": {
+            "skillID": 1141503,
+            "trigger": "SkillP01",
+            "name": "Waiting, In Every Past",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "Demiurge's SPD remains at 0, and it will not appear on the Action Order. While on the field, it is considered as Out-of-Bounds. When Cyrene's HP percentage changes, Demiurge's HP percentage will also change accordingly. While Demiurge is on the field, Cyrene's and Demiurge's Max HP increases by #1[i]%. After Demiurge uses abilities, decreases the duration of all Continuous Effects on this unit by 1.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                0
+              ],
+              "2": [
+                0.144,
+                0
+              ],
+              "3": [
+                0.168,
+                0
+              ],
+              "4": [
+                0.192,
+                0
+              ],
+              "5": [
+                0.216,
+                0
+              ],
+              "6": [
+                0.24,
+                0
+              ],
+              "7": [
+                0.264,
+                0
+              ],
+              "8": [
+                0.288,
+                0
+              ],
+              "9": [
+                0.312,
+                0
+              ],
+              "10": [
+                0.336,
+                0
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_PassiveSkill01",
+              "Servant_CyreneServant_00_EnterBattle"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Out-of-Bounds": {
+                "desc": "Neither allies nor enemies can actively select Out-of-Bounds units."
+              },
+              "Continuous Effect": {
+                "desc": "Includes buffs, debuffs, and other effects."
+              }
+            }
+          }
+        },
+        "\"Hello, World ♪\"": {
+          "variant1": {
+            "skillID": 1141505,
+            "trigger": "SkillP03",
+            "name": "\"Hello, World ♪\"",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When Demiurge is summoned, dispels Crowd Control debuffs from all allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": [],
+              "6": [],
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": []
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1415_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lo, Hope Takes Flight!",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1415_skill.png",
+        "skillRef": {
+          "skillName": "Bloom, Elysium of Beyond",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1415_ultimate.png",
+        "skillRef": {
+          "skillName": "Verse ◦ Vow ∞",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1415_talent.png",
+        "skillRef": {
+          "skillName": "Hearts Gather as One",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1415_technique.png",
+        "skillRef": {
+          "skillName": "Peace at West Wind's End",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Child of Remembrance",
+        "icon": "icon/skill/1415_skilltree1.png",
+        "desc": "When a teammate's memosprite is summoned, it gains \"Future.\" \"Future\" held by the memosprite won't be consumed."
+      },
+      "Point07": {
+        "name": "Ripples Across Time",
+        "icon": "icon/skill/1415_skilltree2.png",
+        "desc": "When there are 1/2/3 Chrysos Heir or Remembrance characters (excluding Cyrene) in the team, Cyrene gains #1[i]/#2[i]/#3[i] \"Recollection\" point(s) respectively at the start of combat.",
+        "params": [
+          2,
+          3,
+          6
+        ],
+        "extraEffects": {
+          "Chrysos Heir": {
+            "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance).",
+            "params": [
+              2,
+              3,
+              6
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Causality in Trichotomy",
+        "icon": "icon/skill/1415_skilltree3.png",
+        "desc": "When Cyrene's SPD is #1[i] or higher, increases all allies' DMG dealt by #4[i]%. Then, for every 1 SPD that exceeds #1[i], increases Cyrene's and Demiurge's Ice RES PEN by #2[i]%. Up to a maximum of #3[i] excess SPD can be taken into account for this effect.",
+        "params": [
+          180,
+          0.02,
+          60,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+            "params": [
+              180,
+              0.02,
+              60,
+              0.2
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point19": {
+        "name": "This Ode, to All Lives",
+        "icon": "icon/skill/1415_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Minuet of Blooms and Plumes",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Waiting, In Every Past",
+        "icon": "icon/skill/1415_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Waiting, In Every Past",
+          "skillSlot": "Memosprite Talent"
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1415.png",
+    "preview": "image/character_preview/1415.png",
+    "portrait": "image/character_portrait/1415.png",
+    "bannerOffsets": [
+      0,
+      180,
+      0.61,
+      0,
+      180,
+      0.61,
+      0,
+      180,
+      0.61
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 100
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11415,
+    "summonName": "Demiurge"
   },
   "Trailblazer - Destruction": {
     "internalID": 8001,

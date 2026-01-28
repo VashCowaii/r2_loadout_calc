@@ -76,13 +76,13 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Increases Lightning RES PEN by #1[i]% and DMG dealt by Joint ATK by #2[i]%."
+                  "popUpText": "Increases Lightning RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and DMG dealt by Joint ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>."
                 }
               ],
               "failed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Lightning RES PEN increases by #1[i]%."
+                  "popUpText": "Lightning RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>."
                 }
               ]
             }
@@ -112,13 +112,13 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Increases Lightning RES PEN by #1[i]% and DMG dealt by Joint ATK by #2[i]%."
+                      "popUpText": "Increases Lightning RES PEN by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> and DMG dealt by Joint ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>."
                     }
                   ],
                   "failed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Lightning RES PEN increases by #1[i]%."
+                      "popUpText": "Lightning RES PEN increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>."
                     }
                   ]
                 }
@@ -1262,7 +1262,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "DMG received increases by #2[i]%. After receiving Aglaea's attack, further takes Lightning Additional DMG equal to #1[i]% of Aglaea's ATK. Garmentmaker will prioritize this target to attack."
+                  "popUpText": "DMG received increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>. After receiving Aglaea's attack, further takes Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">MDF_PropertyValue</span> of Aglaea's ATK. Garmentmaker will prioritize this target to attack."
                 }
               ]
             }
