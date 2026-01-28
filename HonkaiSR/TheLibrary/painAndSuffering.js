@@ -3946,9 +3946,18 @@ const megaParsingFuckeryPain = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Modifier Description");
 
         // initialCounter++;
+        // ${parseRef.popUpText ? `text["${parseRef.popUpText}"]` : ""}
+
+        // <div class="rotationConditionOperatorHeaderInline">Description:</div>&nbsp;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.popUpText ? `text["${parseRef.popUpText}"]` : ""}
+            
+            ${parseRef.popUpText ? `<div class="actionDetailBody2">
+                
+                <div class="actionDetailBody2Description">
+                ${parseRef.popUpText}
+                </div>
+            </div>` : ""}
         </div>`;
     },
     "UI Display Event"(parseRef,initialCounter) {
@@ -5523,14 +5532,39 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Has Unique Name"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "uniqueName",
+
+            "invertCondition",
+            
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Has Unique Name");
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Has Unique Name:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT on " : ""}${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${parseRef.uniqueName != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Unique Identifier:</div>&nbsp;
+                ${parseRef.uniqueName}
+            </div>` : ""}
+        </div>
+        `;
+    },
     "Assign Unique Name"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             "target",
             "uniqueName",
+
+            "unknownBoolean",
             
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Toughness Value");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Assign Unique Name");
 
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Assign Unique Name:</div>&nbsp;
@@ -5540,6 +5574,11 @@ const megaParsingFuckeryPain = {
             ${parseRef.uniqueName != undefined ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Unique Identifier:</div>&nbsp;
                 ${parseRef.uniqueName}
+            </div>` : ""}
+
+            ${parseRef.unknownBoolean != undefined ? `<div class="actionDetailBody2">
+                <div class="rotationConditionOperatorHeaderInline">Unknown Boolean:</div>&nbsp;
+                ${parseRef.unknownBoolean}
             </div>` : ""}
         </div>
         `;

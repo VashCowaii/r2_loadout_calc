@@ -339,7 +339,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Increases DMG dealt by #1[f1]%. Ignores #2[i]% of the target's DEF when dealing DMG."
+                  "popUpText": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>. Ignores <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio2</span> of the target's DEF when dealing DMG."
                 },
                 {
                   "name": "Define Custom Variable",
@@ -789,7 +789,7 @@ const configAbility = {
                 },
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Increases ATK by #1[i]% and additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by #2[f1]%."
+                  "popUpText": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span> and additionally enhances the DMG Boost effect provided by each stack of Sparkle's talent by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>."
                 }
               ]
             }

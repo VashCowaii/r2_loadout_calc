@@ -2536,7 +2536,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Increases ATK by #1[i] points. Gains SPD Boost after using Ultimate."
+                      "popUpText": "Increases ATK by <span class=\"descriptionNumberColor\">MDF_AttackDelta</span> points. Gains SPD Boost after using Ultimate."
                     },
                     {
                       "name": "Add Events/Bonuses",

@@ -3488,7 +3488,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Numby's DMG multiplier increases by #1[i]%, CRIT DMG increases by #2[i]%, and Fire RES PEN increases by #4[i]%. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by #3[i]%."
+                      "popUpText": "Numby's DMG multiplier increases by <span class=\"descriptionNumberColor\">Skill03_P1_BEDamageRatio</span>, CRIT DMG increases by <span class=\"descriptionNumberColor\">Skill03_P2_CriticalChance</span>, and Fire RES PEN increases by <span class=\"descriptionNumberColor\">Rank06_P2_PenRatio</span>. When enemies with Proof of Debt receive attacks from allies' Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by <span class=\"descriptionNumberColor\">Skill03_P3_DelayRatio</span>."
                     }
                   ]
                 }

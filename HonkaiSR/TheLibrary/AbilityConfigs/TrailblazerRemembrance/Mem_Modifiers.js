@@ -287,7 +287,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "CRIT Rate increases by #2[i]%. For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to #1[i]% of the original DMG."
+                  "popUpText": "CRIT Rate increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. For every 1 instance of DMG dealt, additionally deals 1 instance of True DMG equal to <span class=\"descriptionNumberColor\">MDF_DamagePercentage</span> of the original DMG."
                 },
                 {
                   "name": "Stack Target Stat Value",

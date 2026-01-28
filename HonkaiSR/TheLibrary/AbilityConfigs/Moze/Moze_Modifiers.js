@@ -294,7 +294,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "This unit is marked as the Prey. After every attack it receives, it will receive Lightning Additional DMG equal to #1[i]% of Moze's ATK, and Moze will consume 1 point of Charge. When ally targets attack the enemy marked as \"Prey,\" the CRIT DMG dealt increases by #2[i]%."
+                  "popUpText": "This unit is marked as the Prey. After every attack it receives, it will receive Lightning Additional DMG equal to <span class=\"descriptionNumberColor\">#SkillP01_P1_ExtraDamagePercentage</span> of Moze's ATK, and Moze will consume 1 point of Charge. When ally targets attack the enemy marked as \"Prey,\" the CRIT DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_TotalDamage</span>."
                 },
                 {
                   "name": "Define Custom Variable",

@@ -91,7 +91,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Increases CRIT DMG by #1[f1]% and Basic ATK DMG by #2[f1]%."
+                  "popUpText": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">_CritDamageRatioTotal</span> and Basic ATK DMG by <span class=\"descriptionNumberColor\">_NormalDamageRatioTotal</span>."
                 }
               ]
             }
@@ -240,7 +240,7 @@ const configAbility = {
                 },
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Increases CRIT DMG by #1[f1]% and Basic ATK DMG by #2[f1]%."
+                  "popUpText": "Increases CRIT DMG by <span class=\"descriptionNumberColor\">_CritDamageRatioTotal</span> and Basic ATK DMG by <span class=\"descriptionNumberColor\">_NormalDamageRatioTotal</span>."
                 }
               ]
             },

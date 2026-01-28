@@ -2009,7 +2009,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Max HP increases by #1[i]%, Outgoing Healing increases by #2[i]%, and CRIT DMG increases by #3[i]%."
+                      "popUpText": "Max HP increases by <span class=\"descriptionNumberColor\">_MaxHPAdd</span>, Outgoing Healing increases by <span class=\"descriptionNumberColor\">_HealHPRatioAdd</span>, and CRIT DMG increases by <span class=\"descriptionNumberColor\">_MaxCritDmgAdd</span>."
                     },
                     {
                       "name": "Stack Target Stat Value",

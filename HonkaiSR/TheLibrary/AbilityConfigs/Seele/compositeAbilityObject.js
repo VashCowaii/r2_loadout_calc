@@ -1871,7 +1871,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "DMG dealt increases by #1[i]%, and Quantum RES PEN +#2[i]%."
+                      "popUpText": "DMG dealt increases by <span class=\"descriptionNumberColor\">seele_dmg_percent</span>, and Quantum RES PEN +<span class=\"descriptionNumberColor\">MDF_Penetrate</span>."
                     },
                     {
                       "name": "Stack Target Stat Value",

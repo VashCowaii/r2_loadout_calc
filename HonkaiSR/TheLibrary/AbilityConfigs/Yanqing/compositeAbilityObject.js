@@ -1365,7 +1365,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Increases CRIT Rate by #1[f1]%, CRIT DMG by #2[i]%, and Effect RES by #3[i]%."
+                      "popUpText": "Increases CRIT Rate by <span class=\"descriptionNumberColor\">MDF_CriticalBoost</span>, CRIT DMG by <span class=\"descriptionNumberColor\">MDF_ALLCriticalDamage</span>, and Effect RES by <span class=\"descriptionNumberColor\">MDF_StatusResistance</span>."
                     }
                   ]
                 },

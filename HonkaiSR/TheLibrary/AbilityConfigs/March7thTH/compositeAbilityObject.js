@@ -1675,7 +1675,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "The next Enhanced Basic ATK's initial Hits Per Action increases by #1[i]. The fixed chance of additionally dealing DMG increases by #2[i]%, and CRIT DMG dealt increases by #3[i]%."
+                      "popUpText": "The next Enhanced Basic ATK's initial Hits Per Action increases by <span class=\"descriptionNumberColor\">MDF_Value</span>. The fixed chance of additionally dealing DMG increases by <span class=\"descriptionNumberColor\">MDF_Chance</span>, and CRIT DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>."
                     }
                   ]
                 }

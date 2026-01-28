@@ -2781,9 +2781,6 @@ const compositeAbilityObject = {
       ],
       "parse": [
         {
-          "name": "Unknown Action To Define(Not always an error)"
-        },
-        {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",

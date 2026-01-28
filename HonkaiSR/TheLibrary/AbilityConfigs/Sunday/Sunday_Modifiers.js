@@ -606,7 +606,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Ignores #1[i]% of enemy targets' DEF. When a summon deals DMG, ignores #2[i]% of the enemy targets' DEF."
+                  "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
                 }
               ]
             },
@@ -671,7 +671,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "Ignores #1[i]% of enemy targets' DEF. When a summon deals DMG, ignores #2[i]% of the enemy targets' DEF."
+                  "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
                 }
               ]
             }
@@ -725,7 +725,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Ignores #1[i]% of enemy targets' DEF. When a summon deals DMG, ignores #2[i]% of the enemy targets' DEF."
+                      "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF. When a summon deals DMG, ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio02</span> of the enemy targets' DEF."
                     }
                   ]
                 }
@@ -781,7 +781,7 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Update Modifier Description",
-                      "popUpText": "Ignores #1[i]% of enemy targets' DEF."
+                      "popUpText": "Ignores <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span> of enemy targets' DEF."
                     }
                   ]
                 }
@@ -981,7 +981,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Update Modifier Description",
-                  "popUpText": "CRIT DMG increases by #1[f1]%. DMG dealt increases by #2[f1]%."
+                  "popUpText": "CRIT DMG increases by <span class=\"descriptionNumberColor\">MDF_PropertyFinal</span>. DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillRank_Rank02_P1_AddDamage</span>."
                 },
                 {
                   "name": "Stack Target Stat Value",
