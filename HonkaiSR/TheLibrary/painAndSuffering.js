@@ -2580,11 +2580,11 @@ const megaParsingFuckeryPain = {
             "name",
             // "stat",
             // "living",
-            "state",
+            "exclude",
             // "defenders",
             // "sortByHighest",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"SorFilter by Targetate");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Filter by Target");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
@@ -6690,7 +6690,8 @@ const megaParsingFuckeryPain = {
             const regexConfig = /\{\{(.+?)\}\}/g;
             
             // const regexOperator = /\[\[([^}]+)\]\]/g;
-            const regexOperator = /\[\[(.+?)\]\]/g;;
+            const regexOperator = /\[\[(.+?)\]\](-\d+)?/g;
+            
             resultingTarget = resultingTarget.replace(regexConfig, (match, replaceValue) => {return `<a class="targetNaming" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalTargetN/#id${encodeURIComponent(replaceValue)}">${replaceValue}</a>`;});
             resultingTarget = resultingTarget.replace(regexOperator, (match, replaceValue) => {return `<a class="targetFunction" target="_blank" href="/HonkaiSR/TheLibrary/AbilityConfigs/GlobalTargetO/#id${encodeURIComponent(replaceValue)}">${replaceValue}</a><span>()</span>`;});
         

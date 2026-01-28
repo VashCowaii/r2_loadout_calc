@@ -967,7 +967,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "IfTimeWereaFlower",
     "entryIcon": "icon/light_cone/23038.png",
     "lineCount": 325,
-    "sizeCount": 10401
+    "sizeCount": 10406
   },
   {
     "entryType": "lc",

@@ -82,7 +82,7 @@ const configAbility = {
           "name": "Add Sub-Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Player Team All(with Unselectable)V2}}.RemoveBattleEvent-{{Caster}}"
+            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]-{{Caster}}"
           },
           "modifier": "LC_23038_AuraBonus_Buff[<span class=\"descriptionNumberColor\">Presage</span>]",
           "haloStatus": true,
