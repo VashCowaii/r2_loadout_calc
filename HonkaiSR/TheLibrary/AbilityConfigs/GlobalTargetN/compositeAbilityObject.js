@@ -44,6 +44,107 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "DHPT Player Team Living",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Filter by Life-State",
+                  "state": "Mask_AliveOnly"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "DHPT",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectables}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "DanHengPT_PassiveModifier"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Souldragon",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "DanHengPT_BEModifier"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Bondmate",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectables}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "DanHengPT_LongLing[<span class=\"descriptionNumberColor\">Bondmate</span>]"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Cerydra Self-Target",
           "isTargetOperator": false,
           "execute": [

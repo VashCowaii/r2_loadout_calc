@@ -8674,7 +8674,7 @@ const megaParsingFuckeryPain = {
         else if (typeOfParse === "object") {
             wasObject = true;
             // console.log(parseRef)
-            console.log(parseRef.name,parseRef)
+            console.log(parseRef.name)
             parseString = megaParsingFuckery[parseRef.name](parseRef,initialCounter);
 
             // if (typeof parseString === "object") {console.log(parseString)}

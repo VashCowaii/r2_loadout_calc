@@ -296,6 +296,10 @@ let allowedCharacterList = [
     "trimName": "Cerydra"
   },
   {
+    "fullName": "Dan Heng • Permansor Terrae",
+    "trimName": "DanHengPT"
+  },
+  {
     "fullName": "Trailblazer - Destruction",
     "trimName": "TrailblazerDestruction"
   },

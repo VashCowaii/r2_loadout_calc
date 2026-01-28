@@ -137,6 +137,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Dan Heng • Permansor Terrae",
+    "trimCharacterName": "DanHengPT",
+    "entryIcon": "icon/character/1414.png",
+    "lineCount": 4252,
+    "sizeCount": 152819
+  },
+  {
+    "entryType": "char",
     "entryName": "Topaz & Numby",
     "trimCharacterName": "TopazNumby",
     "entryIcon": "icon/character/1112.png",

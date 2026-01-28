@@ -1,4 +1,4 @@
 let readyCharacterCounts = {
   "totalCharacterCount": 84,
-  "readyCharacterCount": 81
+  "readyCharacterCount": 82
 }

@@ -58240,6 +58240,899 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Dan Heng • Permansor Terrae": {
+    "internalID": 1414,
+    "name": "Dan Heng • Permansor Terrae",
+    "path": "Preservation",
+    "element": "Physical",
+    "rarity": 5,
+    "energyMax": 135,
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 776.1600000000001,
+      "HPBase": 1047.816,
+      "SPDBase": 97,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 150
+    },
+    "eidolons": [
+      {
+        "id": "141401",
+        "name": "Shed Scales of Old",
+        "rank": 1,
+        "desc": "When Dan Heng • Permansor Terrae uses Ultimate, recovers 1 Skill Point(s) and increases the \"Bondmate's\" All-Type RES PEN by 18%, lasting for 3 turn(s).",
+        "icon": "icon/skill/1414_rank1.png",
+        "paramsEido": [
+          1,
+          0.18,
+          3
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      {
+        "id": "141402",
+        "name": "Watch Trails to Blaze",
+        "rank": 2,
+        "desc": "Additionally increases the number of actions for the enhanced Souldragon from Ultimate by 2. After Dan Heng • Permansor Terrae uses Ultimate, Souldragon advances action by 100%. When the enhanced \"Souldragon\" takes action, the Additional DMG dealt by the \"Bondmate\" becomes 200% of its original DMG, and the Shield Effect provided in this instance becomes 200% of its original Shield Effect.",
+        "icon": "icon/skill/1414_rank2.png",
+        "paramsEido": [
+          2,
+          2,
+          2
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          },
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      },
+      {
+        "id": "141403",
+        "name": "Bear Weight of Worlds",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1414_ultimate.png"
+      },
+      {
+        "id": "141404",
+        "name": "By Oath, This Vessel Is I",
+        "rank": 4,
+        "desc": "Reduces the DMG taken by the \"Bondmate\" by 20%.",
+        "icon": "icon/skill/1414_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "141405",
+        "name": "The Path of Permanence Sweeps Far",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1414_skill.png"
+      },
+      {
+        "id": "141406",
+        "name": "One Dream to Enfold All Wilds",
+        "rank": 6,
+        "desc": "When the \"Bondmate\" is on the field, increases the DMG taken by all enemies by 20%. When the \"Bondmate\" deals DMG, ignores 12% of the enemy targets' DEF. When Dan Heng • Permansor Terrae uses Ultimate, the \"Bondmate\" will deal Additional DMG of the Bondmate's Type to all enemies, equal to 330% of the Bondmate's ATK.",
+        "icon": "icon/skill/1414_rank6.png",
+        "paramsEido": [
+          0.2,
+          3.3,
+          0.12
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Aegis Vitae": {
+          "variant1": {
+            "skillID": 141401,
+            "trigger": "Skill01",
+            "name": "Aegis Vitae",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Physical DMG equal to #1[i]% of Dan Heng • Permansor Terrae's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_Skill01_Camera",
+              "Avatar_DanHengPT_00_Skill01_Phase01",
+              "Avatar_DanHengPT_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Terra Omnibus": {
+          "variant1": {
+            "skillID": 141402,
+            "trigger": "Skill02",
+            "name": "Terra Omnibus",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Designates one ally character as the \"Bondmate\" and provides all allies with a Shield that can offset DMG equal to #1[f1]% of Dan Heng • Permansor Terrae's ATK plus #2[i] for #3[i] turn(s). When repeatedly receiving Dan Heng • Permansor Terrae's Shield, can stack the Shield Effect, but it will not exceed #4[i]% of the current Shield provided by Skill.\\n\"Bondmate\" only applies to the most recent target of Dan Heng • Permansor Terrae's Skill.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.14,
+                100,
+                3,
+                3
+              ],
+              "2": [
+                0.1475,
+                160,
+                3,
+                3
+              ],
+              "3": [
+                0.155,
+                205,
+                3,
+                3
+              ],
+              "4": [
+                0.1625,
+                250,
+                3,
+                3
+              ],
+              "5": [
+                0.17,
+                280,
+                3,
+                3
+              ],
+              "6": [
+                0.176,
+                310,
+                3,
+                3
+              ],
+              "7": [
+                0.182,
+                332.5,
+                3,
+                3
+              ],
+              "8": [
+                0.188,
+                355,
+                3,
+                3
+              ],
+              "9": [
+                0.194,
+                377.5,
+                3,
+                3
+              ],
+              "10": [
+                0.2,
+                400,
+                3,
+                3
+              ],
+              "11": [
+                0.206,
+                422.5,
+                3,
+                3
+              ],
+              "12": [
+                0.212,
+                445,
+                3,
+                3
+              ],
+              "13": [
+                0.218,
+                467.5,
+                3,
+                3
+              ],
+              "14": [
+                0.224,
+                490,
+                3,
+                3
+              ],
+              "15": [
+                0.23,
+                512.5,
+                3,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_Skill02_Camera",
+              "Avatar_DanHengPT_00_Skill02_Camera_End",
+              "Avatar_DanHengPT_00_Skill02_Phase01",
+              "Avatar_DanHengPT_00_Skill02_Phase02",
+              "Avatar_DanHengPT_00_BE_AddShield"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "A Dragon's Zenith Knows No Rue": {
+          "variant1": {
+            "skillID": 141403,
+            "trigger": "Skill03",
+            "name": "A Dragon's Zenith Knows No Rue",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Physical DMG equal to #1[i]% of Dan Heng • Permansor Terrae's ATK to all enemies, and provides a Shield to all allies that can offset DMG equal to #4[f1]% of Dan Heng • Permansor Terrae's ATK plus #5[i], lasting for #6[i] turn(s). When repeatedly receiving Dan Heng • Permansor Terrae's Shield, can stack the Shield Effect, but it will not exceed #7[i]% of the current Shield provided by Skill.\\n\"Souldragon\" becomes enhanced. When \"Souldragon\" takes action, launches Follow-Up ATK, dealing Physical DMG to all enemies equal to #2[i]% of Dan Heng • Permansor Terrae's ATK and Additional DMG of the Bondmate's Type to all enemies equal to #8[f1]% of the Bondmate's ATK. The enhancement lasts for #3[i] \"Souldragon\" action(s).",
+            "energyCost": 135,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.5,
+                0.4,
+                2,
+                0.14,
+                100,
+                3,
+                3,
+                0.4
+              ],
+              "2": [
+                1.65,
+                0.44,
+                2,
+                0.1475,
+                160,
+                3,
+                3,
+                0.44
+              ],
+              "3": [
+                1.8,
+                0.48,
+                2,
+                0.155,
+                205,
+                3,
+                3,
+                0.48
+              ],
+              "4": [
+                1.95,
+                0.52,
+                2,
+                0.1625,
+                250,
+                3,
+                3,
+                0.52
+              ],
+              "5": [
+                2.1,
+                0.56,
+                2,
+                0.17,
+                280,
+                3,
+                3,
+                0.56
+              ],
+              "6": [
+                2.25,
+                0.6,
+                2,
+                0.176,
+                310,
+                3,
+                3,
+                0.6
+              ],
+              "7": [
+                2.4375,
+                0.65,
+                2,
+                0.182,
+                332.5,
+                3,
+                3,
+                0.65
+              ],
+              "8": [
+                2.625,
+                0.7,
+                2,
+                0.188,
+                355,
+                3,
+                3,
+                0.7
+              ],
+              "9": [
+                2.8125,
+                0.75,
+                2,
+                0.194,
+                377.5,
+                3,
+                3,
+                0.75
+              ],
+              "10": [
+                3,
+                0.8,
+                2,
+                0.2,
+                400,
+                3,
+                3,
+                0.8
+              ],
+              "11": [
+                3.15,
+                0.84,
+                2,
+                0.206,
+                422.5,
+                3,
+                3,
+                0.84
+              ],
+              "12": [
+                3.3,
+                0.88,
+                2,
+                0.212,
+                445,
+                3,
+                3,
+                0.88
+              ],
+              "13": [
+                3.45,
+                0.92,
+                2,
+                0.218,
+                467.5,
+                3,
+                3,
+                0.92
+              ],
+              "14": [
+                3.6,
+                0.96,
+                2,
+                0.224,
+                490,
+                3,
+                3,
+                0.96
+              ],
+              "15": [
+                3.75,
+                1,
+                2,
+                0.23,
+                512.5,
+                3,
+                3,
+                1
+              ]
+            },
+            "element": "Physical",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_Skill03_Camera",
+              "Avatar_DanHengPT_00_Skill03_EnterReady",
+              "Avatar_DanHengPT_00_Skill03_Phase01",
+              "Avatar_DanHengPT_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Of Virtue, Forms Unfold": {
+          "variant1": {
+            "skillID": 141404,
+            "trigger": "SkillP01",
+            "name": "Of Virtue, Forms Unfold",
+            "type": "Defense",
+            "slot": "Talent",
+            "desc": "When an ally character becomes the \"Bondmate,\" Dan Heng • Permansor Terrae summons \"Souldragon\" for them, which has an initial SPD of #5[i].\\nWhen \"Souldragon\" takes action, dispels #6[i] debuff(s) from all allies and provides a Shield that can offset DMG equal to #1[f1]% of Dan Heng • Permansor Terrae's ATK plus #2[i] for #3[i] turn(s). The Shield Effect provided by Dan Heng • Permansor Terrae and \"Souldragon\" can be stacked, but it will not exceed #4[i]% of the Shield provided by Dan Heng • Permansor Terrae's Skill.\\nWhen Dan Heng • Permansor Terrae or the \"Bondmate\" is knocked down, \"Souldragon\" disappears.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.07,
+                50,
+                3,
+                3,
+                165,
+                1
+              ],
+              "2": [
+                0.073750004,
+                80,
+                3,
+                3,
+                165,
+                1
+              ],
+              "3": [
+                0.0775,
+                102.5,
+                3,
+                3,
+                165,
+                1
+              ],
+              "4": [
+                0.08125,
+                125,
+                3,
+                3,
+                165,
+                1
+              ],
+              "5": [
+                0.085,
+                140,
+                3,
+                3,
+                165,
+                1
+              ],
+              "6": [
+                0.088,
+                155,
+                3,
+                3,
+                165,
+                1
+              ],
+              "7": [
+                0.091,
+                166.25,
+                3,
+                3,
+                165,
+                1
+              ],
+              "8": [
+                0.094,
+                177.5,
+                3,
+                3,
+                165,
+                1
+              ],
+              "9": [
+                0.097,
+                188.75,
+                3,
+                3,
+                165,
+                1
+              ],
+              "10": [
+                0.1,
+                200,
+                3,
+                3,
+                165,
+                1
+              ],
+              "11": [
+                0.103,
+                211.25,
+                3,
+                3,
+                165,
+                1
+              ],
+              "12": [
+                0.106,
+                222.5,
+                3,
+                3,
+                165,
+                1
+              ],
+              "13": [
+                0.109,
+                233.75,
+                3,
+                3,
+                165,
+                1
+              ],
+              "14": [
+                0.112,
+                245,
+                3,
+                3,
+                165,
+                1
+              ],
+              "15": [
+                0.115,
+                256.25,
+                3,
+                3,
+                165,
+                1
+              ]
+            },
+            "element": "Physical",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_PassiveSkill01",
+              "Avatar_DanHengPT_00_BE_InsertAttack_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Earthrend": {
+          "variant1": {
+            "skillID": 141407,
+            "trigger": "SkillMaze",
+            "name": "Earthrend",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, gains \"Bondmate\" and inflict Daze on enemies within a certain area for #1[i] second(s). Dazed enemies will not actively attack ally targets.\\nWhen switching the active character, \"Bondmate\" transfers to the current active character. At the start of the next battle, automatically uses Skill 1 time on the character with \"Bondmate\" without consuming any Skill Points.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_DanHengPT_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1414_basic_atk.png",
+        "skillRef": {
+          "skillName": "Aegis Vitae",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1414_skill.png",
+        "skillRef": {
+          "skillName": "Terra Omnibus",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1414_ultimate.png",
+        "skillRef": {
+          "skillName": "A Dragon's Zenith Knows No Rue",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1414_talent.png",
+        "skillRef": {
+          "skillName": "Of Virtue, Forms Unfold",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1414_technique.png",
+        "skillRef": {
+          "skillName": "Earthrend",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Empyreanity",
+        "icon": "icon/skill/1414_skilltree1.png",
+        "desc": "When using Skill, increases ATK for the target who has become \"Bondmate\" by an amount equal to #1[i]% of Dan Heng • Permansor Terrae's ATK.",
+        "params": [
+          0.15
+        ]
+      },
+      "Point07": {
+        "name": "Sylvanity",
+        "icon": "icon/skill/1414_skilltree2.png",
+        "desc": "When combat starts, Dan Heng • Permansor Terrae advances action by #1[i]%. When the \"Bondmate\" uses an attack, Dan Heng • Permansor Terrae regenerates #2[i] Energy and \"Souldragon\" advances action by #3[i]%.",
+        "params": [
+          0.4,
+          6,
+          0.15
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [
+              0.4,
+              6,
+              0.15
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Sublimity",
+        "icon": "icon/skill/1414_skilltree3.png",
+        "desc": "When \"Souldragon\" takes action, additionally provides a Shield that can offset DMG equal to #2[i]% of Dan Heng • Permansor Terrae's ATK plus #3[i] to the ally target whose current Shield Effect is the lowest. When repeatedly receiving Dan Heng • Permansor Terrae's Shield, can stack the Shield Effect, but it will not exceed #4[i]% of the current Shield provided by Skill. When the enhanced \"Souldragon\" takes action, additionally deals 1 instance of Additional DMG of the Bondmate's Type to the one enemy target whose current HP is the highest, equal to #1[i]% of the Bondmate's ATK.",
+        "params": [
+          0.4,
+          0.05,
+          100,
+          3
+        ],
+        "extraEffects": {
+          "Additional DMG": {
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+            "params": [
+              0.4,
+              0.05,
+              100,
+              3
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1414.png",
+    "preview": "image/character_preview/1414.png",
+    "portrait": "image/character_portrait/1414.png",
+    "bannerOffsets": [
+      126,
+      42,
+      0.63,
+      126,
+      42,
+      0.63,
+      126,
+      42,
+      0.63
+    ],
+    "isBuffed": false
+  },
   "Trailblazer - Destruction": {
     "internalID": 8001,
     "name": "Trailblazer - Destruction",
