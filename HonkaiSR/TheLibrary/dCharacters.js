@@ -52493,6 +52493,1598 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Castorice": {
+    "internalID": 1407,
+    "name": "Castorice",
+    "path": "Remembrance",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": null,
+    "baseStats": {
+      "ATKBase": 523.908,
+      "DEFBase": 485.1,
+      "HPBase": 1629.936,
+      "SPDBase": 95,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "140701",
+        "name": "Snowbound Maiden, Memory to Tomb",
+        "rank": 1,
+        "desc": "When the enemy target's current HP is 80%/50% of Max HP or lower, the DMG dealt to it by \"Boneclaw, Doomdrake's Embrace,\" \"Claw Splits the Veil,\" \"Breath Scorches the Shadow,\" and \"Wings Sweep the Ruins\" is 120%/140% of the original DMG respectively.",
+        "icon": "icon/skill/1407_rank1.png",
+        "paramsEido": [
+          0.8,
+          0.5,
+          1.2,
+          1.4
+        ]
+      },
+      {
+        "id": "140702",
+        "name": "Crown on Wings of Bloom",
+        "rank": 2,
+        "desc": "After summoning the memosprite Netherwing, Castorice gains 2 stack(s) of \"Ardent Will.\" \"Ardent Will\" can stack up to 2 time(s) and can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow\" and advance Castorice's action by 100%. When using the next Enhanced Skill, Castorice gains \"Newbud\" by an amount equal to 30% of max \"Newbud.\"",
+        "icon": "icon/skill/1407_rank2.png",
+        "paramsEido": [
+          2,
+          2,
+          0.3
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      },
+      {
+        "id": "140703",
+        "name": "Pious Pilgrim, Dance in Doom",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1407_ultimate.png"
+      },
+      {
+        "id": "140704",
+        "name": "Rest in Songs of Gloom",
+        "rank": 4,
+        "desc": "While Castorice is on the field, all allies' HP restored when receiving healing increases by 20%.",
+        "icon": "icon/skill/1407_rank4.png",
+        "paramsEido": [
+          0.2
+        ]
+      },
+      {
+        "id": "140705",
+        "name": "Pristine Pages, Prophecy as Plume",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1407_skill.png"
+      },
+      {
+        "id": "140706",
+        "name": "Await for Years to Loom",
+        "rank": 6,
+        "desc": "When Castorice or Netherwing deals DMG, increases Quantum RES PEN by 20%. During Netherwing's attacks, can reduce enemy Toughness regardless of Weakness Types. When breaking Weaknesses, triggers the Quantum Weakness Break effect. And the number of Bounces for Netherwing's Talent \"Wings Sweep the Ruins\" additionally increases by 3.",
+        "icon": "icon/skill/1407_rank6.png",
+        "paramsEido": [
+          0.2,
+          3
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Memosprite Talent": 1,
+        "Memosprite Skill": 1
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2,
+        "Memosprite Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lament, Nethersea's Ripple": {
+          "variant1": {
+            "skillID": 140701,
+            "trigger": "Skill01",
+            "name": "Lament, Nethersea's Ripple",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Castorice's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Castorice_00_Skill01_Camera",
+              "Avatar_Castorice_00_Skill01_Phase01",
+              "Avatar_Castorice_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Silence, Wraithfly's Caress": {
+          "variant1": {
+            "skillID": 140702,
+            "trigger": "Skill02",
+            "name": "Silence, Wraithfly's Caress",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Consumes #1[i]% of all allies' current HP. Deals Quantum DMG equal to #2[i]% of Castorice's Max HP to one designated enemy and Quantum DMG equal to #3[i]% of Castorice's Max HP to adjacent targets.\\nIf the current HP is insufficient, reduces the current HP down to 1.\\nIf Netherwing is on the battlefield, the Skill becomes \"Boneclaw, Doomdrake's Embrace\" instead.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                0.25,
+                0.15
+              ],
+              "2": [
+                0.3,
+                0.275,
+                0.165
+              ],
+              "3": [
+                0.3,
+                0.3,
+                0.18
+              ],
+              "4": [
+                0.3,
+                0.325,
+                0.195
+              ],
+              "5": [
+                0.3,
+                0.35,
+                0.21
+              ],
+              "6": [
+                0.3,
+                0.375,
+                0.225
+              ],
+              "7": [
+                0.3,
+                0.40625,
+                0.24375
+              ],
+              "8": [
+                0.3,
+                0.4375,
+                0.2625
+              ],
+              "9": [
+                0.3,
+                0.46875,
+                0.28125
+              ],
+              "10": [
+                0.3,
+                0.5,
+                0.3
+              ],
+              "11": [
+                0.3,
+                0.525,
+                0.315
+              ],
+              "12": [
+                0.3,
+                0.55,
+                0.33
+              ],
+              "13": [
+                0.3,
+                0.575,
+                0.345
+              ],
+              "14": [
+                0.3,
+                0.6,
+                0.36
+              ],
+              "15": [
+                0.3,
+                0.625,
+                0.375
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Castorice_00_Skill02_Camera",
+              "Avatar_Castorice_00_Skill02_Phase01",
+              "Avatar_Castorice_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Boneclaw, Doomdrake's Embrace": {
+          "variant1": {
+            "skillID": 140709,
+            "trigger": "Skill21",
+            "name": "Boneclaw, Doomdrake's Embrace",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Consumes #1[i]% of the current HP of all allies (except Netherwing). Castorice and Netherwing launch Joint ATK on the targets, dealing Quantum DMG equal to #2[f1]% and #3[f1]% of Castorice's Max HP to all enemies.\\nIf the current HP is insufficient, reduces the current HP down to 1.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.15,
+                0.25
+              ],
+              "2": [
+                0.4,
+                0.165,
+                0.275
+              ],
+              "3": [
+                0.4,
+                0.18,
+                0.3
+              ],
+              "4": [
+                0.4,
+                0.195,
+                0.325
+              ],
+              "5": [
+                0.4,
+                0.21,
+                0.35
+              ],
+              "6": [
+                0.4,
+                0.225,
+                0.375
+              ],
+              "7": [
+                0.4,
+                0.24375,
+                0.40625
+              ],
+              "8": [
+                0.4,
+                0.2625,
+                0.4375
+              ],
+              "9": [
+                0.4,
+                0.28125,
+                0.46875
+              ],
+              "10": [
+                0.4,
+                0.3,
+                0.5
+              ],
+              "11": [
+                0.4,
+                0.315,
+                0.525
+              ],
+              "12": [
+                0.4,
+                0.33,
+                0.55
+              ],
+              "13": [
+                0.4,
+                0.345,
+                0.575
+              ],
+              "14": [
+                0.4,
+                0.36,
+                0.6
+              ],
+              "15": [
+                0.4,
+                0.375,
+                0.625
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Castorice_00_Skill21_Camera",
+              "Avatar_Castorice_00_Skill21_Camera02",
+              "Avatar_Castorice_00_Skill21_Phase01",
+              "Avatar_Castorice_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Joint Attack": {
+                "desc": "Multiple targets respectively use attacks on enemy targets in one action."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Doomshriek, Dawn's Chime": {
+          "variant1": {
+            "skillID": 140703,
+            "trigger": "Skill03",
+            "name": "Doomshriek, Dawn's Chime",
+            "type": "Summon",
+            "slot": "Ultimate",
+            "desc": "Summons the memosprite Netherwing and advances its action by 100%. At the same time, deploys the Territory \"Lost Netherland,\" which decreases all enemies' All-Type RES by #4[i]%. If Castorice has the DMG Boost effect from her Talent, then this effect spreads to Netherwing. Netherwing has an initial SPD of #1[i] and a set Max HP equal to #3[i]% of max \"Newbud.\"\\nAfter Netherwing experiences #2[i] turns or when its HP is 0, it disappears and dispels the Territory \"Lost Netherland.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                165,
+                3,
+                1,
+                0.1,
+                0
+              ],
+              "2": [
+                165,
+                3,
+                1,
+                0.11,
+                0
+              ],
+              "3": [
+                165,
+                3,
+                1,
+                0.12,
+                0
+              ],
+              "4": [
+                165,
+                3,
+                1,
+                0.13,
+                0
+              ],
+              "5": [
+                165,
+                3,
+                1,
+                0.14,
+                0
+              ],
+              "6": [
+                165,
+                3,
+                1,
+                0.15,
+                0
+              ],
+              "7": [
+                165,
+                3,
+                1,
+                0.1625,
+                0
+              ],
+              "8": [
+                165,
+                3,
+                1,
+                0.175,
+                0
+              ],
+              "9": [
+                165,
+                3,
+                1,
+                0.1875,
+                0
+              ],
+              "10": [
+                165,
+                3,
+                1,
+                0.2,
+                0
+              ],
+              "11": [
+                165,
+                3,
+                1,
+                0.21,
+                0
+              ],
+              "12": [
+                165,
+                3,
+                1,
+                0.22,
+                0
+              ],
+              "13": [
+                165,
+                3,
+                1,
+                0.23,
+                0
+              ],
+              "14": [
+                165,
+                3,
+                1,
+                0.24,
+                0
+              ],
+              "15": [
+                165,
+                3,
+                1,
+                0.25,
+                0
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Castorice_00_Skill03_Camera",
+              "Avatar_Castorice_00_Skill03_Camera02",
+              "Avatar_Castorice_00_Skill03_EnterReady",
+              "Avatar_Castorice_00_Skill03_Phase01",
+              "Avatar_Castorice_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "Territory": {
+                "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Desolation Across Palms": {
+          "variant1": {
+            "skillID": 140704,
+            "trigger": "SkillP01",
+            "name": "Desolation Across Palms",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "The maximum limit of \"Newbud\" is related to the levels of all characters on the battlefield. For every 1 point of HP lost by all allies, Castorice gains 1 point of \"Newbud.\" When \"Newbud\" reaches its maximum limit, can activate the Ultimate. When allies lose HP, Castorice's and Netherwing's DMG dealt increases by #2[i]%. This effect can stack up to #3[i] time(s), lasting for #4[i] turn(s).\\nWhen Netherwing is on the field, \"Newbud\" cannot be gained through Talent, and every 1 point of HP lost by all allies (except Netherwing) will be converted to an equal amount of HP for Netherwing.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0,
+                0.1,
+                3,
+                3
+              ],
+              "2": [
+                0,
+                0.11,
+                3,
+                3
+              ],
+              "3": [
+                0,
+                0.12,
+                3,
+                3
+              ],
+              "4": [
+                0,
+                0.13,
+                3,
+                3
+              ],
+              "5": [
+                0,
+                0.14,
+                3,
+                3
+              ],
+              "6": [
+                0,
+                0.15,
+                3,
+                3
+              ],
+              "7": [
+                0,
+                0.1625,
+                3,
+                3
+              ],
+              "8": [
+                0,
+                0.175,
+                3,
+                3
+              ],
+              "9": [
+                0,
+                0.1875,
+                3,
+                3
+              ],
+              "10": [
+                0,
+                0.2,
+                3,
+                3
+              ],
+              "11": [
+                0,
+                0.21,
+                3,
+                3
+              ],
+              "12": [
+                0,
+                0.22,
+                3,
+                3
+              ],
+              "13": [
+                0,
+                0.23,
+                3,
+                3
+              ],
+              "14": [
+                0,
+                0.24,
+                3,
+                3
+              ],
+              "15": [
+                0,
+                0.25,
+                3,
+                3
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Castorice_00_PassiveSkill_1"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Technique": {
+        "Wail, Death's Herald": {
+          "variant1": {
+            "skillID": 140707,
+            "trigger": "SkillMaze",
+            "name": "Wail, Death's Herald",
+            "slot": "Technique",
+            "desc": "After using Technique, enters the \"Netherveil\" state that lasts for #3[i] seconds. While \"Netherveil\" is active, enemies are unable to actively approach Castorice.\\nDuring \"Netherveil,\" active attacks will cause all enemies within range to enter combat. At the same time, summons the memosprite Netherwing, advances its action by 100%, and deploys the Territory \"Lost Netherland.\" Netherwing has its current HP equal to #2[i]% of max \"Newbud.\" After entering battle, consumes #1[i]% of the current HP of all allies (except Netherwing).\\nIf Netherwing is not summoned after entering battle, Castorice gains \"Newbud\" by an amount equal to #4[i]% of max \"Newbud.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.5,
+                20,
+                0.3
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Castorice_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "Territory": {
+                "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used."
+              }
+            }
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Claw Splits the Veil": {
+          "variant1": {
+            "skillID": 1140701,
+            "trigger": "Skill01",
+            "name": "Claw Splits the Veil",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Deals Quantum DMG equal to #1[f1]% of Castorice's Max HP to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2
+              ],
+              "2": [
+                0.24
+              ],
+              "3": [
+                0.28
+              ],
+              "4": [
+                0.32
+              ],
+              "5": [
+                0.36
+              ],
+              "6": [
+                0.4
+              ],
+              "7": [
+                0.44
+              ],
+              "8": [
+                0.48
+              ],
+              "9": [
+                0.52
+              ],
+              "10": [
+                0.56
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill01_Phase01",
+              "Servant_CastoriceServant_Skill01_Phase02",
+              "Servant_CastoriceServant_Skill01_Camera",
+              "Servant_CastoriceServant_Skill01_Ready"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Breath Scorches the Shadow": {
+          "variant1": {
+            "skillID": 1140702,
+            "trigger": "Skill02",
+            "name": "Breath Scorches the Shadow",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Launching \"Breath Scorches the Shadow\" will consume #1[i]% of Netherwing's Max HP to deal Quantum DMG equal to #2[f1]% of Castorice's Max HP to all enemies.\\nIn one attack, \"Breath Scorches the Shadow\" can be launched repeatedly, with the DMG multiplier increased progressively to #3[f1]% / #4[f1]%. After reaching #4[f1]%, it will not increase further. The DMG Multiplier Boost effect will not decrease before Netherwing disappears.\\nWhen Netherwing's current HP is equal to or less than #5[i]% of its Max HP, launching this ability will actively reduce HP down to 1, and then trigger the ability effect equal to that of the Talent \"Wings Sweep the Ruins.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                0.12,
+                0.14,
+                0.17,
+                0.25
+              ],
+              "2": [
+                0.25,
+                0.144,
+                0.168,
+                0.204,
+                0.25
+              ],
+              "3": [
+                0.25,
+                0.168,
+                0.196,
+                0.238,
+                0.25
+              ],
+              "4": [
+                0.25,
+                0.192,
+                0.224,
+                0.272,
+                0.25
+              ],
+              "5": [
+                0.25,
+                0.216,
+                0.252,
+                0.306,
+                0.25
+              ],
+              "6": [
+                0.25,
+                0.24,
+                0.28,
+                0.34,
+                0.25
+              ],
+              "7": [
+                0.25,
+                0.264,
+                0.308,
+                0.374,
+                0.25
+              ],
+              "8": [
+                0.25,
+                0.288,
+                0.336,
+                0.408,
+                0.25
+              ],
+              "9": [
+                0.25,
+                0.312,
+                0.364,
+                0.442,
+                0.25
+              ],
+              "10": [
+                0.25,
+                0.336,
+                0.392,
+                0.476,
+                0.25
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill02_Phase01",
+              "Servant_CastoriceServant_Skill02_Phase02",
+              "Servant_CastoriceServant_Skill02_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant2": {
+            "skillID": 1140710,
+            "trigger": "Skill21",
+            "name": "Breath Scorches the Shadow",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Consumes this unit's HP to deal Quantum DMG to all enemies, and this turn will not conclude. When using this ability repeatedly, the ability can be enhanced up to 3 times. When HP is #5[i]% or lower, using this ability will actively trigger the ability effect of Memosprite Talent \"Wings Sweep the Ruins.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.25
+              ],
+              "3": [
+                0.25
+              ],
+              "4": [
+                0.25
+              ],
+              "5": [
+                0.25
+              ],
+              "6": [
+                0.25
+              ],
+              "7": [
+                0.25
+              ],
+              "8": [
+                0.25
+              ],
+              "9": [
+                0.25
+              ],
+              "10": [
+                0.25
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill21_Phase01",
+              "Servant_CastoriceServant_Skill21_Phase02",
+              "Servant_CastoriceServant_Skill21_Camera",
+              "Servant_CastoriceServant_Skill21_Skill01toSkill21_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          },
+          "variant3": {
+            "skillID": 1140711,
+            "trigger": "Skill22",
+            "name": "Breath Scorches the Shadow",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Consumes this unit's HP to deal Quantum DMG to all enemies, and this turn will not conclude. When using this ability repeatedly, the ability can be enhanced up to 3 times. When HP is #5[i]% or lower, using this ability will actively trigger the ability effect of Memosprite Talent \"Wings Sweep the Ruins.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.25
+              ],
+              "3": [
+                0.25
+              ],
+              "4": [
+                0.25
+              ],
+              "5": [
+                0.25
+              ],
+              "6": [
+                0.25
+              ],
+              "7": [
+                0.25
+              ],
+              "8": [
+                0.25
+              ],
+              "9": [
+                0.25
+              ],
+              "10": [
+                0.25
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill22_Phase01",
+              "Servant_CastoriceServant_Skill22_Phase02",
+              "Servant_CastoriceServant_Skill22_Camera",
+              "Servant_CastoriceServant_Skill22_Skill01toSkill22_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Wings Sweep the Ruins": {
+          "variant1": {
+            "skillID": 1140712,
+            "trigger": "Skill23",
+            "name": "Wings Sweep the Ruins",
+            "type": "Bounce",
+            "slot": "Memosprite Skill",
+            "desc": "Consumes all HP and deals #2[i] instance(s) of DMG, with each instance dealing Quantum DMG equal to #1[f1]% of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to #3[i]% of Castorice's Max HP plus #4[i] for all allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                6,
+                0.03,
+                400
+              ],
+              "2": [
+                0.24,
+                6,
+                0.036,
+                480
+              ],
+              "3": [
+                0.28,
+                6,
+                0.042,
+                560
+              ],
+              "4": [
+                0.32,
+                6,
+                0.048,
+                640
+              ],
+              "5": [
+                0.36,
+                6,
+                0.054,
+                720
+              ],
+              "6": [
+                0.4,
+                6,
+                0.06,
+                800
+              ],
+              "7": [
+                0.44,
+                6,
+                0.066,
+                880
+              ],
+              "8": [
+                0.48,
+                6,
+                0.072,
+                960
+              ],
+              "9": [
+                0.52,
+                6,
+                0.078,
+                1040
+              ],
+              "10": [
+                0.56,
+                6,
+                0.084,
+                1120
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Servant",
+            "skillEffect": "Bounce",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_Skill23_Phase01",
+              "Servant_CastoriceServant_Skill23_Phase02",
+              "Servant_CastoriceServant_Skill23_Camera",
+              "Servant_CastoriceServant_Skill23_Camera_NoneCasterSummonerCamera",
+              "Servant_CastoriceServant_Skill23_ReadytoFly_Camera",
+              "Servant_CastoriceServant_Skill23_ReadytoFly_Camera02",
+              "Servant_CastoriceServant_Skill23_ReadytoFly_Camera03"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Mooncocoon Shrouds the Form": {
+          "variant1": {
+            "skillID": 1140703,
+            "trigger": "SkillP01",
+            "name": "Mooncocoon Shrouds the Form",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "When Netherwing is on the field, it acts as backup for allies. When allies take DMG or consume HP, their current HP can be reduced down to a minimum of 1, after which Netherwing will bear the HP loss. But Netherwing consumes HP equal to #1[i]% of the original value. This lasts until Netherwing disappears.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                5
+              ],
+              "2": [
+                5
+              ],
+              "3": [
+                5
+              ],
+              "4": [
+                5
+              ],
+              "5": [
+                5
+              ],
+              "6": [
+                5
+              ],
+              "7": [
+                5
+              ],
+              "8": [
+                5
+              ],
+              "9": [
+                5
+              ],
+              "10": [
+                5
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_PassiveSkill01",
+              "Servant_CastoriceServant_Together_Phase01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Backup": {
+                "desc": "Enemies cannot actively target backup units. Allies' Blast-type abilities cannot Blast to backup units."
+              }
+            }
+          }
+        },
+        "Roar Rumbles the Realm": {
+          "variant1": {
+            "skillID": 1140705,
+            "trigger": "SkillP03",
+            "name": "Roar Rumbles the Realm",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "When Netherwing is summoned, increases DMG dealt by all allies by #1[i]%, lasting for #2[i] turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                3
+              ],
+              "2": [
+                0.1,
+                3
+              ],
+              "3": [
+                0.1,
+                3
+              ],
+              "4": [
+                0.1,
+                3
+              ],
+              "5": [
+                0.1,
+                3
+              ],
+              "6": [
+                0.1,
+                3
+              ],
+              "7": [
+                0.1,
+                3
+              ],
+              "8": [
+                0.1,
+                3
+              ],
+              "9": [
+                0.1,
+                3
+              ],
+              "10": [
+                0.1,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Wings Sweep the Ruins": {
+          "variant1": {
+            "skillID": 1140706,
+            "trigger": "SkillP04",
+            "name": "Wings Sweep the Ruins",
+            "type": "Bounce",
+            "slot": "Memosprite Talent",
+            "desc": "When Netherwing disappears, deals #2[i] instance(s) of DMG, with each instance dealing Quantum DMG equal to #1[f1]% of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to #3[i]% of Castorice's Max HP plus #4[i] for all allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 5,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                6,
+                0.03,
+                400
+              ],
+              "2": [
+                0.24,
+                6,
+                0.036,
+                480
+              ],
+              "3": [
+                0.28,
+                6,
+                0.042,
+                560
+              ],
+              "4": [
+                0.32,
+                6,
+                0.048,
+                640
+              ],
+              "5": [
+                0.36,
+                6,
+                0.054,
+                720
+              ],
+              "6": [
+                0.4,
+                6,
+                0.06,
+                800
+              ],
+              "7": [
+                0.44,
+                6,
+                0.066,
+                880
+              ],
+              "8": [
+                0.48,
+                6,
+                0.072,
+                960
+              ],
+              "9": [
+                0.52,
+                6,
+                0.078,
+                1040
+              ],
+              "10": [
+                0.56,
+                6,
+                0.084,
+                1120
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "Bounce",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CastoriceServant_DeathRattle",
+              "Servant_CastoriceServant_PassiveInsertAbility_Phase01",
+              "Servant_CastoriceServant_PassiveInsertAbility_Phase02",
+              "Servant_CastoriceServant_PassiveInsertAbility_Camera",
+              "Servant_CastoriceServant_PassiveInsertAbility_NoneCasterSummonerCamera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1407_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lament, Nethersea's Ripple",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1407_skill.png",
+        "skillRef": {
+          "skillName": "Silence, Wraithfly's Caress",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1407_ultimate.png",
+        "skillRef": {
+          "skillName": "Doomshriek, Dawn's Chime",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1407_talent.png",
+        "skillRef": {
+          "skillName": "Desolation Across Palms",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1407_technique.png",
+        "skillRef": {
+          "skillName": "Wail, Death's Herald",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Contained Dark Tide",
+        "icon": "icon/skill/1407_skilltree1.png",
+        "desc": "After ally targets (excluding Netherwing) receive healing, converts #1[i]% of the healed amount into \"Newbud.\" If Netherwing is on the field, this is converted to Netherwing's HP instead. Each ally target can accumulate a conversion amount up to #2[i]% of the max \"Newbud.\" After any unit takes action, all units reset their accumulated conversion amount.",
+        "params": [
+          1,
+          0.12
+        ]
+      },
+      "Point07": {
+        "name": "Inverted Torch",
+        "icon": "icon/skill/1407_skilltree2.png",
+        "desc": "When Castorice's current HP is higher than or equal to #1[i]% of her Max HP, her SPD increases by #2[i]%. When Netherwing uses \"Breath Scorches the Shadow\" and deals fatal damage to all enemies on the field or brings them to a point where their HP cannot be reduced further, Netherwing's SPD increases by #3[i]%, lasting for 1 turn.",
+        "params": [
+          0.5,
+          0.4,
+          1
+        ]
+      },
+      "Point08": {
+        "name": "Where The West Wind Dwells",
+        "icon": "icon/skill/1407_skilltree3.png",
+        "desc": "Each time Netherwing uses \"Breath Scorches the Shadow,\" the DMG dealt increases by #1[i]%. This effect stacks up to #2[i] time(s) and lasts until the end of this turn.",
+        "params": [
+          0.3,
+          6
+        ]
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.032
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.048
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point17": {
+        "name": "DMG Boost: Quantum",
+        "icon": "icon/property/IconQuantumAddedRatio.png",
+        "stats": {
+          "DamageQuantum": 0.064
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point19": {
+        "name": "Claw Splits the Veil",
+        "icon": "icon/skill/1407_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Claw Splits the Veil",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Breath Scorches the Shadow",
+        "icon": "icon/skill/1407_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Mooncocoon Shrouds the Form",
+          "skillSlot": "Memosprite Talent"
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1407.png",
+    "preview": "image/character_preview/1407.png",
+    "portrait": "image/character_portrait/1407.png",
+    "bannerOffsets": [
+      36,
+      8,
+      0.64,
+      36,
+      8,
+      0.64,
+      36,
+      8,
+      0.64
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 100
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11407,
+    "summonName": "Netherwing: Pollux"
+  },
   "Phainon": {
     "internalID": 1408,
     "name": "Phainon",

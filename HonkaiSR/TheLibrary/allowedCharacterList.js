@@ -268,6 +268,14 @@ let allowedCharacterList = [
     "trimName": "Cipher"
   },
   {
+    "fullName": "Castorice",
+    "trimName": "Castorice"
+  },
+  {
+    "fullName": "Netherwing: Pollux",
+    "trimName": "NetherwingPollux"
+  },
+  {
     "fullName": "Phainon",
     "trimName": "Phainon"
   },
