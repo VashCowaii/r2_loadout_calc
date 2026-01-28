@@ -229,11 +229,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_NormalDamageRatioTotal",
                   "value": {
-                    "operator": "Variables[0] (_MaxLayerSwitch) || Variables[1] (_Layer) || MUL || RETURN",
-                    "displayLines": "(_MaxLayerSwitch * _Layer)",
+                    "operator": "Variables[0] (__NormalDamageRatio) || Variables[1] (_Layer) || MUL || RETURN",
+                    "displayLines": "(__NormalDamageRatio * _Layer)",
                     "constants": [],
                     "variables": [
-                      "_MaxLayerSwitch",
+                      "__NormalDamageRatio",
                       "_Layer"
                     ]
                   }
