@@ -44,6 +44,115 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Demiurge",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1415,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}.[[getSummoner]]"
+                    },
+                    "characterName": "Cyrene"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Cyrene",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1415,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Cyrene"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Demiurge's Player Team Mirror",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Search",
+                  "entityType": "Avatar",
+                  "teamType": "Player Team",
+                  "livingState": "Mask_AliveOnly"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Target is Unselectable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "invertCondition": true
+                  }
+                },
+                {
+                  "name": "Filter by Target",
+                  "exclude": {
+                    "name": "Target Name",
+                    "target": "{{Caster's Summoner}}"
+                  }
+                },
+                {
+                  "name": "Sort by Physical Positioning",
+                  "byHighest": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Cyrene's All Player Characters",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Search",
+              "entityType": "Avatar",
+              "teamType": "Player Team",
+              "livingState": "Mask_AliveOnly"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "DHPT Player Team Living",
           "isTargetOperator": false,
           "execute": [

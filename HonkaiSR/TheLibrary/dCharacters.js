@@ -60572,6 +60572,2680 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Cyrene": {
+    "internalID": 1415,
+    "name": "Cyrene",
+    "path": "Remembrance",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 24,
+    "baseStats": {
+      "ATKBase": 446.29200000000003,
+      "DEFBase": 582.1199999999999,
+      "HPBase": 1397.088,
+      "SPDBase": 101,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "141501",
+        "name": "Epics, Born on a Blank Slate",
+        "rank": 1,
+        "desc": "When Demiurge triggers the Memosprite Skill \"Ode to Ego\" during the use of \"Minuet of Blooms and Plumes,\" gains 6 \"Recollection\" point(s) and increases the number of bounces for this attack by 12.",
+        "icon": "icon/skill/1415_rank1.png",
+        "paramsEido": [
+          6,
+          12
+        ]
+      },
+      {
+        "id": "141502",
+        "name": "A Tomorrow in Thirteen Shades",
+        "rank": 2,
+        "desc": "When entering combat, additionally gains 12 \"Recollection\" point(s). For every 1 different ally character that gains the Memosprite Skill buff from Demiurge, the DMG multiplier for the True DMG dealt by ally targets via the Skill's Zone increases by 6%, up to a max increase of 24%.",
+        "icon": "icon/skill/1415_rank2.png",
+        "paramsEido": [
+          12,
+          0,
+          0.06,
+          0.24
+        ],
+        "extraEffects": {
+          "Buff": {
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+          },
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+          }
+        }
+      },
+      {
+        "id": "141503",
+        "name": "By Thy Being, As I've Written",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1415_ultimate.png"
+      },
+      {
+        "id": "141504",
+        "name": "Please Write On, With a Smile",
+        "rank": 4,
+        "desc": "After every 1 use of \"Minuet of Blooms and Plumes\" by Demiurge, the Bounce DMG multiplier for the triggered Memosprite Skill \"Ode to Ego\" increases by 6% in the current battle, stacking up to 24 times.",
+        "icon": "icon/skill/1415_rank4.png",
+        "paramsEido": [
+          0.06,
+          24
+        ]
+      },
+      {
+        "id": "141505",
+        "name": "Gaze, Steeped in Yesterbloom",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1415_skill.png"
+      },
+      {
+        "id": "141506",
+        "name": "Remembrance, Sung in Ripples ♪",
+        "rank": 6,
+        "desc": "When Cyrene uses Ultimate for the first time, all allies advance action by 100%. Each time Demiurge triggers the Memosprite Skill \"Ode to Ego\" during the use of \"Minuet of Blooms and Plumes,\" gains the following effects based on the number of times it has been triggered in the current battle:\n1 time: When Demiurge is on the field, reduces all enemy targets' DEF by 20%.\n2 times and more: All allies advance action by 24%.",
+        "icon": "icon/skill/1415_rank6.png",
+        "paramsEido": [
+          1,
+          0.2,
+          0.24
+        ],
+        "extraEffects": {
+          "Action Advanced": {
+            "desc": "Reduces the target's waiting interval before the next action."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Memosprite Skill": 1
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Memosprite Talent": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Lo, Hope Takes Flight!": {
+          "variant1": {
+            "skillID": 141501,
+            "trigger": "Skill01",
+            "name": "Lo, Hope Takes Flight!",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Gains #2[i] \"Recollection\" point(s) and deals Ice DMG equal to #1[i]% of Cyrene's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25,
+                1
+              ],
+              "2": [
+                0.3,
+                1
+              ],
+              "3": [
+                0.35,
+                1
+              ],
+              "4": [
+                0.4,
+                1
+              ],
+              "5": [
+                0.45,
+                1
+              ],
+              "6": [
+                0.5,
+                1
+              ],
+              "7": [
+                0.55,
+                1
+              ],
+              "8": [
+                0.6,
+                1
+              ],
+              "9": [
+                0.65,
+                1
+              ],
+              "10": [
+                0.7,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill01_Camera",
+              "Avatar_Cyrene_00_Skill01_Phase01",
+              "Avatar_Cyrene_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "To Love and Tomorrow ♪": {
+          "variant1": {
+            "skillID": 141508,
+            "trigger": "Skill11",
+            "name": "To Love and Tomorrow ♪",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Gains #2[i] \"Recollection\" points and deals Ice DMG equal to #3[i]% of Cyrene's Max HP to one designated enemy. Then, deals Ice DMG equal to #1[i]% of Cyrene's Max HP to all enemies.\\n\"To Love and Tomorrow ♪\" cannot recover Skill Points.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                3,
+                0.15
+              ],
+              "2": [
+                0.18,
+                3,
+                0.18
+              ],
+              "3": [
+                0.21,
+                3,
+                0.21
+              ],
+              "4": [
+                0.24,
+                3,
+                0.24
+              ],
+              "5": [
+                0.27,
+                3,
+                0.27
+              ],
+              "6": [
+                0.3,
+                3,
+                0.3
+              ],
+              "7": [
+                0.33,
+                3,
+                0.33
+              ],
+              "8": [
+                0.36,
+                3,
+                0.36
+              ],
+              "9": [
+                0.39,
+                3,
+                0.39
+              ],
+              "10": [
+                0.42,
+                3,
+                0.42
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill11_Camera",
+              "Avatar_Cyrene_00_Skill11_Charm_Camera",
+              "Avatar_Cyrene_00_Skill11_Phase01",
+              "Avatar_Cyrene_00_Skill11_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 15
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Bloom, Elysium of Beyond": {
+          "variant1": {
+            "skillID": 141502,
+            "trigger": "Skill02",
+            "name": "Bloom, Elysium of Beyond",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Gains #3[i] \"Recollection\" point(s) and deploys a Zone that lasts for #2[i] turns. The Zone's duration decreases by 1 at the start of Cyrene's every turn. While the Zone lasts, for each instance of DMG dealt by all ally targets, deals 1 additional instance of True DMG equal to #1[i]% of the original DMG. When Cyrene is downed, the Zone will also be dispelled.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                2,
+                3
+              ],
+              "2": [
+                0.132,
+                2,
+                3
+              ],
+              "3": [
+                0.144,
+                2,
+                3
+              ],
+              "4": [
+                0.156,
+                2,
+                3
+              ],
+              "5": [
+                0.168,
+                2,
+                3
+              ],
+              "6": [
+                0.18,
+                2,
+                3
+              ],
+              "7": [
+                0.195,
+                2,
+                3
+              ],
+              "8": [
+                0.21,
+                2,
+                3
+              ],
+              "9": [
+                0.225,
+                2,
+                3
+              ],
+              "10": [
+                0.24,
+                2,
+                3
+              ],
+              "11": [
+                0.252,
+                2,
+                3
+              ],
+              "12": [
+                0.264,
+                2,
+                3
+              ],
+              "13": [
+                0.276,
+                2,
+                3
+              ],
+              "14": [
+                0.288,
+                2,
+                3
+              ],
+              "15": [
+                0.3,
+                2,
+                3
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill02_Camera",
+              "Avatar_Cyrene_00_Skill02_Phase01",
+              "Avatar_Cyrene_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "True DMG": {
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Verse ◦ Vow ∞": {
+          "variant1": {
+            "skillID": 141503,
+            "trigger": "Skill03",
+            "name": "Verse ◦ Vow ∞",
+            "type": "Summon",
+            "slot": "Ultimate",
+            "desc": "Summons memosprite Demiurge, causes it to immediately gain 1 extra turn, and activates all teammates' Ultimate. Then, enters the \"Ripples of Past Reverie\" state. Enhances Basic ATK to \"To Love and Tomorrow ♪\" and can only use this Basic ATK. Increases Cyrene's and Demiurge's CRIT Rate by #3[i]%, and deploys the Zone effect from Skill with no duration limit.\\nCan only be used once per battle. Demiurge's initial Max HP equals to #1[i]% of Cyrene's Max HP.",
+            "energyCost": 12,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                24,
+                0.25,
+                12
+              ],
+              "2": [
+                1,
+                24,
+                0.275,
+                12
+              ],
+              "3": [
+                1,
+                24,
+                0.3,
+                12
+              ],
+              "4": [
+                1,
+                24,
+                0.325,
+                12
+              ],
+              "5": [
+                1,
+                24,
+                0.35,
+                12
+              ],
+              "6": [
+                1,
+                24,
+                0.375,
+                12
+              ],
+              "7": [
+                1,
+                24,
+                0.40625,
+                12
+              ],
+              "8": [
+                1,
+                24,
+                0.4375,
+                12
+              ],
+              "9": [
+                1,
+                24,
+                0.46875,
+                12
+              ],
+              "10": [
+                1,
+                24,
+                0.5,
+                12
+              ],
+              "11": [
+                1,
+                24,
+                0.525,
+                12
+              ],
+              "12": [
+                1,
+                24,
+                0.55,
+                12
+              ],
+              "13": [
+                1,
+                24,
+                0.575,
+                12
+              ],
+              "14": [
+                1,
+                24,
+                0.6,
+                12
+              ],
+              "15": [
+                1,
+                24,
+                0.625,
+                12
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill03_Camera",
+              "Avatar_Cyrene_00_Skill03_B_Camera",
+              "Avatar_Cyrene_00_Skill03_Slow_Camera",
+              "Avatar_Cyrene_00_Skill03_Slow_Camera_Timeline",
+              "Avatar_Cyrene_00_Skill03_Slow_Camera2_Timeline",
+              "Avatar_Cyrene_00_Skill03_EnterReady",
+              "Avatar_Cyrene_00_Skill03_Phase01",
+              "Avatar_Cyrene_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        },
+        "Reunion at First Sight": {
+          "variant1": {
+            "skillID": 141514,
+            "trigger": "Skill31",
+            "name": "Reunion at First Sight",
+            "type": "Enhance",
+            "slot": "Ultimate",
+            "desc": "Enables Demiurge to immediately gain 1 extra turn.",
+            "energyCost": 12,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                12
+              ],
+              "2": [
+                12
+              ],
+              "3": [
+                12
+              ],
+              "4": [
+                12
+              ],
+              "5": [
+                12
+              ],
+              "6": [
+                12
+              ],
+              "7": [
+                12
+              ],
+              "8": [
+                12
+              ],
+              "9": [
+                12
+              ],
+              "10": [
+                12
+              ],
+              "11": [
+                12
+              ],
+              "12": [
+                12
+              ],
+              "13": [
+                12
+              ],
+              "14": [
+                12
+              ],
+              "15": [
+                12
+              ]
+            },
+            "attackType": "Ultra",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_Skill31_Camera",
+              "Avatar_Cyrene_00_Skill31_EnterReady",
+              "Avatar_Cyrene_00_Skill31_Phase01",
+              "Avatar_Cyrene_00_Skill31_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Hearts Gather as One": {
+          "variant1": {
+            "skillID": 141504,
+            "trigger": "SkillP01",
+            "name": "Hearts Gather as One",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When combat begins or after Cyrene takes action, other ally characters under any state and their memosprites gain \"Future.\" When ally targets with \"Future\" take action, consumes \"Future\" to grant Cyrene #1[i] \"Recollection\" point(s). When Cyrene has #4[i] \"Recollection\" points, can activate Ultimate and dispel all debuffs on her. When she has #5[i] \"Recollection\" points during the \"Ripples of Past Reverie\" state, can activate Ultimate. After reaching the maximum, it can overflow by up to #3[i] points. While Cyrene is on the field, increases DMG dealt by all ally targets by #2[f1]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.1,
+                27,
+                24,
+                12
+              ],
+              "2": [
+                1,
+                0.11,
+                27,
+                24,
+                12
+              ],
+              "3": [
+                1,
+                0.12,
+                27,
+                24,
+                12
+              ],
+              "4": [
+                1,
+                0.13,
+                27,
+                24,
+                12
+              ],
+              "5": [
+                1,
+                0.14,
+                27,
+                24,
+                12
+              ],
+              "6": [
+                1,
+                0.15,
+                27,
+                24,
+                12
+              ],
+              "7": [
+                1,
+                0.1625,
+                27,
+                24,
+                12
+              ],
+              "8": [
+                1,
+                0.175,
+                27,
+                24,
+                12
+              ],
+              "9": [
+                1,
+                0.1875,
+                27,
+                24,
+                12
+              ],
+              "10": [
+                1,
+                0.2,
+                27,
+                24,
+                12
+              ],
+              "11": [
+                1,
+                0.21,
+                27,
+                24,
+                12
+              ],
+              "12": [
+                1,
+                0.22,
+                27,
+                24,
+                12
+              ],
+              "13": [
+                1,
+                0.23,
+                27,
+                24,
+                12
+              ],
+              "14": [
+                1,
+                0.24,
+                27,
+                24,
+                12
+              ],
+              "15": [
+                1,
+                0.25,
+                27,
+                24,
+                12
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_PassiveSkill_1"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Debuff": {
+                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Peace at West Wind's End": {
+          "variant1": {
+            "skillID": 141507,
+            "trigger": "SkillMaze",
+            "name": "Peace at West Wind's End",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, creates a Special Dimension that lasts for #1[i] second(s) around the character. Enemies within this Special Dimension enter the \"This Moment, Forever\" state. While in this state, enemies will cease all actions. Ally characters within this Special Dimension have #2[i]% increased movement speed. After entering combat within the duration, deploys the Skill's Zone. Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                30,
+                0.5
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Cyrene_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Minuet of Blooms and Plumes": {
+          "variant1": {
+            "skillID": 1141501,
+            "trigger": "Skill01",
+            "name": "Minuet of Blooms and Plumes",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Deals Ice DMG to all enemies equal to #1[i]% of Demiurge's Max HP.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                12
+              ],
+              "2": [
+                0.36,
+                12
+              ],
+              "3": [
+                0.42,
+                12
+              ],
+              "4": [
+                0.48,
+                12
+              ],
+              "5": [
+                0.54,
+                12
+              ],
+              "6": [
+                0.6,
+                12
+              ],
+              "7": [
+                0.66,
+                12
+              ],
+              "8": [
+                0.72,
+                12
+              ],
+              "9": [
+                0.78,
+                12
+              ],
+              "10": [
+                0.84,
+                12
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_Skill01_Phase01",
+              "Servant_CyreneServant_00_Skill01_Phase02",
+              "Servant_CyreneServant_00_Skill01_Camera",
+              "Servant_CyreneServant_00_Skill01_Ready",
+              "Servant_CyreneServant_00_Skill01_Ready_Camera",
+              "Servant_CyreneServant_00_Skill01_VisualPrepare"
+            ],
+            "toughnessList": [
+              {
+                "Value": 5
+              },
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "This Ode, to All Lives": {
+          "variant1": {
+            "skillID": 1141502,
+            "trigger": "Skill02",
+            "name": "This Ode, to All Lives",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Applies a buff to one designated ally character. When the character is a Chrysos Heir, the target gains a special effect. When the character is not a Chrysos Heir, increases the target's DMG dealt by #2[i]% for #3[i] turns. This effect also applies on memosprites.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                12,
+                0.2,
+                2
+              ],
+              "2": [
+                12,
+                0.24,
+                2
+              ],
+              "3": [
+                12,
+                0.28,
+                2
+              ],
+              "4": [
+                12,
+                0.32,
+                2
+              ],
+              "5": [
+                12,
+                0.36,
+                2
+              ],
+              "6": [
+                12,
+                0.4,
+                2
+              ],
+              "7": [
+                12,
+                0.44,
+                2
+              ],
+              "8": [
+                12,
+                0.48,
+                2
+              ],
+              "9": [
+                12,
+                0.52,
+                2
+              ],
+              "10": [
+                12,
+                0.56,
+                2
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_Skill02_Phase01",
+              "Servant_CyreneServant_00_Skill02_Phase02",
+              "Servant_CyreneServant_00_Skill02_Camera",
+              "Servant_CyreneServant_00_Skill02_Ready",
+              "Servant_CyreneServant_00_Skill02_Ready_Camera",
+              "Servant_CyreneServant_00_Skill02_VisualPrepare"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Buff": {
+                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+              },
+              "Chrysos Heir": {
+                "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance)."
+              }
+            }
+          }
+        },
+        "Ode to Genesis": {
+          "variant1": {
+            "skillID": 1141513,
+            "trigger": "SkillCY01",
+            "name": "Ode to Genesis",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. When used on Trailblazer (Remembrance), increases Trailblazer (Remembrance)'s ATK by an amount equal to #1[i]% of Demiurge's Max HP, and increases Trailblazer (Remembrance)'s CRIT Rate by an amount equal to #2[i]% of Demiurge's CRIT Rate. This effect also applies to Mem. After Trailblazer (Remembrance) uses Enhanced Basic ATK in this battle, Demiurge immediately gains 1 extra turn and automatically uses \"Minuet of Blooms and Plumes.\" If the target was defeated before this ability is used, it will be used on newly appeared enemy targets instead.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.08,
+                0.36,
+                1
+              ],
+              "2": [
+                0.096,
+                0.432,
+                1
+              ],
+              "3": [
+                0.112,
+                0.504,
+                1
+              ],
+              "4": [
+                0.128,
+                0.576,
+                1
+              ],
+              "5": [
+                0.144,
+                0.648,
+                1
+              ],
+              "6": [
+                0.16,
+                0.72,
+                1
+              ],
+              "7": [
+                0.176,
+                0.792,
+                1
+              ],
+              "8": [
+                0.192,
+                0.864,
+                1
+              ],
+              "9": [
+                0.208,
+                0.936,
+                1
+              ],
+              "10": [
+                0.224,
+                1.008,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        },
+        "Ode to Romance": {
+          "variant1": {
+            "skillID": 1141514,
+            "trigger": "SkillCY02",
+            "name": "Ode to Romance",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "One-time effect. When used on Aglaea, causes Aglaea to gain \"Romance\" and immediately stacks Garmentmaker's Memosprite Talent's SPD Boost effect to its upper limit. After Aglaea or Garmentmaker uses an attack, consumes \"Romance\" and regenerates #1[i] Energy. Increases DMG dealt by Aglaea and Garmentmaker by #2[i]%, and ignores #3[i]% of the targets' DEF, lasting until Aglaea exits the \"Supreme Stance\" state.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                70,
+                0.36,
+                0.18
+              ],
+              "2": [
+                70,
+                0.432,
+                0.216
+              ],
+              "3": [
+                70,
+                0.504,
+                0.252
+              ],
+              "4": [
+                70,
+                0.576,
+                0.288
+              ],
+              "5": [
+                70,
+                0.648,
+                0.324
+              ],
+              "6": [
+                70,
+                0.72,
+                0.36
+              ],
+              "7": [
+                70,
+                0.792,
+                0.396
+              ],
+              "8": [
+                70,
+                0.864,
+                0.432
+              ],
+              "9": [
+                70,
+                0.936,
+                0.468
+              ],
+              "10": [
+                70,
+                1.008,
+                0.504
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Passage": {
+          "variant1": {
+            "skillID": 1141515,
+            "trigger": "SkillCY03",
+            "name": "Ode to Passage",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. When used on Tribbie, causes DMG dealt by Tribbie to ignore #2[i]% of enemies' DEF. When Tribbie launches Follow-Up ATK and triggers the Additional DMG from Tribbie's Zone, it further deals #1[i] instance(s) of Additional DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                0.06,
+                3
+              ],
+              "2": [
+                1,
+                0.072,
+                3
+              ],
+              "3": [
+                1,
+                0.084,
+                3
+              ],
+              "4": [
+                1,
+                0.096,
+                3
+              ],
+              "5": [
+                1,
+                0.108,
+                3
+              ],
+              "6": [
+                1,
+                0.12,
+                3
+              ],
+              "7": [
+                1,
+                0.132,
+                3
+              ],
+              "8": [
+                1,
+                0.144,
+                3
+              ],
+              "9": [
+                1,
+                0.156,
+                3
+              ],
+              "10": [
+                1,
+                0.168,
+                3
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY03"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        },
+        "Ode to Strife": {
+          "variant1": {
+            "skillID": 1141516,
+            "trigger": "SkillCY04",
+            "name": "Ode to Strife",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "One-time effect. When used on Mydei, removes all Crowd Control debuffs inflicted on him. And if Mydei is in the \"Vendetta\" state, he automatically uses 1 instance of \"Godslayer Be God\" without consuming Charge. Mydei's CRIT DMG increases by #1[i]% during this attack. If the target gets defeated before the use, then it will target the newly arriving enemy targets instead. If Mydei is not in the \"Vendetta\" state, then advances Mydei's action by #2[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1
+              ],
+              "2": [
+                1.2,
+                1
+              ],
+              "3": [
+                1.4,
+                1
+              ],
+              "4": [
+                1.6,
+                1
+              ],
+              "5": [
+                1.8,
+                1
+              ],
+              "6": [
+                2,
+                1
+              ],
+              "7": [
+                2.2,
+                1
+              ],
+              "8": [
+                2.4,
+                1
+              ],
+              "9": [
+                2.6,
+                1
+              ],
+              "10": [
+                2.8,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY04"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advanced": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        },
+        "Ode to Life and Death": {
+          "variant1": {
+            "skillID": 1141517,
+            "trigger": "SkillCY05",
+            "name": "Ode to Life and Death",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. When used on Castorice, \"Newbud\" can overflow up to #3[i]%. When summoning Netherwing, consumes all overflowing \"Newbud.\" For every 1% overflow amount consumed, increases the multiplier by #2[f2]% for the DMG dealt when this summoned Netherwing triggers the ability effect of its Talent \"Wings Sweep the Ruins.\" If there are #6[i] enemy target(s) or fewer on the field when summoned, the DMG multiplier additionally increases by #5[f2]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0,
+                0.0012,
+                2,
+                0,
+                0.0024,
+                2
+              ],
+              "2": [
+                0,
+                0.0014400005,
+                2,
+                0,
+                0.002880001,
+                2
+              ],
+              "3": [
+                0,
+                0.0016800009,
+                2,
+                0,
+                0.0033600004,
+                2
+              ],
+              "4": [
+                0,
+                0.0019200006,
+                2,
+                0,
+                0.0038400006,
+                2
+              ],
+              "5": [
+                0,
+                0.0021600004,
+                2,
+                0,
+                0.0043200003,
+                2
+              ],
+              "6": [
+                0,
+                0.0024,
+                2,
+                0,
+                0.0048,
+                2
+              ],
+              "7": [
+                0,
+                0.0026400005,
+                2,
+                0,
+                0.00528,
+                2
+              ],
+              "8": [
+                0,
+                0.002880001,
+                2,
+                0,
+                0.0057600006,
+                2
+              ],
+              "9": [
+                0,
+                0.00312,
+                2,
+                0,
+                0.00624,
+                2
+              ],
+              "10": [
+                0,
+                0.0033600004,
+                2,
+                0,
+                0.00672,
+                2
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY05"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Reason": {
+          "variant1": {
+            "skillID": 1141518,
+            "trigger": "SkillCY06",
+            "name": "Ode to Reason",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "One-time effect. When used on Anaxa, recovers #4[i] Skill Point(s) for allies and enables Anaxa to take action immediately. Skill has #1[i] more instances of DMG, lasting for 1 turn. The next time Anaxa uses Basic ATK or Skill, he gains \"True Knowledge\": All Erudition characters have their ATK increased by #3[i]% and their dealt Skill DMG increased by #2[i]%, lasting until the start of Anaxa's next turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.2,
+                0.3,
+                1
+              ],
+              "2": [
+                3,
+                0.24,
+                0.36,
+                1
+              ],
+              "3": [
+                3,
+                0.28,
+                0.42,
+                1
+              ],
+              "4": [
+                3,
+                0.32,
+                0.48,
+                1
+              ],
+              "5": [
+                3,
+                0.36,
+                0.54,
+                1
+              ],
+              "6": [
+                3,
+                0.4,
+                0.6,
+                1
+              ],
+              "7": [
+                3,
+                0.44,
+                0.66,
+                1
+              ],
+              "8": [
+                3,
+                0.48,
+                0.72,
+                1
+              ],
+              "9": [
+                3,
+                0.52,
+                0.78,
+                1
+              ],
+              "10": [
+                3,
+                0.56,
+                0.84,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY06"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Sky": {
+          "variant1": {
+            "skillID": 1141519,
+            "trigger": "SkillCY07",
+            "name": "Ode to Sky",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "When Demiurge uses Memosprite Skill, causes Hyacine to gain 2 stacks of \"Ode to Sky.\" When used on Hyacine, regenerates #2[i] Energy for Hyacine. When Hyacine has \"Ode to Sky\" and is providing healing, additionally increases the amount to be included in the tally of Little Ica's Memosprite Skill by an amount equal to #1[i]% of the current healing amount. After Hyacine uses Skill/Ultimate, consumes 1 stack of \"Ode to Sky.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.36,
+                12
+              ],
+              "2": [
+                0.432,
+                14.4
+              ],
+              "3": [
+                0.504,
+                16.8
+              ],
+              "4": [
+                0.576,
+                19.2
+              ],
+              "5": [
+                0.648,
+                21.6
+              ],
+              "6": [
+                0.72,
+                24
+              ],
+              "7": [
+                0.792,
+                26.4
+              ],
+              "8": [
+                0.864,
+                28.8
+              ],
+              "9": [
+                0.936,
+                31.2
+              ],
+              "10": [
+                1.008,
+                33.6
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY07"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Trickery": {
+          "variant1": {
+            "skillID": 1141520,
+            "trigger": "SkillCY08",
+            "name": "Ode to Trickery",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. When used on Cipher, increases the DMG dealt by Cipher by #1[i]%, decreases the DEF of the \"Patron\" by #2[i]% and decreases the DEF of all other enemy targets by #3[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.18,
+                0.1,
+                0.06
+              ],
+              "2": [
+                0.216,
+                0.12,
+                0.072
+              ],
+              "3": [
+                0.252,
+                0.14,
+                0.084
+              ],
+              "4": [
+                0.288,
+                0.16,
+                0.096
+              ],
+              "5": [
+                0.324,
+                0.18,
+                0.108
+              ],
+              "6": [
+                0.36,
+                0.2,
+                0.12
+              ],
+              "7": [
+                0.396,
+                0.22,
+                0.132
+              ],
+              "8": [
+                0.432,
+                0.24,
+                0.144
+              ],
+              "9": [
+                0.468,
+                0.26,
+                0.156
+              ],
+              "10": [
+                0.504,
+                0.28,
+                0.168
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY08"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Worldbearing": {
+          "variant1": {
+            "skillID": 1141521,
+            "trigger": "SkillCY09",
+            "name": "Ode to Worldbearing",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. After it is used on Phainon, Phainon gains #8[i] \"Coreflame\" as well as \"Eternal Ignition\" when Transforming. When Transforming, if \"Coreflame\" exceeds #5[i], for each point in excess, Khaslana's CRIT DMG increases by #6[i]%, up to a max increase of #7[i]%. While \"Eternal Ignition\" persists, increases Khaslana's CRIT Rate by #1[f1]%. After the extra turns are depleted, the Transformation does not end, and all of Khaslana's extra turns get refreshed and #9[i] \"Scourge\" is granted. At the start of extra turns, Khaslana consumes HP equal to #2[i]% of his current HP. After using an attack, deals #3[i] instances of Additional DMG, with each instance dealing Fire Additional DMG equal to #4[f1]% of Khaslana's ATK to one random enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.08,
+                0.15,
+                5,
+                0.05,
+                12,
+                0.06,
+                0.36,
+                6,
+                4
+              ],
+              "2": [
+                0.096,
+                0.15,
+                5,
+                0.06,
+                12,
+                0.072,
+                0.432,
+                6,
+                4
+              ],
+              "3": [
+                0.112,
+                0.15,
+                5,
+                0.07,
+                12,
+                0.084,
+                0.504,
+                6,
+                4
+              ],
+              "4": [
+                0.128,
+                0.15,
+                5,
+                0.08,
+                12,
+                0.096,
+                0.576,
+                6,
+                4
+              ],
+              "5": [
+                0.144,
+                0.15,
+                5,
+                0.09,
+                12,
+                0.108,
+                0.648,
+                6,
+                4
+              ],
+              "6": [
+                0.16,
+                0.15,
+                5,
+                0.1,
+                12,
+                0.12,
+                0.72,
+                6,
+                4
+              ],
+              "7": [
+                0.176,
+                0.15,
+                5,
+                0.11,
+                12,
+                0.132,
+                0.792,
+                6,
+                4
+              ],
+              "8": [
+                0.192,
+                0.15,
+                5,
+                0.12,
+                12,
+                0.144,
+                0.864,
+                6,
+                4
+              ],
+              "9": [
+                0.208,
+                0.15,
+                5,
+                0.13,
+                12,
+                0.156,
+                0.936,
+                6,
+                4
+              ],
+              "10": [
+                0.224,
+                0.15,
+                5,
+                0.14,
+                12,
+                0.168,
+                1.008,
+                6,
+                4
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY09"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Khaslana's Extra Turn": {
+                "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
+              },
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              },
+              "Scourge": {
+                "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
+              },
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        },
+        "Ode to Ocean": {
+          "variant1": {
+            "skillID": 1141522,
+            "trigger": "SkillCY10",
+            "name": "Ode to Ocean",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "One-time effect. When used on Hysilens, Hysilens gains \"Flowing Warmth.\" After Hysilens uses an attack, consumes \"Flowing Warmth\" and regenerates #4[i] Energy for this unit. In this battle, increases the DMG dealt by Hysilens by #1[i]%. After Hysilens uses Basic ATK/Skill to attack enemies, causes all the DoT currently applied on the attacked enemy targets to immediately produce DMG equal to #2[i]%/#3[i]% of the original DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.6,
+                0.3,
+                0.4,
+                60
+              ],
+              "2": [
+                0.72,
+                0.36,
+                0.48,
+                60
+              ],
+              "3": [
+                0.84,
+                0.42,
+                0.56,
+                60
+              ],
+              "4": [
+                0.96,
+                0.48,
+                0.64,
+                60
+              ],
+              "5": [
+                1.08,
+                0.54,
+                0.72,
+                60
+              ],
+              "6": [
+                1.2,
+                0.6,
+                0.8,
+                60
+              ],
+              "7": [
+                1.32,
+                0.66,
+                0.88,
+                60
+              ],
+              "8": [
+                1.44,
+                0.72,
+                0.96,
+                60
+              ],
+              "9": [
+                1.56,
+                0.78,
+                1.04,
+                60
+              ],
+              "10": [
+                1.68,
+                0.84,
+                1.12,
+                60
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY10"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Law": {
+          "variant1": {
+            "skillID": 1141523,
+            "trigger": "SkillCY11",
+            "name": "Ode to Law",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. After using on Cerydra, increases the CRIT DMG of the character with \"Military Merit\" by #1[i]%. After Coup de Main ends, Cerydra immediately gains #2[i] Charge.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                1
+              ],
+              "2": [
+                0.18,
+                1
+              ],
+              "3": [
+                0.21,
+                1
+              ],
+              "4": [
+                0.24,
+                1
+              ],
+              "5": [
+                0.27,
+                1
+              ],
+              "6": [
+                0.3,
+                1
+              ],
+              "7": [
+                0.33,
+                1
+              ],
+              "8": [
+                0.36,
+                1
+              ],
+              "9": [
+                0.39,
+                1
+              ],
+              "10": [
+                0.42,
+                1
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY11"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Coup de Main": {
+                "desc": "Copy and immediately use the ability about to be used, then use the original ability.\\nCoup de Main won't trigger Coup de Main again."
+              }
+            }
+          }
+        },
+        "Ode to Time": {
+          "variant1": {
+            "skillID": 1141524,
+            "trigger": "SkillCY12",
+            "name": "Ode to Time",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "Effective for the entire battle. After it is used on Evernight, increases the DMG dealt when Evey uses the Memosprite Skill \"Dream, Dissolving, as Dew\" by #1[i]%. After Evernight uses Skill/Ultimate, additionally gains #2[i] \"Memoria.\" The CRIT DMG boost effect provided by the Skill is further increased by an amount equal to #3[i]% of Evernight's CRIT DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.09,
+                1,
+                0.06
+              ],
+              "2": [
+                0.108,
+                1,
+                0.072
+              ],
+              "3": [
+                0.126,
+                1,
+                0.084
+              ],
+              "4": [
+                0.144,
+                1,
+                0.096
+              ],
+              "5": [
+                0.162,
+                1,
+                0.108
+              ],
+              "6": [
+                0.18,
+                1,
+                0.12
+              ],
+              "7": [
+                0.198,
+                1,
+                0.132
+              ],
+              "8": [
+                0.216,
+                1,
+                0.144
+              ],
+              "9": [
+                0.234,
+                1,
+                0.156
+              ],
+              "10": [
+                0.252,
+                1,
+                0.168
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY12"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Ode to Earth": {
+          "variant1": {
+            "skillID": 1141525,
+            "trigger": "SkillCY13",
+            "name": "Ode to Earth",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "When Demiurge uses Memosprite Skill, grants \"Ode to Earth\" to Dan Heng • Permansor Terrae, and enables the next #3[i] attack(s) of \"Souldragon\" to deal Additional DMG of the Bondmate's Type, equal to #4[i]% of the Bondmate's Shield Effect. When Dan Heng • Permansor Terrae holds \"Ode to Earth,\" the \"Bondmate\" deals #1[f1]% increased DMG. When used on Dan Heng • Permansor Terrae, advances Souldragon's action by 100%. Souldragon's next action gains the enhancement effect of Dan Heng • Permansor Terrae's Ultimate and the Shield Effect provided by Souldragon is #5[i]% of its original Shield Effect. Does not consume the enhancement number of Dan Heng • Permansor Terrae's Ultimate.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                2,
+                3,
+                0.4,
+                1.5
+              ],
+              "2": [
+                0.144,
+                2,
+                3,
+                0.48,
+                1.5
+              ],
+              "3": [
+                0.168,
+                2,
+                3,
+                0.56,
+                1.5
+              ],
+              "4": [
+                0.192,
+                2,
+                3,
+                0.64,
+                1.5
+              ],
+              "5": [
+                0.216,
+                2,
+                3,
+                0.72,
+                1.5
+              ],
+              "6": [
+                0.24,
+                2,
+                3,
+                0.8,
+                1.5
+              ],
+              "7": [
+                0.264,
+                2,
+                3,
+                0.88,
+                1.5
+              ],
+              "8": [
+                0.288,
+                2,
+                3,
+                0.96,
+                1.5
+              ],
+              "9": [
+                0.312,
+                2,
+                3,
+                1.04,
+                1.5
+              ],
+              "10": [
+                0.336,
+                2,
+                3,
+                1.12,
+                1.5
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY13"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Additional DMG": {
+                "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
+              }
+            }
+          }
+        },
+        "Ode to Ego": {
+          "variant1": {
+            "skillID": 1141526,
+            "trigger": "SkillCY14",
+            "name": "Ode to Ego",
+            "type": "Support",
+            "slot": "Memosprite Skill",
+            "desc": "For every 1 different teammate (i.e., excluding Demiurge) from whom Cyrene has gained \"Recollection,\" additionally deals 1 instance of Ice DMG equal to #1[i]% of Demiurge's Max HP to one random enemy when Demiurge uses \"Minuet of Blooms and Plumes.\" After Cyrene uses Ultimate or when Demiurge is summoned, Demiurge immediately gains 1 \"Story.\" When \"Story\" reaches #2[i], Demiurge consumes all \"Story\" points to immediately gain 1 extra turn and automatically use \"Minuet of Blooms and Plumes.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                3
+              ],
+              "2": [
+                0.36,
+                3
+              ],
+              "3": [
+                0.42,
+                3
+              ],
+              "4": [
+                0.48,
+                3
+              ],
+              "5": [
+                0.54,
+                3
+              ],
+              "6": [
+                0.6,
+                3
+              ],
+              "7": [
+                0.66,
+                3
+              ],
+              "8": [
+                0.72,
+                3
+              ],
+              "9": [
+                0.78,
+                3
+              ],
+              "10": [
+                0.84,
+                3
+              ]
+            },
+            "attackType": "Servant",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_SkillCY14"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Waiting, In Every Past": {
+          "variant1": {
+            "skillID": 1141503,
+            "trigger": "SkillP01",
+            "name": "Waiting, In Every Past",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "Demiurge's SPD remains at 0, and it will not appear on the Action Order. While on the field, it is considered as Out-of-Bounds. When Cyrene's HP percentage changes, Demiurge's HP percentage will also change accordingly. While Demiurge is on the field, Cyrene's and Demiurge's Max HP increases by #1[i]%. After Demiurge uses abilities, decreases the duration of all Continuous Effects on this unit by 1.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                0
+              ],
+              "2": [
+                0.144,
+                0
+              ],
+              "3": [
+                0.168,
+                0
+              ],
+              "4": [
+                0.192,
+                0
+              ],
+              "5": [
+                0.216,
+                0
+              ],
+              "6": [
+                0.24,
+                0
+              ],
+              "7": [
+                0.264,
+                0
+              ],
+              "8": [
+                0.288,
+                0
+              ],
+              "9": [
+                0.312,
+                0
+              ],
+              "10": [
+                0.336,
+                0
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_PassiveSkill01",
+              "Servant_CyreneServant_00_EnterBattle"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Out-of-Bounds": {
+                "desc": "Neither allies nor enemies can actively select Out-of-Bounds units."
+              },
+              "Continuous Effect": {
+                "desc": "Includes buffs, debuffs, and other effects."
+              }
+            }
+          }
+        },
+        "\"Hello, World ♪\"": {
+          "variant1": {
+            "skillID": 1141505,
+            "trigger": "SkillP03",
+            "name": "\"Hello, World ♪\"",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When Demiurge is summoned, dispels Crowd Control debuffs from all allies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": [],
+              "6": [],
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": []
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_CyreneServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1415_basic_atk.png",
+        "skillRef": {
+          "skillName": "Lo, Hope Takes Flight!",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1415_skill.png",
+        "skillRef": {
+          "skillName": "Bloom, Elysium of Beyond",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1415_ultimate.png",
+        "skillRef": {
+          "skillName": "Verse ◦ Vow ∞",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1415_talent.png",
+        "skillRef": {
+          "skillName": "Hearts Gather as One",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1415_technique.png",
+        "skillRef": {
+          "skillName": "Peace at West Wind's End",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Child of Remembrance",
+        "icon": "icon/skill/1415_skilltree1.png",
+        "desc": "When a teammate's memosprite is summoned, it gains \"Future.\" \"Future\" held by the memosprite won't be consumed."
+      },
+      "Point07": {
+        "name": "Ripples Across Time",
+        "icon": "icon/skill/1415_skilltree2.png",
+        "desc": "When there are 1/2/3 Chrysos Heir or Remembrance characters (excluding Cyrene) in the team, Cyrene gains #1[i]/#2[i]/#3[i] \"Recollection\" point(s) respectively at the start of combat.",
+        "params": [
+          2,
+          3,
+          6
+        ],
+        "extraEffects": {
+          "Chrysos Heir": {
+            "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance).",
+            "params": [
+              2,
+              3,
+              6
+            ]
+          }
+        }
+      },
+      "Point08": {
+        "name": "Causality in Trichotomy",
+        "icon": "icon/skill/1415_skilltree3.png",
+        "desc": "When Cyrene's SPD is #1[i] or higher, increases all allies' DMG dealt by #4[i]%. Then, for every 1 SPD that exceeds #1[i], increases Cyrene's and Demiurge's Ice RES PEN by #2[i]%. Up to a maximum of #3[i] excess SPD can be taken into account for this effect.",
+        "params": [
+          180,
+          0.02,
+          60,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+            "params": [
+              180,
+              0.02,
+              60,
+              0.2
+            ]
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      },
+      "Point19": {
+        "name": "This Ode, to All Lives",
+        "icon": "icon/skill/1415_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Minuet of Blooms and Plumes",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Waiting, In Every Past",
+        "icon": "icon/skill/1415_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Waiting, In Every Past",
+          "skillSlot": "Memosprite Talent"
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1415.png",
+    "preview": "image/character_preview/1415.png",
+    "portrait": "image/character_portrait/1415.png",
+    "bannerOffsets": [
+      0,
+      180,
+      0.61,
+      0,
+      180,
+      0.61,
+      0,
+      180,
+      0.61
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 100
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11415,
+    "summonName": "Demiurge"
+  },
   "Trailblazer - Destruction": {
     "internalID": 8001,
     "name": "Trailblazer - Destruction",
