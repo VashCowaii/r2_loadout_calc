@@ -296,6 +296,14 @@ let allowedCharacterList = [
     "trimName": "Cerydra"
   },
   {
+    "fullName": "Evernight",
+    "trimName": "Evernight"
+  },
+  {
+    "fullName": "Evey",
+    "trimName": "Evey"
+  },
+  {
     "fullName": "Dan Heng • Permansor Terrae",
     "trimName": "DanHengPT"
   },

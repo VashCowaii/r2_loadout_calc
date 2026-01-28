@@ -58240,6 +58240,1445 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Evernight": {
+    "internalID": 1413,
+    "name": "Evernight",
+    "path": "Remembrance",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 240,
+    "baseStats": {
+      "ATKBase": 543.312,
+      "DEFBase": 582.1199999999999,
+      "HPBase": 1319.4720000000002,
+      "SPDBase": 99,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "141301",
+        "name": "Sleep Tight, the Night Dreams Long",
+        "rank": 1,
+        "desc": "When Evernight is on the field, if there are (4 or more)/3/2/1 enemy targets on the field, ally memosprites deal DMG equal to 120%/125%/130%/150% of their original DMG respectively.",
+        "icon": "icon/skill/1413_rank1.png",
+        "paramsEido": [
+          1.2,
+          1.25,
+          1.3,
+          1.5
+        ]
+      },
+      {
+        "id": "141302",
+        "name": "Listen Up, the Slumber Speaks Soft",
+        "rank": 2,
+        "desc": "Increases Evernight's and the memosprite Evey's CRIT DMG by 40%. Each time Evernight gains \"Memoria,\" increases the amount of \"Memoria\" gain by 2 point(s). When using Ultimate, additionally gains 2 Charge for \"Darkest Riddle.\"",
+        "icon": "icon/skill/1413_rank2.png",
+        "paramsEido": [
+          2,
+          2,
+          0.4
+        ]
+      },
+      {
+        "id": "141303",
+        "name": "Fear Not, the Nightmare Lies Past",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1413_skill.png"
+      },
+      {
+        "id": "141304",
+        "name": "Wake Up, the Tomorrow is Yours",
+        "rank": 4,
+        "desc": "While Evernight is on the field, ally memosprites' Weakness Break Efficiency increases by 25%, and the memosprite Evey's Weakness Break Efficiency additionally increases by 25%.",
+        "icon": "icon/skill/1413_rank4.png",
+        "paramsEido": [
+          0.25,
+          0.25
+        ]
+      },
+      {
+        "id": "141305",
+        "name": "Let Go, the \"Me\" in Memories",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1413_ultimate.png"
+      },
+      {
+        "id": "141306",
+        "name": "Like This, Always",
+        "rank": 6,
+        "desc": "While Evernight is on the field, all ally targets' All-Type RES PEN increases by 20%. After the memosprite Evey uses \"Dream, Dissolving, as Dew,\" Evernight gains 30% of the amount of \"Memoria\" consumed in this attack.",
+        "icon": "icon/skill/1413_rank6.png",
+        "paramsEido": [
+          0.3,
+          0.2
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2,
+        "Memosprite Talent": 1
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2,
+        "Memosprite Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Time Thence Blurs": {
+          "variant1": {
+            "skillID": 141301,
+            "trigger": "Skill01",
+            "name": "Time Thence Blurs",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Evernight's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Evernight_00_Skill01_Camera",
+              "Avatar_Evernight_00_Skill01_Far_Camera",
+              "Avatar_Evernight_00_Skill01_Phase01",
+              "Avatar_Evernight_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Day Gently Slips": {
+          "variant1": {
+            "skillID": 141302,
+            "trigger": "Skill02",
+            "name": "Day Gently Slips",
+            "type": "Summon",
+            "slot": "Skill",
+            "desc": "Consumes #6[i]% of Evernight's current HP to summon memosprite Evey and increases CRIT DMG of all ally memosprites by an amount equal to #1[i]% of Evernight's CRIT DMG for #2[i] turn(s). This duration decreases by 1 at the start of Evernight's every turn. If Evey is already on the field, restores its HP by #4[i]% of its Max HP. When using this, gains #3[i] point(s) of \"Memoria.\" If in the \"Darkest Riddle\" state, gains #5[i] additional point(s) of \"Memoria.\"",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.12,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "2": [
+                0.132,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "3": [
+                0.144,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "4": [
+                0.156,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "5": [
+                0.168,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "6": [
+                0.18,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "7": [
+                0.195,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "8": [
+                0.21,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "9": [
+                0.225,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "10": [
+                0.24,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "11": [
+                0.252,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "12": [
+                0.264,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "13": [
+                0.276,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "14": [
+                0.288,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "15": [
+                0.3,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evernight_00_Skill02_Camera",
+              "Avatar_Evernight_00_Skill02_Phase01",
+              "Avatar_Evernight_00_Skill02_Phase02",
+              "Avatar_Evernight_00_Skill02_2_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          },
+          "variant2": {
+            "skillID": 141309,
+            "trigger": "Skill21",
+            "name": "Day Gently Slips",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "Consumes this unit's HP to summon memosprite Evey and increase CRIT DMG for all ally memosprites. If Evey is already on the field, restores its HP. When using this, gains #3[i] \"Memoria.\" If in the \"Darkest Riddle\" state, additionally gains #5[i] \"Memoria.\"",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.2,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "2": [
+                0.22,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "3": [
+                0.24,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "4": [
+                0.26,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "5": [
+                0.28,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "6": [
+                0.3,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "7": [
+                0.325,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "8": [
+                0.35,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "9": [
+                0.375,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "10": [
+                0.4,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "11": [
+                0.42,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "12": [
+                0.44,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "13": [
+                0.46,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "14": [
+                0.48,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ],
+              "15": [
+                0.5,
+                2,
+                2,
+                0.5,
+                12,
+                0.1
+              ]
+            },
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evernight_00_Skill21_Phase01",
+              "Avatar_Evernight_00_Skill21_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "O Wakeful World, Goodnight": {
+          "variant1": {
+            "skillID": 141303,
+            "trigger": "Skill03",
+            "name": "O Wakeful World, Goodnight",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Summons memosprite Evey. Then Evey deals Ice DMG to all enemies equal to #1[i]% of Evey's Max HP and Evernight enters the \"Darkest Riddle\" state. During this state, all enemies take #4[i]% increased DMG while both Evernight and Evey deal #3[i]% increased DMG and are immune to Crowd Control debuffs. Gains #2[i] point(s) of Charge for \"Darkest Riddle.\" And Evey consumes 1 point after it uses \"Dream, Dissolving, as Dew.\" At the start of Evernight's turn, if no Charge remains, exits the \"Darkest Riddle\" state.",
+            "energyCost": 240,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                2,
+                0.3,
+                0.15
+              ],
+              "2": [
+                1.1,
+                2,
+                0.33,
+                0.165
+              ],
+              "3": [
+                1.2,
+                2,
+                0.36,
+                0.18
+              ],
+              "4": [
+                1.3,
+                2,
+                0.39,
+                0.195
+              ],
+              "5": [
+                1.4,
+                2,
+                0.42,
+                0.21
+              ],
+              "6": [
+                1.5,
+                2,
+                0.45,
+                0.225
+              ],
+              "7": [
+                1.625,
+                2,
+                0.4875,
+                0.24375
+              ],
+              "8": [
+                1.75,
+                2,
+                0.525,
+                0.2625
+              ],
+              "9": [
+                1.875,
+                2,
+                0.5625,
+                0.28125
+              ],
+              "10": [
+                2,
+                2,
+                0.6,
+                0.3
+              ],
+              "11": [
+                2.1,
+                2,
+                0.63,
+                0.315
+              ],
+              "12": [
+                2.2,
+                2,
+                0.66,
+                0.33
+              ],
+              "13": [
+                2.3,
+                2,
+                0.69,
+                0.345
+              ],
+              "14": [
+                2.4,
+                2,
+                0.72,
+                0.36
+              ],
+              "15": [
+                2.5,
+                2,
+                0.75,
+                0.375
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evernight_00_Skill03_Camera",
+              "Avatar_Evernight_00_Skill03_EnterReady",
+              "Avatar_Evernight_00_Skill03_Phase01",
+              "Avatar_Evernight_00_Skill03_Phase02",
+              "Avatar_Evernight_00_Skill03_Phase02_Charge"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "With Me, This Night": {
+          "variant1": {
+            "skillID": 141304,
+            "trigger": "SkillP01",
+            "name": "With Me, This Night",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When entering combat, summons memosprite Evey. Evey has an initial SPD of #4[i] and its Max HP equals to #5[i]% of that of Evernight's. Each time Evernight or Evey loses HP, increases CRIT DMG for Evernight and Evey by #2[i]% for #3[i] turn(s), and gains #1[i] \"Memoria.\" This effect can trigger only once per target for each received attack.\\nWhen Evernight has #6[i] or more points of \"Memoria,\" dispels Crowd Control debuffs and becomes immune to them. If Evey is on the field, it immediately takes action. The immediate action effect can only trigger again after Evey uses \"Dream, Dissolving, as Dew.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.3,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "2": [
+                2,
+                0.33,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "3": [
+                2,
+                0.36,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "4": [
+                2,
+                0.39,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "5": [
+                2,
+                0.42,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "6": [
+                2,
+                0.45,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "7": [
+                2,
+                0.4875,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "8": [
+                2,
+                0.525,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "9": [
+                2,
+                0.5625,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "10": [
+                2,
+                0.6,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "11": [
+                2,
+                0.63,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "12": [
+                2,
+                0.66,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "13": [
+                2,
+                0.69,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "14": [
+                2,
+                0.72,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ],
+              "15": [
+                2,
+                0.75,
+                2,
+                160,
+                0.5,
+                16,
+                0.05
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Evernight_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              },
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Let it Rain Cold On Thee": {
+          "variant1": {
+            "skillID": 141307,
+            "trigger": "SkillMaze",
+            "name": "Let it Rain Cold On Thee",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, at the start of the next battle, obtains the same effect as the one from Skill that increases CRIT DMG for all ally memosprites, and gains #1[i] \"Memoria.\"",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                1
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Evernight_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Remembrance, Whirling, Like Rain": {
+          "variant1": {
+            "skillID": 1141301,
+            "trigger": "Skill01",
+            "name": "Remembrance, Whirling, Like Rain",
+            "type": "Single Target",
+            "slot": "Memosprite Skill",
+            "desc": "This ability automatically selects a target, prioritizing the enemy target that Evernight last attacked. Deals Ice DMG equal to #1[i]% of Evey's Max HP to one enemy. For every #3[i] point(s) of \"Memoria\" Evernight currently has, additionally deals Ice DMG equal to #2[f1]% of Evey's Max HP. Gains #4[i] point(s) of \"Memoria\" after use.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                0.05,
+                4,
+                1
+              ],
+              "2": [
+                0.3,
+                0.06,
+                4,
+                1
+              ],
+              "3": [
+                0.35,
+                0.07,
+                4,
+                1
+              ],
+              "4": [
+                0.4,
+                0.08,
+                4,
+                1
+              ],
+              "5": [
+                0.45,
+                0.09,
+                4,
+                1
+              ],
+              "6": [
+                0.5,
+                0.1,
+                4,
+                1
+              ],
+              "7": [
+                0.55,
+                0.11,
+                4,
+                1
+              ],
+              "8": [
+                0.6,
+                0.12,
+                4,
+                1
+              ],
+              "9": [
+                0.65,
+                0.13,
+                4,
+                1
+              ],
+              "10": [
+                0.7,
+                0.14,
+                4,
+                1
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Servant",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_Skill01_Phase01",
+              "Servant_EvernightServant_00_Skill01_Phase02",
+              "Servant_EvernightServant_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Dream, Dissolving, as Dew": {
+          "variant1": {
+            "skillID": 1141307,
+            "trigger": "Skill11",
+            "name": "Dream, Dissolving, as Dew",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "This ability is used when Evernight's \"Memoria\" is greater than or equal to #3[i] and she is not affected by Crowd Control. For every 1 \"Memoria\" point currently held, deals Ice DMG equal to #1[f1]% of Evey's Max HP to the primary target, and Ice DMG equal to #2[f1]% of Evey's Max HP to the other enemy targets. After use, consumes all \"Memoria\" and HP, and makes Evey disappear.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.06,
+                0.03,
+                16
+              ],
+              "2": [
+                0.072,
+                0.036,
+                16
+              ],
+              "3": [
+                0.084,
+                0.042,
+                16
+              ],
+              "4": [
+                0.096,
+                0.048,
+                16
+              ],
+              "5": [
+                0.108,
+                0.054,
+                16
+              ],
+              "6": [
+                0.12,
+                0.06,
+                16
+              ],
+              "7": [
+                0.132,
+                0.066,
+                16
+              ],
+              "8": [
+                0.144,
+                0.072,
+                16
+              ],
+              "9": [
+                0.156,
+                0.078,
+                16
+              ],
+              "10": [
+                0.168,
+                0.084,
+                16
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_Skill11_Phase01",
+              "Servant_EvernightServant_00_Skill11_Phase02",
+              "Servant_EvernightServant_00_Skill11_Camera",
+              "Servant_EvernightServant_00_Skill12_Phase02",
+              "Servant_EvernightServant_00_Skill12_Camera",
+              "Servant_EvernightServant_00_Skill11_EnterReady"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "Solitude, Drifting, In Murk": {
+          "variant1": {
+            "skillID": 1141303,
+            "trigger": "SkillP01",
+            "name": "Solitude, Drifting, In Murk",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "Evey is immune to Crowd Control debuffs and has an increased chance of getting attacked. While Evey is on the field, Evernight and Evey deal #1[i]% increased DMG.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.25,
+                3
+              ],
+              "2": [
+                0.3,
+                3
+              ],
+              "3": [
+                0.35,
+                3
+              ],
+              "4": [
+                0.4,
+                3
+              ],
+              "5": [
+                0.45,
+                3
+              ],
+              "6": [
+                0.5,
+                3
+              ],
+              "7": [
+                0.55,
+                3
+              ],
+              "8": [
+                0.6,
+                3
+              ],
+              "9": [
+                0.65,
+                3
+              ],
+              "10": [
+                0.7,
+                3
+              ]
+            },
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_PassiveSkill01",
+              "Servant_EvernightServant_00_PassiveSkill01_Resummon"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
+              }
+            }
+          }
+        },
+        "Night, Trailing, In Step": {
+          "variant1": {
+            "skillID": 1141305,
+            "trigger": "SkillP03",
+            "name": "Night, Trailing, In Step",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "When summoned, this unit immediately takes action.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [],
+              "2": [],
+              "3": [],
+              "4": [],
+              "5": [],
+              "6": [],
+              "7": [],
+              "8": [],
+              "9": [],
+              "10": []
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "You, Parting, Beyond Reach": {
+          "variant1": {
+            "skillID": 1141306,
+            "trigger": "SkillP04",
+            "name": "You, Parting, Beyond Reach",
+            "type": "Enhance",
+            "slot": "Memosprite Talent",
+            "desc": "Upon disappearing, increases Evernight's SPD by #1[i]%. If the disappearance is due to using \"Dream, Dissolving, as Dew,\" then, for every 1 \"Memoria\" point consumed by the attack, additionally increases Evernight's SPD by #2[i]%. Up to #3[i] \"Memoria\" points can be taken into account for this. The SPD Boost effect cannot stack and is removed at the start of Evernight's next turn.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                0.01,
+                40
+              ],
+              "2": [
+                0.1,
+                0.01,
+                40
+              ],
+              "3": [
+                0.1,
+                0.01,
+                40
+              ],
+              "4": [
+                0.1,
+                0.01,
+                40
+              ],
+              "5": [
+                0.1,
+                0.01,
+                40
+              ],
+              "6": [
+                0.1,
+                0.01,
+                40
+              ],
+              "7": [
+                0.1,
+                0.01,
+                40
+              ],
+              "8": [
+                0.1,
+                0.01,
+                40
+              ],
+              "9": [
+                0.1,
+                0.01,
+                40
+              ],
+              "10": [
+                0.1,
+                0.01,
+                40
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_EvernightServant_00_DeathRattle"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1413_basic_atk.png",
+        "skillRef": {
+          "skillName": "Time Thence Blurs",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1413_skill.png",
+        "skillRef": {
+          "skillName": "Day Gently Slips",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1413_ultimate.png",
+        "skillRef": {
+          "skillName": "O Wakeful World, Goodnight",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1413_talent.png",
+        "skillRef": {
+          "skillName": "With Me, This Night",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1413_technique.png",
+        "skillRef": {
+          "skillName": "Let it Rain Cold On Thee",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Dark the Night, Still the Moon",
+        "icon": "icon/skill/1413_skilltree1.png",
+        "desc": "Increases Evernight's and the memosprite Evey's CRIT Rate by #1[i]%. When using an ability, consumes #2[i]% of this unit's current HP to increase CRIT DMG for both of them by #3[i]%, lasting for #4[i] turn(s). After Evey uses \"Dream, Dissolving, as Dew,\" recovers 1 Skill Point for allies.",
+        "params": [
+          0.35,
+          0.05,
+          0.15,
+          2
+        ]
+      },
+      "Point07": {
+        "name": "Rouse the Flame, Lull the Light",
+        "icon": "icon/skill/1413_skilltree2.png",
+        "desc": "When combat starts, Evernight regenerates #2[i] Energy and gains #3[i] \"Memoria.\" When Evernight or an ally memosprite uses an ability, Evernight regenerates #4[i] Energy and gains #1[i] \"Memoria.\"",
+        "params": [
+          1,
+          70,
+          1,
+          5
+        ]
+      },
+      "Point08": {
+        "name": "Kindle the Morn, Drop the Rain",
+        "icon": "icon/skill/1413_skilltree3.png",
+        "desc": "When there are 1/2/3/(4 or more) Remembrance characters in the team, increases CRIT DMG for all ally memosprites by #1[i]%/#2[i]%/#3[i]%/#4[i]% respectively while Evernight's Skill lasts.",
+        "params": [
+          0.05,
+          0.15,
+          0.5,
+          0.65
+        ]
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point19": {
+        "name": "Remembrance, Whirling, Like Rain",
+        "icon": "icon/skill/1413_memosprite_skill.png",
+        "skillRef": {
+          "skillName": "Remembrance, Whirling, Like Rain",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "Solitude, Drifting, In Murk",
+        "icon": "icon/skill/1413_memosprite_talent.png",
+        "skillRef": {
+          "skillName": "Solitude, Drifting, In Murk",
+          "skillSlot": "Memosprite Talent"
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": "icon/character/1413.png",
+    "preview": "image/character_preview/1413.png",
+    "portrait": "image/character_portrait/1413.png",
+    "bannerOffsets": [
+      88,
+      -13,
+      0.63,
+      88,
+      -13,
+      0.63,
+      88,
+      -13,
+      0.63
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 125
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11413,
+    "summonName": "Evey"
+  },
   "Dan Heng • Permansor Terrae": {
     "internalID": 1414,
     "name": "Dan Heng • Permansor Terrae",
