@@ -1656,7 +1656,7 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
             ${parseRef.DamageType != undefined ? `<div class="actionDetailBody2Detail">
                 <div class="rotationConditionOperatorHeaderInline">Damage Type:</div>&nbsp;
-                ${parseRef.DamageType}
+                ${parseRef.DamageType === "object" ? megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter) : parseRef.DamageType}
             </div>` : ""}
         </div>`;
     },

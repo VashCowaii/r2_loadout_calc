@@ -256,6 +256,10 @@ let allowedCharacterList = [
     "trimName": "Tribbie"
   },
   {
+    "fullName": "Mydei",
+    "trimName": "Mydei"
+  },
+  {
     "fullName": "Anaxa",
     "trimName": "Anaxa"
   },

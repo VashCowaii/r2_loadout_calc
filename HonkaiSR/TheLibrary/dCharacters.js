@@ -49988,6 +49988,1007 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Mydei": {
+    "internalID": 1404,
+    "name": "Mydei",
+    "path": "Destruction",
+    "element": "Imaginary",
+    "rarity": 5,
+    "energyMax": 160,
+    "baseStats": {
+      "ATKBase": 426.88800000000003,
+      "DEFBase": 194.04000000000002,
+      "HPBase": 1552.3200000000002,
+      "SPDBase": 95,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "140401",
+        "name": "Frost Hones Spine of Steel",
+        "rank": 1,
+        "desc": "Increases the DMG multiplier dealt by \"Godslayer Be God\" to the primary target by 30%. This ability now deals to all enemies Imaginary DMG equal to the DMG multiplier dealt to the primary target.",
+        "icon": "icon/skill/1404_rank1.png",
+        "paramsEido": [
+          0.3
+        ]
+      },
+      {
+        "id": "140402",
+        "name": "Strife Beholds Cry of Dead",
+        "rank": 2,
+        "desc": "During \"Vendetta,\" the DMG dealt by Mydei ignores 15% of enemy targets' DEF. After he receives healing, converts 40% of the healed amount to Charge. The tally of the converted Charge cannot exceed 40 point(s). Resets this tally of Charge after any unit takes action.",
+        "icon": "icon/skill/1404_rank2.png",
+        "paramsEido": [
+          0.15,
+          0.4,
+          40
+        ]
+      },
+      {
+        "id": "140403",
+        "name": "Honor Exalts Feast of Faith",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1404_skill.png"
+      },
+      {
+        "id": "140404",
+        "name": "Siren Jolts the Laconic Lion",
+        "rank": 4,
+        "desc": "While in \"Vendetta,\" increases CRIT DMG by 30% and restores HP by 10% of this unit's Max HP after receiving attacks from enemy targets.",
+        "icon": "icon/skill/1404_rank4.png",
+        "paramsEido": [
+          0.1,
+          0.3
+        ]
+      },
+      {
+        "id": "140405",
+        "name": "War Chisels Flesh of Flame",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1404_ultimate.png"
+      },
+      {
+        "id": "140406",
+        "name": "Legacy Scales Mound of Blood",
+        "rank": 6,
+        "desc": "When entering battle, immediately enters the \"Vendetta\" state, and lowers the Charge required for \"Godslayer Be God\" to 100 point(s).",
+        "icon": "icon/skill/1404_rank6.png",
+        "paramsEido": [
+          100
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Vow of Voyage": {
+          "variant1": {
+            "skillID": 140401,
+            "trigger": "Skill01",
+            "name": "Vow of Voyage",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill01_Camera",
+              "Avatar_Mydeimos_00_Skill01_Phase01",
+              "Avatar_Mydeimos_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 30
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Deaths are Legion, Regrets are None": {
+          "variant1": {
+            "skillID": 140402,
+            "trigger": "Skill02",
+            "name": "Deaths are Legion, Regrets are None",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Consumes HP by an amount equal to #3[i]% of Mydei's current HP. Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one designated enemy and Imaginary DMG equal to #2[i]% of Mydei's Max HP to adjacent targets.\\nIf the current HP is not sufficient, using Skill reduces Mydei's current HP to 1.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.45,
+                0.25,
+                0.5
+              ],
+              "2": [
+                0.495,
+                0.275,
+                0.5
+              ],
+              "3": [
+                0.54,
+                0.3,
+                0.5
+              ],
+              "4": [
+                0.585,
+                0.325,
+                0.5
+              ],
+              "5": [
+                0.63,
+                0.35,
+                0.5
+              ],
+              "6": [
+                0.675,
+                0.375,
+                0.5
+              ],
+              "7": [
+                0.73125,
+                0.40625,
+                0.5
+              ],
+              "8": [
+                0.7875,
+                0.4375,
+                0.5
+              ],
+              "9": [
+                0.84375,
+                0.46875,
+                0.5
+              ],
+              "10": [
+                0.9,
+                0.5,
+                0.5
+              ],
+              "11": [
+                0.945,
+                0.525,
+                0.5
+              ],
+              "12": [
+                0.99,
+                0.55,
+                0.5
+              ],
+              "13": [
+                1.035,
+                0.575,
+                0.5
+              ],
+              "14": [
+                1.08,
+                0.6,
+                0.5
+              ],
+              "15": [
+                1.125,
+                0.625,
+                0.5
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill02_Camera",
+              "Avatar_Mydeimos_00_Skill02_Phase01",
+              "Avatar_Mydeimos_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Kingslayer Be King": {
+          "variant1": {
+            "skillID": 140409,
+            "trigger": "Skill21",
+            "name": "Kingslayer Be King",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Consumes HP by an amount equal to #3[i]% of Mydei's current HP. Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one enemy and Imaginary DMG equal to #2[i]% of Mydei's Max HP to adjacent targets.\\nIf the current HP is not sufficient, using Skill reduces Mydei's current HP to 1.\\nThis ability will be automatically used.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.55,
+                0.33,
+                0.35
+              ],
+              "2": [
+                0.605,
+                0.363,
+                0.35
+              ],
+              "3": [
+                0.66,
+                0.396,
+                0.35
+              ],
+              "4": [
+                0.715,
+                0.429,
+                0.35
+              ],
+              "5": [
+                0.77,
+                0.462,
+                0.35
+              ],
+              "6": [
+                0.825,
+                0.495,
+                0.35
+              ],
+              "7": [
+                0.89375,
+                0.53625,
+                0.35
+              ],
+              "8": [
+                0.9625,
+                0.5775,
+                0.35
+              ],
+              "9": [
+                1.03125,
+                0.61875,
+                0.35
+              ],
+              "10": [
+                1.1,
+                0.66,
+                0.35
+              ],
+              "11": [
+                1.155,
+                0.693,
+                0.35
+              ],
+              "12": [
+                1.21,
+                0.726,
+                0.35
+              ],
+              "13": [
+                1.265,
+                0.759,
+                0.35
+              ],
+              "14": [
+                1.32,
+                0.792,
+                0.35
+              ],
+              "15": [
+                1.375,
+                0.825,
+                0.35
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill21_Camera",
+              "Avatar_Mydeimos_00_Skill21_Ability"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 30
+              }
+            ],
+            "hitSplits": []
+          }
+        },
+        "Godslayer Be God": {
+          "variant1": {
+            "skillID": 140411,
+            "trigger": "Skill22",
+            "name": "Godslayer Be God",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Consumes #3[i] point(s) of Charge. Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one enemy and Imaginary DMG equal to #2[i]% of Mydei's Max HP to adjacent targets.\\nThis ability will be automatically used. While this ability is in use, Charge cannot be accumulated.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.4,
+                0.84,
+                150
+              ],
+              "2": [
+                1.54,
+                0.924,
+                150
+              ],
+              "3": [
+                1.68,
+                1.008,
+                150
+              ],
+              "4": [
+                1.82,
+                1.092,
+                150
+              ],
+              "5": [
+                1.96,
+                1.176,
+                150
+              ],
+              "6": [
+                2.1,
+                1.26,
+                150
+              ],
+              "7": [
+                2.275,
+                1.365,
+                150
+              ],
+              "8": [
+                2.45,
+                1.47,
+                150
+              ],
+              "9": [
+                2.625,
+                1.575,
+                150
+              ],
+              "10": [
+                2.8,
+                1.68,
+                150
+              ],
+              "11": [
+                2.94,
+                1.764,
+                150
+              ],
+              "12": [
+                3.08,
+                1.848,
+                150
+              ],
+              "13": [
+                3.22,
+                1.932,
+                150
+              ],
+              "14": [
+                3.36,
+                2.016,
+                150
+              ],
+              "15": [
+                3.5,
+                2.1,
+                150
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill22_Ability",
+              "Avatar_Mydeimos_00_Skill22_Camera",
+              "Avatar_Mydeimos_00_Skill22_Camera02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 90
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Throne of Bones": {
+          "variant1": {
+            "skillID": 140403,
+            "trigger": "Skill03",
+            "name": "Throne of Bones",
+            "type": "Blast",
+            "slot": "Ultimate",
+            "desc": "Restores HP by #3[f1]% of Mydei's Max HP and accumulates #5[i] Talent's Charge point(s). Deals Imaginary DMG equal to #1[i]% of Mydei's Max HP to one designated enemy, and deals Imaginary DMG equal to #2[i]% of Mydei's Max HP to adjacent targets. Additionally, Taunts the target and targets adjacent to it, lasting for #4[i] turn(s). The next use of \"Godslayer Be God\" prioritizes attacking one designated enemy, and this effect only works on the latest target.",
+            "energyCost": 160,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.96,
+                0.6,
+                0.15,
+                2,
+                20
+              ],
+              "2": [
+                1.024,
+                0.64,
+                0.155,
+                2,
+                20
+              ],
+              "3": [
+                1.088,
+                0.68,
+                0.16,
+                2,
+                20
+              ],
+              "4": [
+                1.152,
+                0.72,
+                0.165,
+                2,
+                20
+              ],
+              "5": [
+                1.216,
+                0.76,
+                0.17,
+                2,
+                20
+              ],
+              "6": [
+                1.28,
+                0.8,
+                0.175,
+                2,
+                20
+              ],
+              "7": [
+                1.36,
+                0.85,
+                0.18125,
+                2,
+                20
+              ],
+              "8": [
+                1.44,
+                0.9,
+                0.1875,
+                2,
+                20
+              ],
+              "9": [
+                1.52,
+                0.95,
+                0.19375,
+                2,
+                20
+              ],
+              "10": [
+                1.6,
+                1,
+                0.2,
+                2,
+                20
+              ],
+              "11": [
+                1.664,
+                1.04,
+                0.205,
+                2,
+                20
+              ],
+              "12": [
+                1.728,
+                1.08,
+                0.21,
+                2,
+                20
+              ],
+              "13": [
+                1.792,
+                1.12,
+                0.215,
+                2,
+                20
+              ],
+              "14": [
+                1.856,
+                1.16,
+                0.22,
+                2,
+                20
+              ],
+              "15": [
+                1.92,
+                1.2,
+                0.225,
+                2,
+                20
+              ]
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_Skill03_Camera",
+              "Avatar_Mydeimos_00_Skill03_EnterReady",
+              "Avatar_Mydeimos_00_Skill03_Phase01",
+              "Avatar_Mydeimos_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              {
+                "Value": 60
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 60
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Blood for Blood": {
+          "variant1": {
+            "skillID": 140404,
+            "trigger": "SkillP01",
+            "name": "Blood for Blood",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "For each 1% of HP lost, accumulates 1 point of Charge (up to 200 points). When Charge reaches 100, consumes 100 points of Charge to enter the \"Vendetta\" state, restores HP equal to #1[i]% of Mydei's Max HP, and advances action by 100%. While the \"Vendetta\" state is active, Max HP increases by #5[i]% of the current Max HP and DEF remains at 0. At the start of this unit's turn, automatically uses \"Kingslayer Be King.\"\\nWhen Charge reaches #3[i] points during the \"Vendetta\" state, Mydei immediately gains 1 extra turn and automatically uses \"Godslayer Be God.\"\\nWhen receiving a killing blow during the \"Vendetta\" state, Mydei will not be knocked down, but will clear his Charge, exits the \"Vendetta\" state, and restores HP by #4[i]% of his Max HP.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.15,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "2": [
+                0.16,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "3": [
+                0.17,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "4": [
+                0.18,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "5": [
+                0.19,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "6": [
+                0.2,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "7": [
+                0.2125,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "8": [
+                0.225,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "9": [
+                0.2375,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "10": [
+                0.25,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "11": [
+                0.26,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "12": [
+                0.27,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "13": [
+                0.28,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "14": [
+                0.29,
+                0,
+                150,
+                0.5,
+                0.5
+              ],
+              "15": [
+                0.3,
+                0,
+                150,
+                0.5,
+                0.5
+              ]
+            },
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_PassiveSkill01",
+              "Avatar_Mydeimos_00_PassiveSkill01_Insert",
+              "Avatar_Mydeimos_00_PassiveSkill01_Insert_Camera",
+              "Avatar_Mydeimos_00_PassiveSkill01_InsertExit"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              },
+              "Downed State": {
+                "desc": "An ally will be incapacitated once their HP is reduced to 0."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Cage of Broken Lance": {
+          "variant1": {
+            "skillID": 140407,
+            "trigger": "SkillMaze",
+            "name": "Cage of Broken Lance",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, pulls in enemies within a certain area and inflicts Daze on them for #1[i] second(s). Dazed enemies will not actively attack ally targets.\\nIf actively attacking Dazed enemies, when entering battle, deals Imaginary DMG equal to #2[i]% of Mydei's Max HP to all enemies, and Taunts the targets, lasting for #4[i] turn(s). This unit accumulates #5[i] point(s) of Talent's Charge.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0.8,
+                1,
+                1,
+                50
+              ]
+            },
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_Mydeimos_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              },
+              {
+                "Value": 0
+              }
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1404_basic_atk.png",
+        "skillRef": {
+          "skillName": "Vow of Voyage",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1404_skill.png",
+        "skillRef": {
+          "skillName": "Deaths are Legion, Regrets are None",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1404_ultimate.png",
+        "skillRef": {
+          "skillName": "Throne of Bones",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1404_talent.png",
+        "skillRef": {
+          "skillName": "Blood for Blood",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1404_technique.png",
+        "skillRef": {
+          "skillName": "Cage of Broken Lance",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Earth and Water",
+        "icon": "icon/skill/1404_skilltree1.png",
+        "desc": "During the \"Vendetta\" state, Mydei will not exit the \"Vendetta\" state when receiving a killing blow. This effect can trigger #1[i] time(s) per battle.",
+        "params": [
+          3
+        ]
+      },
+      "Point07": {
+        "name": "Thirty Tyrants",
+        "icon": "icon/skill/1404_skilltree2.png",
+        "desc": "While in the \"Vendetta\" state, Mydei is immune to Crowd Control debuffs.",
+        "extraEffects": {
+          "Crowd Control debuff": {
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": []
+          }
+        }
+      },
+      "Point08": {
+        "name": "Bloodied Chiton",
+        "icon": "icon/skill/1404_skilltree3.png",
+        "desc": "When battle starts, if Mydei's Max HP exceeds #1[i], for every 100 excess HP, Mydei's CRIT Rate increases by #3[f1]%, his Charge ratio from enemy targets' DMG increases by #4[f1]%, and his HP restored when receiving healing increases by #5[f2]%. Up to #2[i] excess HP can be taken into account for this effect.",
+        "params": [
+          4000,
+          4000,
+          0.012,
+          0.025,
+          0.0075
+        ]
+      },
+      "Point09": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.053
+        }
+      },
+      "Point12": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point13": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.08
+        }
+      },
+      "Point16": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT DMG Boost",
+        "icon": "icon/property/IconCriticalDamage.png",
+        "stats": {
+          "CritDamageBase": 0.107
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1404.png",
+    "preview": "image/character_preview/1404.png",
+    "portrait": "image/character_portrait/1404.png",
+    "bannerOffsets": [
+      139,
+      74,
+      0.64,
+      139,
+      74,
+      0.64,
+      139,
+      74,
+      0.64
+    ],
+    "isBuffed": false
+  },
   "Anaxa": {
     "internalID": 1405,
     "name": "Anaxa",
