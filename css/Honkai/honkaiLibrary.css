@@ -8,7 +8,7 @@
 .traceContentBodyBoxRotations,.buffToughnessHealthValueDisplay,.turnOrderDisplayPreviewActionExpandRow,.analyticsResultRowDMG,.queryBarGainText,.characterDisplayEnemyLineupBarHeader,.filtersQuarterDescription,.filtersTagName,.filterTagsContainer,
 .filtersQuarterDescriptionDarkRow,.importCharacterBoxHeader,.characterSearchButtonOptimize,.comboDebugWindow,.statsRowName,.traceContentBodyBoxRotationsWarning,.rowSummaryDMGNameAndPercentACTIONBAR,.rowSummaryDMGNameAndPercentACTIONBARGained,
 .rowSummaryDMGNameAndPercentACTIONBARSpent,.statFiltersRowContainerSubstatsTrashRow,.imageRowStatisticNameBoxDMGDetails,.rotationConditionOperatorHeaderInlineParams,.eidolonRowNameTrigger,.traceToughnessTitleBoxToughnessRow,
-.traitLevelDisplay,.imageRowStatisticStatBoxDETAILS,.characterDisplayPathNameBoxExtraEnemies,.enemyLinkerText {
+.traitLevelDisplay,.imageRowStatisticStatBoxDETAILS,.characterDisplayPathNameBoxExtraEnemies,.enemyLinkerText,.regValueBlue {
     font-family: "Montserrat-Light";
 }
 
@@ -1147,6 +1147,72 @@ div {
     /* transform: translateY(50%); */
     /* border: 1px solid green; */
 }
+
+
+.ImaginaryDMGColoring {
+    background: linear-gradient(to bottom,#F4DF33,#FFF79E);
+}
+.FireDMGColoring {
+    background: linear-gradient(to bottom,#E52A2A,#FD8B6A);
+}
+.IceDMGColoring {
+    background: linear-gradient(to bottom,#2691D4,#BCF4FE);
+}
+.PhysicalDMGColoring {
+    background: linear-gradient(to bottom,#C3C3C3,#EDEDED);
+}
+.QuantumDMGColoring {
+    background: linear-gradient(to bottom,#5048BE,#C7C7FB);
+
+    /* background: linear-gradient(to right, #5048BE,transparent, #C7C7FB); */
+}
+.LightningDMGColoring {
+    background: linear-gradient(to bottom,#B64CD6,#E98AFE);
+}
+.WindDMGColoring {
+    background: linear-gradient(to bottom,#40C389,#BAEABD);
+}
+
+
+
+.trueDMGColoring {
+    background: linear-gradient(to bottom,#CDDDFE,#F9CCF4);
+}
+/* ORDER FUCKIN MATTERS HERE */
+
+
+.dmgTypeColoring,
+.trueDMGColoring,.ImaginaryDMGColoring,.FireDMGColoring,.IceDMGColoring,.PhysicalDMGColoring,
+.QuantumDMGColoring,.LightningDMGColoring,.WindDMGColoring {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    display: inline-block;
+
+    /* background-color: black; */
+}
+
+.booleanBlue {
+    color: #368CD6;
+}
+.regValueBlue {
+    /* color: #7bd0fd; */
+    /* color: #9CDCFE; */
+
+    /* color: rgb(182, 226, 202); */
+
+    /* color: #7bcffdb9; */
+    /* color: #9cdcfee3; */
+}
+.regValueBlue2 {
+    color: #9CDCFE;
+}
+
+
+
+
+
 
 
 /* .turnStarterBarAlly, .turnStarterBarEnemy, .turnStarterBarUltimate, .turnStarterBarMiniAction, .turnStarterBarMiniActionEnemy {

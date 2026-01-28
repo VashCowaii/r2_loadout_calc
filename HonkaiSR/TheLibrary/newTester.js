@@ -1073,7 +1073,9 @@ const megaParsingFuckery = {
         let configAbility = compositeAbilityObject.abilityObject[loadFile];
 
         if (!configAbility) {
+            // loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName + "_Servant",compositeAbilityObject.trimSummonName);
             loadFile = loadFile.replace(compositeAbilityObject.trimCharacterName,compositeAbilityObject.trimSummonName);
+            console.log(loadFile)
             // console.log(loadFile)
             configAbility = compositeAbilityObject.abilityObject[loadFile];
             // compositeAbilityObject.trimSummonName
