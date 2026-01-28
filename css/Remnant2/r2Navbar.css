@@ -129,7 +129,7 @@
     font-size: 20px;
     text-decoration: none;
 }
-.headerDropdownLink {
+.headerDropdownLink,.headerDropdownLinkDarker {
     width: auto;
     text-decoration: none;
     color: black;
@@ -141,6 +141,11 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.headerDropdownLinkDarker {
+    background-color: #2c2c2c;
+    color: white;
 }
 
 .headerDropdownLink + .headerDropdownLink {
