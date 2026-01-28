@@ -1,6 +1,7 @@
 const compositeAbilityObject = {
   "fullCharacterName": "Aglaea",
   "trimCharacterName": "Aglaea",
+  "summonName": "Garmentmaker",
   "trimSummonName": "Garmentmaker",
   "abilityList": [
     "Aglaea_Aglaea_Trace03",

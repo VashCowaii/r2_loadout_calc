@@ -4,8 +4,8 @@ let sizeLeaderboardArray = [
     "entryName": "Castorice",
     "trimCharacterName": "Castorice",
     "entryIcon": "icon/character/1407.png",
-    "lineCount": 9350,
-    "sizeCount": 331785
+    "lineCount": 9351,
+    "sizeCount": 331821
   },
   {
     "entryType": "char",
@@ -60,8 +60,8 @@ let sizeLeaderboardArray = [
     "entryName": "Aglaea",
     "trimCharacterName": "Aglaea",
     "entryIcon": "icon/character/1402.png",
-    "lineCount": 5597,
-    "sizeCount": 193352
+    "lineCount": 5598,
+    "sizeCount": 193384
   },
   {
     "entryType": "char",
@@ -164,8 +164,8 @@ let sizeLeaderboardArray = [
     "entryName": "Trailblazer - Remembrance",
     "trimCharacterName": "TrailblazerRemembrance",
     "entryIcon": "icon/character/8007.png",
-    "lineCount": 4005,
-    "sizeCount": 137673
+    "lineCount": 4006,
+    "sizeCount": 137696
   },
   {
     "entryType": "char",
@@ -180,8 +180,8 @@ let sizeLeaderboardArray = [
     "entryName": "Hyacine",
     "trimCharacterName": "Hyacine",
     "entryIcon": "icon/character/1409.png",
-    "lineCount": 3703,
-    "sizeCount": 134241
+    "lineCount": 3704,
+    "sizeCount": 134270
   },
   {
     "entryType": "char",

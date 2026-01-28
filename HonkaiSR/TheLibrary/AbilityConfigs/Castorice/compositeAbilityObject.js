@@ -1,7 +1,8 @@
 const compositeAbilityObject = {
   "fullCharacterName": "Castorice",
   "trimCharacterName": "Castorice",
-  "trimSummonName": "Netherwing: Pollux",
+  "summonName": "Netherwing: Pollux",
+  "trimSummonName": "NetherwingPollux",
   "abilityList": [
     "Castorice_Castorice_TechniqueInLevel",
     "Castorice_Castorice_PassiveAbility_1",

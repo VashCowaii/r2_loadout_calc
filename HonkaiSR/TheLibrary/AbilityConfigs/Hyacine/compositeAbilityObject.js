@@ -1,7 +1,8 @@
 const compositeAbilityObject = {
   "fullCharacterName": "Hyacine",
   "trimCharacterName": "Hyacine",
-  "trimSummonName": "Little Ica",
+  "summonName": "Little Ica",
+  "trimSummonName": "LittleIca",
   "abilityList": [
     "Hyacine_Hyacine_TechniqueInLevel",
     "Hyacine_Hyacine_PassiveAbility01",
