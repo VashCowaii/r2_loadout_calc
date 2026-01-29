@@ -435,7 +435,6 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.skipWhenCCd,"Skip when Crowd Controlled")}
             ${getStandardNameDisplay(initialCounter,parseRef.displaySubType,"Display Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.displayShowIcon,"Show Icon")}
-            ${getStandardNameDisplay(initialCounter,parseRef.priorState,"Last State")}
         </div>
         
         `;
@@ -5319,10 +5318,6 @@ const megaParsingFuckeryPain = {
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)} ${parseRef.invertCondition ? "(NOT)" : ""}= ${parseRef.type}
         </div>
         <div class="modifierDetailsBox">
-            ${parseRef.livingState != undefined ? `<div class="actionDetailBody2">
-                <div class="rotationConditionOperatorHeaderInline">Living State:</div>&nbsp;
-                ${parseRef.livingState}
-            </div>` : ""}
             ${getStandardNameDisplay(initialCounter,parseRef.livingState,"Living State")}
         </div>`;
     },

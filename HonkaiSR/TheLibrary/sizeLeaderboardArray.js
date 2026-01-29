@@ -699,7 +699,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TimeWovenIntoGold",
     "entryIcon": "icon/light_cone/23036.png",
     "lineCount": 578,
-    "sizeCount": 20685
+    "sizeCount": 20697
   },
   {
     "entryType": "lc",
