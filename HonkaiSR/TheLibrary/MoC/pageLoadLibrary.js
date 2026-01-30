@@ -37,12 +37,13 @@ function todayLocal() {
 
 let currentActiveCycle = null;
 let currentFloor = null;
+let farmingPagePopSelectionsDone = false;
 
 
 const endgameModeDisplay = {
     pageloadEntry() {
 
-        if (stageTypers === "anom") {
+        if (stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" || stageTypers === "crimson" || stageTypers === "golden" || stageTypers === "shadow" || stageTypers === "planar") {
 
             mocSchedule.reverse();
             const newActiveRange = mocSchedule[mocSchedule.length-1];
@@ -111,7 +112,17 @@ const endgameModeDisplay = {
                         // activityBuffDisplay${sideNumber}GuideOverview${selectorCounter}
         }
     },
-    setEndgameDisplay(adjustment,directEntry,floorNameNew) {
+    setEndgameDisplay(adjustment,directEntry,floorNameNew,directIndex) {
+        if (directIndex != undefined) {
+            directEntry = mocSchedule[directIndex];
+
+
+            // farmingBoxRow${zz}
+            for (let i=0;i<mocSchedule.length;i++) {
+                readSelection(`farmingBoxRow${i}`).style.background = i===directIndex ? "linear-gradient(-90deg, transparent,transparent,transparent,#ffffff3b)" : "transparent";
+            }
+        }
+
 
         if (directEntry || floorNameNew != undefined) {
             if (floorNameNew) {
@@ -136,6 +147,67 @@ const endgameModeDisplay = {
                 }
             }
 
+            let isFarmingActivity = false;
+            if (stageTypers === "echo") {
+                directEntry.image = `activityBG/RogueNousInfoBg.png`;
+                isFarmingActivity = true;
+
+
+                // ChallengeThemeBanner_2004
+                // RogueNousInfoBg
+            }
+            else if (stageTypers === "relic") {
+                directEntry.image = `activityBG/RogueMagicInfoBg.png`;
+                isFarmingActivity = true;
+
+            }
+            else if (stageTypers === "planar") {
+                directEntry.image = `activityBG/RoguePanelFormalBanner.png`;
+                isFarmingActivity = true;
+
+            }
+            else if (stageTypers === "crimson") {
+                directEntry.image = `activityBG/ChallengeBossInfoBg.png`;
+                isFarmingActivity = true;
+
+            }
+            else if (stageTypers === "golden") {
+                directEntry.image = `activityBG/ChallengeBossInfoBg.png`;
+                isFarmingActivity = true;
+
+            }
+            else if (stageTypers === "shadow") {
+                directEntry.image = `activityBG/RogueInfoBg.png`;
+                isFarmingActivity = true;
+
+            }
+
+
+            if (isFarmingActivity) {
+                readSelection("versionUpdateValue").style.display = "none";
+                readSelection("superimpositionHolderbox").style.display = "none";
+            }
+
+
+            // mocEachSide2
+
+            // if (isFarmingActivity && !directEntry.buffData?.desc) {
+
+
+
+
+            // if (isFarmingActivity) {
+            //     readSelection("mocEachSide2").style.display = "none";
+            // }
+
+
+
+
+            // Banner1
+            // MainStoryFifthWorldBanner
+            // Banner2
+            // ChallengeRogueTournBanner4
+
             let pfBannerString = "";
             readSelection("mainGridRow").style.background = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('/HonkaiSR/${directEntry.image || "mocBG/AbyssSenceBgl_Red_00.png"}') center top / cover`;
             // if (stageTypers != "pf") {
@@ -155,11 +227,21 @@ const endgameModeDisplay = {
             //     // pfBannerString = `<img src="/HonkaiSR/${directEntry.image}" class="characterDisplayElementWeaknessIcon">`
             // }
 
-            readSelection("cardBoxIconTextVersion").innerHTML = directEntry.realName;
+            if (!isFarmingActivity) {
+                readSelection("cardBoxIconTextVersion").innerHTML = directEntry.realName;
+            }
+            
 
 
             // patchName
-            const startStringer = stageTypers === "anom" ? "Patch: " + directEntry.patchName : directEntry.start + " - " + directEntry.end;
+
+            const hasPatchTitle = stageTypers === "anom";
+
+            // stageTypers === "echo"
+
+
+
+            const startStringer = stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" ? (hasPatchTitle ? "Patch: " : "") + directEntry.patchName : directEntry.start + " - " + directEntry.end;
 
             readSelection("versionUpdateValue").innerHTML = `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(-1)">&#9664;</div>`
             + startStringer + `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(1)">&#9654;</div>`;
@@ -531,7 +613,7 @@ const endgameModeDisplay = {
 
 
 
-                            const isBigFucker = isToughnessArray && isHPArray;
+                            const isBigFucker = (isToughnessArray && isHPArray) || stageTypers === "echo" || (entryToIterate.length === 1 && stageTypers === "planar");
                             
 
                             
@@ -1672,12 +1754,53 @@ const endgameModeDisplay = {
 
 
             readSelection("mocEachSide1").innerHTML = side1String + guide1String;
-            readSelection("mocEachSide2").innerHTML = side2String + guide2String;
+            if (!isFarmingActivity) {
+                readSelection("mocEachSide2").innerHTML = side2String + guide2String;
+            }
+            else if (!farmingPagePopSelectionsDone) {
+                farmingPagePopSelectionsDone = true;
+
+
+                // let dropsList = directEntry.realDropList;
+                let dropsStringer = `<div class="mainSelectionHeaderRowDropsHolderBox">`;
+                
+                let indexTracker = 0;
+                for (let zz = mocSchedule.length-1;zz>=0;zz--) {
+                    let mocEntry = mocSchedule[zz];
+                    // <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Modifiers/" rel="noopener noreferrer">Effects</a>
+                    let dropImageStringer = "";
+                    for (let imageEntry of mocEntry.realDropList) {
+                        dropImageStringer += `<img src="/HonkaiSR/icon/item/${imageEntry}" class="cardBoxGameModeIconDrop"/>`
+                    }
+
+                    // <img src="/HonkaiSR/icon/sign/AbyssIcon01.png" class="cardBoxGameModeIcon"></img>
+
+                    let firstEntryStyle = "";
+                    if (indexTracker === 0) {
+                        firstEntryStyle = `style="background: linear-gradient(-90deg, transparent,transparent,transparent,#ffffff3b);"`
+                    }
+
+
+                    dropsStringer += `<div class="mainSelectionHeaderRowDropsBox clickable" id="farmingBoxRow${zz}" onclick="endgameModeDisplay.setEndgameDisplay(null,null,null,${zz})" ${firstEntryStyle}>
+                        <div class="mainSelectionHeaderRowDropsHeader">${mocEntry.realName}</div>
+                        <div class="mainSelectionHeaderRowDrops">
+                            ${dropImageStringer}
+                        </div>
+                    </div>`
+                    indexTracker++;
+                }
+                dropsStringer += `</div>`;
+
+
+                readSelection("mocEachSide2").innerHTML = dropsStringer;
+
+
+            }
+            
 
 
 
             if (stageTypers === "anom") {
-                // readSelection("mocEachSide2").innerHTML = "";
 
 
 
