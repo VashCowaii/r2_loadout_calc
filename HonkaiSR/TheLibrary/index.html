@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="/css/Honkai/honkaiLibrary.css">
     <link rel="stylesheet" href="/css/Honkai/honkaiLibraryHome.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiLibraryRework.css">
     <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css"> -->
     <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
     <!-- <link rel="stylesheet" href="/css/Remnant2/calculator.css"> -->
@@ -105,6 +106,72 @@
 
         <div class="mainGridRow" style="display: flex;width: 100%;">
 
+          <div class="mainBodyCardBoxRework">
+            <div class="mainSelectionHeaderReworkHolder">
+              <div class="reworkDotCircle"></div>
+              <div class="reworkCircleInner"></div>
+              
+              <div class="mainSelectionHeaderRework reworkCharImage" onclick="customMenu.createCharacterSearchMenu();">
+                
+                <div class="mainSelectionHeaderReworkText">Characters</div>
+              </div>
+            </div>
+
+            <div class="mainSelectionHeaderReworkHolder" >
+              <div class="reworkDotCircle"></div>
+              <div class="reworkCircleInner"></div>
+              <div class="mainSelectionHeaderRework reworkLightconeImage clickable" onclick="customMenu.createLightconeSearchMenu();">
+                
+                <div class="mainSelectionHeaderReworkText">Lightcones</div>
+              </div>
+            </div>
+
+            <div class="mainSelectionHeaderReworkHolder">
+              <div class="reworkDotCircle"></div>
+              <div class="reworkCircleInner"></div>
+              <div class="mainSelectionHeaderRework reworkRelicImage clickable" onclick="customMenu.createRelicSearchMenu();">
+                
+                <div class="mainSelectionHeaderReworkText">Relics</div>
+              </div>
+            </div>
+
+            <div class="mainSelectionHeaderReworkHolder">
+              <div class="reworkDotCircle"></div>
+              <div class="reworkCircleInner"></div>
+              <a class="mainSelectionHeaderRework reworkEnemyImage clickable" onclick="alert(`Enemy search isn't set up yet(soon).\n\nYou can, however, still access enemy pages through endgame activity pages.`)">
+                
+                <div class="mainSelectionHeaderReworkText">Enemies</div>
+              </a>
+            </div>
+
+            <!-- <div class="mainSelectionHeaderReworkHolder">
+              <div class="reworkDotCircle"></div>
+              <div class="reworkCircleInner"></div>
+              <a class="mainSelectionHeaderRework reworkEndgameImage clickable" onclick="customMenu.createEndgameSearchMenu();">
+                
+                <div class="mainSelectionHeaderReworkText">Endgame</div>
+              </a>
+            </div>
+
+            <div class="mainSelectionHeaderReworkHolder">
+              <div class="reworkDotCircle"></div>
+              <div class="reworkCircleInner"></div>
+              <a class="mainSelectionHeaderRework reworkActivitiesImage clickable" onclick="customMenu.createActivitySearchMenu();">
+                
+                <div class="mainSelectionHeaderReworkText">Activities</div>
+              </a>
+            </div>
+
+            <div class="mainSelectionHeaderReworkHolder">
+              <div class="reworkDotCircle"></div>
+              <div class="reworkCircleInner"></div>
+              <a class="mainSelectionHeaderRework reworkOtherImage clickable" onclick="customMenu.createOtherSearchMenu();">
+                
+                <div class="mainSelectionHeaderReworkText">Other</div>
+              </a>
+            </div> -->
+          </div>
+
             <div class="mainBodyBufferleftBox">
               <img src="/HonkaiSR/image/simulated_event/HoshinoKami_Herta.png" class="cardBoxBannerCardIcon">
 
@@ -123,100 +190,77 @@
                 <span id="versionUpdateValue" class="smallProgressValue"></span>
               </div>
 
-              <div class="mainSelectionHeaderRow">
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Modifiers/" rel="noopener noreferrer">Effects</a>
-
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/MoC/" rel="noopener noreferrer">
-                  <img src="/HonkaiSR/icon/sign/AbyssIcon01.png" class="cardBoxGameModeIcon">
-                  MoC
-                </a>
-
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/PureFiction/" rel="noopener noreferrer">
-                  <img src="/HonkaiSR/icon/sign/AbyssIcon02.png" class="cardBoxGameModeIcon">
-                  PF
-                </a>
-
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Apoc/" rel="noopener noreferrer">
-                  <img src="/HonkaiSR/icon/sign/AbyssThemeTabIcon.png" class="cardBoxGameModeIcon">
-                  Apoc
-                </a>
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Anomaly/" rel="noopener noreferrer">
-                  <img src="/HonkaiSR/icon/sign/ActivityStrongChallengeIcon.png" class="cardBoxGameModeIcon">
-                  Anomaly
-                </a>
-
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Echo/" rel="noopener noreferrer">
-                  Echo
-                </a>
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Cavern/" rel="noopener noreferrer">
-                  Cavern
-                </a>
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Ornament/" rel="noopener noreferrer">
-                  Ornament
-                </a>
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Shadow/" rel="noopener noreferrer">
-                  Shadow
-                </a>
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Crimson/" rel="noopener noreferrer">
-                  Crimson
-                </a>
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Golden/" rel="noopener noreferrer">
-                  Golden
-                </a>
+            </div>
 
 
-                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Complexity/" rel="noopener noreferrer">
-                  <img src="/HonkaiSR/icon/sign/ChallengeThemeTabIcon_2001.png" class="cardBoxGameModeIcon">
-                  Complexity Leaderboard
-                </a>
-
+            <div class="mainBodyCardBoxRework">
+              <!-- <div class="mainSelectionHeaderReworkHolder">
+                <div class="reworkDotCircle"></div>
+                <div class="reworkCircleInner"></div>
                 
-
+                <div class="mainSelectionHeaderRework reworkCharImage" onclick="customMenu.createCharacterSearchMenu();">
+                  
+                  <div class="mainSelectionHeaderReworkText">Characters</div>
+                </div>
+              </div>
+  
+              <div class="mainSelectionHeaderReworkHolder" >
+                <div class="reworkDotCircle"></div>
+                <div class="reworkCircleInner"></div>
+                <div class="mainSelectionHeaderRework reworkLightconeImage clickable" onclick="customMenu.createLightconeSearchMenu();">
+                  
+                  <div class="mainSelectionHeaderReworkText">Lightcones</div>
+                </div>
+              </div>
+  
+              <div class="mainSelectionHeaderReworkHolder">
+                <div class="reworkDotCircle"></div>
+                <div class="reworkCircleInner"></div>
+                <div class="mainSelectionHeaderRework reworkRelicImage clickable" onclick="customMenu.createRelicSearchMenu();">
+                  
+                  <div class="mainSelectionHeaderReworkText">Relics</div>
+                </div>
+              </div>
+  
+              <div class="mainSelectionHeaderReworkHolder">
+                <div class="reworkDotCircle"></div>
+                <div class="reworkCircleInner"></div>
+                <a class="mainSelectionHeaderRework reworkEnemyImage clickable" onclick="alert(`Enemy search isn't set up yet(soon).\n\nYou can, however, still access enemy pages through endgame activity pages.`)">
+                  
+                  <div class="mainSelectionHeaderReworkText">Enemies</div>
+                </a>
+              </div> -->
+  
+              <div class="mainSelectionHeaderReworkHolder">
+                <div class="reworkDotCircle"></div>
+                <div class="reworkCircleInner"></div>
+                <a class="mainSelectionHeaderRework reworkEndgameImage clickable" onclick="customMenu.createEndgameSearchMenu();">
+                  
+                  <div class="mainSelectionHeaderReworkText">Endgame</div>
+                </a>
+              </div>
+  
+              <div class="mainSelectionHeaderReworkHolder">
+                <div class="reworkDotCircle"></div>
+                <div class="reworkCircleInner"></div>
+                <a class="mainSelectionHeaderRework reworkActivitiesImage clickable" onclick="customMenu.createActivitySearchMenu();">
+                  
+                  <div class="mainSelectionHeaderReworkText">Activities</div>
+                </a>
+              </div>
+  
+              <div class="mainSelectionHeaderReworkHolder">
+                <div class="reworkDotCircle"></div>
+                <div class="reworkCircleInner"></div>
+                <a class="mainSelectionHeaderRework reworkOtherImage clickable" onclick="customMenu.createOtherSearchMenu();">
+                  
+                  <div class="mainSelectionHeaderReworkText">Other</div>
+                </a>
               </div>
             </div>
 
-            <div class="mainBodyCardBox">
 
-              <div class="cardBoxCharacterCard cardHoverOpacity" onclick="customMenu.createCharacterSearchMenu();">
-                <img src="/HonkaiSR/image/character_portrait/1005.png" class="cardBoxCharacterCardIcon">
-                <div class="cardBoxIconText">Characters
-                  <br>
-                  <span id="charactersCompletedPercent" class="smallProgressValue"></span>
-                </div>
 
-                <!-- <div class="cardBoxIconText" id="charactersCompletedPercent">Lightcones</div>
-                <div class="cardBoxIconText" id="charactersCompletedCount">Lightcones</div> -->
-              </div>
-
-              <div class="cardBoxLCAndRelicBox">
-                <!-- <div class="cardBoxTitleCard">
-                  asdf
-                </div> -->
-                <div class="cardBoxLightconeCard cardHoverOpacity" onclick="customMenu.createLightconeSearchMenu();">
-                  <img src="/HonkaiSR/image/light_cone_portrait/23004.png" class="cardBoxLightconeCardIcon">
-                  <div class="cardBoxIconText">
-                    Lightcones
-                    <br>
-                    <span id="lightconesCompletedPercent" class="smallProgressValue"></span>
-                  </div>
-                </div>
-
-                <div class="cardBoxRelicCard cardHoverOpacity" onclick="customMenu.createRelicSearchMenu();">
-                <!-- <div class="cardBoxRelicCard cardHoverOpacity" onclick="alert('No relics yet. The list you see on characters and lightcones are what is available to view currently.\n\nI will add more daily.')"> -->
-                  <img src="/HonkaiSR/icon/relic/308_0.png" class="cardBoxRelicCardIcon2">
-                  <img src="/HonkaiSR/icon/relic/110_0.png" class="cardBoxRelicCardIcon1">
-                  <div class="cardBoxIconText">
-                    Relics
-                    <br>
-                    <span id="relicsCompletedPercent" class="smallProgressValue"></span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- customMenuSearchBody -->
-            <!-- eventBodyMainBox -->
         </div>
 
         

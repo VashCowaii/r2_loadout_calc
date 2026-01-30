@@ -46,16 +46,6 @@ let globalUI = {
 
 
 
-
-
-
-
-
-
-
-
-
-
 const customHTML = {
     establishZoomableTraces() {
         //TODO: clean this up later
