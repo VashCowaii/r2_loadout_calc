@@ -1015,6 +1015,9 @@
     margin: 2px;
     text-decoration: none;
     color: white;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
 
     /* position: absolute; */
     /* bottom: 19%; */
@@ -1028,10 +1031,11 @@
     width: auto;
 }
 .cardBoxGameModeIconDrop {
-    height: 45px;
+    height: 50px;
     width: auto;
     margin: 2px;
     padding: 5px;
+    box-sizing: border-box;
 
     border: 1px solid #acacaca9;
     border-top-right-radius: 15px;
