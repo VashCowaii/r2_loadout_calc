@@ -623,7 +623,7 @@ const endgameModeDisplay = {
                                 ov: enemyEntry.id,
                                 scH: newScaleHard,
                                 scHL: enemyLevel,
-                                scE: potentialElite ?? newScaleElite,
+                                scE: potentialElite ?? newScaleElite ?? 1,
                                 wave: potentialParams?.length ? potentialParams.join(",") : [0,0].join(",")
                             };
                             const serialized = new URLSearchParams(seralize);

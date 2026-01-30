@@ -4339,7 +4339,6 @@ const userTriggers = {
         const tghPlMASK = maskEnemyStats[6] ?? 0;
 
 
-
         const finalATK = +(atk * atkMASK * (eliteScalars.attackScalar ?? 1) * (hardScalars.attackScalar ?? 1) * (1 + +(waveSpecificArray?.[0] ?? 0))).toFixed(7);
         const finalDEF = +(def * defMASK * (eliteScalars.defScalar ?? 1) * (hardScalars.defScalar ?? 1)).toFixed(7);
         const finalHP = +(hpb * hpbMASK * (eliteScalars.hpScalar ?? 1) * (hardScalars.hpScalar ?? 1) * (1 + +(waveSpecificArray?.[1] ?? 0))).toFixed(7);
@@ -4717,7 +4716,8 @@ const userTriggers = {
 
 
         const newEnemyChanger = enemyData.newEnemyChanger;
-        const hasAnyChangedValues = (isPhasedToughness || isPhasedHP || isPhasedToughnessBars) && (!phaseDoesNotMatterToughness || !phaseDoesNotMatterHP || !phaseDoesNotMatterToughnessBars);
+        // const hasAnyChangedValues = (isPhasedToughness || isPhasedHP || isPhasedToughnessBars) && (!phaseDoesNotMatterToughness || !phaseDoesNotMatterHP || !phaseDoesNotMatterToughnessBars);
+        const hasAnyChangedValues = (isPhasedToughness && !phaseDoesNotMatterToughness) || (isPhasedHP && !phaseDoesNotMatterHP) || (isPhasedToughnessBars && !phaseDoesNotMatterToughnessBars);
 
         
         // isPhasedToughnessBars/phaseDoesNotMatterToughnessBars
@@ -4782,7 +4782,7 @@ const userTriggers = {
                     summonsStringer += `</div>`
                 }
 
-                if ((isPhasedHP && !phaseDoesNotMatterToughness)) {
+                if ((isPhasedHP && !phaseDoesNotMatterHP)) {
                     // toughnessBars
                     summonsStringer += `<div class="bigFuckerBox">
                     <div class="imageRowStatisticBox1">
