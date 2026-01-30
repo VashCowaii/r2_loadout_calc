@@ -5,6 +5,80 @@ const handleUI = {
 }
 
 
+const endgameModeList = [
+    {
+        name: "Anomaly Aribitration",
+        img: "/HonkaiSR/icon/sign/ActivityStrongChallengeIcon.png",
+        link: "/HonkaiSR/TheLibrary/Anomaly/",
+    },
+    {
+        name: "Apocalyptic Shadow",
+        img: "/HonkaiSR/icon/sign/AbyssThemeTabIcon.png",
+        link: "/HonkaiSR/TheLibrary/Apoc/"
+    },
+    {
+        name: "Pure Fiction",
+        img: "/HonkaiSR/icon/sign/AbyssIcon02.png",
+        link: "/HonkaiSR/TheLibrary/PureFiction/"
+    },
+    {
+        name: "Memory of Chaos",
+        img: "/HonkaiSR/icon/sign/AbyssIcon01.png",
+        link: "/HonkaiSR/TheLibrary/MoC/"
+    },
+]
+
+
+const activityModeList = [
+    {
+        name: "Echo of War",
+        img: "/HonkaiSR/activityBG/CocoomImg.png",
+        link: "/HonkaiSR/TheLibrary/Echo/"
+    },
+    {
+        name: "Cavern of Corrosion",
+        // img: "/HonkaiSR/misc/Icon_Relics.png"
+        img: "/HonkaiSR/icon/item/71009.png",
+        link: "/HonkaiSR/TheLibrary/Cavern/"
+    },
+    // 71009
+    {
+        name: "Ornament Extraction",
+        img: "/HonkaiSR/icon/item/71026.png",
+        link: "/HonkaiSR/TheLibrary/Ornament/"
+    },
+    {
+        name: "Stagnant Shadow",
+        img: "/HonkaiSR/icon/item/110404.png",
+        link: "/HonkaiSR/TheLibrary/Shadow/"
+    },
+    {
+        name: "Calyx: Crimson",
+        img: "/HonkaiSR/icon/item/110113.png",
+        link: "/HonkaiSR/TheLibrary/Crimson/"
+    },
+    {
+        name: "Calyx: Golden",
+        img: "/HonkaiSR/icon/item/213.png",
+        link: "/HonkaiSR/TheLibrary/Golden/"
+    },
+]
+
+const otherModeList = [
+    {
+        name: "Complexity Leaderboard",
+        img: "/HonkaiSR/icon/sign/ChallengeThemeTabIcon_2001.png",
+        desc: "A ranking of kit complexity by bytes, and line-count.",
+        link: "/HonkaiSR/TheLibrary/Complexity/"
+    },
+    {
+        name: "Effect Lookup",
+        img: "/HonkaiSR/misc/Icon_Freeze.png",
+        desc: "Search buff names or descriptions, from ANYTHING.",
+        link: "/HonkaiSR/TheLibrary/Modifiers/"
+    },
+]
+
 const customMenu = {
     "rarityColors": {
         "1": "#4982c6",
@@ -36,6 +110,61 @@ const customMenu = {
 
         globalUI.volumeIsOcclusion = false;
         globalUI.volumeIsLock = false;
+    },
+    
+    createEndgameSearchMenu(isOcclusion,isLock) {
+        if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+        readSelection("customMenuSearchTitle").innerHTML = "Endgame Modes";
+
+        readSelection("customMenuSearchNote").innerHTML = "";
+
+    
+
+        globalUI.currentSearchOpen = "endgame";
+        globalUI.currentSearchVolume = endgameModeList;
+        readSelection("customMenuSearchBarInput").focus();
+
+        globalUI.volumeIsOcclusion = isOcclusion;
+        globalUI.volumeIsLock = isLock;
+        customMenu.updateSearchResults(isOcclusion,isLock);
+    },
+    createActivitySearchMenu(isOcclusion,isLock) {
+        if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+        readSelection("customMenuSearchTitle").innerHTML = "Activity Modes";
+
+        readSelection("customMenuSearchNote").innerHTML = "";
+
+    
+
+        globalUI.currentSearchOpen = "activity";
+        globalUI.currentSearchVolume = activityModeList;
+        readSelection("customMenuSearchBarInput").focus();
+
+        globalUI.volumeIsOcclusion = isOcclusion;
+        globalUI.volumeIsLock = isLock;
+        customMenu.updateSearchResults(isOcclusion,isLock);
+    },
+    createOtherSearchMenu(isOcclusion,isLock) {
+        if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+        readSelection("customMenuSearchTitle").innerHTML = "Others";
+
+        readSelection("customMenuSearchNote").innerHTML = "";
+
+    
+
+        globalUI.currentSearchOpen = "other";
+        globalUI.currentSearchVolume = otherModeList;
+        readSelection("customMenuSearchBarInput").focus();
+
+        globalUI.volumeIsOcclusion = isOcclusion;
+        globalUI.volumeIsLock = isLock;
+        customMenu.updateSearchResults(isOcclusion,isLock);
     },
     createLightconeSearchMenu(isOcclusion,isLock) {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
@@ -2631,8 +2760,9 @@ const customMenu = {
 
         const isOcclusion = globalUI.volumeIsOcclusion;
         const isLock = globalUI.volumeIsLock;
+        const currentVolume = globalUI.currentSearchVolume;
 
-        let volumeKeys = Object.keys(globalUI.currentSearchVolume).sort();
+        let volumeKeys = Object.keys(currentVolume).sort();
         let resultString = "";
         let currentInput = (readSelection("customMenuSearchBarInput").value).toString().toLowerCase();
 
@@ -2852,6 +2982,81 @@ const customMenu = {
             // if (currentPathResults.length) {resultString += currentPathDivider + getResultStringForLightconeSet(currentPathResults);}
             // if (otherResults.length) {resultString += otherPathsDivider + getResultStringForLightconeSet(otherResults);}
         }
+
+        // "endgame";endgameModeList
+        else if (globalUI.currentSearchOpen === "endgame" || globalUI.currentSearchOpen === "activity" || globalUI.currentSearchOpen === "other") {
+            let otherResults = [];
+
+            for (let setEntry of currentVolume) {
+                let currentSet = setEntry;
+                // currentSet.name = setEntry;//I technically don't put the name as an attribute on set effect, it's the very key itself, but I want to sort still so we need this.
+                let joinedDesc = currentSet.desc?.[0] + (currentSet.desc?.length > 1 ? currentSet?.desc[1] : "");//wanna search 2pc and 4pc at once, if applicable 
+
+                //skip any relic name or desc that does NOT contain our search, and forced lowercase just to avoid headaches
+                let fuzzy = currentSet.name.toLowerCase().includes(currentInput) || joinedDesc.toLowerCase().includes(currentInput);
+                if (!fuzzy && currentInput != "") {continue;}
+
+                //skip reg relics on a planar search, and skip planars on a relic search, bc planars never have more than one description length should be 1(hopefully, unless I screwed up parsing)
+                // if (globalUI.currentSearchOpen === "Planar" && currentSet.desc.length === 2) {continue;}
+                // else if (globalUI.currentSearchOpen != "Planar" && currentSet.desc.length === 1) {continue;}
+
+                otherResults.push(currentSet);
+            }
+
+            otherResults.sort(regSort);
+
+            function fuckyCutoffFix(snippet) {
+                const lastOpen = snippet.lastIndexOf("<");
+                const lastClose = snippet.lastIndexOf(">");
+                
+                //if we see a <> that is incomplete, and our desc trimming left it open, we need to remove the unfinished tab lest it fuck us (visually)
+                if (lastOpen > lastClose) {snippet = snippet.slice(0, lastOpen) + "...";}
+                
+                return snippet;
+            }
+
+            function getResultStringForLightconeSet(array) {
+                let returnString = "";
+                for (let result of array) {
+                    //get the desc colors fixed, and parameters inserted for the blank values
+                    let cleanDesc = pagePopulation.cleanDescription(result.params ?? [],result.desc ?? "");
+                    //then limit the description to x characters, I don't see a point in showing the whole thing on a selection
+                    let cleanDescTrim = fuckyCutoffFix(cleanDesc.length > 150 ? cleanDesc.slice(0, 150) + "..." : cleanDesc);
+
+                    const trimmedCharacterName = customMenu.trimToFirstWordAndInitials(result.name,true);
+                    // <div class="customMenuResultRowBox clickable" onclick="${functionToCall}">
+                    // let stringCustom = `
+                    //     <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${trimmedCharacterName}/" target="_blank">
+
+                    // <div class="customMenuResultRowBox clickable" onclick="customMenu.closeMenu();userTriggers.updateSelectedRelicSet('${globalUI.currentSearchOpen}',\`${result.name}\`)">
+                    let stringCustom = `
+                        <a class="customMenuResultRowBox clickable" href="${result.link}" target="_blank">
+                        
+                            <div class="customMenuResultRowIcon">
+                                <img src="${result.img}" class="customMenuResultImgRounded" style="border: 2px solid ${customMenu.rarityColors[3]};"/>
+                            </div>
+                            <div class="customMenuResultBodyBox">
+                                <div class="customMenuResultBodyTitle">${result.name}</div>
+                                <div class="customMenuResultBodyDesc smallFont">${cleanDescTrim}</div>
+                            
+                            </div>
+                        </a>
+                    `;
+                    // <div class="customMenuResultBodyDesc">${cleanDescTrim}</div>
+                    
+                    
+                    //${turnLogicRelics[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                    returnString += stringCustom;
+                }
+                return returnString;
+            }
+
+            if (otherResults.length) {resultString += getResultStringForLightconeSet(otherResults);}
+        }
+
+
+
+
         else //if (globalUI.currentSearchOpen.toLowerCase().includes("relics") || globalUI.currentSearchOpen.toLowerCase().includes("planar")) 
             {
             let otherResults = [];

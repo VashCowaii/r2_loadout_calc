@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css">
 
     <link rel="stylesheet" href="/css/Honkai/honkaiLibrary.css">
-    <link rel="stylesheet" href="/css/Honkai/honkaiLibraryMoc.css">
+    <link rel="stylesheet" href="/css/Honkai/honkaiLibraryHome.css">
     <!-- <link rel="stylesheet" href="/css/Honkai/honkaiCalcMobile.css"> -->
     <link rel="stylesheet" href="/css/Remnant2/r2Navbar.css">
     <!-- <link rel="stylesheet" href="/css/Remnant2/calculator.css"> -->
@@ -21,36 +21,36 @@
     <!-- <link rel="stylesheet" href="/TFD/tfdCalc.css"> -->
     <link rel="Icon" href="/images/Cowaii.png">
     <!-- <script src="code.js"></script> -->
-    <title>Memory of Chaos</title> <!-- Browser Tab title -->
+    <title>HSR Library</title> <!-- Browser Tab title -->
 
-    <meta property="og:title" content="HSR: Memory of Chaos">
+    <meta property="og:title" content="HSR Library">
     <meta
       property="og:description"
-      content="In-depth details for every MoC cycle, past and future."
+      content="Analytical, user-readable representations of what the game ACTUALLY does."
     />
     <meta
       property="description"
-      content="In-depth details for every MoC cycle, past and future."
+      content="Analytical, user-readable representations of what the game ACTUALLY does."
     />
     <meta
       property="og:image"
-      content="https://cowaii.io/HonkaiSR/icon/sign/AbyssIcon01.png"
+      content="https://cowaii.io/HonkaiSR/misc/Glorpard.png"
     />
     <meta
       property="og:url"
       content="https://cowaii.io/"
     />
-    <meta property="og:site_name" content="HSR: Memory of Chaos" />
+    <meta property="og:site_name" content="HSR Library" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="HSR: Memory of Chaos" />
+    <meta name="twitter:title" content="HSR Library" />
     <meta
       name="twitter:description"
-      content="In-depth details for every MoC cycle, past and future."
+      content="Analytical, user-readable representations of what the game ACTUALLY does."
     />
     <meta
       name="twitter:image"
-      content="https://cowaii.io/HonkaiSR/icon/sign/AbyssIcon01.png"
+      content="https://cowaii.io/HonkaiSR/misc/Glorpard.png"
     />
 </head>
 
@@ -103,44 +103,20 @@
 
 
 
-        <div class="mainGridRow" style="display: flex;width: 100%;" id="mainGridRow">
+        <div class="mainGridRow" style="display: flex;width: 100%;">
 
-          <div class="mocTitleRowMain">
-            <img src="" class="pureFictionBannerImage" id="pureFictionBannerImage">
-            <div class="mocTitleRow">
-              
-              <div class="cardBoxIconTextVersion" id="cardBoxIconTextVersion">
-                The Library
-                
-              </div>
-              <span id="versionUpdateValue" class="smallProgressValue">dateHere</span>
-            </div>
-          </div>
-
-          
-
-          <div class="actionDetailBody3Description" id="mocDescriptionBox">descHere</div>
-
-          <div class="actionDetailBody3DescriptionGrit" id="PFDescriptionBox">descHere</div>
-
-          <div class="superimpositionHolderbox" id="superimpositionHolderbox"></div>
-
-          <!-- <div class="bulletSelectorIDRowBox">
-            <div class="toggleArrowBox" onclick="reactorFunctions.updateRotationDisplay(-1)">&#9664;</div>
-            <div class="traitLevelDisplay">
-                <input type="number" class="bulletSelectorInputWeapons" id="bulletSelectorInputWeapons" min="1" max="1" step="1" value="1" onchange="reactorFunctions.updateRotationDisplay()">
-            </div> 
-            <div class="toggleArrowBox" onclick="reactorFunctions.updateRotationDisplay(1)">&#9654;</div>
-          </div> -->
-          <div class="mocEachSideWholeBox">
-            <div class="mocEachSide" id="mocEachSide1">asdf</div>
-            <div class="mocEachSide" id="mocEachSide2">asdf</div>
-
-          </div>
-
-            <!-- <div class="mainBodyBufferleftBox">
+            <div class="mainBodyBufferleftBox">
               <img src="/HonkaiSR/image/simulated_event/HoshinoKami_Herta.png" class="cardBoxBannerCardIcon">
 
+              <!-- <div class="libraryOverviewCountsBox">
+                <div class="libraryCountsBoxVertical">
+                  <img src="/HonkaiSR/misc/UI_Message_Group_Default.png" class="cardBoxCharacterCardIconCounts">
+                  <div class="cardBoxIconText" id="charactersCompletedPercent">Lightcones</div>
+                  <div class="cardBoxIconText" id="charactersCompletedCount">Lightcones</div>
+                </div>
+                
+              </div> -->
+              <!-- <div class="cardBoxIconTextBanner">The Library</div> -->
 
               <div class="cardBoxIconTextVersion">
                 The Library
@@ -149,11 +125,53 @@
 
               <div class="mainSelectionHeaderRow">
                 <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Modifiers/" rel="noopener noreferrer">Effects</a>
+
                 <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/MoC/" rel="noopener noreferrer">
-                  
                   <img src="/HonkaiSR/icon/sign/AbyssIcon01.png" class="cardBoxGameModeIcon">
                   MoC
                 </a>
+
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/PureFiction/" rel="noopener noreferrer">
+                  <img src="/HonkaiSR/icon/sign/AbyssIcon02.png" class="cardBoxGameModeIcon">
+                  PF
+                </a>
+
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Apoc/" rel="noopener noreferrer">
+                  <img src="/HonkaiSR/icon/sign/AbyssThemeTabIcon.png" class="cardBoxGameModeIcon">
+                  Apoc
+                </a>
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Anomaly/" rel="noopener noreferrer">
+                  <img src="/HonkaiSR/icon/sign/ActivityStrongChallengeIcon.png" class="cardBoxGameModeIcon">
+                  Anomaly
+                </a>
+
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Echo/" rel="noopener noreferrer">
+                  Echo
+                </a>
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Cavern/" rel="noopener noreferrer">
+                  Cavern
+                </a>
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Ornament/" rel="noopener noreferrer">
+                  Ornament
+                </a>
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Shadow/" rel="noopener noreferrer">
+                  Shadow
+                </a>
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Crimson/" rel="noopener noreferrer">
+                  Crimson
+                </a>
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Golden/" rel="noopener noreferrer">
+                  Golden
+                </a>
+
+
+                <a class="mainSelectionHeader" href="/HonkaiSR/TheLibrary/Complexity/" rel="noopener noreferrer">
+                  <img src="/HonkaiSR/icon/sign/ChallengeThemeTabIcon_2001.png" class="cardBoxGameModeIcon">
+                  Complexity Leaderboard
+                </a>
+
+                
+
               </div>
             </div>
 
@@ -166,10 +184,14 @@
                   <span id="charactersCompletedPercent" class="smallProgressValue"></span>
                 </div>
 
+                <!-- <div class="cardBoxIconText" id="charactersCompletedPercent">Lightcones</div>
+                <div class="cardBoxIconText" id="charactersCompletedCount">Lightcones</div> -->
               </div>
 
               <div class="cardBoxLCAndRelicBox">
-
+                <!-- <div class="cardBoxTitleCard">
+                  asdf
+                </div> -->
                 <div class="cardBoxLightconeCard cardHoverOpacity" onclick="customMenu.createLightconeSearchMenu();">
                   <img src="/HonkaiSR/image/light_cone_portrait/23004.png" class="cardBoxLightconeCardIcon">
                   <div class="cardBoxIconText">
@@ -180,7 +202,7 @@
                 </div>
 
                 <div class="cardBoxRelicCard cardHoverOpacity" onclick="customMenu.createRelicSearchMenu();">
-
+                <!-- <div class="cardBoxRelicCard cardHoverOpacity" onclick="alert('No relics yet. The list you see on characters and lightcones are what is available to view currently.\n\nI will add more daily.')"> -->
                   <img src="/HonkaiSR/icon/relic/308_0.png" class="cardBoxRelicCardIcon2">
                   <img src="/HonkaiSR/icon/relic/110_0.png" class="cardBoxRelicCardIcon1">
                   <div class="cardBoxIconText">
@@ -191,8 +213,10 @@
                 </div>
               </div>
 
-            </div> -->
+            </div>
 
+            <!-- customMenuSearchBody -->
+            <!-- eventBodyMainBox -->
         </div>
 
         
@@ -207,19 +231,14 @@
 <script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
 <script src="/htmlTemplates/adjustMobileNav.js"></script>
 
-<!-- <script src="dCharacters.js"></script> -->
+<script src="dCharacters.js"></script>
 <!-- <script src="/HonkaiSR/Calculator/dCharacters.js"></script> -->
 
-<!-- <script src="dLightcones.js"></script> -->
-<!-- <script src="dRelicSets.js"></script> -->
+<script src="dLightcones.js"></script>
+<script src="dRelicSets.js"></script>
 <!-- <script src="/HonkaiSR/Calculator/dRelicSets.js"></script> -->
-<!-- <script src="/HonkaiSR/Calculator/suffering4Analytics.js"></script> -->
-
-
-
-<!-- <script src="statList.js"></script> -->
-
-
+<script src="/HonkaiSR/Calculator/suffering4Analytics.js"></script>
+<script src="statList.js"></script>
 
 <!-- <script src="dLightcones.js"></script>
 <script src="dRelics.js"></script>
@@ -228,11 +247,7 @@
 <!-- <script src="/HonkaiSR/Calculator/statList.js"></script> -->
 <!-- <script src="wavePresets.js"></script> -->
 <!-- <script src="formulas.js"></script> -->
-
-
-<!-- <script src="globalRecords.js"></script> -->
-
-
+<script src="globalRecords.js"></script>
 <!-- <script src="/HonkaiSR/Calculator/customHTML.js"></script> -->
 
 <script src="/HonkaiSR/Calculator/tooltipStorage.js"></script>
@@ -243,9 +258,6 @@
 
 
 <script src="/HonkaiSR/TheLibrary/tester.js"></script>
-
-<script src="/HonkaiSR/TheLibrary/dEnemyImages.js"></script>
-<script src="/HonkaiSR/TheLibrary/dMOCSchedule.js"></script>
 
 <!-- <script src="su_Maslow.js"></script> -->
 <!-- <script src="suffering4Analytics.js"></script> -->
@@ -258,15 +270,14 @@
 <!-- <script src="pagePopulation.js"></script> -->
 
 <!-- <script src="/HonkaiSR/TheLibrary/newTester.js"></script> -->
-<!-- <script src="/HonkaiSR/TheLibrary/allowedCharacterList.js"></script> -->
+<script src="/HonkaiSR/TheLibrary/allowedCharacterList.js"></script>
 
-<!-- <script src="readyCharacterCounts.js"></script> -->
-<!-- <script src="readyLightconeCounts.js"></script> -->
-<!-- <script src="readyRelicCounts.js"></script> -->
-<script src="/HonkaiSR/TheLibrary/lastVerionHSR.js"></script>
+<script src="readyCharacterCounts.js"></script>
+<script src="readyLightconeCounts.js"></script>
+<script src="readyRelicCounts.js"></script>
+<script src="lastVerionHSR.js"></script>
 
-<script src="/HonkaiSR/TheLibrary/MoC/pageLoadLibrary.js"></script>
-<!-- <script src="pageLoadMoc.js"></script> -->
+<script src="pageLoadLibrary.js"></script>
 
 <script src="/MainJS/buildTime.js"></script>
 
