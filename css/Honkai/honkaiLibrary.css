@@ -2481,6 +2481,10 @@ div {
 }
 .imageRowStatisticImage,.imageRowStatisticImageMain,.imageRowStatisticImageStatMenu,.imageRowStatisticImagePhased {
     width: 100%;
+    min-width: 20px;
+
+
+
     height: auto;
     object-fit: contain;
     scale: 1.2;
