@@ -4354,10 +4354,26 @@ const userTriggers = {
 
 
         const resNameConversions = {
-            "STAT_CTRL": "RES_Control",
-            "STAT_CTRL_Frozen": "RES_Freeze",
-            "STAT_Confine": "RES_Imprison",
-            "STAT_Entangle": "RES_Entangle",
+            "STAT_CTRL": "Control RES",
+            "STAT_CTRL_Frozen": "Freeze RES",
+            "STAT_Confine": "Imprison RES",
+            "STAT_Entangle": "Entangle RES",
+
+            "STAT_DOT_Bleed": "Bleed RES",
+            "STAT_DOT_Burn": "Burn RES",
+            "STAT_DOT_Electric": "Shock RES",
+            "STAT_DOT_Poison": "Shear RES",
+        }
+        const resNameImageConversions = {
+            "STAT_CTRL": "Icon_Control_Effects_RES.png",
+            "STAT_CTRL_Frozen": "Icon_Frozen_RES.png",
+            "STAT_Confine": "Icon_Imprisonment_RES.png",
+            "STAT_Entangle": "Icon_Entanglement_RES.png",
+
+            "STAT_DOT_Bleed": "Icon_Bleed_RES.png",
+            "STAT_DOT_Burn": "Icon_Burn_RES.png",
+            "STAT_DOT_Electric": "Icon_Shock_RES.png",
+            "STAT_DOT_Poison": "Icon_Wind_Shear_RES.png",
         }
 
         // const finalATKValue = +(atkBonusParam * baseEntryData.atkBase * eliteScaling.attackScalar * hardScaling.attackScalar * (eliteData.AttackModifyRatio?.Value ?? eliteData.AttackModifyRatio)).toFixed(7);
@@ -4376,10 +4392,11 @@ const userTriggers = {
 
             
 
-
+            // resNameImageConversions
             const resValue = +(newCharRef.resMod[resEntry] * 100).toFixed(7)
             resistanceStringer += `<div class="imageRowStatisticBox${resistanceAlternator} imageRowStatisticBoxEnemyAdjustmentRow">
                 <div class="imageRowStatisticImageBoxEnemyAdjustment">
+                <img src="/HonkaiSR/misc/${resNameImageConversions[resEntry]}" class="imageRowStatisticImage">
                 <div class="imageRowStatisticNameBox">${resNameConversions[resEntry] ?? resEntry}</div>
                 </div>
                 
