@@ -8840,7 +8840,7 @@ const megaParsingFuckeryPain = {
             </summary>
 
             <div class="modifierDetailsBox">
-                ${getStandardNameDisplay(initialCounter,delayPercent.switchValue,"Delay Value/Multi[?]")}
+                ${getStandardNameDisplay(initialCounter,parseRef.delayPercent,"Delay Value/Multi[?]")}
                 ${getStandardNameDisplay(initialCounter,parseRef.refreshPositions,"Refresh Positions")}
 
             </div>

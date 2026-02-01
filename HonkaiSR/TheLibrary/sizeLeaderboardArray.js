@@ -432,6 +432,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 85102
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1003012,
+    "lineCount": 2516,
+    "sizeCount": 84243
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1003013,
+    "lineCount": 2516,
+    "sizeCount": 84243
+  },
+  {
     "entryType": "char",
     "entryName": "March 7th - Preservation",
     "trimCharacterName": "March7thP",
@@ -446,6 +458,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1005.png",
     "lineCount": 2509,
     "sizeCount": 81705
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1003010,
+    "lineCount": 2427,
+    "sizeCount": 81606
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1003011,
+    "lineCount": 2430,
+    "sizeCount": 81549
   },
   {
     "entryType": "char",
