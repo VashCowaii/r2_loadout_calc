@@ -405,11 +405,13 @@ const megaParsingFuckeryPain = {
             "value",
             "target",
             "activeCount",
+            "entityClass",
 
             "maximum",
             "assignState",
             "priorState",
             "bar#",
+            "barType",
             "cooldown",
             "skipWhenCCd",
             "isSummoner",
@@ -420,7 +422,7 @@ const megaParsingFuckeryPain = {
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Displayed Energy Bar");
         // initialCounter++;
         return `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">Update Energy Bar(Display):</div>&nbsp;
+            <div class="rotationConditionOperatorHeaderInline">Update Energy Bar(Display)${parseRef.entityClass ? `[${parseRef.entityClass}]` : ""}:</div>&nbsp;
             ${parseRef.value != undefined ? parseRef.value.displayLines ?? parseRef.value : ""}
         </div>
         <div class="modifierDetailsBox">
@@ -431,6 +433,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.assignState,"State to Assign")}
             ${getStandardNameDisplay(initialCounter,parseRef.priorState,"Last State")}
             ${getStandardNameDisplay(initialCounter,parseRef["bar#"],"Bar #")}
+            ${getStandardNameDisplay(initialCounter,parseRef.barType,"Bar Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.cooldown,"Cooldown Display")}
             ${getStandardNameDisplay(initialCounter,parseRef.skipWhenCCd,"Skip when Crowd Controlled")}
             ${getStandardNameDisplay(initialCounter,parseRef.displaySubType,"Display Type")}
@@ -3600,6 +3603,41 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Condition Priority"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "overridePriority",
+            "condition",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Condition Priority");
+        // initialCounter++;
+
+        const conditionObject = parseRef.condition;
+        const conditionName = conditionObject?.name;
+
+        let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        const functionExists = megaParsingFuckery[conditionName];
+        if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
+
+
+
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Condition Priority:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.overridePriority,"Priority Tag")}
+
+        </div>
+
+        ${returnString != "" ? `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Conditions</div>
+        </div>
+        ${returnString}` : ""}
+        `;
+    },
     "Inject Ability Use"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -3610,6 +3648,7 @@ const megaParsingFuckeryPain = {
             "valuePerStack",
 
             "condition",
+            "checkOverride",
             "canHitNonTargets",
             "showInActionOrder",
             "abortFlags",
@@ -3643,6 +3682,17 @@ const megaParsingFuckeryPain = {
 
         if (conditionObject2 && !returnString2) {throw new Error(`Missing condition display-only definition in IF: ${conditionName2}`)}
 
+
+
+        const conditionObject3 = parseRef.checkOverride;
+        const conditionName3 = conditionObject3?.name;
+
+        let returnString3 = "" + (typeof conditionObject3 === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject3}</div>` : "");
+        const functionExists3 = megaParsingFuckery[conditionName3];
+        if (functionExists3) {returnString3 += `<div class="rotationsConditionsBodyBox">` + functionExists3(conditionObject3,initialCounter) + `</div>`;}
+
+        if (conditionObject3 && !returnString3) {throw new Error(`Missing condition display-only definition in IF: ${conditionName3}`)}
+
         
 
         return `<div class="actionDetailBody2">
@@ -3673,6 +3723,11 @@ const megaParsingFuckeryPain = {
             <div class="rotationConditionOperatorHeaderInline">Pre-Check</div>
         </div>
         ${returnString}` : ""}
+
+        ${returnString3 != "" ? `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Check Override</div>
+        </div>
+        ${returnString3}` : ""}
 
         ${returnString2 != "" ? `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Active Condition</div>
@@ -5864,6 +5919,33 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Assign Target Battle-Location"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "row",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Assign Target Battle-Location");
+
+        // const conditionObject = parseRef.conditions;
+        // const conditionName = conditionObject?.name;
+
+        // let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        // const functionExists = megaParsingFuckery[conditionName];
+        // if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        // if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Assign Target Battle-Location:</div>&nbsp;
+            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.row,"Row")}
+            
+        </div>
+        `;
+    },
     "Add Sub-Events/Bonuses"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6385,6 +6467,45 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.formula,"Formula")}
             ${getStandardNameDisplay(initialCounter,parseRef.value,"Shield Value")}
             ${getStandardNameDisplay(initialCounter,parseRef.valuePercent,"Shield Value Percent")}
+        </div>
+        `;
+    },
+    "Adjust Shield"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "value",
+            "modifierNameArray",
+            "isMax",
+
+            // "modifier",
+            // "stackLimit",
+            // "valuePerStack",
+            // "addStacksPerTrigger",
+            // "duration",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Adjust Shield");
+
+
+        // {
+        //     "name": "Damage Type Source",
+        //     "sourceType": "ReadTargetType",
+        //     "target": "Caster"
+        //   }
+
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Adjust Shield${parseRef.isMax ? "[MAX]" : ""}:</div>&nbsp;
+            on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.formula,"Formula")}
+            ${getStandardNameDisplay(initialCounter,parseRef.value,"Shield Value")}
+            ${getStandardNameDisplay(initialCounter,parseRef.modifierNameArray,"Modifier Names")}
         </div>
         `;
     },
@@ -7341,6 +7462,8 @@ const megaParsingFuckeryPain = {
             "name",
             "odds",
             "execute",
+            "isUnique",
+            "count",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Random Event");
 
@@ -7369,6 +7492,8 @@ const megaParsingFuckeryPain = {
 
             <div class="modifierDetailsBox">
                 ${getStandardNameDisplay(initialCounter,parseRef.odds,"ODDS")}
+                ${getStandardNameDisplay(initialCounter,parseRef.count,"Count")}
+                ${getStandardNameDisplay(initialCounter,parseRef.isUnique,"Is Unique")}
             </div>
 
             <div class="rotationConditionOperatorBoxMain">
@@ -8508,6 +8633,7 @@ const megaParsingFuckeryPain = {
             </summary>
 
             <div class="modifierDetailsBox">
+                ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
                 ${getStandardNameDisplay(initialCounter,parseRef.ignoreHPLossTriggers,"Bypass Event: HP loss triggers")}
                 ${getStandardNameDisplay(initialCounter,parseRef.ignoreDeathTriggers,"Bypass Event: Death triggers")}
                 ${getStandardNameDisplay(initialCounter,parseRef.abortInsertedAbilities,"Abort Injected Ability Actions")}

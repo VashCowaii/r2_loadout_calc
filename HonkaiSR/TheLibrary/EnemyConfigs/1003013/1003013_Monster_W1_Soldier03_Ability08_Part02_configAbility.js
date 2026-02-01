@@ -48,6 +48,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
+                    "team": "Enemy Team",
                     "location": "Left"
                   },
                   "passed": [
@@ -114,6 +115,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
+                    "team": "Enemy Team",
                     "location": "Right"
                   },
                   "passed": [
@@ -180,6 +182,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
+                    "team": "Enemy Team",
                     "location": "Left"
                   },
                   "passed": [
@@ -246,6 +249,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
+                    "team": "Enemy Team",
                     "location": "Right"
                   },
                   "passed": [
@@ -314,6 +318,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
+                    "team": "Enemy Team",
                     "location": "Left"
                   },
                   "passed": [
@@ -378,6 +383,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
+                    "team": "Enemy Team",
                     "location": "Right"
                   },
                   "passed": [

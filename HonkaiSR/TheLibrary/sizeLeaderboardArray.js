@@ -8,6 +8,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 437172
   },
   {
+    "entryType": "enemy",
+    "enemyID": 3024013,
+    "lineCount": 10498,
+    "sizeCount": 352533
+  },
+  {
     "entryType": "char",
     "entryName": "Castorice",
     "trimCharacterName": "Castorice",
@@ -29,7 +35,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Evernight",
     "entryIcon": "icon/character/1413.png",
     "lineCount": 8560,
-    "sizeCount": 296729
+    "sizeCount": 296653
   },
   {
     "entryType": "char",
@@ -77,7 +83,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Aglaea",
     "entryIcon": "icon/character/1402.png",
     "lineCount": 5598,
-    "sizeCount": 193384
+    "sizeCount": 193308
   },
   {
     "entryType": "char",
@@ -304,6 +310,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 109847
   },
   {
+    "entryType": "enemy",
+    "enemyID": 3021022,
+    "lineCount": 3321,
+    "sizeCount": 109571
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021042,
+    "lineCount": 3322,
+    "sizeCount": 109415
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021032,
+    "lineCount": 3318,
+    "sizeCount": 109187
+  },
+  {
     "entryType": "char",
     "entryName": "Jiaoqiu",
     "trimCharacterName": "Jiaoqiu",
@@ -434,14 +458,14 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 1003012,
-    "lineCount": 2516,
-    "sizeCount": 84243
+    "lineCount": 2522,
+    "sizeCount": 84453
   },
   {
     "entryType": "enemy",
     "enemyID": 1003013,
-    "lineCount": 2516,
-    "sizeCount": 84243
+    "lineCount": 2522,
+    "sizeCount": 84453
   },
   {
     "entryType": "char",
@@ -452,24 +476,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 82306
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1003011,
+    "lineCount": 2436,
+    "sizeCount": 81825
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1003010,
+    "lineCount": 2433,
+    "sizeCount": 81816
+  },
+  {
     "entryType": "char",
     "entryName": "Kafka_v0",
     "trimCharacterName": "Kafkav0",
     "entryIcon": "icon/character/1005.png",
     "lineCount": 2509,
     "sizeCount": 81705
-  },
-  {
-    "entryType": "enemy",
-    "enemyID": 1003010,
-    "lineCount": 2427,
-    "sizeCount": 81606
-  },
-  {
-    "entryType": "enemy",
-    "enemyID": 1003011,
-    "lineCount": 2430,
-    "sizeCount": 81549
   },
   {
     "entryType": "char",
@@ -698,8 +722,8 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 1002030,
-    "lineCount": 924,
-    "sizeCount": 32508
+    "lineCount": 926,
+    "sizeCount": 32582
   },
   {
     "entryType": "relic",

@@ -34,6 +34,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
+            "team": "Player Team",
             "location": "Max"
           },
           "failed": [
@@ -44,7 +45,8 @@ const compositeAbilityObject = {
                 "target": {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
-                }
+                },
+                "team": "Player Team"
               }
             }
           ]

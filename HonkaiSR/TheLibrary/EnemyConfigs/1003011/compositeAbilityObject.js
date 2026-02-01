@@ -409,6 +409,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
+                        "team": "Enemy Team",
                         "location": "Left"
                       },
                       "passed": [
@@ -475,6 +476,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
+                        "team": "Enemy Team",
                         "location": "Right"
                       },
                       "passed": [
@@ -541,6 +543,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
+                        "team": "Enemy Team",
                         "location": "Left"
                       },
                       "passed": [
@@ -607,6 +610,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
+                        "team": "Enemy Team",
                         "location": "Right"
                       },
                       "passed": [
@@ -675,6 +679,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
+                        "team": "Enemy Team",
                         "location": "Left"
                       },
                       "passed": [
@@ -739,6 +744,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
+                        "team": "Enemy Team",
                         "location": "Right"
                       },
                       "passed": [

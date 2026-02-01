@@ -30,20 +30,20 @@ const configAbility = {
       },
       "modifier": "Monster_W1_Soldier01_03_Bonus[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
-        "operator": "Variables[0] (Enemy_Skill_ParamOBJECT_UNUSED_1) || RETURN",
-        "displayLines": "Enemy_Skill_ParamOBJECT_UNUSED_1",
+        "operator": "Variables[0] (UnusedUnderThisBase_1) || RETURN",
+        "displayLines": "UnusedUnderThisBase_1",
         "constants": [],
         "variables": [
-          "Enemy_Skill_ParamOBJECT_UNUSED_1"
+          "UnusedUnderThisBase_1"
         ]
       },
       "valuePerStack": {
         "Modifier_AttackAddedRatio": {
-          "operator": "Variables[0] (Enemy_Skill_ParamOBJECT_UNUSED_2) || RETURN",
-          "displayLines": "Enemy_Skill_ParamOBJECT_UNUSED_2",
+          "operator": "Variables[0] (UnusedUnderThisBase_2) || RETURN",
+          "displayLines": "UnusedUnderThisBase_2",
           "constants": [],
           "variables": [
-            "Enemy_Skill_ParamOBJECT_UNUSED_2"
+            "UnusedUnderThisBase_2"
           ]
         },
         "Modifier_SpeedDelta": 0

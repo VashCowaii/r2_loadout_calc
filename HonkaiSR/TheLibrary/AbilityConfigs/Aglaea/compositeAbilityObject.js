@@ -4411,11 +4411,11 @@ const compositeAbilityObject = {
                             "value1": "_KeepSpeedLayer",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (_PointB3Layer) || RETURN",
-                              "displayLines": "_PointB3Layer",
+                              "operator": "Variables[0] (1) || RETURN",
+                              "displayLines": "1",
                               "constants": [],
                               "variables": [
-                                "_PointB3Layer"
+                                1
                               ]
                             }
                           },
@@ -4436,11 +4436,11 @@ const compositeAbilityObject = {
                                 ]
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (_PointB3Layer) || RETURN",
-                                "displayLines": "_PointB3Layer",
+                                "operator": "Variables[0] (1) || RETURN",
+                                "displayLines": "1",
                                 "constants": [],
                                 "variables": [
-                                  "_PointB3Layer"
+                                  1
                                 ]
                               }
                             }
