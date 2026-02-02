@@ -810,8 +810,8 @@ const endgameModeDisplay = {
         
                     const skillLevel = userTriggers.levelFloors[skillSlot];
         
-                    let entryString = "";
-        
+                    let entryString = ``;
+
         
         
                     entryString += `
@@ -1126,6 +1126,10 @@ const endgameModeDisplay = {
                     
                 }
                 listStringer = `<div class="rotationsSectionRowHolder2Overview" id="activityBuffDisplay${sideNumber}GuideOverview${selectorCounter}" style="display: ${selectorCounter === 1 ? "flex" : "none"}">
+                <div class="customMenuSearchNote">
+                    PLEASE NOTE: Unique to Apocalyptic Shadow, the abilities listed here are baked INTO the enemies themselves.<br>
+                    To see the event-readers for these bonuses, simply open the enemy's page.
+                </div>
                     ${listStringer}
                 
                 </div>`;
