@@ -9,6 +9,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -35,6 +36,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -104,6 +106,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -390,6 +393,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -459,6 +463,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -745,6 +750,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -814,6 +820,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -1100,6 +1107,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -1169,6 +1177,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -1444,6 +1453,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_055",
+        "BEKey": -243519640,
         "name": "Crimson Tide",
         "desc": "Increases Physical DMG dealt by all allies by #1[i]%. When a unit uses a Skill, restores #2[i]% of that unit's HP.",
         "battleDesc": null,
@@ -1456,6 +1466,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_074",
+        "BEKey": -243519640,
         "name": "Dire Straits",
         "desc": "When ally targets deal DMG to enemy targets afflicted with #1[i] DoT states or more, increases Weakness Break Efficiency by #2[i]%.",
         "battleDesc": null,
@@ -1468,6 +1479,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_030",
+        "BEKey": -243519640,
         "name": "Rime Piercer",
         "desc": "Increases all enemies' Break DMG taken by #1[i]%. After Breaking an enemy's Weakness, increases all allies' SPD by #2[i]% for #3[i] turn(s)",
         "battleDesc": null,
@@ -1483,6 +1495,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_065",
+        "BEKey": -243519640,
         "name": "Unstoppable Force",
         "desc": "DMG dealt by memosprites ignores #1[i]% of the target's DEF.",
         "battleDesc": null,
@@ -1494,6 +1507,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_066",
+        "BEKey": -243519640,
         "name": "Innervation",
         "desc": "Increases all allies' Skill DMG by #1[i]%. At the start of their turn, if their current HP percentage is equal to or lower than #2[i]%, restores HP equal to #3[i]% of their Max HP.",
         "battleDesc": null,
@@ -1507,6 +1521,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_067",
+        "BEKey": -243519640,
         "name": "Unstoppable Momentum",
         "desc": "When a character uses Ultimate, increases their Weakness Break Efficiency by #1[i]% and increases CRIT DMG by #2[i]%, lasting for #3[i] turn(s).",
         "battleDesc": null,
@@ -1528,6 +1543,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -1554,6 +1570,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -1623,6 +1640,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -1879,6 +1897,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -1948,6 +1967,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -2204,6 +2224,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -2273,6 +2294,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -2532,6 +2554,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -2601,6 +2624,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_014",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and recovers Skill Points.\\nIncreases Break DMG taken by all enemy targets by #1[i]%, and Memosprite Skill DMG taken by#2[i]%.",
                   "battleDesc": null,
@@ -2849,6 +2873,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_077",
+        "BEKey": -243519640,
         "name": "Shatterstrike",
         "desc": "Increases Break DMG dealt by all allies by #1[i]%. When an enemy target enters the Weakness Break state, further increases Break DMG by #2[i]%. This effect can stack up to #3[i] time(s).",
         "battleDesc": null,
@@ -2862,6 +2887,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_078",
+        "BEKey": -243519640,
         "name": "Linebreaker",
         "desc": "The 1st character in the lineup ignores #1[i]% of the enemy target's DEF when dealing DMG.",
         "battleDesc": null,
@@ -2873,6 +2899,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_079",
+        "BEKey": -243519640,
         "name": "Unto Apotheosis",
         "desc": "When ally targets consume Skill Points, increases their CRIT DMG by #1[i]%, stacking up to #2[i] times.",
         "battleDesc": null,
@@ -2887,6 +2914,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_080",
+        "BEKey": -243519640,
         "name": "Past Life: Shadowed Reverie",
         "desc": "When there are 3 ally memosprites or more currently on the field, increases all allies' dealt DMG by #1[i]%.",
         "battleDesc": null,
@@ -2898,6 +2926,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_081",
+        "BEKey": -243519640,
         "name": "Whirlwind Turn",
         "desc": "After ally targets attack an enemy target with #1[i] or more DoT states, increases their SPD by #2[i]% for #3[i] turn(s).",
         "battleDesc": null,
@@ -2911,6 +2940,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_082",
+        "BEKey": -243519640,
         "name": "Knowledge and Decorum",
         "desc": "While any character following the Path of Erudition is in the team, increases all allies' All-Type RES PEN by #1[i]%.",
         "battleDesc": null,
@@ -2930,6 +2960,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -2956,6 +2987,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_013",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemy targets take #1[i]% more Memosprite Skill DMG, and #2[i]% more Ultimate DMG.",
                   "battleDesc": null,
@@ -3029,6 +3061,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_013",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemy targets take #1[i]% more Memosprite Skill DMG, and #2[i]% more Ultimate DMG.",
                   "battleDesc": null,
@@ -3322,6 +3355,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_013",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemy targets take #1[i]% more Memosprite Skill DMG, and #2[i]% more Ultimate DMG.",
                   "battleDesc": null,
@@ -3395,6 +3429,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_013",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemy targets take #1[i]% more Memosprite Skill DMG, and #2[i]% more Ultimate DMG.",
                   "battleDesc": null,
@@ -3688,6 +3723,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_013",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemy targets take #1[i]% more Memosprite Skill DMG, and #2[i]% more Ultimate DMG.",
                   "battleDesc": null,
@@ -3761,6 +3797,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_013",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemy targets take #1[i]% more Memosprite Skill DMG, and #2[i]% more Ultimate DMG.",
                   "battleDesc": null,
@@ -4054,6 +4091,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_013",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemy targets take #1[i]% more Memosprite Skill DMG, and #2[i]% more Ultimate DMG.",
                   "battleDesc": null,
@@ -4127,6 +4165,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_013",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy targets with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemy targets take #1[i]% more Memosprite Skill DMG, and #2[i]% more Ultimate DMG.",
                   "battleDesc": null,
@@ -4409,6 +4448,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_071",
+        "BEKey": -243519640,
         "name": "Brand of Anamnesis",
         "desc": "At the start of battle, when there are 2/3/4 Remembrance characters in the team, increases the DMG enemy targets received by #1[i]% / #2[i]% / #3[i]% respectively. This effect also applies to all new enemies that enter combat.",
         "battleDesc": null,
@@ -4422,6 +4462,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_072",
+        "BEKey": -243519640,
         "name": "Hardened by Frost",
         "desc": "Increases Ice DMG dealt by all ally targets by #1[i]% and increases SPD by #2[i]%.",
         "battleDesc": null,
@@ -4434,6 +4475,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_073",
+        "BEKey": -243519640,
         "name": "Heroic Vanguard",
         "desc": "After the character in position 1 in the team uses Ultimate, increases their Weakness Break Efficiency by #1[i]% and increases CRIT DMG by #2[i]%, lasting for #3[i] turn(s).",
         "battleDesc": null,
@@ -4449,6 +4491,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_074",
+        "BEKey": -243519640,
         "name": "Dire Straits",
         "desc": "When ally targets deal DMG to enemy targets afflicted with #1[i] DoT states or more, increases Weakness Break Efficiency by #2[i]%.",
         "battleDesc": null,
@@ -4461,6 +4504,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_075",
+        "BEKey": -243519640,
         "name": "Stunning Remark",
         "desc": "Increases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
         "battleDesc": null,
@@ -4473,6 +4517,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_076",
+        "BEKey": -243519640,
         "name": "Sweeping Force",
         "desc": "Increases CRIT DMG of all allies' Basic ATK and Ultimate DMG dealt by #1[i]%, with an additional increase of #2[i]% against enemy targets that are Weakness Broken.",
         "battleDesc": null,
@@ -4493,6 +4538,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -4519,6 +4565,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_012",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control effects for all allies, activates Ultimates and restores HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -4620,6 +4667,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_012",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control effects for all allies, activates Ultimates and restores HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -4892,6 +4940,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_012",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control effects for all allies, activates Ultimates and restores HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -4993,6 +5042,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_012",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control effects for all allies, activates Ultimates and restores HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -5265,6 +5315,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_012",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control effects for all allies, activates Ultimates and restores HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -5366,6 +5417,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_012",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control effects for all allies, activates Ultimates and restores HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -5641,6 +5693,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_012",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control effects for all allies, activates Ultimates and restores HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -5742,6 +5795,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_012",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control effects for all allies, activates Ultimates and restores HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -6006,6 +6060,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_068",
+        "BEKey": -243519640,
         "name": "Armed Up",
         "desc": "Increases Physical DMG dealt by all allies by #1[i]%, and decreases all enemies' Physical RES by #2[i]%.",
         "battleDesc": null,
@@ -6018,6 +6073,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_069",
+        "BEKey": -243519640,
         "name": "Obstinate Weed",
         "desc": "When allies use Basic ATK or Skill to attack Weakness Broken enemies, all DoTs currently applied to the enemies will immediately produce DMG equal to #1[i]% of the original DMG.",
         "battleDesc": null,
@@ -6029,6 +6085,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_070",
+        "BEKey": -243519640,
         "name": "Rime Piercer",
         "desc": "Increases all enemies' Break DMG taken by #1[i]%. After Breaking an enemy's Weakness, increases all allies' SPD by #2[i]% for #3[i] turn(s).",
         "battleDesc": null,
@@ -6044,6 +6101,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_065",
+        "BEKey": -243519640,
         "name": "Unstoppable Force",
         "desc": "DMG dealt by memosprites ignores #1[i]% of the target's DEF.",
         "battleDesc": null,
@@ -6055,6 +6113,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_066",
+        "BEKey": -243519640,
         "name": "Innervation",
         "desc": "Increases all allies' Skill DMG by #1[i]%. At the start of their turn, if their current HP percentage is equal to or lower than #2[i]%, restores HP equal to #3[i]% of their Max HP.",
         "battleDesc": null,
@@ -6068,6 +6127,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_067",
+        "BEKey": -243519640,
         "name": "Unstoppable Momentum",
         "desc": "When a character uses Ultimate, increases their Weakness Break Efficiency by #1[i]% and increases CRIT DMG by #2[i]%, lasting for #3[i] turn(s).",
         "battleDesc": null,
@@ -6089,6 +6149,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -6115,6 +6176,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_011",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" have their Weakness Broken, dispels all control debuffs, recovers Skill Points, and activates Ultimates for all allies.\\nAll enemies take #1[i]% more DoT. Increases Skill DMG by #2[i]%.",
                   "battleDesc": null,
@@ -6186,6 +6248,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_011",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" have their Weakness Broken, dispels all control debuffs, recovers Skill Points, and activates Ultimates for all allies.\\nAll enemies take #1[i]% more DoT. Increases Skill DMG by #2[i]%.",
                   "battleDesc": null,
@@ -6457,6 +6520,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_011",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" have their Weakness Broken, dispels all control debuffs, recovers Skill Points, and activates Ultimates for all allies.\\nAll enemies take #1[i]% more DoT. Increases Skill DMG by #2[i]%.",
                   "battleDesc": null,
@@ -6528,6 +6592,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_011",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" have their Weakness Broken, dispels all control debuffs, recovers Skill Points, and activates Ultimates for all allies.\\nAll enemies take #1[i]% more DoT. Increases Skill DMG by #2[i]%.",
                   "battleDesc": null,
@@ -6799,6 +6864,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_011",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" have their Weakness Broken, dispels all control debuffs, recovers Skill Points, and activates Ultimates for all allies.\\nAll enemies take #1[i]% more DoT. Increases Skill DMG by #2[i]%.",
                   "battleDesc": null,
@@ -6870,6 +6936,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_011",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" have their Weakness Broken, dispels all control debuffs, recovers Skill Points, and activates Ultimates for all allies.\\nAll enemies take #1[i]% more DoT. Increases Skill DMG by #2[i]%.",
                   "battleDesc": null,
@@ -7141,6 +7208,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_011",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" have their Weakness Broken, dispels all control debuffs, recovers Skill Points, and activates Ultimates for all allies.\\nAll enemies take #1[i]% more DoT. Increases Skill DMG by #2[i]%.",
                   "battleDesc": null,
@@ -7212,6 +7280,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_011",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" have their Weakness Broken, dispels all control debuffs, recovers Skill Points, and activates Ultimates for all allies.\\nAll enemies take #1[i]% more DoT. Increases Skill DMG by #2[i]%.",
                   "battleDesc": null,
@@ -7472,6 +7541,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_062",
+        "BEKey": -243519640,
         "name": "Fight in Unity",
         "desc": "When an ally target consumes 1 Skill Point, increases the DMG dealt by all allies by #1[i]%, stacking up to #2[i] time(s).",
         "battleDesc": null,
@@ -7484,6 +7554,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_063",
+        "BEKey": -243519640,
         "name": "Tangled Chaos",
         "desc": "After defeating enemy targets, increases Break DMG taken by all enemies by #1[i]% to a max of #2[i] stack(s). This effect will also take effect on new enemies entering the battlefield.",
         "battleDesc": null,
@@ -7496,6 +7567,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_061",
+        "BEKey": -243519640,
         "name": "No Turning Back",
         "desc": "After any ally target consumes their own HP, their CRIT DMG increases by #1[i]%, lasting for #2[i] turn(s).",
         "battleDesc": null,
@@ -7510,6 +7582,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_059",
+        "BEKey": -243519640,
         "name": "Fatality Exploitation",
         "desc": "Increases Ultimate DMG dealt by all allies by #1[i]%, and additionally increases by #2[i]% against enemy targets in Weakness Broken state.",
         "battleDesc": null,
@@ -7522,6 +7595,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_060",
+        "BEKey": -243519640,
         "name": "Obstinate Weed",
         "desc": "When allies use Basic ATK or Skill to attack Weakness Broken enemies, all DoTs currently applied to the enemies will immediately deal DMG equal to #1[i]% of the original DMG.",
         "battleDesc": null,
@@ -7533,6 +7607,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_064",
+        "BEKey": -243519640,
         "name": "Heroic Vanguard",
         "desc": "After the character in position 1 in the team uses Ultimate, their Weakness Break Efficiency increases by #1[i]% and increases CRIT DMG by #2[i]%, lasting for #3[i] turn(s).",
         "battleDesc": null,
@@ -7554,6 +7629,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -7580,6 +7656,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_010",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, the control states for all allies are dispelled, their Skill Points are recovered, and their Ultimates are activated.\\nThe Skill DMG taken by all enemies increases by #1[i]%.",
                   "battleDesc": null,
@@ -7650,6 +7727,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_010",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, the control states for all allies are dispelled, their Skill Points are recovered, and their Ultimates are activated.\\nThe Skill DMG taken by all enemies increases by #1[i]%.",
                   "battleDesc": null,
@@ -7892,6 +7970,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_010",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, the control states for all allies are dispelled, their Skill Points are recovered, and their Ultimates are activated.\\nThe Skill DMG taken by all enemies increases by #1[i]%.",
                   "battleDesc": null,
@@ -7962,6 +8041,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_010",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, the control states for all allies are dispelled, their Skill Points are recovered, and their Ultimates are activated.\\nThe Skill DMG taken by all enemies increases by #1[i]%.",
                   "battleDesc": null,
@@ -8204,6 +8284,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_010",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, the control states for all allies are dispelled, their Skill Points are recovered, and their Ultimates are activated.\\nThe Skill DMG taken by all enemies increases by #1[i]%.",
                   "battleDesc": null,
@@ -8274,6 +8355,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_010",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, the control states for all allies are dispelled, their Skill Points are recovered, and their Ultimates are activated.\\nThe Skill DMG taken by all enemies increases by #1[i]%.",
                   "battleDesc": null,
@@ -8516,6 +8598,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_010",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, the control states for all allies are dispelled, their Skill Points are recovered, and their Ultimates are activated.\\nThe Skill DMG taken by all enemies increases by #1[i]%.",
                   "battleDesc": null,
@@ -8586,6 +8669,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_010",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, the control states for all allies are dispelled, their Skill Points are recovered, and their Ultimates are activated.\\nThe Skill DMG taken by all enemies increases by #1[i]%.",
                   "battleDesc": null,
@@ -8817,6 +8901,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_056",
+        "BEKey": -243519640,
         "name": "Bold Leader",
         "desc": "The DMG dealt by the character in position 1 in the lineup increases by #1[i]%. For every #2[i] Skill Points consumed, 1 Skill Point is recovered.",
         "battleDesc": null,
@@ -8829,6 +8914,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_057",
+        "BEKey": -243519640,
         "name": "No Turning Back",
         "desc": "After any ally target consumes their own HP, increases their DMG dealt by #1[i]% for #2[i] turn(s).",
         "battleDesc": null,
@@ -8841,6 +8927,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_058",
+        "BEKey": -243519640,
         "name": "Tarsus Infection",
         "desc": "After an ally target deals DoT to an enemy, #1[i] Energy is regenerated. DoT dealt by all allies ignores #2[i]% of enemy targets' All-Type RES.",
         "battleDesc": null,
@@ -8855,6 +8942,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_046",
+        "BEKey": -243519640,
         "name": "Teaching and Learning Go Banana in Peel",
         "desc": "Increases all allies' Skill DMG and Ultimate DMG dealt by #1[i]%.",
         "battleDesc": null,
@@ -8866,6 +8954,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_014",
+        "BEKey": -243519640,
         "name": "Hunter's Stride",
         "desc": "When an ally breaks an enemy target's Weakness, Advances Action Forward by #1[i]%.",
         "battleDesc": null,
@@ -8877,6 +8966,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_021",
+        "BEKey": -243519640,
         "name": "Turn of Luck",
         "desc": "Follow-Up ATK DMG dealt by characters ignores #1[i]% of the enemy target's All-Type RES and can also reduce the Toughness of targets that do not have the corresponding Weakness, with the effect being equivalent to #2[i]% of the original Toughness Reduction from the ability.",
         "battleDesc": null,
@@ -8897,6 +8987,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -8923,6 +9014,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_009",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases all allies' HP restored by #1[i]%.",
                   "battleDesc": null,
@@ -9023,6 +9115,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_009",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases all allies' HP restored by #1[i]%.",
                   "battleDesc": null,
@@ -9327,6 +9420,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_009",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases all allies' HP restored by #1[i]%.",
                   "battleDesc": null,
@@ -9427,6 +9521,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_009",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases all allies' HP restored by #1[i]%.",
                   "battleDesc": null,
@@ -9731,6 +9826,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_009",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases all allies' HP restored by #1[i]%.",
                   "battleDesc": null,
@@ -9831,6 +9927,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_009",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases all allies' HP restored by #1[i]%.",
                   "battleDesc": null,
@@ -10138,6 +10235,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_009",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases all allies' HP restored by #1[i]%.",
                   "battleDesc": null,
@@ -10238,6 +10336,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_009",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases all allies' HP restored by #1[i]%.",
                   "battleDesc": null,
@@ -10534,6 +10633,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_053",
+        "BEKey": -243519640,
         "name": "Call of Dawn",
         "desc": "Increases memosprite's Weakness Break Efficiency by #1[i]%. Ignores #2[i]% of the target's DEF when memosprite deals DMG.",
         "battleDesc": null,
@@ -10546,6 +10646,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_018",
+        "BEKey": -243519640,
         "name": "Barren of Life",
         "desc": "When characters attack Weakness Broken enemies, all DoTs currently applied to the enemies will immediately deal DMG equal to #1[i]% of the original DMG. This effect can trigger a max of #2[i] time(s) on each character in a single turn.",
         "battleDesc": null,
@@ -10558,6 +10659,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_020",
+        "BEKey": -243519640,
         "name": "Sweeping Force",
         "desc": "Increases the CRIT DMG of Ultimate DMG dealt by #1[i]%, with an additional increase of #2[i]% against enemy targets that are Weakness Broken.",
         "battleDesc": null,
@@ -10572,6 +10674,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_055",
+        "BEKey": -243519640,
         "name": "Crimson Tide",
         "desc": "Increases Physical DMG dealt by all allies by #1[i]%. When a unit uses a Skill, restores #2[i]% of that unit's HP.",
         "battleDesc": null,
@@ -10584,6 +10687,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_021",
+        "BEKey": -243519640,
         "name": "Turn of Luck",
         "desc": "Follow-Up ATK DMG dealt by characters ignores #1[i]% of the enemy target's All-Type RES and can also reduce the Toughness of targets that do not have the corresponding Weakness, with the effect being equivalent to #2[i]% of the original Toughness Reduction from the ability.",
         "battleDesc": null,
@@ -10596,6 +10700,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_030",
+        "BEKey": -243519640,
         "name": "Rime Piercer",
         "desc": "Increases all enemies' Break DMG taken by #1[i]%. After Breaking an enemy's Weakness, increases all allies' SPD by #2[i]% for #3[i] turn(s)",
         "battleDesc": null,
@@ -10617,6 +10722,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -10643,6 +10749,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_008",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -10716,6 +10823,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_008",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -10995,6 +11103,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_008",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -11068,6 +11177,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_008",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -11347,6 +11457,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_008",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -11420,6 +11531,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_008",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -11699,6 +11811,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_008",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -11772,6 +11885,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_008",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When enemy units with \"Steadfast Safeguard\" are Weakness Broken, dispels control states for all allies, and allies immediately take action and restore HP.\\nAll enemies take #1[i]% more Memosprite Skill DMG, and #2[i]% more Skill DMG.",
                   "battleDesc": null,
@@ -12040,6 +12154,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_047",
+        "BEKey": -243519640,
         "name": "Knowledge and Decorum",
         "desc": "While any character following the Path of Erudition is in the team, increases all allies' All-Type RES PEN by #1[i]%.",
         "battleDesc": null,
@@ -12051,6 +12166,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_048",
+        "BEKey": -243519640,
         "name": "Stunning Remark",
         "desc": "Increases Ultimate DMG dealt by all allies by #1[i]% and Effect RES by #2[i]%.",
         "battleDesc": null,
@@ -12063,6 +12179,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_049",
+        "BEKey": -243519640,
         "name": "No Turning Back",
         "desc": "After any ally target consumes their own HP, increases their DMG dealt by #1[i]% for #2[i] turn(s).",
         "battleDesc": null,
@@ -12077,6 +12194,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_050",
+        "BEKey": -243519640,
         "name": "Sweeping Storm",
         "desc": "When any ally target Breaks an enemy target's Weakness, increases all ally targets' SPD by #1[i]% for #2[i] turn(s).",
         "battleDesc": null,
@@ -12089,6 +12207,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_051",
+        "BEKey": -243519640,
         "name": "Withered Tree's Revival",
         "desc": "After any ally target's HP was consumed, they restore HP equal to #1[i]% of the HP consumed. This can restore a maximum of #2[i]% HP per turn.",
         "battleDesc": null,
@@ -12101,6 +12220,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_052",
+        "BEKey": -243519640,
         "name": "Pursue and Eliminate",
         "desc": "Increases ally targets' Follow-Up ATK DMG dealt by #1[i]%, with an additional increase of #2[i]% against enemy targets that are Weakness Broken.",
         "battleDesc": null,
@@ -12121,6 +12241,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -12147,6 +12268,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_007",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispel control states for all allies, recover their Skill Points, and restore their HP.\\nIncreases the Basic ATK DMG taken by all enemies by #1[i]% and increases Skill DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -12216,6 +12338,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_007",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispel control states for all allies, recover their Skill Points, and restore their HP.\\nIncreases the Basic ATK DMG taken by all enemies by #1[i]% and increases Skill DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -12458,6 +12581,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_007",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispel control states for all allies, recover their Skill Points, and restore their HP.\\nIncreases the Basic ATK DMG taken by all enemies by #1[i]% and increases Skill DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -12527,6 +12651,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_007",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispel control states for all allies, recover their Skill Points, and restore their HP.\\nIncreases the Basic ATK DMG taken by all enemies by #1[i]% and increases Skill DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -12769,6 +12894,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_007",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispel control states for all allies, recover their Skill Points, and restore their HP.\\nIncreases the Basic ATK DMG taken by all enemies by #1[i]% and increases Skill DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -12838,6 +12964,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_007",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispel control states for all allies, recover their Skill Points, and restore their HP.\\nIncreases the Basic ATK DMG taken by all enemies by #1[i]% and increases Skill DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -13080,6 +13207,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_007",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispel control states for all allies, recover their Skill Points, and restore their HP.\\nIncreases the Basic ATK DMG taken by all enemies by #1[i]% and increases Skill DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -13149,6 +13277,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_007",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispel control states for all allies, recover their Skill Points, and restore their HP.\\nIncreases the Basic ATK DMG taken by all enemies by #1[i]% and increases Skill DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -13380,6 +13509,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_041",
+        "BEKey": -243519640,
         "name": "Battlefield of Wits",
         "desc": "Increases DMG dealt by all allies' Basic ATK by #1[i]%. After defeating an enemy target, advances the attacker's action by #2[i]%.",
         "battleDesc": null,
@@ -13392,6 +13522,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_042",
+        "BEKey": -243519640,
         "name": "Daring Wager",
         "desc": "Increases the SPD of all allies by #1[i]% and reduces their DMG taken by #2[i]%.",
         "battleDesc": null,
@@ -13404,6 +13535,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_043",
+        "BEKey": -243519640,
         "name": "Turn of Luck",
         "desc": "Follow-Up ATK DMG dealt by characters ignores #1[i]% of the enemy target's All-Type RES and can also reduce the Toughness of targets that do not have the corresponding Weakness, with the effect being equivalent to #2[i]% of the original Toughness Reduction from the ability.",
         "battleDesc": null,
@@ -13418,6 +13550,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_044",
+        "BEKey": -243519640,
         "name": "Teach By Banaxample",
         "desc": "When using Skill or Ultimate on one ally target, increases the ability target's CRIT DMG by #1[i]%, lasting for #2[i] turn(s). This effect can stack up to #3[i] time(s).",
         "battleDesc": null,
@@ -13431,6 +13564,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_045",
+        "BEKey": -243519640,
         "name": "Education For Bananall",
         "desc": "Increases all enemies' Break DMG taken by #1[i]%. After Breaking an enemy's Weakness, increases all allies' SPD by #2[i]% for #3[i] turn(s).",
         "battleDesc": null,
@@ -13444,6 +13578,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_046",
+        "BEKey": -243519640,
         "name": "Teaching and Learning Go Banana in Peel",
         "desc": "Increases all allies' Skill DMG and Ultimate DMG dealt by #1[i]%.",
         "battleDesc": null,
@@ -13463,6 +13598,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -13489,6 +13625,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -13562,6 +13699,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -13855,6 +13993,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -13928,6 +14067,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -14221,6 +14361,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -14294,6 +14435,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -14587,6 +14729,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -14660,6 +14803,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -14942,6 +15086,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_035",
+        "BEKey": -243519640,
         "name": "Victorious by Wit",
         "desc": "When 2 or more characters following the Path of Erudition are in the team, increases all allies' ATK by #1[i]%.",
         "battleDesc": null,
@@ -14953,6 +15098,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_036",
+        "BEKey": -243519640,
         "name": "Feats of Might",
         "desc": "Increases Physical DMG dealt by all allies by #1[i]% and Effect RES by #2[i]%.",
         "battleDesc": null,
@@ -14965,6 +15111,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_037",
+        "BEKey": -243519640,
         "name": "Hunter's Stride",
         "desc": "When an ally unit Breaks an Enemy target's Weakness, advances the ally unit's action by #1[i]%.",
         "battleDesc": null,
@@ -14978,6 +15125,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_038",
+        "BEKey": -243519640,
         "name": "Barren of Life",
         "desc": "When characters attack Weakness Broken enemies, all DoTs currently applied to the enemies will immediately deal DMG equal to #1[i]% of the original DMG. This effect can trigger a max of #2[i] time(s) on each character in a single turn.",
         "battleDesc": null,
@@ -14990,6 +15138,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_039",
+        "BEKey": -243519640,
         "name": "Tangled Chaos",
         "desc": "After defeating enemy targets, increase Break DMG taken by all enemies by #1[i]% to a max of #2[i] stack(s). This effect will also take effect on new enemies entering the battlefield.",
         "battleDesc": null,
@@ -15002,6 +15151,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_040",
+        "BEKey": -243519640,
         "name": "Sweeping Force",
         "desc": "Increases CRIT DMG of all allies' Basic ATK and Ultimate DMG dealt by #1[i]%, with an additional increase of #2[i]% against enemy targets that are Weakness Broken.",
         "battleDesc": null,
@@ -15022,6 +15172,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -15048,6 +15199,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_005",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, action advances all allies and recovers Skill Points.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -15149,6 +15301,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_005",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, action advances all allies and recovers Skill Points.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -15412,6 +15565,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_005",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, action advances all allies and recovers Skill Points.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -15513,6 +15667,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_005",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, action advances all allies and recovers Skill Points.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -15776,6 +15931,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_005",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, action advances all allies and recovers Skill Points.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -15877,6 +16033,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_005",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, action advances all allies and recovers Skill Points.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -16143,6 +16300,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_005",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, action advances all allies and recovers Skill Points.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -16244,6 +16402,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_005",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, action advances all allies and recovers Skill Points.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -16499,6 +16658,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_030",
+        "BEKey": -243519640,
         "name": "Rime Piercer",
         "desc": "Increases all enemies' Break DMG taken by #1[i]%. After Breaking an enemy's Weakness, increases all allies' SPD by #2[i]% for #3[i] turn(s)",
         "battleDesc": null,
@@ -16512,6 +16672,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_033",
+        "BEKey": -243519640,
         "name": "Persistence of Decay",
         "desc": "Before enemy units with \"Steadfast Safeguard\" are Weakness Broken, tally the amount of DoT they receive. When a unit is Weakness Broken, deals Additional DMG to this unit equal to #1[i]% of the tallied DoT.",
         "battleDesc": null,
@@ -16523,6 +16684,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_034",
+        "BEKey": -243519640,
         "name": "Rolling Storm",
         "desc": "Increases Quantum DMG dealt by all allies' by #1[i]%. After defeating an enemy target, advances the attacker's action by #2[i]%.",
         "battleDesc": null,
@@ -16537,6 +16699,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_029",
+        "BEKey": -243519640,
         "name": "Cheat Sheet",
         "desc": "When using Skill or Ultimate on one ally target, increases the ability target's ATK by #1[i]%, lasting for #2[i] turn(s). This effect can stack up to #3[i] time(s).",
         "battleDesc": null,
@@ -16550,6 +16713,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_032",
+        "BEKey": -243519640,
         "name": "Recess",
         "desc": "Increases Ultimate DMG dealt by all allies to Weakness Broken enemies by #1[i]%.",
         "battleDesc": null,
@@ -16561,6 +16725,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_031",
+        "BEKey": -243519640,
         "name": "After Bell Detention",
         "desc": "Increases Basic ATK and Skill DMG dealt by all allies by #1[i]%.",
         "battleDesc": null,
@@ -16580,6 +16745,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -16606,6 +16772,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_004",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, recovers Skill Points for all ally characters and activates their Ultimates.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -16675,6 +16842,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_004",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, recovers Skill Points for all ally characters and activates their Ultimates.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -16992,6 +17160,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_004",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, recovers Skill Points for all ally characters and activates their Ultimates.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -17061,6 +17230,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_004",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, recovers Skill Points for all ally characters and activates their Ultimates.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -17378,6 +17548,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_004",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, recovers Skill Points for all ally characters and activates their Ultimates.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -17447,6 +17618,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_004",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, recovers Skill Points for all ally characters and activates their Ultimates.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -17770,6 +17942,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_004",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, recovers Skill Points for all ally characters and activates their Ultimates.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -17839,6 +18012,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_004",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, recovers Skill Points for all ally characters and activates their Ultimates.\\nIncreases the Weakness Break DMG taken by all enemies by #1[i]%, and increases Follow-Up ATK DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -18151,6 +18325,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_028",
+        "BEKey": -243519640,
         "name": "Total Dominion",
         "desc": "Increases the DMG dealt by all allies' Basic ATKs by #1[i]%.",
         "battleDesc": null,
@@ -18162,6 +18337,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_027",
+        "BEKey": -243519640,
         "name": "Impassioned Spirits",
         "desc": "After defeating any enemy target, advances all ally targets' actions by #1[i]%.",
         "battleDesc": null,
@@ -18173,6 +18349,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_021",
+        "BEKey": -243519640,
         "name": "Turn of Luck",
         "desc": "Follow-Up ATK DMG dealt by characters ignores #1[i]% of the enemy target's All-Type RES and can also reduce the Toughness of targets that do not have the corresponding Weakness, with the effect being equivalent to #2[i]% of the original Toughness Reduction from the ability.",
         "battleDesc": null,
@@ -18187,6 +18364,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_024",
+        "BEKey": -243519640,
         "name": "Victory Rush",
         "desc": "After a character uses Follow-Up ATK, advances their action by #1[i]%. This effect can be triggered a max of #2[i] time(s) per character before their next action.",
         "battleDesc": null,
@@ -18199,6 +18377,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_025",
+        "BEKey": -243519640,
         "name": "Swift Eradication",
         "desc": "The Weakness Break Efficiency increases by #1[i]% when characters deal Ultimate DMG.",
         "battleDesc": null,
@@ -18210,6 +18389,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_026",
+        "BEKey": -243519640,
         "name": "Breed War with War",
         "desc": "Increases all ally characters' Break Effect by #1[i]%. When a character Breaks an enemy target's Weakness, regenerates #2[i] Energy to the character.",
         "battleDesc": null,
@@ -18230,6 +18410,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -18256,6 +18437,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_003",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, advances all allies' action and recovers Skill Points.\\nIncreases the Follow-Up ATK DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -18325,6 +18507,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_003",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, advances all allies' action and recovers Skill Points.\\nIncreases the Follow-Up ATK DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -18598,6 +18781,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_003",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, advances all allies' action and recovers Skill Points.\\nIncreases the Follow-Up ATK DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -18667,6 +18851,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_003",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, advances all allies' action and recovers Skill Points.\\nIncreases the Follow-Up ATK DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -18940,6 +19125,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_003",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, advances all allies' action and recovers Skill Points.\\nIncreases the Follow-Up ATK DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -19009,6 +19195,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_003",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, advances all allies' action and recovers Skill Points.\\nIncreases the Follow-Up ATK DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -19282,6 +19469,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_003",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, advances all allies' action and recovers Skill Points.\\nIncreases the Follow-Up ATK DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -19351,6 +19539,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_003",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, advances all allies' action and recovers Skill Points.\\nIncreases the Follow-Up ATK DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
                   "battleDesc": null,
@@ -19613,6 +19802,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_021",
+        "BEKey": -243519640,
         "name": "Turn of Luck",
         "desc": "Follow-Up ATK DMG dealt by characters ignores #1[i]% of the enemy target's All-Type RES and can also reduce the Toughness of targets that do not have the corresponding Weakness, with the effect being equivalent to #2[i]% of the original Toughness Reduction from the ability.",
         "battleDesc": null,
@@ -19625,6 +19815,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_022",
+        "BEKey": -243519640,
         "name": "Grand Gamble",
         "desc": "Character's Ice DMG dealt increases by #1[i]%.",
         "battleDesc": null,
@@ -19636,6 +19827,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_023",
+        "BEKey": -243519640,
         "name": "Pursue and Eliminate",
         "desc": "When an ally breaks an enemy target's Weakness, Advance their Action Forward by #1[i]%. This effect can trigger a max of #2[i] time(s) per turn.",
         "battleDesc": null,
@@ -19650,6 +19842,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_018",
+        "BEKey": -243519640,
         "name": "Barren of Life",
         "desc": "When characters attack Weakness Broken enemies, all DoTs currently applied to the enemies will immediately deal DMG equal to #1[i]% of the original DMG. This effect can trigger a max of #2[i] time(s) on each character in a single turn.",
         "battleDesc": null,
@@ -19662,6 +19855,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_019",
+        "BEKey": -243519640,
         "name": "Tangled Chaos",
         "desc": "After defeating enemy targets, increase Break DMG taken by all enemies by #1[i]% to a max of #2[i] stack(s). This effect will also take effect on new enemies entering the battlefield.",
         "battleDesc": null,
@@ -19674,6 +19868,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_020",
+        "BEKey": -243519640,
         "name": "Sweeping Force",
         "desc": "Increases the CRIT DMG of Ultimate DMG dealt by #1[i]%, with an additional increase of #2[i]% against enemy targets that are Weakness Broken.",
         "battleDesc": null,
@@ -19694,6 +19889,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -19720,6 +19916,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_002",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, all allies' actions are Advanced Forward by #3[i]%, and their Ultimates are activated.\\nFollow-Up ATK DMG received by all enemies increases by #1[i]%, and increases Counter DMG by #2[i]%.",
                   "battleDesc": null,
@@ -19790,6 +19987,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_002",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, all allies' actions are Advanced Forward by #3[i]%, and their Ultimates are activated.\\nFollow-Up ATK DMG received by all enemies increases by #1[i]%, and increases Counter DMG by #2[i]%.",
                   "battleDesc": null,
@@ -20079,6 +20277,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_002",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, all allies' actions are Advanced Forward by #3[i]%, and their Ultimates are activated.\\nFollow-Up ATK DMG received by all enemies increases by #1[i]%, and increases Counter DMG by #2[i]%.",
                   "battleDesc": null,
@@ -20149,6 +20348,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_002",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, all allies' actions are Advanced Forward by #3[i]%, and their Ultimates are activated.\\nFollow-Up ATK DMG received by all enemies increases by #1[i]%, and increases Counter DMG by #2[i]%.",
                   "battleDesc": null,
@@ -20438,6 +20638,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_002",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, all allies' actions are Advanced Forward by #3[i]%, and their Ultimates are activated.\\nFollow-Up ATK DMG received by all enemies increases by #1[i]%, and increases Counter DMG by #2[i]%.",
                   "battleDesc": null,
@@ -20508,6 +20709,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_002",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, all allies' actions are Advanced Forward by #3[i]%, and their Ultimates are activated.\\nFollow-Up ATK DMG received by all enemies increases by #1[i]%, and increases Counter DMG by #2[i]%.",
                   "battleDesc": null,
@@ -20797,6 +20999,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_002",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, all allies' actions are Advanced Forward by #3[i]%, and their Ultimates are activated.\\nFollow-Up ATK DMG received by all enemies increases by #1[i]%, and increases Counter DMG by #2[i]%.",
                   "battleDesc": null,
@@ -20867,6 +21070,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_002",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy unit with \"Steadfast Safeguard\" is Weakness Broken, all allies' actions are Advanced Forward by #3[i]%, and their Ultimates are activated.\\nFollow-Up ATK DMG received by all enemies increases by #1[i]%, and increases Counter DMG by #2[i]%.",
                   "battleDesc": null,
@@ -21145,6 +21349,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_015",
+        "BEKey": -243519640,
         "name": "Terminus Paradise",
         "desc": "Follow-Up ATKs/Counters will also reduce the Toughness of targets that do not have the corresponding Weakness, with the effect being equivalent to #1[i]%/#2[i]% of the original Toughness Reduction from abilities.",
         "battleDesc": null,
@@ -21157,6 +21362,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_013",
+        "BEKey": -243519640,
         "name": "Reverse Domination",
         "desc": "The DMG dealt by all allies' Basic ATK increases by #1[i]%, with an additional increase of #2[i]% against targets that are Weakness Broken.",
         "battleDesc": null,
@@ -21169,6 +21375,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_014",
+        "BEKey": -243519640,
         "name": "Hunter's Stride",
         "desc": "When an ally breaks an enemy target's Weakness, Advances Action Forward by #1[i]%.",
         "battleDesc": null,
@@ -21182,6 +21389,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_015",
+        "BEKey": -243519640,
         "name": "Terminus Paradise",
         "desc": "Follow-Up ATKs/Counters will also reduce the Toughness of targets that do not have the corresponding Weakness, with the effect being equivalent to #1[i]%/#2[i]% of the original Toughness Reduction from abilities.",
         "battleDesc": null,
@@ -21194,6 +21402,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_016",
+        "BEKey": -243519640,
         "name": "Inexorable Charge",
         "desc": "Increases Break DMG taken by all enemies by #1[i]%.",
         "battleDesc": null,
@@ -21205,6 +21414,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_017",
+        "BEKey": -243519640,
         "name": "Last Stand",
         "desc": "Increases CRIT DMG dealt by all allies' Skill by #1[i]%, with an additional increase of #2[i]% against targets who are Weakness Broken.",
         "battleDesc": null,
@@ -21225,6 +21435,7 @@ let mocSchedule = [
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -21251,6 +21462,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_001",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with Steadfast Safeguard is Weakness Broken, recovers Skill Points for all allies and activates their Ultimates.\\nIncreases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
                   "battleDesc": null,
@@ -21352,6 +21564,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_001",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with Steadfast Safeguard is Weakness Broken, recovers Skill Points for all allies and activates their Ultimates.\\nIncreases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
                   "battleDesc": null,
@@ -21636,6 +21849,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_001",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with Steadfast Safeguard is Weakness Broken, recovers Skill Points for all allies and activates their Ultimates.\\nIncreases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
                   "battleDesc": null,
@@ -21737,6 +21951,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_001",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with Steadfast Safeguard is Weakness Broken, recovers Skill Points for all allies and activates their Ultimates.\\nIncreases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
                   "battleDesc": null,
@@ -22021,6 +22236,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_001",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with Steadfast Safeguard is Weakness Broken, recovers Skill Points for all allies and activates their Ultimates.\\nIncreases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
                   "battleDesc": null,
@@ -22122,6 +22338,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_001",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with Steadfast Safeguard is Weakness Broken, recovers Skill Points for all allies and activates their Ultimates.\\nIncreases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
                   "battleDesc": null,
@@ -22412,6 +22629,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_001",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with Steadfast Safeguard is Weakness Broken, recovers Skill Points for all allies and activates their Ultimates.\\nIncreases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
                   "battleDesc": null,
@@ -22513,6 +22731,7 @@ let mocSchedule = [
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
                   "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_001",
+                  "BEKey": -838314705,
                   "name": "Ruinous Embers",
                   "desc": "When an enemy with Steadfast Safeguard is Weakness Broken, recovers Skill Points for all allies and activates their Ultimates.\\nIncreases the Weakness Break DMG received by all enemies by #1[i]%, and additionally increases Super Break DMG received by #2[i]%.",
                   "battleDesc": null,
@@ -22792,6 +23011,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_008",
+        "BEKey": -243519640,
         "name": "Sundered Paradise",
         "desc": "Increases all allies' Break Effect by #1[i]%. After dealing Super Break DMG to enemies, increases SPD by an amount equal to #2[i]% of current SPD, lasting until the next action.",
         "battleDesc": null,
@@ -22806,6 +23026,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_010",
+        "BEKey": -243519640,
         "name": "Moment of Termination",
         "desc": "Increases DMG dealt by all allies' Ultimates by #1[i]%. After defeating an enemy target, the attacker's action is Advanced Forward by #2[i]%.",
         "battleDesc": null,
@@ -22818,6 +23039,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_011",
+        "BEKey": -243519640,
         "name": "Persistence of Decay",
         "desc": "Before enemy units with Steadfast Safeguard are Weakness Broken, tally the amount of DoT they receive. When a unit is Weakness Broken, deal to this unit Additional DMG equal to #1[i]% of the tallied DoT.",
         "battleDesc": null,
@@ -22831,6 +23053,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_008",
+        "BEKey": -243519640,
         "name": "Sundered Paradise",
         "desc": "Increases all allies' Break Effect by #1[i]%. After dealing Super Break DMG to enemies, increases SPD by an amount equal to #2[i]% of current SPD, lasting until the next action.",
         "battleDesc": null,
@@ -22845,6 +23068,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_009",
+        "BEKey": -243519640,
         "name": "Ashen Battleground",
         "desc": "Increases DMG dealt by all allies' Basic ATK and Skills by #1[i]%. After defeating an enemy target, the attacker's action is Advanced Forward by #2[i]%.",
         "battleDesc": null,
@@ -22857,6 +23081,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_012",
+        "BEKey": -243519640,
         "name": "Pursuing Apocalypse",
         "desc": "Before enemy units with \"Steadfast Safeguard\" are Weakness Broken, tally the amount of Follow-Up ATK DMG they receive. When the unit is Weakness Broken, deal to this unit Additional DMG equal to #1[i]% of the tallied DMG.",
         "battleDesc": null,
