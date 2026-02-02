@@ -1666,7 +1666,7 @@ const compositeAbilityObject = {
                                 "target": "{{Numby}}"
                               },
                               "advanceType": "Advance",
-                              "multi": "-0.5"
+                              "multiAdd": "-0.5"
                             }
                           ]
                         }
@@ -1707,7 +1707,7 @@ const compositeAbilityObject = {
                             "target": "{{Numby}}"
                           },
                           "advanceType": "Advance",
-                          "multi": "-0.5"
+                          "multiAdd": "-0.5"
                         }
                       ]
                     }
@@ -3128,7 +3128,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "advanceType": "Set",
-          "multi": "(0 - 0.2)"
+          "multiAdd": "(0 - 0.2)"
         }
       ],
       "references": []

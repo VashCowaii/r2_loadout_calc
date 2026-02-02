@@ -43,7 +43,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Set",
-                      "multi": "ChallengePeakBattle_0009_ADF_1"
+                      "multiAdd": "ChallengePeakBattle_0009_ADF_1"
                     }
                   ],
                   "failed": [
@@ -54,7 +54,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Set",
-                      "multi": "ChallengePeakBattle_0009_ADF_2"
+                      "multiAdd": "ChallengePeakBattle_0009_ADF_2"
                     }
                   ]
                 }

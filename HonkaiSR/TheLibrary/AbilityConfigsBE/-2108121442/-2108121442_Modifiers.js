@@ -1797,7 +1797,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}.[[getSummoner]]"
                   },
                   "advanceType": "Set",
-                  "multi": "-DV_FantasticStory_PlusAbility_2015_ADF_2"
+                  "multiAdd": "-DV_FantasticStory_PlusAbility_2015_ADF_2"
                 }
               ]
             }

@@ -69,7 +69,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Delay",
-                          "multi": "0.25"
+                          "multiAdd": "0.25"
                         }
                       ]
                     }

@@ -227,7 +227,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "advanceType": "Advance",
-                  "multi": -1
+                  "multiAdd": -1
                 }
               ],
               "failed": [
@@ -238,7 +238,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "advanceType": "Advance",
-                  "multi": -1
+                  "multiAdd": -1
                 }
               ]
             }

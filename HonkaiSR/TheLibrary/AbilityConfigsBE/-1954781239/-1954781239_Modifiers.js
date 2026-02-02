@@ -765,7 +765,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "multi": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)"
+                  "multiAdd": "(0 - DV_FantasticStory_PlusAbility_0016_ADF_3)"
                 },
                 {
                   "name": "Add Events/Bonuses",

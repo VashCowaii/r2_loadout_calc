@@ -134,7 +134,7 @@ const configAbility = {
             "target": "{{Caster's Self-Made Battle-Events}}"
           },
           "advanceType": "Advance",
-          "multi": "-1"
+          "multiAdd": "-1"
         }
       ]
     },

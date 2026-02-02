@@ -114,7 +114,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Advance",
-                  "multi": "-0.2"
+                  "multiAdd": "-0.2"
                 }
               ]
             }
@@ -211,7 +211,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "advanceType": "Advance",
-              "multi": "-0.2"
+              "multiAdd": "-0.2"
             },
             "Modifier Deletes Itself"
           ]

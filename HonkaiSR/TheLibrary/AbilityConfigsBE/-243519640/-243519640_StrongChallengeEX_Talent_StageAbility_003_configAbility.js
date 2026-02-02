@@ -88,7 +88,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "advanceType": "Set",
-                  "multi": "#ADF_1"
+                  "multiAdd": "#ADF_1"
                 },
                 {
                   "name": "Add Events/Bonuses",

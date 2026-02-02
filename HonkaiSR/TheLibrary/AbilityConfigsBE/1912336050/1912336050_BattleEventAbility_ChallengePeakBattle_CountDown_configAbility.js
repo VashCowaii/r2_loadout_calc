@@ -365,7 +365,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Delay",
-                  "multi": 2
+                  "multiAdd": 2
                 },
                 {
                   "name": "Set Warning Countdown",

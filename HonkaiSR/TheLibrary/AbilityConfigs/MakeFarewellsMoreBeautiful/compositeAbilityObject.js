@@ -201,7 +201,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "advanceType": "Advance",
-                      "multi": "-0.12"
+                      "multiAdd": "-0.12"
                     },
                     {
                       "name": "Define Custom Variable",

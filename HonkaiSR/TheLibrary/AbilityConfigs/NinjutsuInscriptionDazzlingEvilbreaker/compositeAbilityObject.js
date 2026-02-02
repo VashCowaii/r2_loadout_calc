@@ -62,7 +62,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Advance",
-                  "multi": "-0.5"
+                  "multiAdd": "-0.5"
                 },
                 "Modifier Deletes Itself"
               ]
@@ -175,7 +175,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "advanceType": "Advance",
-                          "multi": "-0.5"
+                          "multiAdd": "-0.5"
                         },
                         {
                           "name": "IF",

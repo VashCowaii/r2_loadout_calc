@@ -754,7 +754,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "advanceType": "Set",
-                      "multi": "(0 - 0.25)"
+                      "multiAdd": "(0 - 0.25)"
                     }
                   ]
                 }

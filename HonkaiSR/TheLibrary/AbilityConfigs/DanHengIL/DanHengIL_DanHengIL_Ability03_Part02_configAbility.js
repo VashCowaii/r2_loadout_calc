@@ -445,7 +445,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "advanceType": "Advance",
-          "multi": -1
+          "multiAdd": -1
         }
       ],
       "failed": [

@@ -3276,6 +3276,7 @@ const megaParsingFuckeryPain = {
             "target",
             // "value",
             "multi",
+            "multiAdd",
             "add",
             "set",
             "advanceType",
@@ -3298,8 +3299,11 @@ const megaParsingFuckeryPain = {
             ${parseRef.target ? `on ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}` : ""}
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.advanceType,"Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.set,"Set")}
-            ${getStandardNameDisplay(initialCounter,parseRef.multi,"AV Multi")}
+            ${getStandardNameDisplay(initialCounter,parseRef.multi,"AV Multi (x%)")}
+            ${getStandardNameDisplay(initialCounter,parseRef.multiAdd,"AV Added Multi (+%)")}
+
             ${getStandardNameDisplay(initialCounter,parseRef.isStartingAV,"Add")}
         </div>`;
     },

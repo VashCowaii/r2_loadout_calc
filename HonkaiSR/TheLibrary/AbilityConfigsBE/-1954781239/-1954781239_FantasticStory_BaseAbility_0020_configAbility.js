@@ -1738,7 +1738,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Set",
-                      "multi": "(0 - DV_FantasticStory_PlusAbility_0023_ADF_2)"
+                      "multiAdd": "(0 - DV_FantasticStory_PlusAbility_0023_ADF_2)"
                     },
                     {
                       "name": "UI Display Event (On Entity)",
@@ -1825,7 +1825,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "multi": "(0 - ADF_3_get)"
+                  "multiAdd": "(0 - ADF_3_get)"
                 },
                 {
                   "name": "UI Display Event (On Entity)",

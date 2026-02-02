@@ -1494,7 +1494,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Advance",
-                  "multi": "-0.15"
+                  "multiAdd": "-0.15"
                 }
               ]
             }
@@ -1550,7 +1550,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Advance",
-                  "multi": "-0.15"
+                  "multiAdd": "-0.15"
                 }
               ]
             }

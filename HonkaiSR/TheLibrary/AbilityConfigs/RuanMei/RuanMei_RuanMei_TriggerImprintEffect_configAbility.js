@@ -78,7 +78,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "advanceType": "Set",
-      "multi": "MDF_BreakAttackToDelay"
+      "multiAdd": "MDF_BreakAttackToDelay"
     },
     {
       "name": "Define Custom Variable",

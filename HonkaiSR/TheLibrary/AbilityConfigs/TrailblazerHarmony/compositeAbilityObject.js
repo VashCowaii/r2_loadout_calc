@@ -799,7 +799,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Set",
-                      "multi": "MDF_PropertyValue"
+                      "multiAdd": "MDF_PropertyValue"
                     }
                   ]
                 }

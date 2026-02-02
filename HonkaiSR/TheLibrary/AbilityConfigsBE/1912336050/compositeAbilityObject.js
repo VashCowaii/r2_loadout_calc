@@ -844,7 +844,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Delay",
-                      "multi": 2
+                      "multiAdd": 2
                     },
                     {
                       "name": "Set Warning Countdown",
@@ -7661,7 +7661,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Set",
-                          "multi": "ChallengePeakBattle_0009_ADF_1"
+                          "multiAdd": "ChallengePeakBattle_0009_ADF_1"
                         }
                       ],
                       "failed": [
@@ -7672,7 +7672,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Set",
-                          "multi": "ChallengePeakBattle_0009_ADF_2"
+                          "multiAdd": "ChallengePeakBattle_0009_ADF_2"
                         }
                       ]
                     }
@@ -7784,7 +7784,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Set",
-                          "multi": "ChallengePeakBattle_0009_ADF_1"
+                          "multiAdd": "ChallengePeakBattle_0009_ADF_1"
                         }
                       ],
                       "failed": [
@@ -7795,7 +7795,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Set",
-                          "multi": "ChallengePeakBattle_0009_ADF_2"
+                          "multiAdd": "ChallengePeakBattle_0009_ADF_2"
                         }
                       ]
                     }
@@ -7907,7 +7907,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Set",
-                          "multi": "ChallengePeakBattle_0009_ADF_1"
+                          "multiAdd": "ChallengePeakBattle_0009_ADF_1"
                         }
                       ],
                       "failed": [
@@ -7918,7 +7918,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Set",
-                          "multi": "ChallengePeakBattle_0009_ADF_2"
+                          "multiAdd": "ChallengePeakBattle_0009_ADF_2"
                         }
                       ]
                     }

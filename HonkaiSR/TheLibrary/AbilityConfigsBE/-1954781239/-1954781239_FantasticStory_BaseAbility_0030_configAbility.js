@@ -350,7 +350,7 @@ const configAbility = {
                             "target": "{{Player Team All}}"
                           },
                           "advanceType": "Set",
-                          "multi": "(0 - DV_FantasticStory_PlusAbility_0033_ADF_1)"
+                          "multiAdd": "(0 - DV_FantasticStory_PlusAbility_0033_ADF_1)"
                         }
                       ]
                     }

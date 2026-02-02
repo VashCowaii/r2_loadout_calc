@@ -303,7 +303,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Advance",
-                      "multi": -1
+                      "multiAdd": -1
                     }
                   ],
                   "failed": [
@@ -314,7 +314,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Advance",
-                      "multi": -1
+                      "multiAdd": -1
                     }
                   ]
                 }
@@ -1243,7 +1243,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "advanceType": "Delay",
-                  "multi": 0.4
+                  "multiAdd": 0.4
                 }
               ]
             },
@@ -1279,7 +1279,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "advanceType": "Delay",
-                  "multi": 1.6
+                  "multiAdd": 1.6
                 }
               ]
             },
@@ -1301,7 +1301,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "advanceType": "Delay",
-                  "multi": 0.8
+                  "multiAdd": 0.8
                 }
               ]
             },
@@ -1323,7 +1323,7 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "advanceType": "Delay",
-                  "multi": 1.2
+                  "multiAdd": 1.2
                 }
               ]
             },

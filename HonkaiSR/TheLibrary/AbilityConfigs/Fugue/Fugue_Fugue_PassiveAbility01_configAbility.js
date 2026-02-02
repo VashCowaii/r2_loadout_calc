@@ -225,7 +225,7 @@ const configAbility = {
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                   },
                   "advanceType": "Advance",
-                  "multi": "-0.24"
+                  "multiAdd": "-0.24"
                 }
               ]
             }
@@ -980,7 +980,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "advanceType": "Delay",
-                  "multi": "0.15"
+                  "multiAdd": "0.15"
                 }
               ]
             }

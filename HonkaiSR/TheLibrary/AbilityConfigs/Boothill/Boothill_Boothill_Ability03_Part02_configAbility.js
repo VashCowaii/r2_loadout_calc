@@ -93,7 +93,7 @@ const configAbility = {
         "target": "{{Ability Target(ST)}}"
       },
       "advanceType": "Delay",
-      "multi": "0.4"
+      "multiAdd": "0.4"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

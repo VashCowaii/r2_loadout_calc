@@ -132,7 +132,7 @@ const configAbility = {
             "target": "{{Ability Targets Adjacent(Blast)}}"
           },
           "advanceType": "Set",
-          "multi": "(0 - Plus3_DelayRatio)"
+          "multiAdd": "(0 - Plus3_DelayRatio)"
         }
       ]
     }

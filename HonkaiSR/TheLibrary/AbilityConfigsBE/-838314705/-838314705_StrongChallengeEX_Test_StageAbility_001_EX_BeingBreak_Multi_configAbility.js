@@ -380,7 +380,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "advanceType": "Delay",
-              "multi": 0.4
+              "multiAdd": 0.4
             }
           ]
         },
@@ -416,7 +416,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "advanceType": "Delay",
-              "multi": 1.6
+              "multiAdd": 1.6
             }
           ]
         },
@@ -438,7 +438,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "advanceType": "Delay",
-              "multi": 0.8
+              "multiAdd": 0.8
             }
           ]
         },
@@ -460,7 +460,7 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "advanceType": "Delay",
-              "multi": 1.2
+              "multiAdd": 1.2
             }
           ]
         },

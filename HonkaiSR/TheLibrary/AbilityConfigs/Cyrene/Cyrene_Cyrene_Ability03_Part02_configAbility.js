@@ -123,7 +123,7 @@ const configAbility = {
             "target": "{{Player Team All}}"
           },
           "advanceType": "Advance",
-          "multi": "-1"
+          "multiAdd": "-1"
         }
       ]
     },

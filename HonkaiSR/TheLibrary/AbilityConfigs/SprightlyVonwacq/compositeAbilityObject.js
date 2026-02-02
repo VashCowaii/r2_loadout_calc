@@ -64,7 +64,7 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "advanceType": "Advance",
-                          "multi": "-0.4"
+                          "multiAdd": "-0.4"
                         }
                       ]
                     }

@@ -2505,7 +2505,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster's Summoner}}"
                   },
                   "advanceType": "Set",
-                  "multi": "(0 - 0.3)"
+                  "multiAdd": "(0 - 0.3)"
                 }
               ]
             }

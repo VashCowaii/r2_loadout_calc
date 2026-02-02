@@ -637,7 +637,7 @@ const configAbility = {
                             "target": "{{Numby}}"
                           },
                           "advanceType": "Advance",
-                          "multi": "-0.5"
+                          "multiAdd": "-0.5"
                         }
                       ]
                     }
@@ -678,7 +678,7 @@ const configAbility = {
                         "target": "{{Numby}}"
                       },
                       "advanceType": "Advance",
-                      "multi": "-0.5"
+                      "multiAdd": "-0.5"
                     }
                   ]
                 }

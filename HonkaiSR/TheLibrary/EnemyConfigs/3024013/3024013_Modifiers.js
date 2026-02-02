@@ -1739,7 +1739,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "advanceType": "Set",
-              "multi": "MDF_SuperArmorBreakActionDelay"
+              "multiAdd": "MDF_SuperArmorBreakActionDelay"
             },
             {
               "name": "Add Events/Bonuses",
