@@ -38,7 +38,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "advanceType": "Advance",
-              "value": "-0.5"
+              "multi": "-0.5"
             },
             "Modifier Deletes Itself"
           ]
@@ -151,7 +151,7 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.5"
+                      "multi": "-0.5"
                     },
                     {
                       "name": "IF",

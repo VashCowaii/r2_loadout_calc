@@ -38,7 +38,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "value": {
+      "multi": {
         "operator": "Variables[0] (BE_Index) || Variables[1] (MAX) || Constants[0] (1) || Variables[2] (BE_Count) || Constants[0] (1) || SUB || PARAM_2 || FUNCTION || DIV || RETURN",
         "displayLines": "(BE_Index / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, (BE_Count - 1)))",
         "constants": [

@@ -1049,6 +1049,7 @@ const customHTML = {
 let globalIsLightcone = false;
 let globalIsRelic = false;
 let globalIsNoImage = false;
+let isVaryingAbilityPage = false;
 
 const megaParsingFuckery = {
     pageLoad(loadFile) {
@@ -1075,6 +1076,7 @@ const megaParsingFuckery = {
         let initialCounter = 1;
         let eventBodyString = megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter);
         let eventBodyStringOnAdd = megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter);
+        let eventBodyStringOnRemove = megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter);
         let eventBodyStringOnAbort = megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter);
         let eventBodyStringFunctions = megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter);
         
@@ -1101,7 +1103,9 @@ const megaParsingFuckery = {
         // references: []
         // desc: currentLCEntry.desc,
         // params: currentLCEntry.params,
-        const isGlobalNoImage = compositeAbilityObject.fullCharacterName.toLowerCase().includes("global")
+        if (typeof compositeAbilityObject.fullCharacterName === "number") {isVaryingAbilityPage = true;}
+        const isGlobalNoImage = typeof compositeAbilityObject.fullCharacterName === "number"
+        || compositeAbilityObject.fullCharacterName.toLowerCase().includes("global")
         || compositeAbilityObject.fullCharacterName.toLowerCase().includes("enemyabilities");
 
         globalIsNoImage = isGlobalNoImage;
@@ -1359,6 +1363,14 @@ const megaParsingFuckery = {
                 </summary>
                 ${eventBodyStringOnAdd}
             </details>` : ""}
+            ${eventBodyStringOnRemove ? `<details class="rotationsPermaConditionsExpand" open="">
+                <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                    <div class="rotationConditionOperatorHeaderCondition">REMOVED LOG</div>
+                </summary>
+                ${eventBodyStringOnRemove}
+            </details>` : ""}
+
+            
             ${eventBodyStringOnAbort ? `<details class="rotationsPermaConditionsExpand" open="">
                 <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
                     <div class="rotationConditionOperatorHeaderCondition">ON ABILITY ABORT</div>
@@ -1416,7 +1428,28 @@ customHTML.establishZoomableTraces();
 customHTML.establishMobileSideScrollerMenu();
 userTriggers.updateMainMenuDisplayed(1);
 
-if (location.hash) {
+// const value = decodeURIComponent(window.location.hash.slice(1));
+
+// megaParsingFuckery.renewFileSelected()
+// fileSelectionSelector
+
+if (location.hash && isVaryingAbilityPage) {
+    const elemIDAfter = decodeURIComponent(location.hash.slice(1));
+    // const elemIDAfter = location.hash.slice(1);
+
+    // console.log(elemIDAfter,readSelection(decodeURIComponent((elemIDAfter))))
+    if (elemIDAfter) {
+        // readSelection(elemIDAfter)?.scrollIntoView({block:"center",behavior: "smooth"});
+
+
+        readSelection("fileSelectionSelector").value = `${currentCharFilePrefix}_${elemIDAfter}`;
+        megaParsingFuckery.renewFileSelected()
+    
+    
+    
+    };
+}
+else if (location.hash) {
     const elemIDAfter = decodeURIComponent(location.hash.slice(1));
     // const elemIDAfter = location.hash.slice(1);
 

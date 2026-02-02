@@ -80,7 +80,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.4"
+                      "multi": "-0.4"
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -354,7 +354,7 @@ const compositeAbilityObject = {
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.24"
+                      "multi": "-0.24"
                     }
                   ]
                 }
@@ -1109,7 +1109,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Delay",
-                      "value": "0.15"
+                      "multi": "0.15"
                     }
                   ]
                 }

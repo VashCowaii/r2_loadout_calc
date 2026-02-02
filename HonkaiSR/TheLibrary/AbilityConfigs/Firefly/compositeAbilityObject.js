@@ -2041,7 +2041,7 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "advanceType": "Advance",
-          "value": -1
+          "multi": -1
         },
         {
           "name": "Update Energy",

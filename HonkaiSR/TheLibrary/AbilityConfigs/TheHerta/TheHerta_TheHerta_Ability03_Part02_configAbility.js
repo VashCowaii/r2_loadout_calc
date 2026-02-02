@@ -535,7 +535,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "value": 0
+      "set": 0
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

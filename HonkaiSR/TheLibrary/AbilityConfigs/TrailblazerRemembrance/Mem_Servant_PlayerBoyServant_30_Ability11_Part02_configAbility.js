@@ -39,7 +39,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "advanceType": "Set",
-          "value": "(0 - 1)"
+          "multi": "(0 - 1)"
         }
       ]
     },

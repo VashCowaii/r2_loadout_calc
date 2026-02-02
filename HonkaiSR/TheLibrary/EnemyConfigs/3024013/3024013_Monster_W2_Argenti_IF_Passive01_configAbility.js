@@ -88,7 +88,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "value": {
+      "multi": {
         "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
         "displayLines": "{[SkillP02[0]]}",
         "constants": [],

@@ -376,6 +376,37 @@
 }
 
 
+.exportIconBoxHolderBuffButton {
+    font-size: 12px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    /* outline: 1px solid #e1e1e480; */
+    padding-left: 5px;
+    padding-right: 5px;
+    /* margin-top: 5px; */
+    /* margin-bottom: 5px; */
+    /* color: #e1e1e4; */
+    color: white;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+}
+.exportIconBoxHolderBuffButton:hover {
+    opacity: 0.5;
+}
+.exportButtonIcon {
+    width: 20px;
+    height: 20px;
+}
+
+
 
 
 .statFiltersRowHeader,.statFiltersRowHeaderSides {

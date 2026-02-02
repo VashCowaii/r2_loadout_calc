@@ -58,7 +58,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "value": 0
+          "set": 0
         },
         {
           "name": "UI Display Event (On Entity)",

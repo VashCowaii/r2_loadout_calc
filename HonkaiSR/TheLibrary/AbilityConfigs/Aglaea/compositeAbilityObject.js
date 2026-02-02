@@ -891,7 +891,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "value": 0
+          "set": 0
         },
         {
           "name": "Update Energy",
@@ -1596,7 +1596,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "value": 0
+              "set": 0
             },
             {
               "name": "Assign Advance/Delay to Current Ability Use",
@@ -4026,7 +4026,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "value": "(0 - 1)"
+                  "multi": "(0 - 1)"
                 }
               ]
             }

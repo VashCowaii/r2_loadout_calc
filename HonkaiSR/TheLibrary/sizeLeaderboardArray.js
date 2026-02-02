@@ -5,7 +5,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Cyrene",
     "entryIcon": "icon/character/1415.png",
     "lineCount": 12138,
-    "sizeCount": 437172
+    "sizeCount": 437170
   },
   {
     "entryType": "enemy",
@@ -27,7 +27,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TheHerta",
     "entryIcon": "icon/character/1401.png",
     "lineCount": 8310,
-    "sizeCount": 322648
+    "sizeCount": 322646
   },
   {
     "entryType": "char",
@@ -35,7 +35,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Evernight",
     "entryIcon": "icon/character/1413.png",
     "lineCount": 8560,
-    "sizeCount": 296653
+    "sizeCount": 296647
   },
   {
     "entryType": "char",
@@ -43,7 +43,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Phainon",
     "entryIcon": "icon/character/1408.png",
     "lineCount": 7808,
-    "sizeCount": 269245
+    "sizeCount": 269243
   },
   {
     "entryType": "char",
@@ -83,7 +83,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Aglaea",
     "entryIcon": "icon/character/1402.png",
     "lineCount": 5598,
-    "sizeCount": 193308
+    "sizeCount": 193304
   },
   {
     "entryType": "char",
@@ -155,7 +155,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "March7thTH",
     "entryIcon": "icon/character/1224.png",
     "lineCount": 4586,
-    "sizeCount": 155378
+    "sizeCount": 155376
   },
   {
     "entryType": "char",
@@ -187,7 +187,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Saber",
     "entryIcon": "icon/character/1014.png",
     "lineCount": 3883,
-    "sizeCount": 138413
+    "sizeCount": 138411
   },
   {
     "entryType": "char",
@@ -195,7 +195,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TrailblazerRemembrance",
     "entryIcon": "icon/character/8007.png",
     "lineCount": 4006,
-    "sizeCount": 137696
+    "sizeCount": 137694
   },
   {
     "entryType": "char",
@@ -349,7 +349,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Sunday",
     "entryIcon": "icon/character/1313.png",
     "lineCount": 3104,
-    "sizeCount": 107241
+    "sizeCount": 107239
   },
   {
     "entryType": "char",
@@ -421,7 +421,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Robin",
     "entryIcon": "icon/character/1309.png",
     "lineCount": 2518,
-    "sizeCount": 90862
+    "sizeCount": 90858
   },
   {
     "entryType": "char",
@@ -459,13 +459,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1003012,
     "lineCount": 2522,
-    "sizeCount": 84453
+    "sizeCount": 84451
   },
   {
     "entryType": "enemy",
     "enemyID": 1003013,
     "lineCount": 2522,
-    "sizeCount": 84453
+    "sizeCount": 84451
   },
   {
     "entryType": "char",
@@ -479,13 +479,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1003011,
     "lineCount": 2436,
-    "sizeCount": 81825
+    "sizeCount": 81823
   },
   {
     "entryType": "enemy",
     "enemyID": 1003010,
     "lineCount": 2433,
-    "sizeCount": 81816
+    "sizeCount": 81814
   },
   {
     "entryType": "char",
@@ -549,7 +549,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Sushang",
     "entryIcon": "icon/character/1206.png",
     "lineCount": 2270,
-    "sizeCount": 72647
+    "sizeCount": 72645
   },
   {
     "entryType": "char",
@@ -557,7 +557,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "DanHeng",
     "entryIcon": "icon/character/1002.png",
     "lineCount": 2062,
-    "sizeCount": 70287
+    "sizeCount": 70283
   },
   {
     "entryType": "char",
@@ -597,7 +597,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Bronya",
     "entryIcon": "icon/character/1101.png",
     "lineCount": 1775,
-    "sizeCount": 57101
+    "sizeCount": 57099
   },
   {
     "entryType": "char",
@@ -661,7 +661,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Gepard",
     "entryIcon": "icon/character/1104.png",
     "lineCount": 1365,
-    "sizeCount": 44475
+    "sizeCount": 44473
   },
   {
     "entryType": "char",
@@ -859,7 +859,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "LongMayRainbowsAdorntheSky",
     "entryIcon": "icon/light_cone/23042.png",
     "lineCount": 398,
-    "sizeCount": 13848
+    "sizeCount": 13854
   },
   {
     "entryType": "relic",
@@ -1173,13 +1173,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1002020,
     "lineCount": 280,
-    "sizeCount": 8649
+    "sizeCount": 8647
   },
   {
     "entryType": "enemy",
     "enemyID": 1002021,
     "lineCount": 280,
-    "sizeCount": 8649
+    "sizeCount": 8647
   },
   {
     "entryType": "lc",

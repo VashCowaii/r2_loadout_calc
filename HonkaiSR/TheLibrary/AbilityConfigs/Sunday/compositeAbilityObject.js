@@ -1512,7 +1512,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "value": 0
+              "set": 0
             }
           ]
         },

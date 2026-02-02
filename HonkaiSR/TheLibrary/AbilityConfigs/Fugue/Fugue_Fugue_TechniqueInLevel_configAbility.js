@@ -62,7 +62,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Advance",
-                  "value": "-0.4"
+                  "multi": "-0.4"
                 },
                 {
                   "name": "Add Events/Bonuses",

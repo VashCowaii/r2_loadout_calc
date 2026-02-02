@@ -922,7 +922,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster's Self-Made Battle-Events}}"
               },
               "advanceType": "Advance",
-              "value": "-1"
+              "multi": "-1"
             }
           ]
         },
@@ -1606,7 +1606,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster's Self-Made Battle-Events}}"
               },
               "advanceType": "Advance",
-              "value": "-0.2"
+              "multi": "-0.2"
             }
           ]
         },

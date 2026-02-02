@@ -111,7 +111,7 @@ const configAbility = {
             "target": "{{Ability Target(ST)}}"
           },
           "advanceType": "Advance",
-          "value": "-0.5"
+          "multi": "-0.5"
         }
       ]
     }

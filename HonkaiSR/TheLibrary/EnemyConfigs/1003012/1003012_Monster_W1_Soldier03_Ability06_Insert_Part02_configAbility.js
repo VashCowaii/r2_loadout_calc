@@ -153,7 +153,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "value": 1
+      "multi": 1
     }
   ],
   "references": []

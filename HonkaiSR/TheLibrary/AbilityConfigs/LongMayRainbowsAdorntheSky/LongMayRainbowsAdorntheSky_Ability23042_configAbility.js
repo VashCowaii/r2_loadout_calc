@@ -266,12 +266,12 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_LoseHPTotal",
                   "value": {
-                    "operator": "Variables[0] (_CurrentHP) || Variables[1] (_LoseHP) || ADD || RETURN",
-                    "displayLines": "(_CurrentHP + _LoseHP)",
+                    "operator": "Variables[0] (_LoseHP) || Variables[1] (_LoseHPTotal) || ADD || RETURN",
+                    "displayLines": "(_LoseHP + _LoseHPTotal)",
                     "constants": [],
                     "variables": [
-                      "_CurrentHP",
-                      "_LoseHP"
+                      "_LoseHP",
+                      "_LoseHPTotal"
                     ]
                   }
                 }

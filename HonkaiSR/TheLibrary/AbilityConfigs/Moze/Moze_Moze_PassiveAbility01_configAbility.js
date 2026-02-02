@@ -935,7 +935,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Advance",
-                  "value": "-0.3"
+                  "multi": "-0.3"
                 }
               ]
             }
@@ -1128,7 +1128,7 @@ const configAbility = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Advance",
-                          "value": "-0.2"
+                          "multi": "-0.2"
                         }
                       ]
                     }

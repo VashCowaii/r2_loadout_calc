@@ -43,7 +43,7 @@ const compositeAbilityObject = {
                         "target": "{{Player Team All}}"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.16"
+                      "multi": "-0.16"
                     }
                   ]
                 }

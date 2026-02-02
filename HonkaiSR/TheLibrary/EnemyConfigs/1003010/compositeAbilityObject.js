@@ -272,7 +272,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
           },
-          "value": 0
+          "set": 0
         },
         {
           "name": "UI Display Event (On Entity)",
@@ -1260,7 +1260,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "value": 1
+          "multi": 1
         }
       ],
       "references": []

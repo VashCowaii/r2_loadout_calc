@@ -37,7 +37,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "value": "(0 - 0.25)"
+                  "multi": "(0 - 0.25)"
                 }
               ]
             }

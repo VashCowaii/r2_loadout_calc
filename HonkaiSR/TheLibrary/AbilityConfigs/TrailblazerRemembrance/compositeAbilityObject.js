@@ -521,7 +521,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "advanceType": "Set",
-                      "value": "(0 - 0.3)"
+                      "multi": "(0 - 0.3)"
                     }
                   ]
                 }
@@ -630,7 +630,7 @@ const compositeAbilityObject = {
                         "target": "{{Hostile Entities(AOE)}}"
                       },
                       "advanceType": "Delay",
-                      "value": "0.5"
+                      "multi": "0.5"
                     }
                   ]
                 }
@@ -1954,7 +1954,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}.[[getSummoner]]"
                   },
                   "advanceType": "Set",
-                  "value": "(0 - 0.25)"
+                  "multi": "(0 - 0.25)"
                 }
               ]
             }
@@ -2406,7 +2406,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "value": 0
+                          "set": 0
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -2685,7 +2685,7 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "advanceType": "Set",
-              "value": "(0 - 1)"
+              "multi": "(0 - 1)"
             }
           ]
         },

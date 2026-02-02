@@ -960,7 +960,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.25"
+                      "multi": "-0.25"
                     }
                   ]
                 }

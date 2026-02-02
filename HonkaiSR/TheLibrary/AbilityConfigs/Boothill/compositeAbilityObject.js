@@ -1183,7 +1183,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "advanceType": "Delay",
-          "value": "0.4"
+          "multi": "0.4"
         },
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"

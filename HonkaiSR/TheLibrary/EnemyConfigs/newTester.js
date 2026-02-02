@@ -520,6 +520,9 @@ const megaParsingFuckery = {
             let initialCounter = 1;
             let eventBodyString = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.parse,initialCounter) : "";
             let eventBodyStringOnAdd = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenAdded,initialCounter) : "";
+            let eventBodyStringOnRemove = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.whenRemoved,initialCounter) : "";
+
+            
             let eventBodyStringOnAbort = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.onAbort,initialCounter) : "";
             let eventBodyStringFunctions = abilitiesHaveLength ? megaParsingFuckery.fillEventBodyBox(configAbility.functions,initialCounter) : "";
             
@@ -806,6 +809,12 @@ const megaParsingFuckery = {
                         <div class="rotationConditionOperatorHeaderCondition">ADDED LOG</div>
                     </summary>
                     ${eventBodyStringOnAdd}
+                </details>` : ""}
+                ${eventBodyStringOnRemove ? `<details class="rotationsPermaConditionsExpand" open="">
+                    <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                        <div class="rotationConditionOperatorHeaderCondition">REMOVED LOG</div>
+                    </summary>
+                    ${eventBodyStringOnRemove}
                 </details>` : ""}
                 ${eventBodyStringOnAbort ? `<details class="rotationsPermaConditionsExpand" open="">
                     <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">

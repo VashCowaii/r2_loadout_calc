@@ -94,7 +94,7 @@ const configAbility = {
                     "target": "{{Hostile Entities(AOE)}}"
                   },
                   "advanceType": "Delay",
-                  "value": "0.5"
+                  "multi": "0.5"
                 }
               ]
             }
