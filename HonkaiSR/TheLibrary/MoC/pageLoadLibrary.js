@@ -113,13 +113,24 @@ const endgameModeDisplay = {
                         // activityBuffDisplay${sideNumber}GuideOverview${selectorCounter}
         }
     },
-    getBuffDisplayBox(buffObject,idString,isShow) {
+    getBuffDisplayBox(buffObject,idString,isShow,abilitiesArray) {
 
 
         let arrayAbilityStringer = "";
+        let buffCounter = 0;
         if (buffObject?.abilitiesArray?.length) {
-            let buffCounter = 0;
             for (let abilityArrayEntry of buffObject.abilitiesArray) {
+                buffCounter++;
+                arrayAbilityStringer += `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${abilityArrayEntry.BEKey}/#${encodeURIComponent(abilityArrayEntry.realModifierNamne)}" target="_blank">
+                    Buff ${buffCounter}&nbsp;
+                    <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                </a>`
+            }
+        }
+
+        if (abilitiesArray?.length) {
+            
+            for (let abilityArrayEntry of abilitiesArray) {
                 buffCounter++;
                 arrayAbilityStringer += `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${abilityArrayEntry.BEKey}/#${encodeURIComponent(abilityArrayEntry.realModifierNamne)}" target="_blank">
                     Buff ${buffCounter}&nbsp;
@@ -320,6 +331,8 @@ const endgameModeDisplay = {
             const boss1Guide = currentStage.boss1Guide;
             const boss2Guide = currentStage.boss2Guide;
 
+            const abilitiesArray = currentStage.abilitiesArray;
+
             // console.log(boss1Guide)
 
 
@@ -330,7 +343,7 @@ const endgameModeDisplay = {
             // readSelection("mocDescriptionBox").innerHTML = descriptionToUse;
 
 
-            readSelection("mocDescriptionBox").innerHTML = endgameModeDisplay.getBuffDisplayBox(directEntry.buffData);
+            readSelection("mocDescriptionBox").innerHTML = endgameModeDisplay.getBuffDisplayBox(directEntry.buffData,null,null,abilitiesArray);
 
 
 

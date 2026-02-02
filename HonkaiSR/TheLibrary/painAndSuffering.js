@@ -3968,6 +3968,7 @@ const megaParsingFuckeryPain = {
             "name",
             "skillType",
             "activeSkill",
+            "target",
             "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Skill Effect");
@@ -3978,6 +3979,7 @@ const megaParsingFuckeryPain = {
             ${parseRef.invertCondition ? "NOT " : ""}${parseRef.skillType}
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.activeSkill,"Active Skill")}
         </div>`;
     },
@@ -4049,6 +4051,26 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.casterFilter,"Caster Filter",true)}
+        </div>`;
+    },
+    "Enemy Team is Dead"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "target",
+            // "modifier",
+            "invertCondition",
+            // "casterFilter",
+            // "justAddedOrActive",
+            // "includePreDeath",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Enemy Team is Dead");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""}
+        </div>
+        <div class="modifierDetailsBox">
         </div>`;
     },
     "HP Can be Damaged"(parseRef,initialCounter) {
@@ -5334,6 +5356,7 @@ const megaParsingFuckeryPain = {
             </summary>
 
             <div class="modifierDetailsBox">
+                ${getStandardNameDisplay(initialCounter,parseRef.dmgCountsForTeam,"DMG Counts for Team")}
                 ${getStandardNameDisplay(initialCounter,parseRef.assignOwner,"Assign Owner",true)}
                 ${getStandardNameDisplay(initialCounter,parseRef.statSource,"Stat Source",true)}
 
@@ -9036,6 +9059,8 @@ const megaParsingFuckeryPain = {
             "abortInsertedAbilities",
             "canRevive",
             "canOverkill",
+            "deathSourceType",
+            "killer",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Force Entity Death");
 
@@ -9062,11 +9087,14 @@ const megaParsingFuckeryPain = {
 
             <div class="modifierDetailsBox">
                 ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+                ${getStandardNameDisplay(initialCounter,parseRef.killer,"Killer",true)}
+                
                 ${getStandardNameDisplay(initialCounter,parseRef.ignoreHPLossTriggers,"Bypass Event: HP loss triggers")}
                 ${getStandardNameDisplay(initialCounter,parseRef.ignoreDeathTriggers,"Bypass Event: Death triggers")}
                 ${getStandardNameDisplay(initialCounter,parseRef.abortInsertedAbilities,"Abort Injected Ability Actions")}
                 ${getStandardNameDisplay(initialCounter,parseRef.canRevive,"Can Revive")}
                 ${getStandardNameDisplay(initialCounter,parseRef.canOverkill,"Can Overkill")}
+                ${getStandardNameDisplay(initialCounter,parseRef.deathSourceType,"Source Type")}
             </div>
 
             <div class="rotationConditionOperatorBoxMain">
@@ -9278,6 +9306,8 @@ const megaParsingFuckeryPain = {
             <div class="modifierDetailsBox">
                 ${getStandardNameDisplay(initialCounter,parseRef.enemyID,"Enemy ID")}
                 ${getStandardNameDisplay(initialCounter,parseRef.locationType,"Location Type")}
+                ${getStandardNameDisplay(initialCounter,parseRef.overrideActivityGroup,"Override Activity Group")}
+                ${getStandardNameDisplay(initialCounter,parseRef.slot,"Slot")}
 
             </div>
         </details>
@@ -9895,6 +9925,7 @@ const megaParsingFuckeryPain = {
             "abilityList",
             "overridesArray",
             "hardLevelEvent",
+            "eliteGroup",
             "barType",
             "actionDescription",
 
@@ -9955,6 +9986,8 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.team,"Team")}
             ${getStandardNameDisplay(initialCounter,parseRef.barType,"Bar Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.eventSpeed,"SPD")}
+            ${getStandardNameDisplay(initialCounter,parseRef.hardLevelEvent,"Hard Level")}
+            ${getStandardNameDisplay(initialCounter,parseRef.eliteGroup,"Elite Group")}
             ${abilityListRow  ? `<div class="actionDetailBody2BattleEventOverrides">
                 <div class="rotationConditionOperatorHeaderInline">Ability List:</div>&nbsp;
                 ${abilityListRow}

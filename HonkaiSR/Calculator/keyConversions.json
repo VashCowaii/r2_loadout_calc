@@ -40,6 +40,13 @@
     "AllDamageTypeTakenRatio": "Vulnerability",
     "AllDamageTypeTakenRatioOLDDEFINITION": "EnemyDMGTaken",
     "FireTakenRatio": "FireVulnerability",
+    "PhysicalTakenRatio": "PhysicalVulnerability",
+    "ThunderTakenRatio": "LightningVulnerability",
+    "WindTakenRatio": "WindVulnerability",
+    "QuantumTakenRatio": "QuantumVulnerability",
+    "IceTakenRatio": "IceVulnerability",
+
+    "Monster_DamageTakenRatio": "EnemyVulnerability",
 
     "DamageValue": "DMG%Total",
 
