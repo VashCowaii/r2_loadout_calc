@@ -4496,7 +4496,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.canDelay,"Can Delay")}
             ${getStandardNameDisplay(initialCounter,parseRef.livingState,"Living State")}
             
-            ${parseRef.ToughnessDMGType != undefined && (typeof parseRef?.ToughnessDMGType?.sourceType === "object" ? Object.keys(parseRef.ToughnessDMGType.sourceType).length : true) ? `<div class="actionDetailBody2">
+            ${parseRef.ToughnessDMGType != undefined && (typeof parseRef?.ToughnessDMGType === "object" ? parseRef.ToughnessDMGType.name === "Target Name" : true) ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Toughness DMG Type:</div>&nbsp;
                 ${megaParsingFuckery.makeConditionTargetBox(parseRef.ToughnessDMGType,initialCounter)}
             </div>` : ""}
