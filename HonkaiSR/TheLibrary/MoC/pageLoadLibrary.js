@@ -1841,6 +1841,10 @@ const endgameModeDisplay = {
                                 ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc ?? "")}
                             </div>
                         </div>
+                        
+                
+                
+            </div>
                     `
     
                     if (currentTraceRef.params?.length) {
@@ -1858,6 +1862,14 @@ const endgameModeDisplay = {
                             </div>
                         `
                     }
+
+
+                    entryString += `<div class="actionDetailBody">
+                            ${currentTraceRef.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${currentTraceRef.BEKey}/#${encodeURIComponent(currentTraceRef.realModifierNamne)}" target="_blank">
+                                Go to Buff&nbsp;
+                                <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                            </a>` : ""}
+                        </div>`
     
                     if (currentTraceRef.extraEffects && Object.keys(currentTraceRef.extraEffects).length) {
     

@@ -113,6 +113,8 @@ let mocSchedule = [
           {
             "name": "Inversion",
             "desc": "Each time after the enemy target is attacked, the attacker will lose HP equal to #1[i]% of their own Max HP. This effect is Non-fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0003",
+            "BEKey": 1912336050,
             "params": [
               0.02
             ]
@@ -264,6 +266,8 @@ let mocSchedule = [
           {
             "name": "Tempering",
             "desc": "For every 1% HP the enemy target loses, reduces CRIT DMG dealt to them by #1[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0002",
+            "BEKey": 1912336050,
             "params": [
               0.03
             ]
@@ -417,6 +421,8 @@ let mocSchedule = [
           {
             "name": "Taunting",
             "desc": "Enemy target takes immediate action after being attacked #1[i] time(s). This tally resets at the start of the enemy target's turn.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0008",
+            "BEKey": 1912336050,
             "params": [
               6
             ]
@@ -424,6 +430,8 @@ let mocSchedule = [
           {
             "name": "Interference",
             "desc": "After the enemy target uses an attack, randomly causes #1[i]% or #2[i]% action delay to the attacked target.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0009",
+            "BEKey": 1912336050,
             "params": [
               0.05,
               0.1
@@ -520,6 +528,8 @@ let mocSchedule = [
           {
             "name": "Resilient Armor+",
             "desc": "Enemy target initially has #1[i] stacks of \"Resilient Armor+,\" and each stack reduces DMG taken by #2[i]%. Enemy targets lose 1 stack of \"Resilient Armor+\" each time their Toughness is reduced to 0. Stacks of this effect will reset at each of the enemy target's phase.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0001",
+            "BEKey": 1912336050,
             "params": [
               3,
               0.15
@@ -528,6 +538,8 @@ let mocSchedule = [
           {
             "name": "Depowered",
             "desc": "When entering combat, reduces ally target's Energy by #1[i]% and decreases their Energy Regeneration Rate by #2[i]% outside of their turn for #3[i] turn(s).",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0013",
+            "BEKey": 1912336050,
             "params": [
               0.5,
               0.5,
@@ -537,6 +549,8 @@ let mocSchedule = [
           {
             "name": "Unending Refinement",
             "desc": "After the enemy target takes DMG, reduces DMG taken by this unit by #1[i]% and CRIT DMG taken by #3[i]%, stacking up to #2[i] time(s). These stacks are cleared when the enemy target's turn begins or when they enter the Weakness Break state. While the enemy target is in the Weakness Break state, stacks cannot be accumulated.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0012",
+            "BEKey": 1912336050,
             "params": [
               0.02,
               10,
@@ -634,6 +648,8 @@ let mocSchedule = [
           {
             "name": "Resilient Armor++",
             "desc": "Enemy target initially has #1[i] stacks of \"Resilient Armor++,\" and each stack reduces DMG taken by #2[i]%. Enemy targets lose 1 stack of \"Resilient Armor++\" each time their Toughness is reduced to 0. Stacks of this effect will reset at each of the enemy target's phase.",
+            "realModifierNamne": "ChallengePeakBattle_ExtremeAbility_0001",
+            "BEKey": 1912336050,
             "params": [
               4,
               0.15
@@ -642,6 +658,8 @@ let mocSchedule = [
           {
             "name": "Depowered++",
             "desc": "When entering combat, reduces ally target's Energy by #1[i]% and decreases their Energy Regeneration Rate by #2[i]% outside of their turn for #3[i] turn(s).",
+            "realModifierNamne": "ChallengePeakBattle_ExtremeAbility_0013",
+            "BEKey": 1912336050,
             "params": [
               1,
               1,
@@ -651,6 +669,8 @@ let mocSchedule = [
           {
             "name": "Unending Refinement+",
             "desc": "After the enemy target takes DMG, reduces DMG taken by this unit by #1[i]% and CRIT DMG taken by #3[i]%, stacking up to #2[i] time(s). These stacks are cleared when the enemy target's turn begins or when they enter the Weakness Break state. While the enemy target is in the Weakness Break state, stacks cannot be accumulated.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0012",
+            "BEKey": 1912336050,
             "params": [
               0.03,
               10,
@@ -664,6 +684,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033032",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0007",
+        "BEKey": 1912336050,
         "name": "No Break No Rise",
         "desc": "Increases all ally targets' Break Effect by #1[i]%. Each time an enemy target's Toughness is reduced to 0, increases Break DMG taken by that target by #2[i]%, stacking up to #3[i] times.",
         "battleDesc": null,
@@ -677,6 +698,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033033",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0008",
+        "BEKey": 1912336050,
         "name": "Impassioned Spirits",
         "desc": "Increases all ally targets' ATK by #1[i]%. When using \"Horizon's Echo From Afar,\" additionally increases all ally targets' ATK by #2[i]%, this effect is stackable.",
         "battleDesc": null,
@@ -689,6 +711,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033034",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0009",
+        "BEKey": 1912336050,
         "name": "Seize the Moment",
         "desc": "Increases all ally targets' DMG by #1[i]%. After an ally target uses an attack, applies Weakness corresponding to this unit's Type to the attacked enemy target. This effect is removed when the enemy target recovers from Weakness Break state.",
         "battleDesc": null,
@@ -848,6 +871,8 @@ let mocSchedule = [
           {
             "name": "Taunting",
             "desc": "Enemy target takes immediate action after being attacked #1[i] time(s). This tally resets at the start of the enemy target's turn.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0008",
+            "BEKey": 1912336050,
             "params": [
               6
             ]
@@ -1003,6 +1028,8 @@ let mocSchedule = [
           {
             "name": "Interference",
             "desc": "After the enemy target uses an attack, randomly causes #1[i]% or #2[i]% action delay to the attacked target.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0009",
+            "BEKey": 1912336050,
             "params": [
               0.05,
               0.1
@@ -1011,6 +1038,8 @@ let mocSchedule = [
           {
             "name": "Energy Absorption",
             "desc": "After an enemy target receives an attack, reduces the attacker's Energy by #1[i] points, except when the attacker's Energy is maxed. When an enemy target is defeated, the attacker regenerates #2[i] Energy.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0005",
+            "BEKey": 1912336050,
             "params": [
               2,
               10
@@ -1158,6 +1187,8 @@ let mocSchedule = [
           {
             "name": "Resilient Armor",
             "desc": "Enemy target initially has #1[i] stacks of \"Resilient Armor,\" and each stack reduces DMG taken by #2[i]%. Enemy targets lose 1 stack of \"Resilient Armor\" each time their Toughness is reduced to 0.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0001",
+            "BEKey": 1912336050,
             "params": [
               2,
               0.15
@@ -1250,6 +1281,8 @@ let mocSchedule = [
           {
             "name": "Energy Absorption+",
             "desc": "After an enemy target receives an attack, reduces the attacker's Energy by #1[i] points, except when the attacker's Energy is maxed. When an enemy target is defeated, the attacker regenerates #2[i] Energy.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0005",
+            "BEKey": 1912336050,
             "params": [
               3,
               10
@@ -1258,6 +1291,8 @@ let mocSchedule = [
           {
             "name": "Sunder",
             "desc": "When ally targets are being attacked by enemies, the \"Sunder\" effect will be inflicted on them. Each stack additionally causes the holder to lose HP equal to #1[f1]% of their Max HP. This effect can be stacked indefinitely and cannot be dissipated. After targets with \"Sunder\" received a Shield from an ally target other than themselves or healing, all \"Sunder\" effects are dispelled on both targets.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0007",
+            "BEKey": 1912336050,
             "params": [
               0.007999999
             ]
@@ -1349,6 +1384,8 @@ let mocSchedule = [
           {
             "name": "Energy Absorption++",
             "desc": "After an enemy target receives an attack, reduces the attacker's Energy by #1[i] points, except when the attacker's Energy is maxed. When an enemy target is defeated, the attacker regenerates #2[i] Energy.",
+            "realModifierNamne": "ChallengePeakBattle_ExtremeAbility_0005",
+            "BEKey": 1912336050,
             "params": [
               4,
               10
@@ -1357,6 +1394,8 @@ let mocSchedule = [
           {
             "name": "Sunder++",
             "desc": "When ally targets are being attacked by enemies, the \"Sunder++\" effect will be inflicted on them. Each stack additionally causes the holder to lose HP equal to #1[f1]% of their Max HP. This effect can be stacked indefinitely and cannot be dissipated. After targets with \"Sunder++\" received a Shield from an ally target other than themselves or healing, all \"Sunder++\" effects are dispelled on both targets.",
+            "realModifierNamne": "ChallengePeakBattle_ExtremeAbility_0007",
+            "BEKey": 1912336050,
             "params": [
               0.015999999
             ]
@@ -1368,6 +1407,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033020",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0004",
+        "BEKey": 1912336050,
         "name": "Sanguine Vitality",
         "desc": "Increases CRIT DMG of all ally targets by #1[i]%. When using \"Healing Rainbow\", the increased Max HP is further raised by #2[i]%.",
         "battleDesc": null,
@@ -1380,6 +1420,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033021",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0005",
+        "BEKey": 1912336050,
         "name": "Power Surge",
         "desc": "Increases all allies' Basic ATK, Skill, and Ultimate DMG by #1[i]%. When using \"Healing Rainbow,\" additionally increases all allies' ATK by #2[i] points.",
         "battleDesc": null,
@@ -1392,6 +1433,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033022",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0006",
+        "BEKey": 1912336050,
         "name": "Fluid Dash",
         "desc": "Increases all allies' DoT All-Type RES PEN by #1[i]%. When using \"Healing Rainbow,\" additionally increases all allies' SPD by #2[i]%.",
         "battleDesc": null,
@@ -1547,6 +1589,8 @@ let mocSchedule = [
           {
             "name": "Resilient Armor",
             "desc": "Enemy target initially has #1[i] stacks of \"Resilient Armor,\" and each stack reduces DMG taken by #2[i]%. Enemy targets lose 1 stack of \"Resilient Armor\" each time their Toughness is reduced to 0.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0001",
+            "BEKey": 1912336050,
             "params": [
               2,
               0.15
@@ -1705,6 +1749,8 @@ let mocSchedule = [
           {
             "name": "Tempering",
             "desc": "For every 1% HP the enemy target loses, reduces CRIT DMG dealt to them by #1[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0002",
+            "BEKey": 1912336050,
             "params": [
               0.03
             ]
@@ -1918,6 +1964,8 @@ let mocSchedule = [
           {
             "name": "Inversion",
             "desc": "Each time after the enemy target is attacked, the attacker will lose HP equal to #1[i]% of their own Max HP. This effect is Non-fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0003",
+            "BEKey": 1912336050,
             "params": [
               0.02
             ]
@@ -1925,6 +1973,8 @@ let mocSchedule = [
           {
             "name": "Under Protection",
             "desc": "All non-elite enemy targets won't have their HP and Toughness reduced, and increases their Effect RES by #1[i]%. When all elite enemy targets are defeated, remaining enemy targets will also be eliminated.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0004",
+            "BEKey": 1912336050,
             "params": [
               1
             ]
@@ -2078,6 +2128,8 @@ let mocSchedule = [
           {
             "name": "Inversion",
             "desc": "Each time after the enemy target is attacked, the attacker will lose HP equal to #1[i]% of their own Max HP. This effect is Non-fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0003",
+            "BEKey": 1912336050,
             "params": [
               0.02
             ]
@@ -2085,6 +2137,8 @@ let mocSchedule = [
           {
             "name": "Energy Absorption",
             "desc": "After an enemy target receives an attack, reduces the attacker's Energy by #1[i] points, except when the attacker's Energy is maxed. When an enemy target is defeated, the attacker regenerates #2[i] Energy.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0005",
+            "BEKey": 1912336050,
             "params": [
               2,
               10
@@ -2093,6 +2147,8 @@ let mocSchedule = [
           {
             "name": "Sunder",
             "desc": "When ally targets are being attacked by enemies, the \"Sunder\" effect will be inflicted on them. Each stack additionally causes the holder to lose HP equal to #1[f1]% of their Max HP. This effect can be stacked indefinitely and cannot be dissipated. After targets with \"Sunder\" received a Shield from an ally target other than themselves or healing, all \"Sunder\" effects are dispelled on both targets.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0007",
+            "BEKey": 1912336050,
             "params": [
               0.007999999
             ]
@@ -2246,6 +2302,8 @@ let mocSchedule = [
           {
             "name": "Inversion+",
             "desc": "Each time after the enemy target is attacked, the attacker will lose HP equal to #1[i]% of their own Max HP. This effect is Non-fatal.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0003",
+            "BEKey": 1912336050,
             "params": [
               0.03
             ]
@@ -2253,6 +2311,8 @@ let mocSchedule = [
           {
             "name": "Energy Absorption++",
             "desc": "After an enemy target receives an attack, reduces the attacker's Energy by #1[i] points, except when the attacker's Energy is maxed. When an enemy target is defeated, the attacker regenerates #2[i] Energy.",
+            "realModifierNamne": "ChallengePeakBattle_ExtremeAbility_0005",
+            "BEKey": 1912336050,
             "params": [
               4,
               10
@@ -2261,6 +2321,8 @@ let mocSchedule = [
           {
             "name": "Sunder++",
             "desc": "When ally targets are being attacked by enemies, the \"Sunder++\" effect will be inflicted on them. Each stack additionally causes the holder to lose HP equal to #1[f1]% of their Max HP. This effect can be stacked indefinitely and cannot be dissipated. After targets with \"Sunder++\" received a Shield from an ally target other than themselves or healing, all \"Sunder++\" effects are dispelled on both targets.",
+            "realModifierNamne": "ChallengePeakBattle_ExtremeAbility_0007",
+            "BEKey": 1912336050,
             "params": [
               0.015999999
             ]
@@ -2272,6 +2334,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033006",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0001",
+        "BEKey": 1912336050,
         "name": "Think Outside the Box",
         "desc": "When the number of ally targets currently on the field is not 4, all allies' dealt DMG increases by #1[i]%.",
         "battleDesc": null,
@@ -2283,6 +2346,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033007",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0002",
+        "BEKey": 1912336050,
         "name": "Infantry and Cavalry",
         "desc": "Whenever any ally uses their Ultimate, ignores #1[i]% of target's DEF. After Ultimate deals DMG, the next Skill will ignore #2[i]% of target's DEF.",
         "battleDesc": null,
@@ -2295,6 +2359,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033008",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0003",
+        "BEKey": 1912336050,
         "name": "Hammer and Anvil",
         "desc": "After receiving Shield effects or healing from ally targets (excluding this unit), reduces DMG taken by this unit by #1[i]%, and increases All-Type RES PEN by #2[i]% for #3[i] turn(s).",
         "battleDesc": null,
