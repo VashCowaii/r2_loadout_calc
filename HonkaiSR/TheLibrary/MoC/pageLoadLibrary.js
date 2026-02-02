@@ -25,13 +25,17 @@
 
 function parseLocalDate(yyyyMmDd) {
     if (!yyyyMmDd) return null;
-  
-    const [y, m, d] = yyyyMmDd.split("-").map(Number);
-    return new Date(y, m - 1, d);
+
+    const [date,time] = yyyyMmDd.split(" ");
+    const [y,m,d] = date.split("-").map(Number);
+    const [hh=0,mm=0,ss=0] = time.split(":").map(Number);
+
+    return new Date(Date.UTC(y,m-1,d,hh-8,mm,ss));
   }
 function todayLocal() {
-    const now = new Date();
-    return new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    return new Date();
+    // const now = new Date();
+    // return new Date(now.getFullYear(),now.getMonth(),now.getDate());
 }
 
 
@@ -62,19 +66,18 @@ const endgameModeDisplay = {
             return aDate - bDate;
         });
         
-        // for (let entry of mocSchedule) {
-        //     console.log(entry.realName);
-        // }
-        
         
         const today = todayLocal();
+        // console.log(today)
         const activeRange = mocSchedule.find(r => {
             const start = parseLocalDate(r.start);
-            const end   = parseLocalDate(r.end);
+            const end = parseLocalDate(r.end);
+
+            // console.log(start,end)
             return today >= start && today <= end;
         });
         
-        // console.log(activeRange)
+        // console.log(activeRange.start)
 
         currentActiveCycle = activeRange.id;
 
@@ -307,7 +310,7 @@ const endgameModeDisplay = {
 
 
 
-            const startStringer = stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" ? (hasPatchTitle ? "Patch: " : "") + directEntry.patchName : directEntry.start + " - " + directEntry.end;
+            const startStringer = stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" ? (hasPatchTitle ? "Patch: " : "") + directEntry.patchName : directEntry.start?.split(" ")[0] + " - " + directEntry.end.split(" ")[0];
 
             readSelection("versionUpdateValue").innerHTML = `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(-1)">&#9664;</div>`
             + startStringer + `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(1)">&#9654;</div>`;
