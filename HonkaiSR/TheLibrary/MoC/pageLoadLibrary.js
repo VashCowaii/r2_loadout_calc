@@ -43,6 +43,7 @@ let firstBoxGenDCompleted = false;
 
 const endgameModeDisplay = {
     pageloadEntry() {
+        readSelection("PFDescriptionBox").innerHTML = "";
 
         if (stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" || stageTypers === "crimson" || stageTypers === "golden" || stageTypers === "shadow" || stageTypers === "planar") {
 
