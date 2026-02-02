@@ -723,7 +723,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.4"
+                      "multiAdd": "-0.4"
                     }
                   ]
                 }
@@ -934,7 +934,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "value": 1
+          "multi": 1
         },
         {
           "name": "Add Events/Bonuses",

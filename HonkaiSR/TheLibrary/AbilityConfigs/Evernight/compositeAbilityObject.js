@@ -1064,11 +1064,11 @@ const compositeAbilityObject = {
                           },
                           "variableName": "_Partner_Count_Show",
                           "value": {
-                            "operator": "Variables[0] (_PointB3Layer) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                            "displayLines": "(_PointB3Layer + _Evernight_00_Extra_Energy)",
+                            "operator": "Variables[0] (1) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
+                            "displayLines": "(1 + _Evernight_00_Extra_Energy)",
                             "constants": [],
                             "variables": [
-                              "_PointB3Layer",
+                              1,
                               "_Evernight_00_Extra_Energy"
                             ]
                           }
@@ -1081,11 +1081,11 @@ const compositeAbilityObject = {
                           },
                           "variableName": "_Partner_Count",
                           "value": {
-                            "operator": "Variables[0] (_PointB3Layer) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
-                            "displayLines": "(_PointB3Layer + _Evernight_00_Extra_Energy)",
+                            "operator": "Variables[0] (1) || Variables[1] (_Evernight_00_Extra_Energy) || ADD || RETURN",
+                            "displayLines": "(1 + _Evernight_00_Extra_Energy)",
                             "constants": [],
                             "variables": [
-                              "_PointB3Layer",
+                              1,
                               "_Evernight_00_Extra_Energy"
                             ]
                           }
@@ -5474,7 +5474,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "value": 0
+          "set": 0
         }
       ],
       "references": []
@@ -8275,7 +8275,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Caster}}"
                           },
-                          "value": 0
+                          "set": 0
                         }
                       ],
                       "failed": [
@@ -8295,7 +8295,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "value": 0
+                      "set": 0
                     }
                   ]
                 }

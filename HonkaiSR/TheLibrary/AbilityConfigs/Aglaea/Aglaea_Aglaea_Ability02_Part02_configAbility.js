@@ -54,7 +54,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "value": 0
+          "set": 0
         },
         {
           "name": "Assign Advance/Delay to Current Ability Use",

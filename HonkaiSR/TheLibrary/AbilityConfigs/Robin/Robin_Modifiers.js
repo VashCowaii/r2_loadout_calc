@@ -186,7 +186,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "value": 0
+              "set": 0
             },
             "Modifier Deletes Itself"
           ]
@@ -1198,7 +1198,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Battle Event's Caster}}"
               },
-              "value": 0
+              "set": 0
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1925,7 +1925,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Set",
-                  "value": "(0 - 0.25)"
+                  "multiAdd": "(0 - 0.25)"
                 }
               ]
             },

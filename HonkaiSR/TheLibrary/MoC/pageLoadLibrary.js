@@ -25,23 +25,29 @@
 
 function parseLocalDate(yyyyMmDd) {
     if (!yyyyMmDd) return null;
-  
-    const [y, m, d] = yyyyMmDd.split("-").map(Number);
-    return new Date(y, m - 1, d);
+
+    const [date,time] = yyyyMmDd.split(" ");
+    const [y,m,d] = date.split("-").map(Number);
+    const [hh=0,mm=0,ss=0] = time.split(":").map(Number);
+
+    return new Date(Date.UTC(y,m-1,d,hh-8,mm,ss));
   }
 function todayLocal() {
-    const now = new Date();
-    return new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    return new Date();
+    // const now = new Date();
+    // return new Date(now.getFullYear(),now.getMonth(),now.getDate());
 }
 
 
 let currentActiveCycle = null;
 let currentFloor = null;
 let farmingPagePopSelectionsDone = false;
+let firstBoxGenDCompleted = false;
 
 
 const endgameModeDisplay = {
     pageloadEntry() {
+        readSelection("PFDescriptionBox").innerHTML = "";
 
         if (stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" || stageTypers === "crimson" || stageTypers === "golden" || stageTypers === "shadow" || stageTypers === "planar") {
 
@@ -60,19 +66,18 @@ const endgameModeDisplay = {
             return aDate - bDate;
         });
         
-        // for (let entry of mocSchedule) {
-        //     console.log(entry.realName);
-        // }
-        
         
         const today = todayLocal();
+        // console.log(today)
         const activeRange = mocSchedule.find(r => {
             const start = parseLocalDate(r.start);
-            const end   = parseLocalDate(r.end);
+            const end = parseLocalDate(r.end);
+
+            // console.log(start,end)
             return today >= start && today <= end;
         });
         
-        // console.log(activeRange)
+        // console.log(activeRange.start)
 
         currentActiveCycle = activeRange.id;
 
@@ -112,7 +117,71 @@ const endgameModeDisplay = {
                         // activityBuffDisplay${sideNumber}GuideOverview${selectorCounter}
         }
     },
+    getBuffDisplayBox(buffObject,idString,isShow,abilitiesArray) {
+
+
+        let arrayAbilityStringer = "";
+        let buffCounter = 0;
+        if (buffObject?.abilitiesArray?.length) {
+            for (let abilityArrayEntry of buffObject.abilitiesArray) {
+                buffCounter++;
+                arrayAbilityStringer += `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${abilityArrayEntry.BEKey}/#${encodeURIComponent(abilityArrayEntry.realModifierNamne)}" target="_blank">
+                    Buff ${buffCounter}&nbsp;
+                    <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                </a>`
+            }
+        }
+
+        if (abilitiesArray?.length) {
+            
+            for (let abilityArrayEntry of abilitiesArray) {
+                buffCounter++;
+                arrayAbilityStringer += `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${abilityArrayEntry.BEKey}/#${encodeURIComponent(abilityArrayEntry.realModifierNamne)}" target="_blank">
+                    Buff ${buffCounter}&nbsp;
+                    <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                </a>`
+            }
+        }
+
+
+        let isValueShow = idString && isShow != undefined;
+        let showBox = isValueShow ? isShow : true;
+
+
+
+        return buffObject ? `<div class="rotationsSectionRowHolder2Overview" style="display: ${showBox ? "flex" : "none"}" ${idString ? `id="${idString}"` : ""}>
+            ${buffObject.name ? `<div class="eidolonRowBoxHolder">
+                <div class="rightDescriptionBoxEidolons smallFont">
+                    <div class="eidolonRowNameTrigger">${buffObject.name}</div>
+                </div>
+            </div>` : ""}
+            
+            ${buffObject.desc ? `<div class="actionDetailBody">
+                <div class="actionDetailBody2Description">
+                    ${pagePopulation.cleanDescription(buffObject.params ?? [],buffObject.desc ?? "")}
+                </div>
+            </div>` : ""}
+
+            ${buffObject.params?.length ? `<div class="actionDetailBody">
+                <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${buffObject.params}]</div>
+            </div>` : ""}
+
+            
+            <div class="actionDetailBody">
+                ${buffObject.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${buffObject.BEKey}/#${encodeURIComponent(buffObject.realModifierNamne)}" target="_blank">
+                    Go to Buff&nbsp;
+                    <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                </a>` : ""}
+                ${arrayAbilityStringer}
+                
+                
+            </div>
+        
+        </div>` : "";
+    },
     setEndgameDisplay(adjustment,directEntry,floorNameNew,directIndex) {
+        if (adjustment != undefined) {firstBoxGenDCompleted = false;}
+
         if (directIndex != undefined) {
             directEntry = mocSchedule[directIndex];
 
@@ -241,7 +310,7 @@ const endgameModeDisplay = {
 
 
 
-            const startStringer = stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" ? (hasPatchTitle ? "Patch: " : "") + directEntry.patchName : directEntry.start + " - " + directEntry.end;
+            const startStringer = stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" ? (hasPatchTitle ? "Patch: " : "") + directEntry.patchName : directEntry.start?.split(" ")[0] + " - " + directEntry.end.split(" ")[0];
 
             readSelection("versionUpdateValue").innerHTML = `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(-1)">&#9664;</div>`
             + startStringer + `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(1)">&#9654;</div>`;
@@ -268,6 +337,8 @@ const endgameModeDisplay = {
             const boss1Guide = currentStage.boss1Guide;
             const boss2Guide = currentStage.boss2Guide;
 
+            const abilitiesArray = currentStage.abilitiesArray;
+
             // console.log(boss1Guide)
 
 
@@ -275,7 +346,13 @@ const endgameModeDisplay = {
             const side2 = currentStageData.stage2.stageDataArray;
 
             const descriptionToUse = directEntry.buffData?.desc && directEntry.buffData.desc != "undefined" ? pagePopulation.cleanDescription(directEntry.buffData.params,directEntry.buffData.desc) : "";
-            readSelection("mocDescriptionBox").innerHTML = descriptionToUse;
+            // readSelection("mocDescriptionBox").innerHTML = descriptionToUse;
+
+
+            readSelection("mocDescriptionBox").innerHTML = endgameModeDisplay.getBuffDisplayBox(directEntry.buffData,null,null,abilitiesArray);
+
+
+
             if (!descriptionToUse) {
                 readSelection("mocDescriptionBox").style.display = "none";
             }
@@ -303,26 +380,7 @@ const endgameModeDisplay = {
                         selector2Stringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter2 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
                         id="activityBuffDisplay2Button${selectorCounter2}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter2},2,${setLength})">${buffEntry.name}</div>`;
 
-                        list2Stringer += `<div class="rotationsSectionRowHolder2Overview" id="activityBuffDisplay2Box${selectorCounter2}" style="display: ${selectorCounter2 === setLength ? "flex" : "none"}">
-                                    <div class="eidolonRowBoxHolder">
-                                        
-                                        <div class="rightDescriptionBoxEidolons smallFont">
-                                            <div class="eidolonRowNameTrigger">${buffEntry.name}</div>
-                                        </div>
-                                    </div>
-                                    
-
-                                    <div class="actionDetailBody">
-                                        <div class="actionDetailBody2Description">
-                                            ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="actionDetailBody">
-                                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${buffEntry.params}]</div>
-                                    </div>
-                                
-                                </div>`;
+                        list2Stringer += endgameModeDisplay.getBuffDisplayBox(buffEntry,`activityBuffDisplay2Box${selectorCounter2}`,setLength === selectorCounter2 && !firstBoxGenDCompleted && setLength>1);
                     }
                     selector2Stringer += `</div>`;
                 }
@@ -340,35 +398,9 @@ const endgameModeDisplay = {
                         selector1Stringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter1 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
                         id="activityBuffDisplay1Button${selectorCounter1}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter1},1,${setLength})">${buffEntry.name}</div>`
 
-                        list1Stringer += `<div class="rotationsSectionRowHolder2Overview" id="activityBuffDisplay1Box${selectorCounter1}" style="display: ${selectorCounter1 === setLength ? "flex" : "none"}">
-                                    <div class="eidolonRowBoxHolder">
-                                        
-                                        <div class="rightDescriptionBoxEidolons smallFont">
-                                            <div class="eidolonRowNameTrigger">${buffEntry.name}</div>
-                                        </div>
-                                    </div>
 
-                                    <div class="overviewSkillDataBox">
-                                        <div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
-                                            <div class="traceToughnessTitleBoxToughnessRow">
-                                                
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    
-
-                                    <div class="actionDetailBody">
-                                        <div class="actionDetailBody2Description">
-                                            ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="actionDetailBody">
-                                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${buffEntry.params}]</div>
-                                    </div>
-                                
-                                </div>`;
+                        // realModifierNamne
+                        list1Stringer += endgameModeDisplay.getBuffDisplayBox(buffEntry,`activityBuffDisplay1Box${selectorCounter1}`,setLength === selectorCounter1 && !firstBoxGenDCompleted && setLength>1);
                     }
                     selector1Stringer += `</div>`;
                 }
@@ -387,35 +419,9 @@ const endgameModeDisplay = {
                         selector1KingStringer += `<div class="superimpositionButtonActivityButton clickable" ${selectorCounter1 === setLength ? `style="background-color: rgb(225, 225, 228); color: black;"` : ""}
                         id="activityBuffDisplay3Button${selectorCounter1}" onclick="endgameModeDisplay.setActivityBuffDisplay(${selectorCounter1},3,${setLength})">${buffEntry.name}</div>`
 
-                        king1Stringer += `<div class="rotationsSectionRowHolder2Overview" id="activityBuffDisplay3Box${selectorCounter1}" style="display: ${selectorCounter1 === setLength ? "flex" : "none"}">
-                                    <div class="eidolonRowBoxHolder">
-                                        
-                                        <div class="rightDescriptionBoxEidolons smallFont">
-                                            <div class="eidolonRowNameTrigger">${buffEntry.name}</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="overviewSkillDataBox">
-                                        <div class="traceToughnessBoxOverviewSkill" style="background-color: transparent">
-                                            <div class="traceToughnessTitleBoxToughnessRow">
-                                                
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    
-
-                                    <div class="actionDetailBody">
-                                        <div class="actionDetailBody2Description">
-                                            ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="actionDetailBody">
-                                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${buffEntry.params}]</div>
-                                    </div>
-                                
-                                </div>`;
+                        // endgameModeDisplay.getBuffDisplayBox(buffEntry)
+                        // id="activityBuffDisplay3Box${selectorCounter1}"
+                        king1Stringer += endgameModeDisplay.getBuffDisplayBox(buffEntry,`activityBuffDisplay3Box${selectorCounter1}`,setLength === selectorCounter1 && !firstBoxGenDCompleted && setLength>1);
                     }
                     selector1KingStringer += `</div>`;
                 }
@@ -425,9 +431,9 @@ const endgameModeDisplay = {
                 //     list1Stringer = `<div class="statFiltersRowHeaderSides">Player Buff Options</div>` + list1Stringer;
                 // }
 
-                readSelection("PFDescriptionBox").innerHTML = selector2Stringer + list2Stringer + selector1Stringer + list1Stringer + selector1KingStringer + king1Stringer;
+                readSelection("PFDescriptionBox").innerHTML = selector1Stringer + list1Stringer + selector2Stringer + list2Stringer + selector1KingStringer + king1Stringer;
             }
-            else if (readSelection("PFDescriptionBox")) {readSelection("PFDescriptionBox").style.display = "none";}
+            else if (readSelection("PFDescriptionBox") && adjustment == undefined) {readSelection("PFDescriptionBox").style.display = "none";}
 
 
             // <div class="superimpositionHolderbox">
@@ -480,7 +486,14 @@ const endgameModeDisplay = {
                     let buffOverride = sideEntry.buffOverride;
                     if (buffOverride && !overrideMainBuffDescUsed) {
                         // ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
-                        readSelection("mocDescriptionBox").innerHTML = pagePopulation.cleanDescription(buffOverride.params,buffOverride.desc)
+                        // readSelection("mocDescriptionBox").innerHTML = pagePopulation.cleanDescription(buffOverride.params,buffOverride.desc)
+
+
+                        readSelection("mocDescriptionBox").innerHTML = endgameModeDisplay.getBuffDisplayBox(buffOverride);
+
+
+
+
                         readSelection("mocDescriptionBox").style.display = "block";
                         overrideMainBuffDescUsed = true;
                         console.log(`Override main desc: used`)
@@ -801,8 +814,8 @@ const endgameModeDisplay = {
         
                     const skillLevel = userTriggers.levelFloors[skillSlot];
         
-                    let entryString = "";
-        
+                    let entryString = ``;
+
         
         
                     entryString += `
@@ -1117,6 +1130,10 @@ const endgameModeDisplay = {
                     
                 }
                 listStringer = `<div class="rotationsSectionRowHolder2Overview" id="activityBuffDisplay${sideNumber}GuideOverview${selectorCounter}" style="display: ${selectorCounter === 1 ? "flex" : "none"}">
+                <div class="customMenuSearchNote">
+                    PLEASE NOTE: Unique to Apocalyptic Shadow, the abilities listed here are baked INTO the enemies themselves.<br>
+                    To see the event-readers for these bonuses, simply open the enemy's page.
+                </div>
                     ${listStringer}
                 
                 </div>`;
@@ -1847,6 +1864,10 @@ const endgameModeDisplay = {
                                 ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc ?? "")}
                             </div>
                         </div>
+                        
+                
+                
+            </div>
                     `
     
                     if (currentTraceRef.params?.length) {
@@ -1864,6 +1885,14 @@ const endgameModeDisplay = {
                             </div>
                         `
                     }
+
+
+                    entryString += `<div class="actionDetailBody">
+                            ${currentTraceRef.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${currentTraceRef.BEKey}/#${encodeURIComponent(currentTraceRef.realModifierNamne)}" target="_blank">
+                                Go to Buff&nbsp;
+                                <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                            </a>` : ""}
+                        </div>`
     
                     if (currentTraceRef.extraEffects && Object.keys(currentTraceRef.extraEffects).length) {
     
@@ -1974,7 +2003,7 @@ const endgameModeDisplay = {
 
 
         
-
+        firstBoxGenDCompleted = true;
     },
 }
 

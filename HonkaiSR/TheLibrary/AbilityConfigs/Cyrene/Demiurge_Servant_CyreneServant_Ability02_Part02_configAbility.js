@@ -972,7 +972,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "value": 0
+          "set": 0
         },
         {
           "name": "Add Events/Bonuses",

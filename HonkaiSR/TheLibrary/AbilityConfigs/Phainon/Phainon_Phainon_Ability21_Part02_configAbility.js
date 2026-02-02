@@ -103,7 +103,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
       },
-      "value": 0
+      "set": 0
     },
     {
       "name": "Add Events/Bonuses",

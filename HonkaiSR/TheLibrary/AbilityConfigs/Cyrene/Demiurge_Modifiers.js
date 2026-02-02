@@ -2683,7 +2683,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "value": "-MDF_ActionDelay"
+                  "multiAdd": "-MDF_ActionDelay"
                 },
                 {
                   "name": "Define Custom Variable",

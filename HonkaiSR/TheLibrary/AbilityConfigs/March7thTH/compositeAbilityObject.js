@@ -754,7 +754,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "advanceType": "Set",
-                      "value": "(0 - 0.25)"
+                      "multiAdd": "(0 - 0.25)"
                     }
                   ]
                 }
@@ -4545,7 +4545,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "value": 0
+                  "set": 0
                 },
                 {
                   "name": "Add Events/Bonuses",

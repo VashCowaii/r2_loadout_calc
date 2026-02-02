@@ -364,6 +364,10 @@ let allowedCharacterList = [
     "trimName": "GlobalAbilities"
   },
   {
+    "fullName": "Global Abilities: Enemies",
+    "trimName": "GlobalAbilitiesE"
+  },
+  {
     "fullName": "Global Target Names",
     "trimName": "GlobalTargetN"
   },

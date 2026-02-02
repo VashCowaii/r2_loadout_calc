@@ -184,7 +184,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Advance",
-                  "value": "-0.25"
+                  "multiAdd": "-0.25"
                 }
               ]
             }

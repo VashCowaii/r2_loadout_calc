@@ -2310,7 +2310,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.15"
+                      "multiAdd": "-0.15"
                     }
                   ]
                 }
@@ -2366,7 +2366,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.15"
+                      "multiAdd": "-0.15"
                     }
                   ]
                 }

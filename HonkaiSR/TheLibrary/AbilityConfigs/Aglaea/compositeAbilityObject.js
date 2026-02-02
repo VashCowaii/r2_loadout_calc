@@ -891,7 +891,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "value": 0
+          "set": 0
         },
         {
           "name": "Update Energy",
@@ -1596,7 +1596,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "value": 0
+              "set": 0
             },
             {
               "name": "Assign Advance/Delay to Current Ability Use",
@@ -4026,7 +4026,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "value": "(0 - 1)"
+                  "multiAdd": "(0 - 1)"
                 }
               ]
             }
@@ -4411,11 +4411,11 @@ const compositeAbilityObject = {
                             "value1": "_KeepSpeedLayer",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (_PointB3Layer) || RETURN",
-                              "displayLines": "_PointB3Layer",
+                              "operator": "Variables[0] (1) || RETURN",
+                              "displayLines": "1",
                               "constants": [],
                               "variables": [
-                                "_PointB3Layer"
+                                1
                               ]
                             }
                           },
@@ -4436,11 +4436,11 @@ const compositeAbilityObject = {
                                 ]
                               },
                               "addStacksPerTrigger": {
-                                "operator": "Variables[0] (_PointB3Layer) || RETURN",
-                                "displayLines": "_PointB3Layer",
+                                "operator": "Variables[0] (1) || RETURN",
+                                "displayLines": "1",
                                 "constants": [],
                                 "variables": [
-                                  "_PointB3Layer"
+                                  1
                                 ]
                               }
                             }

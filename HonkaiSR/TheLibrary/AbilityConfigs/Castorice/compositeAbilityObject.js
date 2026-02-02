@@ -266,7 +266,7 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "advanceType": "Advance",
-          "value": -1
+          "multiAdd": -1
         },
         {
           "name": "IF",
@@ -1829,7 +1829,7 @@ const compositeAbilityObject = {
             "target": "{{Caster's Memosprite}}"
           },
           "advanceType": "Advance",
-          "value": -1
+          "multiAdd": -1
         },
         {
           "name": "IF",

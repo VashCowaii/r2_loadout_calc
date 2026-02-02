@@ -500,7 +500,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "advanceType": "Set",
-          "value": "MDF_BreakAttackToDelay"
+          "multiAdd": "MDF_BreakAttackToDelay"
         },
         {
           "name": "Define Custom Variable",

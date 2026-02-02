@@ -1573,7 +1573,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Advance",
-                      "value": "-0.2"
+                      "multiAdd": "-0.2"
                     }
                   ]
                 }
@@ -1670,7 +1670,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Advance",
-                  "value": "-0.2"
+                  "multiAdd": "-0.2"
                 },
                 "Modifier Deletes Itself"
               ]

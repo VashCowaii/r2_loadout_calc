@@ -862,7 +862,7 @@ const compositeAbilityObject = {
                 "target": "{{Ability Target(ST)}}"
               },
               "advanceType": "Advance",
-              "value": "-0.5"
+              "multiAdd": "-0.5"
             }
           ]
         }
@@ -1546,7 +1546,7 @@ const compositeAbilityObject = {
             "target": "{{Ability Target(ST)}}"
           },
           "advanceType": "Advance",
-          "value": "-0.5"
+          "multiAdd": "-0.5"
         },
         {
           "name": "Update Energy",

@@ -226,7 +226,7 @@ const configAbility = {
         "target": "{{Caster's Memosprite}}"
       },
       "advanceType": "Advance",
-      "value": -1
+      "multiAdd": -1
     },
     {
       "name": "IF",

@@ -2090,7 +2090,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "advanceType": "Advance",
-              "value": "-15"
+              "multiAdd": "-15"
             },
             "Modifier Deletes Itself"
           ]

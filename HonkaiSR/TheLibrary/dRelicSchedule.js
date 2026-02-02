@@ -15,6 +15,12 @@ let mocSchedule = [
       "buffType": "",
       "params": [
         0.3
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104314",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -202,6 +208,12 @@ let mocSchedule = [
         0.3,
         0.06,
         10
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104313",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -446,6 +458,12 @@ let mocSchedule = [
       "params": [
         0.3,
         10
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104312",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -720,6 +738,12 @@ let mocSchedule = [
       "buffType": "",
       "params": [
         0.6
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104311",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -937,6 +961,12 @@ let mocSchedule = [
       "params": [
         0.5,
         0.5
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104310",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -1152,6 +1182,12 @@ let mocSchedule = [
       "params": [
         0.2,
         5
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104309",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -1398,6 +1434,12 @@ let mocSchedule = [
       "params": [
         0.5,
         0.15
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104308",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -1644,6 +1686,12 @@ let mocSchedule = [
       "buffType": "",
       "params": [
         3
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104307",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -1887,6 +1935,12 @@ let mocSchedule = [
       "buffType": "",
       "params": [
         0.75
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104306",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -2101,6 +2155,12 @@ let mocSchedule = [
       "buffType": "",
       "params": [
         0.75
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104305",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -2321,6 +2381,12 @@ let mocSchedule = [
       "params": [
         0.75,
         0.75
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104304",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -2540,6 +2606,12 @@ let mocSchedule = [
       "params": [
         0.3,
         0.75
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104303",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -2762,6 +2834,12 @@ let mocSchedule = [
       "buffType": "",
       "params": [
         0.75
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104302",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {
@@ -2976,6 +3054,12 @@ let mocSchedule = [
       "buffType": "",
       "params": [
         0.75
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104301",
+          "BEKey": 20085023
+        }
       ]
     },
     "floorData": {

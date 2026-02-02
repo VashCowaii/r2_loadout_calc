@@ -39,7 +39,7 @@ const configAbility = {
                 "target": "{{Caster}}.[[getSummoner]]"
               },
               "advanceType": "Set",
-              "value": "(0 - 0.25)"
+              "multiAdd": "(0 - 0.25)"
             }
           ]
         }

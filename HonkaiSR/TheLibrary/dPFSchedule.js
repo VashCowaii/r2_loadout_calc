@@ -4,11 +4,12 @@ let mocSchedule = [
     "id": 2021,
     "image": "activityBG/ChallengeThemeBanner_2010.png",
     "realName": "undefined",
-    "start": "2026-02-16",
-    "end": "2026-04-16",
+    "start": "2026-02-16 04:00:00",
+    "end": "2026-04-16 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031200",
       "realModifierNamne": "FantasticStory_BaseAbility_2000",
+      "BEKey": -2108121442,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -3649,6 +3650,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031346",
         "realModifierNamne": "FantasticStory_PlusAbility_2017",
+        "BEKey": -2108121442,
         "name": "Solo Symphony",
         "desc": "During \"Surging Grit,\" after an ally uses a Skill to attack enemy targets, they deal additional True DMG equal to #1[i]% of the original damage to each enemy target hit.",
         "battleDesc": null,
@@ -3660,6 +3662,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031352",
         "realModifierNamne": "FantasticStory_PlusAbility_2018",
+        "BEKey": -2108121442,
         "name": "Ravings",
         "desc": "Upon entering \"Surging Grit,\" Breaks all enemy targets' Weakness and recovers #1[i] Skill Point(s). During \"Surging Grit,\" Break DMG dealt to enemy targets increases by #2[i]%.",
         "battleDesc": null,
@@ -3673,6 +3676,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031344",
         "realModifierNamne": "FantasticStory_PlusAbility_2015",
+        "BEKey": -2108121442,
         "name": "Ballad",
         "desc": "During \"Surging Grit,\" memosprite's DMG increases by #1[i]%, and when memosprite disappears, memomaster's action advances by #2[i]%.",
         "battleDesc": null,
@@ -3688,6 +3692,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031202",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BaseAddOn",
+        "BEKey": -2108121442,
         "name": "Skill Attack",
         "desc": "After allies use Skill to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -3699,6 +3704,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031203",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BeforeFever",
+        "BEKey": -2108121442,
         "name": "Concordant Truce",
         "desc": "At the start of battle, after an ally uses their Skill to attack an enemy target, deals a set amount of DMG to all attacked enemy targets.",
         "battleDesc": null,
@@ -3710,6 +3716,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031204",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_EnterFever",
+        "BEKey": -2108121442,
         "name": "Surging Grit",
         "desc": "Upon entering Surging Grit, advances all allies actions by #1[i]% and increases DMG received by enemy targets during this period by #2[i]%. Additionally, after an ally uses their Skill to attack an enemy target, deals an additional set amount of DMG to all attacked enemy targets and adjacent targets.",
         "battleDesc": null,
@@ -3726,11 +3733,12 @@ let mocSchedule = [
     "id": 2020,
     "image": "activityBG/ChallengeThemeBanner_2010.png",
     "realName": "Epic Collection",
-    "start": "2026-01-05",
-    "end": "2026-02-16",
+    "start": "2026-01-05 04:00:00",
+    "end": "2026-02-16 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031200",
       "realModifierNamne": "FantasticStory_BaseAbility_2000",
+      "BEKey": -2108121442,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -7371,6 +7379,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031346",
         "realModifierNamne": "FantasticStory_PlusAbility_2017",
+        "BEKey": -2108121442,
         "name": "Solo Symphony",
         "desc": "During \"Surging Grit,\" after an ally uses a Skill to attack enemy targets, they deal additional True DMG equal to #1[i]% of the original damage to each enemy target hit.",
         "battleDesc": null,
@@ -7382,6 +7391,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031352",
         "realModifierNamne": "FantasticStory_PlusAbility_2018",
+        "BEKey": -2108121442,
         "name": "Ravings",
         "desc": "Upon entering \"Surging Grit,\" Breaks all enemy targets' Weakness and recovers #1[i] Skill Point(s). During \"Surging Grit,\" Break DMG dealt to enemy targets increases by #2[i]%.",
         "battleDesc": null,
@@ -7395,6 +7405,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031344",
         "realModifierNamne": "FantasticStory_PlusAbility_2015",
+        "BEKey": -2108121442,
         "name": "Ballad",
         "desc": "During \"Surging Grit,\" memosprite's DMG increases by #1[i]%, and when memosprite disappears, memomaster's action advances by #2[i]%.",
         "battleDesc": null,
@@ -7410,6 +7421,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031202",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BaseAddOn",
+        "BEKey": -2108121442,
         "name": "Skill Attack",
         "desc": "After allies use Skill to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -7421,6 +7433,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031203",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BeforeFever",
+        "BEKey": -2108121442,
         "name": "Concordant Truce",
         "desc": "At the start of battle, after an ally uses their Skill to attack an enemy target, deals a set amount of DMG to all attacked enemy targets.",
         "battleDesc": null,
@@ -7432,6 +7445,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031204",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_EnterFever",
+        "BEKey": -2108121442,
         "name": "Surging Grit",
         "desc": "Upon entering Surging Grit, advances all allies actions by #1[i]% and increases DMG received by enemy targets during this period by #2[i]%. Additionally, after an ally uses their Skill to attack an enemy target, deals an additional set amount of DMG to all attacked enemy targets and adjacent targets.",
         "battleDesc": null,
@@ -7448,11 +7462,12 @@ let mocSchedule = [
     "id": 2019,
     "image": "activityBG/ChallengeThemeBanner_2016.png",
     "realName": "Syntax Rule",
-    "start": "2025-11-24",
-    "end": "2026-01-05",
+    "start": "2025-11-24 04:00:00",
+    "end": "2026-01-05 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031205",
       "realModifierNamne": "FantasticStory_BaseAbility_2050",
+      "BEKey": -993122841,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -11114,6 +11129,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031340",
         "realModifierNamne": "FantasticStory_PlusAbility_2161",
+        "BEKey": 1118876173,
         "name": "Exposition",
         "desc": "During the \"Surging Grit\" period, the ally targets' DoT dealt ignores #1[i]% of the target's All-Type RES. When the enemy target receives DoT, increases all allies DoT dealt by #2[i]%. Up to a max of #3[i] stack(s). Lasts until \"Surging Grit\" ends.",
         "battleDesc": null,
@@ -11127,6 +11143,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031350",
         "realModifierNamne": "FantasticStory_PlusAbility_2164",
+        "BEKey": 1118876173,
         "name": "Torn Fabric",
         "desc": "During \"Surging Grit,\" each stack of \"Echo Enigma\" increases Weakness Break Efficiency by #1[i]% when ally targets deal damage.",
         "battleDesc": null,
@@ -11139,6 +11156,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031351",
         "realModifierNamne": "FantasticStory_PlusAbility_2165",
+        "BEKey": 1118876173,
         "name": "Cinnabar Inscription",
         "desc": "Every stack of \"Echo Enigma\" increases enemy target's DMG received by #1[i]%. During \"Surging Grit,\" enemy targets gain #2[i] stack(s) of \"Echo Enigma\" after a memosprite attacks them.",
         "battleDesc": null,
@@ -11154,6 +11172,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031217",
         "realModifierNamne": "FantasticStory_BaseAbility_2160_BaseAddOn",
+        "BEKey": 1118876173,
         "name": "Triggers DoT",
         "desc": "Every time a DoT is received by an enemy target, additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -11165,6 +11184,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031218",
         "realModifierNamne": "FantasticStory_BaseAbility_2160_BeforeFever",
+        "BEKey": 1118876173,
         "name": "Concordant Truce",
         "desc": "When an enemy target enters battle, they are inflicted with #1[i] stack(s) of \"Echo Enigma,\" which deals a special kind of Wind Shear, and they suffer #2[i] stack(s) of \"Echo Enigma\" after acting, receiving Wind DoT at the start of each turn. Goes up to #3[i] stack(s) at max for #4[i] turn(s).",
         "battleDesc": null,
@@ -11180,6 +11200,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031219",
         "realModifierNamne": "FantasticStory_BaseAbility_2160_EnterFever",
+        "BEKey": 1118876173,
         "name": "Surging Grit",
         "desc": "Entering the \"Surging Grit\" state causes all enemies to suffer #5[i] stack(s) of the special Wind Shear \"Echo Enigma,\" and causes all currently suffered DoT to immediately produce DMG equal to #1[i]% of the original DMG. During the \"Surging Grit\" period, increases enemy targets' DMG received by #2[i]%, reduces DMG dealt by #3[i]%, and increases SPD by #4[i]%.",
         "battleDesc": null,
@@ -11198,11 +11219,12 @@ let mocSchedule = [
     "id": 2018,
     "image": "activityBG/ChallengeThemeBanner_2012.png",
     "realName": "Iambic Pentameter",
-    "start": "2025-10-13",
-    "end": "2025-11-24",
+    "start": "2025-10-13 04:00:00",
+    "end": "2025-11-24 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031205",
       "realModifierNamne": "FantasticStory_BaseAbility_2050",
+      "BEKey": -993122841,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -14859,6 +14881,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031347",
         "realModifierNamne": "FantasticStory_PlusAbility_2066",
+        "BEKey": -993122841,
         "name": "Reminiscence",
         "desc": "During \"Surging Grit\", when an ally target uses their Ultimate, increases all allies DMG dealt by #1[i]%, stacking up to #2[i] times. This effect lasts until \"Surging Grit\" ends.",
         "battleDesc": null,
@@ -14871,6 +14894,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031348",
         "realModifierNamne": "FantasticStory_PlusAbility_2067",
+        "BEKey": -993122841,
         "name": "Memory",
         "desc": "Upon entering \"Surging Grit,\" immediately recover #1[i] Skill Point(s). During \"Surging Grit,\" enemy targets take #2[i]% more DoT.",
         "battleDesc": null,
@@ -14884,6 +14908,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031349",
         "realModifierNamne": "FantasticStory_PlusAbility_2068",
+        "BEKey": -993122841,
         "name": "Epiphany",
         "desc": "During \"Surging Grit\", increases all allies SPD by #1[i]%, and after using a Skill, apply #2[i] stack(s) of \"Resound\" to all allies.",
         "battleDesc": null,
@@ -14899,6 +14924,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031207",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_BaseAddOn",
+        "BEKey": -993122841,
         "name": "Ultimate Attack",
         "desc": "After allies use Ultimate to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -14910,6 +14936,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031208",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_BeforeFever",
+        "BEKey": -993122841,
         "name": "Concordant Truce",
         "desc": "After an enemy target is defeated by any unit, all allies gain 1 stack of \"Resound.\"",
         "battleDesc": null,
@@ -14919,6 +14946,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031209",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_EnterFever",
+        "BEKey": -993122841,
         "name": "Surging Grit",
         "desc": "When entering Surging Grit, consume all \"Resound.\" Each stack of \"Resound\" deals 1 instance of a set amount of DMG to a random enemy target. During Surging Grit, increases enemy targets' DMG taken by #3[i]%, and after they are defeated by any unit, all allies additionally gain 1 stack of \"Resound.\" When \"Resound\" stacks up to #1[i] or higher, consumes all \"Resound\" stacks and deals 1 instance of a set amount of DMG to a random enemy target per stack.",
         "battleDesc": null,
@@ -14935,11 +14963,12 @@ let mocSchedule = [
     "id": 2017,
     "image": "activityBG/ChallengeThemeBanner_2013.png",
     "realName": "Subjective Narrative",
-    "start": "2025-09-01",
-    "end": "2025-10-13",
+    "start": "2025-09-01 04:00:00",
+    "end": "2025-10-13 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031200",
       "realModifierNamne": "FantasticStory_BaseAbility_2000",
+      "BEKey": -2108121442,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -18612,6 +18641,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031344",
         "realModifierNamne": "FantasticStory_PlusAbility_2015",
+        "BEKey": -2108121442,
         "name": "Ballad",
         "desc": "During \"Surging Grit,\" memosprite's DMG increases by #1[i]%, and when memosprite disappears, memomaster's action advances by #2[i]%.",
         "battleDesc": null,
@@ -18625,6 +18655,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031345",
         "realModifierNamne": "FantasticStory_PlusAbility_2016",
+        "BEKey": -2108121442,
         "name": "Euphony",
         "desc": "Upon entering \"Surging Grit,\" immediately recover #1[i] Skill Point(s). During \"Surging Grit,\" enemy targets take #2[i]% more DoT.",
         "battleDesc": null,
@@ -18638,6 +18669,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031346",
         "realModifierNamne": "FantasticStory_PlusAbility_2017",
+        "BEKey": -2108121442,
         "name": "Solo Symphony",
         "desc": "During \"Surging Grit,\" after an ally uses a Skill to attack enemy targets, they deal additional True DMG equal to #1[i]% of the original damage to each enemy target hit.",
         "battleDesc": null,
@@ -18651,6 +18683,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031202",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BaseAddOn",
+        "BEKey": -2108121442,
         "name": "Skill Attack",
         "desc": "After allies use Skill to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -18662,6 +18695,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031203",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BeforeFever",
+        "BEKey": -2108121442,
         "name": "Concordant Truce",
         "desc": "At the start of battle, after an ally uses their Skill to attack an enemy target, deals a set amount of DMG to all attacked enemy targets.",
         "battleDesc": null,
@@ -18673,6 +18707,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031204",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_EnterFever",
+        "BEKey": -2108121442,
         "name": "Surging Grit",
         "desc": "Upon entering Surging Grit, advances all allies actions by #1[i]% and increases DMG received by enemy targets during this period by #2[i]%. Additionally, after an ally uses their Skill to attack an enemy target, deals an additional set amount of DMG to all attacked enemy targets and adjacent targets.",
         "battleDesc": null,
@@ -18689,11 +18724,12 @@ let mocSchedule = [
     "id": 2016,
     "image": "activityBG/ChallengeThemeBanner_2015.png",
     "realName": "Three Act Structure",
-    "start": "2025-07-21",
-    "end": "2025-09-01",
+    "start": "2025-07-21 04:00:00",
+    "end": "2025-09-01 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031215",
       "realModifierNamne": "FantasticStory_BaseAbility_2150",
+      "BEKey": 1118876173,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -22348,6 +22384,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031340",
         "realModifierNamne": "FantasticStory_PlusAbility_2161",
+        "BEKey": 1118876173,
         "name": "Exposition",
         "desc": "During the \"Surging Grit\" period, the ally targets' DoT dealt ignores #1[i]% of the target's All-Type RES. When the enemy target receives DoT, increases all allies DoT dealt by #2[i]%. Up to a max of #3[i] stack(s). Lasts until \"Surging Grit\" ends.",
         "battleDesc": null,
@@ -22361,6 +22398,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031341",
         "realModifierNamne": "FantasticStory_PlusAbility_2162",
+        "BEKey": 1118876173,
         "name": "Intertextuality",
         "desc": "During Surging Grit, Skill DMG dealt by ally targets increases by #1[i]%. When attacking targets with the special Wind Shear \"Echo Enigma,\" each stack of \"Echo Enigma\" additionally increases Skill DMG by #2[i]%.",
         "battleDesc": null,
@@ -22374,6 +22412,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031342",
         "realModifierNamne": "FantasticStory_PlusAbility_2163",
+        "BEKey": 1118876173,
         "name": "Misplacement",
         "desc": "Every stack of \"Echo Enigma\" increases enemy target's DMG received by #1[i]%. During the Surging Grit period, when enemy targets enter combat, and after they take action, additionally adds #2[i] stack(s) of the special Wind Shear \"Echo Enigma.\"",
         "battleDesc": null,
@@ -22389,6 +22428,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031217",
         "realModifierNamne": "FantasticStory_BaseAbility_2160_BaseAddOn",
+        "BEKey": 1118876173,
         "name": "Triggers DoT",
         "desc": "Every time a DoT is received by an enemy target, additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -22400,6 +22440,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031218",
         "realModifierNamne": "FantasticStory_BaseAbility_2160_BeforeFever",
+        "BEKey": 1118876173,
         "name": "Concordant Truce",
         "desc": "When an enemy target enters battle, they are inflicted with #1[i] stack(s) of \"Echo Enigma,\" which deals a special kind of Wind Shear, and they suffer #2[i] stack(s) of \"Echo Enigma\" after acting, receiving Wind DoT at the start of each turn. Goes up to #3[i] stack(s) at max for #4[i] turn(s).",
         "battleDesc": null,
@@ -22415,6 +22456,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031219",
         "realModifierNamne": "FantasticStory_BaseAbility_2160_EnterFever",
+        "BEKey": 1118876173,
         "name": "Surging Grit",
         "desc": "Entering the \"Surging Grit\" state causes all enemies to suffer #5[i] stack(s) of the special Wind Shear \"Echo Enigma,\" and causes all currently suffered DoT to immediately produce DMG equal to #1[i]% of the original DMG. During the \"Surging Grit\" period, increases enemy targets' DMG received by #2[i]%, reduces DMG dealt by #3[i]%, and increases SPD by #4[i]%.",
         "battleDesc": null,
@@ -22433,11 +22475,12 @@ let mocSchedule = [
     "id": 2015,
     "image": "activityBG/ChallengeThemeBanner_2014.png",
     "realName": "Narrative Analysis",
-    "start": "2025-06-09",
-    "end": "2025-07-21",
+    "start": "2025-06-09 04:00:00",
+    "end": "2025-07-21 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031205",
       "realModifierNamne": "FantasticStory_BaseAbility_2050",
+      "BEKey": -993122841,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -26092,6 +26135,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031333",
         "realModifierNamne": "FantasticStory_PlusAbility_2062",
+        "BEKey": -993122841,
         "name": "Universality",
         "desc": "During Surging Grit, all allies' SPD increases by #1[i]%. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
         "battleDesc": null,
@@ -26104,6 +26148,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031343",
         "realModifierNamne": "FantasticStory_PlusAbility_2065",
+        "BEKey": -993122841,
         "name": "Paradox",
         "desc": "All allies can also reduce Toughness when attacking enemies that don't have the corresponding Weakness Type, with the effect equivalent to #1[i]% of the original Toughness Reduction value. This cannot stack with other Toughness Reduction effects that also ignore Weakness Type. During Surging Grit, the Break DMG received by enemy targets increases by #2[i]%.",
         "battleDesc": null,
@@ -26117,6 +26162,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031339",
         "realModifierNamne": "FantasticStory_PlusAbility_2064",
+        "BEKey": -993122841,
         "name": "Divine Score",
         "desc": "After consuming \"Resound\" to deal DMG, increases all allies' DMG dealt by #1[i]% for #2[i] turn(s).",
         "battleDesc": null,
@@ -26131,6 +26177,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031207",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_BaseAddOn",
+        "BEKey": -993122841,
         "name": "Ultimate Attack",
         "desc": "After allies use Ultimate to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -26142,6 +26189,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031208",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_BeforeFever",
+        "BEKey": -993122841,
         "name": "Concordant Truce",
         "desc": "After an enemy target is defeated by any unit, all allies gain 1 stack of \"Resound.\"",
         "battleDesc": null,
@@ -26151,6 +26199,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031209",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_EnterFever",
+        "BEKey": -993122841,
         "name": "Surging Grit",
         "desc": "When entering Surging Grit, consume all \"Resound.\" Each stack of \"Resound\" deals 1 instance of a set amount of DMG to a random enemy target. During Surging Grit, increases enemy targets' DMG taken by #3[i]%, and after they are defeated by any unit, all allies additionally gain 1 stack of \"Resound.\" When \"Resound\" stacks up to #1[i] or higher, consumes all \"Resound\" stacks and deals 1 instance of a set amount of DMG to a random enemy target per stack.",
         "battleDesc": null,
@@ -26167,11 +26216,12 @@ let mocSchedule = [
     "id": 2014,
     "image": "activityBG/ChallengeThemeBanner_2013.png",
     "realName": "Structural Rules",
-    "start": "2025-04-28",
-    "end": "2025-06-09",
+    "start": "2025-04-28 04:00:00",
+    "end": "2025-06-09 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031200",
       "realModifierNamne": "FantasticStory_BaseAbility_2000",
+      "BEKey": -2108121442,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -29840,6 +29890,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031327",
         "realModifierNamne": "FantasticStory_PlusAbility_2011",
+        "BEKey": -2108121442,
         "name": "Empty Air",
         "desc": "During Surging Grit, all ally Skills do not consume Skill Points. After characters use Skills or Ultimate, they gain 1 stack of \"Feverish Surge\" for every enemy target hit. These stacks will increase said characters' Skill and Ultimate DMG by #1[i]% and SPD by #2[i]% to a max of #3[i] stack(s).",
         "battleDesc": null,
@@ -29854,6 +29905,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031338",
         "realModifierNamne": "FantasticStory_PlusAbility_2014",
+        "BEKey": -2108121442,
         "name": "Hierophany",
         "desc": "During Surging Grit, when any ally uses their Skill, consumes HP equal to #1[i]% of their Max HP. Then, after using Skill, restores HP equal to #2[i]% of their Max HP.",
         "battleDesc": null,
@@ -29867,6 +29919,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031329",
         "realModifierNamne": "FantasticStory_PlusAbility_2013",
+        "BEKey": -2108121442,
         "name": "Hollow Hope",
         "desc": "During Surging Grit, increases Break DMG received by enemy targets by #1[i]%. When characters Break enemy targets' Weaknesses, advances the character's action by #2[i]%.",
         "battleDesc": null,
@@ -29882,6 +29935,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031202",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BaseAddOn",
+        "BEKey": -2108121442,
         "name": "Skill Attack",
         "desc": "After allies use Skill to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -29893,6 +29947,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031203",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BeforeFever",
+        "BEKey": -2108121442,
         "name": "Concordant Truce",
         "desc": "At the start of battle, after an ally uses their Skill to attack an enemy target, deals a set amount of DMG to all attacked enemy targets.",
         "battleDesc": null,
@@ -29904,6 +29959,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031204",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_EnterFever",
+        "BEKey": -2108121442,
         "name": "Surging Grit",
         "desc": "Upon entering Surging Grit, advances all allies actions by #1[i]% and increases DMG received by enemy targets during this period by #2[i]%. Additionally, after an ally uses their Skill to attack an enemy target, deals an additional set amount of DMG to all attacked enemy targets and adjacent targets.",
         "battleDesc": null,
@@ -29920,11 +29976,12 @@ let mocSchedule = [
     "id": 2013,
     "image": "activityBG/ChallengeThemeBanner_2012.png",
     "realName": "Self-Fulfilling Prophecy",
-    "start": "2025-03-17",
-    "end": "2025-04-28",
+    "start": "2025-03-17 04:00:00",
+    "end": "2025-04-28 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031210",
       "realModifierNamne": "FantasticStory_BaseAbility_2100",
+      "BEKey": -825953332,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -33585,6 +33642,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031335",
         "realModifierNamne": "FantasticStory_PlusAbility_2111",
+        "BEKey": -825953332,
         "name": "Evince",
         "desc": "During Surging Grit, after allies use their Skill or launch a Follow-Up ATK against enemy targets with \"Shatter,\" \"Shatter\" can be immediately triggered.",
         "battleDesc": null,
@@ -33596,6 +33654,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031336",
         "realModifierNamne": "FantasticStory_PlusAbility_2112",
+        "BEKey": -825953332,
         "name": "Gnosis",
         "desc": "During Surging Grit, increases Break DMG taken by enemy targets by #3[i]%. When targets in the \"Shatter\" state are defeated by any unit, deals #1[i] Toughness Reduction regardless of Weakness Type to adjacent enemy targets.",
         "battleDesc": null,
@@ -33609,6 +33668,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031337",
         "realModifierNamne": "FantasticStory_PlusAbility_2113",
+        "BEKey": -825953332,
         "name": "Sanity",
         "desc": "During Surging Grit, when any character uses their Skill, consumes HP equal to #1[i]% of their current HP. Additionally, after using Skill, restores HP equal to #2[i]% of their Max HP.",
         "battleDesc": null,
@@ -33624,6 +33684,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031212",
         "realModifierNamne": "FantasticStory_BaseAbility_2110_BaseAddOn",
+        "BEKey": -825953332,
         "name": "Ultimate/Basic ATK",
         "desc": "After an ally uses Basic ATK or Ultimate to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -33635,6 +33696,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031213",
         "realModifierNamne": "FantasticStory_BaseAbility_2110_BeforeFever",
+        "BEKey": -825953332,
         "name": "Concordant Truce",
         "desc": "When allies use their Basic ATK or Ultimate to attack any enemy targets, inflicts the target with \"Shatter,\" stacking up to #1[i] time(s). At the start of the target's turn or when the target is defeated by any unit, deals True DMG to the target based on the number of \"Shatter\" stacks.",
         "battleDesc": null,
@@ -33647,6 +33709,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031214",
         "realModifierNamne": "FantasticStory_BaseAbility_2110_EnterFever",
+        "BEKey": -825953332,
         "name": "Surging Grit",
         "desc": "Upon entering Surging Grit, immediately regenerates #1[i]% Energy for all allies. The Energy regenerated by this effect can exceed the target's Max Energy. Increases DMG taken by enemy targets during this period by #2[i]%. Additionally, triggering \"Shatter\" will deal True DMG to all attacked enemy targets and adjacent targets.",
         "battleDesc": null,
@@ -33663,11 +33726,12 @@ let mocSchedule = [
     "id": 2012,
     "image": "activityBG/ChallengeThemeBanner_2011.png",
     "realName": "Clichéd Sayings",
-    "start": "2025-02-03",
-    "end": "2025-03-17",
+    "start": "2025-02-03 04:00:00",
+    "end": "2025-03-17 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031205",
       "realModifierNamne": "FantasticStory_BaseAbility_2050",
+      "BEKey": -993122841,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -37325,6 +37389,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031333",
         "realModifierNamne": "FantasticStory_PlusAbility_2062",
+        "BEKey": -993122841,
         "name": "Universality",
         "desc": "During Surging Grit, all allies' SPD increases by #1[i]%. When all \"Resound\" is consumed in an attack, recover 1 Skill Point.",
         "battleDesc": null,
@@ -37337,6 +37402,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031332",
         "realModifierNamne": "FantasticStory_PlusAbility_2061",
+        "BEKey": -993122841,
         "name": "Radiance",
         "desc": "During Surging Grit, after an enemy target is defeated by any unit, there is a #1[i]% chance for all allies to gain 1 stack of \"Resound.\"",
         "battleDesc": null,
@@ -37349,6 +37415,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031334",
         "realModifierNamne": "FantasticStory_PlusAbility_2063",
+        "BEKey": -993122841,
         "name": "Potential",
         "desc": "When entering Surging Grit, activates the Ultimate of the first character on the team lineup and increases their DMG dealt by Ultimate during Surging Grit by #1[i]%.",
         "battleDesc": null,
@@ -37362,6 +37429,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031207",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_BaseAddOn",
+        "BEKey": -993122841,
         "name": "Ultimate Attack",
         "desc": "After allies use Ultimate to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -37373,6 +37441,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031208",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_BeforeFever",
+        "BEKey": -993122841,
         "name": "Concordant Truce",
         "desc": "After an enemy target is defeated by any unit, all allies gain 1 stack of \"Resound.\"",
         "battleDesc": null,
@@ -37382,6 +37451,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031209",
         "realModifierNamne": "FantasticStory_BaseAbility_2060_EnterFever",
+        "BEKey": -993122841,
         "name": "Surging Grit",
         "desc": "When entering Surging Grit, consume all \"Resound.\" Each stack of \"Resound\" deals 1 instance of a set amount of DMG to a random enemy target. During Surging Grit, increases enemy targets' DMG taken by #3[i]%, and after they are defeated by any unit, all allies additionally gain 1 stack of \"Resound.\" When \"Resound\" stacks up to #1[i] or higher, consumes all \"Resound\" stacks and deals 1 instance of a set amount of DMG to a random enemy target per stack.",
         "battleDesc": null,
@@ -37398,11 +37468,12 @@ let mocSchedule = [
     "id": 2011,
     "image": "activityBG/ChallengeThemeBanner_2010.png",
     "realName": "Technicality Entrapment",
-    "start": "2024-12-23",
-    "end": "2025-02-03",
+    "start": "2024-12-23 04:00:00",
+    "end": "2025-02-03 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031200",
       "realModifierNamne": "FantasticStory_BaseAbility_2000",
+      "BEKey": -2108121442,
       "name": "undefined",
       "desc": "undefined",
       "battleDesc": null,
@@ -41060,6 +41131,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031327",
         "realModifierNamne": "FantasticStory_PlusAbility_2011",
+        "BEKey": -2108121442,
         "name": "Empty Air",
         "desc": "During Surging Grit, all ally Skills do not consume Skill Points. After characters use Skills or Ultimate, they gain 1 stack of \"Feverish Surge\" for every enemy target hit. These stacks will increase said characters' Skill and Ultimate DMG by #1[i]% and SPD by #2[i]% to a max of #3[i] stack(s).",
         "battleDesc": null,
@@ -41074,6 +41146,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031328",
         "realModifierNamne": "FantasticStory_PlusAbility_2012",
+        "BEKey": -2108121442,
         "name": "False Promises",
         "desc": "During Surging Grit, increases all allies' Follow-Up ATK DMG by #1[i]%. After triggering a Follow-Up ATK, deals a set amount of DMG to every attacked enemy target and adjacent target.",
         "battleDesc": null,
@@ -41087,6 +41160,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031329",
         "realModifierNamne": "FantasticStory_PlusAbility_2013",
+        "BEKey": -2108121442,
         "name": "Hollow Hope",
         "desc": "During Surging Grit, increases Break DMG received by enemy targets by #1[i]%. When characters Break enemy targets' Weaknesses, advances the character's action by #2[i]%.",
         "battleDesc": null,
@@ -41102,6 +41176,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031202",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BaseAddOn",
+        "BEKey": -2108121442,
         "name": "Skill Attack",
         "desc": "After allies use Skill to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -41113,6 +41188,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031203",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_BeforeFever",
+        "BEKey": -2108121442,
         "name": "Concordant Truce",
         "desc": "At the start of battle, after an ally uses their Skill to attack an enemy target, deals a set amount of DMG to all attacked enemy targets.",
         "battleDesc": null,
@@ -41124,6 +41200,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031204",
         "realModifierNamne": "FantasticStory_BaseAbility_2010_EnterFever",
+        "BEKey": -2108121442,
         "name": "Surging Grit",
         "desc": "Upon entering Surging Grit, advances all allies actions by #1[i]% and increases DMG received by enemy targets during this period by #2[i]%. Additionally, after an ally uses their Skill to attack an enemy target, deals an additional set amount of DMG to all attacked enemy targets and adjacent targets.",
         "battleDesc": null,
@@ -41140,11 +41217,12 @@ let mocSchedule = [
     "id": 2010,
     "image": "activityBG/ChallengeThemeBanner_2009.png",
     "realName": "Rumor Mill",
-    "start": "2024-11-11",
-    "end": "2024-12-23",
+    "start": "2024-11-11 04:00:00",
+    "end": "2024-12-23 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031002",
       "realModifierNamne": "FantasticStory_BaseAbility_0020",
+      "BEKey": -1954781239,
       "name": "Sharp Words, Blunt Knife",
       "desc": "Increases DoT taken by enemy targets by #1[i]%. Enemy targets that receive DoT have their DMG dealt reduced by #2[i]%. After they are attacked, their action is Advanced Forward by #3[i]%.",
       "battleDesc": null,
@@ -44049,6 +44127,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031330",
         "realModifierNamne": "FantasticStory_PlusAbility_0027",
+        "BEKey": -1954781239,
         "name": "Gimmick",
         "desc": "Increases all allies' Break Effect by #1[i]%. When Breaking enemy targets, all enemies become afflicted with Wind Shear, taking a set amount of Wind DoT at the start of every turn.\\nAll enemies become immune to Crowd Control debuffs.",
         "battleDesc": null,
@@ -44063,6 +44142,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031331",
         "realModifierNamne": "FantasticStory_PlusAbility_0028",
+        "BEKey": -1954781239,
         "name": "Drunk Talk",
         "desc": "After any ally target uses Ultimate to attack any enemy target and if the target currently has 1/2/3 types of DoTs, each currently active DoT immediately deals DMG equal to #1[i]% / #2[i]% / #3[i]% of the original DMG.",
         "battleDesc": null,
@@ -44076,6 +44156,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031305",
         "realModifierNamne": "FantasticStory_PlusAbility_0022",
+        "BEKey": -1954781239,
         "name": "Rumor",
         "desc": "After allies attack enemies, inflicts Wind Shear on the target, causing the target to take a set amount of Wind DoT at the start of every turn.",
         "battleDesc": null,
@@ -44092,11 +44173,12 @@ let mocSchedule = [
     "id": 2009,
     "image": "activityBG/ChallengeThemeBanner_2008.png",
     "realName": "Volubility",
-    "start": "2024-09-30",
-    "end": "2024-11-11",
+    "start": "2024-09-30 04:00:00",
+    "end": "2024-11-11 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031005",
       "realModifierNamne": "FantasticStory_BaseAbility_0050",
+      "BEKey": -1954781239,
       "name": "Whimsicality",
       "desc": "When allies Break enemy targets' Weakness, charge Whimsicality. When charged to #1[i] points, deals a set amount of DMG to random enemies #2[i] time(s).",
       "battleDesc": null,
@@ -47012,6 +47094,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031324",
         "realModifierNamne": "FantasticStory_PlusAbility_0051",
+        "BEKey": -1954781239,
         "name": "Arioso",
         "desc": "Increases the Break DMG taken by all enemies by #1[i]%. If allies dealt Super Break DMG to enemies after using an attack, additionally Charges Whimsicality by #2[i] points.",
         "battleDesc": null,
@@ -47024,6 +47107,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031325",
         "realModifierNamne": "FantasticStory_PlusAbility_0052",
+        "BEKey": -1954781239,
         "name": "Picturesque",
         "desc": "Follow-Up ATK DMG dealt increases by #1[i]%. Follow-Up ATKs' Weakness Break Efficiency increases by #2[i]%.",
         "battleDesc": null,
@@ -47036,6 +47120,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031326",
         "realModifierNamne": "FantasticStory_PlusAbility_0053",
+        "BEKey": -1954781239,
         "name": "Free Writing",
         "desc": "When characters launch attacks by using their Ultimate, they will ignore the enemy targets' Weakness to cause Toughness Reduction.",
         "battleDesc": null,
@@ -47048,11 +47133,12 @@ let mocSchedule = [
     "id": 2008,
     "image": "activityBG/ChallengeThemeBanner_2004.png",
     "realName": "Words of Deceit",
-    "start": "2024-08-19",
-    "end": "2024-09-30",
+    "start": "2024-08-19 04:00:00",
+    "end": "2024-09-30 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -50053,6 +50139,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031303",
         "realModifierNamne": "FantasticStory_PlusAbility_0013",
+        "BEKey": -1954781239,
         "name": "Rupture",
         "desc": "When enemy targets with Shatter are defeated, increases DMG dealt by Ultimate for all allies in this battle by #1[i]%, stacking up to #2[i] times.",
         "battleDesc": null,
@@ -50065,6 +50152,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031322",
         "realModifierNamne": "FantasticStory_PlusAbility_0017",
+        "BEKey": -1954781239,
         "name": "Calumny",
         "desc": "Increases DMG dealt with Shatter by #1[i]%. When triggered, applies 1 stack of Shatter to adjacent targets.",
         "battleDesc": null,
@@ -50076,6 +50164,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031323",
         "realModifierNamne": "FantasticStory_PlusAbility_0018",
+        "BEKey": -1954781239,
         "name": "Expostulation",
         "desc": "When allies' Follow-Up ATKs hit enemy targets, there is a #1[i]% fixed chance to apply 1 stack of \"Shatter\" to the target. This effect can only be triggered 1 time per attack per enemy target.",
         "battleDesc": null,
@@ -50090,11 +50179,12 @@ let mocSchedule = [
     "id": 2007,
     "image": "activityBG/ChallengeThemeBanner_2007.png",
     "realName": "Out of Thin Air",
-    "start": "2024-07-08",
-    "end": "2024-08-19",
+    "start": "2024-07-08 04:00:00",
+    "end": "2024-08-19 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031004",
       "realModifierNamne": "FantasticStory_BaseAbility_0040",
+      "BEKey": -1954781239,
       "name": "Whimsicality",
       "desc": "After an ally attacks an enemy target with a Follow-Up ATK, charges \"Whimsicality\" based on the number of targets attacked. When charged to #1[i] points, deals a set amount of DMG to random enemy targets #2[i] time(s).",
       "battleDesc": null,
@@ -53135,6 +53225,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031319",
         "realModifierNamne": "FantasticStory_PlusAbility_0041",
+        "BEKey": -1954781239,
         "name": "Distortion",
         "desc": "Reduces the Charge points required to trigger Whimsicality by #1[i] and deals DMG #2[i] more time(s).",
         "battleDesc": null,
@@ -53147,6 +53238,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031320",
         "realModifierNamne": "FantasticStory_PlusAbility_0042",
+        "BEKey": -1954781239,
         "name": "Chicanery",
         "desc": "Increases DMG dealt from allies by Ultimate by #1[i]%. After the Ultimate is used, Whimsicality additionally gains #2[i] point(s) of Charge.",
         "battleDesc": null,
@@ -53159,6 +53251,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031321",
         "realModifierNamne": "FantasticStory_PlusAbility_0043",
+        "BEKey": -1954781239,
         "name": "Exaggerate",
         "desc": "After allies attack enemy targets, Whimsicality additionally gains #1[i] point(s) of Charge.",
         "battleDesc": null,
@@ -53173,11 +53266,12 @@ let mocSchedule = [
     "id": 2006,
     "image": "activityBG/ChallengeThemeBanner_2006.png",
     "realName": "Lexical Enigma",
-    "start": "2024-05-27",
-    "end": "2024-07-08",
+    "start": "2024-05-27 04:00:00",
+    "end": "2024-07-08 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031002",
       "realModifierNamne": "FantasticStory_BaseAbility_0020",
+      "BEKey": -1954781239,
       "name": "Sharp Words, Blunt Knife",
       "desc": "Increases DoT taken by enemy targets by #1[i]%. Enemy targets that receive DoT have their DMG dealt reduced by #2[i]%. After they are attacked, their action is Advanced Forward by #3[i]%.",
       "battleDesc": null,
@@ -56150,6 +56244,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031316",
         "realModifierNamne": "FantasticStory_PlusAbility_0024",
+        "BEKey": -1954781239,
         "name": "Rebuttal",
         "desc": "When enemy targets are defeated, the DoTs on them have a #1[i]% base chance to be transferred to all enemies.",
         "battleDesc": null,
@@ -56161,6 +56256,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031317",
         "realModifierNamne": "FantasticStory_PlusAbility_0025",
+        "BEKey": -1954781239,
         "name": "Argument",
         "desc": "After enemy targets enter battle, they become afflicted by Wind Shear. At the start of every turn, they receive a set amount of Wind DoT and inflict Wind Shear on themselves and adjacent enemy targets.",
         "battleDesc": null,
@@ -56176,6 +56272,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031318",
         "realModifierNamne": "FantasticStory_PlusAbility_0026",
+        "BEKey": -1954781239,
         "name": "Verification",
         "desc": "When 3 or more characters following the Path of Nihility are in the team, increases all allies' DMG dealt by #1[i]% and SPD by #2[i]%.",
         "battleDesc": null,
@@ -56191,11 +56288,12 @@ let mocSchedule = [
     "id": 2005,
     "image": "activityBG/ChallengeThemeBanner_2005.png",
     "realName": "Fictitious Wordsmithing",
-    "start": "2024-04-29",
-    "end": "2024-06-10",
+    "start": "2024-04-29 04:00:00",
+    "end": "2024-06-10 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031003",
       "realModifierNamne": "FantasticStory_BaseAbility_0030",
+      "BEKey": -1954781239,
       "name": "Devious Flattery",
       "desc": "Accumulate the amount of DMG dealt by allies' Follow-Up ATKs. When this DMG amount reaches 100%, deal a set amount of DMG to all enemies.",
       "battleDesc": null,
@@ -59171,6 +59269,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031313",
         "realModifierNamne": "FantasticStory_PlusAbility_0034",
+        "BEKey": -1954781239,
         "name": "Examination",
         "desc": "\"Whimsicality\" no longer requires accumulation of DMG dealt by Follow-Up ATK. Instead, it triggers after allies use #1[i] instances of Follow-Up ATK and the DMG dealt by this effect increases by #2[i]%.",
         "battleDesc": null,
@@ -59183,6 +59282,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031314",
         "realModifierNamne": "FantasticStory_PlusAbility_0035",
+        "BEKey": -1954781239,
         "name": "Extrapolation",
         "desc": "When the Whimsicality effect is triggered, regenerates Energy for all allies equal to #1[i]% of their respective Max Energy. Energy recovered via this effect can exceed the ally's Max Energy.",
         "battleDesc": null,
@@ -59194,6 +59294,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031315",
         "realModifierNamne": "FantasticStory_PlusAbility_0036",
+        "BEKey": -1954781239,
         "name": "Reductio ad Absurdum",
         "desc": "Apart from Follow-Up ATKs, all other kinds of DMG dealt by allies can also accumulate progress equal to #1[i]% of the original DMG amount.",
         "battleDesc": null,
@@ -59208,11 +59309,12 @@ let mocSchedule = [
     "id": 2004,
     "image": "activityBG/ChallengeThemeBanner_2004.png",
     "realName": "Deceitful Chaos",
-    "start": "2024-04-01",
-    "end": "2024-05-13",
+    "start": "2024-04-01 04:00:00",
+    "end": "2024-05-13 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -62191,6 +62293,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031310",
         "realModifierNamne": "FantasticStory_PlusAbility_0014",
+        "BEKey": -1954781239,
         "name": "Inducement",
         "desc": "When allies use a Skill to attack enemy targets, there is a #1[i]% fixed chance to inflict Shatter to the target.",
         "battleDesc": null,
@@ -62202,6 +62305,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031311",
         "realModifierNamne": "FantasticStory_PlusAbility_0015",
+        "BEKey": -1954781239,
         "name": "Sympathetic Detonation",
         "desc": "When enemy targets use their abilities, inflicts 1 stack of Scalded on them and adjacent units. While in the Scalded state, targets receive #1[i]% more DMG, stacking up to #2[i] stack(s). This effect is effective on the set amount of DMG from the Whimsicality effect.",
         "battleDesc": null,
@@ -62214,6 +62318,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031312",
         "realModifierNamne": "FantasticStory_PlusAbility_0016",
+        "BEKey": -1954781239,
         "name": "Splash",
         "desc": "After characters use an Ultimate to attack, their action is Advanced Forward by #3[i]% and deals #2[i]% more DMG, lasting for #1[i] turn(s).",
         "battleDesc": null,
@@ -62230,11 +62335,12 @@ let mocSchedule = [
     "id": 2003,
     "image": "activityBG/ChallengeThemeBanner_2003.png",
     "realName": "An Expression of Eloquence",
-    "start": "2024-03-04",
-    "end": "2024-04-15",
+    "start": "2024-03-04 04:00:00",
+    "end": "2024-04-15 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031003",
       "realModifierNamne": "FantasticStory_BaseAbility_0030",
+      "BEKey": -1954781239,
       "name": "Devious Flattery",
       "desc": "Accumulate the amount of DMG dealt by allies' Follow-Up ATKs. When this DMG amount reaches 100%, deal a set amount of DMG to all enemies.",
       "battleDesc": null,
@@ -65722,6 +65828,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031307",
         "realModifierNamne": "FantasticStory_PlusAbility_0031",
+        "BEKey": -1954781239,
         "name": "Blarney",
         "desc": "Characters' Follow-Up ATKs deal #1[i]% increased DMG, and this effect will be triggered 1 additional time after triggering \"Whimsicality's\" effect.",
         "battleDesc": null,
@@ -65733,6 +65840,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031308",
         "realModifierNamne": "FantasticStory_PlusAbility_0032",
+        "BEKey": -1954781239,
         "name": "Flattery",
         "desc": "When Ultimate deals DMG to the enemy target, it will be considered as a Follow-Up ATK.",
         "battleDesc": null,
@@ -65742,6 +65850,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031309",
         "realModifierNamne": "FantasticStory_PlusAbility_0033",
+        "BEKey": -1954781239,
         "name": "Spiel",
         "desc": "Whenever a character hits an enemy target with a Follow-Up ATK, all allies' actions are Advanced Forward by #1[i]%. This effect can only be triggered once for each attack.",
         "battleDesc": null,
@@ -65756,11 +65865,12 @@ let mocSchedule = [
     "id": 2002,
     "image": "activityBG/ChallengeThemeBanner_2002.png",
     "realName": "Tales of a Tethered Bird",
-    "start": "2024-02-05",
-    "end": "2024-03-18",
+    "start": "2024-02-05 04:00:00",
+    "end": "2024-03-18 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031002",
       "realModifierNamne": "FantasticStory_BaseAbility_0020",
+      "BEKey": -1954781239,
       "name": "Sharp Words, Blunt Knife",
       "desc": "Increases DoT taken by enemy targets by #1[i]%. Enemy targets that receive DoT have their DMG dealt reduced by #2[i]%. After they are attacked, their action is Advanced Forward by #3[i]%.",
       "battleDesc": null,
@@ -69320,6 +69430,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031304",
         "realModifierNamne": "FantasticStory_PlusAbility_0021",
+        "BEKey": -1954781239,
         "name": "Libel",
         "desc": "When an enemy takes DoT, adjacent targets also take DoT of the same type by an amount equal to #1[i]% of the original DMG dealt.",
         "battleDesc": null,
@@ -69331,6 +69442,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031305",
         "realModifierNamne": "FantasticStory_PlusAbility_0022",
+        "BEKey": -1954781239,
         "name": "Rumor",
         "desc": "After allies attack enemies, inflicts Wind Shear on the target, causing the target to take a set amount of Wind DoT at the start of every turn.",
         "battleDesc": null,
@@ -69344,6 +69456,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031306",
         "realModifierNamne": "FantasticStory_PlusAbility_0023",
+        "BEKey": -1954781239,
         "name": "Defamation",
         "desc": "When an enemy takes DoT, the ally with the lowest HP percentage will heal for #1[i]% of their Max HP, and their action will be Advanced Forward by #2[i]%.",
         "battleDesc": null,
@@ -69359,11 +69472,12 @@ let mocSchedule = [
     "id": 2001,
     "image": "activityBG/ChallengeThemeBanner_2001.png",
     "realName": "Youci's Wandering Words",
-    "start": "2024-01-08",
-    "end": "2024-02-19",
+    "start": "2024-01-08 04:00:00",
+    "end": "2024-02-19 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
+      "BEKey": -1954781239,
       "name": "Word Shatter",
       "desc": "When allies use their Ultimate to attack an enemy target, inflicts the target with Shatter, stacking up to #2[i] time(s). At the start of the target's turn or when the target is defeated, deals a set amount of DMG to the target and adjacent targets based on the number of Shatter stacks.",
       "battleDesc": null,
@@ -72951,6 +73065,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031301",
         "realModifierNamne": "FantasticStory_PlusAbility_0011",
+        "BEKey": -1954781239,
         "name": "Erupt",
         "desc": "When allies use an Ultimate to attack targets, inflicts 2 stacks of Shatter to the target.",
         "battleDesc": null,
@@ -72960,6 +73075,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031302",
         "realModifierNamne": "FantasticStory_PlusAbility_0012",
+        "BEKey": -1954781239,
         "name": "Excitation",
         "desc": "When enemies enter battle, there is a #1[i]% chance to instantly receive 1 stack of Shatter.",
         "battleDesc": null,
@@ -72971,6 +73087,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031303",
         "realModifierNamne": "FantasticStory_PlusAbility_0013",
+        "BEKey": -1954781239,
         "name": "Rupture",
         "desc": "When enemy targets with Shatter are defeated, increases DMG dealt by Ultimate for all allies in this battle by #1[i]%, stacking up to #2[i] times.",
         "battleDesc": null,

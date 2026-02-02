@@ -372,7 +372,7 @@ const compositeAbilityObject = {
                                 "target": "{{Parameter Target}}"
                               },
                               "advanceType": "Delay",
-                              "value": "0.25"
+                              "multiAdd": "0.25"
                             }
                           ]
                         }

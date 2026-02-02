@@ -1,0 +1,32 @@
+const configAbility = {
+  "fileName": "-2108121442_FantasticStory_PlusAbility_2017",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [],
+  "whenAdded": [
+    {
+      "name": "Define Custom Variable",
+      "variableName": "DV_FantasticStory_PlusAbility_2017",
+      "value": 1
+    },
+    {
+      "name": "Declare Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "scope": "ContextCaster",
+      "variableName": "DV_FantasticStory_PlusAbility_2017_ADF_1",
+      "value": {
+        "operator": "Variables[0] (#ADF_1) || RETURN",
+        "displayLines": "#ADF_1",
+        "constants": [],
+        "variables": [
+          "#ADF_1"
+        ]
+      }
+    }
+  ],
+  "references": []
+}

@@ -1361,7 +1361,7 @@ const compositeAbilityObject = {
                 "target": "{{Player Team All}}"
               },
               "advanceType": "Advance",
-              "value": "-1"
+              "multiAdd": "-1"
             }
           ]
         },
@@ -5267,7 +5267,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "value": 0
+              "set": 0
             },
             {
               "name": "Add Events/Bonuses",
@@ -8803,7 +8803,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "advanceType": "Set",
-                      "value": "-MDF_ActionDelay"
+                      "multiAdd": "-MDF_ActionDelay"
                     },
                     {
                       "name": "Define Custom Variable",
