@@ -690,7 +690,7 @@
 }
 
 .actionDetailBody3Description {
-    width: auto;
+    width: 100%;
     max-width: 95%;
     white-space: normal;
     text-align: left;
@@ -701,8 +701,8 @@
     /* color: #838383; */
     color: #18fcc7ce;
     box-sizing: border-box;
-    backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.726);
+    /* backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.726); */
     padding-left: 4px;
     padding-right: 2px;
     padding-bottom: 2px;

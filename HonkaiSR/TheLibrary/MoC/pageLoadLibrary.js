@@ -176,6 +176,8 @@ const endgameModeDisplay = {
         </div>` : "";
     },
     setEndgameDisplay(adjustment,directEntry,floorNameNew,directIndex) {
+        if (adjustment != undefined) {firstBoxGenDCompleted = false;}
+
         if (directIndex != undefined) {
             directEntry = mocSchedule[directIndex];
 
@@ -425,9 +427,9 @@ const endgameModeDisplay = {
                 //     list1Stringer = `<div class="statFiltersRowHeaderSides">Player Buff Options</div>` + list1Stringer;
                 // }
 
-                readSelection("PFDescriptionBox").innerHTML = selector2Stringer + list2Stringer + selector1Stringer + list1Stringer + selector1KingStringer + king1Stringer;
+                readSelection("PFDescriptionBox").innerHTML = selector1Stringer + list1Stringer + selector2Stringer + list2Stringer + selector1KingStringer + king1Stringer;
             }
-            else if (readSelection("PFDescriptionBox")) {readSelection("PFDescriptionBox").style.display = "none";}
+            else if (readSelection("PFDescriptionBox") && adjustment == undefined) {readSelection("PFDescriptionBox").style.display = "none";}
 
 
             // <div class="superimpositionHolderbox">
