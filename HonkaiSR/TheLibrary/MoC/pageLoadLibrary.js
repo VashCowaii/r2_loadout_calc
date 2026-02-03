@@ -310,7 +310,7 @@ const endgameModeDisplay = {
 
 
 
-            const startStringer = stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" ? (hasPatchTitle ? "Patch: " : "") + directEntry.patchName : directEntry.start?.split(" ")[0] + " - " + directEntry.end.split(" ")[0];
+            const startStringer = stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" ? (hasPatchTitle ? "Patch: " : "") + directEntry.patchName : directEntry.start?.split(" ")[0] + " - " + directEntry.end?.split(" ")[0];
 
             readSelection("versionUpdateValue").innerHTML = `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(-1)">&#9664;</div>`
             + startStringer + `<div class="toggleArrowBox" onclick="endgameModeDisplay.setEndgameDisplay(1)">&#9654;</div>`;
