@@ -77,6 +77,12 @@ const otherModeList = [
         desc: "Search buff names or descriptions, from ANYTHING.",
         link: "/HonkaiSR/TheLibrary/Modifiers/"
     },
+    {
+        name: "Weakness Leaderboard",
+        img: "/HonkaiSR/icon/element/fire.png",
+        desc: "What are the most common weaknesses in the game?",
+        link: "/HonkaiSR/TheLibrary/Weaknesses/"
+    },
 ]
 
 const customMenu = {
