@@ -21,7 +21,7 @@ const configAbility = {
       "stackType": "Replace",
       "execute": [
         {
-          "eventTrigger": "Being Weakness Break Delayed [Owner]",
+          "eventTrigger": "Being Toughness Bar Reset [Owner]",
           "execute": [
             {
               "name": "IF",

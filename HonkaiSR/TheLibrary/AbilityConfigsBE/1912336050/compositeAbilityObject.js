@@ -2170,7 +2170,7 @@ const compositeAbilityObject = {
           "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02",
           "execute": [
             {
-              "eventTrigger": "Being Weakness Break Delayed [Owner]",
+              "eventTrigger": "Being Toughness Bar Reset [Owner]",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -11383,7 +11383,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "execute": [
             {
-              "eventTrigger": "Being Weakness Break Delayed [Owner]",
+              "eventTrigger": "Being Toughness Bar Reset [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -11654,7 +11654,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "execute": [
             {
-              "eventTrigger": "Being Weakness Break Delayed [Owner]",
+              "eventTrigger": "Being Toughness Bar Reset [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -11925,7 +11925,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "execute": [
             {
-              "eventTrigger": "Being Weakness Break Delayed [Owner]",
+              "eventTrigger": "Being Toughness Bar Reset [Owner]",
               "execute": [
                 {
                   "name": "IF",
