@@ -798,6 +798,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 32582
   },
   {
+    "entryType": "enemy",
+    "enemyID": 3021020,
+    "lineCount": 852,
+    "sizeCount": 30569
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021021,
+    "lineCount": 852,
+    "sizeCount": 30569
+  },
+  {
     "entryType": "relic",
     "entryName": "Penacony, Land of the Dreams",
     "trimCharacterName": "PenaconyLandoftheDreams",
