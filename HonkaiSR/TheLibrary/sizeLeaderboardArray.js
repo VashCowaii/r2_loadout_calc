@@ -826,6 +826,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 22184
   },
   {
+    "entryType": "enemy",
+    "enemyID": 3021030,
+    "lineCount": 622,
+    "sizeCount": 20993
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021031,
+    "lineCount": 622,
+    "sizeCount": 20993
+  },
+  {
     "entryType": "lc",
     "entryName": "Time Woven Into Gold",
     "trimCharacterName": "TimeWovenIntoGold",
