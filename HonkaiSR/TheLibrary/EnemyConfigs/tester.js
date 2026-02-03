@@ -4531,7 +4531,7 @@ const userTriggers = {
 
 
 
-
+        // enemyMainStatsBox
         let mainStatString = `<div class="enemyMainBoxOverview">
             <div class="enemyMainStatsBox">
                 <div class="characterDisplayElementWeaknessIconHolderEnemies">
@@ -4556,7 +4556,7 @@ const userTriggers = {
                     <div class="imageRowStatisticNameBox">SPD</div>
                     </div>
                     
-                    <div class="imageRowStatisticStatBox">${(finalSPD).toLocaleString()}</div>
+                    <div class="imageRowStatisticStatBox">${(finalSPD).toLocaleString()}<span class="crossThroughTextFaded">(${spd})</span></div>
                 </div>
                 <div class="imageRowStatisticBox2 imageRowStatisticBoxEnemyAdjustmentRow">
                     <div class="imageRowStatisticImageBoxEnemyAdjustment"><img src="/HonkaiSR/icon/property/IconAttack.png" class="imageRowStatisticImage">

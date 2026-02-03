@@ -1345,7 +1345,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "multi": 1
+          "multiBase": 1
         }
       ],
       "references": []

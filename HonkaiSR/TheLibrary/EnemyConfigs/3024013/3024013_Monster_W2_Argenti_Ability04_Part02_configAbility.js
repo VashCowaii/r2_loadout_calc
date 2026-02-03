@@ -98,7 +98,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "multi": 0
+              "multiBase": 0
             },
             {
               "name": "UI Display Event (On Entity)",
@@ -202,7 +202,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "multi": 0
+                  "multiBase": 0
                 },
                 {
                   "name": "UI Display Event (On Entity)",

@@ -56,7 +56,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "multi": 0
+      "multiBase": 0
     },
     {
       "name": "Remove Events/Bonuses",
