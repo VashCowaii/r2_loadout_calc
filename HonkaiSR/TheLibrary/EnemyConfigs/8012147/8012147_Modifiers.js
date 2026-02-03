@@ -49,7 +49,7 @@ const configAbility = {
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
-          "variableName": "ImaginaryEnhancedNumber",
+          "variableName": "AML_Boss_00_Part_EnhancementLevel",
           "from": "ContextOwner",
           "valueRanges": [
             {

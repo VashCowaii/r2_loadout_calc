@@ -768,11 +768,11 @@ const compositeAbilityObject = {
                         "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11 * _MaxHP)",
+                        "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
+                        "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11",
+                          "Monster_IF_InsertCameraFlag",
                           "_MaxHP"
                         ]
                       }
@@ -789,11 +789,11 @@ const compositeAbilityObject = {
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_11 * _MaxHP)",
+                          "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
+                          "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11",
+                            "Monster_IF_InsertCameraFlag",
                             "_MaxHP"
                           ]
                         }
@@ -843,11 +843,11 @@ const compositeAbilityObject = {
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_11 * _MaxHP)",
+                          "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
+                          "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11",
+                            "Monster_IF_InsertCameraFlag",
                             "_MaxHP"
                           ]
                         }
@@ -864,11 +864,11 @@ const compositeAbilityObject = {
                         "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11 * _MaxHP)",
+                        "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
+                        "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11",
+                          "Monster_IF_InsertCameraFlag",
                           "_MaxHP"
                         ]
                       }
@@ -883,11 +883,11 @@ const compositeAbilityObject = {
                         "Monster_W2_ArgentiTotem_02_IF_Shield_Modifier[<span class=\"descriptionNumberColor\">Shield</span>]"
                       ],
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11) || Variables[1] (_MaxHP) || MUL || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_11 * _MaxHP)",
+                        "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
+                        "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11",
+                          "Monster_IF_InsertCameraFlag",
                           "_MaxHP"
                         ]
                       }
@@ -904,11 +904,11 @@ const compositeAbilityObject = {
                       "duration": 2,
                       "valuePerStack": {
                         "MDF_ShowValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11) || Variables[1] (_MaxHP) || MUL || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_11 * _MaxHP)",
+                          "operator": "Variables[0] (Monster_IF_InsertCameraFlag) || Variables[1] (_MaxHP) || MUL || RETURN",
+                          "displayLines": "(Monster_IF_InsertCameraFlag * _MaxHP)",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11",
+                            "Monster_IF_InsertCameraFlag",
                             "_MaxHP"
                           ]
                         }
