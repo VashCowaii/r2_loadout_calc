@@ -189,7 +189,7 @@ const endgameModeDisplay = {
                     <img src="/HonkaiSR/icon/element/${sizeEntry.elem}.png" class="turnOrderDisplayPreview">
                     <div class="turnOrderAVBox">${rankCounter-1}</div>
                     <div class="complexityHolderBoxDisplay">
-                        <div class="rowSummaryDMGNameAndPercent">${sizeEntry.elem}:&nbsp;<span class="smallFont">${(sizeEntry.count).toLocaleString()} enemies</span></div>
+                        <div class="rowSummaryDMGNameAndPercent">${sizeEntry.elem === "Thunder" ? "Lightning" : sizeEntry.elem}:&nbsp;<span class="smallFont">${(sizeEntry.count).toLocaleString()} enemies</span></div>
                         
                         <div class="actionDetailBodyRowSummaryDMG">
                             <div class="rowSummaryDMGBarDynamic" style="width:${Math.max(currentSizeFinal,1)}%;background-color: #6e2020"></div>
