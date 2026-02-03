@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Antimatter Engine",
   "image": 8013141,
   "bar": 2,
+  "rank": "Elite",
   "stArray": [
     18,
     210,

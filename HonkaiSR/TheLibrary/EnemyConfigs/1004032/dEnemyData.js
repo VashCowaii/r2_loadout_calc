@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Bronya (Illusion)",
   "image": 1004032,
   "bar": 2,
+  "bodyType": "LittleMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

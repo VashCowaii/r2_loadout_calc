@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Echo of Faded Dreams",
   "image": 3022011,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "\"Tomorrow in Harmonious Chords\" (Complete)",
   "image": 3003043,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

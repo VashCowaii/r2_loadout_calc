@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Twig of Marple Leaf",
   "image": 2022081,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

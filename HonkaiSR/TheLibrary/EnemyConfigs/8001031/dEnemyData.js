@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Borrowed Force",
   "image": 8001031,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "hitClass": "S",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

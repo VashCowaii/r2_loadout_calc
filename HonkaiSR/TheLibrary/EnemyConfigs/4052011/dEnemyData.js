@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Hallucinogenic Mermaid",
   "image": 4052011,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

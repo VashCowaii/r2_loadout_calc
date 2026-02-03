@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Tide-Eroded Blade",
   "image": 4032011,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     66.666664,
     210,

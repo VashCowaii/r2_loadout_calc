@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Bubble Hound",
   "image": 3002030,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

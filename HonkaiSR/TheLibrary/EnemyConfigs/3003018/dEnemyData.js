@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Wrathful Skott (Corrupted)",
   "image": 3003018,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

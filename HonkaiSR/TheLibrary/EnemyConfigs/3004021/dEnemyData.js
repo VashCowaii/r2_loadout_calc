@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Blaznana Monkey Trick",
   "image": 3004021,
   "bar": 2,
+  "bodyType": "LittleMonster",
+  "hitClass": "A",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

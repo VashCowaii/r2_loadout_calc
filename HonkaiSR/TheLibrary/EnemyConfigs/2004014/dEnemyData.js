@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Soulhook Sovereign",
   "image": 2004014,
   "bar": 2,
+  "bodyType": "LittleMonster",
+  "hitClass": "A",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

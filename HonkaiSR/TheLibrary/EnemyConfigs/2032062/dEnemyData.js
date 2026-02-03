@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Worldpurge Tail",
   "image": 2032062,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

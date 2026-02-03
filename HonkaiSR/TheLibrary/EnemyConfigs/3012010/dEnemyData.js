@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Memory Zone Meme \"Something In The Mirror\"",
   "image": 3012010,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

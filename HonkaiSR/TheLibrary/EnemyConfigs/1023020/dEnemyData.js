@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Frigid Prowler",
   "image": 1023020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "A",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Earthshaker Leo: Solblaze Winged Beast",
   "image": 4023011,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

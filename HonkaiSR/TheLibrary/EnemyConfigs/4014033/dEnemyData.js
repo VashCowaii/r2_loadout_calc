@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Castorice, Hand of Shadow",
   "image": 4014033,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

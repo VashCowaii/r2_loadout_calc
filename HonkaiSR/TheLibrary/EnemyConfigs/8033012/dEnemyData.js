@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Senior Staff: Team Leader",
   "image": 8033012,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "A",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

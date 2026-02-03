@@ -2,6 +2,8 @@ let enemyData = {
   "name": "\"Past Confined and Caged\"",
   "image": 3003030,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

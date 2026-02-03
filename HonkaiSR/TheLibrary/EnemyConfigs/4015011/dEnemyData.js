@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Sublime, Radiant, Avatar of the Sky",
   "image": 4015011,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

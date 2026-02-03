@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Cyclonic Swarm Mother",
   "image": 4053020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

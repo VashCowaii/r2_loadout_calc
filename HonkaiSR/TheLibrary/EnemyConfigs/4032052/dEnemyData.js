@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Black Tide's Decrepit Bow",
   "image": 4032052,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     15,
     210,

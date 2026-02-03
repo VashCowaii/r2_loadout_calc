@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Flying Sword",
   "image": 2002020,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

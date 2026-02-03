@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Greatsword Guardian: Vanguard Wallbreaker",
   "image": 4013015,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

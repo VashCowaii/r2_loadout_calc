@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Stellaron Hunter: Sam",
   "image": 3024022,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

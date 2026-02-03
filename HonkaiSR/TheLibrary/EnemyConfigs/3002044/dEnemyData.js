@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Slothful Skott",
   "image": 3002044,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

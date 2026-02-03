@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Long-Shattered Vessel",
   "image": 4032021,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

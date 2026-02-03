@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Disaster's Right Hand",
   "image": 8012146,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Automaton Grizzly (Complete)",
   "image": 1013014,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "hitClass": "A",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

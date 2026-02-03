@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Aurumaton Spectral Envoy",
   "image": 2013020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

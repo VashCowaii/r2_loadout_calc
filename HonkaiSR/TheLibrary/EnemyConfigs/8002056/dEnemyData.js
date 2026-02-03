@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Trot Deuce",
   "image": 8002056,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     315,

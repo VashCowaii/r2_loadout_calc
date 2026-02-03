@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Cloud Knights Patroller",
   "image": 2002010,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Victor, Acropolis, and Lord of Strife",
   "image": 4014016,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

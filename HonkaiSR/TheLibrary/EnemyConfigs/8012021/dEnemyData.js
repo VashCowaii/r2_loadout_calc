@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Voidranger: Distorter",
   "image": 8012021,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

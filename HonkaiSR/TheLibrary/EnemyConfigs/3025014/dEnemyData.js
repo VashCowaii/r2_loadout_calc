@@ -2,6 +2,8 @@ let enemyData = {
   "name": "\"Harmonious Choir\" The Great Septimus",
   "image": 3025014,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

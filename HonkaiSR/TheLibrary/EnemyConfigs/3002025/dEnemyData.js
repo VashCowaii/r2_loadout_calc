@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Greedy Skott (Corrupted)",
   "image": 3002025,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

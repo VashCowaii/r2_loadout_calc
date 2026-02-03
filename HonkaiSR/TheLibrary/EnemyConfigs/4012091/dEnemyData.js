@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Shoot of Hundred Eyes",
   "image": 4012091,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

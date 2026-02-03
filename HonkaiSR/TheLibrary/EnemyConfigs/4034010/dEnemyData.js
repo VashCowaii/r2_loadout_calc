@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Flame Reaver of the Deepest Dark",
   "image": 4034010,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

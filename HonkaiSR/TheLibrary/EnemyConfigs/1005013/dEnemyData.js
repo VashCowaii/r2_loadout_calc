@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Cocolia, Mother of Deception (Illusion)",
   "image": 1005013,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

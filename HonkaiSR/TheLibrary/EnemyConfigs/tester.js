@@ -4529,6 +4529,13 @@ const userTriggers = {
         readSelection("enemyWaveScalar").innerHTML = `[x${+waveSpecificArray[0] + 1}, x${+waveSpecificArray[1] + 1}]`;
 
 
+        const rankConversions = {
+            "BigBoss": "Boss",
+            "LittleBoss": "MiniBoss",
+            "Elite": "Elite",
+            "Minion": "Trash 1",
+            "MinionLv2": "Trash 2",
+        }
 
 
         // enemyMainStatsBox
@@ -4596,6 +4603,22 @@ const userTriggers = {
 
                 ${resIconString}
                 ${resistanceStringer}
+
+
+
+                ${enemyData.rank ? `<div class="imageRowStatisticBox${2} imageRowStatisticBoxEnemyAdjustmentRow">
+                    <div class="imageRowStatisticNameBox">Rank</div>
+                    <div class="imageRowStatisticStatBox">${rankConversions[enemyData.rank]}</div>
+                </div>` : ""}
+                ${enemyData.bodyType ? `<div class="imageRowStatisticBox${2} imageRowStatisticBoxEnemyAdjustmentRow">
+                    <div class="imageRowStatisticNameBox">Body Type</div>
+                    <div class="imageRowStatisticStatBox">${enemyData.bodyType}</div>
+                </div>` : ""}
+                ${enemyData.hitClass ? `<div class="imageRowStatisticBox${2} imageRowStatisticBoxEnemyAdjustmentRow">
+                    <div class="imageRowStatisticNameBox">Hit Class</div>
+                    <div class="imageRowStatisticStatBox">${enemyData.hitClass}</div>
+                </div>` : ""}
+                
                 
             </div>
             

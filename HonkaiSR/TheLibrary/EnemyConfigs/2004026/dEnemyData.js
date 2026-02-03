@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Cloud Knight Lieutenant: Yanqing (Corrupted)",
   "image": 2004026,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

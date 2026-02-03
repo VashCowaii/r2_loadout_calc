@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Dawn-Denied Khaslana",
   "image": 4034015,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Sequence Trotter (Rare)",
   "image": 8002059,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     315,

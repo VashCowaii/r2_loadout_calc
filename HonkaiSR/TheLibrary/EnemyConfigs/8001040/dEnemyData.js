@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Thunderspawn",
   "image": 8001040,
   "bar": 1,
+  "rank": "Minion",
   "stArray": [
     18,
     210,

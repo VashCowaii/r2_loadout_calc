@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Beyond Overcooked (Bug)",
   "image": 3003012,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Abundance Sprite: Golden Hound",
   "image": 2022040,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

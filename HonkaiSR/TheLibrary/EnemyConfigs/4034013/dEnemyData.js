@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Flame Reaver of Doomsday Led Astray",
   "image": 4034013,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

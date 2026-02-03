@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Imaginary Weaver",
   "image": 8002010,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

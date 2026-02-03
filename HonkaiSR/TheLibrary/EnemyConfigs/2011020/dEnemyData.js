@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Entranced Ingenium: Golden Cloud Toad",
   "image": 2011020,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

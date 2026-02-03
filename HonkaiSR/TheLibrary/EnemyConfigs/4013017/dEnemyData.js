@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Synergy Duo: Ironclad White Guard",
   "image": 4013017,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     15,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Servant of Tides",
   "image": 4052012,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

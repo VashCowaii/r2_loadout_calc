@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Borisin Warhead: Hoolay (Corrupted)",
   "image": 2034015,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

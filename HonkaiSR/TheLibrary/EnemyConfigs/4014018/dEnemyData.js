@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Savage God, Mad King, Incarnation of Strife (Corrupted)",
   "image": 4014018,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "\"Present Inebriated in Revelry\" (Bug)",
   "image": 3003052,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

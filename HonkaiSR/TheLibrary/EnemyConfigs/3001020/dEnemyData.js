@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Birdskull",
   "image": 3001020,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

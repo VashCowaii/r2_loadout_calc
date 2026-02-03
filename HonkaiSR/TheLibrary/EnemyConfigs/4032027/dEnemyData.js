@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Shadow of \"Hatred\"",
   "image": 4032027,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

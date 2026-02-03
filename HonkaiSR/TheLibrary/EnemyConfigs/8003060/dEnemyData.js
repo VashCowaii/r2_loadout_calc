@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Fictional Ensemble",
   "image": 8003060,
   "bar": 1,
+  "rank": "Elite",
   "stArray": [
     18,
     210,

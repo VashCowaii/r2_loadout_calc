@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Starcrusher Swarm King: Skaracabaz (Synthetic)",
   "image": 8025010,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "A",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

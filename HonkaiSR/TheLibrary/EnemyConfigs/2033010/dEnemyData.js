@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Howling Casket",
   "image": 2033010,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

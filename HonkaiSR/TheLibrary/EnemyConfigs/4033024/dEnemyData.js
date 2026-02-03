@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Black Tide's Champion (Bug)",
   "image": 4033024,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

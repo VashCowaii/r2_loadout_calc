@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Antibaryon",
   "image": 8011020,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "hitClass": "D",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

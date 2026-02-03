@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Black Tide's Corroded Axe",
   "image": 4032031,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     66.666664,
     210,

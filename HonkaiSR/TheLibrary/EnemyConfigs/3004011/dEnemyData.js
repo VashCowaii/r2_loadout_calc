@@ -2,6 +2,9 @@ let enemyData = {
   "name": "The Past, Present, and Eternal Show (Complete)",
   "image": 3004011,
   "bar": 3,
+  "bodyType": "LittleMonster",
+  "hitClass": "A",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

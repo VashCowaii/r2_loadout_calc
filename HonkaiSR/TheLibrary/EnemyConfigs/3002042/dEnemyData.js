@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Banacademic Office's Dreamweaver BananAdvisor",
   "image": 3002042,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Entranced Ingenium: Illumination Dragonfish",
   "image": 2012010,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

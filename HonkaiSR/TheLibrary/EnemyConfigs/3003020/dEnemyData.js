@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Sweet Gorilla",
   "image": 3003020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "A",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

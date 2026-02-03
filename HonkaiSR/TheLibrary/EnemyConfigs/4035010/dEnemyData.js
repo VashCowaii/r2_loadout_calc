@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Anti-Creator, Hatred Inundate",
   "image": 4035010,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "\"Black Cloak Demon King\"",
   "image": 4034012,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

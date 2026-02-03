@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Synergy Duo: Bloodbound Dark Duelist",
   "image": 4033022,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     15,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Blaze Out of Space (Bug)",
   "image": 8003021,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Silvermane Lieutenant (Bug)",
   "image": 1003011,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "hitClass": "A",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

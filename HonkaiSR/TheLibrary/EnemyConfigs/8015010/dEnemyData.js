@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Doomsday Beast",
   "image": 8015010,
   "bar": 2,
+  "hitClass": "D",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Beyond Overcooked (Projection)",
   "image": 3003011,
   "bar": 1,
+  "rank": "Elite",
   "stArray": [
     18,
     210,

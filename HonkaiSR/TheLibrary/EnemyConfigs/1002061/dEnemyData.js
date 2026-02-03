@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Lance of the Eternal Freeze",
   "image": 1002061,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "S",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

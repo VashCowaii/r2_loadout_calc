@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Voidranger: Eliminator",
   "image": 8012030,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

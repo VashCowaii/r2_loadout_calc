@@ -2,6 +2,8 @@ let enemyData = {
   "name": "\"Speartip\"",
   "image": 3021031,
   "bar": 1,
+  "hitClass": "A",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

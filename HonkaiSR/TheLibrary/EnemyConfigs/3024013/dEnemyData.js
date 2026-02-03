@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Silver Knight of Virtuous Gallantry",
   "image": 3024013,
   "bar": 2,
+  "hitClass": "D",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

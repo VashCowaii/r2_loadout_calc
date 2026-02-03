@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Black Tide Council",
   "image": 4032042,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     15,
     210,

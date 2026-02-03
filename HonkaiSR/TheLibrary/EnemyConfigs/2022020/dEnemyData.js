@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Disciples of Sanctus Medicus: Internal Alchemist",
   "image": 2022020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

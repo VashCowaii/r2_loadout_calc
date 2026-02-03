@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Hellcharred Shadow General",
   "image": 2035012,
   "bar": 2,
+  "bodyType": "LittleMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,
