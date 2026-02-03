@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Guide of Withering and Decay",
   "image": 4014036,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

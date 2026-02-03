@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Decaying Shadow (Bug)",
   "image": 8003041,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

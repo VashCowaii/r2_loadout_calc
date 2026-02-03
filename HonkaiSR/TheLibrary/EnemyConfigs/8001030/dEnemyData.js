@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Mask of No Thought",
   "image": 8001030,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "hitClass": "D",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

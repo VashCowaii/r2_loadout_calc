@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Abundant Ebon Deer (Illusion)",
   "image": 2024013,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

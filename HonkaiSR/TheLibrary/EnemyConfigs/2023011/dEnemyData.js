@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Disciples of Sanctus Medicus: Shape Shifter (Bug)",
   "image": 2023011,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "hitClass": "A",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

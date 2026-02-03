@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Trotter of Preservation (Giant)",
   "image": 8002089,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     315,

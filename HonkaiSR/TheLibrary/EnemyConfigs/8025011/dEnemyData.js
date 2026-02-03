@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Sky-Shrouding Stardevourer Swarm",
   "image": 8025011,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "A",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

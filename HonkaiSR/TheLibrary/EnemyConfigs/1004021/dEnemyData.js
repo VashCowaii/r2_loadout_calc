@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Gepard",
   "image": 1004021,
   "bar": 1,
+  "rank": "LittleBoss",
   "stArray": [
     15,
     210,

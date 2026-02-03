@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Mara-Struck Soldier",
   "image": 2022010,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

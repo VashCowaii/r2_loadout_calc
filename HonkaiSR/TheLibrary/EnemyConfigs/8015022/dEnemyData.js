@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Opportunistic Provocateur",
   "image": 8015022,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

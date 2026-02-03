@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Argenti (Complete)",
   "image": 3024011,
   "bar": 3,
+  "hitClass": "D",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

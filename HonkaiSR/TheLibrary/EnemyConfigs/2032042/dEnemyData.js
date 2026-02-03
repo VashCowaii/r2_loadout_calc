@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Nebula Devourer",
   "image": 2032042,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     15,
     210,

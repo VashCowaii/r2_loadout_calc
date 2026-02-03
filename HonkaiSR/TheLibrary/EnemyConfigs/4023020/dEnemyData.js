@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Moonlit Pegasus",
   "image": 4023020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

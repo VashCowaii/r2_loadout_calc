@@ -2,6 +2,9 @@ let enemyData = {
   "name": "First Genius, Entelechy, Zandar",
   "image": 4044010,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Cirrus (Complete)",
   "image": 2024021,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

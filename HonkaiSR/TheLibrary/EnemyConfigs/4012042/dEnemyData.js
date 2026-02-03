@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Furiae Troupe",
   "image": 4012042,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

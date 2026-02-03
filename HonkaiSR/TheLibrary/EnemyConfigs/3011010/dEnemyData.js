@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Memory Zone Meme \"Allseer\"",
   "image": 3011010,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

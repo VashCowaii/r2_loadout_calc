@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Banacademic Office's Charmony BananAdvisor",
   "image": 3003015,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

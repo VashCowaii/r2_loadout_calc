@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Noontide Gryphon (Bug)",
   "image": 4023013,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Irontomb, Anti-Nous, Funeral of Gnosis",
   "image": 4035020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

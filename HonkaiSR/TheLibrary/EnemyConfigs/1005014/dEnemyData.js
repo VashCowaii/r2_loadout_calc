@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Annihilator of Desolation Mistral: Mother of Deception",
   "image": 1005014,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Guardian Shadow",
   "image": 8003030,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

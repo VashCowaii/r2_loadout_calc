@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Auxiliary Robot Arm Unit",
   "image": 1012040,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

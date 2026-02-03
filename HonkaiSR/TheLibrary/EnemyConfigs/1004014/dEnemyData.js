@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Annihilator of Desolation Mistral",
   "image": 1004014,
   "bar": 2,
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Dark Sun Gryphon",
   "image": 4033031,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

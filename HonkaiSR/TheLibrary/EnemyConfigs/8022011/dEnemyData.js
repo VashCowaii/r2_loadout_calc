@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Juvenile Sting",
   "image": 8022011,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

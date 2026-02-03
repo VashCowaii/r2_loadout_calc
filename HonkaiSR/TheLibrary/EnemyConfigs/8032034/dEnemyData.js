@@ -2,6 +2,8 @@ let enemyData = {
   "name": "\"All or Nothing: Double Fortune\"",
   "image": 8032034,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Memory Zone Meme \"Insatiable Vanity\"",
   "image": 3012040,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

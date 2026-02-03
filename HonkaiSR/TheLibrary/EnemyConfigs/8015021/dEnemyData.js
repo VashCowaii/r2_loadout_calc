@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Phantylia the Undying",
   "image": 8015021,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

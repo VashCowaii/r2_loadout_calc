@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Decimator, Karma of Daythunder, Eye of Twilight",
   "image": 4015020,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

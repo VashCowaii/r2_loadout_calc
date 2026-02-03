@@ -2,6 +2,9 @@ let enemyData = {
   "name": "The Ascended (Bug)",
   "image": 2023031,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

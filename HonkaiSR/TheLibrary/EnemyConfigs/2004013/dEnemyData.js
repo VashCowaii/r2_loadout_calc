@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Stellaron Hunter: Kafka (Illusion)",
   "image": 2004013,
   "bar": 2,
+  "bodyType": "LittleMonster",
+  "hitClass": "A",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

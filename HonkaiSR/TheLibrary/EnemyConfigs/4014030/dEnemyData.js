@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Pollux, Netherwing Husk, Ferry of Souls",
   "image": 4014030,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

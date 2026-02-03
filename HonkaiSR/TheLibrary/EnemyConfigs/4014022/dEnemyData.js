@@ -2,6 +2,8 @@ let enemyData = {
   "name": "The Giver, Master of Legions, Lance of Fury (Complete)",
   "image": 4014022,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

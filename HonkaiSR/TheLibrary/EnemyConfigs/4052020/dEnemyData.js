@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Mirage Fizzle Kid",
   "image": 4052020,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

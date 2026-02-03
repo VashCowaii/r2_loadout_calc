@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Everwinter Shadewalker",
   "image": 1022010,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

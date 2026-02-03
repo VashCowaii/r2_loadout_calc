@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Envious Skott (Corrupted)",
   "image": 3002016,
   "bar": 1,
+  "hitClass": "D",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Twig of Hundred Eyes",
   "image": 4012090,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

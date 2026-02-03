@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Swarm: True Sting",
   "image": 8024011,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

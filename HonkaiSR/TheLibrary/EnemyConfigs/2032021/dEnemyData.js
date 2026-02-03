@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Mok Tok",
   "image": 2032021,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

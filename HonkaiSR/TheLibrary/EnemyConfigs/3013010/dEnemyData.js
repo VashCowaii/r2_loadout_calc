@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Memory Zone Meme \"Shell of Faded Rage\"",
   "image": 3013010,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

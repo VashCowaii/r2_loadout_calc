@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Hyacinthia, Eye of Twilight",
   "image": 4015021,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

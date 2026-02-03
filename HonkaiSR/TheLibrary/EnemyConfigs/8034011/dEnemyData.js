@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Ten Stonehearts: Aventurine of Stratagems (Complete)",
   "image": 8034011,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

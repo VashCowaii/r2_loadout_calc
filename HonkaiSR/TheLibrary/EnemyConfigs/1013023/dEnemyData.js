@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Automaton Direwolf (Complete)",
   "image": 1013023,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

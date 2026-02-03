@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Mydeimos, Lance of Fury",
   "image": 4014023,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

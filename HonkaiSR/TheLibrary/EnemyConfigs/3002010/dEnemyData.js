@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Mr. Domescreen",
   "image": 3002010,
   "bar": 1,
+  "hitClass": "D",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

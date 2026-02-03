@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Destruction Lotus",
   "image": 8012214,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

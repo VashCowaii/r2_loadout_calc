@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Incineration Shadewalker",
   "image": 1022020,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

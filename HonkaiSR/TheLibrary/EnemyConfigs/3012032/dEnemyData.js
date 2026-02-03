@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Sombrous Sepulcher",
   "image": 3012032,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

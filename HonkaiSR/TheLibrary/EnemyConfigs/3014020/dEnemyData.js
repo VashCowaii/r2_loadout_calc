@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Memory Zone Meme \"Something Unto Death\"",
   "image": 3014020,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Corrupting Shadowfiend: Torrential Rotbringer",
   "image": 4033011,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     72,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Lordly Trashcan",
   "image": 3002050,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

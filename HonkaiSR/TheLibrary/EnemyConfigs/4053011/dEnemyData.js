@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Elegy Siren: Insatiable Leviathan",
   "image": 4053011,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

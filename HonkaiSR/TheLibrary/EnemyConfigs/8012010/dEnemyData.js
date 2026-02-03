@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Voidranger: Reaver",
   "image": 8012010,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "hitClass": "B",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

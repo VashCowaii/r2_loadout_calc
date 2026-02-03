@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Furiae Praetor",
   "image": 4013011,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

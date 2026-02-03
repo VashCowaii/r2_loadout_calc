@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Cacophonic Conductor",
   "image": 3025013,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

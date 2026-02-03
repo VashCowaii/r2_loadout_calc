@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Thousand-Faced Skott (Corrupted)",
   "image": 3004024,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "A",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

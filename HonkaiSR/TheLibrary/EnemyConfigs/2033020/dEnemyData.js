@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Ecliptic Inner Beast & Shadow of \"Feixiao\"",
   "image": 2033020,
   "bar": 3,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

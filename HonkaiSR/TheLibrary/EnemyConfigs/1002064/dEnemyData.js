@@ -2,6 +2,9 @@ let enemyData = {
   "name": "IPC Team Leader Illusion",
   "image": 1002064,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "S",
+  "rank": "MinionLv2",
   "stArray": [
     6,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Spring Loader",
   "image": 3001010,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

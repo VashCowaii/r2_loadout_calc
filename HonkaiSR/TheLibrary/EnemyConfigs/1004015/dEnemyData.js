@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Topaz Illusion",
   "image": 1004015,
   "bar": 2,
+  "rank": "LittleBoss",
   "stArray": [
     5.142857,
     210,

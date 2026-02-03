@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Wonder Forest's Banacademic Office Staff (Complete)",
   "image": 3004022,
   "bar": 3,
+  "bodyType": "LittleMonster",
+  "hitClass": "A",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

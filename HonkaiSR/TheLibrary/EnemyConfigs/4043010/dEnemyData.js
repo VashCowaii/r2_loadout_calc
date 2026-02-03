@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Herta #ErrorModel",
   "image": 4043010,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

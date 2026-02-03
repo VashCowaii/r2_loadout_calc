@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Stellaron Hunter: Kafka (Complete)",
   "image": 2004011,
   "bar": 3,
+  "bodyType": "LittleMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

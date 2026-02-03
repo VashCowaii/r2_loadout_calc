@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Twig of Wintry Wind",
   "image": 2022071,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

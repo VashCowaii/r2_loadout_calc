@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Languid Ethmoid Bone",
   "image": 4012092,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Winder Goon",
   "image": 3002040,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

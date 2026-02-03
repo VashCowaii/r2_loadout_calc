@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Dreamjolt Troupe's Fortune Seller",
   "image": 3002020,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Meteoric Eagle",
   "image": 4022011,
   "bar": 1,
+  "hitClass": "D",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

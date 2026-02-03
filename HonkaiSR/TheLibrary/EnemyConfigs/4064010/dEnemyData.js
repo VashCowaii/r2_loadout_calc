@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Ichor Memosprite: Judge of Oblivion",
   "image": 4064010,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

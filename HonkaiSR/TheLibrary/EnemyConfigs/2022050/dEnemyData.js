@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Abundance Sprite: Wooden Lupus",
   "image": 2022050,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

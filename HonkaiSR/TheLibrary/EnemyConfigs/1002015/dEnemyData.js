@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Ice Edge",
   "image": 1002015,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "S",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

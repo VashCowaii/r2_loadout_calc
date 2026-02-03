@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Voidranger: Trampler",
   "image": 8013010,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "A",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Planeshred Claws",
   "image": 2032051,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     15,
     210,

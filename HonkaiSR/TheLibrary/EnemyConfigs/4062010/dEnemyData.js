@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Ichor Memosprite: Pheasant",
   "image": 4062010,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

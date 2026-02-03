@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Furiae Philosopher",
   "image": 4012023,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     15,
     210,

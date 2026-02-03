@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Ice Out of Space",
   "image": 8003010,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

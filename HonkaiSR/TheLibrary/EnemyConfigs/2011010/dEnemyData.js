@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Entranced Ingenium: Obedient Dracolion",
   "image": 2011010,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "Minion",
   "stArray": [
     18,
     210,

@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Grunt: Security Personnel",
   "image": 8032020,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

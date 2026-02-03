@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Starbane Doombringer",
   "image": 8015012,
   "bar": 2,
+  "hitClass": "D",
+  "rank": "BigBoss",
   "stArray": [
     18,
     210,

@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Fulminating Wolflord",
   "image": 2034014,
   "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "LittleBoss",
   "stArray": [
     18,
     210,

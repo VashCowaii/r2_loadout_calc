@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Banacademic Office's Fortune BananAdvisor",
   "image": 3002022,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

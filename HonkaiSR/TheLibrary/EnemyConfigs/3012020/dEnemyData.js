@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Memory Zone Meme \"Heartbreaker\"",
   "image": 3012020,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

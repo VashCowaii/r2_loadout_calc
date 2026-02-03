@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Mara-Struck Warden",
   "image": 2022110,
   "bar": 1,
+  "rank": "MinionLv2",
   "stArray": [
     18,
     210,

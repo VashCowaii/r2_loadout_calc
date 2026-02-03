@@ -2,6 +2,9 @@ let enemyData = {
   "name": "Searing Prowler (Bug)",
   "image": 1023011,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
+  "rank": "Elite",
   "stArray": [
     18,
     210,

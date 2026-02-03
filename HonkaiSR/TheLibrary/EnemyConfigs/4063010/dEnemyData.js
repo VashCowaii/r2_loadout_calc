@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Ichor Memosprite: Winged Serpent",
   "image": 4063010,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "rank": "Elite",
   "stArray": [
     18,
     210,
