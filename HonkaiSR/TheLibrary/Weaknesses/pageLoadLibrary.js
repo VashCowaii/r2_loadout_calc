@@ -174,7 +174,7 @@ const endgameModeDisplay = {
             // turnStarterBarAlly, .turnStarterBarEnemy, .turnStarterBarUltimate, .turnStarterBarMiniAction, .turnStarterBarMiniActionEnemy
 
             const currentSize = sizeEntry.sizeCount;
-            const currentSizeFinal = 100 * (sizeEntry.count - smallestSize) / fullSizeRange;//trimCharacterName
+            const currentSizeFinal = 100 * (sizeEntry.count - (smallestSize)) / fullSizeRange;//trimCharacterName
             // console.log(currentSizeFinal,sizeEntry.count,smallestSize,fullSizeRange)
             rankCounter++
             // if (!fuzzyMatch(currentUserInput,sizeEntry.entryName ?? sizeEntry.enemyID ?? "")) {continue;}
@@ -192,7 +192,7 @@ const endgameModeDisplay = {
                         <div class="rowSummaryDMGNameAndPercent">${sizeEntry.elem}:&nbsp;<span class="smallFont">${(sizeEntry.count).toLocaleString()} enemies</span></div>
                         
                         <div class="actionDetailBodyRowSummaryDMG">
-                            <div class="rowSummaryDMGBarDynamic" style="width:${currentSizeFinal}%;background-color: #6e2020"></div>
+                            <div class="rowSummaryDMGBarDynamic" style="width:${Math.max(currentSizeFinal,1)}%;background-color: #6e2020"></div>
                             
                         </div>
                         
