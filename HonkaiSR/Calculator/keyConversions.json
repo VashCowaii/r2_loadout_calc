@@ -5,6 +5,7 @@
     "BreakDamageExtraAddedRatio": "DamageBreakMulti",
     "StanceBreakAddedRatio": "DamageBreakEfficiency",
     "StanceBreakAddedRatioOLDDEFINITION": "SuperBreakMaybe",
+    "StanceBreakResistance": "Toughness Reduction Resistance",
 
     "MaxStance": "ToughnessMax",
     "CurrentStance": "CurrentToughness",

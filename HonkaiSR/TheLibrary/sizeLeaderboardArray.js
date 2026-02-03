@@ -325,7 +325,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3021022,
     "lineCount": 3321,
-    "sizeCount": 109571
+    "sizeCount": 109661
   },
   {
     "entryType": "enemy",
@@ -337,7 +337,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3021032,
     "lineCount": 3318,
-    "sizeCount": 109187
+    "sizeCount": 109277
   },
   {
     "entryType": "char",
@@ -442,6 +442,30 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1202.png",
     "lineCount": 2600,
     "sizeCount": 90516
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3024011,
+    "lineCount": 2733,
+    "sizeCount": 89140
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3024014,
+    "lineCount": 2733,
+    "sizeCount": 89140
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3024010,
+    "lineCount": 2727,
+    "sizeCount": 89112
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3024012,
+    "lineCount": 2726,
+    "sizeCount": 89071
   },
   {
     "entryType": "char",
@@ -717,7 +741,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 8012147,
     "lineCount": 1275,
-    "sizeCount": 43512
+    "sizeCount": 43522
   },
   {
     "entryType": "char",
@@ -774,6 +798,30 @@ let sizeLeaderboardArray = [
     "sizeCount": 32582
   },
   {
+    "entryType": "enemy",
+    "enemyID": 3021020,
+    "lineCount": 852,
+    "sizeCount": 30569
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021021,
+    "lineCount": 852,
+    "sizeCount": 30569
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021040,
+    "lineCount": 807,
+    "sizeCount": 29319
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021041,
+    "lineCount": 807,
+    "sizeCount": 29319
+  },
+  {
     "entryType": "relic",
     "entryName": "Penacony, Land of the Dreams",
     "trimCharacterName": "PenaconyLandoftheDreams",
@@ -788,6 +836,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/21011.png",
     "lineCount": 644,
     "sizeCount": 22184
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021030,
+    "lineCount": 622,
+    "sizeCount": 20993
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 3021031,
+    "lineCount": 622,
+    "sizeCount": 20993
   },
   {
     "entryType": "lc",

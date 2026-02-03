@@ -135,6 +135,7 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "abilityList",
+            "conditions",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Trigger Joint-Attack Ability")
         // let returnString = "";
@@ -160,10 +161,20 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.abilityList,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.references,initialCounter);}
 
+
+
+        const conditionObject = parseRef.conditions;
+        const conditionName = conditionObject?.name;
+        let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        const functionExists = megaParsingFuckery[conditionName];
+        if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
+
         // rotationConditionOperatorBox
         return `
             <div class="rotationConditionOperatorHeaderAbilityTrigger">${parseRef.name}</div>
-            
+            ${returnString}
             ${hasParse ? `<div class="rotationConditionOperatorHeader">ABILITIES</div>
             <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                 ${parseString}
@@ -3160,12 +3171,13 @@ const megaParsingFuckeryPain = {
             "target",
             "characterName",
             "isCompareUniqueID",
+            "isBaseCompare",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Enemy ID");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}${parseRef.isBaseCompare ? "[BASE ID]" : ""}:</div>&nbsp;
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)} = ${parseRef.ID?.displayLines ?? parseRef.ID}(${parseRef.characterName})
         </div>
         <div class="modifierDetailsBox">
@@ -6317,6 +6329,7 @@ const megaParsingFuckeryPain = {
             "name",
             "target",
             "reason",
+            "living",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Entity Exit Stage");
 
@@ -6335,6 +6348,7 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.reason,"Reason")}
+            ${getStandardNameDisplay(initialCounter,parseRef.living,"Living Only")}
         </div>`;
     },
     "Force Target-Lock on Target"(parseRef,initialCounter) {
