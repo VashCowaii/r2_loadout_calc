@@ -5740,6 +5740,26 @@ const megaParsingFuckeryPain = {
             ${parseRef.invertCondition ? `NOT ` : ""}${parseRef.team}, ${parseRef.type}
         </div>`;
     },
+    "Set Mapping Point"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "point",
+            "mapTo",
+            "reset",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Mapping Point");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.point,"Point")}
+            ${getStandardNameDisplay(initialCounter,parseRef.mapTo,"Map To")}
+            ${getStandardNameDisplay(initialCounter,parseRef.reset,"Reset")}
+
+        </div>`;
+    },
     "Establish Group Relationship"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -7918,6 +7938,7 @@ const megaParsingFuckeryPain = {
             "execute",
             "isUnique",
             "count",
+            "maskKey",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Random Event");
 
@@ -7948,6 +7969,8 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.odds,"ODDS")}
                 ${getStandardNameDisplay(initialCounter,parseRef.count,"Count")}
                 ${getStandardNameDisplay(initialCounter,parseRef.isUnique,"Is Unique")}
+                ${getStandardNameDisplay(initialCounter,parseRef.maskKey,"Mask Key")}
+                
             </div>
 
             <div class="rotationConditionOperatorBoxMain">
@@ -9314,6 +9337,52 @@ const megaParsingFuckeryPain = {
                 ${getStandardNameDisplay(initialCounter,parseRef.locationType,"Location Type")}
                 ${getStandardNameDisplay(initialCounter,parseRef.overrideActivityGroup,"Override Activity Group")}
                 ${getStandardNameDisplay(initialCounter,parseRef.slot,"Slot")}
+
+            </div>
+        </details>
+        `;
+        // return `
+        //     <div class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader">
+        //         <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+        //         ${returnString}
+        //     </div>
+            
+        //     <div class="rotationConditionOperatorBoxMain">
+        //         ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">THEN</div>
+        //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+        //             ${parseString}
+        //         </div>` : ""}
+        //         ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">ELSE</div>
+        //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+        //             ${refString}
+        //         </div>` : ""}
+        //     </div>
+        // `;
+    },
+    "Create Enemy as Body Part"(parseRef,initialCounter) {
+        initialCounter++;
+        const knownKeySet = new Set ([
+            "name",
+            "value",
+            "partName",
+            "offset",
+            "type",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create Enemy as Body Part");
+
+
+        return `
+        <details class="rotationsPermaConditionsExpand" open="">
+            <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+            </summary>
+
+            <div class="modifierDetailsBox">
+                ${getStandardNameDisplay(initialCounter,parseRef.value,"Custom ID")}
+                ${getStandardNameDisplay(initialCounter,parseRef.partName,"Part")}
+                ${getStandardNameDisplay(initialCounter,parseRef.offset,"Offset")}
+
+                ${getStandardNameDisplay(initialCounter,parseRef.type,"Type")}
 
             </div>
         </details>

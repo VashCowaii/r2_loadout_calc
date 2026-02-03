@@ -102,6 +102,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 179962
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8015012,
+    "lineCount": 5185,
+    "sizeCount": 179866
+  },
+  {
     "entryType": "char",
     "entryName": "Aventurine",
     "trimCharacterName": "Aventurine",
@@ -276,6 +282,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1303.png",
     "lineCount": 3269,
     "sizeCount": 123768
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8013145,
+    "lineCount": 3445,
+    "sizeCount": 120964
   },
   {
     "entryType": "char",
@@ -576,6 +588,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 63236
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8012146,
+    "lineCount": 1797,
+    "sizeCount": 63091
+  },
+  {
     "entryType": "char",
     "entryName": "Clara",
     "trimCharacterName": "Clara",
@@ -590,6 +608,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1209.png",
     "lineCount": 1754,
     "sizeCount": 58015
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8015010,
+    "lineCount": 1923,
+    "sizeCount": 57395
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8015011,
+    "lineCount": 1923,
+    "sizeCount": 57395
   },
   {
     "entryType": "char",
@@ -622,6 +652,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1301.png",
     "lineCount": 1617,
     "sizeCount": 53067
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8013141,
+    "lineCount": 1661,
+    "sizeCount": 52620
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8013144,
+    "lineCount": 1661,
+    "sizeCount": 52620
   },
   {
     "entryType": "char",
@@ -670,6 +712,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1106.png",
     "lineCount": 1372,
     "sizeCount": 44342
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8012147,
+    "lineCount": 1275,
+    "sizeCount": 43512
   },
   {
     "entryType": "char",
@@ -870,12 +918,36 @@ let sizeLeaderboardArray = [
     "sizeCount": 13693
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8012140,
+    "lineCount": 432,
+    "sizeCount": 13663
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8012143,
+    "lineCount": 432,
+    "sizeCount": 13663
+  },
+  {
     "entryType": "lc",
     "entryName": "Earthly Escapade",
     "trimCharacterName": "EarthlyEscapade",
     "entryIcon": "icon/light_cone/23021.png",
     "lineCount": 388,
     "sizeCount": 13591
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8012142,
+    "lineCount": 426,
+    "sizeCount": 13473
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8012145,
+    "lineCount": 426,
+    "sizeCount": 13473
   },
   {
     "entryType": "lc",
