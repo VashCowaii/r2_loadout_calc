@@ -102,7 +102,7 @@ const configAbility = {
       "for": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0007_02",
       "execute": [
         {
-          "eventTrigger": "Being Weakness Break Delayed [Owner]",
+          "eventTrigger": "Being Toughness Bar Reset [Owner]",
           "execute": [
             {
               "name": "Add Events/Bonuses",
