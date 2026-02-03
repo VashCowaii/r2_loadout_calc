@@ -314,7 +314,7 @@ const configAbility = {
                   "modifiedValuesArray": [
                     {
                       "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                       "value": "_DamageUpRatio"
                     }
                   ]

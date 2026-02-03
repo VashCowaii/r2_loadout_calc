@@ -65,7 +65,7 @@
     "DotDamageAddedRatio": "DamageDOT",
     "AllDamageTypeAddedRatio": "DamageAll",
 
-    "AllDamageAddedRatio": "DamageAllMulti[?]",
+    "AllDamageAddedRatio": "DamageAllTypes",
 
     "StatusProbabilityBase": "EffectHitRate",
     "StatusProbability": "EffectHitRateSUM",

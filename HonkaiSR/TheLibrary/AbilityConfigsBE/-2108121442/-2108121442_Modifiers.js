@@ -2024,7 +2024,7 @@ const configAbility = {
                   "modifiedValuesArray": [
                     {
                       "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                       "value": "DV_FantasticStory_PlusAbility_2012_ADF_1"
                     }
                   ]
@@ -2352,7 +2352,7 @@ const configAbility = {
                   "modifiedValuesArray": [
                     {
                       "on": "Attacker",
-                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                       "value": "(_Current_Layer * DV_FantasticStory_PlusAbility_2011_ADF_1)"
                     }
                   ]

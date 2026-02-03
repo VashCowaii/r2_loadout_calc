@@ -5965,7 +5965,7 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                           "value": "#ADF_1"
                         }
                       ]
@@ -6812,7 +6812,7 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                           "value": "#ADF_1"
                         }
                       ]
@@ -8265,7 +8265,7 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                           "value": "MDF_AllDamageAddedRatio"
                         }
                       ]
@@ -8366,7 +8366,7 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                           "value": "#ADF_1"
                         }
                       ]
@@ -8990,7 +8990,7 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                           "value": "#ADF_1"
                         }
                       ]
@@ -11913,7 +11913,7 @@ const compositeAbilityObject = {
                           "modifiedValuesArray": [
                             {
                               "on": "Attacker",
-                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                               "value": "(#ADF_1 + #ADF_2)"
                             }
                           ]
@@ -11925,7 +11925,7 @@ const compositeAbilityObject = {
                           "modifiedValuesArray": [
                             {
                               "on": "Attacker",
-                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                               "value": "#ADF_1"
                             }
                           ]
@@ -12601,7 +12601,7 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                           "value": "#ADF_1"
                         }
                       ]
@@ -12725,7 +12725,7 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "Attacker",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllMulti[?]</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAllTypes</span>&nbsp;",
                           "value": "#ADF_1"
                         }
                       ]
