@@ -304,6 +304,7 @@ const megaParsingFuckeryPain = {
             "references",
             "inherentTarget",
             "parameters",
+            "conditions",
 
             //potentially not gonna use
             "isTrigger"
@@ -332,6 +333,15 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.parse,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.references,initialCounter);}
 
+
+        const conditionObject = parseRef.conditions;
+        const conditionName = conditionObject?.name;
+        let returnString = "" + (typeof conditionObject === "string" ? `<div class="rotationsConditionsBodyBox">${conditionObject}</div>` : "");
+        const functionExists = megaParsingFuckery[conditionName];
+        if (functionExists) {returnString += `<div class="rotationsConditionsBodyBox">` + functionExists(conditionObject,initialCounter) + `</div>`;}
+
+        if (conditionObject && !returnString) {throw new Error(`Missing condition display-only definition in IF: ${conditionName}`)}
+
         // rotationConditionOperatorBox
         return `
             <div class="rotationConditionOperatorHeaderAbilityTrigger">${parseRef.name}</div>
@@ -345,6 +355,7 @@ const megaParsingFuckeryPain = {
             <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                 ${refString}
             </div>` : ""}
+            ${returnString}
 
             <div class="modifierDetailsBox">
                 ${getStandardNameDisplay(initialCounter,parseRef.inherentTarget,"Inherent Target",true)}
@@ -3490,6 +3501,24 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
             ${parseRef.team}
+        </div>`;
+    },
+    "Add Target by Enemy ID"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "ID",
+            "characterName",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Target by Enemy ID");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.ID,"ID")}
+
+            ${getStandardNameDisplay(initialCounter,parseRef.characterName,"Name",true)}
         </div>`;
     },
     "Add Target by Pseudo-Character Partner"(parseRef,initialCounter) {

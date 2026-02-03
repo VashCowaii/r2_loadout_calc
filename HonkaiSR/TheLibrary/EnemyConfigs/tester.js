@@ -4607,16 +4607,16 @@ const userTriggers = {
 
 
                 ${enemyData.rank ? `<div class="imageRowStatisticBox${2} imageRowStatisticBoxEnemyAdjustmentRow">
-                    <div class="imageRowStatisticNameBox">Rank</div>
-                    <div class="imageRowStatisticStatBox">${rankConversions[enemyData.rank]}</div>
+                    <div class="imageRowStatisticNameBox crossThroughTextFaded">Rank</div>
+                    <div class="imageRowStatisticStatBox crossThroughTextFaded">${rankConversions[enemyData.rank]}</div>
                 </div>` : ""}
                 ${enemyData.bodyType ? `<div class="imageRowStatisticBox${2} imageRowStatisticBoxEnemyAdjustmentRow">
-                    <div class="imageRowStatisticNameBox">Body Type</div>
-                    <div class="imageRowStatisticStatBox">${enemyData.bodyType}</div>
+                    <div class="imageRowStatisticNameBox crossThroughTextFaded">Body Type</div>
+                    <div class="imageRowStatisticStatBox crossThroughTextFaded">${enemyData.bodyType}</div>
                 </div>` : ""}
                 ${enemyData.hitClass ? `<div class="imageRowStatisticBox${2} imageRowStatisticBoxEnemyAdjustmentRow">
-                    <div class="imageRowStatisticNameBox">Hit Class</div>
-                    <div class="imageRowStatisticStatBox">${enemyData.hitClass}</div>
+                    <div class="imageRowStatisticNameBox crossThroughTextFaded">Hit Class</div>
+                    <div class="imageRowStatisticStatBox crossThroughTextFaded">${enemyData.hitClass}</div>
                 </div>` : ""}
                 
                 

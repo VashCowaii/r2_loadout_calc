@@ -14,6 +14,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 352560
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2004013,
+    "lineCount": 10415,
+    "sizeCount": 348289
+  },
+  {
     "entryType": "char",
     "entryName": "Castorice",
     "trimCharacterName": "Castorice",
@@ -138,6 +144,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1006.png",
     "lineCount": 4115,
     "sizeCount": 163276
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004011,
+    "lineCount": 4795,
+    "sizeCount": 160754
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004012,
+    "lineCount": 4795,
+    "sizeCount": 160754
   },
   {
     "entryType": "char",
@@ -594,6 +612,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1002.png",
     "lineCount": 2062,
     "sizeCount": 70283
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004010,
+    "lineCount": 2210,
+    "sizeCount": 70167
   },
   {
     "entryType": "char",
