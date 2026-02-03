@@ -4219,7 +4219,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "multi": {
+          "multiBase": {
             "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
             "displayLines": "{[SkillP02[0]]}",
             "constants": [],
@@ -4523,7 +4523,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "multi": 0
+          "multiBase": 0
         },
         {
           "name": "Remove Events/Bonuses",
@@ -5603,7 +5603,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "multi": 0
+                  "multiBase": 0
                 },
                 {
                   "name": "UI Display Event (On Entity)",
@@ -5707,7 +5707,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "multi": 0
+                      "multiBase": 0
                     },
                     {
                       "name": "UI Display Event (On Entity)",
@@ -6559,7 +6559,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "multi": 0
+          "multiBase": 0
         },
         {
           "name": "Remove Events/Bonuses",
@@ -6750,7 +6750,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       },
-                      "multi": 0
+                      "multiBase": 0
                     },
                     {
                       "name": "Add Events/Bonuses",

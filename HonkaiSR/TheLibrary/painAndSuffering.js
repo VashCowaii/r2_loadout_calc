@@ -3277,6 +3277,7 @@ const megaParsingFuckeryPain = {
             // "value",
             "multi",
             "multiAdd",
+            "multiBase",
             "add",
             "set",
             "advanceType",
@@ -3303,6 +3304,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.set,"Set")}
             ${getStandardNameDisplay(initialCounter,parseRef.multi,"AV Multi (x%)")}
             ${getStandardNameDisplay(initialCounter,parseRef.multiAdd,"AV Added Multi (+%)")}
+            ${getStandardNameDisplay(initialCounter,parseRef.multiBase,"AV BASE Multi (x%)")}
 
             ${getStandardNameDisplay(initialCounter,parseRef.isStartingAV,"Add")}
         </div>`;

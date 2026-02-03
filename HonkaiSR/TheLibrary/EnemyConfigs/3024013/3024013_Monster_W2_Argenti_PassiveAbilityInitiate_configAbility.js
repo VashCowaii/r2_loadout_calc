@@ -128,7 +128,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "multi": 0
+                  "multiBase": 0
                 },
                 {
                   "name": "Add Events/Bonuses",
