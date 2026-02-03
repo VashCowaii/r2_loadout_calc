@@ -79,7 +79,7 @@ const otherModeList = [
     },
     {
         name: "Weakness Leaderboard",
-        img: "/HonkaiSR/icon/element/fire.png",
+        img: "/HonkaiSR/icon/element/Fire.png",
         desc: "What are the most common weaknesses in the game?",
         link: "/HonkaiSR/TheLibrary/Weaknesses/"
     },
