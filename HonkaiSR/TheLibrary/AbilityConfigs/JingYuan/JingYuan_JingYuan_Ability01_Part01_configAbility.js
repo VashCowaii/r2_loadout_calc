@@ -23,7 +23,8 @@ const configAbility = {
       },
       "ability": "JingYuan_Ability01_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

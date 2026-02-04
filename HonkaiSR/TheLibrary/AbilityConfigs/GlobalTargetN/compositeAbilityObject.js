@@ -1413,6 +1413,37 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Valkyrie Skill Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "Enemy_W2_Valkyrie02_Ability04_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                    "casterFilter": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Enemy Kafka Skill4 Other Targets",
           "isTargetOperator": false,
           "execute": [
@@ -1446,6 +1477,60 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Svarog's Confinement Target v2",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Unselectable Targets}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "Monster_W1_Svarog_RL_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Svarog's Confinement Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Unselectable Targets}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "Svarog_Control_Modifier[<span class=\"descriptionNumberColor\">Restrain</span>]"
                   }
                 }
               ]

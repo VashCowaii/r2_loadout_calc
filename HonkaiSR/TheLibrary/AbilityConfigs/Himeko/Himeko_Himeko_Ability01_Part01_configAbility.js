@@ -23,7 +23,8 @@ const configAbility = {
       },
       "ability": "Himeko_Ability01_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

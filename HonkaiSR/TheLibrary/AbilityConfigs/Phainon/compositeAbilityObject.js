@@ -5304,6 +5304,7 @@ const compositeAbilityObject = {
           "isTrigger": true
         },
         "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "IF",
           "conditions": {
@@ -5564,7 +5565,8 @@ const compositeAbilityObject = {
           },
           "ability": "Phainon_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

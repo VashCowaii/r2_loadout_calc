@@ -1,0 +1,63 @@
+const configAbility = {
+  "fileName": "1012041_Monster_Svarog_RL_Insert",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Modifier Holder}}"
+        },
+        "modifier": "Monster_W1_Svarog_RL_Control_OnPart_Modifier"
+      },
+      "passed": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Svarog's Confinement Target v2}}"
+          },
+          "variableName": "Owner_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Svarog's Confinement Target v2}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Physical",
+            "Damage": {
+              "operator": "Variables[0] (Owner_MaxHP) || Variables[1] ({[PassiveSkill03[0]]}) || MUL || RETURN",
+              "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})",
+              "constants": [],
+              "variables": [
+                "Owner_MaxHP",
+                "{[PassiveSkill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Additional DMG",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "UI Display Event (On Entity)",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Svarog's Confinement Target v2}}"
+          },
+          "popUpText": "Restrained"
+        }
+      ]
+    }
+  ],
+  "references": []
+}

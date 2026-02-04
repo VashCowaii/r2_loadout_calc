@@ -449,6 +449,7 @@ const compositeAbilityObject = {
       ],
       "parse": [
         "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Consume",
           "consumeFrom": "CurrentHP",
@@ -2003,7 +2004,8 @@ const compositeAbilityObject = {
           },
           "ability": "Mydeimos_Ability02_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -2073,7 +2075,8 @@ const compositeAbilityObject = {
           },
           "ability": "Mydeimos_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

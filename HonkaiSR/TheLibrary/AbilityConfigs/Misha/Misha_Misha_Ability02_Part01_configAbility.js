@@ -23,7 +23,8 @@ const configAbility = {
       },
       "ability": "Misha_Ability02_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

@@ -23,7 +23,8 @@ const configAbility = {
       },
       "ability": "Hook_Ability02_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

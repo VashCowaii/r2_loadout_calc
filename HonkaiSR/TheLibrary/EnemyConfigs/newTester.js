@@ -503,7 +503,18 @@ const megaParsingFuckery = {
                 (_,skill,index) => {
                     const currentSkillEntryList = paramObject[skill];
 
+                    
+
                     let paramIndex = Number(index);
+
+
+                    if (currentSkillEntryList == undefined || (currentSkillEntryList.paramOverrides?.[paramIndex] == undefined && currentSkillEntryList.params?.[paramIndex] == undefined)) {
+                        // console.log(skill,index,paramObject,currentSkillEntryList)
+                        return "UnusedUnderThisBase_" + skill + index
+                    }
+
+
+                    // console.log(paramIndex,skill,paramObject)
                     
                     let paramEntry = currentSkillEntryList.paramOverrides?.[paramIndex] && currentSkillEntryList.paramOverrides[paramIndex] != "-" ? currentSkillEntryList.paramOverrides[paramIndex] : currentSkillEntryList.params[paramIndex];
 

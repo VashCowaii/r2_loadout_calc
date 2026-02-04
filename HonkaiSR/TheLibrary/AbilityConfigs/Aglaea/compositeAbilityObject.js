@@ -1855,7 +1855,8 @@ const compositeAbilityObject = {
           },
           "ability": "Aglaea_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "whenAdded": [
         {
@@ -4934,7 +4935,8 @@ const compositeAbilityObject = {
           "failed": [
             "Deleted bullshit"
           ]
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

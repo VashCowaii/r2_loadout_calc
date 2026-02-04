@@ -447,6 +447,7 @@ const configAbility = {
       ]
     },
     "Deleted bullshit",
+    "Deleted bullshit",
     {
       "name": "Update Displayed Energy Bar",
       "value": {

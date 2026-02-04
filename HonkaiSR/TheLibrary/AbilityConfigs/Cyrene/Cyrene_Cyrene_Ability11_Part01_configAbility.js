@@ -40,7 +40,8 @@ const configAbility = {
       },
       "ability": "Cyrene_Ability11_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

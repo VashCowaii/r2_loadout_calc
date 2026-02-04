@@ -252,7 +252,16 @@ const configAbility = {
                   }
                 }
               ],
-              "failed": []
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "M_BlackSwan_Maze_StopAddDot"
+                }
+              ]
             }
           ]
         },

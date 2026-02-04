@@ -1152,6 +1152,7 @@ const compositeAbilityObject = {
           "ability": "Sampo_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

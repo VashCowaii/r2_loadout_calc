@@ -23,7 +23,8 @@ const configAbility = {
       },
       "ability": "Aglaea_Ability01_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "whenAdded": [
     {

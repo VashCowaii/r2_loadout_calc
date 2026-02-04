@@ -23,7 +23,8 @@ const configAbility = {
       },
       "ability": "Ren_Ability11_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

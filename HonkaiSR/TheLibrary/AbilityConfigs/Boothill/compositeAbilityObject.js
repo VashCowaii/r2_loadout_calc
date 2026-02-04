@@ -2447,6 +2447,7 @@ const compositeAbilityObject = {
           "ability": "Boothill_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

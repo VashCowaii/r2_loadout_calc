@@ -14,6 +14,7 @@ const configAbility = {
   ],
   "parse": [
     "Deleted bullshit",
+    "Deleted bullshit",
     {
       "name": "Adjust Variable Value",
       "adjustmentType": "Add to Value (Default)",

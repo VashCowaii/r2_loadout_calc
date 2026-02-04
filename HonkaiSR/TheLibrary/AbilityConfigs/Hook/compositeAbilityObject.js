@@ -1045,7 +1045,8 @@ const compositeAbilityObject = {
           },
           "ability": "Hook_Ability21_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -1206,7 +1207,8 @@ const compositeAbilityObject = {
           },
           "ability": "Hook_Ability02_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -1303,7 +1305,8 @@ const compositeAbilityObject = {
           },
           "ability": "Hook_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

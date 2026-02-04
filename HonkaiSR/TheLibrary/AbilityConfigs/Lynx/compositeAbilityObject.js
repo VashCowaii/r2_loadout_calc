@@ -1353,6 +1353,7 @@ const compositeAbilityObject = {
           "ability": "Lynx_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

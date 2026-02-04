@@ -1150,6 +1150,7 @@ const compositeAbilityObject = {
           ]
         },
         "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Update Displayed Energy Bar",
           "value": {
@@ -1369,7 +1370,8 @@ const compositeAbilityObject = {
           },
           "ability": "Luka_Ability11_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -1528,7 +1530,8 @@ const compositeAbilityObject = {
           },
           "ability": "Luka_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

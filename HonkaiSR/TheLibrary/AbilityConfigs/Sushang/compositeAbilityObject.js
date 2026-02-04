@@ -1705,7 +1705,8 @@ const compositeAbilityObject = {
           },
           "ability": "Sushang_Ability02_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -1840,7 +1841,8 @@ const compositeAbilityObject = {
           },
           "ability": "Sushang_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

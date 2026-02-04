@@ -1061,6 +1061,7 @@ const compositeAbilityObject = {
           "ability": "Harscyline_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

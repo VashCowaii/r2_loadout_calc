@@ -25,7 +25,9 @@ const compositeAbilityObject = {
       "abilityType": null,
       "energy": null,
       "toughnessList": null,
-      "parse": [],
+      "parse": [
+        "Deleted bullshit"
+      ],
       "references": []
     },
     "8013144_Monster_AML_Boss_Part2_HitEffect": {

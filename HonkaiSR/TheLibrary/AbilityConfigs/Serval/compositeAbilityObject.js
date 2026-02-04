@@ -769,6 +769,7 @@ const compositeAbilityObject = {
           "ability": "Serval_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

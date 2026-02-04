@@ -15,6 +15,7 @@ const configAbility = {
   ],
   "parse": [
     "Deleted bullshit",
+    "Deleted bullshit",
     {
       "name": "Trigger Ability",
       "from": {

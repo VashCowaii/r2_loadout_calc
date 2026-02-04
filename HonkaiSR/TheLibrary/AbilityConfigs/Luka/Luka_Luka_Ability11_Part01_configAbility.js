@@ -26,7 +26,8 @@ const configAbility = {
       },
       "ability": "Luka_Ability11_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

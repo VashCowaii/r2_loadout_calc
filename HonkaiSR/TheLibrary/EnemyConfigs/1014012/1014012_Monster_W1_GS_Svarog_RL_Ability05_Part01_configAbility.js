@@ -1,0 +1,25 @@
+const configAbility = {
+  "fileName": "1014012_Monster_W1_GS_Svarog_RL_Ability05_Part01",
+  "childAbilityList": [
+    "1014012_Monster_W1_GS_Svarog_RL_Ability05_Part01",
+    "1014012_Monster_W1_GS_Svarog_RL_Ability05_Part02",
+    "1014012_Monster_W1_GS_Svarog_RL_Ability05_Camera"
+  ],
+  "skillTrigger": "Skill05",
+  "abilityType": "Basic ATK",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Trigger Ability",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "ability": "Monster_W1_GS_Svarog_RL_Ability05_Part02",
+      "isTrigger": true
+    },
+    "Deleted bullshit"
+  ],
+  "references": []
+}

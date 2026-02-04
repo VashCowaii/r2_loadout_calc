@@ -23,6 +23,7 @@ const configAbility = {
       "ability": "Saber_Ability01_Part02",
       "isTrigger": true
     },
+    "Deleted bullshit",
     "Deleted bullshit"
   ],
   "references": []

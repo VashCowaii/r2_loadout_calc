@@ -3,6 +3,8 @@ const configAbility = {
   "abilityType": null,
   "energy": null,
   "toughnessList": null,
-  "parse": [],
+  "parse": [
+    "Deleted bullshit"
+  ],
   "references": []
 }

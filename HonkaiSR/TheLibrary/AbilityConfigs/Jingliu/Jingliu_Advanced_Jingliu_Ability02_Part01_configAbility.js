@@ -23,6 +23,7 @@ const configAbility = {
       "ability": "Advanced_Jingliu_Ability02_Part02",
       "isTrigger": true
     },
+    "Deleted bullshit",
     "Deleted bullshit"
   ],
   "references": []

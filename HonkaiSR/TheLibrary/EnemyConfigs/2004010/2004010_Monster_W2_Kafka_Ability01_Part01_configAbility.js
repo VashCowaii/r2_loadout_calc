@@ -19,7 +19,8 @@ const configAbility = {
       },
       "ability": "Monster_W2_Kafka_Ability01_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

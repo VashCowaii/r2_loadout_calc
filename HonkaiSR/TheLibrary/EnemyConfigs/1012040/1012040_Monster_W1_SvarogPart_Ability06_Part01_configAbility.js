@@ -1,0 +1,54 @@
+const configAbility = {
+  "fileName": "1012040_Monster_W1_SvarogPart_Ability06_Part01",
+  "childAbilityList": [
+    "1012040_Monster_W1_SvarogPart_Ability06_Part01",
+    "1012040_Monster_W1_SvarogPart_Ability06_Part02",
+    "1012040_Monster_W1_SvarogPart_Ability06_Camera"
+  ],
+  "skillTrigger": "Skill06",
+  "abilityType": "Skill",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Trigger Ability",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "ability": "Monster_W1_SvarogPart_Ability06_Part02",
+      "isTrigger": true
+    },
+    "Deleted bullshit",
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "modifier": "StanceBreakState"
+      },
+      "passed": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "StanceBreakState"
+        }
+      ]
+    },
+    {
+      "name": "Change Character Transformation",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "phase": "Phase1"
+    }
+  ],
+  "references": []
+}

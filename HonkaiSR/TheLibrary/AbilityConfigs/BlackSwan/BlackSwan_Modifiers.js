@@ -35,6 +35,11 @@ const configAbility = {
       "modifierFlags": [
         "RemoveWhenCasterDead",
         "KeepOnDeathrattle"
+      ],
+      "stackData": [],
+      "latentQueue": [
+        "MazeSkill_Triggered",
+        "_can_continue"
       ]
     },
     {
