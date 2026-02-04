@@ -1,5 +1,11 @@
 let sizeLeaderboardArray = [
   {
+    "entryType": "enemy",
+    "enemyID": 2004014,
+    "lineCount": 16362,
+    "sizeCount": 564209
+  },
+  {
     "entryType": "char",
     "entryName": "Cyrene",
     "trimCharacterName": "Cyrene",
@@ -17,7 +23,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 2004013,
     "lineCount": 10415,
-    "sizeCount": 348289
+    "sizeCount": 348487
   },
   {
     "entryType": "char",
@@ -156,6 +162,12 @@ let sizeLeaderboardArray = [
     "enemyID": 2004012,
     "lineCount": 4795,
     "sizeCount": 160754
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2004015,
+    "lineCount": 4791,
+    "sizeCount": 160625
   },
   {
     "entryType": "char",

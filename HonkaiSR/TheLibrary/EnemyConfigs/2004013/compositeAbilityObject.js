@@ -9341,11 +9341,11 @@ const compositeAbilityObject = {
                           {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (AIFlag) || RETURN",
-                              "displayLines": "AIFlag",
+                              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__24) || RETURN",
+                              "displayLines": "ENEMIES_OBJECT_UNUSED__24",
                               "constants": [],
                               "variables": [
-                                "AIFlag"
+                                "ENEMIES_OBJECT_UNUSED__24"
                               ]
                             },
                             "target": {
@@ -9357,11 +9357,11 @@ const compositeAbilityObject = {
                           {
                             "name": "Enemy ID",
                             "ID": {
-                              "operator": "Variables[0] (DisPelCount) || RETURN",
-                              "displayLines": "DisPelCount",
+                              "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__25) || RETURN",
+                              "displayLines": "ENEMIES_OBJECT_UNUSED__25",
                               "constants": [],
                               "variables": [
-                                "DisPelCount"
+                                "ENEMIES_OBJECT_UNUSED__25"
                               ]
                             },
                             "target": {
@@ -9553,11 +9553,11 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (AIFlag) || RETURN",
-                                    "displayLines": "AIFlag",
+                                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__24) || RETURN",
+                                    "displayLines": "ENEMIES_OBJECT_UNUSED__24",
                                     "constants": [],
                                     "variables": [
-                                      "AIFlag"
+                                      "ENEMIES_OBJECT_UNUSED__24"
                                     ]
                                   },
                                   "locationType": "First"
@@ -9595,11 +9595,11 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Enemy Entry",
                                   "enemyID": {
-                                    "operator": "Variables[0] (DisPelCount) || RETURN",
-                                    "displayLines": "DisPelCount",
+                                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__25) || RETURN",
+                                    "displayLines": "ENEMIES_OBJECT_UNUSED__25",
                                     "constants": [],
                                     "variables": [
-                                      "DisPelCount"
+                                      "ENEMIES_OBJECT_UNUSED__25"
                                     ]
                                   },
                                   "locationType": "Last"
