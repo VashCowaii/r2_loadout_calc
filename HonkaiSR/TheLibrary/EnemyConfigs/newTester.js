@@ -514,7 +514,7 @@ const megaParsingFuckery = {
                     }
 
 
-                    console.log(paramIndex,skill,paramObject)
+                    // console.log(paramIndex,skill,paramObject)
                     
                     let paramEntry = currentSkillEntryList.paramOverrides?.[paramIndex] && currentSkillEntryList.paramOverrides[paramIndex] != "-" ? currentSkillEntryList.paramOverrides[paramIndex] : currentSkillEntryList.params[paramIndex];
 
