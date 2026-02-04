@@ -1,0 +1,191 @@
+const configAbility = {
+  "fileName": "1004032_Monster_W1_Bronya_IF_02_Ability04_Insert_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "Enemy_W1_Bronya_IF_02_WeaknessProtect"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "Enemy_W1_Bronya_IF_02_EnhancePerTurn[<span class=\"descriptionNumberColor\">Carried By Inertia</span>]",
+      "valuePerStack": {
+        "MDF_SpeedUpPerLayer": {
+          "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
+          "displayLines": "{[SkillP04[0]]}",
+          "constants": [],
+          "variables": [
+            "{[SkillP04[0]]}"
+          ]
+        },
+        "MDF_AttackUpPerLayer": {
+          "operator": "Variables[0] ({[SkillP04[1]]}) || RETURN",
+          "displayLines": "{[SkillP04[1]]}",
+          "constants": [],
+          "variables": [
+            "{[SkillP04[1]]}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "Monster_W1_Bronya_IF_02_Toast"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Level Entity}}"
+        },
+        "value1": "Gepard_LimboFlag",
+        "compareType": "=",
+        "value2": 1
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+          "valuePerStack": {
+            "MDF_SpeedUp": {
+              "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+              "displayLines": "{[SkillP01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP01[0]]}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "AIFlag",
+          "value": 12
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "OneMorePerTurn"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "MoreOneMorePerTurn"
+        }
+      ],
+      "failed": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "AIFlag",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "Shot Fired",
+      "execute": [
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "canPhase": true,
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+              "displayLines": "{[Skill04[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill04[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "100%"
+          }
+        }
+      ]
+    },
+    "Trigger: Attack End",
+    {
+      "name": "Action Advance/Delay",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Ability Target(ST)}}"
+      },
+      "advanceType": "Set",
+      "multiAdd": "{[Skill04[1]]}"
+    },
+    {
+      "name": "Action Advance/Delay",
+      "advanceType": "Set",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "multiBase": 0
+    }
+  ],
+  "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "Monster_W1_Bronya_IF_02_Toast",
+      "execute": [
+        {
+          "eventTrigger": "Turn End [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "modifier": "Enemy_W1_Bronya_IF_02_Enhance[<span class=\"descriptionNumberColor\">Shared Hatred</span>]",
+                "invertCondition": true
+              }
+            },
+            "Modifier Deletes Itself"
+          ]
+        },
+        {
+          "eventTrigger": "Being Weakness Broken: End [Owner]",
+          "execute": [
+            "Modifier Deletes Itself"
+          ]
+        }
+      ],
+      "stackData": [],
+      "latentQueue": []
+    }
+  ]
+}

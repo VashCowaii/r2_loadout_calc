@@ -6265,6 +6265,7 @@ const megaParsingFuckeryPain = {
             "includeExoToughness",
             "livingOnly",
             "conditions",
+            "activeRow",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Compare: Variable");
 
@@ -6294,6 +6295,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.includeInjectedActions,"Include Injected Actions")}
             ${getStandardNameDisplay(initialCounter,parseRef.includeExoToughness,"Include Exo-Toughness")}
             ${getStandardNameDisplay(initialCounter,parseRef.livingOnly,"Living Only")}
+            ${getStandardNameDisplay(initialCounter,parseRef.activeRow,"Active Row")}
 
             ${returnString ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Conditions:</div>

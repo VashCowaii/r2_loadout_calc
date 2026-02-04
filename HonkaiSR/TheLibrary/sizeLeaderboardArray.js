@@ -387,6 +387,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 1004032,
+    "lineCount": 3630,
+    "sizeCount": 123069
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 8013145,
     "lineCount": 3445,
     "sizeCount": 120964
@@ -940,6 +946,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 40423
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1004030,
+    "lineCount": 1240,
+    "sizeCount": 39974
+  },
+  {
     "entryType": "char",
     "entryName": "Trailblazer - Destruction",
     "trimCharacterName": "TrailblazerDestruction",
@@ -1054,6 +1066,12 @@ let sizeLeaderboardArray = [
     "enemyID": 2022020,
     "lineCount": 861,
     "sizeCount": 29181
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1004031,
+    "lineCount": 857,
+    "sizeCount": 28303
   },
   {
     "entryType": "enemy",
