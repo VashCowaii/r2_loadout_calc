@@ -760,6 +760,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 48620
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2022010,
+    "lineCount": 1376,
+    "sizeCount": 46904
+  },
+  {
     "entryType": "char",
     "entryName": "Guinaifen",
     "trimCharacterName": "Guinaifen",
@@ -889,6 +895,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 2022020,
+    "lineCount": 861,
+    "sizeCount": 29181
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 1012010,
     "lineCount": 879,
     "sizeCount": 28186
@@ -906,6 +918,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/312.png",
     "lineCount": 716,
     "sizeCount": 27571
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022060,
+    "lineCount": 748,
+    "sizeCount": 24725
   },
   {
     "entryType": "lc",
@@ -1138,6 +1156,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 12926
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2022050,
+    "lineCount": 390,
+    "sizeCount": 12670
+  },
+  {
     "entryType": "relic",
     "entryName": "Pioneer Diver of Dead Waters",
     "trimCharacterName": "PioneerDiverofDeadWaters",
@@ -1160,6 +1184,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23028.png",
     "lineCount": 353,
     "sizeCount": 11824
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022040,
+    "lineCount": 378,
+    "sizeCount": 11663
   },
   {
     "entryType": "relic",
@@ -1404,6 +1434,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23003.png",
     "lineCount": 274,
     "sizeCount": 8876
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022051,
+    "lineCount": 275,
+    "sizeCount": 8777
   },
   {
     "entryType": "lc",

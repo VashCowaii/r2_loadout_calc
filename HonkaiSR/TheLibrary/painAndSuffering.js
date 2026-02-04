@@ -3539,6 +3539,26 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
         </div>`;
     },
+    "Set Target Parameter"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "readTarget",
+            "paramTarget",
+            "variableName",
+            "isAdd",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Target Parameter");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}${parseRef.isAdd ? "[ADD]" : ""}:</div>
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.readTarget,"Read Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.paramTarget,"Param Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.variableName,"Variable Name")}
+        </div>`;
+    },
     "Attack-Type Extension"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
