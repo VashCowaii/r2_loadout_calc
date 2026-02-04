@@ -220,6 +220,7 @@ const compositeAbilityObject = {
       ],
       "parse": [
         "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Adjust Variable Value",
           "adjustmentType": "Add to Value (Default)",
@@ -1904,6 +1905,7 @@ const compositeAbilityObject = {
           "ability": "Jingliu_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -2004,6 +2006,7 @@ const compositeAbilityObject = {
           "ability": "Jingliu_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

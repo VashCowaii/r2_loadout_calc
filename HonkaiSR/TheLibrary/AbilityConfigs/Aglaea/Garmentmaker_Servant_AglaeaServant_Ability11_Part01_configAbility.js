@@ -44,7 +44,8 @@ const configAbility = {
       "failed": [
         "Deleted bullshit"
       ]
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

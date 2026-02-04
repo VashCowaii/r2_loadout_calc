@@ -23,7 +23,8 @@ const configAbility = {
       },
       "ability": "Gepard_Ability02_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

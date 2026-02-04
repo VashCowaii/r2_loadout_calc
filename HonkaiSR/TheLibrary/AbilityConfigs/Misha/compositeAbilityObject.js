@@ -1354,7 +1354,8 @@ const compositeAbilityObject = {
           },
           "ability": "Misha_Ability02_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -1422,7 +1423,8 @@ const compositeAbilityObject = {
           },
           "ability": "Misha_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

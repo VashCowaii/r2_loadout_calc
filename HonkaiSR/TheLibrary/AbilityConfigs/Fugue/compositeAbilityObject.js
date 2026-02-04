@@ -2302,7 +2302,8 @@ const compositeAbilityObject = {
           },
           "ability": "Fugue_Ability11_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -2377,7 +2378,8 @@ const compositeAbilityObject = {
           },
           "ability": "Fugue_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

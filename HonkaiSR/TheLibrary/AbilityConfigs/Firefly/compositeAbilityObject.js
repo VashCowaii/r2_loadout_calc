@@ -2648,6 +2648,7 @@ const compositeAbilityObject = {
           "ability": "Sam_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -3092,7 +3093,8 @@ const compositeAbilityObject = {
           },
           "ability": "Sam_Ability11_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -3166,7 +3168,8 @@ const compositeAbilityObject = {
           },
           "ability": "Sam_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

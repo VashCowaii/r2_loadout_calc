@@ -770,7 +770,8 @@ const compositeAbilityObject = {
           },
           "ability": "Guinaifen_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

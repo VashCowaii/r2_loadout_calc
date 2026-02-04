@@ -13,6 +13,7 @@ const configAbility = {
       "ability": "Monster_W1_Mecha03_01_Ability09_Part02",
       "isTrigger": true
     },
+    "Deleted bullshit",
     "Deleted bullshit"
   ],
   "references": []

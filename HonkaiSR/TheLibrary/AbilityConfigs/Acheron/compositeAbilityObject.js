@@ -3904,6 +3904,7 @@ const compositeAbilityObject = {
       ],
       "parse": [
         "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Trigger Ability",
           "from": {
@@ -4056,7 +4057,8 @@ const compositeAbilityObject = {
           },
           "ability": "Acheron_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

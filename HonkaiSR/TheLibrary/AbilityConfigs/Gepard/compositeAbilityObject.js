@@ -1004,7 +1004,8 @@ const compositeAbilityObject = {
           },
           "ability": "Gepard_Ability02_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -1109,7 +1110,8 @@ const compositeAbilityObject = {
           },
           "ability": "Gepard_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

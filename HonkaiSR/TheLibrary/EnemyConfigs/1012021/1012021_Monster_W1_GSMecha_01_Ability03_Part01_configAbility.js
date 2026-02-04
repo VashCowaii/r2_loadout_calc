@@ -20,6 +20,7 @@ const configAbility = {
       "isTrigger": true
     },
     "Deleted bullshit",
+    "Deleted bullshit",
     {
       "name": "Mark Entity For Immediate Death"
     }

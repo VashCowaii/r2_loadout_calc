@@ -4819,7 +4819,8 @@ const compositeAbilityObject = {
           "failed": [
             "Deleted bullshit"
           ]
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -5708,6 +5709,7 @@ const compositeAbilityObject = {
           "ability": "Monster_W2_Kafka_Ability04_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -6184,6 +6186,7 @@ const compositeAbilityObject = {
           "ability": "Monster_W2_Kafka_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -6434,7 +6437,8 @@ const compositeAbilityObject = {
           },
           "ability": "Monster_W2_Kafka_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

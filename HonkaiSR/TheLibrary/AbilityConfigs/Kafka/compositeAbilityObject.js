@@ -2650,6 +2650,7 @@ const compositeAbilityObject = {
           "ability": "Advanced_Kafka_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -2798,6 +2799,7 @@ const compositeAbilityObject = {
           "ability": "Advanced_Kafka_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

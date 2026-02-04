@@ -13,6 +13,7 @@ const configAbility = {
       "ability": "Monster_W2_Kafka_Ability02_Part02",
       "isTrigger": true
     },
+    "Deleted bullshit",
     "Deleted bullshit"
   ],
   "references": []

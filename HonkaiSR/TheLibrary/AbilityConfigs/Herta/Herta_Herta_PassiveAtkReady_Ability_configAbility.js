@@ -22,6 +22,7 @@ const configAbility = {
       "popUpText": "Fine, I'll Do It Myself"
     },
     "Deleted bullshit",
+    "Deleted bullshit",
     {
       "name": "Looped Event",
       "conditions": {
@@ -185,6 +186,7 @@ const configAbility = {
               },
               "modifier": "Herta_AbilityEidolon4_DamageUp"
             },
+            "Deleted bullshit",
             {
               "name": "Declare Custom Variable",
               "target": {

@@ -208,6 +208,7 @@ const compositeAbilityObject = {
           "popUpText": "Fine, I'll Do It Myself"
         },
         "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "Looped Event",
           "conditions": {
@@ -371,6 +372,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "Herta_AbilityEidolon4_DamageUp"
                 },
+                "Deleted bullshit",
                 {
                   "name": "Declare Custom Variable",
                   "target": {
@@ -1307,6 +1309,7 @@ const compositeAbilityObject = {
           "ability": "Herta_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -1531,6 +1534,7 @@ const compositeAbilityObject = {
           "ability": "Herta_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

@@ -2501,7 +2501,8 @@ const compositeAbilityObject = {
           },
           "ability": "Advanced_Silwolf_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

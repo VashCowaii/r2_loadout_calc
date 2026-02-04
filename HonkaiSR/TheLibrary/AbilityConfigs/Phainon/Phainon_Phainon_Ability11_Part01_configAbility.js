@@ -41,6 +41,7 @@ const configAbility = {
       "isTrigger": true
     },
     "Deleted bullshit",
+    "Deleted bullshit",
     {
       "name": "IF",
       "conditions": {

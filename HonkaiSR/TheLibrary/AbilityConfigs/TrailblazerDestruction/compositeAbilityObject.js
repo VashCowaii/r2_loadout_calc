@@ -1021,6 +1021,7 @@ const compositeAbilityObject = {
           "ability": "PlayerBoy_Ability11_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -1094,6 +1095,7 @@ const compositeAbilityObject = {
           "ability": "PlayerBoy_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

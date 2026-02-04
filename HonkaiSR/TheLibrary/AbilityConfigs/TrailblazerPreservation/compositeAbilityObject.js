@@ -1979,7 +1979,8 @@ const compositeAbilityObject = {
           },
           "ability": "PlayerBoy_10_Ability11_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -2281,7 +2282,8 @@ const compositeAbilityObject = {
           },
           "ability": "PlayerBoy_10_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

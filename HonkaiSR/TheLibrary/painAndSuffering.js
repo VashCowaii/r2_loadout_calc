@@ -4225,6 +4225,23 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
         </div>`;
     },
+    "Entity is Flying"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "value",
+            // "target",
+            "invertCondition"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Entity is Flying");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">Entity is Flying:</div>&nbsp;
+            ${parseRef.invertCondition ? "(Inverted) " : ""}
+        </div>
+        <div class="modifierDetailsBox">
+        </div>`;
+    },
     "Check Boolean Value"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -9621,6 +9638,152 @@ const megaParsingFuckeryPain = {
             </div>
         </details>
         `;
+    },
+    "Animation Task"(parseRef,initialCounter) {
+        initialCounter++;
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "state",
+            "passed",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Animation Task");
+
+        // conditions
+        // passed
+        // failed
+
+        let parseString = "";
+        // let refString = "";
+        const hasParse = parseRef.passed?.length;
+        // const hasRef = parseRef.failed?.length;
+        if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.passed,initialCounter);}
+        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+
+
+
+        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
+
+        // rotationsSectionRowHolder
+        // rotationConditionOperatorBox
+
+
+        // <details class="rotationsPermaConditionsExpand" open="">
+        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
+        // </details>
+
+        // if (!hasParse && !hasRef) {return "";}
+
+        return `
+        <details class="rotationsPermaConditionsExpand" open="">
+            <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+            </summary>
+
+
+            <div class="modifierDetailsBox">
+
+            </div>
+
+            <div class="rotationConditionOperatorBoxMain">
+                ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${parseString}
+                </div>` : ""}
+            </div>
+        </details>
+        `;
+        // return `
+        //     <div class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader">
+        //         <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+        //         ${returnString}
+        //     </div>
+            
+        //     <div class="rotationConditionOperatorBoxMain">
+        //         ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">THEN</div>
+        //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+        //             ${parseString}
+        //         </div>` : ""}
+        //         ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">ELSE</div>
+        //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+        //             ${refString}
+        //         </div>` : ""}
+        //     </div>
+        // `;
+    },
+    "Animation Event"(parseRef,initialCounter) {
+        initialCounter++;
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "state",
+            "passed",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Animation Event");
+
+        // conditions
+        // passed
+        // failed
+
+        let parseString = "";
+        let refString = "";
+        const hasParse = parseRef.passed?.length;
+        const hasRef = parseRef.failed?.length;
+        if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.passed,initialCounter);}
+        if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+
+
+
+        // <div class="actionDetailBody">${parseRef.ability} from ${parseRef.from}</div>
+
+        // rotationsSectionRowHolder
+        // rotationConditionOperatorBox
+
+
+        // <details class="rotationsPermaConditionsExpand" open="">
+        //     <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Show Permanent Conditions (1)</summary><div class="actionDetailBody">- Skill Points: Current &gt;= 1</div>
+        // </details>
+
+        // if (!hasParse && !hasRef) {return "";}
+
+        return `
+        <details class="rotationsPermaConditionsExpand" open="">
+            <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+            </summary>
+
+
+            <div class="modifierDetailsBox">
+                ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+                ${getStandardNameDisplay(initialCounter,parseRef.state,"State")}
+
+            </div>
+
+            <div class="rotationConditionOperatorBoxMain">
+                ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${parseString}
+                </div>` : ""}
+            </div>
+        </details>
+        `;
+        // return `
+        //     <div class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader">
+        //         <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+        //         ${returnString}
+        //     </div>
+            
+        //     <div class="rotationConditionOperatorBoxMain">
+        //         ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">THEN</div>
+        //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+        //             ${parseString}
+        //         </div>` : ""}
+        //         ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionELSE">ELSE</div>
+        //         <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+        //             ${refString}
+        //         </div>` : ""}
+        //     </div>
+        // `;
     },
     NOT(parseRef,initialCounter) {
         initialCounter++;

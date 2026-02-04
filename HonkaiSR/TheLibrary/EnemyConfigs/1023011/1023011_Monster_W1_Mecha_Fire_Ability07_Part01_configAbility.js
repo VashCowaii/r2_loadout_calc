@@ -19,7 +19,8 @@ const configAbility = {
       },
       "ability": "Monster_W1_Mecha_Fire_Ability07_Part02",
       "isTrigger": true
-    }
+    },
+    "Deleted bullshit"
   ],
   "references": []
 }

@@ -3228,6 +3228,7 @@ const compositeAbilityObject = {
           "ability": "Mar_7th_10_Eidolon2_Insert_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -3511,6 +3512,7 @@ const compositeAbilityObject = {
           "ability": "Mar_7th_10_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

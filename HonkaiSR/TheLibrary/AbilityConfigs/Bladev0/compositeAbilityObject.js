@@ -2155,7 +2155,8 @@ const compositeAbilityObject = {
           },
           "ability": "Ren_Ability11_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -2255,7 +2256,8 @@ const compositeAbilityObject = {
           },
           "ability": "Ren_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

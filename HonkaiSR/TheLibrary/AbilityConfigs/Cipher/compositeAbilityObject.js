@@ -3340,6 +3340,7 @@ const compositeAbilityObject = {
           "ability": "Cipher_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

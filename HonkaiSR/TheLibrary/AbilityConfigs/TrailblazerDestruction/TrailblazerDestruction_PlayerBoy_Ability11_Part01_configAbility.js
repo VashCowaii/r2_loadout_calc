@@ -23,6 +23,7 @@ const configAbility = {
       "ability": "PlayerBoy_Ability11_Part02",
       "isTrigger": true
     },
+    "Deleted bullshit",
     "Deleted bullshit"
   ],
   "references": []

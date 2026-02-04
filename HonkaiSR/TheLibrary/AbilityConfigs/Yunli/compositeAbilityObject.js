@@ -2440,7 +2440,8 @@ const compositeAbilityObject = {
           },
           "ability": "Yunli_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

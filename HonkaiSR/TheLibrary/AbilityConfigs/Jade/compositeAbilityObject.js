@@ -3276,7 +3276,8 @@ const compositeAbilityObject = {
           },
           "ability": "Jade_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

@@ -47,9 +47,11 @@ const configAbility = {
         ]
       },
       "passed": [
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "failed": [
+        "Deleted bullshit",
         "Deleted bullshit"
       ]
     },

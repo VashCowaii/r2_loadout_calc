@@ -2788,7 +2788,593 @@ const compositeAbilityObject = {
                     "value1": "HP_Bars_Remaining",
                     "compareType": "=",
                     "value2": 1
-                  }
+                  },
+                  "passed": [
+                    {
+                      "name": "Animation Event",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "state": "Die",
+                      "passed": [
+                        {
+                          "name": "Animation Task"
+                        },
+                        {
+                          "name": "Animation Task"
+                        },
+                        {
+                          "name": "Animation Task",
+                          "passed": [
+                            {
+                              "name": "Find New Target",
+                              "from": {
+                                "name": "Target Sequence",
+                                "Sequence": [
+                                  {
+                                    "name": "Target Name",
+                                    "target": "{{Enemy Team All}}"
+                                  },
+                                  {
+                                    "name": "Target Filter",
+                                    "conditions": {
+                                      "name": "Compare: Target",
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "target2": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster's Summoner}}"
+                                      },
+                                      "invertCondition": true
+                                    }
+                                  }
+                                ]
+                              },
+                              "searchRandom": true,
+                              "ifTargetFound": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire",
+                                    "invertCondition": true
+                                  }
+                                },
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical",
+                                    "invertCondition": true
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "target": {
+                                      "name": "Target Sequence",
+                                      "Sequence": [
+                                        {
+                                          "name": "Target Name",
+                                          "target": "{{Enemy Team All}}"
+                                        },
+                                        {
+                                          "name": "Target Filter",
+                                          "conditions": {
+                                            "name": "Compare: Target",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Parameter Target}}"
+                                            },
+                                            "target2": {
+                                              "name": "Target Name",
+                                              "target": "{{Caster's Summoner}}"
+                                            },
+                                            "invertCondition": true
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "value1": "TeamCharacterCount",
+                                    "compareType": "=",
+                                    "value2": 0
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Animation Task",
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster's Summoner}}"
+                              },
+                              "modifier": "Enemy_W2_Cocolia_IF_SummonDie"
+                            },
+                            {
+                              "name": "Find New Target",
+                              "from": {
+                                "name": "Target Sequence",
+                                "Sequence": [
+                                  {
+                                    "name": "Target Name",
+                                    "target": "{{Enemy Team All}}"
+                                  },
+                                  {
+                                    "name": "Target Filter",
+                                    "conditions": {
+                                      "name": "Compare: Target",
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "target2": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster's Summoner}}"
+                                      },
+                                      "invertCondition": true
+                                    }
+                                  }
+                                ]
+                              },
+                              "searchRandom": true,
+                              "ifTargetFound": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire",
+                                    "invertCondition": true
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+                                    },
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical",
+                                    "invertCondition": true
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+                                    },
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "target": {
+                                      "name": "Target Sequence",
+                                      "Sequence": [
+                                        {
+                                          "name": "Target Name",
+                                          "target": "{{Enemy Team All}}"
+                                        },
+                                        {
+                                          "name": "Target Filter",
+                                          "conditions": {
+                                            "name": "Compare: Target",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Parameter Target}}"
+                                            },
+                                            "target2": {
+                                              "name": "Target Name",
+                                              "target": "{{Caster's Summoner}}"
+                                            },
+                                            "invertCondition": true
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "value1": "TeamCharacterCount",
+                                    "compareType": "=",
+                                    "value2": 0
+                                  }
+                                ]
+                              },
+                              "passed": [
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
+                                  },
+                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+                                },
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
+                                  },
+                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+                                },
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
+                                  },
+                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+                                },
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
+                                  },
+                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Animation Task"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Animation Event",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "state": "Die",
+                      "passed": [
+                        {
+                          "name": "Animation Task"
+                        },
+                        {
+                          "name": "Animation Task"
+                        },
+                        {
+                          "name": "Animation Task",
+                          "passed": [
+                            {
+                              "name": "Find New Target",
+                              "from": {
+                                "name": "Target Sequence",
+                                "Sequence": [
+                                  {
+                                    "name": "Target Name",
+                                    "target": "{{Enemy Team All}}"
+                                  },
+                                  {
+                                    "name": "Target Filter",
+                                    "conditions": {
+                                      "name": "Compare: Target",
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "target2": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster's Summoner}}"
+                                      },
+                                      "invertCondition": true
+                                    }
+                                  }
+                                ]
+                              },
+                              "searchRandom": true,
+                              "ifTargetFound": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire",
+                                    "invertCondition": true
+                                  }
+                                },
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical",
+                                    "invertCondition": true
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "target": {
+                                      "name": "Target Sequence",
+                                      "Sequence": [
+                                        {
+                                          "name": "Target Name",
+                                          "target": "{{Enemy Team All}}"
+                                        },
+                                        {
+                                          "name": "Target Filter",
+                                          "conditions": {
+                                            "name": "Compare: Target",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Parameter Target}}"
+                                            },
+                                            "target2": {
+                                              "name": "Target Name",
+                                              "target": "{{Caster's Summoner}}"
+                                            },
+                                            "invertCondition": true
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "value1": "TeamCharacterCount",
+                                    "compareType": "=",
+                                    "value2": 0
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Animation Task",
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster's Summoner}}"
+                              },
+                              "modifier": "Enemy_W2_Cocolia_IF_SummonDie"
+                            },
+                            {
+                              "name": "Find New Target",
+                              "from": {
+                                "name": "Target Sequence",
+                                "Sequence": [
+                                  {
+                                    "name": "Target Name",
+                                    "target": "{{Enemy Team All}}"
+                                  },
+                                  {
+                                    "name": "Target Filter",
+                                    "conditions": {
+                                      "name": "Compare: Target",
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "target2": {
+                                        "name": "Target Name",
+                                        "target": "{{Caster's Summoner}}"
+                                      },
+                                      "invertCondition": true
+                                    }
+                                  }
+                                ]
+                              },
+                              "searchRandom": true,
+                              "ifTargetFound": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire",
+                                    "invertCondition": true
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+                                    },
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Has Modifier",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Parameter Target}}"
+                                    },
+                                    "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical",
+                                    "invertCondition": true
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+                                    },
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      },
+                                      "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "target": {
+                                      "name": "Target Sequence",
+                                      "Sequence": [
+                                        {
+                                          "name": "Target Name",
+                                          "target": "{{Enemy Team All}}"
+                                        },
+                                        {
+                                          "name": "Target Filter",
+                                          "conditions": {
+                                            "name": "Compare: Target",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Parameter Target}}"
+                                            },
+                                            "target2": {
+                                              "name": "Target Name",
+                                              "target": "{{Caster's Summoner}}"
+                                            },
+                                            "invertCondition": true
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "value1": "TeamCharacterCount",
+                                    "compareType": "=",
+                                    "value2": 0
+                                  }
+                                ]
+                              },
+                              "passed": [
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
+                                  },
+                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Physical"
+                                },
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
+                                  },
+                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Fire"
+                                },
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
+                                  },
+                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Wind"
+                                },
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
+                                  },
+                                  "modifier": "Enemy_W2_Kafka_IF_Weakness_Imaginary"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Animation Task"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -2821,7 +3407,10 @@ const compositeAbilityObject = {
                 ]
               },
               "searchRandom": true,
-              "includeDyingTargets": true
+              "includeDyingTargets": true,
+              "ifTargetFound": [
+                "Deleted bullshit"
+              ]
             },
             {
               "name": "Add Events/Bonuses",
@@ -8183,7 +8772,8 @@ const compositeAbilityObject = {
           "failed": [
             "Deleted bullshit"
           ]
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },
@@ -9062,6 +9652,7 @@ const compositeAbilityObject = {
           "ability": "Monster_W2_Kafka_Ability04_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -9538,6 +10129,7 @@ const compositeAbilityObject = {
           "ability": "Monster_W2_Kafka_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -9788,7 +10380,8 @@ const compositeAbilityObject = {
           },
           "ability": "Monster_W2_Kafka_Ability01_Part02",
           "isTrigger": true
-        }
+        },
+        "Deleted bullshit"
       ],
       "references": []
     },

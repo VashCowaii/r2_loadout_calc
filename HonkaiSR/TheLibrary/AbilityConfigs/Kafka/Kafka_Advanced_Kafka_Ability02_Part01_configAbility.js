@@ -39,6 +39,7 @@ const configAbility = {
       "ability": "Advanced_Kafka_Ability02_Part02",
       "isTrigger": true
     },
+    "Deleted bullshit",
     "Deleted bullshit"
   ],
   "references": []

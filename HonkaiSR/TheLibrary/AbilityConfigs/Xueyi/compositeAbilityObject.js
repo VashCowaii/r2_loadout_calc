@@ -1863,6 +1863,7 @@ const compositeAbilityObject = {
           "ability": "Xueyi_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

@@ -2914,6 +2914,7 @@ const compositeAbilityObject = {
           "ability": "Saber_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -3327,6 +3328,7 @@ const compositeAbilityObject = {
           "ability": "Saber_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []

@@ -358,6 +358,7 @@ const compositeAbilityObject = {
       ],
       "parse": [
         "Deleted bullshit",
+        "Deleted bullshit",
         {
           "name": "IF",
           "conditions": {
@@ -1949,6 +1950,7 @@ const compositeAbilityObject = {
           "ability": "Advanced_Jingliu_Ability02_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
@@ -2051,6 +2053,7 @@ const compositeAbilityObject = {
           "ability": "Advanced_Jingliu_Ability01_Part02",
           "isTrigger": true
         },
+        "Deleted bullshit",
         "Deleted bullshit"
       ],
       "references": []
