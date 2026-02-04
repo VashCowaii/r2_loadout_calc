@@ -692,6 +692,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 76425
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2013011,
+    "lineCount": 2199,
+    "sizeCount": 75780
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2013010,
+    "lineCount": 2198,
+    "sizeCount": 75724
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2013012,
+    "lineCount": 2198,
+    "sizeCount": 75724
+  },
+  {
     "entryType": "char",
     "entryName": "Bailu",
     "trimCharacterName": "Bailu",
@@ -808,6 +826,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 57878
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2013021,
+    "lineCount": 1628,
+    "sizeCount": 57627
+  },
+  {
     "entryType": "char",
     "entryName": "Bronya",
     "trimCharacterName": "Bronya",
@@ -844,6 +868,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1301.png",
     "lineCount": 1619,
     "sizeCount": 53123
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2013020,
+    "lineCount": 1494,
+    "sizeCount": 52926
   },
   {
     "entryType": "enemy",
@@ -1306,6 +1336,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 13295
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2012010,
+    "lineCount": 407,
+    "sizeCount": 13249
+  },
+  {
     "entryType": "relic",
     "entryName": "The Ashblazing Grand Duke",
     "trimCharacterName": "TheAshblazingGrandDuke",
@@ -1328,6 +1364,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23026.png",
     "lineCount": 362,
     "sizeCount": 12926
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2002032,
+    "lineCount": 390,
+    "sizeCount": 12781
   },
   {
     "entryType": "enemy",
@@ -1466,6 +1508,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 10343
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2002010,
+    "lineCount": 337,
+    "sizeCount": 10190
+  },
+  {
     "entryType": "relic",
     "entryName": "Revelry by the Sea",
     "trimCharacterName": "RevelrybytheSea",
@@ -1592,6 +1640,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23037.png",
     "lineCount": 292,
     "sizeCount": 9037
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2002030,
+    "lineCount": 275,
+    "sizeCount": 8938
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2002031,
+    "lineCount": 275,
+    "sizeCount": 8938
   },
   {
     "entryType": "lc",
@@ -2396,6 +2456,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 4173
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2011020,
+    "lineCount": 135,
+    "sizeCount": 3965
+  },
+  {
     "entryType": "lc",
     "entryName": "Meshing Cogs",
     "trimCharacterName": "MeshingCogs",
@@ -2480,6 +2546,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/21006.png",
     "lineCount": 126,
     "sizeCount": 3718
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2011010,
+    "lineCount": 122,
+    "sizeCount": 3642
   },
   {
     "entryType": "lc",
