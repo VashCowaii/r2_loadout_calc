@@ -156,6 +156,42 @@ let sizeLeaderboardArray = [
     "sizeCount": 179990
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1014011,
+    "lineCount": 5263,
+    "sizeCount": 175949
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1014012,
+    "lineCount": 5263,
+    "sizeCount": 175949
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1014016,
+    "lineCount": 5262,
+    "sizeCount": 175899
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1014014,
+    "lineCount": 5257,
+    "sizeCount": 175693
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1014015,
+    "lineCount": 5257,
+    "sizeCount": 175693
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1014013,
+    "lineCount": 5251,
+    "sizeCount": 175383
+  },
+  {
     "entryType": "char",
     "entryName": "Aventurine",
     "trimCharacterName": "Aventurine",
@@ -676,6 +712,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1206.png",
     "lineCount": 2272,
     "sizeCount": 72701
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1014010,
+    "lineCount": 2229,
+    "sizeCount": 72476
   },
   {
     "entryType": "char",
