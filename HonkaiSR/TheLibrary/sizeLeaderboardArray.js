@@ -654,6 +654,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 63091
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1023021,
+    "lineCount": 1853,
+    "sizeCount": 59183
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1023020,
+    "lineCount": 1841,
+    "sizeCount": 58809
+  },
+  {
     "entryType": "char",
     "entryName": "Clara",
     "trimCharacterName": "Clara",
@@ -668,6 +680,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1209.png",
     "lineCount": 1754,
     "sizeCount": 58015
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1023022,
+    "lineCount": 1817,
+    "sizeCount": 57822
   },
   {
     "entryType": "enemy",
@@ -820,12 +838,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 37209
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1023011,
+    "lineCount": 1065,
+    "sizeCount": 34809
+  },
+  {
     "entryType": "char",
     "entryName": "Serval",
     "trimCharacterName": "Serval",
     "entryIcon": "icon/character/1103.png",
     "lineCount": 1092,
     "sizeCount": 34478
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1023010,
+    "lineCount": 1053,
+    "sizeCount": 34389
   },
   {
     "entryType": "enemy",
@@ -1395,13 +1425,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1002020,
     "lineCount": 280,
-    "sizeCount": 8647
+    "sizeCount": 8650
   },
   {
     "entryType": "enemy",
     "enemyID": 1002021,
     "lineCount": 280,
-    "sizeCount": 8647
+    "sizeCount": 8650
   },
   {
     "entryType": "lc",
@@ -1728,6 +1758,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/114.png",
     "lineCount": 192,
     "sizeCount": 6093
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1022010,
+    "lineCount": 197,
+    "sizeCount": 6078
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1022020,
+    "lineCount": 195,
+    "sizeCount": 6059
   },
   {
     "entryType": "lc",

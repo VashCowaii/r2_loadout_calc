@@ -42,11 +42,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (Modifier_SpeedDelta) || RETURN",
-                "displayLines": "Modifier_SpeedDelta",
+                "operator": "Variables[0] ('Modifier_SpeedDelta) || RETURN",
+                "displayLines": "'Modifier_SpeedDelta",
                 "constants": [],
                 "variables": [
-                  "Modifier_SpeedDelta"
+                  "'Modifier_SpeedDelta"
                 ]
               }
             }
