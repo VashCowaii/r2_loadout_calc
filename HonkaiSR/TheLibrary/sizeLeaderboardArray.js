@@ -1182,12 +1182,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 19284
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8012010,
+    "lineCount": 582,
+    "sizeCount": 18480
+  },
+  {
     "entryType": "lc",
     "entryName": "To Evernight's Stars",
     "trimCharacterName": "ToEvernightsStars",
     "entryIcon": "icon/light_cone/23049.png",
     "lineCount": 523,
     "sizeCount": 18415
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8001030,
+    "lineCount": 551,
+    "sizeCount": 18174
   },
   {
     "entryType": "enemy",
@@ -1358,6 +1370,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 13162
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8012030,
+    "lineCount": 412,
+    "sizeCount": 12957
+  },
+  {
     "entryType": "lc",
     "entryName": "Flowing Nightglow",
     "trimCharacterName": "FlowingNightglow",
@@ -1446,6 +1464,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/315.png",
     "lineCount": 313,
     "sizeCount": 11211
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8011020,
+    "lineCount": 320,
+    "sizeCount": 11106
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8011010,
+    "lineCount": 320,
+    "sizeCount": 11059
   },
   {
     "entryType": "lc",
@@ -1640,6 +1670,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23037.png",
     "lineCount": 292,
     "sizeCount": 9037
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8012020,
+    "lineCount": 289,
+    "sizeCount": 9000
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8012021,
+    "lineCount": 289,
+    "sizeCount": 9000
   },
   {
     "entryType": "enemy",
@@ -2440,6 +2482,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 4357
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8001050,
+    "lineCount": 139,
+    "sizeCount": 4198
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8001040,
+    "lineCount": 139,
+    "sizeCount": 4197
+  },
+  {
     "entryType": "relic",
     "entryName": "Lushaka, the Sunken Seas",
     "trimCharacterName": "LushakatheSunkenSeas",
@@ -2738,6 +2792,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 3057
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8001020,
+    "lineCount": 103,
+    "sizeCount": 3045
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8001010,
+    "lineCount": 103,
+    "sizeCount": 3040
+  },
+  {
     "entryType": "lc",
     "entryName": "Before the Tutorial Mission Starts",
     "trimCharacterName": "BeforetheTutorialMissionStarts",
@@ -2982,5 +3048,11 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 77,
     "sizeCount": 1837
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8001031,
+    "lineCount": 6,
+    "sizeCount": 110
   }
 ]
