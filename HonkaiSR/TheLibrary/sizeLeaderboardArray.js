@@ -1022,6 +1022,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 14347
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1002064,
+    "lineCount": 473,
+    "sizeCount": 14311
+  },
+  {
     "entryType": "lc",
     "entryName": "Long May Rainbows Adorn the Sky",
     "trimCharacterName": "LongMayRainbowsAdorntheSky",
@@ -1274,6 +1280,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 9659
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1002011,
+    "lineCount": 306,
+    "sizeCount": 9570
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002012,
+    "lineCount": 306,
+    "sizeCount": 9570
+  },
+  {
     "entryType": "lc",
     "entryName": "Texture of Memories",
     "trimCharacterName": "TextureofMemories",
@@ -1304,6 +1322,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/121.png",
     "lineCount": 247,
     "sizeCount": 9323
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002015,
+    "lineCount": 290,
+    "sizeCount": 9293
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002016,
+    "lineCount": 290,
+    "sizeCount": 9293
   },
   {
     "entryType": "lc",
@@ -1860,6 +1890,30 @@ let sizeLeaderboardArray = [
     "sizeCount": 5237
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1002013,
+    "lineCount": 184,
+    "sizeCount": 5222
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002017,
+    "lineCount": 184,
+    "sizeCount": 5222
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002060,
+    "lineCount": 184,
+    "sizeCount": 5222
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002061,
+    "lineCount": 184,
+    "sizeCount": 5222
+  },
+  {
     "entryType": "lc",
     "entryName": "In the Name of the World",
     "trimCharacterName": "IntheNameoftheWorld",
@@ -2288,6 +2342,30 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/21012.png",
     "lineCount": 126,
     "sizeCount": 3307
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002014,
+    "lineCount": 112,
+    "sizeCount": 3294
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002018,
+    "lineCount": 112,
+    "sizeCount": 3294
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002062,
+    "lineCount": 112,
+    "sizeCount": 3294
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1002063,
+    "lineCount": 112,
+    "sizeCount": 3294
   },
   {
     "entryType": "lc",
