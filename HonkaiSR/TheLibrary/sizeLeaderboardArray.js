@@ -858,6 +858,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 29319
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1012010,
+    "lineCount": 879,
+    "sizeCount": 28186
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1012011,
+    "lineCount": 879,
+    "sizeCount": 28186
+  },
+  {
     "entryType": "relic",
     "entryName": "Penacony, Land of the Dreams",
     "trimCharacterName": "PenaconyLandoftheDreams",
@@ -948,6 +960,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/21043.png",
     "lineCount": 424,
     "sizeCount": 15727
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1012020,
+    "lineCount": 508,
+    "sizeCount": 15266
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1012021,
+    "lineCount": 508,
+    "sizeCount": 15266
   },
   {
     "entryType": "lc",
@@ -2068,6 +2092,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 3959
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1012030,
+    "lineCount": 132,
+    "sizeCount": 3955
+  },
+  {
     "entryType": "relic",
     "entryName": "Wastelander of Banditry Desert",
     "trimCharacterName": "WastelanderofBanditryDesert",
@@ -2354,6 +2384,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/110.png",
     "lineCount": 102,
     "sizeCount": 2632
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1012032,
+    "lineCount": 87,
+    "sizeCount": 2611
   },
   {
     "entryType": "lc",
