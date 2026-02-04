@@ -1,0 +1,29 @@
+const configAbility = {
+  "fileName": "2023030_Monster_XP_Elite02_02_Ability04_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    "Ability Start",
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "Monster_XP_Elite02_02_ChargeEffect[<span class=\"descriptionNumberColor\">Japa</span>]"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "SpecialFlag",
+        "compareType": "=",
+        "value2": 0,
+        "contextScope": "TargetEntity"
+      }
+    },
+    "Trigger: Ability End"
+  ],
+  "references": []
+}

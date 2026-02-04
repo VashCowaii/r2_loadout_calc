@@ -724,6 +724,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 55987
   },
   {
+    "entryType": "enemy",
+    "enemyID": 2023031,
+    "lineCount": 1549,
+    "sizeCount": 54545
+  },
+  {
     "entryType": "char",
     "entryName": "Gallagher",
     "trimCharacterName": "Gallagher",
@@ -750,6 +756,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1302.png",
     "lineCount": 1601,
     "sizeCount": 51125
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2023011,
+    "lineCount": 1583,
+    "sizeCount": 50240
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2023010,
+    "lineCount": 1577,
+    "sizeCount": 50219
   },
   {
     "entryType": "char",
@@ -848,6 +866,24 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1105.png",
     "lineCount": 1191,
     "sizeCount": 37209
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2023030,
+    "lineCount": 1113,
+    "sizeCount": 36619
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2023020,
+    "lineCount": 1092,
+    "sizeCount": 36026
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2023021,
+    "lineCount": 1080,
+    "sizeCount": 35810
   },
   {
     "entryType": "enemy",
@@ -1838,6 +1874,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23015.png",
     "lineCount": 191,
     "sizeCount": 5869
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 2022110,
+    "lineCount": 191,
+    "sizeCount": 5857
   },
   {
     "entryType": "lc",
