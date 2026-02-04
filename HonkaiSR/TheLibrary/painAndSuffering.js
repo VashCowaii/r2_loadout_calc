@@ -6641,16 +6641,20 @@ const megaParsingFuckeryPain = {
             "silentAdd",
             "success",
             "failed",
+            "resisted",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Events/Bonuses");
 
 
         let parseString = "";
         let refString = "";
+        let refString2 = "";
         const hasParse = parseRef.success?.length;
         const hasRef = parseRef.failed?.length;
+        const hasRef2 = parseRef.resisted?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.success,initialCounter);}
         if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+        if (hasRef2) {refString2 += megaParsingFuckery.fillEventBodyBox(parseRef.resisted,initialCounter);}
 
         // const conditionObject = parseRef.conditions;
         // const conditionName = conditionObject?.name;
@@ -6718,6 +6722,10 @@ const megaParsingFuckeryPain = {
                 ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionTHEN">FAILED</div>
                     <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                         ${refString}
+                    </div>` : ""}
+                ${hasRef2 ? `<div class="rotationConditionOperatorHeaderConditionTHEN">RESISTED</div>
+                    <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                        ${refString2}
                     </div>` : ""}
             </div>
         </details>

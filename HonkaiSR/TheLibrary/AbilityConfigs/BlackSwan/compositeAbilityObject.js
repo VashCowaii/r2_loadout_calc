@@ -2851,7 +2851,16 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "failed": []
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "M_BlackSwan_Maze_StopAddDot"
+                    }
+                  ]
                 }
               ]
             },
@@ -4741,6 +4750,11 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "RemoveWhenCasterDead",
             "KeepOnDeathrattle"
+          ],
+          "stackData": [],
+          "latentQueue": [
+            "MazeSkill_Triggered",
+            "_can_continue"
           ]
         },
         {

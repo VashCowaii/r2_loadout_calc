@@ -1872,7 +1872,13 @@ const compositeAbilityObject = {
               "value": 0
             }
           ],
-          "failed": []
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BPFlag",
+              "value": 1
+            }
+          ]
         },
         {
           "name": "IF",

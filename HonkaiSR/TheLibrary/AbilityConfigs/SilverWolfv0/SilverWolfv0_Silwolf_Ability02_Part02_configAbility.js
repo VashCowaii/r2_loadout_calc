@@ -158,7 +158,13 @@ const configAbility = {
               "value": 0
             }
           ],
-          "failed": []
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BPFlag",
+              "value": 1
+            }
+          ]
         }
       ],
       "failed": [
@@ -202,7 +208,13 @@ const configAbility = {
               "value": 0
             }
           ],
-          "failed": []
+          "failed": [
+            {
+              "name": "Define Custom Variable",
+              "variableName": "_BPFlag",
+              "value": 1
+            }
+          ]
         }
       ]
     },

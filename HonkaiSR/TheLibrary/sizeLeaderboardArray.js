@@ -62,8 +62,8 @@ let sizeLeaderboardArray = [
     "entryName": "Black Swan",
     "trimCharacterName": "BlackSwan",
     "entryIcon": "icon/character/1307.png",
-    "lineCount": 6259,
-    "sizeCount": 241464
+    "lineCount": 6273,
+    "sizeCount": 241932
   },
   {
     "entryType": "char",
@@ -86,6 +86,42 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1201.png",
     "lineCount": 5394,
     "sizeCount": 233435
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013022,
+    "lineCount": 6021,
+    "sizeCount": 232699
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013024,
+    "lineCount": 6021,
+    "sizeCount": 232699
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013023,
+    "lineCount": 6015,
+    "sizeCount": 232619
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013012,
+    "lineCount": 5159,
+    "sizeCount": 212292
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013014,
+    "lineCount": 5159,
+    "sizeCount": 212292
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013013,
+    "lineCount": 5153,
+    "sizeCount": 212230
   },
   {
     "entryType": "char",
@@ -148,8 +184,8 @@ let sizeLeaderboardArray = [
     "entryName": "Silver Wolf",
     "trimCharacterName": "SilverWolf",
     "entryIcon": "icon/character/1006.png",
-    "lineCount": 4116,
-    "sizeCount": 163304
+    "lineCount": 4122,
+    "sizeCount": 163457
   },
   {
     "entryType": "enemy",
@@ -438,8 +474,8 @@ let sizeLeaderboardArray = [
     "entryName": "Silver Wolf_v0",
     "trimCharacterName": "SilverWolfv0",
     "entryIcon": "icon/character/1006.png",
-    "lineCount": 2752,
-    "sizeCount": 99755
+    "lineCount": 2764,
+    "sizeCount": 100109
   },
   {
     "entryType": "char",
@@ -534,6 +570,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 84455
   },
   {
+    "entryType": "enemy",
+    "enemyID": 1013021,
+    "lineCount": 2393,
+    "sizeCount": 82896
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013020,
+    "lineCount": 2387,
+    "sizeCount": 82653
+  },
+  {
     "entryType": "char",
     "entryName": "March 7th - Preservation",
     "trimCharacterName": "March7thP",
@@ -608,6 +656,18 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1211.png",
     "lineCount": 2154,
     "sizeCount": 73756
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013010,
+    "lineCount": 1966,
+    "sizeCount": 73102
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1013011,
+    "lineCount": 1966,
+    "sizeCount": 73102
   },
   {
     "entryType": "char",
@@ -881,6 +941,12 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "enemy",
+    "enemyID": 1012040,
+    "lineCount": 1115,
+    "sizeCount": 35990
+  },
+  {
+    "entryType": "enemy",
     "enemyID": 2023021,
     "lineCount": 1080,
     "sizeCount": 35810
@@ -904,6 +970,18 @@ let sizeLeaderboardArray = [
     "enemyID": 1023010,
     "lineCount": 1055,
     "sizeCount": 34445
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1012041,
+    "lineCount": 1041,
+    "sizeCount": 34027
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 1012042,
+    "lineCount": 1041,
+    "sizeCount": 34027
   },
   {
     "entryType": "enemy",
