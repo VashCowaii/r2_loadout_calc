@@ -6,6 +6,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 593616
   },
   {
+    "entryType": "enemy",
+    "enemyID": 4014036,
+    "lineCount": 14540,
+    "sizeCount": 519117
+  },
+  {
     "entryType": "char",
     "entryName": "Cyrene",
     "trimCharacterName": "Cyrene",
@@ -42,6 +48,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 322646
   },
   {
+    "entryType": "enemy",
+    "enemyID": 4014031,
+    "lineCount": 9077,
+    "sizeCount": 315612
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012077,
+    "lineCount": 8304,
+    "sizeCount": 300154
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012076,
+    "lineCount": 8304,
+    "sizeCount": 300142
+  },
+  {
     "entryType": "char",
     "entryName": "Evernight",
     "trimCharacterName": "Evernight",
@@ -56,6 +80,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1408.png",
     "lineCount": 7810,
     "sizeCount": 269303
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4014033,
+    "lineCount": 7349,
+    "sizeCount": 256534
   },
   {
     "entryType": "char",
@@ -104,6 +134,24 @@ let sizeLeaderboardArray = [
     "enemyID": 1013023,
     "lineCount": 6015,
     "sizeCount": 232619
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4014030,
+    "lineCount": 6290,
+    "sizeCount": 220593
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4014035,
+    "lineCount": 6290,
+    "sizeCount": 220593
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4014032,
+    "lineCount": 6290,
+    "sizeCount": 220554
   },
   {
     "entryType": "enemy",
@@ -290,6 +338,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 145709
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8033010,
+    "lineCount": 4008,
+    "sizeCount": 141813
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8033012,
+    "lineCount": 4008,
+    "sizeCount": 141813
+  },
+  {
     "entryType": "char",
     "entryName": "Saber",
     "trimCharacterName": "Saber",
@@ -412,6 +472,66 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1214.png",
     "lineCount": 3240,
     "sizeCount": 118055
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002060,
+    "lineCount": 3291,
+    "sizeCount": 113828
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002061,
+    "lineCount": 3291,
+    "sizeCount": 113828
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002069,
+    "lineCount": 3291,
+    "sizeCount": 113828
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002070,
+    "lineCount": 3291,
+    "sizeCount": 113712
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002071,
+    "lineCount": 3291,
+    "sizeCount": 113712
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002079,
+    "lineCount": 3291,
+    "sizeCount": 113712
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002080,
+    "lineCount": 3290,
+    "sizeCount": 113705
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002081,
+    "lineCount": 3290,
+    "sizeCount": 113705
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002082,
+    "lineCount": 3290,
+    "sizeCount": 113705
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002089,
+    "lineCount": 3290,
+    "sizeCount": 113705
   },
   {
     "entryType": "char",
@@ -603,13 +723,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1003012,
     "lineCount": 2522,
-    "sizeCount": 84455
+    "sizeCount": 84436
   },
   {
     "entryType": "enemy",
     "enemyID": 1003013,
     "lineCount": 2522,
-    "sizeCount": 84455
+    "sizeCount": 84436
   },
   {
     "entryType": "enemy",
@@ -635,13 +755,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1003011,
     "lineCount": 2436,
-    "sizeCount": 81827
+    "sizeCount": 81808
   },
   {
     "entryType": "enemy",
     "enemyID": 1003010,
     "lineCount": 2433,
-    "sizeCount": 81818
+    "sizeCount": 81799
   },
   {
     "entryType": "char",
@@ -758,6 +878,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 70251
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8033011,
+    "lineCount": 2105,
+    "sizeCount": 67686
+  },
+  {
     "entryType": "char",
     "entryName": "Lynx",
     "trimCharacterName": "Lynx",
@@ -802,6 +928,18 @@ let sizeLeaderboardArray = [
     "enemyID": 1023020,
     "lineCount": 1843,
     "sizeCount": 58865
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012073,
+    "lineCount": 1697,
+    "sizeCount": 58483
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012072,
+    "lineCount": 1697,
+    "sizeCount": 58471
   },
   {
     "entryType": "char",
@@ -996,6 +1134,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 38645
   },
   {
+    "entryType": "enemy",
+    "enemyID": 4012071,
+    "lineCount": 1101,
+    "sizeCount": 38149
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012070,
+    "lineCount": 1101,
+    "sizeCount": 38137
+  },
+  {
     "entryType": "char",
     "entryName": "Welt",
     "trimCharacterName": "Welt",
@@ -1027,7 +1177,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1012040,
     "lineCount": 1115,
-    "sizeCount": 35990
+    "sizeCount": 35971
   },
   {
     "entryType": "enemy",
@@ -1220,6 +1370,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/320.png",
     "lineCount": 458,
     "sizeCount": 16883
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002090,
+    "lineCount": 569,
+    "sizeCount": 16740
   },
   {
     "entryType": "lc",
@@ -1514,6 +1670,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 10629
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8002051,
+    "lineCount": 353,
+    "sizeCount": 10458
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002055,
+    "lineCount": 353,
+    "sizeCount": 10458
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002100,
+    "lineCount": 353,
+    "sizeCount": 10458
+  },
+  {
     "entryType": "lc",
     "entryName": "Ninjutsu Inscription: Dazzling Evilbreaker",
     "trimCharacterName": "NinjutsuInscriptionDazzlingEvilbreaker",
@@ -1536,6 +1710,24 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23000.png",
     "lineCount": 313,
     "sizeCount": 10343
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002052,
+    "lineCount": 345,
+    "sizeCount": 10231
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002056,
+    "lineCount": 345,
+    "sizeCount": 10231
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002101,
+    "lineCount": 345,
+    "sizeCount": 10231
   },
   {
     "entryType": "enemy",
@@ -1610,6 +1802,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/24002.png",
     "lineCount": 298,
     "sizeCount": 9532
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002040,
+    "lineCount": 324,
+    "sizeCount": 9515
   },
   {
     "entryType": "lc",
@@ -1776,6 +1974,60 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23051.png",
     "lineCount": 258,
     "sizeCount": 8391
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002050,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002053,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002054,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002057,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002058,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002059,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002091,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002102,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002109,
+    "lineCount": 286,
+    "sizeCount": 8383
   },
   {
     "entryType": "lc",
@@ -2274,6 +2526,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 5222
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8032020,
+    "lineCount": 168,
+    "sizeCount": 5198
+  },
+  {
     "entryType": "lc",
     "entryName": "In the Name of the World",
     "trimCharacterName": "IntheNameoftheWorld",
@@ -2432,6 +2690,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/21001.png",
     "lineCount": 154,
     "sizeCount": 4596
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8032010,
+    "lineCount": 149,
+    "sizeCount": 4582
   },
   {
     "entryType": "relic",
@@ -3052,6 +3316,12 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 8001031,
+    "lineCount": 6,
+    "sizeCount": 110
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8033013,
     "lineCount": 6,
     "sizeCount": 110
   }
