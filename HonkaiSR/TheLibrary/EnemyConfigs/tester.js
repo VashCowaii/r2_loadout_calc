@@ -7451,7 +7451,17 @@ const pagePopulation = {
             return `<span class="descriptionNumberColor">${value}</span>`;
         });
 
-        return replaced.replace(/\\n/g, "<br>");
+        const replaced2 = replaced.replace(/#(\d+)(%?)/g, (_,index,percent) => {
+            let value = Number(array[index-1]); 
+            
+            if (percent === "%") {
+                value = `${(value).toFixed(2)}%`;
+            }
+        
+            return `<span class="descriptionNumberColor">${value}</span>`;
+        });
+
+        return replaced2.replace(/\\n/g, "<br>");
     },
     pageLoadTrashDefinition() {
 

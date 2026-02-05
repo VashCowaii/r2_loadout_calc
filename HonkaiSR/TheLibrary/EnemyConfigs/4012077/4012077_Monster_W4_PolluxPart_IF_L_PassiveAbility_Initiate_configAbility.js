@@ -1,0 +1,70 @@
+const configAbility = {
+  "fileName": "4012077_Monster_W4_PolluxPart_IF_L_PassiveAbility_Initiate",
+  "skillTrigger": "Passive",
+  "abilityType": "Talent",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    "Deleted bullshit",
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "Enemy_W4_PolluxPart_IF_Status"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "Enemy_W4_PolluxPart_IF_MinionsSuperArmorController",
+      "valuePerStack": {
+        "MDF_MinionsSuperArmor_AllDamageReduce": {
+          "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
+          "displayLines": "{[SkillEX01[0]]}",
+          "constants": [],
+          "variables": [
+            "{[SkillEX01[0]]}"
+          ]
+        },
+        "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
+          "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
+          "displayLines": "{[SkillEX01[1]]}",
+          "constants": [],
+          "variables": [
+            "{[SkillEX01[1]]}"
+          ]
+        },
+        "MDF_SetActionDelayValue": {
+          "operator": "Variables[0] ({[SkillEX01[2]]}) || RETURN",
+          "displayLines": "{[SkillEX01[2]]}",
+          "constants": [],
+          "variables": [
+            "{[SkillEX01[2]]}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Define Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster's Summoner}}"
+      },
+      "scope": "TargetEntity",
+      "variableName": "StanceDamagePreshowValue",
+      "value": {
+        "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+        "displayLines": "{[SkillP01[0]]}",
+        "constants": [],
+        "variables": [
+          "{[SkillP01[0]]}"
+        ]
+      }
+    }
+  ],
+  "references": []
+}

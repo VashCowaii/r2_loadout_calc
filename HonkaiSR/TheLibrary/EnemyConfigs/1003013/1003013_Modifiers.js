@@ -85,7 +85,7 @@ const configAbility = {
                   "relatedAchievements": [
                     {
                       "title": "Attack! No Matter the Cost!",
-                      "desc": "Trigger Silvermane Lieutenant's Shield Reflect at least <unbreak>#1[i]</unbreak> time(s) and defeat it",
+                      "desc": "Trigger Silvermane Lieutenant's Shield Reflect at least #1[i] time(s) and defeat it",
                       "rarity": "Low",
                       "params": [
                         4

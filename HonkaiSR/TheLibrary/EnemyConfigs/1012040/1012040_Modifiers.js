@@ -109,7 +109,7 @@ const configAbility = {
                   "relatedAchievements": [
                     {
                       "title": "Right-Hand Man's Many Right-Handed Right Hands",
-                      "desc": "Defeat Svarog after destroying <unbreak>#1[i]</unbreak> Auxiliary Robot Arm Unit(s)",
+                      "desc": "Defeat Svarog after destroying #1[i] Auxiliary Robot Arm Unit(s)",
                       "rarity": "Mid",
                       "params": [
                         4

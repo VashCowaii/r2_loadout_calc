@@ -1,0 +1,585 @@
+const configAbility = {
+  "fileName": "4014036_Monster_W4_Pollux_IF_Ability05_Part02",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "OR",
+        "conditionList": [
+          {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": ">=",
+            "value2": 2
+          },
+          {
+            "name": "Enemy ID",
+            "ID": 4014033,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "Castorice, Hand of Shadow",
+            "isBaseCompare": true
+          }
+        ]
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "Enemy_W4_Pollux_IF_UltraReadyMark"
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "AIFlag",
+          "value": 3
+        }
+      ],
+      "failed": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "AIFlag",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "variableName": "_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
+              "constants": [
+                0.125
+              ],
+              "variables": [
+                "_MaxHP",
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null,
+            "behaviorTag": "DirectlyLoseHpHit",
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "12.5%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "variableName": "_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
+              "constants": [
+                0.125
+              ],
+              "variables": [
+                "_MaxHP",
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null,
+            "behaviorTag": "DirectlyLoseHpHit",
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "12.5%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "variableName": "_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
+              "constants": [
+                0.125
+              ],
+              "variables": [
+                "_MaxHP",
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null,
+            "behaviorTag": "DirectlyLoseHpHit",
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "12.5%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "variableName": "_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
+              "constants": [
+                0.125
+              ],
+              "variables": [
+                "_MaxHP",
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null,
+            "behaviorTag": "DirectlyLoseHpHit",
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "12.5%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "variableName": "_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
+              "constants": [
+                0.125
+              ],
+              "variables": [
+                "_MaxHP",
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null,
+            "behaviorTag": "DirectlyLoseHpHit",
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "12.5%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "variableName": "_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
+              "constants": [
+                0.125
+              ],
+              "variables": [
+                "_MaxHP",
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null,
+            "behaviorTag": "DirectlyLoseHpHit",
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "12.5%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "variableName": "_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
+              "constants": [
+                0.125
+              ],
+              "variables": [
+                "_MaxHP",
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null,
+            "behaviorTag": "DirectlyLoseHpHit",
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "12.5%"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
+      },
+      "ifTargetFound": [
+        {
+          "name": "Define Custom Variable with Stat",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "variableName": "_MaxHP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Quantum",
+            "Damage": {
+              "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
+              "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
+              "constants": [
+                0.125
+              ],
+              "variables": [
+                "_MaxHP",
+                "{[Skill05[1]]}"
+              ]
+            },
+            "dmgFormulaFinal": "Converted DMG Base",
+            "Toughness": null,
+            "Tags": null,
+            "behaviorTag": "DirectlyLoseHpHit",
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "12.5%"
+          }
+        }
+      ]
+    },
+    "Trigger: Attack End",
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "HP_Bars_Remaining",
+        "compareType": "=",
+        "value2": 2
+      }
+    },
+    {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Player Team(Exclude Memosprites)}}"
+      },
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "modifier": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+        "invertCondition": true
+      },
+      "ifTargetFound": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "modifier": "Enemy_W4_Pollux_IF_ThirstBlood[<span class=\"descriptionNumberColor\">Hastened Death</span>]",
+          "valuePerStack": {
+            "MDF_DamagePercentage": {
+              "operator": "Variables[0] ({[SkillP02[1]]}) || RETURN",
+              "displayLines": "{[SkillP02[1]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP02[1]]}"
+              ]
+            },
+            "MDF_DamageHpAddedRatio": {
+              "operator": "Variables[0] ({[SkillP02[0]]}) || RETURN",
+              "displayLines": "{[SkillP02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[SkillP02[0]]}"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "Enemy_W4_Pollux_IF_Strengthen[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
+      "valuePerStack": {
+        "MDF_ShowValue1": {
+          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+          "displayLines": "{[Skill05[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill05[0]]}"
+          ]
+        },
+        "MDF_SpeedUpRatio": {
+          "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+          "displayLines": "{[Skill05[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill05[0]]}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Minions}}"
+      },
+      "modifier": "Enemy_W4_PolluxPart_IF_Reflex[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster's Minions}}"
+      },
+      "modifier": "Enemy_W4_PolluxPart_IF_Link"
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Target",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Current Turn Owner}}"
+        }
+      },
+      "passed": [
+        {
+          "name": "Assign Advance/Delay to Current Ability Use",
+          "adjustmentValue": {
+            "operator": "Variables[0] (_Skill05_ActionDelay) || RETURN",
+            "displayLines": "_Skill05_ActionDelay",
+            "constants": [],
+            "variables": [
+              "_Skill05_ActionDelay"
+            ]
+          },
+          "adjustmentType": "="
+        },
+        {
+          "name": "Action Advance/Delay",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "advanceType": "Set",
+          "multiAdd": "(_Skill05_ActionDelay - 1)"
+        }
+      ],
+      "failed": [
+        {
+          "name": "Action Advance/Delay",
+          "advanceType": "Set",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "multiBase": {
+            "operator": "Variables[0] (_Skill05_ActionDelay) || RETURN",
+            "displayLines": "_Skill05_ActionDelay",
+            "constants": [],
+            "variables": [
+              "_Skill05_ActionDelay"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "HP_Bars_Remaining",
+        "compareType": "=",
+        "value2": 2
+      },
+      "passed": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "OneMorePerTurn"
+        }
+      ]
+    }
+  ],
+  "references": []
+}
