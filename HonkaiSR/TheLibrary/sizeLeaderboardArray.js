@@ -462,6 +462,66 @@ let sizeLeaderboardArray = [
     "sizeCount": 118055
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8002060,
+    "lineCount": 3291,
+    "sizeCount": 113828
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002061,
+    "lineCount": 3291,
+    "sizeCount": 113828
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002069,
+    "lineCount": 3291,
+    "sizeCount": 113828
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002070,
+    "lineCount": 3291,
+    "sizeCount": 113712
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002071,
+    "lineCount": 3291,
+    "sizeCount": 113712
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002079,
+    "lineCount": 3291,
+    "sizeCount": 113712
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002080,
+    "lineCount": 3290,
+    "sizeCount": 113705
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002081,
+    "lineCount": 3290,
+    "sizeCount": 113705
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002082,
+    "lineCount": 3290,
+    "sizeCount": 113705
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002089,
+    "lineCount": 3290,
+    "sizeCount": 113705
+  },
+  {
     "entryType": "char",
     "entryName": "Archer",
     "trimCharacterName": "Archer",
@@ -1294,6 +1354,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 16883
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8002090,
+    "lineCount": 569,
+    "sizeCount": 16740
+  },
+  {
     "entryType": "lc",
     "entryName": "A Grounded Ascent",
     "trimCharacterName": "AGroundedAscent",
@@ -1586,6 +1652,24 @@ let sizeLeaderboardArray = [
     "sizeCount": 10629
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8002051,
+    "lineCount": 353,
+    "sizeCount": 10458
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002055,
+    "lineCount": 353,
+    "sizeCount": 10458
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002100,
+    "lineCount": 353,
+    "sizeCount": 10458
+  },
+  {
     "entryType": "lc",
     "entryName": "Ninjutsu Inscription: Dazzling Evilbreaker",
     "trimCharacterName": "NinjutsuInscriptionDazzlingEvilbreaker",
@@ -1608,6 +1692,24 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23000.png",
     "lineCount": 313,
     "sizeCount": 10343
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002052,
+    "lineCount": 345,
+    "sizeCount": 10231
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002056,
+    "lineCount": 345,
+    "sizeCount": 10231
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002101,
+    "lineCount": 345,
+    "sizeCount": 10231
   },
   {
     "entryType": "enemy",
@@ -1682,6 +1784,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/24002.png",
     "lineCount": 298,
     "sizeCount": 9532
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002040,
+    "lineCount": 324,
+    "sizeCount": 9515
   },
   {
     "entryType": "lc",
@@ -1848,6 +1956,60 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/23051.png",
     "lineCount": 258,
     "sizeCount": 8391
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002050,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002053,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002054,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002057,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002058,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002059,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002091,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002102,
+    "lineCount": 286,
+    "sizeCount": 8383
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8002109,
+    "lineCount": 286,
+    "sizeCount": 8383
   },
   {
     "entryType": "lc",

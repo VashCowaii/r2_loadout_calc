@@ -3501,13 +3501,14 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "team",
+            "invertCondition",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Current Action Holder's Team");
 
         // initialCounter++;
         return `<div class="actionDetailBody">
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.team}
+            ${parseRef.invertCondition ? "NOT " : ""}${parseRef.team}
         </div>`;
     },
     "Add Target by Enemy ID"(parseRef,initialCounter) {
@@ -6517,6 +6518,7 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "target",
+            "triggerEnemyEscape",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Entity Escape Battle");
 
@@ -6534,7 +6536,7 @@ const megaParsingFuckeryPain = {
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>
         <div class="modifierDetailsBox">
-            ${getStandardNameDisplay(initialCounter,parseRef.reason,"Reason")}
+            ${getStandardNameDisplay(initialCounter,parseRef.triggerEnemyEscape,"Trigger Enemy Escape")}
         </div>`;
     },
     "Entity Exit Stage"(parseRef,initialCounter) {
