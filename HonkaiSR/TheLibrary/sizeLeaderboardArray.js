@@ -338,6 +338,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 145709
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8033010,
+    "lineCount": 4008,
+    "sizeCount": 141813
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8033012,
+    "lineCount": 4008,
+    "sizeCount": 141813
+  },
+  {
     "entryType": "char",
     "entryName": "Saber",
     "trimCharacterName": "Saber",
@@ -864,6 +876,12 @@ let sizeLeaderboardArray = [
     "enemyID": 2004010,
     "lineCount": 2213,
     "sizeCount": 70251
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8033011,
+    "lineCount": 2105,
+    "sizeCount": 67686
   },
   {
     "entryType": "char",
@@ -2508,6 +2526,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 5222
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8032020,
+    "lineCount": 168,
+    "sizeCount": 5198
+  },
+  {
     "entryType": "lc",
     "entryName": "In the Name of the World",
     "trimCharacterName": "IntheNameoftheWorld",
@@ -2666,6 +2690,12 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/21001.png",
     "lineCount": 154,
     "sizeCount": 4596
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8032010,
+    "lineCount": 149,
+    "sizeCount": 4582
   },
   {
     "entryType": "relic",
@@ -3286,6 +3316,12 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 8001031,
+    "lineCount": 6,
+    "sizeCount": 110
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 8033013,
     "lineCount": 6,
     "sizeCount": 110
   }
