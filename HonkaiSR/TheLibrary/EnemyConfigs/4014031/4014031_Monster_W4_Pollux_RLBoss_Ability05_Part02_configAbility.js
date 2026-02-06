@@ -100,7 +100,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (4) || DIV || RETURN",
               "displayLines": "((_TargetCurrentHp * {[Skill05[1]]}) / 4)",
               "constants": [
@@ -161,7 +161,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (4) || DIV || RETURN",
               "displayLines": "((_TargetCurrentHp * {[Skill05[1]]}) / 4)",
               "constants": [
@@ -222,7 +222,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (3) || DIV || RETURN",
               "displayLines": "((_TargetCurrentHp * {[Skill05[1]]}) / 3)",
               "constants": [
@@ -283,7 +283,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (3) || DIV || RETURN",
               "displayLines": "((_TargetCurrentHp * {[Skill05[1]]}) / 3)",
               "constants": [
@@ -344,7 +344,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (2) || DIV || RETURN",
               "displayLines": "((_TargetCurrentHp * {[Skill05[1]]}) / 2)",
               "constants": [
@@ -405,7 +405,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (2) || DIV || RETURN",
               "displayLines": "((_TargetCurrentHp * {[Skill05[1]]}) / 2)",
               "constants": [
@@ -466,7 +466,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] ({[Skill05[1]]}) || MUL || RETURN",
               "displayLines": "(_TargetCurrentHp * {[Skill05[1]]})",
               "constants": [],
@@ -525,7 +525,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] ({[Skill05[1]]}) || MUL || RETURN",
               "displayLines": "(_TargetCurrentHp * {[Skill05[1]]})",
               "constants": [],

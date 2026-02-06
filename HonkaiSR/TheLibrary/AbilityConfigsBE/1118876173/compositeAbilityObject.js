@@ -2147,7 +2147,7 @@ const compositeAbilityObject = {
                                   "canPhase": true,
                                   "AttackScaling": {
                                     "DamageType": "Physical",
-                                    "Damage": {
+                                    "DamageFlat": {
                                       "operator": "Variables[0] (DV_maxHP) || Variables[1] (DV_BeforeFeverEliteDmgRatio) || MUL || RETURN",
                                       "displayLines": "(DV_maxHP * DV_BeforeFeverEliteDmgRatio)",
                                       "constants": [],
@@ -2201,7 +2201,7 @@ const compositeAbilityObject = {
                                       "canPhase": true,
                                       "AttackScaling": {
                                         "DamageType": "Physical",
-                                        "Damage": {
+                                        "DamageFlat": {
                                           "operator": "Variables[0] (DV_maxHP) || Constants[0] (20) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
                                           "displayLines": "((DV_maxHP / 20) + 0.0009999999)",
                                           "constants": [
@@ -4128,7 +4128,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Wind",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) || MUL || Variables[2] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage) || MUL || RETURN",
                       "displayLines": "((BattleEvent_BaseHP * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)",
                       "constants": [],
@@ -4291,7 +4291,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Wind",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DOT_TriggerRatio) || MUL || Variables[2] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) || MUL || Variables[3] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage) || MUL || RETURN",
                       "displayLines": "(((BattleEvent_BaseHP * DOT_TriggerRatio) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)",
                       "constants": [],

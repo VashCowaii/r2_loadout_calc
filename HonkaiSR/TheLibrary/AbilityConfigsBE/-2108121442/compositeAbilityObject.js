@@ -1359,7 +1359,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio) || MUL || RETURN",
                               "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio)",
                               "constants": [],
@@ -1383,7 +1383,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio) || MUL || RETURN",
                               "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio)",
                               "constants": [],
@@ -1659,7 +1659,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio) || MUL || RETURN",
                               "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio)",
                               "constants": [],
@@ -2877,7 +2877,7 @@ const compositeAbilityObject = {
                                   "canPhase": true,
                                   "AttackScaling": {
                                     "DamageType": "Physical",
-                                    "Damage": {
+                                    "DamageFlat": {
                                       "operator": "Variables[0] (DV_maxHP) || Variables[1] (DV_BeforeFeverEliteDmgRatio) || MUL || RETURN",
                                       "displayLines": "(DV_maxHP * DV_BeforeFeverEliteDmgRatio)",
                                       "constants": [],
@@ -2930,7 +2930,7 @@ const compositeAbilityObject = {
                                       "canPhase": true,
                                       "AttackScaling": {
                                         "DamageType": "Physical",
-                                        "Damage": {
+                                        "DamageFlat": {
                                           "operator": "Variables[0] (DV_maxHP) || Constants[0] (20) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
                                           "displayLines": "((DV_maxHP / 20) + 0.0009999999)",
                                           "constants": [
@@ -4877,7 +4877,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (MDF_DamageCount) || Variables[1] (DV_FantasticStory_PlusAbility_2017_ADF_1) || MUL || RETURN",
                           "displayLines": "(MDF_DamageCount * DV_FantasticStory_PlusAbility_2017_ADF_1)",
                           "constants": [],
@@ -5525,7 +5525,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_PlusAbility_2012_ADF_2) || MUL || RETURN",
                               "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_PlusAbility_2012_ADF_2)",
                               "constants": [],
@@ -5549,7 +5549,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_PlusAbility_2012_ADF_2) || MUL || RETURN",
                               "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_PlusAbility_2012_ADF_2)",
                               "constants": [],

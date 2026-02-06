@@ -109,7 +109,7 @@ const configAbility = {
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (0.36) || MUL || RETURN",
                       "displayLines": "(MDF_Rank06ExtraDamage * 0.36)",
                       "constants": [],

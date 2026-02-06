@@ -2411,7 +2411,7 @@ const compositeAbilityObject = {
                               "name": "Damage Type Source",
                               "sourceType": {}
                             },
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (MDF_BasicDamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
                               "displayLines": "(MDF_BasicDamagePercentage * _originalDamage)",
                               "constants": [],
@@ -2577,7 +2577,7 @@ const compositeAbilityObject = {
                               "name": "Damage Type Source",
                               "sourceType": {}
                             },
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (MDF_BasicDamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
                               "displayLines": "(MDF_BasicDamagePercentage * _originalDamage)",
                               "constants": [],

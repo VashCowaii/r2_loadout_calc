@@ -63,7 +63,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Owner_MaxHP) || Variables[1] ({[PassiveSkill03[0]]}) || MUL || RETURN",
                   "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})",
                   "constants": [],
@@ -415,7 +415,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Owner_MaxHP) || Variables[1] ({[PassiveSkill03[0]]}) || MUL || RETURN",
                   "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})",
                   "constants": [],
@@ -608,7 +608,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Owner_MaxHP) || Variables[1] ({[PassiveSkill03[0]]}) || MUL || RETURN",
                   "displayLines": "(Owner_MaxHP * {[PassiveSkill03[0]]})",
                   "constants": [],

@@ -637,7 +637,7 @@ const compositeAbilityObject = {
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_BirdAtkDmgRatio) || MUL || RETURN",
                       "displayLines": "(BattleEvent_BaseHP * DV_BirdAtkDmgRatio)",
                       "constants": [],
@@ -2535,7 +2535,7 @@ const compositeAbilityObject = {
                                   "canPhase": true,
                                   "AttackScaling": {
                                     "DamageType": "Physical",
-                                    "Damage": {
+                                    "DamageFlat": {
                                       "operator": "Variables[0] (DV_maxHP) || Variables[1] (DV_BeforeFeverEliteDmgRatio) || MUL || RETURN",
                                       "displayLines": "(DV_maxHP * DV_BeforeFeverEliteDmgRatio)",
                                       "constants": [],
@@ -2588,7 +2588,7 @@ const compositeAbilityObject = {
                                       "canPhase": true,
                                       "AttackScaling": {
                                         "DamageType": "Physical",
-                                        "Damage": {
+                                        "DamageFlat": {
                                           "operator": "Variables[0] (DV_maxHP) || Constants[0] (20) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
                                           "displayLines": "((DV_maxHP / 20) + 0.0009999999)",
                                           "constants": [

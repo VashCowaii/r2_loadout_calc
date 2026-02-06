@@ -75,7 +75,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetNegativeHp) || RETURN",
                   "displayLines": "_TargetNegativeHp",
                   "constants": [],
@@ -109,7 +109,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_109) || MUL || Constants[0] (0.25) || MUL || RETURN",
                   "displayLines": "((_MaxHP * UnusedUnderThisBase_109) * 0.25)",
                   "constants": [
@@ -168,7 +168,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_109) || MUL || Constants[0] (0.25) || MUL || RETURN",
                   "displayLines": "((_MaxHP * UnusedUnderThisBase_109) * 0.25)",
                   "constants": [
@@ -227,7 +227,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_109) || MUL || Constants[0] (0.25) || MUL || RETURN",
                   "displayLines": "((_MaxHP * UnusedUnderThisBase_109) * 0.25)",
                   "constants": [
@@ -286,7 +286,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_109) || MUL || Constants[0] (0.25) || MUL || RETURN",
                   "displayLines": "((_MaxHP * UnusedUnderThisBase_109) * 0.25)",
                   "constants": [

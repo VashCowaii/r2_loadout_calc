@@ -20,7 +20,7 @@ const configAbility = {
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Physical",
-        "Damage": {
+        "DamageFlat": {
           "operator": "Variables[0] (Bomb_Damage_get) || RETURN",
           "displayLines": "Bomb_Damage_get",
           "constants": [],
@@ -93,7 +93,7 @@ const configAbility = {
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (Bomb_Damage_Adjoin_get) || RETURN",
               "displayLines": "Bomb_Damage_Adjoin_get",
               "constants": [],

@@ -7053,6 +7053,7 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "DamageType",
             "Damage",
+            "DamageFlat",
             "DamageExtra",
             "DamageBreak",
             "Toughness",
@@ -7101,11 +7102,15 @@ const megaParsingFuckeryPain = {
         const checkColoring = megaParsingFuckery.getAttackTypeColoring(parseRef.DamageType,true) ?? "";
 
 
-
+        // DamageFlat
         return `
         ${parseRef.Damage ? `<div class="actionDetailBody2">
-            <div class="rotationConditionOperatorHeaderInline">DMG:</div>&nbsp;
+            <div class="rotationConditionOperatorHeaderInline">DMG %:</div>&nbsp;
             ${parseRef.Damage?.displayLines ?? parseRef.Damage} ${typeof parseRef.DamageType === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.DamageType,initialCounter) : `<img src="/HonkaiSR/icon/element/${parseRef.DamageType}.png" class="characterDisplayLogStatIconElement"></img>`}
+        </div>` : ""}
+        ${parseRef.DamageFlat ? `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">DMG Flat:</div>&nbsp;
+            ${parseRef.DamageFlat?.displayLines ?? parseRef.DamageFlat} ${typeof parseRef.DamageType === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.DamageType,initialCounter) : `<img src="/HonkaiSR/icon/element/${parseRef.DamageType}.png" class="characterDisplayLogStatIconElement"></img>`}
         </div>` : ""}
         ${parseRef.DamageBreak ? `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Break DMG:</div>&nbsp;

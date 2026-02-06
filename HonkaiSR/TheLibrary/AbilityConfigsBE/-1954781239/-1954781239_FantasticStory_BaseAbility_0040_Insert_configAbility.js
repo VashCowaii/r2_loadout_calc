@@ -211,7 +211,7 @@ const configAbility = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_3_get) || MUL || RETURN",
                   "displayLines": "(TempHP_get * ADF_3_get)",
                   "constants": [],

@@ -973,7 +973,7 @@ const configAbility = {
                               "canPhase": true,
                               "AttackScaling": {
                                 "DamageType": "Physical",
-                                "Damage": {
+                                "DamageFlat": {
                                   "operator": "Variables[0] (DV_maxHP) || Variables[1] (DV_BeforeFeverEliteDmgRatio) || MUL || RETURN",
                                   "displayLines": "(DV_maxHP * DV_BeforeFeverEliteDmgRatio)",
                                   "constants": [],
@@ -1026,7 +1026,7 @@ const configAbility = {
                                   "canPhase": true,
                                   "AttackScaling": {
                                     "DamageType": "Physical",
-                                    "Damage": {
+                                    "DamageFlat": {
                                       "operator": "Variables[0] (DV_maxHP) || Constants[0] (20) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
                                       "displayLines": "((DV_maxHP / 20) + 0.0009999999)",
                                       "constants": [

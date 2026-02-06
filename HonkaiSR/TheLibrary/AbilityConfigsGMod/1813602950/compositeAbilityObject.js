@@ -33,6 +33,14 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
+                      "operator": "Variables[0] (Modifier_ThunderCurse_DamagePercentage) || RETURN",
+                      "displayLines": "Modifier_ThunderCurse_DamagePercentage",
+                      "constants": [],
+                      "variables": [
+                        "Modifier_ThunderCurse_DamagePercentage"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (STANDARDSPECIFIC_OBJECT_UNUSED_18) || RETURN",
                       "displayLines": "STANDARDSPECIFIC_OBJECT_UNUSED_18",
                       "constants": [],

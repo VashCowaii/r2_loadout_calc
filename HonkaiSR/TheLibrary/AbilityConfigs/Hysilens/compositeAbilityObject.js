@@ -1306,11 +1306,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Burn_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Burn_DamageValue * _Layer)",
+                      "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
+                      "displayLines": "(Modifier_Burn_DamagePercentage * _Layer)",
                       "constants": [],
                       "variables": [
-                        "Modifier_Burn_DamageValue",
+                        "Modifier_Burn_DamagePercentage",
                         "_Layer"
                       ]
                     },
@@ -1320,6 +1320,15 @@ const compositeAbilityObject = {
                       "constants": [],
                       "variables": [
                         "Modifier_Burn_DamagePercentage_Defence",
+                        "_Layer"
+                      ]
+                    },
+                    "DamageFlat": {
+                      "operator": "Variables[0] (Modifier_Burn_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
+                      "displayLines": "(Modifier_Burn_DamageValue * _Layer)",
+                      "constants": [],
+                      "variables": [
+                        "Modifier_Burn_DamageValue",
                         "_Layer"
                       ]
                     },
@@ -1360,12 +1369,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamageValue) * _Layer)",
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage) || MUL || Variables[2] (_Layer) || MUL || RETURN",
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage) * _Layer)",
                       "constants": [],
                       "variables": [
                         "DOT_TriggerRatio",
-                        "Modifier_Burn_DamageValue",
+                        "Modifier_Burn_DamagePercentage",
                         "_Layer"
                       ]
                     },
@@ -1376,6 +1385,16 @@ const compositeAbilityObject = {
                       "variables": [
                         "DOT_TriggerRatio",
                         "Modifier_Burn_DamagePercentage_Defence",
+                        "_Layer"
+                      ]
+                    },
+                    "DamageFlat": {
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamageValue) * _Layer)",
+                      "constants": [],
+                      "variables": [
+                        "DOT_TriggerRatio",
+                        "Modifier_Burn_DamageValue",
                         "_Layer"
                       ]
                     },
@@ -1433,6 +1452,15 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
+                      "operator": "Variables[0] (Modifier_Electric_DamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
+                      "displayLines": "(Modifier_Electric_DamagePercentage * _Layer)",
+                      "constants": [],
+                      "variables": [
+                        "Modifier_Electric_DamagePercentage",
+                        "_Layer"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (Modifier_Electric_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
                       "displayLines": "(Modifier_Electric_DamageValue * _Layer)",
                       "constants": [],
@@ -1475,6 +1503,16 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamagePercentage) || MUL || Variables[2] (_Layer) || MUL || RETURN",
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * _Layer)",
+                      "constants": [],
+                      "variables": [
+                        "DOT_TriggerRatio",
+                        "Modifier_Electric_DamagePercentage",
+                        "_Layer"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
                       "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamageValue) * _Layer)",
                       "constants": [],
@@ -1660,7 +1698,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (MDF_DamageValue) || RETURN",
                       "displayLines": "MDF_DamageValue",
                       "constants": [],
@@ -1752,7 +1790,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || RETURN",
                       "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)",
                       "constants": [],
@@ -1911,11 +1949,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (Modifier_Burn_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
-                      "displayLines": "(Modifier_Burn_DamageValue * _Layer)",
+                      "operator": "Variables[0] (Modifier_Burn_DamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
+                      "displayLines": "(Modifier_Burn_DamagePercentage * _Layer)",
                       "constants": [],
                       "variables": [
-                        "Modifier_Burn_DamageValue",
+                        "Modifier_Burn_DamagePercentage",
                         "_Layer"
                       ]
                     },
@@ -1925,6 +1963,15 @@ const compositeAbilityObject = {
                       "constants": [],
                       "variables": [
                         "Modifier_Burn_DamagePercentage_Defence",
+                        "_Layer"
+                      ]
+                    },
+                    "DamageFlat": {
+                      "operator": "Variables[0] (Modifier_Burn_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
+                      "displayLines": "(Modifier_Burn_DamageValue * _Layer)",
+                      "constants": [],
+                      "variables": [
+                        "Modifier_Burn_DamageValue",
                         "_Layer"
                       ]
                     },
@@ -1965,12 +2012,12 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
-                      "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamageValue) * _Layer)",
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamagePercentage) || MUL || Variables[2] (_Layer) || MUL || RETURN",
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamagePercentage) * _Layer)",
                       "constants": [],
                       "variables": [
                         "DOT_TriggerRatio",
-                        "Modifier_Burn_DamageValue",
+                        "Modifier_Burn_DamagePercentage",
                         "_Layer"
                       ]
                     },
@@ -1981,6 +2028,16 @@ const compositeAbilityObject = {
                       "variables": [
                         "DOT_TriggerRatio",
                         "Modifier_Burn_DamagePercentage_Defence",
+                        "_Layer"
+                      ]
+                    },
+                    "DamageFlat": {
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Burn_DamageValue) * _Layer)",
+                      "constants": [],
+                      "variables": [
+                        "DOT_TriggerRatio",
+                        "Modifier_Burn_DamageValue",
                         "_Layer"
                       ]
                     },
@@ -2038,6 +2095,15 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
+                      "operator": "Variables[0] (Modifier_Electric_DamagePercentage) || Variables[1] (_Layer) || MUL || RETURN",
+                      "displayLines": "(Modifier_Electric_DamagePercentage * _Layer)",
+                      "constants": [],
+                      "variables": [
+                        "Modifier_Electric_DamagePercentage",
+                        "_Layer"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (Modifier_Electric_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
                       "displayLines": "(Modifier_Electric_DamageValue * _Layer)",
                       "constants": [],
@@ -2080,6 +2146,16 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamagePercentage) || MUL || Variables[2] (_Layer) || MUL || RETURN",
+                      "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamagePercentage) * _Layer)",
+                      "constants": [],
+                      "variables": [
+                        "DOT_TriggerRatio",
+                        "Modifier_Electric_DamagePercentage",
+                        "_Layer"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
                       "displayLines": "((DOT_TriggerRatio * Modifier_Electric_DamageValue) * _Layer)",
                       "constants": [],
@@ -2265,7 +2341,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (MDF_DamageValue) || Variables[1] (_Layer) || MUL || RETURN",
                       "displayLines": "(MDF_DamageValue * _Layer)",
                       "constants": [],
@@ -2373,7 +2449,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || Variables[2] (_Layer) || MUL || RETURN",
                       "displayLines": "((DOT_TriggerRatio * MDF_DamageValue) * _Layer)",
                       "constants": [],

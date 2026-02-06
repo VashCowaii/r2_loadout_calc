@@ -250,7 +250,7 @@ const compositeAbilityObject = {
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_3_get) || MUL || RETURN",
                       "displayLines": "(TempHP_get * ADF_3_get)",
                       "constants": [],
@@ -1613,7 +1613,7 @@ const compositeAbilityObject = {
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_3_get) || MUL || RETURN",
                       "displayLines": "(TempHP_get * ADF_3_get)",
                       "constants": [],
@@ -3225,7 +3225,7 @@ const compositeAbilityObject = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_2_get) || MUL || RETURN",
                   "displayLines": "(TempHP_get * ADF_2_get)",
                   "constants": [],
@@ -3303,7 +3303,7 @@ const compositeAbilityObject = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_2_get) || MUL || RETURN",
                   "displayLines": "(TempHP_get * ADF_2_get)",
                   "constants": [],
@@ -6223,7 +6223,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Wind",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                       "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
                       "constants": [],
@@ -6260,7 +6260,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Wind",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                       "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
                       "constants": [],
@@ -6447,7 +6447,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Wind",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                       "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
                       "constants": [],
@@ -6484,7 +6484,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Wind",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                       "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
                       "constants": [],
@@ -6633,7 +6633,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Wind",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                       "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
                       "constants": [],
@@ -6670,7 +6670,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Wind",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                       "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
                       "constants": [],
@@ -8153,7 +8153,7 @@ const compositeAbilityObject = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
                   "displayLines": "Plus5_Bomb_Damage",
                   "constants": [],
@@ -8232,7 +8232,7 @@ const compositeAbilityObject = {
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
                       "displayLines": "Plus5_Bomb_Damage",
                       "constants": [],
@@ -8268,7 +8268,7 @@ const compositeAbilityObject = {
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (DV_plus7_ADF_1_get) || ADD || MUL || RETURN",
                       "displayLines": "(Bomb_Damage_get * (1 + DV_plus7_ADF_1_get))",
                       "constants": [
@@ -8296,7 +8296,7 @@ const compositeAbilityObject = {
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (Bomb_Damage_get) || RETURN",
                       "displayLines": "Bomb_Damage_get",
                       "constants": [],
@@ -8616,7 +8616,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
                           "displayLines": "Plus5_Bomb_Damage",
                           "constants": [],
@@ -8695,7 +8695,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
                               "displayLines": "Plus5_Bomb_Damage",
                               "constants": [],
@@ -8732,7 +8732,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (Bomb_Damage) || Constants[0] (1) || Variables[1] (DV_FantasticStory_PlusAbility_0017_ADF_1) || ADD || MUL || RETURN",
                               "displayLines": "(Bomb_Damage * (1 + DV_FantasticStory_PlusAbility_0017_ADF_1))",
                               "constants": [
@@ -8795,7 +8795,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (Bomb_Damage) || RETURN",
                               "displayLines": "Bomb_Damage",
                               "constants": [],

@@ -1870,7 +1870,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   }
                 },
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (MDF_ReflexDamageValue) || RETURN",
                   "displayLines": "MDF_ReflexDamageValue",
                   "constants": [],
@@ -3538,7 +3538,7 @@ const configAbility = {
                       },
                       "AttackScaling": {
                         "DamageType": "Quantum",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (_TargetNegativeHp) || RETURN",
                           "displayLines": "_TargetNegativeHp",
                           "constants": [],

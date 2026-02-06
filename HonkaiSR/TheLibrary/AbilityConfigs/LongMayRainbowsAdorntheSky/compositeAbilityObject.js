@@ -88,7 +88,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           }
                         },
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (_LoseHPTotal2) || Variables[1] (MDF_DamageRatio) || MUL || RETURN",
                           "displayLines": "(_LoseHPTotal2 * MDF_DamageRatio)",
                           "constants": [],

@@ -627,6 +627,17 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
+                  "operator": "Constants[0] (1) || Variables[0] (MDF_BeingHitDamageValue) || ADD || Variables[1] (Modifier_Entangle_DamagePercentage) || MUL || RETURN",
+                  "displayLines": "((1 + MDF_BeingHitDamageValue) * Modifier_Entangle_DamagePercentage)",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    "MDF_BeingHitDamageValue",
+                    "Modifier_Entangle_DamagePercentage"
+                  ]
+                },
+                "DamageFlat": {
                   "operator": "Variables[0] (Modifier_Entangle_DamageValue) || RETURN",
                   "displayLines": "Modifier_Entangle_DamageValue",
                   "constants": [],

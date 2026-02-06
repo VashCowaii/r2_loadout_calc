@@ -205,7 +205,7 @@ const configAbility = {
                           "name": "Damage Type Source",
                           "sourceType": {}
                         },
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (MDF_DamagePercentage) || Variables[1] (_originalDamage) || MUL || RETURN",
                           "displayLines": "(MDF_DamagePercentage * _originalDamage)",
                           "constants": [],

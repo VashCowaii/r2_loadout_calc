@@ -69,7 +69,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] (IsNeedFade) || MUL || Constants[0] (4) || DIV || RETURN",
               "displayLines": "((_MaxHP * IsNeedFade) / 4)",
               "constants": [
@@ -114,7 +114,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] (IsNeedFade) || MUL || Constants[0] (4) || DIV || RETURN",
               "displayLines": "((_MaxHP * IsNeedFade) / 4)",
               "constants": [
@@ -159,7 +159,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] (IsNeedFade) || MUL || Constants[0] (4) || DIV || RETURN",
               "displayLines": "((_MaxHP * IsNeedFade) / 4)",
               "constants": [
@@ -215,7 +215,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] (_StorySimulationSpeed) || MUL || Variables[0] (_MaxHP) || Variables[2] (IsNeedFade) || MUL || Constants[0] (4) || DIV || ADD || RETURN",
                   "displayLines": "((_MaxHP * _StorySimulationSpeed) + ((_MaxHP * IsNeedFade) / 4))",
                   "constants": [
@@ -281,7 +281,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] (IsNeedFade) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_MaxHP * IsNeedFade) / 4)",
                   "constants": [
