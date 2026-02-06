@@ -56,7 +56,7 @@ const configAbility = {
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
               "displayLines": "Plus5_Bomb_Damage",
               "constants": [],
@@ -135,7 +135,7 @@ const configAbility = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Plus5_Bomb_Damage) || RETURN",
                   "displayLines": "Plus5_Bomb_Damage",
                   "constants": [],
@@ -171,7 +171,7 @@ const configAbility = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Bomb_Damage_get) || Constants[0] (1) || Variables[1] (DV_plus7_ADF_1_get) || ADD || MUL || RETURN",
                   "displayLines": "(Bomb_Damage_get * (1 + DV_plus7_ADF_1_get))",
                   "constants": [
@@ -199,7 +199,7 @@ const configAbility = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Bomb_Damage_get) || RETURN",
                   "displayLines": "Bomb_Damage_get",
                   "constants": [],

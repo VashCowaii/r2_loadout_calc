@@ -51,7 +51,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_113) || MUL || RETURN",
               "displayLines": "(_MaxHP * UnusedUnderThisBase_113)",
               "constants": [],
@@ -115,7 +115,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_115) || MUL || RETURN",
               "displayLines": "(_MaxHP * UnusedUnderThisBase_115)",
               "constants": [],

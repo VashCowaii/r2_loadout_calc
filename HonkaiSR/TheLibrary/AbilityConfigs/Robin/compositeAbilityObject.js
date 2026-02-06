@@ -873,7 +873,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Set Shield State/Value",
+                  "name": "Set Hit-Class",
                   "reset": true
                 },
                 {
@@ -913,7 +913,7 @@ const compositeAbilityObject = {
                   }
                 },
                 {
-                  "name": "Set Shield State/Value"
+                  "name": "Set Hit-Class"
                 },
                 {
                   "name": "Change Character Transformation",

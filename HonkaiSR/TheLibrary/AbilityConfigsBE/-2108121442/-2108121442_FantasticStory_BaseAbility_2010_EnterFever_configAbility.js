@@ -293,7 +293,7 @@ const configAbility = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio) || MUL || RETURN",
                           "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_BeforeFever_P1_Ratio)",
                           "constants": [],
@@ -317,7 +317,7 @@ const configAbility = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio) || MUL || RETURN",
                           "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_BaseAbility_2010_EnterFever_P3_Ratio)",
                           "constants": [],

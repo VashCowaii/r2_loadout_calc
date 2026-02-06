@@ -598,6 +598,14 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
+                  "operator": "Variables[0] (1) || RETURN",
+                  "displayLines": "1",
+                  "constants": [],
+                  "variables": [
+                    1
+                  ]
+                },
+                "DamageFlat": {
                   "operator": "Variables[0] (GDF_AllTeamMemberLoseHPValue) || Variables[1] (2) || MUL || RETURN",
                   "displayLines": "(GDF_AllTeamMemberLoseHPValue * 2)",
                   "constants": [],

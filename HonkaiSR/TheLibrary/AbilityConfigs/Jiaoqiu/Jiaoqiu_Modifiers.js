@@ -851,11 +851,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (Modifier_Burn_DamageValue) || RETURN",
-                  "displayLines": "Modifier_Burn_DamageValue",
+                  "operator": "Variables[0] (DOT_Ratio) || RETURN",
+                  "displayLines": "DOT_Ratio",
                   "constants": [],
                   "variables": [
-                    "Modifier_Burn_DamageValue"
+                    "DOT_Ratio"
                   ]
                 },
                 "DamageExtra": {
@@ -864,6 +864,14 @@ const configAbility = {
                   "constants": [],
                   "variables": [
                     "Modifier_Burn_DamagePercentage_Defence"
+                  ]
+                },
+                "DamageFlat": {
+                  "operator": "Variables[0] (Modifier_Burn_DamageValue) || RETURN",
+                  "displayLines": "Modifier_Burn_DamageValue",
+                  "constants": [],
+                  "variables": [
+                    "Modifier_Burn_DamageValue"
                   ]
                 },
                 "dmgFormulaExtra": "DEF Scaling",
@@ -1047,12 +1055,12 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || RETURN",
-                  "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamageValue)",
+                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (DOT_Ratio) || MUL || RETURN",
+                  "displayLines": "(DOT_TriggerRatio * DOT_Ratio)",
                   "constants": [],
                   "variables": [
                     "DOT_TriggerRatio",
-                    "Modifier_Burn_DamageValue"
+                    "DOT_Ratio"
                   ]
                 },
                 "DamageExtra": {
@@ -1062,6 +1070,15 @@ const configAbility = {
                   "variables": [
                     "DOT_TriggerRatio",
                     "Modifier_Burn_DamagePercentage_Defence"
+                  ]
+                },
+                "DamageFlat": {
+                  "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Burn_DamageValue) || MUL || RETURN",
+                  "displayLines": "(DOT_TriggerRatio * Modifier_Burn_DamageValue)",
+                  "constants": [],
+                  "variables": [
+                    "DOT_TriggerRatio",
+                    "Modifier_Burn_DamageValue"
                   ]
                 },
                 "dmgFormulaExtra": "DEF Scaling",

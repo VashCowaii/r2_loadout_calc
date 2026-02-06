@@ -134,7 +134,7 @@ const configAbility = {
                             "target": "{{Caster}}"
                           }
                         },
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (_TotalAmount) || Variables[1] (0.36) || MUL || RETURN",
                           "displayLines": "(_TotalAmount * 0.36)",
                           "constants": [],

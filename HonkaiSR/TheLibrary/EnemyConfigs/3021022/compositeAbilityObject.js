@@ -2498,11 +2498,11 @@ const compositeAbilityObject = {
                   }
                 },
                 {
-                  "name": "Set Shield State/Value",
+                  "name": "Set Hit-Class",
                   "reset": true
                 },
                 {
-                  "name": "Set Shield State/Value",
+                  "name": "Set Hit-Class",
                   "reset": true
                 }
               ]
@@ -2511,7 +2511,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Set Shield State/Value"
+                  "name": "Set Hit-Class"
                 }
               ]
             },

@@ -55,7 +55,7 @@ const configAbility = {
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (TempHP_get) || Variables[1] (ADF_2_get) || MUL || RETURN",
               "displayLines": "(TempHP_get * ADF_2_get)",
               "constants": [],

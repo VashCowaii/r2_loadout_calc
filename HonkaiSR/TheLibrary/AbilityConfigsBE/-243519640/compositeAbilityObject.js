@@ -8141,7 +8141,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (Damage_Total) || Variables[1] (#ADF_1) || MUL || Constants[0] (3) || DIV || RETURN",
                           "displayLines": "((Damage_Total * #ADF_1) / 3)",
                           "constants": [
@@ -12197,7 +12197,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (Damage_Total) || Variables[1] (#ADF_1) || MUL || Constants[0] (3) || DIV || RETURN",
                           "displayLines": "((Damage_Total * #ADF_1) / 3)",
                           "constants": [
@@ -12487,7 +12487,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (Damage_Total) || Variables[1] (#ADF_1) || MUL || Constants[0] (3) || DIV || RETURN",
                           "displayLines": "((Damage_Total * #ADF_1) / 3)",
                           "constants": [

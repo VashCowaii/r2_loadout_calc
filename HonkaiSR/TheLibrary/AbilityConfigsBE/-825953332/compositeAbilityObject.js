@@ -301,7 +301,7 @@ const compositeAbilityObject = {
           "canPhase": true,
           "AttackScaling": {
             "DamageType": "Physical",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (Bomb_Damage_get) || RETURN",
               "displayLines": "Bomb_Damage_get",
               "constants": [],
@@ -374,7 +374,7 @@ const compositeAbilityObject = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Bomb_Damage_Adjoin_get) || RETURN",
                   "displayLines": "Bomb_Damage_Adjoin_get",
                   "constants": [],
@@ -851,7 +851,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (Bomb_Damage) || RETURN",
                           "displayLines": "Bomb_Damage",
                           "constants": [],
@@ -890,7 +890,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (Bomb_Damage_Adjoin) || RETURN",
                           "displayLines": "Bomb_Damage_Adjoin",
                           "constants": [],
@@ -917,7 +917,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (Bomb_Damage) || RETURN",
                           "displayLines": "Bomb_Damage",
                           "constants": [],
@@ -2489,7 +2489,7 @@ const compositeAbilityObject = {
                                   "canPhase": true,
                                   "AttackScaling": {
                                     "DamageType": "Physical",
-                                    "Damage": {
+                                    "DamageFlat": {
                                       "operator": "Variables[0] (DV_maxHP) || Variables[1] (DV_BeforeFeverEliteDmgRatio) || MUL || RETURN",
                                       "displayLines": "(DV_maxHP * DV_BeforeFeverEliteDmgRatio)",
                                       "constants": [],
@@ -2543,7 +2543,7 @@ const compositeAbilityObject = {
                                       "canPhase": true,
                                       "AttackScaling": {
                                         "DamageType": "Physical",
-                                        "Damage": {
+                                        "DamageFlat": {
                                           "operator": "Variables[0] (DV_maxHP) || Constants[0] (20) || DIV || Constants[1] (0.0009999999) || ADD || RETURN",
                                           "displayLines": "((DV_maxHP / 20) + 0.0009999999)",
                                           "constants": [
@@ -4249,7 +4249,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (Bomb_Damage) || RETURN",
                               "displayLines": "Bomb_Damage",
                               "constants": [],
@@ -4274,7 +4274,7 @@ const compositeAbilityObject = {
                           "canPhase": true,
                           "AttackScaling": {
                             "DamageType": "Physical",
-                            "Damage": {
+                            "DamageFlat": {
                               "operator": "Variables[0] (Bomb_Damage_Adjoin) || RETURN",
                               "displayLines": "Bomb_Damage_Adjoin",
                               "constants": [],

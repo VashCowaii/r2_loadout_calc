@@ -71,6 +71,14 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
+                      "operator": "Variables[0] (Modifier_Electric_DamagePercentage) || RETURN",
+                      "displayLines": "Modifier_Electric_DamagePercentage",
+                      "constants": [],
+                      "variables": [
+                        "Modifier_Electric_DamagePercentage"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (Modifier_Electric_DamageValue) || RETURN",
                       "displayLines": "Modifier_Electric_DamageValue",
                       "constants": [],
@@ -97,6 +105,15 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
+                      "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamagePercentage) || MUL || RETURN",
+                      "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamagePercentage)",
+                      "constants": [],
+                      "variables": [
+                        "DOT_TriggerRatio",
+                        "Modifier_Electric_DamagePercentage"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Electric_DamageValue) || MUL || RETURN",
                       "displayLines": "(DOT_TriggerRatio * Modifier_Electric_DamageValue)",
                       "constants": [],

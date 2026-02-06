@@ -1703,7 +1703,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (MDF_DamageValue) || RETURN",
                       "displayLines": "MDF_DamageValue",
                       "constants": [],
@@ -1795,7 +1795,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (MDF_DamageValue) || MUL || RETURN",
                       "displayLines": "(DOT_TriggerRatio * MDF_DamageValue)",
                       "constants": [],

@@ -295,7 +295,7 @@ const configAbility = {
                 "target": "{{Bondmate}}"
               }
             },
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (DanHengPT_ExtraDamageRatio) || Variables[1] (DanHengPT_ExtraDamageShield) || MUL || RETURN",
               "displayLines": "(DanHengPT_ExtraDamageRatio * DanHengPT_ExtraDamageShield)",
               "constants": [],

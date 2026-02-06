@@ -151,7 +151,7 @@ const compositeAbilityObject = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (MDF_Rank06ExtraDamage) || Variables[1] (0.36) || MUL || RETURN",
                           "displayLines": "(MDF_Rank06ExtraDamage * 0.36)",
                           "constants": [],
@@ -4440,7 +4440,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Set Shield State/Value",
+                  "name": "Set Hit-Class",
                   "reset": true
                 },
                 {
@@ -4465,7 +4465,7 @@ const compositeAbilityObject = {
                   "modifier": "Phainon_Guard_OverrideHitEffect"
                 },
                 {
-                  "name": "Set Shield State/Value"
+                  "name": "Set Hit-Class"
                 },
                 {
                   "name": "Change Character Transformation",

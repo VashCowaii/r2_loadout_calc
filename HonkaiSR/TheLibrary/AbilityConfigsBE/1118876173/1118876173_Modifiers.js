@@ -1442,7 +1442,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Wind",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) || MUL || Variables[2] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage) || MUL || RETURN",
                   "displayLines": "((BattleEvent_BaseHP * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)",
                   "constants": [],
@@ -1605,7 +1605,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Wind",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DOT_TriggerRatio) || MUL || Variables[2] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) || MUL || Variables[3] (Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage) || MUL || RETURN",
                   "displayLines": "(((BattleEvent_BaseHP * DOT_TriggerRatio) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_Layer) * Modifier_FantasticStory_BaseAbility_2160_BeforeFever_DOT_DmgPercentage)",
                   "constants": [],

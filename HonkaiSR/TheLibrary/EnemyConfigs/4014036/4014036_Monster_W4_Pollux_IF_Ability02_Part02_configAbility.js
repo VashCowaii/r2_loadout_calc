@@ -72,7 +72,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[1]]}) || MUL || RETURN",
                   "displayLines": "(_MaxHP * {[Skill02[1]]})",
                   "constants": [],

@@ -59,6 +59,18 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Quantum",
                 "Damage": {
+                  "operator": "Variables[0] ([object Object]) || Variables[1] (_PlayerNum) || DIV || Constants[0] (1) || Variables[2] (_DamageUpTemp) || ADD || MUL || RETURN",
+                  "displayLines": "(([object Object] / _PlayerNum) * (1 + _DamageUpTemp))",
+                  "constants": [
+                    1
+                  ],
+                  "variables": [
+                    {},
+                    "_PlayerNum",
+                    "_DamageUpTemp"
+                  ]
+                },
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] (UnusedUnderThisBase_133) || MUL || RETURN",
                   "displayLines": "(_MaxHP * UnusedUnderThisBase_133)",
                   "constants": [],

@@ -44,7 +44,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier",
               "execute": [
                 {
-                  "name": "Set Shield State/Value"
+                  "name": "Set Hit-Class"
                 }
               ]
             },
@@ -59,7 +59,7 @@ const compositeAbilityObject = {
                   }
                 },
                 {
-                  "name": "Set Shield State/Value",
+                  "name": "Set Hit-Class",
                   "reset": true
                 }
               ]
@@ -2170,7 +2170,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier",
               "execute": [
                 {
-                  "name": "Set Shield State/Value"
+                  "name": "Set Hit-Class"
                 }
               ]
             },
@@ -2185,7 +2185,7 @@ const compositeAbilityObject = {
                   }
                 },
                 {
-                  "name": "Set Shield State/Value",
+                  "name": "Set Hit-Class",
                   "reset": true
                 }
               ]

@@ -86,6 +86,14 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Ice",
                 "Damage": {
+                  "operator": "Variables[0] (Modifier_Frozen_DamagePercentage) || RETURN",
+                  "displayLines": "Modifier_Frozen_DamagePercentage",
+                  "constants": [],
+                  "variables": [
+                    "Modifier_Frozen_DamagePercentage"
+                  ]
+                },
+                "DamageFlat": {
                   "operator": "Variables[0] (Modifier_Frozen_DamageValue) || RETURN",
                   "displayLines": "Modifier_Frozen_DamageValue",
                   "constants": [],

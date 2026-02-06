@@ -1447,6 +1447,14 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
+                  "operator": "Variables[0] (1.5) || RETURN",
+                  "displayLines": "1.5",
+                  "constants": [],
+                  "variables": [
+                    1.5
+                  ]
+                },
+                "DamageFlat": {
                   "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.2) || MUL || Variables[0] (CasterFinalLostHP) || Variables[2] (1.5) || MUL || ADD || RETURN",
                   "displayLines": "((CasterFinalLostHP * 1.2) + (CasterFinalLostHP * 1.5))",
                   "constants": [],
@@ -1481,6 +1489,14 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
+                  "operator": "Variables[0] (1.5) || RETURN",
+                  "displayLines": "1.5",
+                  "constants": [],
+                  "variables": [
+                    1.5
+                  ]
+                },
+                "DamageFlat": {
                   "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.2) || MUL || RETURN",
                   "displayLines": "(CasterFinalLostHP * 1.2)",
                   "constants": [],
@@ -1513,6 +1529,14 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
+              "operator": "Variables[0] (0.6) || RETURN",
+              "displayLines": "0.6",
+              "constants": [],
+              "variables": [
+                0.6
+              ]
+            },
+            "DamageFlat": {
               "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (0.6) || MUL || RETURN",
               "displayLines": "(CasterFinalLostHP * 0.6)",
               "constants": [],
@@ -1895,6 +1919,14 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
+                  "operator": "Variables[0] (1.3) || RETURN",
+                  "displayLines": "1.3",
+                  "constants": [],
+                  "variables": [
+                    1.3
+                  ]
+                },
+                "DamageFlat": {
                   "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.5) || MUL || Constants[0] (0.5) || MUL || RETURN",
                   "displayLines": "((CasterFinalLostHP * 1.5) * 0.5)",
                   "constants": [
@@ -2015,6 +2047,14 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
+                  "operator": "Variables[0] (1.3) || RETURN",
+                  "displayLines": "1.3",
+                  "constants": [],
+                  "variables": [
+                    1.3
+                  ]
+                },
+                "DamageFlat": {
                   "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.5) || MUL || Constants[0] (0.5) || MUL || RETURN",
                   "displayLines": "((CasterFinalLostHP * 1.5) * 0.5)",
                   "constants": [

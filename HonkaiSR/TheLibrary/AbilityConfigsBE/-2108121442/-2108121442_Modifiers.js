@@ -1529,7 +1529,7 @@ const configAbility = {
                   "canPhase": true,
                   "AttackScaling": {
                     "DamageType": "Physical",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (MDF_DamageCount) || Variables[1] (DV_FantasticStory_PlusAbility_2017_ADF_1) || MUL || RETURN",
                       "displayLines": "(MDF_DamageCount * DV_FantasticStory_PlusAbility_2017_ADF_1)",
                       "constants": [],
@@ -2177,7 +2177,7 @@ const configAbility = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_PlusAbility_2012_ADF_2) || MUL || RETURN",
                           "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_PlusAbility_2012_ADF_2)",
                           "constants": [],
@@ -2201,7 +2201,7 @@ const configAbility = {
                       "canPhase": true,
                       "AttackScaling": {
                         "DamageType": "Physical",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_FantasticStory_PlusAbility_2012_ADF_2) || MUL || RETURN",
                           "displayLines": "(BattleEvent_BaseHP * DV_FantasticStory_PlusAbility_2012_ADF_2)",
                           "constants": [],

@@ -121,7 +121,7 @@ const configAbility = {
       "canPhase": true,
       "AttackScaling": {
         "DamageType": "Wind",
-        "Damage": {
+        "DamageFlat": {
           "operator": "Variables[0] (_ServantHealValueTotalNew) || Variables[1] (0.2) || MUL || RETURN",
           "displayLines": "(_ServantHealValueTotalNew * 0.2)",
           "constants": [],

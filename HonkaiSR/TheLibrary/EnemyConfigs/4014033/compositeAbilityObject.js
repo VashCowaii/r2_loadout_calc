@@ -277,7 +277,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)",
                   "constants": [
@@ -338,7 +338,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)",
                   "constants": [
@@ -399,7 +399,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (3) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)",
                   "constants": [
@@ -460,7 +460,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (3) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)",
                   "constants": [
@@ -521,7 +521,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (2) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)",
                   "constants": [
@@ -582,7 +582,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (2) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)",
                   "constants": [
@@ -643,7 +643,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || RETURN",
                   "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)",
                   "constants": [],
@@ -702,7 +702,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || RETURN",
                   "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)",
                   "constants": [],
@@ -2579,7 +2579,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
                   "constants": [
@@ -2624,7 +2624,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
                   "constants": [
@@ -2669,7 +2669,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
                   "constants": [
@@ -2725,7 +2725,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Quantum",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[1]]}) || MUL || Variables[0] (_MaxHP) || Variables[2] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || ADD || RETURN",
                       "displayLines": "((_MaxHP * {[Skill06[1]]}) + ((_MaxHP * {[Skill06[0]]}) / 4))",
                       "constants": [
@@ -2791,7 +2791,7 @@ const compositeAbilityObject = {
                   },
                   "AttackScaling": {
                     "DamageType": "Quantum",
-                    "Damage": {
+                    "DamageFlat": {
                       "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
                       "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
                       "constants": [
@@ -3026,7 +3026,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)",
                   "constants": [
@@ -3087,7 +3087,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 4)",
                   "constants": [
@@ -3148,7 +3148,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (3) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)",
                   "constants": [
@@ -3209,7 +3209,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (3) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 3)",
                   "constants": [
@@ -3270,7 +3270,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (2) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)",
                   "constants": [
@@ -3331,7 +3331,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || Constants[0] (2) || DIV || RETURN",
                   "displayLines": "((_TargetCurrentHp * _Skill05_LoseHpRatio) / 2)",
                   "constants": [
@@ -3392,7 +3392,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || RETURN",
                   "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)",
                   "constants": [],
@@ -3451,7 +3451,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_TargetCurrentHp) || Variables[1] (_Skill05_LoseHpRatio) || MUL || RETURN",
                   "displayLines": "(_TargetCurrentHp * _Skill05_LoseHpRatio)",
                   "constants": [],
@@ -3994,7 +3994,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (0.15) || MUL || RETURN",
                   "displayLines": "((_MaxHP * {[Skill03[0]]}) * 0.15)",
                   "constants": [
@@ -4056,7 +4056,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (0.15) || MUL || RETURN",
                   "displayLines": "((_MaxHP * {[Skill03[0]]}) * 0.15)",
                   "constants": [
@@ -4109,7 +4109,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (0.15) || MUL || RETURN",
                   "displayLines": "((_MaxHP * {[Skill03[0]]}) * 0.15)",
                   "constants": [
@@ -4155,7 +4155,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (0.15) || MUL || RETURN",
                   "displayLines": "((_MaxHP * {[Skill03[0]]}) * 0.15)",
                   "constants": [
@@ -4201,7 +4201,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (0.15) || MUL || RETURN",
                   "displayLines": "((_MaxHP * {[Skill03[0]]}) * 0.15)",
                   "constants": [
@@ -4247,7 +4247,7 @@ const compositeAbilityObject = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill03[0]]}) || MUL || Constants[0] (0.4) || MUL || RETURN",
                   "displayLines": "((_MaxHP * {[Skill03[0]]}) * 0.4)",
                   "constants": [
@@ -4419,6 +4419,18 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
+                      "operator": "Variables[0] ({[Skill02[3]]}) || Variables[1] (_PlayerNum) || DIV || Constants[0] (1) || Variables[2] (_DamageUpTemp) || ADD || MUL || RETURN",
+                      "displayLines": "(({[Skill02[3]]} / _PlayerNum) * (1 + _DamageUpTemp))",
+                      "constants": [
+                        1
+                      ],
+                      "variables": [
+                        "{[Skill02[3]]}",
+                        "_PlayerNum",
+                        "_DamageUpTemp"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill02[1]]}) || MUL || RETURN",
                       "displayLines": "(_MaxHP * {[Skill02[1]]})",
                       "constants": [],
@@ -4598,6 +4610,17 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
+                      "operator": "Variables[0] ({[Skill01[3]]}) || Constants[0] (1) || Variables[1] (_DamageUpTemp) || ADD || MUL || RETURN",
+                      "displayLines": "({[Skill01[3]]} * (1 + _DamageUpTemp))",
+                      "constants": [
+                        1
+                      ],
+                      "variables": [
+                        "{[Skill01[3]]}",
+                        "_DamageUpTemp"
+                      ]
+                    },
+                    "DamageFlat": {
                       "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill01[1]]}) || MUL || RETURN",
                       "displayLines": "(_MaxHP * {[Skill01[1]]})",
                       "constants": [],

@@ -894,7 +894,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Wind",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                   "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
                   "constants": [],
@@ -931,7 +931,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Wind",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                   "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
                   "constants": [],
@@ -1118,7 +1118,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Wind",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                   "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
                   "constants": [],
@@ -1155,7 +1155,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Wind",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                   "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
                   "constants": [],
@@ -1304,7 +1304,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Wind",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (Modifier_Poison_Damage) || Variables[1] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                   "displayLines": "(Modifier_Poison_Damage * Modifier_Poison_PoisonLayer)",
                   "constants": [],
@@ -1341,7 +1341,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Wind",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (DOT_TriggerRatio) || Variables[1] (Modifier_Poison_Damage) || MUL || Variables[2] (Modifier_Poison_PoisonLayer) || MUL || RETURN",
                   "displayLines": "((DOT_TriggerRatio * Modifier_Poison_Damage) * Modifier_Poison_PoisonLayer)",
                   "constants": [],

@@ -63,6 +63,17 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
+              "operator": "Variables[0] ({[PassiveSkill03[3]]}) || Constants[0] (1) || Variables[1] (_DamageUpTemp) || ADD || MUL || RETURN",
+              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))",
+              "constants": [
+                1
+              ],
+              "variables": [
+                "{[PassiveSkill03[3]]}",
+                "_DamageUpTemp"
+              ]
+            },
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
               "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
               "constants": [
@@ -109,6 +120,17 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
+              "operator": "Variables[0] ({[PassiveSkill03[3]]}) || Constants[0] (1) || Variables[1] (_DamageUpTemp) || ADD || MUL || RETURN",
+              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))",
+              "constants": [
+                1
+              ],
+              "variables": [
+                "{[PassiveSkill03[3]]}",
+                "_DamageUpTemp"
+              ]
+            },
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
               "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
               "constants": [
@@ -155,6 +177,17 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Quantum",
             "Damage": {
+              "operator": "Variables[0] ({[PassiveSkill03[3]]}) || Constants[0] (1) || Variables[1] (_DamageUpTemp) || ADD || MUL || RETURN",
+              "displayLines": "({[PassiveSkill03[3]]} * (1 + _DamageUpTemp))",
+              "constants": [
+                1
+              ],
+              "variables": [
+                "{[PassiveSkill03[3]]}",
+                "_DamageUpTemp"
+              ]
+            },
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
               "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
               "constants": [
@@ -211,7 +244,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[1]]}) || MUL || Variables[0] (_MaxHP) || Variables[2] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || ADD || RETURN",
                   "displayLines": "((_MaxHP * {[Skill06[1]]}) + ((_MaxHP * {[Skill06[0]]}) / 4))",
                   "constants": [
@@ -277,7 +310,7 @@ const configAbility = {
               },
               "AttackScaling": {
                 "DamageType": "Quantum",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill06[0]]}) || MUL || Constants[0] (4) || DIV || RETURN",
                   "displayLines": "((_MaxHP * {[Skill06[0]]}) / 4)",
                   "constants": [

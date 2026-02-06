@@ -74,7 +74,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
               "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
               "constants": [
@@ -119,7 +119,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
               "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
               "constants": [
@@ -164,7 +164,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
               "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
               "constants": [
@@ -209,7 +209,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
               "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
               "constants": [
@@ -254,7 +254,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
               "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
               "constants": [
@@ -299,7 +299,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
               "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
               "constants": [
@@ -344,7 +344,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
               "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
               "constants": [
@@ -389,7 +389,7 @@ const configAbility = {
           },
           "AttackScaling": {
             "DamageType": "Quantum",
-            "Damage": {
+            "DamageFlat": {
               "operator": "Variables[0] (_MaxHP) || Variables[1] ({[Skill05[1]]}) || MUL || Constants[0] (0.125) || MUL || RETURN",
               "displayLines": "((_MaxHP * {[Skill05[1]]}) * 0.125)",
               "constants": [

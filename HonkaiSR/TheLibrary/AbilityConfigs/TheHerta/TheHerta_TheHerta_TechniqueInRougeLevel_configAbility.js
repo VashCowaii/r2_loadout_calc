@@ -62,7 +62,7 @@ const configAbility = {
                           "name": "Damage Type Source",
                           "sourceType": {}
                         },
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (TargetHP) || Variables[1] (EliteDamagePercentage) || MUL || RETURN",
                           "displayLines": "(TargetHP * EliteDamagePercentage)",
                           "constants": [],
@@ -91,7 +91,7 @@ const configAbility = {
                           "name": "Damage Type Source",
                           "sourceType": {}
                         },
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (TargetHP) || Variables[1] (BasicDamagePercentage) || MUL || RETURN",
                           "displayLines": "(TargetHP * BasicDamagePercentage)",
                           "constants": [],

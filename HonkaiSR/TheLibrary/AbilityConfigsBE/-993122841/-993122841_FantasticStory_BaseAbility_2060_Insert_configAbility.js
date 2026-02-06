@@ -82,7 +82,7 @@ const configAbility = {
               "canPhase": true,
               "AttackScaling": {
                 "DamageType": "Physical",
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (BattleEvent_BaseHP) || Variables[1] (DV_BirdAtkDmgRatio) || MUL || RETURN",
                   "displayLines": "(BattleEvent_BaseHP * DV_BirdAtkDmgRatio)",
                   "constants": [],

@@ -124,6 +124,14 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "DamageFlat": {
               "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.2) || MUL || Variables[0] (CasterFinalLostHP) || Variables[2] (1.5) || MUL || ADD || RETURN",
               "displayLines": "((CasterFinalLostHP * 1.2) + (CasterFinalLostHP * 1.5))",
               "constants": [],
@@ -158,6 +166,14 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
+              "operator": "Variables[0] (1.5) || RETURN",
+              "displayLines": "1.5",
+              "constants": [],
+              "variables": [
+                1.5
+              ]
+            },
+            "DamageFlat": {
               "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (1.2) || MUL || RETURN",
               "displayLines": "(CasterFinalLostHP * 1.2)",
               "constants": [],
@@ -190,6 +206,14 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Wind",
         "Damage": {
+          "operator": "Variables[0] (0.6) || RETURN",
+          "displayLines": "0.6",
+          "constants": [],
+          "variables": [
+            0.6
+          ]
+        },
+        "DamageFlat": {
           "operator": "Variables[0] (CasterFinalLostHP) || Variables[1] (0.6) || MUL || RETURN",
           "displayLines": "(CasterFinalLostHP * 0.6)",
           "constants": [],

@@ -1870,7 +1870,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   }
                 },
-                "Damage": {
+                "DamageFlat": {
                   "operator": "Variables[0] (MDF_ReflexDamageValue) || RETURN",
                   "displayLines": "MDF_ReflexDamageValue",
                   "constants": [],
@@ -2173,7 +2173,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
-              "name": "Set Shield State/Value",
+              "name": "Set Hit-Class",
               "reset": true
             }
           ]
@@ -3538,7 +3538,7 @@ const configAbility = {
                       },
                       "AttackScaling": {
                         "DamageType": "Quantum",
-                        "Damage": {
+                        "DamageFlat": {
                           "operator": "Variables[0] (_TargetNegativeHp) || RETURN",
                           "displayLines": "_TargetNegativeHp",
                           "constants": [],
