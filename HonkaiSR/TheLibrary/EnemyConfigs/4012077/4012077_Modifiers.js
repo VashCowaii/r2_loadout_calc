@@ -2173,7 +2173,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
-              "name": "Set Shield State/Value",
+              "name": "Set Hit-Class",
               "reset": true
             }
           ]

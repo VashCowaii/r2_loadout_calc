@@ -409,7 +409,7 @@ const configAbility = {
               ]
             },
             {
-              "name": "Set Shield State/Value"
+              "name": "Set Hit-Class"
             },
             {
               "name": "Change Character Transformation",

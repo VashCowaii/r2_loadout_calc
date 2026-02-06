@@ -1706,7 +1706,7 @@ const configAbility = {
               }
             },
             {
-              "name": "Set Shield State/Value",
+              "name": "Set Hit-Class",
               "reset": true
             }
           ]
@@ -1855,7 +1855,7 @@ const configAbility = {
               }
             },
             {
-              "name": "Set Shield State/Value",
+              "name": "Set Hit-Class",
               "reset": true
             }
           ]
