@@ -5,7 +5,23 @@
     "BreakDamageExtraAddedRatio": "DamageBreakMulti",
     "StanceBreakAddedRatio": "DamageBreakEfficiency",
     "StanceBreakAddedRatioOLDDEFINITION": "SuperBreakMaybe",
-    "StanceBreakResistance": "Toughness Reduction Resistance",
+
+    "StanceBreakResistance": "ToughnessReductionRES",
+    "PhysicalStanceBreakResistance": "PhysicalToughnessReductionRES",
+    "ImaginaryStanceBreakResistance": "ImaginaryToughnessReductionRES",
+    "QuantumStanceBreakResistance": "QuantumToughnessReductionRES",
+    "WindStanceBreakResistance": "WindToughnessReductionRES",
+    "ThunderStanceBreakResistance": "LightningToughnessReductionRES",
+    "FireStanceBreakResistance": "FireToughnessReductionRES",
+    "IceStanceBreakResistance": "IceToughnessReductionRES",
+
+    "ImaginaryAbsorb": "ImaginaryAbsorb?",
+    "QuantumAbsorb": "QuantumAbsorb?",
+    "WindAbsorb": "WindAbsorb?",
+    "ThunderAbsorb": "LightningAbsorb?",
+    "IceAbsorb": "IceAbsorb?",
+    "FireAbsorb": "FireAbsorb?",
+    "PhysicalAbsorb": "PhysicalAbsorb?",
 
     "MaxStance": "ToughnessMax",
     "CurrentStance": "CurrentToughness",
@@ -19,6 +35,8 @@
     "StanceBreakTakenRatio": "ToughnessVulnerability",
 
     "IndependentDamageAddedRatio": "UniqueFinalMultiplier",
+
+    "Level_FinalDamageAddedRatio": "StageFinalDMG",
 
     "SPRatioBase": "EnergyRegenRate",
     "SPRatio": "EnergyRegenRateSUM",
@@ -46,10 +64,11 @@
     "WindTakenRatio": "WindVulnerability",
     "QuantumTakenRatio": "QuantumVulnerability",
     "IceTakenRatio": "IceVulnerability",
+    "ImaginaryTakenRatio": "ImaginaryVulnerability",
 
     "Monster_DamageTakenRatio": "EnemyVulnerability",
 
-    "DamageValue": "DMG%Total",
+    "DamageValue": "DMGValueTotal",
 
     "FatigueRatio": "Weaken%",
 
@@ -67,6 +86,7 @@
     "AllDamageTypeAddedRatio": "DamageAll",
 
     "AllDamageAddedRatio": "DamageAllTypes",
+    "DamagePercentage": "Damage%Total",
 
     "StatusProbabilityBase": "EffectHitRate",
     "StatusProbability": "EffectHitRateSUM",
@@ -83,6 +103,8 @@
     "CriticalDamage": "CritDamageSUM",
     "CriticalDamageBase": "CritDamageBase",
     "CriticalDamageConvert": "CritDamageConverted",
+
+    "CriticalResistance": "CritRES",
 
     "HealRatioBase": "HealingOutgoing",
     "HealRatio": "HealingOutgoingSUM",

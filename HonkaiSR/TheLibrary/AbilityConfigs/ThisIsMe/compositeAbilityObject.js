@@ -88,7 +88,7 @@ const compositeAbilityObject = {
                       "modifiedValuesArray": [
                         {
                           "on": "AttackData",
-                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DMG%Total</span>&nbsp;",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DMGValueTotal</span>&nbsp;",
                           "value": "(0.6 * AttackerDefence)"
                         }
                       ]

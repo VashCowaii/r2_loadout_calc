@@ -2553,7 +2553,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "ThisIsMe",
     "entryIcon": "icon/light_cone/21030.png",
     "lineCount": 182,
-    "sizeCount": 5122
+    "sizeCount": 5126
   },
   {
     "entryType": "relic",

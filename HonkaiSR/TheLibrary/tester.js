@@ -190,6 +190,24 @@ const customMenu = {
         globalUI.volumeIsLock = isLock;
         customMenu.updateSearchResults(isOcclusion,isLock);
     },
+    createEnemySearchMenu(isOcclusion,isLock) {
+        if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+        readSelection("customMenuSearchTitle").innerHTML = "Enemies";
+
+        readSelection("customMenuSearchNote").innerHTML = 
+        `Search for an Enemy <span class="descriptionNumberColor">NAME</span>, or <span class="descriptionNumberColor">MASK NAME</span>.
+        <br><br>This search spans BASE enemies, so you may search for a specific name that doesn't show up visibly, but will display as a Mask match.`;
+        
+        globalUI.currentSearchOpen = "enemies";
+        globalUI.currentSearchVolume = basicEnemyList;
+        readSelection("customMenuSearchBarInput").focus();
+
+        globalUI.volumeIsOcclusion = isOcclusion;
+        globalUI.volumeIsLock = isLock;
+        customMenu.updateSearchResults(isOcclusion,isLock);
+    },
     //for sets search
     createRelicSearchMenu(relicSet) {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
@@ -2779,13 +2797,14 @@ const customMenu = {
             return a.name.localeCompare(b.name);//then name
         }
         function regSort(a, b) {return a.name.localeCompare(b.name);}
-        function getPathDivider(pathName) {
+        function getPathDivider(pathName,isEnemy) {
             return `
                 <div class="characterDisplayPathAndNameBox">
-                    <div class="characterDisplayPathImageBox">
+                    ${!isEnemy ? `<div class="characterDisplayPathImageBox">
                         <img src="${pathImagePaths[pathName].small}" class="characterDisplayPathImage"/>
-                    </div>
-                    <div class="characterDisplayPathNameBox">${pathName}</div>
+                    </div>` : ""}
+                    
+                    <div class="characterDisplayPathNameBox">${isEnemy ? "Grouping: " : ""}${pathName}</div>
                 </div>
                 `;
         }
@@ -2987,6 +3006,120 @@ const customMenu = {
             //     `
             // if (currentPathResults.length) {resultString += currentPathDivider + getResultStringForLightconeSet(currentPathResults);}
             // if (otherResults.length) {resultString += otherPathsDivider + getResultStringForLightconeSet(otherResults);}
+        }
+        else if (globalUI.currentSearchOpen === "enemies") {
+            let pathsObject = {};
+            // pathImagePaths
+            for (let charEntry of volumeKeys) {
+                let currentCharacterEntry = basicEnemyList[charEntry];
+                let currentPath = currentCharacterEntry.groupName;
+                if (!pathsObject[currentPath]) {pathsObject[currentPath] = [];}//only make a new entry when it doesn't exist yet
+                //skip any char name, path, or element that does NOT contain our search, and forced lowercase just to avoid headaches
+
+                const innerEnemyKeys = Object.keys(currentCharacterEntry);
+                // console.log(currentCharacterEntry)
+                for (let innerEnemyEntry of innerEnemyKeys) {
+                    if (innerEnemyEntry === "groupName") {continue;}
+                    const currentEnemyEntry = currentCharacterEntry[innerEnemyEntry];
+
+
+
+                    // console.log(innerEnemyEntry,currentEnemyEntry)
+                    let fuzzy = (currentEnemyEntry.baseName ?? currentCharacterEntry.groupName)?.toLowerCase().includes(currentInput)// || currentCharacterEntry.path.toLowerCase().includes(currentInput) || currentCharacterEntry.element.toLowerCase().includes(currentInput);
+                    // if (!fuzzy && currentInput != "" || !turnLogic[currentCharacterEntry.name]) {continue;}
+
+                    let fuzzy2 = false;
+                    let variantCounter = 0;
+                    for (let innermostEntry in currentEnemyEntry) {
+                        if (innermostEntry === "baseName" || innermostEntry === "hasReader") {continue;}
+                        variantCounter++;
+                        const currentInnermost = currentEnemyEntry[innermostEntry];
+
+                        let fuzzy2Inner = currentInnermost.name?.toLowerCase().includes(currentInput);
+                        if (currentInnermost.name && fuzzy2Inner && currentInput != "") {fuzzy2 = true;}
+                    }
+
+
+
+
+                    if ((!fuzzy && !fuzzy2) && currentInput != "") {continue;}
+
+                    // console.log(currentEnemyEntry.baseName,charEntry)
+
+
+                    pathsObject[currentPath].push({
+                        name: currentEnemyEntry.baseName ?? currentCharacterEntry.groupName,
+                        image: innerEnemyEntry,
+                        variantCounter,
+                        variantMatch: !fuzzy && fuzzy2 && currentInput != "",
+                        hasReader: currentEnemyEntry.hasReader,
+                    });
+
+                }
+
+                
+                //TODO: remove the logic check later
+
+
+                // let foundAllowedCharacter = false;
+                // for (let allowEntry of allowedCharacterList) {
+                //     // console.log(allowEntry.fullName,currentCharacterEntry.name)
+                //     if (allowEntry.fullName === currentCharacterEntry.name) {
+                //         foundAllowedCharacter = true;
+                //         break;
+                //     }
+                // }
+                // if (!foundAllowedCharacter) {continue;}
+
+                
+            }
+
+            // for (let pathKey of Object.keys(pathsObject)) {pathsObject[pathKey].sort(raritySort);}//sort rarity -> name
+
+
+            // <div class="characterDisplayElementBox">
+            //                             <img src="${elementImagePaths[result.element]}" class="characterDisplayElement"/>
+            //                         </div>
+            function getResultStringForCharacterPath(array) {
+                let returnString = "";
+                for (let result of array) {
+                    // onclick="customMenu.closeMenu();userTriggers.updateSelectedCharacter(\`${result.name}\`)"
+
+                    // a href="/HonkaiSR/TheLibrary/"
+
+                    // const trimmedCharacterName = customMenu.trimToFirstWordAndInitials(result.name);
+
+                    let stringCustom = `
+                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/EnemyConfigs/${result.image}/" target="_blank">
+                            <div class="customMenuResultRowIcon">
+                                <img src="/HonkaiSR/${enemyImages[result.image]}" class="customMenuResultImgRoundedEnemy${result.name?.includes("_v") ? " turnOrderDisplayPreviewGREY" : ""}"/>
+                            </div>
+                            <div class="customMenuResultBodyBox">
+
+                                <div class="characterDisplayNameAndElement">
+                                    <div class="characterDisplayNameBox">${result.name}</div>
+                                    
+                                </div>
+
+                                
+                                <div class="characterDisplayEnemyVariantsCount">Masks: ${result.variantCounter}</div>
+                                ${result.variantMatch ? `<div class="characterDisplayNameAndElementItemNotAdded">Search matches a Mask Name.</div>` : ""}
+                            </div>
+                            ${!result.hasReader ? `<img src="/HonkaiSR/misc/code.png" class="customMenuResultImgRoundedEnemyCodeIcon"/>` : ""}
+                            
+                        </a>
+                    `;//${turnLogic[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                    returnString += stringCustom;
+                }
+                return returnString;
+            }
+
+
+            for (let pathKey of Object.keys(pathsObject)) {
+                let currentArray = pathsObject[pathKey];
+                if (currentArray.length) {resultString += getPathDivider(pathKey,true) + getResultStringForCharacterPath(currentArray)}
+
+            }
         }
 
         // "endgame";endgameModeList
