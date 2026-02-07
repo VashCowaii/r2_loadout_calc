@@ -29,6 +29,66 @@
 
 
 
+.customMenuResultImgRoundedEnemy {
+    z-index: 1;
+    /* width: 80px; */
+    height: 100px;
+    scale: 2;
+
+    margin-right: 10px;
+    margin-left: 10px;
+    transform: translateY(20px);
+
+    /* border: 2px solid white; */
+    /* border-radius: 50%; */
+    /* background-color: black; */
+    box-sizing: border-box;
+    mask-image: linear-gradient(to right, black 60%, transparent 100%);
+}
+.customMenuResultImgRoundedEnemyCodeIcon {
+    z-index: 1;
+    /* width: 80px; */
+    height: 20px;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    /* background-color: #e1e1e4; */
+    /* background-color: #009c60; */
+    background-color: #a52100;
+    /* background-color: #ff3300b4; */
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+}
+.customMenuResultRowBox {
+    overflow: hidden;
+}
+.customMenuResultBodyBox {
+    padding-left: 15px;
+}
+
+
+.characterDisplayEnemyVariantsCount {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    padding-left: 3px;
+    color: rgba(255, 255, 255, 0.356);
+}
+.characterDisplayNameAndElementItemNotAdded {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    color: rgb(255, 125, 125);
+    padding-left: 3px;
+}
+
 
 .mainBodyBufferleftBox {
     width: 50%;
@@ -226,6 +286,7 @@
     margin-top: 8px;
     margin-bottom: 8px;
     text-decoration: none;
+    position: relative;
 }
 
 
