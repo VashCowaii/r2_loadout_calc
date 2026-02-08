@@ -36,7 +36,8 @@ let characters = {
           0.24,
           3,
           320
-        ]
+        ],
+        "eidoAbility": "March7thP_March7th_Eidolon2"
       },
       {
         "id": "100103",
@@ -716,8 +717,7 @@ let characters = {
         "desc": "When using Skill, dispels 1 debuff from one designated ally.",
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": []
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -738,10 +738,7 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              0.15
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       }
@@ -789,7 +786,8 @@ let characters = {
         "paramsEido": [
           0.5,
           0.12
-        ]
+        ],
+        "eidoAbility": "DanHeng_DanHeng_Eidolon1"
       },
       {
         "id": "100202",
@@ -1341,7 +1339,8 @@ let characters = {
         "params": [
           0.5,
           0.5
-        ]
+        ],
+        "traceAbility": "DanHeng_DanHeng_Trace01"
       },
       "Point07": {
         "name": "Faster Than Light",
@@ -1352,14 +1351,10 @@ let characters = {
           0.2,
           2
         ],
+        "traceAbility": "DanHeng_DanHeng_Trace02",
         "extraEffects": {
           "Fixed Chance": {
-            "desc": "Fixed chance will not be affected by any factor.",
-            "params": [
-              0.5,
-              0.2,
-              2
-            ]
+            "desc": "Fixed chance will not be affected by any factor."
           }
         }
       },
@@ -1496,7 +1491,8 @@ let characters = {
         "paramsEido": [
           0.5,
           0.15
-        ]
+        ],
+        "eidoAbility": "Himeko_Himeko_Eidolon2"
       },
       {
         "id": "100303",
@@ -2019,14 +2015,10 @@ let characters = {
           2,
           0.3
         ],
+        "traceAbility": "Himeko_Himeko_Trace01",
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              0.5,
-              2,
-              0.3
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -2045,7 +2037,8 @@ let characters = {
         "params": [
           0.8,
           0.15
-        ]
+        ],
+        "traceAbility": "Himeko_Himeko_Trace03"
       },
       "Point09": {
         "name": "DMG Boost: Fire",
@@ -2762,12 +2755,7 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              1,
-              0.12,
-              2
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -2777,7 +2765,8 @@ let characters = {
         "desc": "Using Ultimate additionally regenerates #1[i] Energy.",
         "params": [
           10
-        ]
+        ],
+        "traceAbility": "Welt_Welt_Trace02"
       },
       "Point08": {
         "name": "Punishment",
@@ -2785,7 +2774,8 @@ let characters = {
         "desc": "Deals #1[i]% more DMG to enemies inflicted with Weakness Break.",
         "params": [
           0.2
-        ]
+        ],
+        "traceAbility": "Welt_Welt_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -2917,7 +2907,8 @@ let characters = {
         "icon": "icon/skill/1100_rank2.png",
         "paramsEido": [
           0.33
-        ]
+        ],
+        "eidoAbility": "Kafka_Advanced_Kafka_Eidolon2"
       },
       {
         "id": "1100503",
@@ -3569,7 +3560,8 @@ let characters = {
         "desc": "If an enemy target is defeated while Shocked, Kafka additionally regenerates #1[i] Energy.",
         "params": [
           5
-        ]
+        ],
+        "traceAbility": "Kafka_Advanced_Kafka_Trace02"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -3648,7 +3640,8 @@ let characters = {
         "params": [
           0.75,
           1
-        ]
+        ],
+        "traceAbility": "Kafka_Advanced_Kafka_Trace01"
       },
       "Point08": {
         "name": "Thorns",
@@ -3659,10 +3652,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.8
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       }
@@ -3731,7 +3721,8 @@ let characters = {
           "Base Chance": {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
-        }
+        },
+        "eidoAbility": "SilverWolf_Advanced_Silwolf_Eidolon2"
       },
       {
         "id": "1100603",
@@ -3780,7 +3771,8 @@ let characters = {
           "Debuff": {
             "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
-        }
+        },
+        "eidoAbility": "SilverWolf_Advanced_Silwolf_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -4489,13 +4481,10 @@ let characters = {
           1,
           1
         ],
+        "traceAbility": "SilverWolf_Advanced_Silwolf_Trace01",
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              1,
-              1
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -5069,7 +5058,8 @@ let characters = {
         "params": [
           0.3,
           0.2
-        ]
+        ],
+        "traceAbility": "Arlan_Arlan_Trace01"
       },
       "Point07": {
         "name": "Endurance",
@@ -5077,7 +5067,8 @@ let characters = {
         "desc": "The chance to resist DoT Debuffs increases by #1[i]%.",
         "params": [
           0.5
-        ]
+        ],
+        "traceAbility": "Arlan_Arlan_Trace02"
       },
       "Point08": {
         "name": "Repel",
@@ -5085,7 +5076,8 @@ let characters = {
         "desc": "Upon entering battle, if Arlan's HP percentage is less than or equal to #1[i]%, he can nullify all DMG received except for DoTs until he is attacked.",
         "params": [
           0.5
-        ]
+        ],
+        "traceAbility": "Arlan_Arlan_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -5715,12 +5707,7 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              0.8,
-              3,
-              0.5
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -5730,7 +5717,8 @@ let characters = {
         "desc": "When Asta is on the field, all allies' Fire DMG increases by #1[i]%.",
         "params": [
           0.18
-        ]
+        ],
+        "traceAbility": "Asta_Asta_Trace02"
       },
       "Point08": {
         "name": "Constellation",
@@ -6392,12 +6380,10 @@ let characters = {
         "params": [
           0.35
         ],
+        "traceAbility": "Herta_Herta_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": [
-              0.35
-            ]
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       },
@@ -6527,7 +6513,8 @@ let characters = {
           "Fixed Chance": {
             "desc": "Fixed chance will not be affected by any factor."
           }
-        }
+        },
+        "eidoAbility": "Bronya_Bronya_Eidolon1"
       },
       {
         "id": "110102",
@@ -6559,7 +6546,8 @@ let characters = {
           "Follow-Up ATK": {
             "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
-        }
+        },
+        "eidoAbility": "Bronya_Bronya_Eidolon4"
       },
       {
         "id": "110105",
@@ -7110,7 +7098,8 @@ let characters = {
         "params": [
           2,
           0.2
-        ]
+        ],
+        "traceAbility": "Bronya_Bronya_Trace02"
       },
       "Point08": {
         "name": "Military Might",
@@ -7118,7 +7107,8 @@ let characters = {
         "desc": "When Bronya is on the field, all allies deal #1[i]% more DMG.",
         "params": [
           0.1
-        ]
+        ],
+        "traceAbility": "Bronya_Bronya_Trace03"
       },
       "Point09": {
         "name": "DMG Boost: Wind",
@@ -7234,7 +7224,8 @@ let characters = {
         "paramsEido": [
           0.8,
           0.15
-        ]
+        ],
+        "eidoAbility": "Seele_Seele_Eidolon1"
       },
       {
         "id": "110202",
@@ -7261,7 +7252,8 @@ let characters = {
         "icon": "icon/skill/1102_rank4.png",
         "paramsEido": [
           15
-        ]
+        ],
+        "eidoAbility": "Seele_Seele_Eidolon4"
       },
       {
         "id": "110205",
@@ -7287,7 +7279,8 @@ let characters = {
           "Downed State": {
             "desc": "An ally will be incapacitated once their HP is reduced to 0."
           }
-        }
+        },
+        "eidoAbility": "Seele_Seele_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -7764,7 +7757,8 @@ let characters = {
         "params": [
           0.5,
           0.5
-        ]
+        ],
+        "traceAbility": "Seele_Seele_Trace01"
       },
       "Point07": {
         "name": "Lacerate",
@@ -7775,10 +7769,7 @@ let characters = {
         ],
         "extraEffects": {
           "RES PEN": {
-            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
-            "params": [
-              0.2
-            ]
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           }
         }
       },
@@ -7791,10 +7782,7 @@ let characters = {
         ],
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.2
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -7965,7 +7953,8 @@ let characters = {
         "icon": "icon/skill/1103_rank6.png",
         "paramsEido": [
           0.3
-        ]
+        ],
+        "eidoAbility": "Serval_Serval_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -8486,10 +8475,7 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              0.2
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -8499,7 +8485,8 @@ let characters = {
         "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
         "params": [
           15
-        ]
+        ],
+        "traceAbility": "Serval_Serval_Trace02"
       },
       "Point08": {
         "name": "Mania",
@@ -8508,7 +8495,8 @@ let characters = {
         "params": [
           0.2,
           2
-        ]
+        ],
+        "traceAbility": "Serval_Serval_Trace03"
       },
       "Point09": {
         "name": "CRIT Rate Boost",
@@ -9187,7 +9175,8 @@ let characters = {
         "desc": "Gepard has a higher chance to be attacked by enemies.",
         "params": [
           3
-        ]
+        ],
+        "traceAbility": "Gepard_Gepard_Trace01"
       },
       "Point07": {
         "name": "Commander",
@@ -9200,7 +9189,8 @@ let characters = {
         "desc": "Gepard's ATK increases by #1[i]% of his current DEF. This effect will refresh at the start of each turn.",
         "params": [
           0.35
-        ]
+        ],
+        "traceAbility": "Gepard_Gepard_Trace03"
       },
       "Point09": {
         "name": "DMG Boost: Ice",
@@ -9317,7 +9307,8 @@ let characters = {
           0.3,
           0.15,
           400
-        ]
+        ],
+        "eidoAbility": "Natasha_Natasha_Eidolon1"
       },
       {
         "id": "110502",
@@ -9347,7 +9338,8 @@ let characters = {
         "icon": "icon/skill/1105_rank4.png",
         "paramsEido": [
           5
-        ]
+        ],
+        "eidoAbility": "Natasha_Natasha_Eidolon4"
       },
       {
         "id": "110505",
@@ -9888,10 +9880,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              1
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -9901,7 +9890,8 @@ let characters = {
         "desc": "Natasha's Outgoing Healing increases by #1[i]%.",
         "params": [
           0.1
-        ]
+        ],
+        "traceAbility": "Natasha_Natasha_Trace02"
       },
       "Point08": {
         "name": "Recuperation",
@@ -10598,12 +10588,10 @@ let characters = {
         "params": [
           0.2
         ],
+        "traceAbility": "Pela_Pela_Trace01",
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              0.2
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -10613,7 +10601,8 @@ let characters = {
         "desc": "When Pela is on the battlefield, all allies' Effect Hit Rate increases by #1[i]%.",
         "params": [
           0.1
-        ]
+        ],
+        "traceAbility": "Pela_Pela_Trace02"
       },
       "Point08": {
         "name": "Wipe Out",
@@ -10624,10 +10613,7 @@ let characters = {
         ],
         "extraEffects": {
           "Buff": {
-            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
-            "params": [
-              0.2
-            ]
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
           }
         }
       },
@@ -10769,7 +10755,8 @@ let characters = {
         "icon": "icon/skill/1107_rank4.png",
         "paramsEido": [
           0.3
-        ]
+        ],
+        "eidoAbility": "Clara_Klara_Eidolon4"
       },
       {
         "id": "110705",
@@ -10795,7 +10782,8 @@ let characters = {
           "Counter": {
             "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
           }
-        }
+        },
+        "eidoAbility": "Clara_Klara_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -11338,18 +11326,13 @@ let characters = {
         "params": [
           0.35
         ],
+        "traceAbility": "Clara_Klara_Trace01",
         "extraEffects": {
           "Fixed Chance": {
-            "desc": "Fixed chance will not be affected by any factor.",
-            "params": [
-              0.35
-            ]
+            "desc": "Fixed chance will not be affected by any factor."
           },
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              0.35
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -11360,12 +11343,10 @@ let characters = {
         "params": [
           0.35
         ],
+        "traceAbility": "Clara_Klara_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": [
-              0.35
-            ]
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       },
@@ -11378,10 +11359,7 @@ let characters = {
         ],
         "extraEffects": {
           "Counter": {
-            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK.",
-            "params": [
-              0.3
-            ]
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
           }
         }
       },
@@ -11514,7 +11492,8 @@ let characters = {
           "Base Chance": {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
-        }
+        },
+        "eidoAbility": "Sampo_Sampo_Eidolon2"
       },
       {
         "id": "110803",
@@ -12100,7 +12079,8 @@ let characters = {
         "desc": "Using Ultimate additionally regenerates #1[i] Energy.",
         "params": [
           10
-        ]
+        ],
+        "traceAbility": "Sampo_Sampo_Trace02"
       },
       "Point08": {
         "name": "Spice Up",
@@ -12108,7 +12088,8 @@ let characters = {
         "desc": "Enemies with Wind Shear effect deal #1[i]% less DMG to Sampo.",
         "params": [
           0.15
-        ]
+        ],
+        "traceAbility": "Sampo_Sampo_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -12280,7 +12261,8 @@ let characters = {
         "icon": "icon/skill/1109_rank6.png",
         "paramsEido": [
           0.2
-        ]
+        ],
+        "eidoAbility": "Hook_Hook_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -12931,7 +12913,8 @@ let characters = {
         "desc": "Hook restores HP equal to #1[i]% of her Max HP whenever her Talent is triggered.",
         "params": [
           0.05
-        ]
+        ],
+        "traceAbility": "Hook_Hook_Trace01"
       },
       "Point07": {
         "name": "Naivete",
@@ -12940,12 +12923,10 @@ let characters = {
         "params": [
           0.35
         ],
+        "traceAbility": "Hook_Hook_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": [
-              0.35
-            ]
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       },
@@ -12959,11 +12940,7 @@ let characters = {
         ],
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              5,
-              0.2
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -13736,10 +13713,7 @@ let characters = {
         ],
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": [
-              0.35
-            ]
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       },
@@ -14570,10 +14544,7 @@ let characters = {
         ],
         "extraEffects": {
           "Buff": {
-            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
-            "params": [
-              1
-            ]
+            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
           }
         }
       },
@@ -14594,10 +14565,7 @@ let characters = {
         ],
         "extraEffects": {
           "Fixed Chance": {
-            "desc": "Fixed chance will not be affected by any factor.",
-            "params": [
-              0.5
-            ]
+            "desc": "Fixed chance will not be affected by any factor."
           }
         }
       },
@@ -15308,8 +15276,7 @@ let characters = {
         "desc": "When Topaz uses Basic ATK to deal DMG, it is considered as a Follow-Up ATK.",
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": []
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -16722,7 +16689,8 @@ let characters = {
         "desc": "Tingyun immediately regenerates #1[i] Energy at the start of her turn.",
         "params": [
           5
-        ]
+        ],
+        "traceAbility": "Tingyun_Tingyun_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -17441,10 +17409,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              1
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -17534,12 +17499,10 @@ let characters = {
         "params": [
           0.7
         ],
+        "traceAbility": "Luocha_Luocha_Trace03",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": [
-              0.7
-            ]
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       }
@@ -18360,7 +18323,8 @@ let characters = {
           "Follow-Up ATK": {
             "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
-        }
+        },
+        "eidoAbility": "Blade_Ren_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -19191,11 +19155,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.2,
-              15
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       }
@@ -19829,16 +19789,10 @@ let characters = {
         ],
         "extraEffects": {
           "Weakness Break State": {
-            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
-            "params": [
-              0.15
-            ]
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
           },
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.15
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -19956,7 +19910,8 @@ let characters = {
         "paramsEido": [
           0.1,
           2
-        ]
+        ],
+        "eidoAbility": "Yukong_Yukong_Eidolon1"
       },
       {
         "id": "120702",
@@ -19966,7 +19921,8 @@ let characters = {
         "icon": "icon/skill/1207_rank2.png",
         "paramsEido": [
           5
-        ]
+        ],
+        "eidoAbility": "Yukong_Yukong_Eidolon2"
       },
       {
         "id": "120703",
@@ -20506,12 +20462,10 @@ let characters = {
         "params": [
           2
         ],
+        "traceAbility": "Yukong_Yukong_Trace01",
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              2
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -20521,7 +20475,8 @@ let characters = {
         "desc": "When Yukong is on the field, Imaginary DMG dealt by all allies increases by #1[i]%.",
         "params": [
           0.12
-        ]
+        ],
+        "traceAbility": "Yukong_Yukong_Trace02"
       },
       "Point08": {
         "name": "Majestas",
@@ -21235,8 +21190,7 @@ let characters = {
         "desc": "If a target enemy applies Crowd Control debuffs to allies while the \"Matrix of Prescience\" is active, all allies will resist all Crowd Control debuffs applied by the enemy target during the current action. This effect can only be triggered once. When \"Matrix of Prescience\" is activated again, the number of times this effect can be triggered will reset.",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": []
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       },
@@ -21358,7 +21312,8 @@ let characters = {
           "Additional DMG": {
             "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
           }
-        }
+        },
+        "eidoAbility": "Yanqing_Yanqing_Eidolon1"
       },
       {
         "id": "120902",
@@ -21391,7 +21346,8 @@ let characters = {
           "RES PEN": {
             "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           }
-        }
+        },
+        "eidoAbility": "Yanqing_Yanqing_Eidolon4"
       },
       {
         "id": "120905",
@@ -21965,12 +21921,10 @@ let characters = {
         "params": [
           0.3
         ],
+        "traceAbility": "Yanqing_YanQing_Trace01",
         "extraEffects": {
           "Additional DMG": {
-            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
-            "params": [
-              0.3
-            ]
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
           }
         }
       },
@@ -21989,7 +21943,8 @@ let characters = {
         "params": [
           0.1,
           2
-        ]
+        ],
+        "traceAbility": "Yanqing_YanQing_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -22750,10 +22705,7 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              0.8
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -22764,12 +22716,10 @@ let characters = {
         "params": [
           0.25
         ],
+        "traceAbility": "Guinaifen_Guinaifen_Trace02",
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.25
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -22779,7 +22729,8 @@ let characters = {
         "desc": "Deals #1[i]% more DMG to Burned enemies.",
         "params": [
           0.2
-        ]
+        ],
+        "traceAbility": "Guinaifen_Guinaifen_Trace03"
       },
       "Point09": {
         "name": "DMG Boost: Fire",
@@ -23506,7 +23457,8 @@ let characters = {
         "params": [
           0.1,
           2
-        ]
+        ],
+        "traceAbility": "Bailu_Bailu_Trace01"
       },
       "Point07": {
         "name": "Vidyadhara Ichor Lines",
@@ -23514,7 +23466,8 @@ let characters = {
         "desc": "Invigoration can trigger #1[i] more time(s).",
         "params": [
           1
-        ]
+        ],
+        "traceAbility": "Bailu_Bailu_Trace02"
       },
       "Point08": {
         "name": "Aquatic Benediction",
@@ -25370,12 +25323,10 @@ let characters = {
         "params": [
           0.35
         ],
+        "traceAbility": "DanHengIL_DanHengIL_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": [
-              0.35
-            ]
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       },
@@ -25385,7 +25336,8 @@ let characters = {
         "desc": "When dealing DMG to enemy targets with Imaginary Weakness, CRIT DMG increases by #1[i]%.",
         "params": [
           0.24
-        ]
+        ],
+        "traceAbility": "DanHengIL_DanHengIL_Trace03"
       },
       "Point09": {
         "name": "DMG Boost: Imaginary",
@@ -27544,12 +27496,10 @@ let characters = {
         "params": [
           0.35
         ],
+        "traceAbility": "Huohuo_Huohuo_Trace02",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": [
-              0.35
-            ]
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       },
@@ -28536,7 +28486,8 @@ let characters = {
           "Follow-Up ATK": {
             "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
-        }
+        },
+        "eidoAbility": "Feixiao_Feixiao_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -29460,12 +29411,10 @@ let characters = {
         "params": [
           3
         ],
+        "traceAbility": "Feixiao_Feixiao_Trace01",
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              3
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -29476,12 +29425,10 @@ let characters = {
         "params": [
           0.36
         ],
+        "traceAbility": "Feixiao_Feixiao_Trace02",
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.36
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -29492,7 +29439,8 @@ let characters = {
         "params": [
           0.48,
           3
-        ]
+        ],
+        "traceAbility": "Feixiao_Feixiao_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -30299,10 +30247,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              0.2
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -30315,10 +30260,7 @@ let characters = {
         ],
         "extraEffects": {
           "Counter": {
-            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK.",
-            "params": [
-              0.3
-            ]
+            "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\\nCounter is also considered a Follow-Up ATK."
           }
         }
       },
@@ -31182,11 +31124,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.6,
-              2
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -31855,11 +31793,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              1,
-              1
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -31873,18 +31807,10 @@ let characters = {
         ],
         "extraEffects": {
           "Departed": {
-            "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
-            "params": [
-              0.2,
-              0.3
-            ]
+            "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order."
           },
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.2,
-              0.3
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -31897,10 +31823,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.25
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -32035,7 +31958,8 @@ let characters = {
           "Follow-Up ATK": {
             "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
-        }
+        },
+        "eidoAbility": "March7thTH_Mar_7th_10_Eidolon2"
       },
       {
         "id": "122403",
@@ -32052,7 +31976,8 @@ let characters = {
         "icon": "icon/skill/1224_rank4.png",
         "paramsEido": [
           5
-        ]
+        ],
+        "eidoAbility": "March7thTH_Mar_7th_10_Eidolon4"
       },
       {
         "id": "122405",
@@ -32717,19 +32642,18 @@ let characters = {
         "params": [
           0.25
         ],
+        "traceAbility": "March7thTH_Mar_7th_10_Trace01",
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.25
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
       "Point07": {
         "name": "Filigree",
         "icon": "icon/skill/1224_skilltree2.png",
-        "desc": "March 7th can reduce the Toughness of enemies whose Weakness Type is the same as Shifu's Combat Type. When Breaking Weakness, triggers the Imaginary Weakness Break effect."
+        "desc": "March 7th can reduce the Toughness of enemies whose Weakness Type is the same as Shifu's Combat Type. When Breaking Weakness, triggers the Imaginary Weakness Break effect.",
+        "traceAbility": "March7thTH_Mar_7th_10_Trace02"
       },
       "Point08": {
         "name": "Tide Tamer",
@@ -32739,7 +32663,8 @@ let characters = {
           0.6,
           0.36,
           2
-        ]
+        ],
+        "traceAbility": "March7thTH_Mar_7th_10_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -33525,10 +33450,7 @@ let characters = {
         ],
         "extraEffects": {
           "Action Delayed": {
-            "desc": "Increases the target's waiting interval before the next action.",
-            "params": [
-              0.15
-            ]
+            "desc": "Increases the target's waiting interval before the next action."
           }
         }
       },
@@ -34278,8 +34200,7 @@ let characters = {
         "desc": "After using the Ultimate, immediately advances action for this unit by 100%.",
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": []
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -36577,7 +36498,8 @@ let characters = {
         "params": [
           3,
           1
-        ]
+        ],
+        "traceAbility": "Aventurine_Aventurine_Trace02"
       },
       "Point08": {
         "name": "Bingo!",
@@ -36592,14 +36514,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.072,
-              96,
-              3,
-              0.072,
-              96
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -37281,12 +37196,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              0.025,
-              0.05,
-              6
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -37301,12 +37211,7 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              1,
-              0.1,
-              2
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -37321,12 +37226,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              3,
-              0.1,
-              0.5
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -38176,7 +38076,8 @@ let characters = {
         "icon": "icon/skill/1307_rank1.png",
         "paramsEido": [
           0.25
-        ]
+        ],
+        "eidoAbility": "BlackSwan_BlackSwan_Eidolon1"
       },
       {
         "id": "130702",
@@ -38195,7 +38096,8 @@ let characters = {
           "Arcana": {
             "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           }
-        }
+        },
+        "eidoAbility": "BlackSwan_BlackSwan_Eidolon2"
       },
       {
         "id": "130703",
@@ -38243,7 +38145,8 @@ let characters = {
           "Fixed Chance": {
             "desc": "Fixed chance will not be affected by any factor."
           }
-        }
+        },
+        "eidoAbility": "BlackSwan_BlackSwan_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -38939,16 +38842,10 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              0.65
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           },
           "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
-            "params": [
-              0.65
-            ]
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           }
         }
       },
@@ -38960,20 +38857,13 @@ let characters = {
           0.65,
           3
         ],
+        "traceAbility": "BlackSwan_BlackSwan_Trace02",
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              0.65,
-              3
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           },
           "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
-            "params": [
-              0.65,
-              3
-            ]
+            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           }
         }
       },
@@ -38984,7 +38874,8 @@ let characters = {
         "params": [
           0.6,
           0.72
-        ]
+        ],
+        "traceAbility": "BlackSwan_BlackSwan_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -40870,10 +40761,7 @@ let characters = {
         ],
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.25
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -40886,10 +40774,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.25
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -41014,7 +40899,8 @@ let characters = {
         "icon": "icon/skill/1310_rank1.png",
         "paramsEido": [
           0.15
-        ]
+        ],
+        "eidoAbility": "Firefly_Sam_Eidolon1"
       },
       {
         "id": "131002",
@@ -41033,7 +40919,8 @@ let characters = {
           "Extra Turn": {
             "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
           }
-        }
+        },
+        "eidoAbility": "Firefly_Sam_Eidolon2"
       },
       {
         "id": "131003",
@@ -41050,7 +40937,8 @@ let characters = {
         "icon": "icon/skill/1310_rank4.png",
         "paramsEido": [
           0.5
-        ]
+        ],
+        "eidoAbility": "Firefly_Sam_Eidolon4"
       },
       {
         "id": "131005",
@@ -41073,7 +40961,8 @@ let characters = {
           "RES PEN": {
             "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           }
-        }
+        },
+        "eidoAbility": "Firefly_Sam_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -41899,7 +41788,8 @@ let characters = {
         "desc": "During the Complete Combustion, attacking enemies that have no Fire Weakness can also reduce their Toughness, with the effect being equivalent to #1[i]% of the original Toughness Reduction from abilities.",
         "params": [
           0.55
-        ]
+        ],
+        "traceAbility": "Firefly_Sam_Trace01"
       },
       "Point07": {
         "name": "Module β: Autoreactive Armor",
@@ -41911,24 +41801,13 @@ let characters = {
           0.35,
           0.5
         ],
+        "traceAbility": "Firefly_Sam_Trace02",
         "extraEffects": {
           "Weakness Break State": {
-            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
-            "params": [
-              2,
-              3.6,
-              0.35,
-              0.5
-            ]
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
           },
           "Super Break DMG": {
-            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG.",
-            "params": [
-              2,
-              3.6,
-              0.35,
-              0.5
-            ]
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
           }
         }
       },
@@ -41940,7 +41819,8 @@ let characters = {
           1800,
           10,
           0.007999999
-        ]
+        ],
+        "traceAbility": "Firefly_Sam_Trace03"
       },
       "Point09": {
         "name": "Break Boost",
@@ -42073,7 +41953,8 @@ let characters = {
           "Base Chance": {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
-        }
+        },
+        "eidoAbility": "Misha_Misha_Eidolon2"
       },
       {
         "id": "131203",
@@ -42108,7 +41989,8 @@ let characters = {
         "paramsEido": [
           1,
           0.3
-        ]
+        ],
+        "eidoAbility": "Misha_Misha_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -42649,10 +42531,7 @@ let characters = {
         ],
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              0.8
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -42670,7 +42549,8 @@ let characters = {
         "desc": "When dealing DMG to Frozen enemies, increases CRIT DMG by #1[i]%.",
         "params": [
           0.3
-        ]
+        ],
+        "traceAbility": "Misha_Misha_Trace03"
       },
       "Point09": {
         "name": "DMG Boost: Ice",
@@ -43381,10 +43261,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              1
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -44164,12 +44041,10 @@ let characters = {
         "params": [
           0.5
         ],
+        "traceAbility": "Jade_Jade_Trace02",
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.5
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -44294,7 +44169,8 @@ let characters = {
         "icon": "icon/skill/1315_rank1.png",
         "paramsEido": [
           0.16
-        ]
+        ],
+        "eidoAbility": "Boothill_Boothill_Eidolon1"
       },
       {
         "id": "131502",
@@ -44995,7 +44871,8 @@ let characters = {
           0.3,
           0.5,
           1.5
-        ]
+        ],
+        "traceAbility": "Boothill_Boothill_Trace01"
       },
       "Point07": {
         "name": "Above Snakes",
@@ -45003,7 +44880,8 @@ let characters = {
         "desc": "While Boothill is in the Standoff, reduces the DMG he receives from targets that are not in the Standoff by #1[i]%.",
         "params": [
           0.3
-        ]
+        ],
+        "traceAbility": "Boothill_Boothill_Trace02"
       },
       "Point08": {
         "name": "Point Blank",
@@ -46063,16 +45941,10 @@ let characters = {
         ],
         "extraEffects": {
           "Weakness Break State": {
-            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
-            "params": [
-              0.6
-            ]
+            "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
           },
           "Super Break DMG": {
-            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG.",
-            "params": [
-              0.6
-            ]
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
           }
         }
       },
@@ -46089,14 +45961,7 @@ let characters = {
         ],
         "extraEffects": {
           "Break DMG": {
-            "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
-            "params": [
-              0.02,
-              2400,
-              0.01,
-              0.08,
-              2
-            ]
+            "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects."
           }
         }
       },
@@ -46232,7 +46097,8 @@ let characters = {
         "paramsEido": [
           0.2,
           3
-        ]
+        ],
+        "eidoAbility": "TheDahlia_Constance_Eidolon2"
       },
       {
         "id": "132103",
@@ -46282,7 +46148,8 @@ let characters = {
           "Action Advanced": {
             "desc": "Reduces the target's waiting interval before the next action."
           }
-        }
+        },
+        "eidoAbility": "TheDahlia_Constance_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -46873,10 +46740,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              2
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -46890,7 +46754,8 @@ let characters = {
           0.3,
           2,
           20
-        ]
+        ],
+        "traceAbility": "TheDahlia_Constance_Trace03"
       },
       "Point09": {
         "name": "Break Boost",
@@ -49874,12 +49739,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.72,
-              3,
-              3
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -50884,8 +50744,7 @@ let characters = {
         "desc": "While in the \"Vendetta\" state, Mydei is immune to Crowd Control debuffs.",
         "extraEffects": {
           "Crowd Control debuff": {
-            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
-            "params": []
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock."
           }
         }
       },
@@ -51016,7 +50875,8 @@ let characters = {
           0.16,
           2,
           1
-        ]
+        ],
+        "eidoAbility": "Anaxa_Anaxa_Eidolon1"
       },
       {
         "id": "140502",
@@ -51026,7 +50886,8 @@ let characters = {
         "icon": "icon/skill/1405_rank2.png",
         "paramsEido": [
           0.2
-        ]
+        ],
+        "eidoAbility": "Anaxa_Anaxa_Eidolon2"
       },
       {
         "id": "140503",
@@ -51062,7 +50923,8 @@ let characters = {
         "icon": "icon/skill/1405_rank6.png",
         "paramsEido": [
           1.3
-        ]
+        ],
+        "eidoAbility": "Anaxa_Anaxa_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -51557,7 +51419,8 @@ let characters = {
         "params": [
           1.4,
           0.5
-        ]
+        ],
+        "traceAbility": "Anaxa_Anaxa_Trace02"
       },
       "Point08": {
         "name": "Qualitative Shift",
@@ -51565,7 +51428,8 @@ let characters = {
         "desc": "For every 1 different Weakness Type an enemy target has, the DMG that Anaxa deals to that target ignores #1[i]% of their DEF. Up to a max of 7 Weakness Types can be taken into account for this effect.",
         "params": [
           0.04
-        ]
+        ],
+        "traceAbility": "Anaxa_Anaxa_Trace03"
       },
       "Point09": {
         "name": "DMG Boost: Wind",
@@ -52380,10 +52244,7 @@ let characters = {
         ],
         "extraEffects": {
           "True DMG": {
-            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack.",
-            "params": [
-              0.08
-            ]
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
           }
         }
       },
@@ -52397,11 +52258,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.4,
-              1
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       },
@@ -54119,7 +53976,8 @@ let characters = {
           "Khaslana's Extra Turn": {
             "desc": "When Phainon transforms into Khaslana, a countdown will appear on the Action Order. When the countdown begins, Khaslana will gain 1 extra turn. When the last turn of the countdown begins, transforms into Khaslana and delivers a final hit before ending the transformation.\\nThe countdown initial action value will be set between 0–<unbreak>100%</unbreak>. The action value will not be reset at the start of each wave.\\nWhen Khaslana is under the effect of action advance, the first countdown's action is advanced instead."
           }
-        }
+        },
+        "eidoAbility": "Phainon_Phainon_Eidolon1"
       },
       {
         "id": "140802",
@@ -54141,7 +53999,8 @@ let characters = {
           "Extra Turn": {
             "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
           }
-        }
+        },
+        "eidoAbility": "Phainon_Phainon_Eidolon2"
       },
       {
         "id": "140803",
@@ -54181,7 +54040,8 @@ let characters = {
           "True DMG": {
             "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
           }
-        }
+        },
+        "eidoAbility": "Phainon_Phainon_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -55345,7 +55205,8 @@ let characters = {
         "params": [
           3,
           1
-        ]
+        ],
+        "traceAbility": "Phainon_Phainon_Trace01"
       },
       "Point07": {
         "name": "Bide in Flames",
@@ -55355,7 +55216,8 @@ let characters = {
           0.45,
           4,
           1
-        ]
+        ],
+        "traceAbility": "Phainon_Phainon_Trace02"
       },
       "Point08": {
         "name": "Shine with Valor",
@@ -55364,7 +55226,8 @@ let characters = {
         "params": [
           0.5,
           2
-        ]
+        ],
+        "traceAbility": "Phainon_Phainon_Trace03"
       },
       "Point09": {
         "name": "CRIT DMG Boost",
@@ -56539,11 +56402,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
-            "params": [
-              0.5,
-              1
-            ]
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
         }
       },
@@ -57563,7 +57422,8 @@ let characters = {
           "Additional DMG": {
             "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
           }
-        }
+        },
+        "eidoAbility": "Cerydra_Cerydra_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -60453,12 +60313,7 @@ let characters = {
         ],
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.4,
-              6,
-              0.15
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -60474,13 +60329,7 @@ let characters = {
         ],
         "extraEffects": {
           "Additional DMG": {
-            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
-            "params": [
-              0.4,
-              0.05,
-              100,
-              3
-            ]
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
           }
         }
       },
@@ -63105,12 +62954,7 @@ let characters = {
         ],
         "extraEffects": {
           "Chrysos Heir": {
-            "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance).",
-            "params": [
-              2,
-              3,
-              6
-            ]
+            "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance)."
           }
         }
       },
@@ -63126,13 +62970,7 @@ let characters = {
         ],
         "extraEffects": {
           "RES PEN": {
-            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
-            "params": [
-              180,
-              0.02,
-              60,
-              0.2
-            ]
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           }
         }
       },
@@ -63320,7 +63158,8 @@ let characters = {
         "icon": "icon/skill/8001_rank6.png",
         "paramsEido": [
           1
-        ]
+        ],
+        "eidoAbility": "TrailblazerDestruction_PlayerBoy_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -63968,7 +63807,8 @@ let characters = {
         "desc": "At the start of the battle, immediately regenerates #1[i] Energy.",
         "params": [
           15
-        ]
+        ],
+        "traceAbility": "TrailblazerDestruction_PlayerBoy_Trace01"
       },
       "Point07": {
         "name": "Tenacity",
@@ -63984,7 +63824,8 @@ let characters = {
         "desc": "When using Skill or Ultimate \"Blowout: RIP Home Run,\" DMG dealt to the target enemy is increased by #1[i]%.",
         "params": [
           0.25
-        ]
+        ],
+        "traceAbility": "TrailblazerDestruction_PlayerBoy_Trace03"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -65406,14 +65247,7 @@ let characters = {
         ],
         "extraEffects": {
           "Super Break DMG": {
-            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG.",
-            "params": [
-              0.2,
-              0.3,
-              0.4,
-              0.5,
-              0.6
-            ]
+            "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\\nSuper Break DMG is also considered Break DMG."
           }
         }
       },
@@ -65434,10 +65268,7 @@ let characters = {
         ],
         "extraEffects": {
           "Action Delayed": {
-            "desc": "Increases the target's waiting interval before the next action.",
-            "params": [
-              0.3
-            ]
+            "desc": "Increases the target's waiting interval before the next action."
           }
         }
       },
@@ -65555,7 +65386,8 @@ let characters = {
         "paramsEido": [
           8,
           1
-        ]
+        ],
+        "eidoAbility": "TrailblazerRemembrance_PlayerBoy_30_Eidolon2"
       },
       {
         "id": "800703",
@@ -65573,7 +65405,8 @@ let characters = {
         "paramsEido": [
           0.03,
           0.06
-        ]
+        ],
+        "eidoAbility": "TrailblazerRemembrance_PlayerBoy_30_Eidolon4"
       },
       {
         "id": "800705",
@@ -66661,13 +66494,10 @@ let characters = {
           0.3,
           0.4
         ],
+        "traceAbility": "TrailblazerRemembrance_PlayerBoy_30_Trace01",
         "extraEffects": {
           "Action Advanced": {
-            "desc": "Reduces the target's waiting interval before the next action.",
-            "params": [
-              0.3,
-              0.4
-            ]
+            "desc": "Reduces the target's waiting interval before the next action."
           }
         }
       },
@@ -66691,13 +66521,7 @@ let characters = {
         ],
         "extraEffects": {
           "True DMG": {
-            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack.",
-            "params": [
-              100,
-              10,
-              0.02,
-              0.2
-            ]
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
           }
         }
       },
@@ -68353,7 +68177,8 @@ let characters = {
         "desc": "When Archer is on the field, increases the maximum Skill Point limit by #1[i].",
         "params": [
           2
-        ]
+        ],
+        "traceAbility": "Archer_Archer_Trace01"
       },
       "Point07": {
         "name": "Hero of Justice",
@@ -68361,7 +68186,8 @@ let characters = {
         "desc": "When Archer enters combat, gains #1[i] point(s) of Charge.",
         "params": [
           1
-        ]
+        ],
+        "traceAbility": "Archer_Archer_Trace02"
       },
       "Point08": {
         "name": "Guardian",
@@ -68371,7 +68197,8 @@ let characters = {
           1.2,
           1,
           4
-        ]
+        ],
+        "traceAbility": "Archer_Archer_Trace03"
       },
       "Point09": {
         "name": "DMG Boost: Quantum",
@@ -68506,7 +68333,8 @@ let characters = {
         "icon": "icon/skill/1005_rank2.png",
         "paramsEido": [
           0.25
-        ]
+        ],
+        "eidoAbility": "Kafkav0_Kafka_Eidolon2"
       },
       {
         "id": "100503",
@@ -69113,7 +68941,8 @@ let characters = {
         "desc": "If an enemy target is defeated while Shocked, Kafka additionally regenerates #1[i] Energy.",
         "params": [
           5
-        ]
+        ],
+        "traceAbility": "Kafkav0_Advanced_Kafka_Trace02"
       },
       "Point09": {
         "name": "ATK Boost",
@@ -69192,7 +69021,8 @@ let characters = {
         "params": [
           0.75,
           1
-        ]
+        ],
+        "traceAbility": "Kafkav0_Advanced_Kafka_Trace01"
       },
       "Point08": {
         "name": "Thorns",
@@ -69203,10 +69033,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.8
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       }
@@ -69269,7 +69096,8 @@ let characters = {
         "icon": "icon/skill/1006_rank2.png",
         "paramsEido": [
           0.2
-        ]
+        ],
+        "eidoAbility": "SilverWolfv0_Silwolf_Eidolon2"
       },
       {
         "id": "100603",
@@ -69318,7 +69146,8 @@ let characters = {
           "Debuff": {
             "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
           }
-        }
+        },
+        "eidoAbility": "SilverWolfv0_Silwolf_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -70027,13 +69856,10 @@ let characters = {
           1,
           1
         ],
+        "traceAbility": "SilverWolfv0_Advanced_Silwolf_Trace01",
         "extraEffects": {
           "Base Chance": {
-            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
-            "params": [
-              1,
-              1
-            ]
+            "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           }
         }
       },
@@ -70150,7 +69976,8 @@ let characters = {
           "Follow-Up ATK": {
             "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
-        }
+        },
+        "eidoAbility": "Bladev0_Ren_Eidolon6"
       }
     ],
     "eidlonLevelBonuses": {
@@ -70966,11 +70793,7 @@ let characters = {
         ],
         "extraEffects": {
           "Follow-Up ATK": {
-            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
-            "params": [
-              0.2,
-              15
-            ]
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           }
         }
       }

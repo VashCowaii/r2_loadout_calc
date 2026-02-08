@@ -465,7 +465,7 @@ const megaParsingFuckery = {
 
     },
     pageLoad(loadFile) {
-
+        
         if (compositeAbilityObject && !Array.isArray(compositeAbilityObject)) {
             const bodyBox = readSelection("eventBodyMainBox");
 

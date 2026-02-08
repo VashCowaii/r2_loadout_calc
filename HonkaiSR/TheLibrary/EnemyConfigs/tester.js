@@ -3513,7 +3513,7 @@ const userTriggers = {
         "Rope": "Link Rope",
     },
     getEnemySkillsObject(isForReader) {
-        let charRef = enemyData;
+        let charRef = enemyData;//compositeAbilityObject
         const newCharRef = charRef.options[enemyVariantSelected];
         const newCharAbilitiesRef = newCharRef.abilities;
         const paramOverrides = newCharRef.overrideParams;
@@ -3950,6 +3950,22 @@ const userTriggers = {
                             // entryString += paramString;
                         } 
 
+
+
+
+                        let entryFileName = null;
+                        if (compositeAbilityObject?.abilityObject) {
+                            for (let abilityNameKey in compositeAbilityObject.abilityObject) {
+                                const currentAbilityTriggerCheck = compositeAbilityObject.abilityObject[abilityNameKey];
+
+                                // currentAbilityTriggerCheck.childAbilityList?.length
+                                if (currentAbilityTriggerCheck.skillTrigger === currentInnerSkillVariant.trigger) {
+                                    entryFileName = currentAbilityTriggerCheck.fileName;
+                                    break;
+                                }
+                            }
+                        }
+
                         
                         entryString += `
                             <div class="rotationsSectionRowHolder3Overview">
@@ -4006,11 +4022,20 @@ const userTriggers = {
                                     
                                 </div>
                                 
+                                ${entryFileName ? `<div class="actionDetailBody">
+                                    <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${entryFileName}')">
+                                        Go to Entry Start&nbsp;
+                                        <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                                    </a>
+                                </div>` : ""}
+
                                 ${currentInnerSkillVariant.desc ? `<div class="actionDetailBody">
                                     <div class="actionDetailBody2Description">
                                         ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkillVariant.desc ?? "")}
                                     </div>
                                 </div>` : ""}
+
+                                
                                 
                                 ${paramsStringer}
                                 ${paramsStringerOverride}
