@@ -4388,6 +4388,18 @@ const userTriggers = {
                         } 
 
 
+                        let entryFileName = null;
+                        if (compositeAbilityObject?.abilityObject) {
+                            for (let abilityNameKey in compositeAbilityObject.abilityObject) {
+                                const currentAbilityTriggerCheck = compositeAbilityObject.abilityObject[abilityNameKey];
+
+                                if (currentAbilityTriggerCheck.skillTrigger === currentInnerSkillVariant.trigger && currentAbilityTriggerCheck.childAbilityList?.length) {
+                                    entryFileName = currentAbilityTriggerCheck.fileName;
+                                    break;
+                                }
+                            }
+                        }
+                        
                         entryString += `
                             <div class="rotationsSectionRowHolder3Overview">
                                 <div class="eidolonRowBoxHolder">
@@ -4427,14 +4439,25 @@ const userTriggers = {
                                     
                                 </div>
                                 
-
+                                ${entryFileName ? `<div class="actionDetailBody">
+                                    <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${entryFileName}')">
+                                        Go to Entry Start&nbsp;
+                                        <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                                    </a>
+                                </div>` : ""}
                                 <div class="actionDetailBody">
                                     <div class="actionDetailBody2Description">
                                         ${pagePopulation.cleanDescription(paramsCheck ?? [],currentInnerSkillVariant.desc)}
                                     </div>
                                 </div>
+
+                                
+
+
+
                                 ${paramsStringer}
                                 ${paramString2}
+                                
                             </div>`;
                     }
 
@@ -4508,6 +4531,13 @@ const userTriggers = {
                             ${pagePopulation.cleanDescription(currentTraceRef.params ?? [],currentTraceRef.desc)}
                         </div>
                     </div>
+
+                    ${currentTraceRef.eidoAbility ?? currentTraceRef.traceAbility ? `<div class="actionDetailBody">
+                        <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${currentTraceRef.eidoAbility ?? currentTraceRef.traceAbility}')">
+                            Go to Entry Start&nbsp;
+                            <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                        </a>
+                    </div>` : ""}
                 `
 
                 if (currentTraceRef.params?.length) {
@@ -4676,11 +4706,18 @@ const userTriggers = {
 
             // ${pagePopulation.cleanDescription(lightconeRef.params[currentLCSuperimposition-1],lightconeRef.desc)}
             eidoString += `<div class="rotationsSectionRowHolder1Overview">
+                
                 <div class="actionDetailBody">
                     <div class="actionDetailBody2Description">
                         ${pagePopulation.cleanDescription(entry.params ?? [],entry.desc)}
                     </div>
                 </div>
+                ${entry.eidoAbility ?? entry.traceAbility ? `<div class="actionDetailBody">
+                    <a class="exportIconBoxHolderBuffButton clickable" onclick="userTriggers.updateMainMenuDisplayed(1);megaParsingFuckery.pageLoad('${entry.eidoAbility ?? entry.traceAbility}')">
+                        Go to Entry Start&nbsp;
+                        <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                    </a>
+                </div>` : ""}
             `
 
 
